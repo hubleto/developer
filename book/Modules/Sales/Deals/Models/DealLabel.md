@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Označenie ktorý môže mať deal, slúžiace na prioritizáciu (hot, warm, cold)
+Labels given to a Lead
 
 ## Constants
 
@@ -11,7 +11,7 @@ Označenie ktorý môže mať deal, slúžiace na prioritizáciu (hot, warm, col
 | Property        | Value        |
 | :-------------- | :----------- |
 | isJunctionTable | FALSE        |
-| sqlName         | deal_labels  |
+| table         | deal_labels  |
 | lookupSqlValue  | {%TABLE%}.id |
 
 ## Data Scructure
@@ -25,12 +25,12 @@ Označenie ktorý môže mať deal, slúžiace na prioritizáciu (hot, warm, col
 
 ## Foreign Keys
 
-| Column   | Model                                        | Relation | OnUpdate | OnDelete |
-| -------- | -------------------------------------------- | -------- | -------- | -------- |
-| id_deal  | [Modules\Sales\Deals\Models\Deal](Deal.md)   | 1:1      | Cascade  | Restrict |
-| id_label | [Modules\Sales\Deals\Models\Label](Label.md) | 1:1      | Cascade  | Restrict |
+| Column   | Model                                                                        | Relation | OnUpdate | OnDelete |
+| -------- | ---------------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_deal  | [Modules\Sales\Deals\Models\Deal](Deal.md)                                   | 1:1      | Cascade  | Restrict |
+| id_label | [Modules\Core\Settings\Models\Label](../../../Core/Settings/Models/Label.md) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 
-| Name |  Type   | Column + Order |
-| :--- | :-----: | -------------: |
+| Name | Type | Column + Order |
+| :--- | :--: | -------------: |

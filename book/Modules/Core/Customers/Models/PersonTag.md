@@ -1,32 +1,31 @@
-# Model Customers/PersonTag
+# Model Core/Customers/PersonTag
 
 ## Introduction
 
-## Constants
+List of assigned tags to a Person
 
 ## Properties
 
 | Property        | Value                  |
 | :-------------- | :--------------------- |
 | isJunctionTable | FALSE                  |
-| sqlName         |                        |
-| urlBase         | core/customers/persons |
+| table           | person_tags            |
 | lookupSqlValue  | {%TABLE%}.id           |
 
 ## Data Scructure
 
 | Column    | Title  | ADIOS Type | Length | Required |
 | --------- | ------ | ---------- | ------ | -------- |
-| id        | ID     | lookup     |        | TRUE     |
+| id        | ID     | int        |        | TRUE     |
+| id_tag    | Tag    | lookup     |        | TRUE     |
 | id_person | Person | lookup     |        | TRUE     |
-
-### ADIOS parameters
 
 ### Foreign Keys
 
-| Column    | Model                                             | Relation | OnUpdate | OnDelete |
-| --------- | ------------------------------------------------- | -------- | -------- | -------- |
-| id_person | [Modules\Core\Customers\Models\Person](Person.md) | 1:1      | Cascade  | Restrict |
+| Column    | Model                                                            | Relation | OnUpdate | OnDelete |
+| --------- | ---------------------------------------------------------------- | -------- | -------- | -------- |
+| id_person | [Modules\Core\Customers\Models\Person](Person.md)                | 1:N      | Cascade  | Restrict |
+| id_tag    | [Modules\Core\Settings\Models\Tag](../../Settings/Models/Tag.md) | 1:N      | Cascade  | Restrict |
 
 ### Indexes
 

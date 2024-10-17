@@ -9,7 +9,7 @@
 | Property        | Value            |
 | :-------------- | :--------------- |
 | isJunctionTable | FALSE            |
-| sqlName         | billing_accounts |
+| table           | billing_accounts |
 | lookupSqlValue  | {%TABLE%}.id     |
 
 ## Data Scructure

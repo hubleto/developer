@@ -1,24 +1,24 @@
-# Model Customers/Tag
+# Model Core/Settings/Tag
 
 ## Introduction
 
-## Constants
+A list of asignable tags for a Company or a Person
 
 ## Properties
 
-| Property        | Value              |
-| :-------------- | :----------------- |
-| isJunctionTable | FALSE              |
-| sqlName         |                    |
-| urlBase         | core/customers/tag |
-| lookupSqlValue  | {%TABLE%}.id       |
+| Property        | Value        |
+| :-------------- | :----------- |
+| isJunctionTable | FALSE        |
+| table           | tags         |
+| lookupSqlValue  | {%TABLE%}.id |
 
 ## Data Scructure
 
 | Column | Title | ADIOS Type | Length | Required |
 | ------ | ----- | ---------- | ------ | -------- |
 | id     | ID    | int        |        | TRUE     |
-| tag    | Tag   | varchar    |        | TRUE     |
+| name   | Name  | varchar    |        | TRUE     |
+| color  | Color | color      |        | TRUE     |
 
 ### ADIOS parameters
 

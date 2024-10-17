@@ -1,35 +1,36 @@
-# Model Customers/Address
+# Model Core/Customers/Address
 
 ## Introduction
 
-Zoznam adries použitých v systéme.
-
-## Constants
+List of addresses belonging to a Person.
 
 ## Properties
 
-| Property        | Value                            |
-| :-------------- | :------------------------------- |
-| isJunctionTable | FALSE                            |
-| sqlName         | persons_addresses                |
-| urlBase         | core/customers/persons-addresses |
-| lookupSqlValue  | {%TABLE%}.street                 |
+| Property        | Value                                                                                |
+| :-------------- | :----------------------------------------------------------------------------------- |
+| isJunctionTable | FALSE                                                                                |
+| table           | addresses                                                                            |
+| lookupSqlValue  | concat({%TABLE%}.street_line_1, ', ', {%TABLE%}.street_line_2, ', ', {%TABLE%}.city) |
 
 ## Data Scructure
 
-| Column      | Title       | ADIOS Type | Length | Required |
-| ----------- | ----------- | ---------- | ------ | -------- |
-| id          | ID          | int        |        | TRUE     |
-| id_person   | Person      | lookup     |        | TRUE     |
-| street      | Street      | varchar    |        | TRUE     |
-| postal_code | Postal code | varchar    |        | TRUE     |
-| region      | Region      | varchar    |        | TRUE     |
-| city        | City        | varchar    |        | TRUE     |
-| country     | Country     | varchar    |        | TRUE     |
-
-## ADIOS parameters
+| Column        | Title         | ADIOS Type | Length | Required |
+| ------------- | ------------- | ---------- | ------ | -------- |
+| id            | ID            | int        |        | TRUE     |
+| id_person     | Person        | lookup     |        | TRUE     |
+| street_line_1 | Street Line 1 | varchar    |        | TRUE     |
+| street_line_2 | Street Line 2 | varchar    |        | FALSE    |
+| postal_code   | Postal code   | varchar    |        | TRUE     |
+| region        | Region        | varchar    |        | TRUE     |
+| city          | City          | varchar    |        | TRUE     |
+| id_country    | Country       | lookup     |        | TRUE     |
 
 ## Foreign Keys
+
+| Column     | Model                                                                    | Relation | OnUpdate | OnDelete |
+| ---------- | ------------------------------------------------------------------------ | -------- | -------- | -------- |
+| id_person  | [Modules\Core\Customers\Models\Person](Person.md)                        | 1:1      | Cascade  | Restrict |
+| id_country | [Modules\Core\Settings\Models\Country](../../Settings/Models/Country.md) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 

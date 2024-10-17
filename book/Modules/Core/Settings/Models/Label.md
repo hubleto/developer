@@ -1,18 +1,16 @@
-# Model Sales/Leads/Label
+# Model Core/Settings/Label
 
 ## Introduction
 
-Označenie ktorý môže mať lead, slúžiace na prioritizáciu (hot, warm, cold)
-
-## Constants
+Label for a Lead or a Deal entry
 
 ## Properties
 
-| Property        | Value        |
-| :-------------- | :----------- |
-| isJunctionTable | FALSE        |
-| sqlName         | labels       |
-| lookupSqlValue  | {%TABLE%}.id |
+| Property        | Value          |
+| :-------------- | :------------- |
+| isJunctionTable | FALSE          |
+| table           | labels         |
+| lookupSqlValue  | {%TABLE%}.name |
 
 ## Data Scructure
 
@@ -21,12 +19,9 @@ Označenie ktorý môže mať lead, slúžiace na prioritizáciu (hot, warm, col
 | id     | ID    | int        |        | TRUE     |
 | name   | Name  | varchar    |        | TRUE     |
 
-## ADIOS parameters
-
-## Foreign Keys
-
 ## Indexes
 
 | Name |  Type   | Column + Order |
 | :--- | :-----: | -------------: |
 | id   | PRIMARY |         id ASC |
+| name | UNIQUE  |                |

@@ -1,33 +1,31 @@
-# Model Customers/Contact
+# Model Core/Customers/Contact
 
 ## Introduction
 
-Zoznam kontaktných informácií.
-
-## Constants
+List of contact information for a person
 
 ## Properties
 
-| Property        | Value                           |
-| :-------------- | :------------------------------ |
-| isJunctionTable | FALSE                           |
-| sqlName         | persons_contacts                |
-| urlBase         | core/customers/persons-contacts |
-| lookupSqlValue  | {%TABLE%}.value                 |
+| Property        | Value           |
+| :-------------- | :-------------- |
+| isJunctionTable | FALSE           |
+| table           | contacts        |
+| lookupSqlValue  | {%TABLE%}.value |
 
 ## Data Scructure
 
-| Column    | Title        | ADIOS Type | Length | Required | Additional parameters                            |
-| --------- | ------------ | ---------- | ------ | -------- | ------------------------------------------------ |
-| id        | ID           | int        |        | TRUE     |                                                  |
-| id_person | Person       | lookup     |        | TRUE     |                                                  |
-| type      | Contact type | varchar    |        | TRUE     |enum_values: [email => Email, phone_number => Phone Number, website => Website, linkedid => LinkedIn, fax => Fax,...] |
-| value     | Value        | varchar    |        | TRUE     |                                                  |
-|           |              |            |        |          |                                                  |
+| Column    | Title        | ADIOS Type | Length | Required | Additional parameters                                                                                                 |
+| --------- | ------------ | ---------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------- |
+| id        | ID           | int        |        | TRUE     |                                                                                                                       |
+| id_person | Person       | lookup     |        | TRUE     |                                                                                                                       |
+| type      | Contact type | varchar    |        | TRUE     | enum_values: [email => Email, phone_number => Phone Number, website => Website, linkedid => LinkedIn, fax => Fax,...] |
+| value     | Value        | varchar    |        | TRUE     |                                                                                                                       |
 
-### ADIOS parameters
+## Foreign Keys
 
-### Foreign Keys
+| Column     | Model                                             | Relation | OnUpdate | OnDelete |
+| ---------- | ------------------------------------------------- | -------- | -------- | -------- |
+| id_country | [Modules\Core\Customers\Models\Person](Person.md) | 1:1      | Cascade  | Restrict |
 
 ### Indexes
 

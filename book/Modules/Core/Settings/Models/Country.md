@@ -1,18 +1,18 @@
-# Model Sales/Leads/Status
+# Model Core/Settings/Country
 
 ## Introduction
 
-Status ktorý môže mať lead (new, in progress, closed, lost)
+List of countries existing in the system.
 
 ## Constants
 
 ## Properties
 
-| Property        | Value        |
-| :-------------- | :----------- |
-| isJunctionTable | FALSE        |
-| sqlName         | lead_status  |
-| lookupSqlValue  | {%TABLE%}.id |
+| Property        | Value          |
+| :-------------- | :------------- |
+| isJunctionTable | FALSE          |
+| table           | countries      |
+| lookupSqlValue  | {%TABLE%}.name |
 
 ## Data Scructure
 
@@ -20,8 +20,7 @@ Status ktorý môže mať lead (new, in progress, closed, lost)
 | ------ | ----- | ---------- | ------ | -------- |
 | id     | ID    | int        |        | TRUE     |
 | name   | Name  | varchar    |        | TRUE     |
-| order  | Order | int        |        | TRUE     |
-| color  | Color | color      |        | TRUE     |
+| code   | Code  | varchar    | 5      | TRUE     |
 
 ## ADIOS parameters
 
@@ -32,3 +31,4 @@ Status ktorý môže mať lead (new, in progress, closed, lost)
 | Name |  Type   | Column + Order |
 | :--- | :-----: | -------------: |
 | id   | PRIMARY |         id ASC |
+| code | UNIQUE  |       code ASC |

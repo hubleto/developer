@@ -1,8 +1,8 @@
-# Model Sales/Leads/LeadHistory
+# Model Sales/Deals/History
 
 ## Introduction
 
-Ukladanie history pre leady
+History for each of created Deals
 
 ## Constants
 
@@ -11,7 +11,7 @@ Ukladanie history pre leady
 | Property        | Value        |
 | :-------------- | :----------- |
 | isJunctionTable | FALSE        |
-| sqlName         | lead_history |
+| table           | deal_history |
 | lookupSqlValue  | {%TABLE%}.id |
 
 ## Data Scructure
@@ -19,7 +19,7 @@ Ukladanie history pre leady
 | Column      | Title       | ADIOS Type | Length | Required |
 | ----------- | ----------- | ---------- | ------ | -------- |
 | id          | ID          | int        |        | TRUE     |
-| id_lead     | Lead        | lookup     |        | TRUE     |
+| id_deal     | Deal        | lookup     |        | TRUE     |
 | change_date | Change date | timestamp  |        | TRUE     |
 | notes       | Notes       | text       |        | TRUE     |
 
@@ -27,9 +27,9 @@ Ukladanie history pre leady
 
 ## Foreign Keys
 
-| Column  | Model                                               | Relation | OnUpdate | OnDelete |
-| ------- | --------------------------------------------------- | -------- | -------- | -------- |
-| id_lead | [Modules\Sales\Leads\Models\Lead](Lead.md) | 1:1      | Cascade  | Restrict |
+| Column  | Model                                      | Relation | OnUpdate | OnDelete |
+| ------- | ------------------------------------------ | -------- | -------- | -------- |
+| id_lead | [Modules\Sales\Deals\Models\Deal](Deal.md) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 
