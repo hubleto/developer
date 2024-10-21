@@ -1,4 +1,4 @@
-# Model Core/Settings/LeadStatus
+# Model Sales/Leads/Status
 
 ## Introduction
 
