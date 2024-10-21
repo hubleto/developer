@@ -33,13 +33,13 @@ List of created Leads
 
 ## Foreign Keys
 
-| Column            | Model                                                                                  | Relation | OnUpdate | OnDelete |
-| ----------------- | -------------------------------------------------------------------------------------- | -------- | -------- | -------- |
-| id_contact_person | [Modules\Core\Customers\Models\Person](Person.md)                                      | 1:1      | Cascade  | Restrict |
-| id_company        | [Modules\Core\Customers\Models\Company](Company.md)                                    | 1:1      | Cascade  | Restrict |
-| id_status         | [Modules\Core\Settings\Models\LeadStatus](./Status.md) | 1:1      | Cascade  | Restrict |
-| id_currency       | [Modules\Sales\Leads\Models\Settings\Currency](Currency.md)                            | 1:1      | Cascade  | Restrict |
-| id_user           | [Modules\Core\Settings\Models\User]()                                                  | 1:1      | Cascade  | Restrict |
+| Column            | Model                                                                      | Relation | OnUpdate | OnDelete |
+| ----------------- | -------------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_contact_person | [Modules\Core\Customers\Models\Person](Person.md)                          | 1:1      | Cascade  | Restrict |
+| id_company        | [Modules\Core\Customers\Models\Company](Company.md)                        | 1:1      | Cascade  | Restrict |
+| id_status         | [Modules\Core\Settings\Models\LeadStatus](./Status.md)                     | 1:1      | Cascade  | Restrict |
+| id_currency       | [Modules\Sales\Leads\Models\Settings\Currency](Currency.md)                | 1:1      | Cascade  | Restrict |
+| id_user           | [Modules\Core\Settings\Models\User](../../../Core/Settings/Models/User.md) | 1:1      | Cascade  | Restrict |
 
 ## Additional Relations
 
