@@ -1,5 +1,5 @@
 # Settings
 
-| Path                                 | Data type   | Default value |
-| ------------------------------------ | ----------- | ------------- |
-| Modules/Core/Billing/DefaultCurrency | char        | EUR           |
+| Key                                            | Data type | Default value |
+| ---------------------------------------------- | --------- | ------------- |
+| Modules\Core\Settings\Pipeline\DefaultPipeline | int       | 1             |
