@@ -1,0 +1,12 @@
+homePage: home
+redirects:
+  some-old-page:
+    newPage: some-new-page
+    code: 301
+tableOfContents:
+  - page: home
+    icon: fas fa-home
+
+pages:
+  home:
+    title: Welcome
