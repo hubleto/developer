@@ -30,6 +30,7 @@ class MyGuideVis extends \WaiBlue\GuideVis\Loader {
     $pages = parent::loadPagesFromContent($contentFolder, $pagePrefix);
     foreach ($pages as $page => $pageData) {
       $content = $this->getPageContent($page);
+
       $lines = explode("\n", $content);
       foreach ($lines as $line) {
         $line = trim($line);
@@ -38,6 +39,8 @@ class MyGuideVis extends \WaiBlue\GuideVis\Loader {
           break;
         }
       }
+
+      if (empty($pages[$page]['title'])) $pages[$page]['title'] = $page;
     }
     return $pages;
   }

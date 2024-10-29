@@ -4,23 +4,23 @@
     <li id="{{ itemIdPrefix }}_{{ itemCounter }}">
       {% if item.children is iterable %}
         <a href="{{ env.guideRootUrl }}/{{ item.page ?? '' }}"
-          class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %} w-full"
+          class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last != item.page %} btn-transparent {% endif %} w-full level-{{ level }}"
         >
-          {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
+          {% if level == 0 and item.icon %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text grow">{{ bookConfig.pages[item.page].title }}</span>
         </a>
         <div
           id="{{ itemIdPrefix }}_{{ itemCounter }}_{{ page }}"
           class=""
         >
-          <ul class="ps-4 pt-0.5 space-y-0.5">
+          <ul class="ps-1 pt-0.5">
             {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1) }}
           </ul>
         </div>
       {% else %}
         <a
           href="{{ env.guideRootUrl }}/{{ item.page }}"
-          class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %} w-full"
+          class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last != item.page %} btn-transparent {% endif %} w-full level-{{ level }}"
         >
           {% if level == 0 and item.icon %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text">{{ bookConfig.pages[item.page].title }}</span>
@@ -35,14 +35,7 @@
 {# https://preline.co/templates/admin/index.html #}
 
 <!-- Sidebar -->
-<div class="
-  w-72 h-full
-  hidden
-  fixed inset-y-0 start-0 z-[60]
-  bg-white border-e border-gray-200
-  md:block lg:translate-x-0 lg:end-auto lg:bottom-0
-  dark:bg-neutral-800 dark:border-neutral-700
-" role="dialog" tabindex="-1" aria-label="Sidebar">
+<div class="sidebar" role="dialog" tabindex="-1" aria-label="Sidebar">
 
   <div class="relative flex flex-col h-full max-h-full">
     <div class="px-6 pt-4 pb-4">
@@ -91,10 +84,10 @@
     </div> #}
 
     <!-- Sidebar content -->
-    <div class="h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+    <div class="sidebar-content">
 
-      <nav class="hs-accordion-group p-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
-        <ul class="flex flex-col space-y-0.5">
+      <nav class="hs-accordion-group px-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
+        <ul class="flex flex-col space-y-0.5 p-0">
           {{ _self.renderSidebar(bookConfig.tableOfContents, bookConfig, env, breadcrumbs, '', 0) }}
 
         </ul>

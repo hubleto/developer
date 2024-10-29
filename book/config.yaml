@@ -5,3 +5,14 @@ redirects:
     code: 301
 tableOfContents:
   - page: getting-started
+  - page: modules
+    children:
+      - page: modules/core
+        children:
+          - page: modules/core/billing
+            children:
+              - page: modules/core/billing/models/billing-account
+              - page: modules/core/billing/models/billing-account-service
+              - page: modules/core/billing/controllers/billing-accounts
+              - page: modules/core/billing/views/billing-accounts
+              - page: modules/core/billing/components/table-billing-account-services

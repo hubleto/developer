@@ -1,8 +1,8 @@
 @layer base {
 
   h1 { @apply text-3xl text-slate-800; }
-  h2 { @apply text-sm font-semibold text-primary pt-20 pb-0 first-of-type:pt-4; }
-  h3 { @apply text-xl font-bold text-slate-800 pt-4 pb-2; }
+  h2 { @apply text-xl font-bold text-slate-800 pt-4 pb-2; }
+  h3 { @apply text-sm font-semibold text-primary pt-20 pb-0 first-of-type:pt-4; }
   a { @apply text-primary; }
   a:hover { @apply underline; }
   h2+a+h3 { @apply pt-0; }
@@ -69,4 +69,21 @@
   .step-by-step .step-content .step-description { @apply text-sm pb-2 }
   .step-by-step .step-example { @apply flex-1 overflow-x-auto overflow-y-hidden; }
 
+  .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 md:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700; }
+  .sidebar .sidebar-content { @apply h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500; }
+
+  .sidebar ul.level-0 { @apply ps-0 pt-0.5 space-y-0; }
+  .sidebar li.level-1 { @apply m-0 p-0; }
+  .sidebar .btn.level-1 { @apply border-none p-0 before:content-['❖'] before:text-xs before:text-primary before:pl-2; }
+  .sidebar .btn.level-1.btn-primary { @apply before:text-white; }
+  .sidebar .btn.level-1:not(.btn-primary) { @apply hover:bg-slate-100 hover:text-gray-800; }
+  .sidebar .btn.level-1 .text { @apply text-sm; }
+
+  .sidebar .btn.level-2.btn-primary { @apply p-0 border-none before:text-white; }
+  .sidebar .btn.level-2 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
+  .sidebar .btn.level-2 .text { @apply text-xs; }
+
+  .sidebar .btn.level-3.btn-primary { @apply p-0 border-none before:text-white; }
+  .sidebar .btn.level-3 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
+  .sidebar .btn.level-3 .text { @apply text-xs; }
 }

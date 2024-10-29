@@ -6,11 +6,11 @@
 
 ## Properties
 
-| Property        | Value            |
-| :-------------- | :--------------- |
-| isJunctionTable | TRUE             |
-| table           | billing_accounts |
-| lookupSqlValue  | [TABLE].id     |
+| Property                                                                                   | Value            |
+| :----------------------------------------------------------------------------------------- | :--------------- |
+| [isJunctionTable](https://docs.wai.blue/adios-framework/models/properties#isJunctionTable) | TRUE             |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                     | billing_accounts |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue)   | [TABLE].id       |
 
 ## Data Scructure
 
