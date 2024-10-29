@@ -1,14 +1,8 @@
 {
-  "repositories": [
-      {
-          "type": "path",
-          "url": "../../github/guidevis"
-      }
-  ],
   "require": {
         "symfony/yaml": "^7.1",
         "erusev/parsedown": "^1.7",
         "twig/twig": "^3.14",
-        "wai-blue/guidevis": "@dev"
+        "wai-blue/guidevis": "v0.1.0"
     }
 }
