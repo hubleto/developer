@@ -1,4 +1,4 @@
-# Billing
+# Module Billing
 
 namespace CeremonyCrmApp\Modules\Core\Billing
 

@@ -16,3 +16,4 @@ tableOfContents:
               - page: modules/core/billing/controllers/billing-accounts
               - page: modules/core/billing/views/billing-accounts
               - page: modules/core/billing/components/table-billing-account-services
+          - page: modules/core/customers
