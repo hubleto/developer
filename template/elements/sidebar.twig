@@ -22,7 +22,7 @@
           href="{{ env.guideRootUrl }}/{{ item.page }}"
           class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %} w-full"
         >
-          {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
+          {% if level == 0 and item.icon %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text">{{ bookConfig.pages[item.page].title }}</span>
         </a>
       {% endif %}
