@@ -9,7 +9,7 @@ cd /var/www/html/my-ceremony
 composer create-project wai-blue/ceremonycrm-app
 npm install & npm run build
 
-# let Ceremony ask you few questions about URLs and database connections and create config file
+# let Ceremony ask you few questions and create config file
 ceremony.sh orchestrate config set interactively
 
 # install empty Ceremony with default settings
