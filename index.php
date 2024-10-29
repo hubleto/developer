@@ -24,8 +24,27 @@ $templateConfig = [
   ],
 ];
 
+class MyGuideVis extends \WaiBlue\GuideVis\Loader {
+  public function loadPagesFromContent(string $contentFolder, string $pagePrefix = ''): array
+  {
+    $pages = parent::loadPagesFromContent($contentFolder, $pagePrefix);
+    foreach ($pages as $page => $pageData) {
+      $content = $this->getPageContent($page);
+      $lines = explode("\n", $content);
+      foreach ($lines as $line) {
+        $line = trim($line);
+        if (\str_starts_with($line, "# ")) {
+          $pages[$page]['title'] = trim($line, '# ');
+          break;
+        }
+      }
+    }
+    return $pages;
+  }
+}
+
 try {
-  $renderer = new \WaiBlue\GuideVis\Loader($page, $env, $templateConfig);
+  $renderer = new MyGuideVis($page, $env, $templateConfig);
   $renderer->init();
   echo $renderer->render();
 } catch (\Exception $e) {
