@@ -1,35 +1,41 @@
 {% macro renderSidebar(items, bookConfig, env, breadcrumbs, itemIdPrefix, level) %}
-  {% set itemCounter = 0 %}
-  {% for item in items %}
-    <li id="{{ itemIdPrefix }}_{{ itemCounter }}">
-      {% if item.children is iterable %}
-        <a href="{{ env.guideRootUrl }}/{{ item.page ?? '' }}"
-          class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last != item.page %} btn-transparent {% endif %} w-full level-{{ level }}"
-        >
-          {% if level == 0 and item.icon %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
-          <span class="text grow">{{ bookConfig.pages[item.page].title }}</span>
-        </a>
-        <div
-          id="{{ itemIdPrefix }}_{{ itemCounter }}_{{ page }}"
-          class=""
-        >
-          <ul class="ps-1 pt-0.5">
-            {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1) }}
-          </ul>
-        </div>
-      {% else %}
-        <a
-          href="{{ env.guideRootUrl }}/{{ item.page }}"
-          class="{% if level == 0 %} btn {% else %} btn {% endif %} {% if breadcrumbs|last != item.page %} btn-transparent {% endif %} w-full level-{{ level }}"
-        >
-          {% if level == 0 and item.icon %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
-          <span class="text">{{ bookConfig.pages[item.page].title }}</span>
-        </a>
-      {% endif %}
-    </li>
+  {% if level <= 4 %}
+    {% set itemCounter = 0 %}
+    {% for item in items %}
+      <li id="{{ itemIdPrefix }}_{{ itemCounter }}" class="level-{{ level }}">
+        {% if item.children is iterable %}
+          <a href="{{ env.guideRootUrl }}/{{ item.page ?? '' }}"
+            class="{% if level == 0 %} btn {% else %} btn btn-small {% endif %} {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %} w-full level-{{ level }}"
+          >
+            {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
+            <span class="text grow {% if level == 0 %} font-bold {% endif %}">
+              {% if bookConfig.pages[item.page].title %} {{ bookConfig.pages[item.page].title }} {% else %} <span class="text-slate-400">{{ item.page }}</span> {% endif %}
+            </span>
+          </a>
+          <div
+            id="{{ itemIdPrefix }}_{{ itemCounter }}_{{ page }}"
+            class=""
+          >
+            <ul class="level-{{ level }}">
+              {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1) }}
+            </ul>
+          </div>
+        {% else %}
+          <a
+            href="{{ env.guideRootUrl }}/{{ item.page }}"
+            class="{% if level == 0 %} btn {% else %} btn btn-small {% endif %} {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %} w-full level-{{ level }}"
+          >
+            {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
+            <span class="text {% if level == 0 %} font-bold {% endif %}">
+              {% if bookConfig.pages[item.page].title %} {{ bookConfig.pages[item.page].title }} {% else %} <span class="text-slate-400">{{ item.page }}</span> {% endif %}
+            </span>
+          </a>
+        {% endif %}
+      </li>
 
-    {% set itemCounter = itemCounter + 1 %}
-  {% endfor %}
+      {% set itemCounter = itemCounter + 1 %}
+    {% endfor %}
+  {% endif %}
 {% endmacro %}
 
 {# https://preline.co/templates/admin/index.html #}
@@ -37,14 +43,15 @@
 <!-- Sidebar -->
 <div class="sidebar" role="dialog" tabindex="-1" aria-label="Sidebar">
 
-  <div class="relative flex flex-col h-full max-h-full">
+  <div class="relative flex flex-col h-full max-h-full pb-10">
     <div class="px-6 pt-4 pb-4">
-      <!-- Logo -->
-      <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="#" aria-label="Preline">
-        CeremonyCRM
-      </a><br/>
+      <div>
+        <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="{{ env.guideRootUrl }}">
+          DTXS<br/>
+        </a>
+      </div>
+      <small class="text-primary">Digital Twin data eXchange Standard</small><br/>
       <small>Developer's guide</small>
-      <!-- End Logo -->
     </div>
 
     {# <div class="hidden md:block">

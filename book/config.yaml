@@ -5,15 +5,26 @@ redirects:
     code: 301
 tableOfContents:
   - page: getting-started
-  - page: modules
+  - page: app
     children:
-      - page: modules/core
+      - page: modules
         children:
-          - page: modules/core/billing
+          - page: modules/core
             children:
-              - page: modules/core/billing/models/billing-account
-              - page: modules/core/billing/models/billing-account-service
-              - page: modules/core/billing/controllers/billing-accounts
-              - page: modules/core/billing/views/billing-accounts
-              - page: modules/core/billing/components/table-billing-account-services
-          - page: modules/core/customers
+              - page: modules/core/billing
+                children:
+                  - page: modules/core/billing/models/billing-account
+                  - page: modules/core/billing/models/billing-account-service
+                  - page: modules/core/billing/controllers/billing-accounts
+                  - page: modules/core/billing/views/billing-accounts
+                  - page: modules/core/billing/components/table-billing-account-services
+              - page: modules/core/customers
+  - page: extensions
+    children:
+      - page: controllers
+      - page: views
+      - page: ui-components
+      - page: routing
+      - page: permissions
+  - page: rest-api
+  - page: examples

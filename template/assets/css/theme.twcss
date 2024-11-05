@@ -86,4 +86,8 @@
   .sidebar .btn.level-3.btn-primary { @apply p-0 border-none before:text-white; }
   .sidebar .btn.level-3 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
   .sidebar .btn.level-3 .text { @apply text-xs; }
+
+  .sidebar .btn.level-4.btn-primary { @apply p-0 border-none before:text-white; }
+  .sidebar .btn.level-4 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
+  .sidebar .btn.level-4 .text { @apply text-xs; }
 }

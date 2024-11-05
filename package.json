@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "preline": "^2.5.0",
-    "tailwind": "^4.0.0"
+    "tailwind": "^4.0.0",
+    "tailwind-scrollbar": "^3.1.0"
   }
 }
