@@ -1,45 +1,55 @@
-# Model Core/Customers/Activity
+# Model Activity
 
-## Introduction
+namespace CeremonyCrmApp\Modules\Core\Customers\Models\Activity
 
-List of activities. Activity only exist with a Company entry.
+List of activities. Activity only exist within Company entry.
 
 ## Constants
 
+This model does not define constants.
+
 ## Properties
 
-| Property        | Value             |
-| :-------------- | :---------------- |
-| isJunctionTable | FALSE             |
-| table           | activities        |
-| lookupSqlValue  | [TABLE].subject |
+| Property                                                                                 | Value                    |
+| :--------------------------------------------------------------------------------------- | :----------------------- |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\Activity::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | activities               |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].subject          |
 
 ## Data Scructure
 
-| Column           | Title            | ADIOS Type | Length | Required |
-| ---------------- | ---------------- | ---------- | ------ | -------- |
-| id               | ID               | int        |        | TRUE     |
-| subject          | Activity subject | varchar    |        | TRUE     |
-| date_start       | Start Date       | date       |        | FALSE    |
-| time_start       | Start Time       | time       |        | FALSE    |
-| date_end         | End Date         | date       |        | FALSE    |
-| time_end         | End Time         | time       |        | FALSE    |
-| all_day          | All day          | boolean    |        | FALSE    |
-| completed        | Completed        | boolean    |        | FALSE    |
-| id_activity_type | Activity type    | lookup     |        | TRUE     |
-| id_company       | Company          | lookup     |        | TRUE     |
-| id_user          | Created by       | lookup     |        | TRUE     |
+| Column           | Title            | ADIOS Type                                                                 | Length | Required |
+| ---------------- | ---------------- | -------------------------------------------------------------------------- | ------ | -------- |
+| id               | ID               | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
+| subject          | Activity subject | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| date_start       | Start Date       | [date](https://docs.wai.blue/adios-framework/models/attributes#date)       |        | FALSE    |
+| time_start       | Start Time       | [time](https://docs.wai.blue/adios-framework/models/attributes#time)       |        | FALSE    |
+| date_end         | End Date         | [date](https://docs.wai.blue/adios-framework/models/attributes#date)       |        | FALSE    |
+| time_end         | End Time         | [time](https://docs.wai.blue/adios-framework/models/attributes#time)       |        | FALSE    |
+| all_day          | All day          | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | FALSE    |
+| completed        | Completed        | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | FALSE    |
+| id_activity_type | Activity type    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
+| id_company       | Company          | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
+| id_user          | Created by       | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
 
 ## Foreign Keys
 
-| Column           | Model                                                                          | Relation | OnUpdate | OnDelete |
-| ---------------- | ------------------------------------------------------------------------------ | -------- | -------- | -------- |
-| id_company       | [Modules\Core\Customers\Models\Company](company.md./modules/core/customers/models/Company.md)                            | 1:1      | Cascade  | Restrict |
-| id_activity_type | [Modules\Core\Customers\Models\Company](../../Settings/Models/ActivityType.mdels/ActivityType.md) | 1:1      | Cascade  | Restrict |
-| id_user          | [Modules\Core\Settings\Models\User](../../Settings/Models/User.mdings/models/User.md)             | 1:1      | Cascade  | Restrict |
+| Column           | Model                                                                               | Relation | OnUpdate | OnDelete |
+| ---------------- | ----------------------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_company       | [Modules\Core\Customers\Models\Company](company.md)                                 | 1:1      | Cascade  | Restrict |
+| id_activity_type | [Modules\Core\Settings\Models\ActivityType](../../settings/models/activity-type.md) | 1:1      | Cascade  | Restrict |
+| id_user          | [Modules\Core\Settings\Models\User](../../settings/models/user.md)                  | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 
-| Name |  Type   | Column + Order |
-| :--- | :-----: | -------------: |
-| id   | PRIMARY |         id ASC |
+Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) are used.
+
+## Relations
+
+| Relation      | Type       | Other parameters                              |
+| ------------- | ---------- | --------------------------------------------- |
+| COMPANY       | BELONGS_TO | Company::class, 'id_company', 'id'            |
+| USER          | BELONGS_TO | User::class, 'id_user', 'id'                  |
+| ACTIVITY_TYPE | HAS_ONE    | ActivityType::class, 'id', 'id_activity_type' |
+
+_Read more about [working with relations](../../database-relations)_

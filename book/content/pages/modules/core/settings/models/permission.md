@@ -1,26 +1,32 @@
-# Model Core/Settings/Permission
+# Model Permission
 
-## Introduction
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\Permission
 
 A list of available permissions for models and controllers that are in the system.
 
 ## Properties
 
-| Property        | Value                       |
-| :-------------- | :-------------------------- |
-| isJunctionTable | FALSE                       |
-| table           | permissions                 |
-| lookupSqlValue  | [TABLE].permission_string |
+| Property                                                                                 | Value                      |
+| :--------------------------------------------------------------------------------------- | :------------------------- |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\Permission::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | permissions                |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].permission_string  |
 
 ## Data Scructure
 
-| Column            | Title       | ADIOS Type | Length | Required |
-| ----------------- | ----------- | ---------- | ------ | -------- |
-| id                | ID          | int        |        | TRUE     |
-| permission_string | Permissions | varchar    |        | TRUE     |
+| Column            | Title       | ADIOS Type                                                                 | Length | Required |
+| ----------------- | ----------- | -------------------------------------------------------------------------- | ------ | -------- |
+| id                | ID          | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
+| permission_string | Permissions | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 
-### Indexes
+## Foreign Keys
 
-| Name |  Type   | Column + Order |
-| :--- | :-----: | -------------: |
-| id   | PRIMARY |         id ASC |
+This model does not contain any foreing keys
+
+## Indexes
+
+Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) are used.
+
+## Relations
+
+This model does not contain any relations.

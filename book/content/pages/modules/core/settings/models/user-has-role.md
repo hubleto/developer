@@ -1,34 +1,41 @@
-# Model Core/Settings/UserHasRole
+# Model UserHasRole
 
-## Introduction
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\UserHasRole
 
-An table for assigning roles to a user
+A list of roles assigned to a user
+
+## Constants
+
+This model does not define constants.
 
 ## Properties
 
-| Property        | Value          |
-| :-------------- | :------------- |
-| isJunctionTable | TRUE           |
-| table           | user_has_roles |
-| lookupSqlValue  | [TABLE].id   |
+| Property                                                                                 | Value                       |
+| :--------------------------------------------------------------------------------------- | :-------------------------- |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\UserHasRole::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | user_has_roles              |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].id                  |
 
 ## Data Scructure
 
-| Column  | Title | ADIOS Type | Length | Required |
-| ------- | ----- | ---------- | ------ | -------- |
-| id      | ID    | int        |        | TRUE     |
-| id_user | User  | lookup     |        | TRUE     |
-| id_role | Roles | lookup     |        | TRUE     |
+| Column  | Title | ADIOS Type                                                               | Length | Required |
+| ------- | ----- | ------------------------------------------------------------------------ | ------ | -------- |
+| id      | ID    | [int](https://docs.wai.blue/adios-framework/models/attributes#int)       |        | TRUE     |
+| id_user | User  | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
+| id_role | Roles | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
 
 ### Foreign Keys
 
-| Column  | Model                                            | Relation | OnUpdate | OnDelete |
-| ------- | ------------------------------------------------ | -------- | -------- | -------- |
-| id_user | [Modules\Core\Settings\Models\User](../../settings/models/User.md    | 1:1      | Cascade  | Cascade  |
-| id_role | [Modules\Core\Settings\Models\Role](user-role.mdngs/models/UserRole.md| 1:1      | Cascade  | Cascade  |
+| Column  | Model                                             | Relation | OnUpdate | OnDelete |
+| ------- | ------------------------------------------------- | -------- | -------- | -------- |
+| id_user | [Modules\Core\Settings\Models\User](user.md)      | 1:1      | Cascade  | Cascade  |
+| id_role | [Modules\Core\Settings\Models\Role](user-role.md) | 1:1      | Cascade  | Cascade  |
 
-### Indexes
+## Indexes
 
-| Name |  Type   | Column + Order |
-| :--- | :-----: | -------------: |
-| id   | PRIMARY |         id ASC |
+Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) are used.
+
+## Relations
+
+TODO
+

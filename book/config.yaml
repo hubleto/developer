@@ -19,6 +19,48 @@ tableOfContents:
                   - page: modules/core/billing/views/billing-accounts
                   - page: modules/core/billing/components/table-billing-account-services
               - page: modules/core/customers
+                children:
+                  - page: modules/core/customers/models/activity
+                  - page: modules/core/customers/models/address
+                  - page: modules/core/customers/models/company-tag
+                  - page: modules/core/customers/models/company
+                  - page: modules/core/customers/models/contact
+                  - page: modules/core/customers/models/person-tag
+                  - page: modules/core/customers/models/person
+                  - page: modules/core/customers/permissions
+              - page: modules/core/documents
+                children:
+                  - page: modules/core/documents/models/document
+                  - page: modules/core/documents/permissions
+              - page: modules/core/services
+                children:
+                  - page: modules/core/services/models/service
+                  - page: modules/core/services/permissions
+              - page: modules/core/settings
+                children:
+                  - page: modules/core/settings/models/activity-type
+                  - page: modules/core/settings/models/country
+                  - page: modules/core/settings/models/currency
+                  - page: modules/core/settings/models/label
+                  - page: modules/core/settings/models/permission
+                  - page: modules/core/settings/models/pipeline-step
+                  - page: modules/core/settings/models/pipeline
+                  - page: modules/core/settings/models/profile
+                  - page: modules/core/settings/models/role-permission
+                  - page: modules/core/settings/models/setting
+                  - page: modules/core/settings/models/tag
+                  - page: modules/core/settings/models/user-has-role
+                  - page: modules/core/settings/models/user-role
+                  - page: modules/core/settings/models/user
+                  - page: modules/core/settings/permissions
+          - page: modules/sales
+            children:
+              - page: modules/sales/deals
+                children:
+                  - page: modules/sales/deals/models/deal
+              - page: modules/sales/leads
+                children:
+                  - page: modules/sales/leads/models/lead
   - page: extensions
     children:
       - page: controllers

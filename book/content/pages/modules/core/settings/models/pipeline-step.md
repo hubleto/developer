@@ -1,31 +1,35 @@
-# Model Core/Settings/PipelineStage
+# Model PipelineStep
 
-## Introduction
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\PipelineStep
 
-Pipeline stages for a specific Pipeline
+List of pipeline stages for specific pipilines.
+
+## Constants
+
+This model does not define constants.
 
 ## Properties
 
-| Property        | Value           |
-| :-------------- | :-------------- |
-| isJunctionTable | FALSE           |
-| table           | pipeline_stages |
-| lookupSqlValue  | [TABLE].name  |
+| Property                                                                                 | Value                        |
+| :--------------------------------------------------------------------------------------- | :--------------------------- |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\PipelineStep::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | pipeline_stages              |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].name                 |
 
 ## Data Scructure
 
-| Column      | Title    | ADIOS Type | Length | Required |
-| ----------- | -------- | ---------- | ------ | -------- |
-| id          | ID       | int        |        | TRUE     |
-| name        | Name     | varchar    |        | TRUE     |
-| id_pipeline | Pipeline | lookup     |        | TRUE     |
-| order       | Order    | int        |        | TRUE     |
+| Column      | Title    | ADIOS Type                                                                 | Length | Required |
+| ----------- | -------- | -------------------------------------------------------------------------- | ------ | -------- |
+| id          | ID       | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
+| name        | Name     | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| id_pipeline | Pipeline | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
+| order       | Order    | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
 
 ## Foreign Keys
 
-| Column      | Model                                              | Relation | OnUpdate | OnDelete |
-| ----------- | -------------------------------------------------- | -------- | -------- | -------- |
-| id_pipeline | [Modules\Sales\Deals\Models\Pipeline](Pipeline.md) | 1:1      | Cascade  | Cascade  |
+| Column      | Model                                                | Relation | OnUpdate | OnDelete |
+| ----------- | ---------------------------------------------------- | -------- | -------- | -------- |
+| id_pipeline | [Modules\Core\Settings\Models\Pipeline](pipeline.md) | 1:1      | Cascade  | Cascade  |
 
 ## Indexes
 
@@ -33,3 +37,7 @@ Pipeline stages for a specific Pipeline
 | :---- | :-----: | -------------: |
 | order |   N/A   |      order ASC |
 | id    | PRIMARY |         id ASC |
+
+## Relations
+
+TODO

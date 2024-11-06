@@ -1,25 +1,33 @@
-# Model Core/Settings/Currency
+# Model Currency
 
-## Introduction
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\Currency
 
 List of currencies existing in the system
 
+## Constants
+
+This model does not define constants.
+
 ## Properties
 
-| Property        | Value                                              |
-| :-------------- | :------------------------------------------------- |
-| isJunctionTable | FALSE                                              |
-| table           | currencies                                         |
-| lookupSqlValue  | CONCAT([TABLE].name ," ","(",[TABLE].code,")") |
+| Property                                                                                 | Value                                          |
+| :--------------------------------------------------------------------------------------- | :--------------------------------------------- |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\Currency::class                       |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | currencies                                     |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | CONCAT([TABLE].name ," ","(",[TABLE].code,")") |
 
 ## Data Scructure
 
-| Column | Title           | ADIOS Type | Length | Required |
-| ------ | --------------- | ---------- | ------ | -------- |
-| id     | ID              | int        |        | TRUE     |
-| name   | Currency name   | varchar    |        | TRUE     |
-| code   | Currency code   | varchar    |        | TRUE     |
-| symbol | Currency symbol | varchar    |        | TRUE     |
+| Column | Title           | ADIOS Type                                                                 | Length | Required |
+| ------ | --------------- | -------------------------------------------------------------------------- | ------ | -------- |
+| id     | ID              | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
+| name   | Currency name   | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| code   | Currency code   | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| symbol | Currency symbol | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+
+## Foreign Keys
+
+This model does not contain any foreing keys
 
 ## Indexes
 
@@ -28,3 +36,7 @@ List of currencies existing in the system
 | id   | PRIMARY |         id ASC |
 | name | UNIQUE  |       name ASC |
 | code | UNIQUE  |                |
+
+## Relations
+
+This model does not contain any relations.

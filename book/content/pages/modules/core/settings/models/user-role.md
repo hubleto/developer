@@ -1,6 +1,6 @@
-# Model Core/Settings/UserRole
+# Model UserRole
 
-## Introduction
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\UserRole
 
 A list of roles assignable to a user.
 
@@ -13,21 +13,27 @@ A list of roles assignable to a user.
 
 ## Properties
 
-| Property        | Value          |
-| :-------------- | :------------- |
-| isJunctionTable | FALSE          |
-| table           | user_roles     |
-| lookupSqlValue  | [TABLE].role |
+| Property                                                                                 | Value                    |
+| :--------------------------------------------------------------------------------------- | :----------------------- |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\UserRole::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | user_roles               |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].role             |
 
 ## Data Scructure
 
-| Column | Title | ADIOS Type | Length | Required |
-| ------ | ----- | ---------- | ------ | -------- |
-| id     | ID    | int        |        | TRUE     |
-| role   | Role  | varchar    |        | TRUE     |
+| Column | Title | ADIOS Type                                                                 | Length | Required |
+| ------ | ----- | -------------------------------------------------------------------------- | ------ | -------- |
+| id     | ID    | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
+| role   | Role  | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 
-### Indexes
+## Foreign Keys
 
-| Name |  Type   | Column + Order |
-| :--- | :-----: | -------------: |
-| id   | PRIMARY |         id ASC |
+This model does not contain any foreing keys
+
+## Indexes
+
+Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) are used.
+
+## Relations
+
+This model does not contain any relations.

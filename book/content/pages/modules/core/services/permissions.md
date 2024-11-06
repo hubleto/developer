@@ -6,15 +6,15 @@ The second list show the availible permissions for controllers.
 
 ## Model Permissions
 
-| Permission                                 | Sales manager |
-| ------------------------------------------ | :-----------: |
-| Modules/Core/Service/Models/Service:Create |               |
-| Modules/Core/Service/Models/Service:Read   |       x       |
-| Modules/Core/Service/Models/Service:Update |       x       |
-| Modules/Core/Service/Models/Service:Delete |               |
+| Permission                                 |
+| ------------------------------------------ |
+| Modules/Core/Service/Models/Service:Create |
+| Modules/Core/Service/Models/Service:Read   |
+| Modules/Core/Service/Models/Service:Update |
+| Modules/Core/Service/Models/Service:Delete |
 
 ## Controller Permissions
 
-| Permission                               | Sales manager |
-| ---------------------------------------- | :-----------: |
-| Modules/Core/Service/Controllers/Service |       x       |
+| Permission                               |
+| ---------------------------------------- |
+| Modules/Core/Service/Controllers/Service |
