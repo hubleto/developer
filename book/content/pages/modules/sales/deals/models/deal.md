@@ -57,6 +57,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 | ------------------------------------------------------------- | ------------- | ----------- | --------- |
 | [Modules\Sales\Leads\Models\Lead](../../leads/models/lead.md) | Has One       | id_deal     | id        |
 | [Modules\Sales\Deals\Models\DealHistory](deal-history.md)     | Has Many      | id_deal     | id        |
-| [Modules\Sales\Leads\Models\DealLabel](deal-label.md)         | Has Many      | id_deal     | id        |
+| [Modules\Sales\Deals\Models\DealLabel](deal-label.md)         | Has Many      | id_deal     | id        |
 
 TODO
