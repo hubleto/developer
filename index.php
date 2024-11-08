@@ -25,25 +25,6 @@ $templateConfig = [
 ];
 
 class MyGuideVis extends \WaiBlue\GuideVis\Loader {
-  public function loadPagesFromContent(string $contentFolder, string $pagePrefix = ''): array
-  {
-    $pages = parent::loadPagesFromContent($contentFolder, $pagePrefix);
-    foreach ($pages as $page => $pageData) {
-      $content = $this->getPageContent($page);
-
-      $lines = explode("\n", $content);
-      foreach ($lines as $line) {
-        $line = trim($line);
-        if (\str_starts_with($line, "# ")) {
-          $pages[$page]['title'] = trim($line, '# ');
-          break;
-        }
-      }
-
-      if (empty($pages[$page]['title'])) $pages[$page]['title'] = $page;
-    }
-    return $pages;
-  }
 }
 
 try {
