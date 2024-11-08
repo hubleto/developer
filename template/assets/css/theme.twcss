@@ -72,22 +72,30 @@
   .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 md:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700; }
   .sidebar .sidebar-content { @apply h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500; }
 
-  .sidebar ul.level-0 { @apply ps-0 pt-0.5 space-y-0; }
-  .sidebar li.level-1 { @apply m-0 p-0; }
+  .sidebar ul.level-0 { @apply ps-2 pt-0.5 space-y-0; }
+  .sidebar ul.level-1 { @apply pt-0 ps-2; }
+  .sidebar a.expanded:not(.btn-primary) > .text { @apply font-bold; }
+  .sidebar a.has-children.collapsed { @apply after:content-['▾'] after:pr-2 ; }
+
   .sidebar .btn.level-1 { @apply border-none p-0 before:content-['❖'] before:text-xs before:text-primary before:pl-2; }
-  .sidebar .btn.level-1.btn-primary { @apply before:text-white; }
+  .sidebar .btn.level-1.btn-primary { @apply border-none before:text-white; }
   .sidebar .btn.level-1:not(.btn-primary) { @apply hover:bg-slate-100 hover:text-gray-800; }
   .sidebar .btn.level-1 .text { @apply text-sm; }
 
-  .sidebar .btn.level-2.btn-primary { @apply p-0 border-none before:text-white; }
-  .sidebar .btn.level-2 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
+  .sidebar .btn.level-2.btn-primary { @apply p-0 border-none; }
+  .sidebar .btn.level-2 { @apply ml-2 border-l border-l-primary hover:bg-slate-100 hover:text-gray-800; }
   .sidebar .btn.level-2 .text { @apply text-xs; }
 
-  .sidebar .btn.level-3.btn-primary { @apply p-0 border-none before:text-white; }
+  .sidebar .btn.level-3.btn-primary { @apply p-0 border-none; }
   .sidebar .btn.level-3 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
   .sidebar .btn.level-3 .text { @apply text-xs; }
 
-  .sidebar .btn.level-4.btn-primary { @apply p-0 border-none before:text-white; }
-  .sidebar .btn.level-4 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
-  .sidebar .btn.level-4 .text { @apply text-xs; }
+  .sidebar .collapsed + * { @apply hidden; }
+  .sidebar .expanded + * { @apply block; }
+
+  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 hidden lg:block; }
+  aside.on-this-page > div:nth-child(1) { @apply text-sm p-2.5 flex items-center font-semibold border-b border-slate-200; }
+  aside.on-this-page > div:nth-child(2) { @apply p-2; }
+  aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-4 pb-2 text-sm font-semibold; }
+  aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs ml-4 p-1 text-gray-800; }
 }
