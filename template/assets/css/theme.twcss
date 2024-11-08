@@ -2,7 +2,7 @@
 
   h1 { @apply text-3xl text-slate-800; }
   h2 { @apply text-xl font-bold text-slate-800 pt-4 pb-2; }
-  h3 { @apply text-sm font-semibold text-primary pt-20 pb-0 first-of-type:pt-4; }
+  h3 { @apply text-sm font-semibold text-primary pt-2 pb-0 first-of-type:pt-4; }
   a { @apply text-primary; }
   a:hover { @apply underline; }
   h2+a+h3 { @apply pt-0; }
