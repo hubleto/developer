@@ -31,4 +31,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-TODO
+| Relation | Type       | Other parameters            |
+| -------- | ---------- | --------------------------- |
+| LEAD     | BELONGS_TO | Lead::class, 'id_lead','id' |

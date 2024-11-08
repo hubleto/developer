@@ -36,4 +36,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-This model does not contain any relations.
+| Relation    | Type     | Other parameters                       |
+| ----------- | -------- | -------------------------------------- |
+| PERMISSIONS | HAS_MANY | RolePermission::class, 'id_role', 'id' |

@@ -40,4 +40,6 @@ This model does not define constants.
 
 ## Relations
 
-TODO
+| Relation | Type       | Other parameters                     |
+| -------- | ---------- | ------------------------------------ |
+| PIPELINE | BELONGS_TO | Pipeline::class, 'id_pipeline', 'id' |

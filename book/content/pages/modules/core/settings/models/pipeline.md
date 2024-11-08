@@ -33,6 +33,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-| Model                                                   | Eloquent Type | Foreign Key | Local Key |
-| ------------------------------------------------------- | ------------- | ----------- | --------- |
-| [Modules\Core\Settings\PipelineStage](pipeline-step.md) | Has Many      | id_pipeline | id        |
+| Model                                                  | Eloquent Type | Foreign Key | Local Key |
+| ------------------------------------------------------ | ------------- | ----------- | --------- |
+| [Modules\Core\Settings\PipelineStep](pipeline-step.md) | Has Many      | id_pipeline | id        |

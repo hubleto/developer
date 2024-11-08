@@ -34,4 +34,4 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-TODO
+This model does not contain any relations.

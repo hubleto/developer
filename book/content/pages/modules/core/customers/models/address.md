@@ -42,4 +42,7 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-TODO
+| Relation | Type       | Other parameters                   |
+| -------- | ---------- | ---------------------------------- |
+| PERSON   | BELONGS_TO | Person::class, 'id_person', 'id'   |
+| COUNTRY  | BELONGS_TO | Country::class, 'id', 'id_country' |
