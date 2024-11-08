@@ -9,7 +9,8 @@ tableOfContents:
     children:
       - page: modules
         children:
-          - page: getting-started
+          - page: creating-extentions
+          - page: loader
           - page: modules/core
             children:
               - page: modules/core/billing
