@@ -51,10 +51,13 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-| Model                                                         | Eloquent Type | Foreign Key | Local Key |
-| ------------------------------------------------------------- | ------------- | ----------- | --------- |
-| [Modules\Sales\Leads\Models\Lead](../../leads/models/lead.md) | Has One       | id_lead     | id        |
-| [Modules\Sales\Leads\Models\LeadHistory](lead-history.md)     | Has Many      | id_lead     | id        |
-| [Modules\Sales\Leads\Models\LeadLabel](lead-label.md)         | Has Many      | id_lead     | id        |
-
-TODO
+| Relation | Type       | Other parameters                     |
+| -------- | ---------- | ------------------------------------ |
+| DEAL     | BELONGS_TO | Deal::class, 'id_lead','id'          |
+| COMPANY  | BELONGS_TO | Company::class, 'id_company', 'id'   |
+| USER     | BELONGS_TO | User::class, 'id_user', 'id'         |
+| PERSON   | HAS_ONE    | Person::class, 'id', 'id_person'     |
+| CURRENCY | HAS_ONE    | Currency::class, 'id', 'id_currency' |
+| HISTORY  | HAS_MANY   | DealHistory::class, 'id_lead', 'id'  |
+| LABELS   | HAS_MANY   | DealLabel::class, 'id_lead', 'id'    |
+| SERVICES | HAS_MANY   | LeadService::class, 'id_lead', 'id'  |

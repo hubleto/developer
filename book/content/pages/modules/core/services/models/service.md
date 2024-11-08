@@ -39,4 +39,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-TODO
+| Relation | Type    | Other parameters                     |
+| -------- | ------- | ------------------------------------ |
+| CURRENCY | HAS_ONE | Currency::class, 'id', 'id_currency' |

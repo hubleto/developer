@@ -37,5 +37,7 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-TODO
-
+| Relation | Type       | Other parameters                 |
+| -------- | ---------- | -------------------------------- |
+| TAG      | BELONGS_TO | Tag::class, 'id_tag', 'id'       |
+| PERSON   | BELONGS_TO | Person::class, 'id_person', 'id' |

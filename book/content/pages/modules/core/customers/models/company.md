@@ -50,4 +50,14 @@ This model does not define constants.
 
 ## Relations
 
-TODO
+| Relation         | Type       | Other parameters                      |
+| ---------------- | ---------- | ------------------------------------- |
+| PERSONS          | HAS_MANY   | Person::class, 'id_company'           |
+| COUNTRY          | HAS_ONE    | Country::class, 'id', 'id_country'    |
+| USER             | BELONGS_TO | User::class, 'id_user', 'id'          |
+| FIRST_CONTACT    | HAS_ONE    | Person::class, 'id_company',          |
+| BILLING_ACCOUNTS | HAS_MANY   | BillingAccount::class, 'id_company',  |
+| ACTIVITIES       | HAS_MANY   | Activity::class, 'id_company',        |
+| TAGS             | HAS_MANY   | CompanyTag::class, 'id_company', 'id' |
+| LEADS            | HAS_MANY   | Lead::class, 'id_company', 'id'       |
+| DEALS            | HAS_MANY   | Deal::class, 'id_company', 'id'       |

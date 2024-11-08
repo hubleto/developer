@@ -9,6 +9,7 @@ tableOfContents:
     children:
       - page: modules
         children:
+          - page: getting-started
           - page: modules/core
             children:
               - page: modules/core/billing
@@ -58,9 +59,16 @@ tableOfContents:
               - page: modules/sales/deals
                 children:
                   - page: modules/sales/deals/models/deal
+                  - page: modules/sales/deals/models/deal-label
+                  - page: modules/sales/deals/models/deal-history
+                  - page: modules/sales/deals/models/deal-service
+                  - page: modules/sales/deals/settings
               - page: modules/sales/leads
                 children:
                   - page: modules/sales/leads/models/lead
+                  - page: modules/sales/leads/models/lead-label
+                  - page: modules/sales/leads/models/lead-history
+                  - page: modules/sales/leads/models/lead-service
   - page: extensions
     children:
       - page: controllers
