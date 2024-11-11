@@ -9,7 +9,6 @@ tableOfContents:
     children:
       - page: modules
         children:
-          - page: creating-extentions
           - page: loader
           - page: modules/core
             children:
@@ -70,8 +69,10 @@ tableOfContents:
                   - page: modules/sales/leads/models/lead-label
                   - page: modules/sales/leads/models/lead-history
                   - page: modules/sales/leads/models/lead-service
-  - page: extensions
+  - page: Extensions
     children:
+      - page: creating-extentions
+      - page: model
       - page: controllers
       - page: views
       - page: ui-components

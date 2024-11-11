@@ -39,7 +39,7 @@ public function getRoutes(): array
 
 ## Installing Models
 
-During the installation of your extention the ```install()``` method will be called. Within it, you should have all your models initialized and their ```install()``` methodes called.
+During the installation of your extention the ```install()``` method will be called. You need to override this method. Within the overriden method, you should have all models of your extention initialized and their ```install()``` methodes called.
 
 ### Example of model installation
 
@@ -52,19 +52,31 @@ public function install() {
 
 ## Creating permissions
 
-Within the Loader class you also need to create permissions for your Models and Controllers in the  ```createPermissions()``` method.
+Within the Loader class you also need to create permissions for your Models and Controllers in the overriden ```createPermissions()``` method.
 Creating permissions for Models follows CRUD methods.
 Permissions for both Models and Controllers need to be created as a full path to the Models or Controllers.
 You also need to add the full path to the module as a whole.
 
-### Example of permissions in Ceremony
-```
-CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Create
-CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Read
-CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Update
-CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Delete
-CeremonyCrmApp/Modules/Core/Customers/Controllers/Activity
-CeremonyCrmApp/Modules/Core/Customers/Activity
+### Exmaple of permissions creation
+```php
+public function createPermissions()
+{
+  $mPermission = new Permission($this->app);
+  $permissions = [
+    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Create",
+    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Read",
+    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Update",
+    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Delete",
+    "CeremonyCrmApp/Modules/Core/Customers/Controllers/Activity"
+    "CeremonyCrmApp/Modules/Core/Customers/Activity"
+  ]
+
+  foreach ($permissions as $key => $permission) {
+    $mPermission->eloquent->create([
+      "permission" => $permission
+    ]);
+  }
+}
 ```
 ## Next Up
 

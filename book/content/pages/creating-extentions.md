@@ -25,7 +25,7 @@ src
 └── composer.json
 ```
 
-### Glosary
+### File structure explanation
 
 **Models** - Contains models that define your data structures
 

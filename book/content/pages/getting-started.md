@@ -23,4 +23,4 @@ And then open [http://localhost/my-ceremony](http://localhost/my-ceremony) in yo
 
 ## Customizing
 
-You can create your extensions. Learn [here](extensions) how.
+You can create your extensions. Learn [here](creating-extentions) how.
