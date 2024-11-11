@@ -35,6 +35,13 @@ module.exports = {
       logo: ['Fredoka-Regular', 'sans-serif'],
     },
     extend: {
+      fontSize: {
+        base: '11pt',
+        lg: '1.2rem',
+        xl: '1.5rem',
+        '2xl': '1.7rem',
+        '3xl': '2rem',
+      },
       colors: {
         'primary': '#884aaa',
         // 'secondary': '#ff9800', // povodna oranzova

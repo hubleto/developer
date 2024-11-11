@@ -1,29 +1,32 @@
 @layer base {
 
+  * { @apply text-base scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300; }
+
+  html { @apply bg-slate-50; }
+  html body { @apply bg-gradient-to-tr from-white to-slate-50; }
+
   h1 { @apply text-3xl text-slate-800 font-logo; }
   h2 { @apply text-xl font-bold text-slate-800 pt-20 pb-2 font-logo; }
-  h3 { @apply text-sm font-semibold text-primary pt-4 pb-0 first-of-type:pt-4 font-logo; }
+  h3 { @apply text-lg font-semibold text-primary pt-4 pb-0 first-of-type:pt-4 font-logo; }
   a { @apply text-primary; }
   a:hover { @apply underline; }
   h2+a+h3 { @apply pt-0; }
-  h1+p { @apply text-lg text-slate-600 pb-4; }
+  h1+p { @apply text-lg text-slate-500 pb-4; }
   p { @apply text-slate-800 pt-2 leading-6; }
   nav ul { @apply list-none; }
   nav li > ul { @apply p-1; }
   ul { @apply pt-2 pl-4 list-inside list-disc; }
   ol { @apply pl-2 list-inside list-decimal; }
   code { @apply text-xs; }
-  code { @apply font-semibold bg-slate-100 p-1 border border-slate-200 rounded; }
+  code { @apply font-semibold bg-slate-50 p-1 border border-slate-200 rounded; }
+
   pre { @apply bg-slate-900 text-white p-4 rounded-lg text-sm overflow-x-auto; }
   pre code { @apply bg-transparent border-none font-normal; }
 
-  img { @apply mt-4 border border-slate-200 max-w-xl p-2 bg-slate-100 text-xs; }
-  img + em { @apply text-slate-400 mb-4 text-xs; }
-
   table { @apply border border-slate-200 !mt-4; }
   table tr { @apply odd:bg-slate-100; }
-  table td { @apply p-2 border-b border-slate-200 text-sm; }
-  table thead th { @apply font-bold text-left p-2 bg-white text-sm; }
+  table td { @apply p-1.5 text-sm; }
+  table thead th { @apply border-b border-slate-200 font-bold text-left p-2 bg-white text-sm; }
   table + p { @apply text-slate-400 mb-4 text-xs pt-0 pb-4; }
 
   blockquote { @apply !m-8 p-4 bg-slate-100 max-w-xl border border-slate-200 rounded; }
@@ -57,9 +60,13 @@
   .card-body { @apply p-2; }
   .card-footer { @apply flex justify-between border-t p-4; }
 
-  .image { @apply flex flex-col; width: 70%; margin: auto; }
-  .image img { @apply bg-white border border-slate-500 p-2; }
-  .image p { @apply text-slate-500 text-sm; }
+  .content { @apply p-8 flex-1 max-w-3xl mb-4 ml-72 mr-4 lg:mr-60 space-y-1; }
+  .content img { @apply mt-4 border border-slate-200 max-w-xl p-2 bg-slate-100 text-xs; }
+  .content img + em { @apply text-slate-400 mb-4 text-xs; }
+
+  .header { @apply sticky top-0 inset-x-0 flex flex-wrap z-10 bg-white border-b text-sm py-2.5 ps-2 md:justify-start md:flex-nowrap md:ms-72 lg:ms-72 dark:bg-neutral-800 dark:border-neutral-700; }
+  .header-inner { @apply flex items-center gap-x-2 text-gray-300; }
+  .header-inner .logo { @apply h-4; }
 
   .step-by-step { @apply p-0 py-12; }
   .step-by-step .step { @apply flex gap-4 mb-2 p-1 items-start; }
@@ -98,4 +105,5 @@
   aside.on-this-page > div:nth-child(2) { @apply p-2; }
   aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-4 pb-2 text-sm font-semibold; }
   aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs ml-4 p-1 text-gray-800; }
+
 }
