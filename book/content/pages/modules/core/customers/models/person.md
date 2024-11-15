@@ -34,12 +34,12 @@ This model does not define constants.
 | is_primary | Is Primary | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
 | note       | Note       | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
 | is_active  | Active     | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
-| id_company | Company    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
+| id_company | Company    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | FALSE    |
 
 ## Foreign Keys
 
-| Column     | Model                                               | Relation | OnUpdate | OnDelete |
-| ---------- | --------------------------------------------------- | -------- | -------- | -------- |
+| Column     | Model                                            | Relation | OnUpdate | OnDelete |
+| ---------- | ------------------------------------------------ | -------- | -------- | -------- |
 | id_company | [Modules\Core\Customers\Models\Company](company) | 1:1      | Cascade  | Restrict |
 
 ## Indexes

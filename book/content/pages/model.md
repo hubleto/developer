@@ -48,14 +48,15 @@ public function columns(array $columns = []): array
 
 The array key specifies the column name in the database. Each column can be further defined by several key-value pairs:
 
-| parameter          | Description                                         | type    |
-| ------------------ | --------------------------------------------------- | ------- |
-| type               | The ADIOS column/input type                         | string  |
-| title              | The title of the column that wil be shown in the UI | string  |
-| model              | Full path to the lookup model                       | string  |
-| foreignKeyOnUpdate | SQL notation of the foreing key OnUpdate            | string  |
-| foreignKeyOnDelete | SQL notation of the foreing key OnDelete            | string  |
-| required           | Sets the requirement for the column to be filled    | boolean |
+| parameter          | Description                                             | type            |
+| ------------------ | ------------------------------------------------------- | --------------- |
+| type               | The ADIOS column/input type                             | string          |
+| title              | The title of the column that wil be shown in the UI     | string          |
+| model              | Full path to the lookup model                           | string          |
+| foreignKeyOnUpdate | SQL notation of the foreing key OnUpdate                | string          |
+| foreignKeyOnDelete | SQL notation of the foreing key OnDelete                | string          |
+| required           | Sets the requirement for the column to be filled        | boolean         |
+| enum_values        | An array of values that will be available for selection | key-value Array |
 
 ## Example of a lookup column
 
@@ -70,7 +71,18 @@ The array key specifies the column name in the database. Each column can be furt
 ],
 ```
 
-For each lookup column, you **need to describe the relation** in the Model and the Eloquent class of the Model, otherwise the lookup value will not be shown.
+For each lookup column, you **need to describe the relation** in the Model and the Eloquent class of the Model, otherwise the lookup value will not be shown or an error will be shown.
+
+## Example with enum_values
+
+```php
+'type' => [
+  'type' => 'varchar',
+  'title' => 'Type',
+  'enumValues' => ['email' => 'Email', 'number' => 'Phone Number', 'other' => 'Other'],
+  'required' => true,
+],
+```
 
 ## Overridable Methods
 
