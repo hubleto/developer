@@ -27,9 +27,9 @@ This model does not define constants.
 
 ### Foreign Keys
 
-| Column  | Model                                          | Relation | OnUpdate | OnDelete |
-| ------- | ---------------------------------------------- | -------- | -------- | -------- |
-| id_user | [Modules\Core\Settings\Models\User](user.md) | 1:1      | Cascade  | Cascade  |
+| Column  | Model                                     | Relation | OnUpdate | OnDelete |
+| ------- | ----------------------------------------- | -------- | -------- | -------- |
+| id_user | [Modules\Core\Settings\Models\User](user) | 1:1      | Cascade  | Cascade  |
 
 ## Indexes
 

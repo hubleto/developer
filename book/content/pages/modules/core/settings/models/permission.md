@@ -10,7 +10,7 @@ A list of available permissions for models and controllers that are in the syste
 | :--------------------------------------------------------------------------------------- | :------------------------- |
 | [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\Permission::class |
 | [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | permissions                |
-| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].permission_string  |
+| [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].alias              |
 
 ## Data Scructure
 
@@ -18,6 +18,7 @@ A list of available permissions for models and controllers that are in the syste
 | ----------------- | ----------- | -------------------------------------------------------------------------- | ------ | -------- |
 | id                | ID          | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
 | permission_string | Permissions | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| alias             | Alias       | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 
 ## Foreign Keys
 

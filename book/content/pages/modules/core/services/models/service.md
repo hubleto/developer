@@ -23,15 +23,15 @@ This model does not define constants.
 | id          | ID          | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
 | name        | Name        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 | price       | Unit Price  | [float](https://docs.wai.blue/adios-framework/models/attributes#float)     |        | TRUE     |
-| id_currency | Currency    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
 | unit        | Unit        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 | description | Description | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| id_currency | Currency    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
 
 ## Foreign Keys
 
 | Column      | Model                                                                      | Relation | OnUpdate | OnDelete |
 | ----------- | -------------------------------------------------------------------------- | -------- | -------- | -------- |
-| id_currency | [Modules\Core\Settings\Models\Currency](../../settings/models/currency.md) | 1:1      | Cascade  | SET NULL |
+| id_currency | [Modules\Core\Settings\Models\Currency](../../settings/models/currency) | 1:1      | Cascade  | SET NULL |
 
 ## Indexes
 

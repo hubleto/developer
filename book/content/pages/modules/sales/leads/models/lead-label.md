@@ -25,10 +25,10 @@ This model does not define constants.
 
 ## Foreign Keys
 
-| Column   | Model                                                                        | Relation | OnUpdate | OnDelete |
-| -------- | ---------------------------------------------------------------------------- | -------- | -------- | -------- |
-| id_lead  | [Modules\Sales\Leads\Models\Lead](./lead.md)                                 | 1:1      | Cascade  | Restrict |
-| id_label | [Modules\Core\Settings\Models\Label](../../../core/settings/models/label.md) | 1:1      | Cascade  | Restrict |
+| Column   | Model                                                                     | Relation | OnUpdate | OnDelete |
+| -------- | ------------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_lead  | [Modules\Sales\Leads\Models\Lead](lead)                                   | 1:1      | Cascade  | Restrict |
+| id_label | [Modules\Core\Settings\Models\Label](../../../core/settings/models/label) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 
@@ -40,4 +40,3 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 | -------- | ---------- | ----------------------------- |
 | LEAD     | BELONGS_TO | Lead::class, 'id_lead','id'   |
 | LABEL    | BELONGS_TO | Label::class, 'id_label','id' |
-

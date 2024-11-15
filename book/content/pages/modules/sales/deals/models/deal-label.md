@@ -27,8 +27,8 @@ This model does not define constants.
 
 | Column   | Model                                                                        | Relation | OnUpdate | OnDelete |
 | -------- | ---------------------------------------------------------------------------- | -------- | -------- | -------- |
-| id_deal  | [Modules\Sales\Deals\Models\Deal](./deal.md)                                 | 1:1      | Cascade  | Restrict |
-| id_label | [Modules\Core\Settings\Models\Label](../../../core/settings/models/label.md) | 1:1      | Cascade  | Restrict |
+| id_deal  | [Modules\Sales\Deals\Models\Deal](deal)                                 | 1:1      | Cascade  | Restrict |
+| id_label | [Modules\Core\Settings\Models\Label](../../../core/settings/models/label) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 

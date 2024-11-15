@@ -1,4 +1,4 @@
-# Model Core/Settings/RolePermission
+# Model RolePermission
 
 namespace CeremonyCrmApp\Modules\Core\Settings\Models\RolePermission
 
@@ -26,10 +26,10 @@ This model does not define constants.
 
 ## Foreign Keys
 
-| Column        | Model                                                    | Relation | OnUpdate | OnDelete |
-| ------------- | -------------------------------------------------------- | -------- | -------- | -------- |
-| id_permission | [Modules\Core\Settings\Models\Permission](permission.md) | 1:1      | Cascade  | Cascade  |
-| id_role       | [Modules\Core\Settings\Models\Role](user-role.md)        | 1:1      | Cascade  | Cascade  |
+| Column        | Model                                                 | Relation | OnUpdate | OnDelete |
+| ------------- | ----------------------------------------------------- | -------- | -------- | -------- |
+| id_permission | [Modules\Core\Settings\Models\Permission](permission) | 1:1      | Cascade  | Cascade  |
+| id_role       | [Modules\Core\Settings\Models\UserRole](user-role)    | 1:1      | Cascade  | Cascade  |
 
 ## Indexes
 

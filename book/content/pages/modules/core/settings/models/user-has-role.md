@@ -28,8 +28,8 @@ This model does not define constants.
 
 | Column  | Model                                             | Relation | OnUpdate | OnDelete |
 | ------- | ------------------------------------------------- | -------- | -------- | -------- |
-| id_user | [Modules\Core\Settings\Models\User](user.md)      | 1:1      | Cascade  | Cascade  |
-| id_role | [Modules\Core\Settings\Models\Role](user-role.md) | 1:1      | Cascade  | Cascade  |
+| id_user | [Modules\Core\Settings\Models\User](user)      | 1:1      | Cascade  | Cascade  |
+| id_role | [Modules\Core\Settings\Models\UserRole](user-role) | 1:1      | Cascade  | Cascade  |
 
 ## Indexes
 

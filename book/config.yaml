@@ -25,6 +25,7 @@ tableOfContents:
                   - page: modules/core/customers/models/address
                   - page: modules/core/customers/models/company-tag
                   - page: modules/core/customers/models/company
+                  - page: modules/core/customers/models/company-activity
                   - page: modules/core/customers/models/contact
                   - page: modules/core/customers/models/person-tag
                   - page: modules/core/customers/models/person
@@ -43,16 +44,16 @@ tableOfContents:
                   - page: modules/core/settings/models/country
                   - page: modules/core/settings/models/currency
                   - page: modules/core/settings/models/label
-                  - page: modules/core/settings/models/permission
-                  - page: modules/core/settings/models/pipeline-step
                   - page: modules/core/settings/models/pipeline
+                  - page: modules/core/settings/models/pipeline-step
                   - page: modules/core/settings/models/profile
+                  - page: modules/core/settings/models/permission
                   - page: modules/core/settings/models/role-permission
                   - page: modules/core/settings/models/setting
                   - page: modules/core/settings/models/tag
-                  - page: modules/core/settings/models/user-has-role
-                  - page: modules/core/settings/models/user-role
                   - page: modules/core/settings/models/user
+                  - page: modules/core/settings/models/user-role
+                  - page: modules/core/settings/models/user-has-role
                   - page: modules/core/settings/permissions
           - page: modules/sales
             children:
@@ -62,6 +63,7 @@ tableOfContents:
                   - page: modules/sales/deals/models/deal-label
                   - page: modules/sales/deals/models/deal-history
                   - page: modules/sales/deals/models/deal-service
+                  - page: modules/sales/deals/models/deal-activity
                   - page: modules/sales/deals/settings
               - page: modules/sales/leads
                 children:
@@ -69,6 +71,7 @@ tableOfContents:
                   - page: modules/sales/leads/models/lead-label
                   - page: modules/sales/leads/models/lead-history
                   - page: modules/sales/leads/models/lead-service
+                  - page: modules/sales/leads/models/lead-activity
   - page: Extensions
     children:
       - page: creating-extentions

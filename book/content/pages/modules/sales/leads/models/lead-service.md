@@ -21,12 +21,19 @@ This model does not define constants.
 | Column     | Title        | ADIOS Type                                                               | Length | Required |
 | ---------- | ------------ | ------------------------------------------------------------------------ | ------ | -------- |
 | id         | ID           | [int](https://docs.wai.blue/adios-framework/models/attributes#int)       |        | TRUE     |
-| id_lead    | Lead         | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
-| id_service | Service      | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
 | unit_price | Unit Price   | [float](https://docs.wai.blue/adios-framework/models/attributes#float)   |        | TRUE     |
 | amount     | Amount       | [int](https://docs.wai.blue/adios-framework/models/attributes#int)       |        | TRUE     |
 | discount   | Discount (%) | [float](https://docs.wai.blue/adios-framework/models/attributes#float)   |        | FALSE    |
 | tax        | Tax (%)      | [float](https://docs.wai.blue/adios-framework/models/attributes#float)   |        | FALSE    |
+| id_lead    | Lead         | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
+| id_service | Service      | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
+
+## Foreign Keys
+
+| Column     | Model                                                                         | Relation | OnUpdate | OnDelete |
+| ---------- | ----------------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_lead    | [Modules\Sales\Leads\Models\Lead](lead)                                       | 1:1      | Cascade  | Restrict |
+| id_service | [Modules\Core\Services\Models\Service](../../../core/services/models/service) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 

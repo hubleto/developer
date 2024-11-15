@@ -29,7 +29,7 @@ This model does not define constants.
 
 | Column     | Model                                                                                       | Relation | OnUpdate | OnDelete |
 | ---------- | ------------------------------------------------------------------------------------------- | -------- | -------- | -------- |
-| id_country | [Modules\Core\Customers\Models\Person](person.md../modules/core/customers/models/Person.md) | 1:1      | Cascade  | Restrict |
+| id_person | [Modules\Core\Customers\Models\Person](person) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 

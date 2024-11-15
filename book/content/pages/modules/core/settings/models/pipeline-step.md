@@ -27,9 +27,9 @@ This model does not define constants.
 
 ## Foreign Keys
 
-| Column      | Model                                                | Relation | OnUpdate | OnDelete |
-| ----------- | ---------------------------------------------------- | -------- | -------- | -------- |
-| id_pipeline | [Modules\Core\Settings\Models\Pipeline](pipeline.md) | 1:1      | Cascade  | Cascade  |
+| Column      | Model                                             | Relation | OnUpdate | OnDelete |
+| ----------- | ------------------------------------------------- | -------- | -------- | -------- |
+| id_pipeline | [Modules\Core\Settings\Models\Pipeline](pipeline) | 1:1      | Cascade  | Cascade  |
 
 ## Indexes
 

@@ -26,20 +26,22 @@ This model does not define constants.
 | street_line_2 | Street line 2 | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | region        | Region        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | city          | City          | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
-| id_country    | Country       | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | FALSE    |
 | postal_code   | Postal code   | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | vat_id        | Vat ID        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
-| company_id    | Company ID    | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | tax_id        | Tax ID        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
+| company_id    | Company ID    | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | note          | Note          | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
 | is_active     | Active        | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | FALSE    |
 | date_created  | Date Created  | [date](https://docs.wai.blue/adios-framework/models/attributes#date)       |        | TRUE     |
+| id_country    | Country       | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | FALSE    |
+| id_user       | Assigned User | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
 
 ## Foreign Keys
 
-| Column     | Model                                                                    | Relation | OnUpdate | OnDelete |
-| ---------- | ------------------------------------------------------------------------ | -------- | -------- | -------- |
-| id_country | [Modules\Core\Settings\Models\Country](../../settings/models/country.md) | 1:1      | Cascade  | Restrict |
+| Column     | Model                                                                 | Relation | OnUpdate | OnDelete |
+| ---------- | --------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_country | [Modules\Core\Settings\Models\Country](../../settings/models/country) | 1:1      | Cascade  | Restrict |
+| id_user    | [Modules\Core\Settings\Models\User](../../settings/models/user)       | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 
@@ -50,14 +52,14 @@ This model does not define constants.
 
 ## Relations
 
-| Relation         | Type       | Other parameters                      |
-| ---------------- | ---------- | ------------------------------------- |
-| PERSONS          | HAS_MANY   | Person::class, 'id_company'           |
-| COUNTRY          | HAS_ONE    | Country::class, 'id', 'id_country'    |
-| USER             | BELONGS_TO | User::class, 'id_user', 'id'          |
-| FIRST_CONTACT    | HAS_ONE    | Person::class, 'id_company',          |
-| BILLING_ACCOUNTS | HAS_MANY   | BillingAccount::class, 'id_company',  |
-| ACTIVITIES       | HAS_MANY   | Activity::class, 'id_company',        |
-| TAGS             | HAS_MANY   | CompanyTag::class, 'id_company', 'id' |
-| LEADS            | HAS_MANY   | Lead::class, 'id_company', 'id'       |
-| DEALS            | HAS_MANY   | Deal::class, 'id_company', 'id'       |
+| Relation         | Type       | Other parameters                         |
+| ---------------- | ---------- | ---------------------------------------- |
+| PERSONS          | HAS_MANY   | Person::class, 'id_company'              |
+| COUNTRY          | HAS_ONE    | Country::class, 'id', 'id_country'       |
+| USER             | BELONGS_TO | User::class, 'id_user', 'id'             |
+| FIRST_CONTACT    | HAS_ONE    | Person::class, 'id_company',             |
+| BILLING_ACCOUNTS | HAS_MANY   | BillingAccount::class, 'id_company',     |
+| ACTIVITIES       | HAS_MANY   | CompanyActivity::class, 'id_company', id |
+| TAGS             | HAS_MANY   | CompanyTag::class, 'id_company', 'id'    |
+| LEADS            | HAS_MANY   | Lead::class, 'id_company', 'id'          |
+| DEALS            | HAS_MANY   | Deal::class, 'id_company', 'id'          |

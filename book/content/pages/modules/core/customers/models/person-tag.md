@@ -28,8 +28,8 @@ This model does not define constants.
 
 | Column    | Model                                                            | Relation | OnUpdate | OnDelete |
 | --------- | ---------------------------------------------------------------- | -------- | -------- | -------- |
-| id_person | [Modules\Core\Customers\Models\Person](./person.md)              | 1:N      | Cascade  | Restrict |
-| id_tag    | [Modules\Core\Settings\Models\Tag](../../settings/models/Tag.md) | 1:N      | Cascade  | Restrict |
+| id_tag    | [Modules\Core\Settings\Models\Tag](../../settings/models/tag) | 1:N      | Cascade  | Restrict |
+| id_person | [Modules\Core\Customers\Models\Person](person)              | 1:N      | Cascade  | Restrict |
 
 ## Indexes
 

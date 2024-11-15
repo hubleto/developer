@@ -31,16 +31,16 @@ This model does not define constants.
 | id         | ID         | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
 | first_name | First Name | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 | last_name  | Last Name  | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
-| id_company | Company    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
 | is_primary | Is Primary | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
 | note       | Note       | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
 | is_active  | Active     | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
+| id_company | Company    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | TRUE     |
 
 ## Foreign Keys
 
 | Column     | Model                                               | Relation | OnUpdate | OnDelete |
 | ---------- | --------------------------------------------------- | -------- | -------- | -------- |
-| id_company | [Modules\Core\Customers\Models\Company](company.md) | 1:1      | Cascade  | Restrict |
+| id_company | [Modules\Core\Customers\Models\Company](company) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 

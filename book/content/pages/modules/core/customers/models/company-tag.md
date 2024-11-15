@@ -26,10 +26,10 @@ This model does not define constants.
 
 ## Foreign Keys
 
-| Column     | Model                                                            | Relation | OnUpdate | OnDelete |
-| ---------- | ---------------------------------------------------------------- | -------- | -------- | -------- |
-| id_company | [Modules\Core\Customers\Models\Company](./company.md)            | 1:N      | Cascade  | Restrict |
-| id_tag     | [Modules\Core\Settings\Models\Tag](../../settings/models/Tag.md) | 1:N      | Cascade  | Restrict |
+| Column     | Model                                                         | Relation | OnUpdate | OnDelete |
+| ---------- | ------------------------------------------------------------- | -------- | -------- | -------- |
+| id_tag     | [Modules\Core\Settings\Models\Tag](../../settings/models/tag) | 1:N      | Cascade  | Restrict |
+| id_company | [Modules\Core\Customers\Models\Company](./company)            | 1:N      | Cascade  | Restrict |
 
 ## Indexes
 
