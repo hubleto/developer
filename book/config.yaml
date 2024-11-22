@@ -23,9 +23,10 @@ tableOfContents:
                 children:
                   - page: modules/core/customers/models/activity
                   - page: modules/core/customers/models/address
-                  - page: modules/core/customers/models/company-tag
                   - page: modules/core/customers/models/company
+                  - page: modules/core/customers/models/company-tag
                   - page: modules/core/customers/models/company-activity
+                  - page: modules/core/customers/models/company-document
                   - page: modules/core/customers/models/contact
                   - page: modules/core/customers/models/person-tag
                   - page: modules/core/customers/models/person
@@ -51,6 +52,7 @@ tableOfContents:
                   - page: modules/core/settings/models/role-permission
                   - page: modules/core/settings/models/setting
                   - page: modules/core/settings/models/tag
+                  - page: modules/core/settings/models/contact-type
                   - page: modules/core/settings/models/user
                   - page: modules/core/settings/models/user-role
                   - page: modules/core/settings/models/user-has-role
