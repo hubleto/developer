@@ -47,6 +47,8 @@ tableOfContents:
                   - page: modules/core/settings/models/label
                   - page: modules/core/settings/models/pipeline
                   - page: modules/core/settings/models/pipeline-step
+                  - page: modules/core/settings/models/lead-status
+                  - page: modules/core/settings/models/deal-status
                   - page: modules/core/settings/models/profile
                   - page: modules/core/settings/models/permission
                   - page: modules/core/settings/models/role-permission

@@ -1,8 +1,8 @@
-# Model LeadStatus
+# Model DealStatus
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\LeadStatus
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\DeaStatus
 
-A status for a Lead
+A status for a Deal
 
 ## Constants
 
@@ -12,8 +12,8 @@ This model does not define constants.
 
 | Property                                                                                 | Value                      |
 | :--------------------------------------------------------------------------------------- | :------------------------- |
-| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\LeadStatus::class |
-| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | lead_statuses              |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\DealStatus::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | deal_statuses              |
 | [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].name               |
 
 ## Data Scructure
