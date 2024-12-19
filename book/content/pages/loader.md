@@ -55,7 +55,7 @@ public function install() {
 Within the Loader class you also need to create permissions for your Models and Controllers in the overriden ```createPermissions()``` method.
 Creating permissions for Models follows CRUD methods.
 Permissions for both Models and Controllers need to be created as a full path to the Models or Controllers.
-You also need to add the full path to the module as a whole.
+You also need to add the full path to the extention as a whole.
 
 ### Exmaple of permissions creation
 ```php

@@ -1,8 +1,8 @@
-# Model Tag
+# Model ContactType
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Tag
+namespace CeremonyCrmApp\Modules\Core\Settings\Models\ContactType
 
-A list of asignable tags for a Company or a Person
+A list of assignable types for a contact.
 
 ## Constants
 
@@ -12,8 +12,8 @@ This model does not define constants.
 
 | Property                                                                                 | Value               |
 | :--------------------------------------------------------------------------------------- | :------------------ |
-| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\Tag::class |
-| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | tags                |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass)   | Eloquent\ContactType::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                   | contact_types                |
 | [lookupSqlValue](https://docs.wai.blue/adios-framework/models/properties#lookupSqlValue) | [TABLE].name        |
 
 ## Data Scructure
@@ -22,7 +22,6 @@ This model does not define constants.
 | ------ | ----- | -------------------------------------------------------------------------- | ------ | -------- |
 | id     | ID    | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
 | name   | Name  | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
-| color  | Color | [color](https://docs.wai.blue/adios-framework/models/attributes#color)     |        | TRUE     |
 
 ## Foreign Keys
 

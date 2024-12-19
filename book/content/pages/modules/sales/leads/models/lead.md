@@ -24,6 +24,7 @@ This model does not define constants.
 | title               | Lead Title          | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 | price               | Price               | [float](https://docs.wai.blue/adios-framework/models/attributes#float)     |        | FALSE    |
 | date_expected_close | Expected close date | [date](https://docs.wai.blue/adios-framework/models/attributes#date)       |        | FALSE    |
+| date_created        | Date Created        | [date](https://docs.wai.blue/adios-framework/models/attributes#date)       |        | FALSE    |
 | note                | Note                | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
 | source_channel      | Source Channel      | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | is_archived         | Archived            | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
@@ -41,7 +42,7 @@ This model does not define constants.
 | id_person   | [Modules\Core\Customers\Models\Person](../../../core/customers/models/person)        | 1:1      | Cascade  | Restrict |
 | id_currency | [Modules\Core\Settins\Models\Currency](../../../core/settings/models/currency)       | 1:1      | Cascade  | Restrict |
 | id_user     | [Modules\Core\Settings\Models\User](../../../core/settings/models/user)              | 1:1      | Cascade  | Restrict |
-| id_status   | [Modules\Core\Settings\Models\LeadStatus](../../../core/settings/models/lead-status) | 1:1      | Cascade  | Restrict |
+| id_status   | [Modules\Core\Settings\Models\LeadStatus](../../../core/settings/models/lead-status) | 1:1      | Restrict | Restrict |
 
 ## Indexes
 
@@ -56,6 +57,7 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 | USER       | BELONGS_TO | User::class, 'id_user', 'id'         |
 | PERSON     | HAS_ONE    | Person::class, 'id', 'id_person'     |
 | CURRENCY   | HAS_ONE    | Currency::class, 'id', 'id_currency' |
+| STATUS     | HAS_ONE    | LeadStatus::class, 'id', 'id_status' |
 | HISTORY    | HAS_MANY   | DealHistory::class, 'id_lead', 'id'  |
 | LABELS     | HAS_MANY   | DealLabel::class, 'id_lead', 'id'    |
 | ACTIVITIES | HAS_MANY   | LeadActivity::class, 'id_lead', 'id' |

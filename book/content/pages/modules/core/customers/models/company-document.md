@@ -1,8 +1,8 @@
-# Model CompanyActivity
+# Model CompanyDocument
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\CompanyActivity
+namespace CeremonyCrmApp\Modules\Core\Customers\Models\CompanyDocument
 
-List of activities connected to the Company model.
+List of documents connected to the Company model.
 
 ## Constants
 
@@ -12,8 +12,8 @@ This model does not define constants.
 
 | Property                                                                               | Value                           |
 | :------------------------------------------------------------------------------------- | :------------------------------ |
-| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass) | Eloquent\CompanyActivity::class |
-| [table](https://docs.wai.blue/adios-framework/models/properties#table)                 | company_activities              |
+| [eloquentClass](https://docs.wai.blue/adios-framework/models/properties#eloquentClass) | Eloquent\CompanyDocument::class |
+| [table](https://docs.wai.blue/adios-framework/models/properties#table)                 | company_documents               |
 
 ## Data Scructure
 
@@ -21,14 +21,14 @@ This model does not define constants.
 | ----------- | -------- | ------------------------------------------------------------------------ | ------ | -------- |
 | id          | ID       | [int](https://docs.wai.blue/adios-framework/models/attributes#int)       |        | TRUE     |
 | id_company  | Company  | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
-| id_activity | Activity | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
+| id_document | Document | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup) |        | TRUE     |
 
 ## Foreign Keys
 
-| Column      | Model                                              | Relation | OnUpdate | OnDelete |
-| ----------- | -------------------------------------------------- | -------- | -------- | -------- |
-| id_company  | [Modules\Core\Customers\Models\Company](company)   | 1:1      | Cascade  | Restrict |
-| id_activity | [Modules\Core\Customers\Models\Activity](activity) | 1:1      | Cascade  | Restrict |
+| Column      | Model                                                                     | Relation | OnUpdate | OnDelete |
+| ----------- | ------------------------------------------------------------------------- | -------- | -------- | -------- |
+| id_company  | [Modules\Core\Customers\Models\Company](company)                          | 1:1      | Cascade  | Restrict |
+| id_document | [Modules\Core\Documents\Models\Document](../../documents/models/document) | 1:1      | Cascade  | Restrict |
 
 ## Indexes
 
@@ -39,6 +39,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 | Relation | Type       | Other parameters                    |
 | -------- | ---------- | ----------------------------------- |
 | COMPANY  | BELONGS_TO | Company::class, 'id_company', 'id'  |
-| ACTIVITY | BELONGS_TO | Activity::class, 'id_activity', 'id' |
+| DOCUMENT | BELONGS_TO | Document::class, 'id_document', 'id' |
 
 _Read more about [working with relations](../../database-relations)_

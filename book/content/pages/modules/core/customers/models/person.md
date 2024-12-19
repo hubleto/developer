@@ -26,15 +26,16 @@ This model does not define constants.
 
 ## Data Scructure
 
-| Column     | Title      | ADIOS Type                                                                 | Length | Required |
-| ---------- | ---------- | -------------------------------------------------------------------------- | ------ | -------- |
-| id         | ID         | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
-| first_name | First Name | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
-| last_name  | Last Name  | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
-| is_primary | Is Primary | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
-| note       | Note       | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
-| is_active  | Active     | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
-| id_company | Company    | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | FALSE    |
+| Column       | Title        | ADIOS Type                                                                 | Length | Required |
+| ------------ | ------------ | -------------------------------------------------------------------------- | ------ | -------- |
+| id           | ID           | [int](https://docs.wai.blue/adios-framework/models/attributes#int)         |        | TRUE     |
+| first_name   | First Name   | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| last_name    | Last Name    | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
+| is_main      | Main Contact | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | FALSE    |
+| note         | Note         | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
+| date_created | Date Created | [date](https://docs.wai.blue/adios-framework/models/attributes#date)       |        | TRUE     |
+| is_active    | Active       | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | TRUE     |
+| id_company   | Company      | [lookup](https://docs.wai.blue/adios-framework/models/attributes#lookup)   |        | FALSE    |
 
 ## Foreign Keys
 

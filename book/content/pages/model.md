@@ -88,7 +88,7 @@ For each lookup column, you **need to describe the relation** in the Model and t
 
 **tableDescribe**(array $description = [])
 
-This method allows you to describe the CRUD permissions, columns and the UI elements of the table during runtime.
+This method allows you to describe the CRUD permissions, columns and the UI elements of a table during runtime.
 Defultly the permissions of a table will be set depending on the permissions of the role of a user and some of the UI elements of the table will not be present.
 
 This example shows the options of how you can describe the table:
@@ -111,12 +111,15 @@ public function tableDescribe(array $description = []): array
 
 The columns of a table can be accesed with `$description['columns']`. Columns can be removed, edited or even added.
 
-**recordSave**(array $data)
+**formDescription**(array $description = []): array
 
-**onAfterLoadRecord**(array $data)
+This method allows you to describe the CRUD permissions, columns, default values and relations of a form during runtime.
+Defultly the permissions of a form will be set depending on the permissions of the role of a user and relations of the model for the form won't be set. This will mean that the form won't retrieve data from the relations.
 
-**convertRecord**(array $row, bool $reverseConversion = false)
+**prepareLoadRecordQuery**(array|null $includeRelations = null, int $maxRelationLevel = 0, $query = null, int $level = 0)
 
-**convert**(array $rows, bool $reverseConversion = false)
+This method allows you to modify the database query for retrieving data of the model. The query can be modified using Eloquent's query building.
+
+This method also allows you to set `$maxRelationLevel`, the maximum level of depth of the relation information. **The maximum level of depth is four**, due to the amount of information that is received from the model.
 
 Other overrideable methods can be found in the ADIOS Framework documentation for the [Model class](adios/model)

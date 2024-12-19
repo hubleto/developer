@@ -34,4 +34,6 @@ Only [default indexes](https://docs.wai.blue/adios-framework/default-indexes) ar
 
 ## Relations
 
-This model does not contain any relations.
+| Relation         | Type    | Other parameters                            |
+| ---------------- | ------- | ------------------------------------------- |
+| COMPANY_DOCUMENT | HAS_ONE | CompanyDocument::class, 'id_document', 'id' |

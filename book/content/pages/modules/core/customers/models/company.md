@@ -28,7 +28,7 @@ This model does not define constants.
 | city          | City          | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | postal_code   | Postal code   | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | vat_id        | Vat ID        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
-| tax_id        | Tax ID        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
+| tax_id        | Tax ID        | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | TRUE     |
 | company_id    | Company ID    | [varchar](https://docs.wai.blue/adios-framework/models/attributes#varchar) |        | FALSE    |
 | note          | Note          | [text](https://docs.wai.blue/adios-framework/models/attributes#text)       |        | FALSE    |
 | is_active     | Active        | [boolean](https://docs.wai.blue/adios-framework/models/attributes#boolean) |        | FALSE    |
@@ -48,18 +48,21 @@ This model does not define constants.
 | Name       |  Type   | Column + Order |
 | :--------- | :-----: | -------------: |
 | id         | PRIMARY |         id ASC |
+| var_id     | UNIQUE  | company_id ASC |
 | company_id | UNIQUE  | company_id ASC |
+| tax_id     | UNIQUE  | company_id ASC |
 
 ## Relations
 
-| Relation         | Type       | Other parameters                         |
-| ---------------- | ---------- | ---------------------------------------- |
-| PERSONS          | HAS_MANY   | Person::class, 'id_company'              |
-| COUNTRY          | HAS_ONE    | Country::class, 'id', 'id_country'       |
-| USER             | BELONGS_TO | User::class, 'id_user', 'id'             |
-| FIRST_CONTACT    | HAS_ONE    | Person::class, 'id_company',             |
-| BILLING_ACCOUNTS | HAS_MANY   | BillingAccount::class, 'id_company',     |
-| ACTIVITIES       | HAS_MANY   | CompanyActivity::class, 'id_company', id |
-| TAGS             | HAS_MANY   | CompanyTag::class, 'id_company', 'id'    |
-| LEADS            | HAS_MANY   | Lead::class, 'id_company', 'id'          |
-| DEALS            | HAS_MANY   | Deal::class, 'id_company', 'id'          |
+| Relation         | Type       | Other parameters                           |
+| ---------------- | ---------- | ------------------------------------------ |
+| PERSONS          | HAS_MANY   | Person::class, 'id_company'                |
+| COUNTRY          | HAS_ONE    | Country::class, 'id', 'id_country'         |
+| USER             | BELONGS_TO | User::class, 'id_user', 'id'               |
+| FIRST_CONTACT    | HAS_ONE    | Person::class, 'id_company',               |
+| BILLING_ACCOUNTS | HAS_MANY   | BillingAccount::class, 'id_company',       |
+| ACTIVITIES       | HAS_MANY   | CompanyActivity::class, 'id_company', id   |
+| TAGS             | HAS_MANY   | CompanyTag::class, 'id_company', 'id'      |
+| LEADS            | HAS_MANY   | Lead::class, 'id_company', 'id'            |
+| DEALS            | HAS_MANY   | Deal::class, 'id_company', 'id'            |
+| DOCUMENTS        | HAS_MANY   | CompanyDocument::class, 'id_company', 'id' |
