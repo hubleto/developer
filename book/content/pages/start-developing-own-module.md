@@ -118,6 +118,8 @@ Models are stored in the `Models` folder and consist of two files:
 
 The *base model* provides classes and properties to configure data structure of the model (columns in the database), as well as some UI-related definitions, e.g. how the particular data (a column in database) should be displayed in UI components like [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx), [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) or [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
 
+The *Eloquent model* provides functionality to load records and describes relations in the models.
+
 So, to create a model, you must create two files, see example for model Customer.
 
 **MyModule/Models/Customer.php**
@@ -126,13 +128,12 @@ namespace CeremonyCrmMod\MyModule\Models;
 class Company extends \CeremonyCrmApp\Core\Model {
   public string $table = 'companies';
   public string $eloquentClass = Eloquent\Company::class;
-  public ?string $lookupSqlValue = '{%TABLE%}.name';
 
   // public function columns(array $columns = []): array
   // public function tableDescribe(array $description = []): array
   // public function formDescribe(array $description = []): array
   // public function prepareLoadRecordQuery(array|null $includeRelations = null, int $maxRelationLevel = 0, $query = null, int $level = 0)
-  // ....
+  // ...
 
 }
 ```
