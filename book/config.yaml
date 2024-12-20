@@ -5,6 +5,10 @@ redirects:
     code: 301
 tableOfContents:
   - page: getting-started
+    children:
+      - page: start-developing-own-module
+      - page: publish-module
+      - page: nginx
   - page: app
     children:
       - page: modules
