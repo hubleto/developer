@@ -17,7 +17,7 @@ The Model class alows you to create data structures in Ceremony CRM. One Model c
 
 .
 
-If the Eloquent class of the Model contains relations, you also need to describe these relations in the Model class:
+If the Eloquent class of the Model contains relations, you also need to describe these relations in the Model class, like this:
 
 ### Example of relations in the Model class
 
@@ -48,15 +48,16 @@ public function columns(array $columns = []): array
 
 The array key specifies the column name in the database. Each column can be further defined by several key-value pairs:
 
-| parameter          | Description                                             | type            |
-| ------------------ | ------------------------------------------------------- | --------------- |
-| type               | The ADIOS column/input type                             | string          |
-| title              | The title of the column that wil be shown in the UI     | string          |
-| model              | Full path to the lookup model                           | string          |
-| foreignKeyOnUpdate | SQL notation of the foreing key OnUpdate                | string          |
-| foreignKeyOnDelete | SQL notation of the foreing key OnDelete                | string          |
-| required           | Sets the requirement for the column to be filled        | boolean         |
-| enum_values        | An array of values that will be available for selection | key-value Array |
+| parameter          | Description                                             | type               |
+| ------------------ | ------------------------------------------------------- | ------------------ |
+| type               | The [ADIOS input type](adios)                           | string             |
+| title              | The title of the column that wil be shown in the UI     | string             |
+| model              | Full path to the lookup model or a model class          | string/Model class |
+| foreignKeyOnUpdate | SQL notation of the foreing key OnUpdate                | string             |
+| foreignKeyOnDelete | SQL notation of the foreing key OnDelete                | string             |
+| required           | Sets the requirement for the column to be filled        | boolean            |
+| readonly           | Disables input                                          | boolean            |
+| enum_values        | An array of values that will be available for selection | key-value Array    |
 
 ## Example of a lookup column
 
@@ -64,14 +65,12 @@ The array key specifies the column name in the database. Each column can be furt
 'id_person' => [
   'type' => 'lookup',
   'title' => 'Person',
-  'model' => 'CeremonyCrmApp/Modules/Core/Customers/Models/Person',
+  'model' => Person::class,
   'foreignKeyOnUpdate' => 'CASCADE',
   'foreignKeyOnDelete' => 'CASCADE',
   'required' => true,
 ],
 ```
-
-For each lookup column, you **need to describe the relation** in the Model and the Eloquent class of the Model, otherwise the lookup value will not be shown or an error will be shown.
 
 ## Example with enum_values
 
@@ -123,3 +122,7 @@ This method allows you to modify the database query for retrieving data of the m
 This method also allows you to set `$maxRelationLevel`, the maximum level of depth of the relation information. **The maximum level of depth is four**, due to the amount of information that is received from the model.
 
 Other overrideable methods can be found in the ADIOS Framework documentation for the [Model class](adios/model)
+
+## Next up
+
+- Check out the [Eloquent](eloquent) class

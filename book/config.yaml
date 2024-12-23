@@ -13,7 +13,6 @@ tableOfContents:
     children:
       - page: modules
         children:
-          - page: loader
           - page: modules/core
             children:
               - page: modules/core/billing
@@ -80,12 +79,14 @@ tableOfContents:
                   - page: modules/sales/leads/models/lead-history
                   - page: modules/sales/leads/models/lead-service
                   - page: modules/sales/leads/models/lead-activity
-  - page: Extensions
+  - page: creating-modules
     children:
-      - page: creating-extentions
+      - page: loader
       - page: model
-      - page: controllers
-      - page: views
+      - page: eloquent
+      - page: controller
+      - page: view
+      - page: component
       - page: ui-components
       - page: routing
       - page: permissions
