@@ -83,7 +83,7 @@ The array key specifies the column name in the database. Each column can be furt
 ],
 ```
 
-## Overridable Methods
+## Notable overridable methods
 
 **tableDescribe**(array $description = [])
 

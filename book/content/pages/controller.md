@@ -30,7 +30,7 @@ public function getBreadcrumbs(): array
 
 ### Setting a View
 
-For the View to be used you need to set the View in the Controller. You need to call `parent::prepareView()`. This will ensure that the View has all the `viewParams` to properly function.
+For the View to be used you need to set the View in the Controller by specifying which Twig file to use, using the `setView()` method. Firstly, you need to call `parent::prepareView()`. This will ensure that the View has all the `viewParams` to properly function.
 
 ```php
 public function prepareView(): void
