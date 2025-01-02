@@ -1,4 +1,4 @@
-# Components
+# Components and Loader.tsx
 
 ## Introduction
 
@@ -52,7 +52,7 @@ renderForm(): JSX.Element {
   }
 ```
 
-Before specifing a form to use in a table component, you can also specify width of the form, like in the example below. The width is based on CSS classes defined in `App.css`.
+Before specifing a form to use in a table component, you can also specify the width of the form, like in the example below. The width is based on CSS classes defined in `App.css`.
 
 ```tsx
 getFormModalProps() {
@@ -108,10 +108,32 @@ export default class FormModule<P, S> extends Form<FormModuleProps,FormModuleSta
 }
 ```
 
-The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various ADIOS React components, like Input. For more explanation on how build a form please visit the [advanced form creation](form).
+The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various ADIOS React components, like various ADIOS inputs. For more explanation on how to build a form component please visit the [advanced form creation](ui-components/form-component).
 
 ## Registering a Component to be used in a View
 
-## Next up
+You can register a React component to use in a View in the Loader.tsx file of a module. Below is an example of the registered table components of the Customer module.
 
-- Check out the [Loader.tsx](react-loader)
+You can name the imported components however you want, but you still need to follow the tag writing convention that was described on the [View page](view).
+
+```tsx
+// Customers/Loader.tsx
+
+import CeremonyCrmApp from "../../App";
+import CoreCustomersTablePersons from "./Components/TablePersons"
+import CoreCustomersTableCompanies from "./Components/TableCompanies"
+import CoreCustomersTableActivities from "./Components/TableActivities"
+import CoreCustomersTableAddresses from "./Components/TableAddresses"
+import CoreCustomersTableContacts from "./Components/TableContacts"
+
+export default class Loader {
+  uid: string = 'customers';
+  constructor(app: CeremonyCrmApp) {
+    app.registerReactComponent('CoreCustomersTablePersons', CoreCustomersTablePersons);
+    app.registerReactComponent('CoreCustomersTableCompanies', CoreCustomersTableCompanies);
+    app.registerReactComponent('CoreCustomersTableActivities', CoreCustomersTableActivities);
+    app.registerReactComponent('CoreCustomersTableAddresses', CoreCustomersTableAddresses);
+    app.registerReactComponent('CoreCustomersTableContacts', CoreCustomersTableContacts);
+  }
+}
+```

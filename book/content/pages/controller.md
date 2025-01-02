@@ -63,6 +63,12 @@ public function renderJson(): ?array
   }
 ```
 
+### API Controller used for Lookup inputs
+
+In order for the Lookup input to properly display data, the returned data array needs to have the **IDs of the entries as the indexes** of each entry in the array.
+
+When selecting entries from a model using the Eloquent query builder you also need to **select the lookup value as `_LOOKUP` allias**, otherwise the Lookup input will display empty entries.
+
 ## Next up
 
 - Check out the [View](view)

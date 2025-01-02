@@ -10,12 +10,14 @@ A View defaultly follows a HTML structure.
 
 A View can be a Twig file. This allows us to access variables that the file can work with, and for example can loop through data, do if statements and many other funcionalities. Please consult the [Twig website](https://twig.symfony.com/doc/) to learn more about Twig.
 
-The View can also render React components that ware registered in the Loader.tsx of the module.
-To learn how to register a React component for use in a View check out [how to create a React component](component).
+The View can also render React components that were registered in the Loader.tsx of the module.
+To learn how to register a React component to use in a View check out the [Component page](component).
 
 A registered component can be used almost like a HTML tag:
 
-`<app-core-customers-table-companies int:record-id="{{ viewParams.recordId }}"></app-core-customers-table-companies>`
+`<app-core-customers-table-companies int:record-id="{ viewParams.recordId }"></app-core-customers-table-companies>`
+
+Note that you have to pass the `record-id` prop for the forms to open with a correct entry.
 
 ### The naming convention of a HTML React tag
 
