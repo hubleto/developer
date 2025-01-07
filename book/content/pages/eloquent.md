@@ -16,7 +16,7 @@ The Eloquent class defines the relations of a model.
 
 ## Creating relations
 
-Relations are defined using Eloqent. Relations created must have their name in uppercase. The names of the relations need to match with the names of the relations in the Model class. Relations can be modified similarly to Eloquent query builder, for example adding  `order()` or `where()` methods.
+Relations are defined using Eloquent. Relations created must have their name in uppercase. The names of the relations need to match with the names of the relations in the Model class. Relations can be modified similarly to Eloquent query builder, for example adding  `order()` or `where()` methods.
 
 ```php
 public function COMPANY(): BelongsTo {

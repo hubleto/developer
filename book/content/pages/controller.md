@@ -8,7 +8,7 @@ The Controller class prepares a specified View or acts as an API.
 
 ## Creating a View Controller
 
-Primary function of a View Controller is to set a View, a Twig file that will render a page. With this controller you can also set the breadcrubs that will appear on the top of the screen. View Controllers can define values that will be passed into a Twig file for usage, called `viewParams`.
+Primary function of a View Controller is to set a View, a Twig file that will render a page. With this controller you can also set the breadcrumbs that will appear on the top of the screen. View Controllers can define values that will be passed into a Twig file for usage, called `viewParams`.
 
 ### Creating breadcrumbs
 
@@ -67,7 +67,7 @@ public function renderJson(): ?array
 
 In order for the Lookup input to properly display data, the returned data array needs to have the **IDs of the entries as the indexes** of each entry in the array.
 
-When selecting entries from a model using the Eloquent query builder you also need to **select the lookup value as `_LOOKUP` allias**, otherwise the Lookup input will display empty entries.
+When selecting entries from a model using the Eloquent query builder you also need to **select the lookup value as `_LOOKUP` alias**, otherwise the Lookup input will display empty entries.
 
 ## Next up
 
