@@ -53,8 +53,8 @@ The array key specifies the column name in the database. Each column can be furt
 | type               | The [ADIOS input type](adios)                           | string             |
 | title              | The title of the column that wil be shown in the UI     | string             |
 | model              | Full path to the lookup model or a model class          | string/Model class |
-| foreignKeyOnUpdate | SQL notation of the foreing key OnUpdate                | string             |
-| foreignKeyOnDelete | SQL notation of the foreing key OnDelete                | string             |
+| foreignKeyOnUpdate | SQL notation of the foreign key OnUpdate                | string             |
+| foreignKeyOnDelete | SQL notation of the foreign key OnDelete                | string             |
 | required           | Sets the requirement for the column to be filled        | boolean            |
 | readonly           | Disables input                                          | boolean            |
 | enum_values        | An array of values that will be available for selection | key-value Array    |
@@ -88,7 +88,7 @@ The array key specifies the column name in the database. Each column can be furt
 **tableDescribe**(array $description = [])
 
 This method allows you to describe the CRUD permissions, columns and the UI elements of a table during runtime.
-Defultly the permissions of a table will be set depending on the permissions of the role of a user and some of the UI elements of the table will not be present.
+By default the permissions of a table will be set depending on the permissions of the role of a user and some of the UI elements of the table will not be present.
 
 This example shows the options of how you can describe the table:
 
@@ -108,12 +108,12 @@ public function tableDescribe(array $description = []): array
   }
 ```
 
-The columns of a table can be accesed with `$description['columns']`. Columns can be removed, edited or even added.
+The columns of a table can be accessed with `$description['columns']`. Columns can be removed, edited or even added.
 
 **formDescription**(array $description = []): array
 
 This method allows you to describe the CRUD permissions, columns, default values and relations of a form during runtime.
-Defultly the permissions of a form will be set depending on the permissions of the role of a user and relations of the model for the form won't be set. This will mean that the form won't retrieve data from the relations.
+By default the permissions of a form will be set depending on the permissions of the role of a user and relations of the model for the form won't be set. This will mean that the form won't retrieve data from the relations.
 
 **prepareLoadRecordQuery**(array|null $includeRelations = null, int $maxRelationLevel = 0, $query = null, int $level = 0)
 
@@ -121,7 +121,7 @@ This method allows you to modify the database query for retrieving data of the m
 
 This method also allows you to set `$maxRelationLevel`, the maximum level of depth of the relation information. **The maximum level of depth is four**, due to the amount of information that is received from the model.
 
-Other overrideable methods can be found in the ADIOS Framework documentation for the [Model class](adios/model)
+Other overridable methods can be found in the ADIOS Framework documentation for the [Model class](adios/model)
 
 ## Next up
 

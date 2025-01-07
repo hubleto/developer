@@ -1,8 +1,8 @@
 # Permissions
 
 This is the lists of permissions for the module Leads.
-The first list shows the availible operations for models.
-The second list show the availible permissions for controllers.
+The first list shows the available operations for models.
+The second list show the available permissions for controllers.
 
 ## Model Permissions
 

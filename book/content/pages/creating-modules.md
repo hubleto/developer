@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In Ceremory CRM you can find multiple folders that contain groups of modules that provide funcionality to Ceremony.
+In Ceremony CRM you can find multiple folders that contain groups of modules that provide functionality to Ceremony.
 Modules follow the MVC structure with additional controllers helping you build modules more easily. You can check out how [Controllers](../assets/images/Ceremony_deals.jpg), [Views](../assets/images/Ceremony_deals.jpg) and [Models](../assets/images/Ceremony_deals.jpg) work with the provided links to the ADIOS framework.
 
 ## Pre-requisites
@@ -28,7 +28,7 @@ ModuleName
 
 **Components** - Contains files for form, table or any other React components
 
-**Controllers** - Contains controllers defining the behaviour of models and defining a View
+**Controllers** - Contains controllers defining the behavior of models and defining a View
 
 **Controllers/API** - Contains controllers that return a JSON response
 
@@ -50,7 +50,7 @@ ModuleName
 - Check out [Loaders](loader) class
 - Check out [Models](model) class
 - Check out [Eloquent](eloquent) class
-- Check out [Controllers](controllers) cass
+- Check out [Controllers](controller) class
 - Check out [Views](view)
 - Check out [Components](component)
 

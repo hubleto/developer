@@ -2,13 +2,13 @@
 
 ## Introduction
 
-View is a Twig file that rendes a page.
+View is a Twig file that renders a page.
 
 ## Creating a View
 
-A View defaultly follows a HTML structure.
+A View by default follows a HTML structure.
 
-A View can be a Twig file. This allows us to access variables that the file can work with, and for example can loop through data, do if statements and many other funcionalities. Please consult the [Twig website](https://twig.symfony.com/doc/) to learn more about Twig.
+A View can be a Twig file. This allows us to access variables that the file can work with, and for example can loop through data, do if statements and many other functionalities. Please consult the [Twig website](https://twig.symfony.com/doc/) to learn more about Twig.
 
 The View can also render React components that were registered in the Loader.tsx of the module.
 To learn how to register a React component to use in a View check out the [Component page](component).

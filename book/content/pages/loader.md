@@ -9,7 +9,7 @@ A class that defines routing, permissions of models and installation of models.
 ## Routing
 
 The Loader class will allow you to set URLs to your Controllers through you desired routes.
-In the `init()` method of a Loader class, the Router class' `httpGet()` method adds URLs to existing URLs from all Loader classes within Ceremony CRM.
+In the `init()` method of a Loader class, the Router class's `httpGet()` method adds URLs to existing URLs from all Loader classes within Ceremony CRM.
 For safe and correct routing please check out other Loader classes within Ceremony CRM and their routes.
 
 Creating routes follows this pattern:
@@ -56,7 +56,7 @@ $this->app->sidebar->addLink($level, $index, $url, $title, $fontAwesomeIconCssCl
 
 Note: You need to carefully specify the index of the link. Creating a link on the same index but with different level will result in the new link to overwrite the first link. You need to manage the indexes with structured numbering, for example the level 1 links can use two-digit numbers and the level 2 links can use only three-digit numbers.
 
-When creating the second level of the sidebar navigation, you need to corretly specify for which URL will the second level links be shown to. In the example below, we specify that two links will be availible in the Customer Views.
+When creating the second level of the sidebar navigation, you need to correctly specify for which URL will the second level links be shown to. In the example below, we specify that two links will be available in the Customer Views.
 
 ### Example of adding level 1 and level 2 links
 
@@ -72,7 +72,7 @@ if (str_starts_with($this->app->requestedUri, 'customers')) { //specifying the u
 
 ## Installing tables of models
 
-During installation of Ceremony CRM the `installTables()` method will be called for every Loader class in every module. You need to initialize the models of the module and use the `install()` method of the models to properly create the tabels and columns of the models.
+During installation of Ceremony CRM the `installTables()` method will be called for every Loader class in every module. You need to initialize the models of the module and use the `install()` method of the models to properly create the tables and columns of the models.
 
 ### Example of model installation
 
@@ -91,7 +91,7 @@ Creating permissions for Models follows CRUD methods.
 Permissions for both Models and Controllers need to be created as a full path to the Models or Controllers.
 You also need to add the full path to the sub-module as a whole.
 
-### Exmaple of permissions creation
+### Example of permissions creation
 
 ```php
 public function installDefaultPermissions()
@@ -114,7 +114,7 @@ public function installDefaultPermissions()
 }
 ```
 
-## Regiter the module
+## Register the module
 
 After creating a Loader.php in your module and having created the correct file structure you need to register your module in the app to initialize it during installation. In the App.php use the `addModule()` method to register your module in the app.
 

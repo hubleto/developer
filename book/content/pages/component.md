@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Components, specificly React Components are used to create the majority of the funcionality of Ceremony CRM. The mainly used components in Ceremony CRM are tables and forms created in React, that work with the ADIOS Framework to provide various funcionalities.
+Components, specifically React Components are used to create the majority of the functionality of Ceremony CRM. The mainly used components in Ceremony CRM are tables and forms created in React, that work with the ADIOS Framework to provide various functionalities.
 
 ## Creating a Table Component
 
@@ -41,7 +41,7 @@ export default class TableModule extends Table<
 
 ### Form for a table
 
-If you click on any entry in a table component you will open a form. A form can be described in a table component in two ways. You can either not describe what form component to use, which will result in Ceremony CRM to use a basic form that generates the inputs based on the model's description of columns, or you can specifiy which form component to use.
+If you click on any entry in a table component you will open a form. A form can be described in a table component in two ways. You can either not describe what form component to use, which will result in Ceremony CRM to use a basic form that generates the inputs based on the model's description of columns, or you can specify which form component to use.
 
 To specify which form component to use, you can use the `renderForm()` method like in the example below. Within the `renderForm()` method you need to retrieve props from the `getFormProps()` method in order for the form to function properly. Then you need to pass these props to the form component.
 
