@@ -1,6 +1,6 @@
 # Model LeadService
 
-namespace CeremonyCrmApp\Modules\Sales\Leads\Models\LeadService
+namespace HubletoApp\Leads\Models\LeadService
 
 A list of services attached to a Lead
 

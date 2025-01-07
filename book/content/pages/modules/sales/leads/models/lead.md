@@ -1,6 +1,6 @@
 # Model Lead
 
-namespace CeremonyCrmApp\Modules\Sales\Leads\Models\Lead
+namespace HubletoApp\Leads\Models\Lead
 
 List of created Leads
 

@@ -1,6 +1,6 @@
 # Model DealHistory
 
-namespace CeremonyCrmApp\Modules\Sales\Deals\Models\DealHistory
+namespace HubletoApp\Deals\Models\DealHistory
 
 History for each of created Deals
 

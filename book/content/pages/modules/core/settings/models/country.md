@@ -1,6 +1,6 @@
 # Model Country
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Country
+namespace HubletoApp\Settings\Models\Country
 
 List of countries existing in the system.
 

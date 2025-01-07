@@ -1,6 +1,6 @@
 # Model Currency
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Currency
+namespace HubletoApp\Settings\Models\Currency
 
 List of currencies existing in the system
 

@@ -1,6 +1,6 @@
 # Model UserHasRole
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\UserHasRole
+namespace HubletoApp\Settings\Models\UserHasRole
 
 A list of roles assigned to a user
 

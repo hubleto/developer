@@ -1,6 +1,6 @@
 # Model Contact
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\Contact
+namespace HubletoApp\Customers\Models\Contact
 
 List of contact information for a person
 

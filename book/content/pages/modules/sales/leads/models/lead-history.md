@@ -1,6 +1,6 @@
 # Model LeadHistory
 
-namespace CeremonyCrmApp\Modules\Sales\Leads\Models\LeadHistory
+namespace HubletoApp\Leads\Models\LeadHistory
 
 History for each of created Leads
 

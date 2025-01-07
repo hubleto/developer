@@ -1,6 +1,6 @@
 # Model PersonTag
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\PersonTag
+namespace HubletoApp\Customers\Models\PersonTag
 
 List of assigned tags to a Person
 

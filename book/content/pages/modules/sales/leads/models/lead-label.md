@@ -1,6 +1,6 @@
 # Model LeadLabel
 
-namespace CeremonyCrmApp\Modules\Sales\Leads\Models\LeadLabel
+namespace HubletoApp\Leads\Models\LeadLabel
 
 Labels given to a Lead
 

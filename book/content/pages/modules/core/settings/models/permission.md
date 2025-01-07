@@ -1,6 +1,6 @@
 # Model Permission
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Permission
+namespace HubletoApp\Settings\Models\Permission
 
 A list of available permissions for models and controllers that are in the system.
 

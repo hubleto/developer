@@ -1,6 +1,6 @@
 # Model LeadStatus
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\LeadStatus
+namespace HubletoApp\Settings\Models\LeadStatus
 
 A status for a Lead
 

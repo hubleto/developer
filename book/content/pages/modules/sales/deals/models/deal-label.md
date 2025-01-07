@@ -1,6 +1,6 @@
 # Model DealLabel
 
-namespace CeremonyCrmApp\Modules\Sales\Deals\Models\DealLabel
+namespace HubletoApp\Deals\Models\DealLabel
 
 Labels given to a Deal
 

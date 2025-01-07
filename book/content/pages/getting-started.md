@@ -1,13 +1,13 @@
 # Getting started
 
-3 minutes to start your ceremony
+3 minutes to start your Hubleto
 
 ```
 # Clone repo
-git clone https://github.com/wai-blue/ceremonycrm.git
+git clone https://github.com/wai-blue/hubleto.git
 
 # CD into the project's folder
-cd ceremonycrm
+cd hubleto
 
 # Install PHP and JS dependencies
 composer install
@@ -17,5 +17,5 @@ npm install
 npm run build
 
 # Initialize project
-php ceremony init
+php hubleto init
 ```

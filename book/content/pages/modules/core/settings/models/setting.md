@@ -1,6 +1,6 @@
 # Model Setting
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Setting
+namespace HubletoApp\Settings\Models\Setting
 
 A list of custom settings
 

@@ -1,6 +1,6 @@
 # Model DealService
 
-namespace CeremonyCrmApp\Modules\Sales\Deals\Models\DealService
+namespace HubletoApp\Deals\Models\DealService
 
 A list of services attached to a Deal
 

@@ -1,6 +1,6 @@
 # Model LeadActivity
 
-namespace CeremonyCrmApp\Modules\Sales\Leads\Models\LeadActivity
+namespace HubletoApp\Leads\Models\LeadActivity
 
 List of activities connected to the Lead model.
 

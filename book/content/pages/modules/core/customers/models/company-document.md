@@ -1,6 +1,6 @@
 # Model CompanyDocument
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\CompanyDocument
+namespace HubletoApp\Customers\Models\CompanyDocument
 
 List of documents connected to the Company model.
 

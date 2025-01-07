@@ -1,6 +1,6 @@
 # Model PipelineStep
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\PipelineStep
+namespace HubletoApp\Settings\Models\PipelineStep
 
 List of pipeline stages for specific pipilines.
 

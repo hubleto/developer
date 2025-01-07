@@ -1,6 +1,6 @@
 # Model Document
 
-namespace CeremonyCrmApp\Modules\Core\Documents\Models\Documents
+namespace HubletoApp\Documents\Models\Documents
 
 List of all documents that were uploaded to the system.
 

@@ -1,6 +1,6 @@
 # Model Tag
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Tag
+namespace HubletoApp\Settings\Models\Tag
 
 A list of asignable tags for a Company or a Person
 

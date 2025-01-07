@@ -1,6 +1,6 @@
 # Model DealStatus
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\DeaStatus
+namespace HubletoApp\Settings\Models\DeaStatus
 
 A status for a Deal
 

@@ -1,6 +1,6 @@
 # Model ContactType
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\ContactType
+namespace HubletoApp\Settings\Models\ContactType
 
 A list of assignable types for a contact.
 

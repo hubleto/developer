@@ -1,5 +1,5 @@
 # View BillingAccounts
 
-namespace CeremonyCrmApp\Modules\Core\Billing\Views
+namespace HubletoApp\Billing\Views
 
 ...

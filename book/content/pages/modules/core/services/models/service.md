@@ -1,6 +1,6 @@
 # Model Service
 
-namespace CeremonyCrmApp\Modules\Core\Services\Models\Service
+namespace HubletoApp\Services\Models\Service
 
 List of services/products available in the system.
 

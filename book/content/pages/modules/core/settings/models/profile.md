@@ -1,6 +1,6 @@
 # Model Profile
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Profile
+namespace HubletoApp\Settings\Models\Profile
 
 A list of profiles created for the company
 

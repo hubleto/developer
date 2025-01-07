@@ -1,6 +1,6 @@
 # Model Pipeline
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Pipeline
+namespace HubletoApp\Settings\Models\Pipeline
 
 List of pipelines that can be chosen for a Deal.
 

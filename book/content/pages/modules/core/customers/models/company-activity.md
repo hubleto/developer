@@ -1,6 +1,6 @@
 # Model CompanyActivity
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\CompanyActivity
+namespace HubletoApp\Customers\Models\CompanyActivity
 
 List of activities connected to the Company model.
 

@@ -1,6 +1,6 @@
 # Model User
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\User
+namespace HubletoApp\Settings\Models\User
 
 A list of user in the system.
 

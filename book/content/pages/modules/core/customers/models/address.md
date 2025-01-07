@@ -1,6 +1,6 @@
 # Model Address
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\Address
+namespace HubletoApp\Customers\Models\Address
 
 List of addresses belonging to a Person.
 

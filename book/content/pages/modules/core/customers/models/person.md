@@ -1,6 +1,6 @@
 # Model Person
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\Person
+namespace HubletoApp\Customers\Models\Person
 
 List of contact persons existing in the system
 

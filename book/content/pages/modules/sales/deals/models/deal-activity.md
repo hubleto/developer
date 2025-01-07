@@ -1,6 +1,6 @@
 # Model DealActivity
 
-namespace CeremonyCrmApp\Modules\Sales\Deals\Models\DealActivity
+namespace HubletoApp\Deals\Models\DealActivity
 
 List of activities connected to the Deal model.
 

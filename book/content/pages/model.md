@@ -1,10 +1,10 @@
 # Model class
 
-_extends \CeremonyCrmApp\Core\Model extends \ADIOS\Core\ [Model](adios/model)_
+_extends \HubletoCore\Core\Model extends \ADIOS\Core\ [Model](adios/model)_
 
 ## Introduction
 
-The Model class alows you to create data structures in Ceremony CRM. One Model class represents one table in your database.
+The Model class alows you to create data structures in Hubleto. One Model class represents one table in your database.
 
 ## Parameters
 
@@ -64,7 +64,7 @@ The array key specifies the column name in the database. Each column can be furt
 'id_person' => [
   'type' => 'lookup',
   'title' => 'Person',
-  'model' => 'CeremonyCrmApp/Modules/Core/Customers/Models/Person',
+  'model' => 'HubletoApp/Customers/Models/Person',
   'foreignKeyOnUpdate' => 'CASCADE',
   'foreignKeyOnDelete' => 'CASCADE',
   'required' => true,

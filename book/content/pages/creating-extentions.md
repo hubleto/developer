@@ -3,7 +3,7 @@
 ## Introduction
 
 In Ceremory CRM you can find multiple packages that contain groups of modules that provide funcionality to the CRM.
-Modules follow the MVC structure with additional controllers helping you build extentions more easily. You can check out how [Controllers](../assets/images/Ceremony_deals.jpg), [Views](../assets/images/Ceremony_deals.jpg) and [Models](../assets/images/Ceremony_deals.jpg) work with the provided links to the ADIOS framework.
+Modules follow the MVC structure with additional controllers helping you build extentions more easily. You can check out how [Controllers](../assets/images/Hubleto_deals.jpg), [Views](../assets/images/Hubleto_deals.jpg) and [Models](../assets/images/Hubleto_deals.jpg) work with the provided links to the ADIOS framework.
 
 ## Pre-requisites
 
@@ -50,7 +50,7 @@ src
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "CeremonyCrmApp\\Extensions\\OrganizationName\\ExtentionClassName\\": "src/"
+      "HubletoCore\\Extensions\\OrganizationName\\ExtentionClassName\\": "src/"
     }
   },
   "minimum-stability": "dev"

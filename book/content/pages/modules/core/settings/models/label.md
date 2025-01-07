@@ -1,6 +1,6 @@
 # Model Label
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\Label
+namespace HubletoApp\Settings\Models\Label
 
 Label for a Lead or a Deal entry
 

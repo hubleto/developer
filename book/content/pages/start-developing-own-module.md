@@ -1,15 +1,15 @@
 # Start developing own module
 
-A module is a basic functional element of Ceremony. Every functionality available in Ceremony is thus built using modules.
+An app is a basic functional element of HubletoCore. Every functionality available in Hubleto is thus built using apps.
 
-A module is a custom class which extends from [`\CeremonyCrmApp\Core\Module`](https://github.com/wai-blue/ceremonycrm/blob/main/src/core/Module.php) class. Namespace of the model must start with `CeremonyCrmMod`.
+A module is a custom class which extends from [`\HubletoCore\Core\Module`](https://github.com/wai-blue/hubleto/blob/main/src/core/Module.php) class. Namespace of the app must start with `HubletoApp`.
 
 Most simple implementation of the module is thus following:
 
-**MyModule/Loader.php**
+**MyApp/Loader.php**
 ```php
-namespace CeremonyCrmMod\MyModule;
-class Loader extends \CeremonyCrmApp\Core\Module { }
+namespace HubletoApp\MyApp;
+class Loader extends \HubletoCore\Core\App { }
 ```
 
 However, such module does nothing. To add a funcionality, you may:
@@ -29,7 +29,7 @@ Let's illustrate everything on examples in following chapters:
 
 ## Initialization
 
-Each module is initialized during the Ceremony bootstrap. The initialization is done by executing `init()` method of each module in the order in which they have been registered to the application.
+Each module is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each module in the order in which they have been registered to the application.
 
 ### Creating routing table
 
@@ -41,8 +41,8 @@ An example of a simple routing table is shown below.
 
 **MyModule/Loader.php**
 ```php
-namespace CeremonyCrmMod\MyModule;
-class Loader extends \CeremonyCrmApp\Core\Module {
+namespace HubletoApp\MyApp;
+class Loader extends \HubletoCore\Core\App {
   public function init(): void {
     $this->app->router->httpGet([
       '/^help\/?$/' => Controllers\Help::class,
@@ -52,7 +52,7 @@ class Loader extends \CeremonyCrmApp\Core\Module {
 }
 ```
 
-To learn how router works, check this script: https://github.com/wai-blue/ceremonycrm/blob/main/src/core/Router.php
+To learn how router works, check this script: https://github.com/wai-blue/hubleto/blob/main/src/core/Router.php
 
 ### Adding buttons to the sidebar
 
@@ -68,8 +68,8 @@ To add a button to the sidebar, simply call the app's `$this->app-sidebar->addLi
 
 **MyModule/Loader.php**
 ```php
-namespace CeremonyCrmMod\MyModule;
-class Loader extends \CeremonyCrmApp\Core\Module {
+namespace HubletoApp\MyApp;
+class Loader extends \HubletoCore\Core\Module {
   public function init(): void {
     $this->app->router->httpGet([
       '/^help\/?$/' => Controllers\Help::class,
@@ -87,7 +87,7 @@ class Loader extends \CeremonyCrmApp\Core\Module {
 }
 ```
 
-You can similarly add headings or dividers, see https://github.com/wai-blue/ceremonycrm/blob/main/src/core/Sidebar.php for more details.
+You can similarly add headings or dividers, see https://github.com/wai-blue/hubleto/blob/main/src/core/Sidebar.php for more details.
 
 ## Add button to the settings manager
 
@@ -97,8 +97,8 @@ To add a button to this manager, run the `$this->app->addSetting()` method. See 
 
 **MyModule/Loader.php**
 ```php
-namespace CeremonyCrmMod\MyModule;
-class Loader extends \CeremonyCrmApp\Core\Module {
+namespace HubletoApp\MyApp;
+class Loader extends \HubletoCore\Core\Module {
   public function init(): void {
     $this->app->addSetting([
       'title' => $this->translate('Countries'),
@@ -113,7 +113,7 @@ class Loader extends \CeremonyCrmApp\Core\Module {
 
 Models are stored in the `Models` folder and consist of two files:
 
-  * a base model which is a class extending from [`\CeremonyCrmApp\Core\Model`](https://github.com/wai-blue/adios/blob/main/src/Core/Model.php)
+  * a base model which is a class extending from [`\HubletoCore\Core\Model`](https://github.com/wai-blue/adios/blob/main/src/Core/Model.php)
   * a representing Eloquent model which is a class extending from [`\ADIOS\Core\Model\Eloquent`](https://github.com/wai-blue/adios/blob/main/src/Core/Model/Eloquent.php)
 
 The *base model* provides classes and properties to configure data structure of the model (columns in the database), as well as some UI-related definitions, e.g. how the particular data (a column in database) should be displayed in UI components like [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx), [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) or [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
@@ -124,8 +124,8 @@ So, to create a model, you must create two files, see example for model Customer
 
 **MyModule/Models/Customer.php**
 ```php
-namespace CeremonyCrmMod\MyModule\Models;
-class Company extends \CeremonyCrmApp\Core\Model {
+namespace HubletoApp\MyApp\Models;
+class Company extends \HubletoCore\Core\Model {
   public string $table = 'companies';
   public string $eloquentClass = Eloquent\Company::class;
 
@@ -140,7 +140,7 @@ class Company extends \CeremonyCrmApp\Core\Model {
 
 **MyModule/Models/Eloquent/Customer.php**
 ```php
-namespace CeremonyCrmMod\MyModule\Models\Eloquent;
+namespace HubletoApp\MyApp\Models\Eloquent;
 class Company extends \ADIOS\Core\Model\Eloquent {
   public $table = 'customers'
   // Here go definitions of relations using Eloquent's HasMany, BelongsTo or other.

@@ -1,5 +1,5 @@
 # Controller BillingAccounts
 
-namespace CeremonyCrmApp\Modules\Core\Billing\Controllers
+namespace HubletoApp\Billing\Controllers
 
 ...

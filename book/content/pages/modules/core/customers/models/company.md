@@ -1,6 +1,6 @@
 # Model Company
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\Company
+namespace HubletoApp\Customers\Models\Company
 
 List of companies existing in the system.
 

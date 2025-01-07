@@ -1,6 +1,6 @@
 # Model Activity
 
-namespace CeremonyCrmApp\Modules\Core\Customers\Models\Activity
+namespace HubletoApp\Customers\Models\Activity
 
 List of activities. Some activies are connected to a model.
 

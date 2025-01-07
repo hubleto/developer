@@ -1,6 +1,6 @@
 # Model Deal
 
-namespace CeremonyCrmApp\Modules\Sales\Deals\Models\Deal
+namespace HubletoApp\Deals\Models\Deal
 
 List of created Deals
 

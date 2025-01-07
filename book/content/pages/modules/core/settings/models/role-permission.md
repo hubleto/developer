@@ -1,6 +1,6 @@
 # Model RolePermission
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\RolePermission
+namespace HubletoApp\Settings\Models\RolePermission
 
 An table for assigning permissions to a role
 

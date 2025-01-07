@@ -1,6 +1,6 @@
 # Class Loader
 
-_extends \CeremonyCrmApp\Core\Extension_
+_extends \HubletoCore\Core\Extension_
 
 ## Introduction
 
@@ -17,7 +17,7 @@ A class that defines routing, permissions of models and installation of models.
 ## Routing
 
 The Loader class will allow you to set URLs to your Controllers and Views through you desired routes.
-The `getRoutes()` method will merge other URLs from all Loader classes within Ceremony CRM. For safe and correct routing please check out other Loader classes within Ceremony CRM and their routes.
+The `getRoutes()` method will merge other URLs from all Loader classes within Hubleto. For safe and correct routing please check out other Loader classes within Hubleto and their routes.
 
 Creating routes follows this pattern:
 `'/report' => 'Report'`
@@ -63,12 +63,12 @@ public function createPermissions()
 {
   $mPermission = new Permission($this->app);
   $permissions = [
-    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Create",
-    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Read",
-    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Update",
-    "CeremonyCrmApp/Modules/Core/Customers/Models/Activity:Delete",
-    "CeremonyCrmApp/Modules/Core/Customers/Controllers/Activity"
-    "CeremonyCrmApp/Modules/Core/Customers/Activity"
+    "HubletoApp/Customers/Models/Activity:Create",
+    "HubletoApp/Customers/Models/Activity:Read",
+    "HubletoApp/Customers/Models/Activity:Update",
+    "HubletoApp/Customers/Models/Activity:Delete",
+    "HubletoApp/Customers/Controllers/Activity"
+    "HubletoApp/Customers/Activity"
   ]
 
   foreach ($permissions as $key => $permission) {

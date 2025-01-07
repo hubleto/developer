@@ -1,6 +1,6 @@
 # Model ActivityType
 
-namespace CeremonyCrmApp\Modules\Core\Settings\Models\ActivityType
+namespace HubletoApp\Settings\Models\ActivityType
 
 List of assignable types for Activities. Activity types are closely tied to the Calendar. Activity with an activity type that has `calendar_visibility` set to `true` will be shown in the main Calendar. The color of the activity type will be reflected on the activity in the weekly and daily view of the calendar or on a all day activity. `calendar_visibility` is ignored in "model" calendars (eg. in the Company, Lead or Deal forms).
 
