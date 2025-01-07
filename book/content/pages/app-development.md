@@ -1,4 +1,4 @@
-# Development of advanced apps
+# App development
 
 ## Introduction
 

@@ -5,10 +5,12 @@ redirects:
     code: 301
 tableOfContents:
   - page: getting-started
+    icon: fas fa-home
     children:
       - page: create-first-app
       - page: nginx
-  - page: development-of-advanced-apps
+  - page: app-development
+    icon: fas fa-code
     children:
       - page: loader
       - page: model
@@ -22,6 +24,7 @@ tableOfContents:
       - page: routing
       - page: permissions
   - page: apps
+    icon: fas fa-bolt
     children:
       - page: apps/core
         children:
