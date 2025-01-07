@@ -21,9 +21,9 @@ Note that you have to pass the `record-id` prop for the forms to open with a cor
 
 ### The naming convention of a HTML React tag
 
-If the React component in the App.tsx is registered under `TableModuleModel`, than you can create the HTML tag with `<app-table-module-model></app-table-module-model>`.
+If the React component in the App.tsx is registered under `TableModuleModel`, than you can create the HTML tag with `<app-table-app-model></app-table-app-model>`.
 
-The HTML React component tag can also pass props to the component. For example, if the component has a prop of an integer type, you have to specify the type, the name and the value of the prop you want to pass to the component: `<app-table-module-model int:new-prop=22></app-table-module-model>`
+The HTML React component tag can also pass props to the component. For example, if the component has a prop of an integer type, you have to specify the type, the name and the value of the prop you want to pass to the component: `<app-table-app-model int:new-prop=22></app-table-app-model>`
 
 ## Next up
 

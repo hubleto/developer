@@ -1,4 +1,4 @@
-# Module Billing
+# App Billing
 
 namespace HubletoApp\Billing
 

@@ -6,80 +6,9 @@ redirects:
 tableOfContents:
   - page: getting-started
     children:
-      - page: start-developing-own-module
-      - page: publish-module
+      - page: create-first-app
       - page: nginx
-  - page: app
-    children:
-      - page: modules
-        children:
-          - page: modules/core
-            children:
-              - page: modules/core/billing
-                children:
-                  - page: modules/core/billing/models/billing-account
-                  - page: modules/core/billing/models/billing-account-service
-                  - page: modules/core/billing/controllers/billing-accounts
-                  - page: modules/core/billing/views/billing-accounts
-                  - page: modules/core/billing/components/table-billing-account-services
-              - page: modules/core/customers
-                children:
-                  - page: modules/core/customers/models/activity
-                  - page: modules/core/customers/models/address
-                  - page: modules/core/customers/models/company
-                  - page: modules/core/customers/models/company-tag
-                  - page: modules/core/customers/models/company-activity
-                  - page: modules/core/customers/models/company-document
-                  - page: modules/core/customers/models/contact
-                  - page: modules/core/customers/models/person-tag
-                  - page: modules/core/customers/models/person
-                  - page: modules/core/customers/permissions
-              - page: modules/core/documents
-                children:
-                  - page: modules/core/documents/models/document
-                  - page: modules/core/documents/permissions
-              - page: modules/core/services
-                children:
-                  - page: modules/core/services/models/service
-                  - page: modules/core/services/permissions
-              - page: modules/core/settings
-                children:
-                  - page: modules/core/settings/models/activity-type
-                  - page: modules/core/settings/models/country
-                  - page: modules/core/settings/models/currency
-                  - page: modules/core/settings/models/label
-                  - page: modules/core/settings/models/pipeline
-                  - page: modules/core/settings/models/pipeline-step
-                  - page: modules/core/settings/models/lead-status
-                  - page: modules/core/settings/models/deal-status
-                  - page: modules/core/settings/models/profile
-                  - page: modules/core/settings/models/permission
-                  - page: modules/core/settings/models/role-permission
-                  - page: modules/core/settings/models/setting
-                  - page: modules/core/settings/models/tag
-                  - page: modules/core/settings/models/contact-type
-                  - page: modules/core/settings/models/user
-                  - page: modules/core/settings/models/user-role
-                  - page: modules/core/settings/models/user-has-role
-                  - page: modules/core/settings/permissions
-          - page: modules/sales
-            children:
-              - page: modules/sales/deals
-                children:
-                  - page: modules/sales/deals/models/deal
-                  - page: modules/sales/deals/models/deal-label
-                  - page: modules/sales/deals/models/deal-history
-                  - page: modules/sales/deals/models/deal-service
-                  - page: modules/sales/deals/models/deal-activity
-                  - page: modules/sales/deals/settings
-              - page: modules/sales/leads
-                children:
-                  - page: modules/sales/leads/models/lead
-                  - page: modules/sales/leads/models/lead-label
-                  - page: modules/sales/leads/models/lead-history
-                  - page: modules/sales/leads/models/lead-service
-                  - page: modules/sales/leads/models/lead-activity
-  - page: creating-modules
+  - page: development-of-advanced-apps
     children:
       - page: loader
       - page: model
@@ -92,5 +21,73 @@ tableOfContents:
           - page: ui-components/form-component
       - page: routing
       - page: permissions
-  - page: rest-api
-  - page: examples
+  - page: apps
+    children:
+      - page: apps/core
+        children:
+          - page: apps/core/billing
+            children:
+              - page: apps/core/billing/models/billing-account
+              - page: apps/core/billing/models/billing-account-service
+              - page: apps/core/billing/controllers/billing-accounts
+              - page: apps/core/billing/views/billing-accounts
+              - page: apps/core/billing/components/table-billing-account-services
+          - page: apps/core/customers
+            children:
+              - page: apps/core/customers/models/activity
+              - page: apps/core/customers/models/address
+              - page: apps/core/customers/models/company
+              - page: apps/core/customers/models/company-tag
+              - page: apps/core/customers/models/company-activity
+              - page: apps/core/customers/models/company-document
+              - page: apps/core/customers/models/contact
+              - page: apps/core/customers/models/person-tag
+              - page: apps/core/customers/models/person
+              - page: apps/core/customers/permissions
+          - page: apps/core/documents
+            children:
+              - page: apps/core/documents/models/document
+              - page: apps/core/documents/permissions
+          - page: apps/core/services
+            children:
+              - page: apps/core/services/models/service
+              - page: apps/core/services/permissions
+          - page: apps/core/settings
+            children:
+              - page: apps/core/settings/models/activity-type
+              - page: apps/core/settings/models/country
+              - page: apps/core/settings/models/currency
+              - page: apps/core/settings/models/label
+              - page: apps/core/settings/models/pipeline
+              - page: apps/core/settings/models/pipeline-step
+              - page: apps/core/settings/models/lead-status
+              - page: apps/core/settings/models/deal-status
+              - page: apps/core/settings/models/profile
+              - page: apps/core/settings/models/permission
+              - page: apps/core/settings/models/role-permission
+              - page: apps/core/settings/models/setting
+              - page: apps/core/settings/models/tag
+              - page: apps/core/settings/models/contact-type
+              - page: apps/core/settings/models/user
+              - page: apps/core/settings/models/user-role
+              - page: apps/core/settings/models/user-has-role
+              - page: apps/core/settings/permissions
+      - page: apps/sales
+        children:
+          - page: apps/sales/deals
+            children:
+              - page: apps/sales/deals/models/deal
+              - page: apps/sales/deals/models/deal-label
+              - page: apps/sales/deals/models/deal-history
+              - page: apps/sales/deals/models/deal-service
+              - page: apps/sales/deals/models/deal-activity
+              - page: apps/sales/deals/settings
+          - page: apps/sales/leads
+            children:
+              - page: apps/sales/leads/models/lead
+              - page: apps/sales/leads/models/lead-label
+              - page: apps/sales/leads/models/lead-history
+              - page: apps/sales/leads/models/lead-service
+              - page: apps/sales/leads/models/lead-activity
+  # - page: rest-api
+  # - page: examples

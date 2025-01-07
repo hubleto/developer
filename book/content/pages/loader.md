@@ -89,7 +89,7 @@ Within the Loader class you also can create permissions for your Models and Cont
 Note that, **if you don't create permissions** only the **Admin** user will be able to use the modules, models or controllers.
 Creating permissions for Models follows CRUD methods.
 Permissions for both Models and Controllers need to be created as a full path to the Models or Controllers.
-You also need to add the full path to the sub-module as a whole.
+You also need to add the full path to the sub-app as a whole.
 
 ### Exmaple of permissions creation
 

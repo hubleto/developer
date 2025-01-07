@@ -1,10 +1,10 @@
-# Start developing own module
+# Create first app
 
 An app is a basic functional element of HubletoCore. Every functionality available in Hubleto is thus built using apps.
 
-A module is a custom class which extends from [`\HubletoCore\Core\Module`](https://github.com/wai-blue/hubleto/blob/main/src/core/Module.php) class. Namespace of the app must start with `HubletoApp`.
+An app is a custom class which extends from [`\HubletoCore\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Namespace of the app must start with `HubletoApp`.
 
-Most simple implementation of the module is thus following:
+Most simple implementation of the app is thus following:
 
 **MyApp/Loader.php**
 ```php
@@ -12,7 +12,7 @@ namespace HubletoApp\MyApp;
 class Loader extends \HubletoCore\Core\App { }
 ```
 
-However, such module does nothing. To add a funcionality, you may:
+However, such app does nothing. To add a funcionality, you may:
 
   * create `models`, `views` or `controllers`
   * create `react components` to be used in views
@@ -23,13 +23,13 @@ However, such module does nothing. To add a funcionality, you may:
 
 Let's illustrate everything on examples in following chapters:
 
-  * [Initialization phase of the module](#initialization)
+  * [Initialization phase of the app](#initialization)
   * [Create model](#create-model)
 
 
 ## Initialization
 
-Each module is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each module in the order in which they have been registered to the application.
+Each app is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each app in the order in which they have been registered to the application.
 
 ### Creating routing table
 
@@ -39,7 +39,7 @@ Each route is a very simple key/value pair where key is a regular expression to 
 
 An example of a simple routing table is shown below.
 
-**MyModule/Loader.php**
+**MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
 class Loader extends \HubletoCore\Core\App {
@@ -66,10 +66,10 @@ To add a button to the sidebar, simply call the app's `$this->app-sidebar->addLi
   * boolean $highlighted - Whether the button should be highlighted.
 
 
-**MyModule/Loader.php**
+**MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
-class Loader extends \HubletoCore\Core\Module {
+class Loader extends \HubletoCore\Core\App {
   public function init(): void {
     $this->app->router->httpGet([
       '/^help\/?$/' => Controllers\Help::class,
@@ -91,14 +91,14 @@ You can similarly add headings or dividers, see https://github.com/wai-blue/hubl
 
 ## Add button to the settings manager
 
-If your module requires specific settings, it should be managed via the app's setting manager. This manager is available under `Settings` button in the app's sidebar.
+If your app requires specific settings, it should be managed via the app's setting manager. This manager is available under `Settings` button in the app's sidebar.
 
 To add a button to this manager, run the `$this->app->addSetting()` method. See example below.
 
-**MyModule/Loader.php**
+**MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
-class Loader extends \HubletoCore\Core\Module {
+class Loader extends \HubletoCore\Core\App {
   public function init(): void {
     $this->app->addSetting([
       'title' => $this->translate('Countries'),
@@ -122,7 +122,7 @@ The *Eloquent model* provides functionality to load records and describes relati
 
 So, to create a model, you must create two files, see example for model Customer.
 
-**MyModule/Models/Customer.php**
+**MyApp/Models/Customer.php**
 ```php
 namespace HubletoApp\MyApp\Models;
 class Company extends \HubletoCore\Core\Model {
@@ -138,7 +138,7 @@ class Company extends \HubletoCore\Core\Model {
 }
 ```
 
-**MyModule/Models/Eloquent/Customer.php**
+**MyApp/Models/Eloquent/Customer.php**
 ```php
 namespace HubletoApp\MyApp\Models\Eloquent;
 class Company extends \ADIOS\Core\Model\Eloquent {

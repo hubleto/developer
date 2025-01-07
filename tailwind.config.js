@@ -43,7 +43,7 @@ module.exports = {
         '3xl': '2rem',
       },
       colors: {
-        'primary': '#884aaa',
+        'primary': '#008000',
         // 'secondary': '#ff9800', // povodna oranzova
         'secondary': '#7FB562', // povodna oranzova
       },
