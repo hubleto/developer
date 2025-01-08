@@ -4,9 +4,9 @@
 
 With a Form Component you can create CRUD functionality over an entry of a model. Using various methods of the Form Component you can update the data of an entry on demand without the need to refresh the whole page. A Form Component allows you to place input elements, tables and various other components to maximize the customizability of the form.
 
-## accessing the data of an entry
+## Accessing the data of an entry
 
-In the Form component you can access the data of an entry with `this.state.record`. Most of the Form components in Ceremony CRM saves record data into another variable `R`, which is used throughout the forms for accessing data or updating the record state with it.
+In the Form component you can access the data of an entry with `this.state.record`. Most of the Form components in Hubleto saves record data into another variable `R`, which is used throughout the forms for accessing data or updating the record state with it.
 
 ## Adding input elements
 
@@ -14,7 +14,7 @@ There are two main ways to add input elements into a Form component.
 
 ### inputWrapper() method
 
-Ceremony CRM uses a wrapper to create basic input elements. Creating an input wrapper with the name of the column in the model will automatically create an input element that corresponds to the input type described in the column.
+Hubleto uses a wrapper to create basic input elements. Creating an input wrapper with the name of the column in the model will automatically create an input element that corresponds to the input type described in the column.
 
 For example, in the `renderContent()` method of a Company Form component, we use `{this.inputWrapper("name")}` to create a text input element for the name of a company.
 
@@ -77,7 +77,7 @@ The Lookup inputs are created the same way as the input from the example above. 
 <FormInput title={"Contact Person"}>
   <Lookup
     {...this.getDefaultInputProps()}
-    model="CeremonyCrmMod/Customers/Models/Person"
+    model="HubletoApp/Customers/Models/Person"
     value={this.record.id_person}
     onChange={(value: any) => {
       this.updateRecord({ id_person: value });
@@ -86,7 +86,7 @@ The Lookup inputs are created the same way as the input from the example above. 
 </FormInput>
 ```
 
-Lookup inputs can also get **data from custom endpoints** with optional parameters. This can be used for data filtering. For example, in Ceremony CRM, it is used to filter contact persons in the Lead and Deal forms based on the selected company.
+Lookup inputs can also get **data from custom endpoints** with optional parameters. This can be used for data filtering. For example, in Hubleto, it is used to filter contact persons in the Lead and Deal forms based on the selected company.
 
 For the example below we used the API endpoint `customers/get-company-contacts` specified in Loader.php of the Customer module. We also added the `customEndpointParams` prop that will pass the ID of the company as a parameter to the API endpoint, which will be then available to use in the endpoint. Check out how to create an [API endpoint](../controller#Creating%20an%20API%20Controller).
 
@@ -97,7 +97,7 @@ TODO: Twig mi nepovili dať dve {} za sebou
 <FormInput title={"Contact Person"}>
   <Lookup
     {...this.getDefaultInputProps()}
-    model="CeremonyCrmMod/Customers/Models/Person"
+    model="HubletoApp/Customers/Models/Person"
     customEndpointParams={ id_company: R.id_company }
     readonly={R.is_archived}
     endpoint={`customers/get-company-contacts`}
@@ -120,7 +120,7 @@ For the Tag Input component you need to specify the `model` the tags were create
   <InputTags2
     {...this.getDefaultInputProps()}
     value={this.state.record.TAGS}
-    model="CeremonyCrmMod/Settings/Models/Tag"
+    model="HubletoApp/Settings/Models/Tag"
     targetColumn="id_company"
     sourceColumn="id_tag"
     colorColumn="color"
@@ -185,6 +185,8 @@ You can add Table components, that were created for other models into Form compo
 ></TablePersons>
 ```
 
+*Example of a Table component inside a Form component*
+
 ### Description prop of a Table component
 
 The `description` prop similarly describes the table as the `tableDescribe()` method of the Model classes. See the example above.
@@ -197,4 +199,42 @@ For the Table component you have to specify the `onChange` prop and the `onDelet
 
 ## Opening forms of the added Table components
 
-There are various ways to open forms by clicking on an entry in a Table component inside a Form component. You can either reroute the user to the form using links, open the form by using a method of the Table class or use states to open a Form component.
+There are various ways to open forms by clicking on an entry in a Table component inside a Form component. You can either reroute the user to the form using URLs, open the form by using a method of the Table class or use states to open a Form component.
+
+### Opening entry forms with a Table class method
+
+By passing a Table class to `onRowClick` prop in a Table component, you can use the Table class's method `openForm()` to quickly open a form of that model. You need to pass the row ID to the `openForm()` method for the correct entry to open.
+
+```tsx
+onRowClick={(table: TableDeals, row: any) => {
+  table.openForm(row.id);
+}}
+```
+
+When you save or delete an entry with the newly opened form, it will not update the data that was previously in the table immediately. You have to specify in the `onSaveCallback` or `onDeleteCallback` in the Table component that it should reload the form to update the data. You firstly need to add a `parentForm` prop to the Table component you are using in a Form component, like this `parentForm={this}` or like in the Table component example above. After this, in the Table component's `getFormProps()` method specify the callbacks:
+
+```tsx
+getFormProps(): any {
+  var formProps = super.getFormProps();
+  return {
+    ...super.getFormProps(),
+    onSaveCallback: (form: FormPerson<FormPersonProps, FormPersonState>, saveResponse: any) => {
+      formProps.onSaveCallback(form, saveResponse);
+      if (this.props.parentForm) {
+        this.props.parentForm.reload();
+      }
+    },
+    onDeleteCallback: (form: FormPerson<FormPersonProps, FormPersonState>, saveResponse: any) => {
+      formProps.onDeleteCallback(form, saveResponse);
+      if (this.props.parentForm) {
+        this.props.parentForm.reload();
+      }
+    }
+  }
+}
+
+```
+
+This code ensures that the form's callbacks use it's original callbacks and our new callbacks with the parent form's reload method.
+
+## Creating a new entry through a Table component in a Form component

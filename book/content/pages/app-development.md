@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In Ceremony CRM you can find multiple folders that contain groups of modules that provide functionality to Ceremony.
+In Hubleto you can find multiple folders that contain groups of modules that provide functionality to Ceremony.
 Modules follow the MVC structure with additional controllers helping you build modules more easily. You can check out how [Controllers](../assets/images/Ceremony_deals.jpg), [Views](../assets/images/Ceremony_deals.jpg) and [Models](../assets/images/Ceremony_deals.jpg) work with the provided links to the ADIOS framework.
 
 ## Pre-requisites
