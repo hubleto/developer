@@ -133,7 +133,7 @@ class Loader extends \HubletoMain\Core\App {
     $this->app->sidebar->addLink(
       1,
       1000,
-      'help',
+      'my-app',
       $this->translate('My App'),
       'fas fa-star',
       str_starts_with($this->app->requestedUri, 'my-app')
