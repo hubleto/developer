@@ -4,9 +4,9 @@ An app is a basic functional element of Hubleto. Every functionality available i
 
 An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
 
-## Create Loader class
+## Create app Loader
 
-To start, `create a ./apps/MyApp/Loader.php file` with the following content:
+To start, create `./apps/MyApp/Loader.php` with the following content:
 
 **./apps/MyApp/Loader.php**
 ```php
@@ -37,13 +37,13 @@ $config['enabledApps'] = [
 ...
 ```
 
-> VISUAL_CHECK | Now, when you open the Hubleto in your browser and navigate to `Settings > Manage Installed Apps`, you should see `HubletoApp\MyApp` at the end of installed apps.
+> **VISUAL_CHECK** | Now, when you open the Hubleto in your browser and navigate to `Settings > Manage Installed Apps`, you should see `HubletoApp\MyApp` at the end of installed apps.
 
 ## Adding functionality
 
 However, such app does nothing. To add a funcionality, you may:
 
-  * initialize (bootstrap) the app:
+  * initialize the app during the Hubleto bootstrap phase:
     * add routing table with `$this->app->router->httpGet()`, or
     * add buttons to the sidebar with `$this->app->sidebar->addLink()`, or
     * add button to the settings manager with `$this->app->addSetting()`.
@@ -52,7 +52,7 @@ However, such app does nothing. To add a funcionality, you may:
 
 Let's illustrate everything step-by-step with examples in following chapters.
 
-If your are experienced developer, you know about MVC and you can easily read PHP code direcctly, you may [download the full source code of *MyApp*](downloads/MyApp.zip).
+> **TIP** | If your are experienced developer, you know about MVC and you can easily read PHP code direcctly, you may [download the full source code of *MyApp*](downloads/MyApp.zip).
 
 
 ### Initialization
@@ -78,7 +78,7 @@ class Loader extends \HubletoMain\Core\App {
 }
 ```
 
-> TIP | To learn how router works, check [this script](https://github.com/wai-blue/hubleto/blob/main/src/core/Router.php) and [this script](https://github.com/wai-blue/adios/blob/main/src/Core/Router.php).
+> **TIP** | To learn how router works, check [this script](https://github.com/wai-blue/hubleto/blob/main/src/core/Router.php) and [this script](https://github.com/wai-blue/adios/blob/main/src/Core/Router.php).
 
 However, to see anything at this URL, you need to create a *controller* and a *view*. Let's do it.
 
@@ -104,7 +104,7 @@ To create a corresponding view, create a `./apps/MyApp/View/Dashboard.twig` file
 Hello. Current date and time is <b>{{ viewParams.now }}</b>.
 ```
 
-> VISUAL_CHECK | Now you should be able to navigate to `http://localhost/my-hubleto/my-app` (modify the URL according to your local environment) and see the content of Dashboard.twig.
+> **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app` (modify the URL according to your local environment) and see the content of Dashboard.twig.
 
 #### Customize sidebar (add button)
 
@@ -119,7 +119,7 @@ To add a button to the sidebar, simply call the app's `$this->app-sidebar->addLi
 | string $icon         | Icon of the button, from the FontAwesome set.                                                     |
 | boolean $highlighted | Whether the button should be highlighted.                                                         |
 
-> TIP | Check [Sidebar.php](https://github.com/wai-blue/hubleto/blob/main/src/core/Sidebar.php) for more details about how sidebar works.
+> **TIP** | Check [Sidebar.php](https://github.com/wai-blue/hubleto/blob/main/src/core/Sidebar.php) for more details about how sidebar works.
 
 So, to add a button to the sidebar, replace `Loader.php` file with the following content:
 
@@ -142,9 +142,9 @@ class Loader extends \HubletoMain\Core\App {
 }
 ```
 
-> VISUAL_CHECK | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [Fontawesome icon](https://www.fontawesome.com).
+> **VISUAL_CHECK** | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [Fontawesome icon](https://www.fontawesome.com).
 
-Well done! You are becoming a real Hubleto developer. Keep going and we'll show you more secrets about initialization phase and creating models.
+Well done! You are becoming a real Hubleto developer. Keep going and we'll show you more secrets about initialization phase, creating models and implementing custom UI components.
 
 #### Add button to the settings manager
 
