@@ -9,8 +9,8 @@ A class that defines routing, permissions of models and installation of models.
 ## Routing
 
 The Loader class will allow you to set URLs to your Controllers through you desired routes.
-In the `init()` method of a Loader class, the Router class's `httpGet()` method adds URLs to existing URLs from all Loader classes within Ceremony CRM.
-For safe and correct routing please check out other Loader classes within Ceremony CRM and their routes.
+In the `init()` method of a Loader class, the Router class's `httpGet()` method adds URLs to existing URLs from all Loader classes within Hubleto.
+For safe and correct routing please check out other Loader classes within Hubleto and their routes.
 
 Creating routes follows this pattern:
 
@@ -72,7 +72,7 @@ if (str_starts_with($this->app->requestedUri, 'customers')) { //specifying the u
 
 ## Installing tables of models
 
-During installation of Ceremony CRM the `installTables()` method will be called for every Loader class in every module. You need to initialize the models of the module and use the `install()` method of the models to properly create the tables and columns of the models.
+During installation of Hubleto the `installTables()` method will be called for every Loader class in every module. You need to initialize the models of the module and use the `install()` method of the models to properly create the tables and columns of the models.
 
 ### Example of model installation
 
@@ -96,7 +96,7 @@ You also need to add the full path to the sub-app as a whole.
 ```php
 public function installDefaultPermissions()
 {
-  $mPermission = new \CeremonyCrmMod\Settings\Models\Permission($this->app);
+  $mPermission = new \HubletoApp\Settings\Models\Permission($this->app);
   $permissions = [
     "HubletoApp/Customers/Models/Activity:Create",
     "HubletoApp/Customers/Models/Activity:Read",
@@ -121,11 +121,11 @@ After creating a Loader.php in your module and having created the correct file s
 ```php
   /*rest of the code*/
 
-  $this->addModule(\CeremonyCrmMod\Help\Loader::class);
-  $this->addModule(\CeremonyCrmMod\Deals\Loader::class);
-  $this->addModule(\CeremonyCrmMod\Leads\Loader::class);
+  $this->addModule(\HubletoApp\Help\Loader::class);
+  $this->addModule(\HubletoApp\Deals\Loader::class);
+  $this->addModule(\HubletoApp\Leads\Loader::class);
 
-  $this->addModule(\CeremonyCrmMod\YourNewModule\Loader::class);
+  $this->addModule(\HubletoApp\YourNewModule\Loader::class);
 
   /*rest of the code*/
 ```
