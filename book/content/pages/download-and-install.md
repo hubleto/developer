@@ -1,6 +1,6 @@
 # Download and install
 
-Use Hubleto for your projects. It's free and esy.
+Use Hubleto for your projects. It's free and easy.
 
 ## Prerequisities
 

@@ -6,7 +6,7 @@
   html body { @apply bg-gradient-to-tr from-white to-slate-50; }
 
   h1 { @apply text-3xl text-slate-800 font-logo; }
-  h2 { @apply text-xl font-bold text-slate-800 pt-20 pb-2 font-logo; }
+  h2 { @apply text-xl font-bold text-slate-800 pt-10 pb-2 font-logo; }
   h3 { @apply text-lg font-semibold text-primary pt-4 pb-0 first-of-type:pt-4 font-logo; }
   a { @apply text-primary; }
   a:hover { @apply underline; }
@@ -17,8 +17,7 @@
   nav li > ul { @apply p-1; }
   ul { @apply pt-2 pl-4 list-inside list-disc; }
   ol { @apply pl-2 list-inside list-decimal; }
-  code { @apply text-xs; }
-  code { @apply font-semibold bg-slate-50 p-1 border border-slate-200 rounded; }
+  code { @apply font-semibold bg-slate-50 text-xs border border-slate-200 rounded; }
 
   pre { @apply bg-slate-900 text-white p-4 rounded-lg text-sm overflow-x-auto; }
   pre code { @apply bg-transparent border-none font-normal; }
