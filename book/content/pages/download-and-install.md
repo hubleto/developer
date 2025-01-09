@@ -37,6 +37,10 @@ npm run build
 php hubleto init
 ```
 
+> [!IMPORTANT]  
+> For Nginx users: See [this note](nginx) on how to configure URL rewrite rules for Nginx.
+
 ### Use
 
 That's all. Now, follow the instructions of the init script and open the Hubleto in your browser.
+

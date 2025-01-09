@@ -32,8 +32,8 @@
   blockquote { @apply !m-8 p-4 bg-slate-100 max-w-xl border border-slate-200 rounded; }
   blockquote p { @apply p-0 font-serif text-xl tracking-wider !leading-7; }
 
-  .btn { @apply divide-x rounded inline-flex text-left p-0 m-0 items-center bg-primary border border-transparent text-white hover:bg-secondary hover:text-white hover:no-underline; box-sizing: border-box; }
-  .btn .icon { @apply block px-2 py-1 text-sm h-full; width: 2em; text-align: center; background: #FFFFFF20; }
+  .btn { @apply divide-x rounded inline-flex text-left p-0 m-0 items-center bg-primary border border-transparent text-white hover:text-white hover:no-underline; box-sizing: border-box; }
+  .btn .icon { @apply block px-2 py-1 text-sm h-full; width: 2.5em; text-align: center; }
   .btn .text { @apply block px-2 py-1 text-sm; }
   .btn .text > small { @apply block text-xs text-slate-600; }
 

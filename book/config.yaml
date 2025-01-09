@@ -5,9 +5,11 @@ redirects:
     code: 301
 tableOfContents:
   - page: home
+    icon: fas fa-home
   - page: download-and-install
+    icon: fas fa-download
   - page: create-first-app
-  - page: nginx
+    icon: fas fa-star
   - page: app-development
     icon: fas fa-code
     children:
