@@ -57,15 +57,17 @@ Let's illustrate everything step-by-step with examples in following chapters.
 
 ### Initialization
 
-Each app is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each app in the order in which they have been registered to the application.
+Each app is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each app in the order in which they have been registered.
 
 #### Add routes
 
-To create a routing table for HTTP GET requests, you must use `httpGet()` method of the application's router which is availabe in `$this->app->router` variable. The method takes an array of routes as an argument and adds these routes to the router's routing table.
+To create a routing table for HTTP GET requests, use `httpGet()` method of the application's router which is availabe in `$this->app->router` variable. The method takes an array of routes as an argument and adds these routes to the router's routing table.
+
+> **REMEMBER** `$this->app` is the secret word for accessing the Hubleto main core app. It is NOT referencing your app.
 
 Each route is a very simple key/value pair where key is a regular expression to match relative URL (the URL without the rewritebase) against and the value is the class name of controller to be executed.
 
-An example of a simple routing table is shown below. This routing adds a `my-app` URL which will show the app's dashboard.
+An example of a simple routing table is shown below. This routing adds a `my-app` URL which will show your app's dashboard.
 
 **./apps/MyApp/Loader.php**
 ```php
@@ -82,7 +84,7 @@ class Loader extends \HubletoMain\Core\App {
 
 However, to see anything at this URL, you need to create a *controller* and a *view*. Let's do it.
 
-To create a controller fo dashboard, create a `./apps/MyApp/Controllers/Dashboard.php` file with following content:
+To create a controller for your dashboard, create `./apps/MyApp/Controllers/Dashboard.php` file with the following content:
 
 **./apps/MyApp/Controllers/Dashboard.php**
 ```php
@@ -97,11 +99,11 @@ class Dashboard extends \HubletoMain\Core\Controller {
 }
 ```
 
-To create a corresponding view, create a `./apps/MyApp/View/Dashboard.twig` file with following content:
+To create a corresponding view, create `./apps/MyApp/View/Dashboard.twig` file with the following content:
 
 **./apps/MyApp/Views/Dashboard.twig**
 ```html
-Hello. Current date and time is <b>{{ viewParams.now }}</b>.
+Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 ```
 
 > **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app` (modify the URL according to your local environment) and see the content of Dashboard.twig.
@@ -131,12 +133,12 @@ class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->app->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
     $this->app->sidebar->addLink(
-      1,
-      1000,
-      'my-app',
-      $this->translate('My App'),
-      'fas fa-star',
-      str_starts_with($this->app->requestedUri, 'my-app')
+      1, // sidebar level to add link to
+      1000, // link ordering index
+      'my-app', // URL to navigate to
+      $this->translate('My App'), // title
+      'fas fa-star', // icon
+      str_starts_with($this->app->requestedUri, 'my-app') // is highlighted
     );
   }
 }
