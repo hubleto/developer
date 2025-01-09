@@ -1,15 +1,15 @@
 # Create first app
 
-An app is a basic functional element of HubletoCore. Every functionality available in Hubleto is thus built using apps.
+An app is a basic functional element of HubletoMain. Every functionality available in Hubleto is thus built using apps.
 
-An app is a custom class which extends from [`\HubletoCore\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Namespace of the app must start with `HubletoApp`.
+An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Namespace of the app must start with `HubletoApp`.
 
 Most simple implementation of the app is thus following:
 
 **MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
-class Loader extends \HubletoCore\Core\App { }
+class Loader extends \HubletoMain\Core\App { }
 ```
 
 However, such app does nothing. To add a funcionality, you may:
@@ -42,7 +42,7 @@ An example of a simple routing table is shown below.
 **MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
-class Loader extends \HubletoCore\Core\App {
+class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->app->router->httpGet([
       '/^help\/?$/' => Controllers\Help::class,
@@ -69,7 +69,7 @@ To add a button to the sidebar, simply call the app's `$this->app-sidebar->addLi
 **MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
-class Loader extends \HubletoCore\Core\App {
+class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->app->router->httpGet([
       '/^help\/?$/' => Controllers\Help::class,
@@ -98,7 +98,7 @@ To add a button to this manager, run the `$this->app->addSetting()` method. See 
 **MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
-class Loader extends \HubletoCore\Core\App {
+class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->app->addSetting([
       'title' => $this->translate('Countries'),
@@ -113,7 +113,7 @@ class Loader extends \HubletoCore\Core\App {
 
 Models are stored in the `Models` folder and consist of two files:
 
-  * a base model which is a class extending from [`\HubletoCore\Core\Model`](https://github.com/wai-blue/adios/blob/main/src/Core/Model.php)
+  * a base model which is a class extending from [`\HubletoMain\Core\Model`](https://github.com/wai-blue/adios/blob/main/src/Core/Model.php)
   * a representing Eloquent model which is a class extending from [`\ADIOS\Core\Model\Eloquent`](https://github.com/wai-blue/adios/blob/main/src/Core/Model/Eloquent.php)
 
 The *base model* provides classes and properties to configure data structure of the model (columns in the database), as well as some UI-related definitions, e.g. how the particular data (a column in database) should be displayed in UI components like [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx), [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) or [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
@@ -125,7 +125,7 @@ So, to create a model, you must create two files, see example for model Customer
 **MyApp/Models/Customer.php**
 ```php
 namespace HubletoApp\MyApp\Models;
-class Company extends \HubletoCore\Core\Model {
+class Company extends \HubletoMain\Core\Model {
   public string $table = 'companies';
   public string $eloquentClass = Eloquent\Company::class;
 

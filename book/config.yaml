@@ -4,11 +4,10 @@ redirects:
     newPage: some-new-page
     code: 301
 tableOfContents:
-  - page: getting-started
-    icon: fas fa-home
-    children:
-      - page: create-first-app
-      - page: nginx
+  - page: home
+  - page: download-and-install
+  - page: create-first-app
+  - page: nginx
   - page: app-development
     icon: fas fa-code
     children:
