@@ -13,6 +13,21 @@ You can:
   3. Become a contributor.
   4. Become a local implementation partner.
 
+## Why Hubleto
+
+Hubleto provides stable and steadily improved platform with ecosystem to develop, publish and use bussiness applications. See the summary below showing what each interested party gets from Hubleto.
+
+| Developer                                                                     | Local Partner                             | Customer                        |
+| ----------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------- |
+| DevOps with preinstalled **Node**, **React** and **Tailwind CSS**             | Ready-to-use CRM or ERP                   | Ready-to-use CRM or ERP         |
+| Consistent UI design based on [Primereact](https://ww.primereact.org)         | New potential customers                   | Custom solutions                |
+| Secure database layer with [Eloquent](https://laravel.com/docs/11.x/eloquent) | Opportunities for consultancy services    | Community of users              |
+| Rich set of [default features](default-features)                              | Opportunities for implementation services | Proven and stable solutions     |
+| Platform to publish your apps                                                 | Continuous development                    | 24/7 support                    |
+| Community support and comprehensive dev guide                                 | Platform to publish your apps             | Large network of local partners |
+
+Summary showing what you get from Hubleto
+
 ## Getting started
 
 Follow these simple steps to download Hubleto and setup your local environment.

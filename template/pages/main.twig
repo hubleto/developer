@@ -20,6 +20,22 @@
   <div class="content">
     {{ content|raw }}
   </div>
+  {% if pageConfig.tocData.prev or pageConfig.tocData.next %}
+    <div class="content flex justify-between">
+      <div class="flex-1 text-left">
+        {% if pageConfig.tocData.prev %}
+          <a href="{{ pageConfig.tocData.prev }}">&laquo; Previous page</a><br/>
+          <small>{{ pageConfig.tocData.prevPageData.title }}</small>
+        {% endif %}
+      </div>
+      <div class="flex-1 text-right">
+        {% if pageConfig.tocData.next %}
+          <a href="{{ pageConfig.tocData.next }}">Next page &raquo;</a><br/>
+          <small>{{ pageConfig.tocData.nextPageData.title }}</small>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
   {{ elements.onThisPage|raw }}
   {{ elements.footer|raw }}
 

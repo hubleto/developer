@@ -4,12 +4,10 @@ redirects:
     newPage: some-new-page
     code: 301
 tableOfContents:
-  - page: home
-    icon: fas fa-home
-  - page: download-and-install
-    icon: fas fa-download
-  - page: create-first-app
-    icon: fas fa-star
+  - json: '{ "page": "home", "icon": "fas fa-home", "next": "features" }'
+  - json: '{ "page": "features", "icon": "fas fa-check", "prev": "home", "next": "download-and-install" }'
+  - json: '{ "page": "download-and-install", "icon": "fas fa-download", "prev": "features", "next": "create-first-app" }'
+  - json: '{ "page": "create-first-app", "icon": "fas fa-star", "prev": "download-and-install", "next": "app-development" }'
   - page: app-development
     icon: fas fa-code
     children:
