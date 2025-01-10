@@ -99,7 +99,7 @@ class Dashboard extends \HubletoMain\Core\Controller {
 }
 ```
 
-To create a corresponding view, create `./apps/MyApp/View/Dashboard.twig` file with the following content:
+To create a corresponding view, create `./apps/MyApp/Views/Dashboard.twig` file with the following content:
 
 **./apps/MyApp/Views/Dashboard.twig**
 ```html
