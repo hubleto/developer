@@ -60,13 +60,14 @@
   .card-body { @apply p-2; }
   .card-footer { @apply flex justify-between border-t p-4; }
 
-  .content { @apply p-8 flex-1 max-w-3xl mb-4 ml-72 mr-4 lg:mr-60 space-y-1; }
+  .content { @apply p-8 flex-1 max-w-3xl mb-4 sm:ml-0 md:ml-72 mr-4 lg:mr-60  space-y-1; }
   .content img { @apply mt-4 border border-slate-200 max-w-xl p-2 bg-slate-100 text-xs; }
   .content img + em { @apply text-slate-400 mb-4 text-xs; }
 
   .header { @apply sticky top-0 inset-x-0 flex flex-wrap z-10 bg-white border-b text-sm py-2.5 ps-2 md:justify-start md:flex-nowrap md:ms-72 lg:ms-72 dark:bg-neutral-800 dark:border-neutral-700; }
   .header-inner { @apply flex items-center gap-x-2 text-gray-300; }
   .header-inner .logo { @apply h-4; }
+  .header .menu-button {@apply block md:hidden}
 
   .step-by-step { @apply p-0 py-12; }
   .step-by-step .step { @apply flex gap-4 mb-2 p-1 items-start; }

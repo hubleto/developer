@@ -1,5 +1,5 @@
 <!-- ========== HEADER ========== -->
-<header class="header">
+<header class="header flex flex-row justify-between">
   <div class="header-inner">
     <a href="{{ guideRootUrl }}"><img class="logo" src="{{ templateRootUrl }}/assets/logo-hubleto.png"/></a>
     {% for item in breadcrumbs %}
@@ -8,6 +8,9 @@
       </svg>
       <a href="{{ guideRootUrl }}/{{ item }}">{{ bookConfig.pages[item].title }}</a>
     {% endfor %}
+  </div>
+  <div class="menu-button mx-2 cursor-pointer" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
   </div>
 </header>
 <!-- ========== END HEADER ========== -->

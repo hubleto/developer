@@ -107,4 +107,26 @@
     <!-- End Content -->
   </div>
 </div>
+
+<script>
+  function toggleMenu() {
+    var sidebar = document.querySelector(".sidebar");
+
+    switch (sidebar.style.display) {
+      case "block":
+        sidebar.style.display = "";
+        break;
+      case "":
+        sidebar.style.display = "block";
+        break;
+      case "none":
+        sidebar.style.display = "block";
+        break;
+      default:
+        sidebar.style.display = "block";
+        break;
+    }
+  }
+
+</script>
 <!-- End Sidebar -->
