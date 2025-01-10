@@ -17,7 +17,7 @@ class Loader extends \HubletoMain\Core\App { }
 
 Then, you must let Hubleto know that you want to use this app in your project. Do this by modifying the `./ConfigAccount.php` file; add your app loader class to `enabledApps` config:
 
-**./ConfigAcccount.php**
+**./ConfigAccount.php**
 ```php
 ...
 $config['enabledApps'] = [
@@ -41,7 +41,7 @@ $config['enabledApps'] = [
 
 ## Adding functionality
 
-However, such app does nothing. To add a funcionality, you may:
+However, such app does nothing. To add a functionality, you may:
 
   * initialize the app during the Hubleto bootstrap phase:
     * add routing table with `$this->app->router->httpGet()`, or
@@ -52,7 +52,7 @@ However, such app does nothing. To add a funcionality, you may:
 
 Let's illustrate everything step-by-step with examples in following chapters.
 
-> **TIP** | If your are experienced developer, you know about MVC and you can easily read PHP code direcctly, you may [download the full source code of *MyApp*](downloads/MyApp.zip).
+> **TIP** | If your are experienced developer, you know about MVC and you can easily read PHP code directly, you may [download the full source code of *MyApp*](downloads/MyApp.zip).
 
 
 ### Initialization
@@ -61,7 +61,7 @@ Each app is initialized during the Hubleto bootstrap. The initialization is done
 
 #### Add routes
 
-To create a routing table for HTTP GET requests, use `httpGet()` method of the application's router which is availabe in `$this->app->router` variable. The method takes an array of routes as an argument and adds these routes to the router's routing table.
+To create a routing table for HTTP GET requests, use `httpGet()` method of the application's router which is available in `$this->app->router` variable. The method takes an array of routes as an argument and adds these routes to the router's routing table.
 
 > **REMEMBER** `$this->app` is the secret word for accessing the Hubleto main core app. It is NOT referencing your app.
 
@@ -115,7 +115,7 @@ To add a button to the sidebar, simply call the app's `$this->app-sidebar->addLi
 | Argument             | Description                                                                                       |
 | -------------------- | ------------------------------------------------------------------------------------------------- |
 | int $level           | Into which level of sidebar the link should be added. Currently only levels 1 or 2 are supported. |
-| int $order           | A number specifying the orderinx index of the button.                                             |
+| int $order           | A number specifying the ordering index of the button.                                             |
 | string $url          | Which url to open .                                                                               |
 | string $title        | Title/text of the button.                                                                         |
 | string $icon         | Icon of the button, from the FontAwesome set.                                                     |
@@ -144,7 +144,7 @@ class Loader extends \HubletoMain\Core\App {
 }
 ```
 
-> **VISUAL_CHECK** | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [Fontawesome icon](https://www.fontawesome.com).
+> **VISUAL_CHECK** | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [FontAwesome icon](https://www.fontawesome.com).
 
 Well done! You are becoming a real Hubleto developer. Keep going and we'll show you more secrets about initialization phase, creating models and implementing custom UI components.
 

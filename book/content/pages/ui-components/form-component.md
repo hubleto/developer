@@ -40,17 +40,17 @@ However, this method of adding input elements has limitations. With this type of
 
 ### Form Input and Input Components
 
-The other method of creating input elements is to use the [ADIOS input components](adios/input) wrapped in a `FormInput` component. This is a way to manually  create input elements **without the description of the column from the model**. You are creating an input element from scratch, therefore you need to describe what the data will show, create, update and/or delete.
+The other method of creating input elements is to use the [ADIOS input components](https://github.com/wai-blue/adios/tree/main/src/Components/Inputs) wrapped in a `FormInput` component. This is a way to manually create input elements **without the description of the column from the model**. You are creating an input element from scratch, therefore you need to describe what the data will show, create, update and/or delete.
 
-First, you need to add the `FormInput` component which will serve as a wrapper for the input element. The wrapper styles the input elements and also adds a label for the input elements. Adding a `required` prop to the `FormInput` will also add a red asterisk left of the label. This will **not** add the back-end requirement check to the input.
+First, you need to add the `FormInput` component, which will serve as a wrapper for the input element. The wrapper styles the input elements and also adds a label for the input elements. Adding a `required` prop to the `FormInput` will also add a red asterisk left of the label. This will **not** add the back-end requirement check to the input.
 
-After choosing an [ADIOS input](adios/input) component to use, you need to give it props from the `getDefaultInputProps()` method.
+After choosing an [ADIOS input component](https://github.com/wai-blue/adios/tree/main/src/Components/Inputs) to use, you need to give it props from the `getDefaultInputProps()` method.
 
 ```tsx
 <Varchar {...this.getDefaultInputProps()} />
 ```
 
-Different [ADIOS input](adios/input) components will have different required props to correctly function, but the two main ones are `value` and `onChange`.
+Different [ADIOS input components](https://github.com/wai-blue/adios/tree/main/src/Components/Inputs)  will have different required props to correctly function, but the two main ones are `value` and `onChange`.
 
 - `value` is a value that will be inserted and displayed in the input element on form load
 - `onChange` is an event callback that will be called every time something in the input changes
@@ -90,9 +90,6 @@ Lookup inputs can also get **data from custom endpoints** with optional paramete
 
 For the example below we used the API endpoint `customers/get-company-contacts` specified in Loader.php of the Customer module. We also added the `customEndpointParams` prop that will pass the ID of the company as a parameter to the API endpoint, which will be then available to use in the endpoint. Check out how to create an [API endpoint](../controller#Creating%20an%20API%20Controller).
 
-
-TODO: Twig mi nepovili dať dve {} za sebou
-
 ```tsx
 <FormInput title={"Contact Person"}>
   <Lookup
@@ -109,28 +106,6 @@ TODO: Twig mi nepovili dať dve {} za sebou
 </FormInput>
 ```
 
-### Tags Input
-
-After creating a Tag model for a specific model, you can create a Tag input element using the ADIOS Tag component. This displays the tags names created in the Tag model and displays them in the input using the cross-table for the specified model and the Tag model.
-
-For the Tag Input component you need to specify the `model` the tags were created in, `targetColumn` specifying the ID of the connected model's entry, `sourceColumn` specifying the ID of the Tag and `colorColumn` specifying the column for the color for the displayed tags in the model they were created in.
-
-```tsx
-<FormInput title="Tags">
-  <InputTags2
-    {...this.getDefaultInputProps()}
-    value={this.state.record.TAGS}
-    model="HubletoApp/Settings/Models/Tag"
-    targetColumn="id_company"
-    sourceColumn="id_tag"
-    colorColumn="color"
-    onChange={(value: any) => {
-      this.updateRecord({ TAGS: value });
-    }}
-  />
-</FormInput>
-```
-
 ## Adding Table components of other models
 
 You can add Table components, that were created for other models into Form components. Firstly, you need to import your desired Table component into the Form component. After this, you need to specify some props:
@@ -140,7 +115,7 @@ You can add Table components, that were created for other models into Form compo
 - `showFooter` - a boolean that shows/hides the footer of the table
 - `descriptionSource` - specifies which description source to use (both, props)
 - `description` - a description of a table
-- `date` - date for the table
+- `data` - data for the table
 - `parentForm` - the form component in which the table is located in
 - `readonly` - a boolean disabling/enabling the deletion and creation of new entries
 - `onRowClick` - a callback for clicking on an entry in the table
@@ -191,11 +166,13 @@ You can add Table components, that were created for other models into Form compo
 
 The `description` prop similarly describes the table as the `tableDescribe()` method of the Model classes. See the example above.
 
-You don't have to add the `description` prop or the `descriptionSource` prop to the Table component. If you don't add these, the Table component will be generated as specified in the Model class description. Note that this will display all the columns that are specified in the Model class of the Table component and may result in unexpected display errors.
+You don't have to add the `description` prop or the `descriptionSource` prop to the Table component. If you don't add these, the Table component will be generated as specified in the Model class description.
+
+> Note that by not adding `description` and the `descriptionSource` prop will display all the columns that are specified in the Model class of the Table component and may result in unexpected display errors.
 
 If you want to choose which columns to display, change the UI or change permissions, you can specify the `description` prop. You also have to add the `descriptionSource` prop and set its value to `props` or `both`, if you want to merge the descriptions of the Model class and the `description` prop.
 
-For the Table component you have to specify the `onChange` prop and the `onDeleteSelectionChange` prop with the `updateRecord` method. You have to specify the `onDeleteSelectionChange` prop too, because when you select an *existing* entry for deletion, the entry will gain a deletion flag in the record data.
+For the Table component you have to specify the `onChange` prop and the `onDeleteSelectionChange` prop with the `updateRecord` method. You have to specify the `onDeleteSelectionChange` prop too, because when you select an *already existing* entry for deletion, the entry will gain a deletion flag in the record data.
 
 ## Opening forms of the added Table components
 
@@ -238,3 +215,81 @@ getFormProps(): any {
 This code ensures that the form's callbacks use it's original callbacks and our new callbacks with the parent form's reload method.
 
 ## Creating a new entry through a Table component in a Form component
+
+You can use two ways to add a new entry through a Table component in a Form component:
+
+### Adding an entry directly through a Table component
+
+You can directly add a new entry through a Table component by creating an event / trigger that will update an the record data with an empty entry.
+
+**./apps/Customers/Components/FormPerson.tsx**
+
+```tsx
+<a
+  role='button'
+  onClick={() => {
+    if (!R.CONTACTS) R.CONTACTS = [];
+    R.CONTACTS.push({
+      id: this.state.newEntryId,
+      id_person: { _useMasterRecordId_: true },
+      type: 'email',
+    });
+    this.setState({ record: R });
+    this.setState({ newEntryId: this.state.newEntryId - 1 } as FormPersonState);
+  }}
+>
+  + Add Contact
+</a>
+```
+We created a button that adds a new entry to the record data. We add data to `R.CONTACTS`, which is the data from a relation of the Person model. We ensure that it creates an empty array, if `R.CONTACTS` does not yet exist. After this we push required data to the `R.CONTACTS` array.
+
+> If you are creating entries with this method, ensure that the `id` value is **always a negative number and also different from other *new* entries**. A negative number flags the entry as to be created. Hubleto will automatically assign an ID number that's next in line. This also ensures that the correct entry will be deleted when the delete button in a table row is pressed.
+
+If you want to add an ID of the currently opened entry to the record data use `{ _useMasterRecordId_: true }` and Hubleto will automatically insert the ID into the entry after saving.
+
+> The newly added entries will be saved only after pressing the save button of the form
+
+### Opening an empty Form component
+
+Other method to add an entry through a Table component is to open an empty Form component. This allows you to manipulate with more data than the Table component allows you to.
+
+With this method you have to manage a state that will open the empty form.
+
+Firstly, you need to wrap a chosen Form component in a `ModalSimple` component. This will allow you to slightly customize how the form will look upon opening, the `type` prop allows you to change the location or width of the form using CSS classes specified in `App.css`.
+
+Similarly to the Table component you need to specify the `description` and `descriptionSource` of the Form component. The easiest way is to use the description defined in the Model class and adding a description with only default values in the Form component using `descriptionSource="both"`. You also need to add an `id` prop with a negative value to let Hubleto know, that this entry is being created.
+
+Similarly to the Table component, the parent form wont be updated when saving the new entry with the newly opened form. Therefore you need to specify that the parent form should reload it's data using the `onSaveCallback`.
+
+> Don't forget to change the state that opens the form with the `onClose` callback.
+
+**./apps/Customers/Components/FormCompany.tsx**
+
+```tsx
+{this.state.createNewDeal == true ? (
+<ModalSimple
+  uid='deal_form'
+  isOpen={true}
+  type='right'
+>
+  <FormDeal
+    id={-1}
+    isInlineEditing={true}
+    descriptionSource="both"
+    description={
+      defaultValues: {
+        id_company: R.id,
+      }
+    }
+    showInModal={true}
+    onClose={() => { this.setState({ createNewDeal: false } as FormCompanyState); }}
+    onSaveCallback={(form: FormDeal<FormDealProps, FormDealState>, saveResponse: any) => {
+      if (saveResponse.status = "success") {
+        this.loadRecord();
+        this.setState({createNewDeal: false} as FormCompanyState)
+      }
+    }}
+  />
+</ModalSimple>
+): null}
+```

@@ -6,6 +6,16 @@ _extends \HubletoMain\Core\Extension_
 
 A class that defines routing, permissions of models and installation of models.
 
+This is the base of a Loader.php file:
+
+**./apps/MyApp/Loader.php**
+
+```php
+  <?php
+  namespace HubletoApp\MyApp;
+  class Loader extends \HubletoMain\Core\App { }
+```
+
 ## Routing
 
 The Loader class will allow you to set URLs to your Controllers through you desired routes.
@@ -34,7 +44,7 @@ public function init(): void
 ## Adding links to the sidebar navigation
 
 The Loader class allows you to easily modify the sidebar navigation to add new links to your Views.
-You can specify a new link through the sidebar object method `addLink()` in the `init()` method of the Loader class.
+You can specify a new link through the sidebar class's method `addLink()` in the `init()` method of the Loader class.
 
 ### Example of a new sidebar navigation link
 
@@ -54,7 +64,7 @@ $this->app->sidebar->addLink($level, $index, $url, $title, $fontAwesomeIconCssCl
 
 `highlighted` - specifies, if the button should change it's color.
 
-Note: You need to carefully specify the index of the link. Creating a link on the same index but with different level will result in the new link to overwrite the first link. You need to manage the indexes with structured numbering, for example the level 1 links can use two-digit numbers and the level 2 links can use only three-digit numbers.
+> Note: You need to carefully specify the index of the link. Creating a link on the same index but with different level will result in the new link to overwrite the first link. You need to manage the indexes with structured numbering, for example the level 1 links can use two-digit numbers and the level 2 links can use only three-digit numbers.
 
 When creating the second level of the sidebar navigation, you need to correctly specify for which URL will the second level links be shown to. In the example below, we specify that two links will be available in the Customer Views.
 
@@ -116,18 +126,25 @@ public function installDefaultPermissions()
 
 ## Register the module
 
-After creating a Loader.php in your module and having created the correct file structure you need to register your module in the app to initialize it during installation. In the App.php use the `addModule()` method to register your module in the app.
+After creating a Loader.php in your app and having created the correct file structure you need to register your app in the account to initialize it during installation. In the `./ConfigAccount.php` add the Loader class of your app to the `enabledApps` config to successfully register your app.
 
 ```php
-  /*rest of the code*/
-
-  $this->addModule(\HubletoApp\Help\Loader::class);
-  $this->addModule(\HubletoApp\Deals\Loader::class);
-  $this->addModule(\HubletoApp\Leads\Loader::class);
-
-  $this->addModule(\HubletoApp\YourNewModule\Loader::class);
-
-  /*rest of the code*/
+...
+$config['enabledApps'] = [
+  \HubletoApp\Billing\Loader::class,
+  \HubletoApp\Calendar\Loader::class,
+  \HubletoApp\Customers\Loader::class,
+  \HubletoApp\Dashboard\Loader::class,
+  \HubletoApp\Documents\Loader::class,
+  \HubletoApp\Invoices\Loader::class,
+  \HubletoApp\Services\Loader::class,
+  \HubletoApp\Settings\Loader::class,
+  \HubletoApp\Pipeline\Loader::class,
+  \HubletoApp\Deals\Loader::class,
+  \HubletoApp\Leads\Loader::class,
+  \HubletoApp\MyApp\Loader::class, // <-- your app goes here
+];
+...
 ```
 
 ## Next Up

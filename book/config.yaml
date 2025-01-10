@@ -20,6 +20,7 @@ tableOfContents:
       - page: ui-components
         children:
           - page: ui-components/form-component
+          - page: ui-components/special-input-types
       - page: routing
       - page: permissions
   - page: apps

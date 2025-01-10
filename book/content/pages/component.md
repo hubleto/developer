@@ -52,7 +52,7 @@ renderForm(): JSX.Element {
   }
 ```
 
-Before specifing a form to use in a table component, you can also specify the width of the form, like in the example below. The width is based on CSS classes defined in `App.css`.
+Before specifying a form to use in a table component, you can also specify the width of the form, like in the example below. The width is based on CSS classes defined in `App.css`.
 
 ```tsx
 getFormModalProps() {
@@ -65,7 +65,7 @@ getFormModalProps() {
   }
 ```
 
-For more insight on the table component please visit the ADIOS documentation's [Table component](table).
+For more insight on the table component please visit the ADIOS documentation's [Table component](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx).
 
 ## Creating a Form Component
 
@@ -108,11 +108,11 @@ export default class FormModule<P, S> extends Form<FormModuleProps,FormModuleSta
 }
 ```
 
-The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various ADIOS React components, like various ADIOS inputs. For more explanation on how to build a form component please visit the [advanced form creation](ui-components/form-component).
+The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various React components, like ADIOS input components. For more explanation on how to build a form component please visit the [advanced form creation](ui-components/form-component).
 
 ## Registering a Component to be used in a View
 
-You can register a React component to use in a View in the Loader.tsx file of a module. Below is an example of the registered table components of the Customer module.
+You can register a React component to use in a View in the Loader.tsx file of an app. Below is an example of the registered table components of the Customer app.
 
 You can name the imported components however you want, but you still need to follow the tag writing convention that was described on the [View page](view).
 

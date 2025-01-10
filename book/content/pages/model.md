@@ -4,7 +4,17 @@ _extends \HubletoMain\Core\Model extends \ADIOS\Core\ [Model](adios/model)_
 
 ## Introduction
 
-The Model class alows you to create data structures in Hubleto. One Model class represents one table in your database.
+The Model class allows you to define data structures, UI and permissions of form and table components.
+
+**Base Model File**
+
+```php
+<?php
+
+namespace HubletoApp\MyApp\Models;
+
+class MyModel extends \HubletoMain\Core\Model {}
+```
 
 ## Parameters
 
@@ -48,16 +58,16 @@ public function columns(array $columns = []): array
 
 The array key specifies the column name in the database. Each column can be further defined by several key-value pairs:
 
-| parameter          | Description                                             | type               |
-| ------------------ | ------------------------------------------------------- | ------------------ |
-| type               | The [ADIOS input type](adios)                           | string             |
-| title              | The title of the column that wil be shown in the UI     | string             |
-| model              | Full path to the lookup model or a model class          | string/Model class |
-| foreignKeyOnUpdate | SQL notation of the foreign key OnUpdate                | string             |
-| foreignKeyOnDelete | SQL notation of the foreign key OnDelete                | string             |
-| required           | Sets the requirement for the column to be filled        | boolean            |
-| readonly           | Disables input                                          | boolean            |
-| enum_values        | An array of values that will be available for selection | key-value Array    |
+| parameter          | Description                                                                               | type               |
+| ------------------ | ----------------------------------------------------------------------------------------- | ------------------ |
+| type               | The [ADIOS input type](https://github.com/wai-blue/adios/tree/main/src/Core/Db/DataTypes) | string             |
+| title              | The title of the column that wil be shown in the UI                                       | string             |
+| model              | Full path to the lookup model or a model class                                            | string/Model class |
+| foreignKeyOnUpdate | SQL notation of the foreign key OnUpdate parameter                                        | string             |
+| foreignKeyOnDelete | SQL notation of the foreign key OnDelete parameter                                        | string             |
+| required           | Sets the requirement for the column to be filled                                          | boolean            |
+| readonly           | Disables input                                                                            | boolean            |
+| enumValues         | An array of values that will be available for selection                                   | key-value Array    |
 
 ## Example of a lookup column
 
@@ -72,7 +82,7 @@ The array key specifies the column name in the database. Each column can be furt
 ],
 ```
 
-## Example with enum_values
+## Example with enumValues
 
 ```php
 'type' => [
@@ -121,7 +131,7 @@ This method allows you to modify the database query for retrieving data of the m
 
 This method also allows you to set `$maxRelationLevel`, the maximum level of depth of the relation information. **The maximum level of depth is four**, due to the amount of information that is received from the model.
 
-Other overridable methods can be found in the ADIOS Framework documentation for the [Model class](adios/model)
+Other overridable methods can be found in the ADIOS Framework documentation for the [Model class](https://github.com/wai-blue/adios/blob/main/src/Core/Model.php)
 
 ## Next up
 
