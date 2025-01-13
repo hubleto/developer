@@ -1,6 +1,4 @@
-# Eloquent class
-
-_extends \ADIOS\Core\Model\Eloquent_
+# HubletoMain\Core\ModelEloquent
 
 ## Introduction
 

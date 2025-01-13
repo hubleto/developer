@@ -11,7 +11,7 @@ A View by default follows a HTML structure.
 A View can be a Twig file. This allows us to access variables that the file can work with, and for example can loop through data, do if statements and many other functionalities. Please consult the [Twig website](https://twig.symfony.com/doc/) to learn more about Twig.
 
 The View can also render React components that were registered in the Loader.tsx of the app.
-To learn how to register a React component to use in a View check out the [Component page](component).
+To learn how to register a React component to use in a View check out the [Component page](./component).
 
 A registered component can be used almost like a HTML tag:
 
@@ -27,4 +27,4 @@ The HTML React component tag can also pass props to the component. For example, 
 
 ## Next up
 
-- Check out the [Component](component) class
+- Check out the [Component](./component) class

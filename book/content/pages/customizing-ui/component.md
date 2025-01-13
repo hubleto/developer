@@ -108,13 +108,13 @@ export default class FormModule<P, S> extends Form<FormModuleProps,FormModuleSta
 }
 ```
 
-The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various React components, like ADIOS input components. For more explanation on how to build a form component please visit the [advanced form creation](ui-components/form-component).
+The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various React components, like ADIOS input components. For more explanation on how to build a form component please visit the [advanced form creation](../ui-components/form-component).
 
 ## Registering a Component to be used in a View
 
 You can register a React component to use in a View in the Loader.tsx file of an app. Below is an example of the registered table components of the Customer app.
 
-You can name the imported components however you want, but you still need to follow the tag writing convention that was described on the [View page](view).
+You can name the imported components however you want, but you still need to follow the tag writing convention that was described on the [View page](../view).
 
 ```tsx
 // Customers/Loader.tsx

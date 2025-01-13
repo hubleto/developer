@@ -19,92 +19,96 @@ tableOfContents:
     children:
       - page: tutorial/add-first-model
         prev: create-first-app
-  - page: app-development
-    icon: fas fa-code
+  - page: advanced-development
+    icon: fas fa-medal
     children:
-      - page: loader
-      - page: model
-      - page: eloquent
-      - page: controller
-      - page: view
-      - page: component
-      - page: ui-components
+      - page: core-architecture
+      - page: core-classes
+        icon: fas fa-code
         children:
-          - page: ui-components/form-component
-          - page: ui-components/special-input-types
-      - page: routing
-      - page: permissions
-  - page: core-development
-    icon: fas fa-terminal
+          - page: core-classes/loader
+          - page: core-classes/model
+          - page: core-classes/eloquent
+          - page: core-classes/controller
+          - page: core-classes/router
+          - page: core-classes/permissions
+      - page: customizing-ui
+        children:
+          - page: customizing-ui/view
+          - page: customizing-ui/component
+          - page: customizing-ui/forms
+          - page: customizing-ui/special-input-types
+      - page: core-development
+        icon: fas fa-terminal
   - page: apps
     icon: fas fa-bolt
     children:
-      - page: apps/core
+      - page: apps/community
         children:
-          - page: apps/core/billing
+          - page: apps/community/billing
             children:
-              - page: apps/core/billing/models/billing-account
-              - page: apps/core/billing/models/billing-account-service
-              - page: apps/core/billing/controllers/billing-accounts
-              - page: apps/core/billing/views/billing-accounts
-              - page: apps/core/billing/components/table-billing-account-services
-          - page: apps/core/customers
+              - page: apps/community/billing/models/billing-account
+              - page: apps/community/billing/models/billing-account-service
+              - page: apps/community/billing/controllers/billing-accounts
+              - page: apps/community/billing/views/billing-accounts
+              - page: apps/community/billing/components/table-billing-account-services
+          - page: apps/community/customers
             children:
-              - page: apps/core/customers/models/activity
-              - page: apps/core/customers/models/address
-              - page: apps/core/customers/models/company
-              - page: apps/core/customers/models/company-tag
-              - page: apps/core/customers/models/company-activity
-              - page: apps/core/customers/models/company-document
-              - page: apps/core/customers/models/contact
-              - page: apps/core/customers/models/person-tag
-              - page: apps/core/customers/models/person
-              - page: apps/core/customers/permissions
-          - page: apps/core/documents
+              - page: apps/community/customers/models/activity
+              - page: apps/community/customers/models/address
+              - page: apps/community/customers/models/company
+              - page: apps/community/customers/models/company-tag
+              - page: apps/community/customers/models/company-activity
+              - page: apps/community/customers/models/company-document
+              - page: apps/community/customers/models/contact
+              - page: apps/community/customers/models/person-tag
+              - page: apps/community/customers/models/person
+              - page: apps/community/customers/permissions
+          - page: apps/community/documents
             children:
-              - page: apps/core/documents/models/document
-              - page: apps/core/documents/permissions
-          - page: apps/core/services
+              - page: apps/community/documents/models/document
+              - page: apps/community/documents/permissions
+          - page: apps/community/services
             children:
-              - page: apps/core/services/models/service
-              - page: apps/core/services/permissions
-          - page: apps/core/settings
+              - page: apps/community/services/models/service
+              - page: apps/community/services/permissions
+          - page: apps/community/settings
             children:
-              - page: apps/core/settings/models/activity-type
-              - page: apps/core/settings/models/country
-              - page: apps/core/settings/models/currency
-              - page: apps/core/settings/models/label
-              - page: apps/core/settings/models/pipeline
-              - page: apps/core/settings/models/pipeline-step
-              - page: apps/core/settings/models/lead-status
-              - page: apps/core/settings/models/deal-status
-              - page: apps/core/settings/models/profile
-              - page: apps/core/settings/models/permission
-              - page: apps/core/settings/models/role-permission
-              - page: apps/core/settings/models/setting
-              - page: apps/core/settings/models/tag
-              - page: apps/core/settings/models/contact-type
-              - page: apps/core/settings/models/user
-              - page: apps/core/settings/models/user-role
-              - page: apps/core/settings/models/user-has-role
-              - page: apps/core/settings/permissions
-      - page: apps/sales
-        children:
-          - page: apps/sales/deals
+              - page: apps/community/settings/models/activity-type
+              - page: apps/community/settings/models/country
+              - page: apps/community/settings/models/currency
+              - page: apps/community/settings/models/label
+              - page: apps/community/settings/models/pipeline
+              - page: apps/community/settings/models/pipeline-step
+              - page: apps/community/settings/models/lead-status
+              - page: apps/community/settings/models/deal-status
+              - page: apps/community/settings/models/profile
+              - page: apps/community/settings/models/permission
+              - page: apps/community/settings/models/role-permission
+              - page: apps/community/settings/models/setting
+              - page: apps/community/settings/models/tag
+              - page: apps/community/settings/models/contact-type
+              - page: apps/community/settings/models/user
+              - page: apps/community/settings/models/user-role
+              - page: apps/community/settings/models/user-has-role
+              - page: apps/community/settings/permissions
+          - page: apps/community/deals
             children:
-              - page: apps/sales/deals/models/deal
-              - page: apps/sales/deals/models/deal-label
-              - page: apps/sales/deals/models/deal-history
-              - page: apps/sales/deals/models/deal-service
-              - page: apps/sales/deals/models/deal-activity
-              - page: apps/sales/deals/settings
-          - page: apps/sales/leads
+              - page: apps/community/deals/models/deal
+              - page: apps/community/deals/models/deal-label
+              - page: apps/community/deals/models/deal-history
+              - page: apps/community/deals/models/deal-service
+              - page: apps/community/deals/models/deal-activity
+              - page: apps/community/deals/settings
+          - page: apps/community/leads
             children:
-              - page: apps/sales/leads/models/lead
-              - page: apps/sales/leads/models/lead-label
-              - page: apps/sales/leads/models/lead-history
-              - page: apps/sales/leads/models/lead-service
-              - page: apps/sales/leads/models/lead-activity
+              - page: apps/community/leads/models/lead
+              - page: apps/community/leads/models/lead-label
+              - page: apps/community/leads/models/lead-history
+              - page: apps/community/leads/models/lead-service
+              - page: apps/community/leads/models/lead-activity
+      - page: apps/external
+      - page: apps/enterprise
   - page: partnership
     icon: fas fa-handshake-angle
   # - page: examples

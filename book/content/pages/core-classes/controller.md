@@ -1,4 +1,4 @@
-# Controller class
+# HubletoMain\Core\Controller
 
 _extends \CeremonyCrmApp\Core\Controller extends \ADIOS\Core\Controller_
 

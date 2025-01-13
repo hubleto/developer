@@ -1,4 +1,4 @@
-# App development
+# Core classes
 
 ## Introduction
 
@@ -51,7 +51,7 @@ ModuleName
 - Check out [Models](model) class
 - Check out [Eloquent](eloquent) class
 - Check out [Controllers](controller) class
-- Check out [Views](view)
-- Check out [Components](component)
+- Check out [Views](customizing-ui/view)
+- Check out [Components](customizing-ui/component)
 
 You can also check out the example module [here](https://github.com/wai-blue/crmn-ext-hello-world).

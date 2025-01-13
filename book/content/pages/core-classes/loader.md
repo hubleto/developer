@@ -1,6 +1,4 @@
-# Class Loader
-
-_extends \HubletoMain\Core\Extension_
+# HubletoMain\Core\Loader
 
 ## Introduction
 

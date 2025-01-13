@@ -1,6 +1,4 @@
-# Model class
-
-_extends \HubletoMain\Core\Model extends \ADIOS\Core\ [Model](adios/model)_
+# HubletoMain\Core\Model
 
 ## Introduction
 
