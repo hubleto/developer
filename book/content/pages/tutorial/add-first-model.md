@@ -2,17 +2,19 @@
 
 In this tutorial, you learn how to add your first model into your app.
 
-> **TIP** You should know about creating first app. Make sure you have read [this tutorial](../create-first-app).
+> **IMPORTANT** In this tutorial, we will follow up with the **MyApp** developed in [this tutorial](../create-first-app).
 
-All app models are stored in two separated files. First, let's try it by an example. The first file is `Models/Contact.php`.
+All app models are stored in two separated files. In this tutorial, we'll create a simple model without any relation.
+
+
+First, let's try it by an example. The first file is `Models/Contact.php`.
 
 **./apps/MyAppWitModels/Models/Contact.php**
 ```php
 <?php
-namespace HubletoApp\MyAppWithModels\Models;
-
+namespace HubletoApp\MyApp\Models;
 class Contact extends \HubletoMain\Core\Model {
-  public string $table = 'contacts';
+  public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
   public function columns(array $columns = []): array {
     return parent::columns(array_merge($columns, [
@@ -36,9 +38,9 @@ And the second file is `Models/Eloquent/Contact.php`.
 **./apps/MyAppWitModels/Models/Eloquent/Contact.php**
 ```php
 <?php
-namespace HubletoApp\MyAppWithModels\Models\Eloquent;
+namespace HubletoApp\MyApps\Models\Eloquent;
 class Contact extends \ADIOS\Core\Model\Eloquent {
-  public $table = 'contacts';
+  public $table = 'my_app_contacts';
 }
 ```
 
@@ -55,8 +57,106 @@ We have used following properties and methods:
 | **$eloquentClass** | Reference to the class representing the *Eloquent* object                                                                             |
 | **columns()**      | Definition of *columns* (a.k.a attributes) of the model, including data-related information (e.g. *varchar*) and UI-related information (e.g., *title*). |
 
-<!--
-## Definition of columns (a.k.a. attributes)
+Table: Properties and methods used in the example.
 
-At this moment, we have to slow down a bit. Definition of *columns* in Hubleto model is one of the most important things to do. This is because many other functionalitieis, including rendering of some core UI components like Table.tsx [TODO: add link to component], Form.tsx [TODO: add link to component] or Input.tsx [TODO: add link to component] heavily rely on definition of *columns*.
--->
+## Definition of columns
+
+At this moment, we have to slow down a bit. Definition of *columns* in Hubleto model is crucial part of development of models. This is because many other functionalities, including rendering of some core UI components like [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx), [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) or [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx) heavily use definition of *columns* in the model.
+
+Columns are defines using the `columns()` method. In the example above, whe defined two columns: *first_name* and *last_name*. Both columns have their `type` which is the most important attribute of the columns. The *type* determines:
+
+  * what will be the SQL data type of the column;
+  * how the column will be displayed in a [Table](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx) or [Form](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) components;
+  * how the [Input](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx) for the column will look like.
+
+For the list of default types of columns, check the `DataTypes` folder in `Adios` framework: https://github.com/wai-blue/adios/tree/main/src/Core/Db/DataTypes.
+
+Each column then can have various additional attributes. Some examples are listed below. For the full list of available attributes see [documentation of Adios framework](https://github.com/wai-blue/adios/tree/main/docs/pages).
+
+| Attribute         | Applies to     | Description                                                            |
+| ----------------- | -------------- | ---------------------------------------------------------------------- |
+| string $title     | All data types | Used in table header and form inputs                                   |
+| boolean $required | All data types | Whether the column is required to have any value when saving the form. |
+| boolean $show     | All data types | Whether to show the column in tables and forms.                        |
+| array $enumValues | varchar, int   | If provided, the input will be renderd as a `select`.                  |
+| string $model     | lookup         | Reference to a related model (its class) in an 1:N relation.           |
+| boolean $readonly | All data types | Whethe the input for the column should render as readonly.             |
+
+Table: List of most commonly used attributes of columns.
+
+## Render table with form
+
+Now, having the columns defined, we want to create a UI with a table to manage data in this model. For this, we will use pre-built data-grid component from Adios framework: [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx).
+
+This component then automatically uses other components to render forms and inputs: [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) and [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
+
+To render the table, wee need create:
+
+  * routing table
+  * controller
+  * view
+
+### Add new route
+
+Add following line anywhere in the `init()` method of your app's `Loader.php`:
+
+**./apps/MyApp/Loader.php**
+```php
+<?php
+namespace HubletoApp\MyApp;
+class Loader extends \HubletoMain\Core\App {
+  public function init(): void {
+    ...
+    $this->app->router->httpGet([ '/^my-app\/contacts\/?$/' => Controllers\Contacts::class ]);
+    ...
+  }
+}
+```
+
+### Create controller and view
+
+Create following controller in `./apps/MyApp/Controllers/Contacts.php`:
+
+**./apps/MyApp/Controllers/Contacts.php**
+```php
+<?php
+namespace HubletoApp\MyApp\Controllers;
+class Contacts extends \HubletoMain\Core\Controller {
+  public function prepareView(): void {
+    parent::prepareView();
+    $this->setView('@app/MyApp/Views/Contacts.twig');
+  }
+}
+```
+
+And, create following view in `./apps/MyApp/Views/Contacts.twig`:
+
+**./apps/MyApp/Controllers/Contacts.php**
+```php
+<app-table string:model="HubletoApp/MyApp/Models/Contact"></app-table>
+```
+
+### Install SQL tables
+
+Add a new method `installTables()` into your app's `Loader.php`:
+
+**./apps/MyApp/Loader.php**
+```php
+<?php
+namespace HubletoApp\MyApp;
+class Loader extends \HubletoMain\Core\App {
+  ...
+  public function installTables() {
+    $mContact = new \HubletoApp\MyApp\Models\Contact($this->app);
+    $mContact->dropTableIfExists()->install();
+  }
+}
+```
+
+And run following command in your `project root folder`:
+
+```
+php hubleto install-app \HubletoApp\MyApp
+```
+
+This command will re-install all apps in your project, including your new *MyApp*.
