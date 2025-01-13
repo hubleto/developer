@@ -90,11 +90,12 @@ Now, having the columns defined, we want to create a UI with a table to manage d
 
 This component then automatically uses other components to render forms and inputs: [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) and [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
 
-To render the table, wee need create:
+To render the table, you need to:
 
-  * routing table
-  * controller
-  * view
+  * add routing
+  * create controller and view
+  * install SQL
+  * add a button to publish your new addressbook
 
 ### Add new route
 
@@ -161,9 +162,9 @@ php hubleto install-app \HubletoApp\MyApp
 
 This command will re-install all apps in your project, including your new *MyApp*.
 
-### Add a button to your table of contacts
+## Add a button to your new addressbook
 
-You need to be able to navigate to your new table. Simply add a button in your `Dashboard.twig`:
+Last step is to publish your new addressbook. Simply add a button in your `Dashboard.twig`:
 
 ```html
 <div class="mt-2">
@@ -174,6 +175,6 @@ You need to be able to navigate to your new table. Simply add a button in your `
 </div>
 ```
 
-### Download the app
+## Download the app
 
 To check if you did everything correctly, you can [download the full source code of this app](../downloads/MyApp.zip).
