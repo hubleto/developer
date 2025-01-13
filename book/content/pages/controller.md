@@ -48,7 +48,7 @@ Now the `newValue` is available to use in the View.
 
 Check out [View](view) to see how to use this value.
 
-Within a View Controller you can access submitted form data through `$this->app->params`. For example, you can work with these values to decide what `viewParams` to pass to the View or decide what View to set.
+Within a View Controller you can access submitted form data through `$this->main->params`. For example, you can work with these values to decide what `viewParams` to pass to the View or decide what View to set.
 
 ## Creating an API Controller
 

@@ -35,7 +35,7 @@ The string on the left is the URL for the route. The string on the right is the 
 ```php
 public function init(): void
 {
-  $this->app->router->httpGet([
+  $this->main->router->httpGet([
     '/new-route' => Controllers\ControllerName::class
   ]);
 }
@@ -49,7 +49,7 @@ You can specify a new link through the sidebar class's method `addLink()` in the
 ### Example of a new sidebar navigation link
 
 ```php
-$this->app->sidebar->addLink($level, $index, $url, $title, $fontAwesomeIconCssClass, $highlighted);
+$this->main->sidebar->addLink($level, $index, $url, $title, $fontAwesomeIconCssClass, $highlighted);
 ```
 
 `level` - specifies which of the sidebars will the link appear in
@@ -71,12 +71,12 @@ When creating the second level of the sidebar navigation, you need to correctly 
 ### Example of adding level 1 and level 2 links
 
 ```php
-$this->app->sidebar->addLink(1, 40, 'customers/companies', $this->translate('Customers'), 'fas fa-address-card', str_starts_with($this->app->requestedUri, 'customers'));
+$this->main->sidebar->addLink(1, 40, 'customers/companies', $this->translate('Customers'), 'fas fa-address-card', str_starts_with($this->main->requestedUri, 'customers'));
 
-if (str_starts_with($this->app->requestedUri, 'customers')) { //specifying the url that the second level links can be shown in
-  $this->app->sidebar->addHeading1(2, 310, $this->translate('Customers'));
-  $this->app->sidebar->addLink(2, 320, 'customers/companies', $this->translate('Companies'), 'fas fa-building');
-  $this->app->sidebar->addLink(2, 330, 'customers/persons', $this->translate('Contact Persons'), 'fas fa-users');
+if (str_starts_with($this->main->requestedUri, 'customers')) { //specifying the url that the second level links can be shown in
+  $this->main->sidebar->addHeading1(2, 310, $this->translate('Customers'));
+  $this->main->sidebar->addLink(2, 320, 'customers/companies', $this->translate('Companies'), 'fas fa-building');
+  $this->main->sidebar->addLink(2, 330, 'customers/persons', $this->translate('Contact Persons'), 'fas fa-users');
 }
 ```
 
@@ -88,7 +88,7 @@ During installation of Hubleto the `installTables()` method will be called for e
 
 ```php
 public function installTables() {
-  $mExampleModel = new Models\ExampleModel($this->app);
+  $mExampleModel = new Models\ExampleModel($this->main);
   $mExampleModel->dropTableIfExists()->install();
 }
 ```
@@ -106,7 +106,7 @@ You also need to add the full path to the sub-app as a whole.
 ```php
 public function installDefaultPermissions()
 {
-  $mPermission = new \HubletoApp\Settings\Models\Permission($this->app);
+  $mPermission = new \HubletoApp\Settings\Models\Permission($this->main);
   $permissions = [
     "HubletoApp/Customers/Models/Activity:Create",
     "HubletoApp/Customers/Models/Activity:Read",

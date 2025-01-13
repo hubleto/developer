@@ -110,7 +110,7 @@ namespace HubletoApp\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     ...
-    $this->app->router->httpGet([ '/^my-app\/contacts\/?$/' => Controllers\Contacts::class ]);
+    $this->main->router->httpGet([ '/^my-app\/contacts\/?$/' => Controllers\Contacts::class ]);
     ...
   }
 }
@@ -152,7 +152,7 @@ namespace HubletoApp\MyApp;
 class Loader extends \HubletoMain\Core\App {
   ...
   public function installTables() {
-    $mContact = new \HubletoApp\MyApp\Models\Contact($this->app);
+    $mContact = new \HubletoApp\MyApp\Models\Contact($this->main);
     $mContact->dropTableIfExists()->install();
   }
 }

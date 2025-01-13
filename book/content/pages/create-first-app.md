@@ -44,9 +44,9 @@ $config['enabledApps'] = [
 However, such app does nothing. To add a functionality, you may:
 
   * initialize the app during the Hubleto bootstrap phase:
-    * add routing table with `$this->app->router->httpGet()`, or
-    * add buttons to the sidebar with `$this->app->sidebar->addLink()`, or
-    * add button to the settings manager with `$this->app->addSetting()`.
+    * add routing table with `$this->main->router->httpGet()`, or
+    * add buttons to the sidebar with `$this->main->sidebar->addLink()`, or
+    * add button to the settings manager with `$this->main->addSetting()`.
   * create `models`, `views` or `controllers`
   * create `react components` to be used in views
 
@@ -61,9 +61,9 @@ Each app is initialized during the Hubleto bootstrap. The initialization is done
 
 #### Add routes
 
-To create a routing table for HTTP GET requests, use `httpGet()` method of the application's router which is available in `$this->app->router` variable. The method takes an array of routes as an argument and adds these routes to the router's routing table.
+To create a routing table for HTTP GET requests, use `httpGet()` method of the application's router which is available in `$this->main->router` variable. The method takes an array of routes as an argument and adds these routes to the router's routing table.
 
-> **REMEMBER** `$this->app` is the secret word for accessing the Hubleto main core app. It is NOT referencing your app.
+> **REMEMBER** `$this->main` is the secret word for accessing the Hubleto main core. It contains project config, router, permission manager and other useful components.
 
 Each route is a very simple key/value pair where key is a regular expression to match relative URL (the URL without the rewritebase) against and the value is the class name of controller to be executed.
 
@@ -75,7 +75,7 @@ An example of a simple routing table is shown below. This routing adds a `my-app
 namespace HubletoApp\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
-    $this->app->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
+    $this->main->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
   }
 }
 ```
@@ -110,7 +110,7 @@ Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 
 #### Customize sidebar (add button)
 
-To add a button to the sidebar, simply call the app's `$this->app-sidebar->addLink()` method. It takes following arguments:
+To add a button to the sidebar, simply call the app's `$this->main-sidebar->addLink()` method. It takes following arguments:
 
 | Argument             | Description                                                                                       |
 | -------------------- | ------------------------------------------------------------------------------------------------- |
@@ -131,14 +131,14 @@ So, to add a button to the sidebar, replace `Loader.php` file with the following
 namespace HubletoApp\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
-    $this->app->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
-    $this->app->sidebar->addLink(
+    $this->main->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
+    $this->main->sidebar->addLink(
       1, // sidebar level to add link to
       1000, // link ordering index
       'my-app', // URL to navigate to
       $this->translate('My App'), // title
       'fas fa-star', // icon
-      str_starts_with($this->app->requestedUri, 'my-app') // is highlighted
+      str_starts_with($this->main->requestedUri, 'my-app') // is highlighted
     );
   }
 }
@@ -152,14 +152,14 @@ Well done! You are becoming a real Hubleto developer. Keep going and we'll show 
 
 If your app requires specific settings, it should be managed via the app's setting manager. This manager is available under `Settings` button in the app's sidebar.
 
-To add a button to this manager, run the `$this->app->addSetting()` method. See example below.
+To add a button to this manager, run the `$this->main->addSetting()` method. See example below.
 
 **MyApp/Loader.php**
 ```php
 namespace HubletoApp\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
-    $this->app->addSetting([
+    $this->main->addSetting([
       'title' => $this->translate('Countries'),
       'icon' => 'fas fa-globe',
       'url' => 'settings/countries',
