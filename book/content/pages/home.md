@@ -4,7 +4,7 @@ Developer's guide
 
 ## Introduction
 
-Hubleto is an open source PHP-based platform focusing on ERP and CRM, a.k.a business applications. It does not matter if your you're developing a CRM or an ERP, it is always only about the set of applications that your project will be using.
+Hubleto is an **open source PHP-based platform for ERP and CRM solutions**, a.k.a business applications. It does not matter if your you're developing a CRM or an ERP, it is always only about the set of applications that your project will be using.
 
 ## Getting started
 

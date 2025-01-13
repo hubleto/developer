@@ -1,6 +1,7 @@
-# Publish paid apps
+# Adios framework
 
 This page is under development. Visit us later.
 
 Topics to cover:
-  * how to publish apps
+  * what is Adios
+  * how is Hubleto using it

@@ -10,8 +10,6 @@ tableOfContents:
     icon: fas fa-download
     prev: features
     next: create-first-app
-    children:
-      - page: publish-app
   - page: create-first-app
     icon: fas fa-star
     prev: download-and-install
