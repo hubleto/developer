@@ -132,12 +132,14 @@ class Contacts extends \HubletoMain\Core\Controller {
 }
 ```
 
-And, create following view in `./apps/MyApp/Views/Contacts.twig`:
+Then create following view in `./apps/MyApp/Views/Contacts.twig`:
 
-**./apps/MyApp/Controllers/Contacts.php**
+**./apps/MyApp/Views/Contacts.twig**
 ```php
 <app-table string:model="HubletoApp/MyApp/Models/Contact"></app-table>
 ```
+
+> **NOTE** Hubleto uses `<app-*` HTML notation to insert React components into the browser's DOM.
 
 ### Install SQL tables
 
