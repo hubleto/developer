@@ -7,7 +7,11 @@ In this tutorial, you learn how to add your first model into your app.
 All app models are stored in two separated files. In this tutorial, we'll create a simple model without any relation.
 
 
-First, let's try it by an example. The first file is `Models/Contact.php`.
+## Addressbook app
+
+Let's learn by examples. We will create a very simple addressbook app.
+
+The first file to create is `Models/Contact.php`.
 
 **./apps/MyAppWitModels/Models/Contact.php**
 ```php
@@ -73,22 +77,20 @@ For the list of default types of columns, check the `DataTypes` folder in `Adios
 
 Each column then can have various additional attributes. Some examples are listed below. For the full list of available attributes see [documentation of Adios framework](https://github.com/wai-blue/adios/tree/main/docs/pages).
 
-| Attribute         | Applies to     | Description                                                            |
-| ----------------- | -------------- | ---------------------------------------------------------------------- |
-| string $title     | All data types | Used in table header and form inputs                                   |
-| boolean $required | All data types | Whether the column is required to have any value when saving the form. |
-| boolean $show     | All data types | Whether to show the column in tables and forms.                        |
-| array $enumValues | varchar, int   | If provided, the input will be renderd as a `select`.                  |
-| string $model     | lookup         | Reference to a related model (its class) in an 1:N relation.           |
-| boolean $readonly | All data types | Whethe the input for the column should render as readonly.             |
+| Attribute             | Applies to     | Description                                                            |
+| --------------------- | -------------- | ---------------------------------------------------------------------- |
+| string **$title**     | All data types | Used in table header and form inputs                                   |
+| boolean **$required** | All data types | Whether the column is required to have any value when saving the form. |
+| boolean **$show**     | All data types | Whether to show the column in tables and forms.                        |
+| array **$enumValues** | varchar, int   | If provided, the input will be renderd as a `select`.                  |
+| string **$model**     | lookup         | Reference to a related model (its class) in an 1:N relation.           |
+| boolean **$readonly** | All data types | Whethe the input for the column should render as readonly.             |
 
 Table: List of most commonly used attributes of columns.
 
 ## Render table with form
 
-Now, having the columns defined, we want to create a UI with a table to manage data in this model. For this, we will use pre-built data-grid component from Adios framework: [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx).
-
-This component then automatically uses other components to render forms and inputs: [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) and [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
+Now, having the columns defined, we want to create a UI with a table to manage data in this model. For this, we will use pre-built data-grid component from Adios framework: [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx). This component then automatically uses other components to render forms and inputs: [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) and [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
 
 To render the table, you need to:
 
@@ -174,6 +176,8 @@ Last step is to publish your new addressbook. Simply add a button in your `Dashb
   </a>
 </div>
 ```
+
+> **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜.
 
 ## Download the app
 
