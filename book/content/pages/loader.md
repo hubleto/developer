@@ -8,11 +8,11 @@ A class that defines routing, permissions of models and installation of models.
 
 This is the base of a Loader.php file:
 
-**./apps/MyApp/Loader.php**
+**./apps/external/MyApp/Loader.php**
 
 ```php
   <?php
-  namespace HubletoApp\MyApp;
+  namespace HubletoApp\External\MyApp;
   class Loader extends \HubletoMain\Core\App { }
 ```
 
@@ -126,8 +126,9 @@ public function installDefaultPermissions()
 
 ## Register the module
 
-After creating a Loader.php in your app and having created the correct file structure you need to register your app in the account to initialize it during installation. In the `./ConfigAccount.php` add the Loader class of your app to the `enabledApps` config to successfully register your app.
+After creating a Loader.php in your app and having created the correct file structure you need to register your app in the account to initialize it during installation. In the `./ConfigEnv.php` add the Loader class of your app to the `enabledApps` config to successfully register your app.
 
+**./ConfigEnv.php**
 ```php
 ...
 $config['enabledApps'] = [
@@ -142,7 +143,7 @@ $config['enabledApps'] = [
   \HubletoApp\Pipeline\Loader::class,
   \HubletoApp\Deals\Loader::class,
   \HubletoApp\Leads\Loader::class,
-  \HubletoApp\MyApp\Loader::class, // <-- your app goes here
+  \HubletoApp\External\MyApp\Loader::class, // <-- your app goes here
 ];
 ...
 ```

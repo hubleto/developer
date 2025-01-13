@@ -13,10 +13,10 @@ Let's learn by examples. We will create a very simple addressbook app.
 
 The first file to create is `Models/Contact.php`.
 
-**./apps/MyApp/Models/Contact.php**
+**./apps/external/MyApp/Models/Contact.php**
 ```php
 <?php
-namespace HubletoApp\MyApp\Models;
+namespace HubletoApp\External\MyApp\Models;
 class Contact extends \HubletoMain\Core\Model {
   public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
@@ -39,10 +39,10 @@ class Contact extends \HubletoMain\Core\Model {
 
 And the second file is `Models/Eloquent/Contact.php`.
 
-**./apps/MyApp/Models/Eloquent/Contact.php**
+**./apps/external/MyApp/Models/Eloquent/Contact.php**
 ```php
 <?php
-namespace HubletoApp\MyApps\Models\Eloquent;
+namespace HubletoApp\External\MyApps\Models\Eloquent;
 class Contact extends \ADIOS\Core\Model\Eloquent {
   public $table = 'my_app_contacts';
 }
@@ -103,10 +103,10 @@ To render the table, you need to:
 
 Add following line anywhere in the `init()` method of your app's `Loader.php`:
 
-**./apps/MyApp/Loader.php**
+**./apps/external/MyApp/Loader.php**
 ```php
 <?php
-namespace HubletoApp\MyApp;
+namespace HubletoApp\External\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     ...
@@ -118,12 +118,12 @@ class Loader extends \HubletoMain\Core\App {
 
 ### Create controller and view
 
-Create following controller in `./apps/MyApp/Controllers/Contacts.php`:
+Create following controller in `./apps/external/MyApp/Controllers/Contacts.php`:
 
-**./apps/MyApp/Controllers/Contacts.php**
+**./apps/external/MyApp/Controllers/Contacts.php**
 ```php
 <?php
-namespace HubletoApp\MyApp\Controllers;
+namespace HubletoApp\External\MyApp\Controllers;
 class Contacts extends \HubletoMain\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();
@@ -132,9 +132,9 @@ class Contacts extends \HubletoMain\Core\Controller {
 }
 ```
 
-Then create following view in `./apps/MyApp/Views/Contacts.twig`:
+Then create following view in `./apps/external/MyApp/Views/Contacts.twig`:
 
-**./apps/MyApp/Views/Contacts.twig**
+**./apps/external/MyApp/Views/Contacts.twig**
 ```php
 <app-table string:model="HubletoApp/MyApp/Models/Contact"></app-table>
 ```
@@ -145,14 +145,14 @@ Then create following view in `./apps/MyApp/Views/Contacts.twig`:
 
 Add a new method `installTables()` into your app's `Loader.php`:
 
-**./apps/MyApp/Loader.php**
+**./apps/external/MyApp/Loader.php**
 ```php
 <?php
-namespace HubletoApp\MyApp;
+namespace HubletoApp\External\MyApp;
 class Loader extends \HubletoMain\Core\App {
   ...
   public function installTables() {
-    $mContact = new \HubletoApp\MyApp\Models\Contact($this->main);
+    $mContact = new \HubletoApp\External\MyApp\Models\Contact($this->main);
     $mContact->dropTableIfExists()->install();
   }
 }
@@ -161,7 +161,7 @@ class Loader extends \HubletoMain\Core\App {
 And run following command in your `project root folder`:
 
 ```
-php hubleto install-app \HubletoApp\MyApp
+php hubleto install-app \HubletoApp\External\MyApp
 ```
 
 ## Add a button to your new addressbook
