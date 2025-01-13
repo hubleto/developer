@@ -55,6 +55,8 @@ We have used following properties and methods:
 | **$eloquentClass** | Reference to the class representing the *Eloquent* object                                                                             |
 | **columns()**      | Definition of *columns* (a.k.a attributes) of the model, including data-related information (e.g. *varchar*) and UI-related information (e.g., *title*). |
 
+<!--
 ## Definition of columns (a.k.a. attributes)
 
 At this moment, we have to slow down a bit. Definition of *columns* in Hubleto model is one of the most important things to do. This is because many other functionalitieis, including rendering of some core UI components like Table.tsx [TODO: add link to component], Form.tsx [TODO: add link to component] or Input.tsx [TODO: add link to component] heavily rely on definition of *columns*.
+-->

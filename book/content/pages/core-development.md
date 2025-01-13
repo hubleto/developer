@@ -4,6 +4,14 @@ Read this guide to setup your Hubleto development environment.
 
 If you want to contribute to the Hubleto core (not only developing apps), follow these instructions to setup your development environment.
 
+## Fork Hubleto from Github
+
+First, you need to create your own fork of Hubleto (https://github.com/wai-blue/hubleto).
+
+Check this guide on how to create forks: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+
+In following steps, we assume you have forked Hubleto to the folder named `hubleto`.
+
 ## Clone ADIOS framework
 
 Hubleto uses [ADIOS framework](https://github.com/wai-blue/adios). Clone it to any folder under your webserver's document root.
@@ -48,12 +56,24 @@ In your Hubleto root folder, create a `composer-dev.json` file:
 }
 ```
 
-## Tell composer to use your new json file
+## Initialize Hubleto project
 
-For Linux users run: `./composer-dev.sh update`.
+In `hubleto` folder, run following commands to initialize your Hubleto project.
 
-For Windows users run: `./composer-dev.bat update`.
+### Linux
 
-## Re-compile Javascript and CSS
+```
+composer-dev.sh update
+npm install
+npm run build
+php hubleto init
+```
 
-Run `npm run build`.
+### Windows
+
+```
+composer-dev.bat update
+npm install
+npm run build
+php hubleto init
+```

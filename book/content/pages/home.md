@@ -30,22 +30,13 @@ Summary showing what you get from Hubleto
 
 ## Getting started
 
-Follow these simple steps to download Hubleto and setup your local environment.
+Hubleto can be used in many different ways. Check the table below.
 
-```
-# Clone repo
-git clone https://github.com/wai-blue/hubleto.git
+> **BUSINESS TIP** In all modes, you are allowed to sell your product to your customer.
 
-# CD into the project's folder
-cd hubleto
-
-# Install PHP and JS dependencies
-composer install
-npm install
-
-# Build everything together
-npm run build
-
-# Initialize project
-php hubleto init
-```
+| Mode                              | Description                                                                                                                                                                                                                                                      |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Only use**                      | You want to use Hubleto and existing [Hubleto apps](apps) without any further development. You only need to [download and install](download-and-install) Hubleto.                                                                                                |
+| **Use and develop app**           | Same as before, plus you want to [develop your own apps](create-first-app) without publishing them to Hubleto app store. |
+| **Use, develop app, publish app** | Same mode as before and you want to [publish your apps and make money](publish-app).                                                                                                                                                                             |
+| **Core developer**                | This is the most advanced mode. In this mode you will be able to contribute to [development of Hubleto core](core-development).                                                                                                                                  |

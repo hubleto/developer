@@ -6,7 +6,12 @@ redirects:
 tableOfContents:
   - json: '{ "page": "home", "icon": "fas fa-home", "next": "features" }'
   - json: '{ "page": "features", "icon": "fas fa-check", "prev": "home", "next": "download-and-install" }'
-  - json: '{ "page": "download-and-install", "icon": "fas fa-download", "prev": "features", "next": "create-first-app" }'
+  - page: download-and-install
+    icon: fas fa-download
+    prev: features
+    next: create-first-app
+    children:
+      - page: publish-app
   - page: create-first-app
     icon: fas fa-star
     prev: download-and-install
@@ -30,6 +35,7 @@ tableOfContents:
       - page: routing
       - page: permissions
   - page: core-development
+    icon: fas fa-terminal
   - page: apps
     icon: fas fa-bolt
     children:
