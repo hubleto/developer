@@ -1,4 +1,4 @@
-# Core development
+# Become a contributor
 
 Read this guide to setup your Hubleto development environment.
 

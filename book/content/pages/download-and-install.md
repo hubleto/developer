@@ -13,6 +13,8 @@ Installation takes only a few minutes and it's super easy.
 
 ## Steps
 
+> **WANT TO CONTRIBUTE?** If you are opensource fan and want to contribute to Hubleto, check [this guide](contribute) to setup your environment.
+
 ### Clone Github repository
 
 ```
@@ -39,8 +41,7 @@ npm run build
 php hubleto init
 ```
 
-> [!IMPORTANT]  
-> For Nginx users: See [this note](nginx) on how to configure URL rewrite rules for Nginx.
+> **IMPORTANT** For Nginx users: See [this note](nginx) on how to configure URL rewrite rules for Nginx.
 
 ### Use
 
