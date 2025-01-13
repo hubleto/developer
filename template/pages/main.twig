@@ -11,6 +11,25 @@
   <title>Hubleto | Developer's guide</title>
   <link rel="stylesheet" type="text/css" href="{{ templateRootUrl }}/assets/css/book.css">
   <link rel="stylesheet" type="text/css" href="{{ templateRootUrl }}/assets/css/fontawesome-6.6.css">
+  <link rel="stylesheet" type="text/css" href="{{ templateRootUrl }}/assets/css/atom-one-dark.min.css">
+  <script src="{{ templateRootUrl }}/assets/js/highlight.min.js"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Fredoka-Regular';
+      font-style: normal;
+      font-weight: 500;
+      src: url({{ templateRootUrl }}/assets/Fredoka/static/Fredoka-Regular.ttf) format('truetype');
+    }
+
+    .logo-font {
+      font-family: "Fredoka-Regular", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+  </style>
+
   {{ elements.htmlHead|raw }}
 </head>
 <body>
@@ -24,13 +43,13 @@
     <div class="content flex justify-between">
       <div class="flex-1 text-left">
         {% if pageConfig.tocData.prev %}
-          <a href="{{ pageConfig.tocData.prev }}">&laquo; Previous page</a><br/>
+          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.prev }}">&laquo; Previous page</a><br/>
           <small>{{ pageConfig.tocData.prevPageData.title }}</small>
         {% endif %}
       </div>
       <div class="flex-1 text-right">
         {% if pageConfig.tocData.next %}
-          <a href="{{ pageConfig.tocData.next }}">Next page &raquo;</a><br/>
+          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.next }}">Next page &raquo;</a><br/>
           <small>{{ pageConfig.tocData.nextPageData.title }}</small>
         {% endif %}
       </div>
@@ -40,5 +59,7 @@
   {{ elements.footer|raw }}
 
   <script src="{{ guideRootUrl }}/node_modules/preline/dist/preline.js"></script>
+
+  <script>hljs.highlightAll();</script>
 </body>
 </html>

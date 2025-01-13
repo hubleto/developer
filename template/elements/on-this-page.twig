@@ -35,13 +35,13 @@
 {# https://preline.co/templates/admin/index.html #}
 
 <!-- On this page -->
-<aside class="fixed top-0 right-0 h-full w-60 bg-white z-20 hidden lg:block">
-  <div class="text-sm p-2.5 flex items-center font-semibold border-b border-slate-200"><div>On this page</div></div>
-  <div class="p-4">
+<aside class="on-this-page">
+  <div class=""><div>On this page</div></div>
+  <div class="">
     {% for h2, h3list in onThisPage %}
-      <div class="pt-4"><a href="#{{ h2 }}">{{ h2 }}</a></div>
+      <div class="heading-level-1"><a href="#{{ h2 }}">{{ h2 }}</a></div>
       {% for h3 in h3list %}
-        <div class="text-sm ml-4 p-1"><a href="#{{ h3 }}">{{ h3 }}</a></div>
+        <div class="heading-level-2"><a href="#{{ h3 }}">{{ h3 }}</a></div>
       {% endfor %}
     {% endfor %}
   </div>

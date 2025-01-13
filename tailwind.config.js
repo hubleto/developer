@@ -5,16 +5,12 @@ module.exports = {
     "./book/**/*.{html,js,twig,tsx}",
     "./template/**/*.{html,js,twig,tsx}",
   ],
-  // safelist: [
-  //   'adios-lookup__indicator',
-  //   'adios-lookup__control',
-  //   'adios-lookup__input-container',
-  //   'adios-lookup__value-container',
-  //   'adios-lookup__input',
-  //   {
-  //     pattern: /grid-cols-+/,
-  //   },
-  // ],
+  safelist: [
+    'code.language-php',
+    // {
+    //   pattern: /language-+/,
+    // },
+  ],
   theme: {
     // colors: {
     //   'white': '#1fb6ff',

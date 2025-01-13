@@ -3,7 +3,7 @@
   * { @apply text-base scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300; }
 
   html { @apply bg-slate-50; }
-  html body { @apply bg-gradient-to-tr from-white to-slate-50; }
+  html body { @apply bg-gradient-to-br from-white to-green-50; }
 
   h1 { @apply text-3xl text-slate-800 font-logo; }
   h2 { @apply text-xl font-bold text-slate-800 pt-10 pb-2 font-logo; }
@@ -18,9 +18,12 @@
   nav li > ul { @apply p-1; }
   ul { @apply pt-2 pl-4 list-inside list-disc; }
   ol { @apply pl-2 list-inside list-decimal; }
-  code { @apply font-semibold bg-slate-50 border border-slate-400 rounded; padding: 0.1em 0.3em; font-size: 0.9em; margin: 0 0.3em; }
+  code { @apply font-semibold bg-slate-50 border border-slate-400 rounded; padding: 0.1em 0.3em; font-size: 8.5pt; line-height: 1.15em; margin: 0 0.3em; }
+  code.language-php { @apply m-0 block; padding: 1em; }
+  code.hljs { line-height: 1.15em; }
+  code.hljs * { font-size: 8.5pt; }
 
-  pre { @apply bg-slate-900 text-white p-4 rounded-lg text-sm overflow-x-auto; }
+  pre { @apply bg-slate-900 text-white rounded-lg text-sm overflow-x-auto; font-size: 0.9em; }
   pre code { @apply p-0 m-0 bg-transparent border-none font-normal; }
 
   table { @apply border border-slate-200 !mt-4; }
@@ -101,10 +104,10 @@
   .sidebar .collapsed + * { @apply hidden; }
   .sidebar .expanded + * { @apply block; }
 
-  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 hidden lg:block; }
-  aside.on-this-page > div:nth-child(1) { @apply text-sm p-2.5 flex items-center font-semibold border-b border-slate-200; }
+  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 hidden lg:block; border-left: 1px solid #008000; }
+  aside.on-this-page > div:nth-child(1) { @apply text-sm p-2.5 flex items-center font-semibold; }
   aside.on-this-page > div:nth-child(2) { @apply p-2; }
-  aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-4 pb-2 text-sm font-semibold; }
-  aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs ml-4 p-1 text-gray-800; }
+  aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-2 pb-2 text-sm font-normal; }
+  aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs ml-2 p-0 text-gray-800; }
 
 }
