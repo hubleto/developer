@@ -1,5 +1,5 @@
-# Publish app
+# Publish paid apps
 
-You may publish you apps to www.hubleto.com
+Earn money by publishing apps to Hubleto app store.
 
-... fork + pull request ...
+This page is under development. Visit us later.

@@ -105,5 +105,6 @@ tableOfContents:
               - page: apps/sales/leads/models/lead-history
               - page: apps/sales/leads/models/lead-service
               - page: apps/sales/leads/models/lead-activity
-  # - page: rest-api
+  - page: partnership
+    icon: fas fa-handshake-angle
   # - page: examples

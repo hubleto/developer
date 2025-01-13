@@ -6,12 +6,16 @@ Developer's guide
 
 Hubleto is an open source PHP-based platform focusing on ERP and CRM, a.k.a business applications. It does not matter if your you're developing a CRM or an ERP, it is always only about the set of applications that your project will be using.
 
-You can:
+## Getting started
 
-  1. Freely use existing Hubleto apps (see https://github.com/wai-blue/hubleto/tree/main/apps) without any responsibility to contribute to the project. See [download and installation guide](download-and-install).
-  2. Create your apps withtout contributing to the project. See this guide [how to create first app](create-first-app).
-  3. Become a contributor.
-  4. Become a local implementation partner.
+Hubleto can be used in many different ways. Check the table below.
+
+| Mode               | Description                                                                                                                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **User**           | You only want to use Hubleto with its default set of free apps.<br/>You only need to [download and install](download-and-install) Hubleto.                                                                          |
+| **Partner**        | You want to [download](download-and-install) and [customize](create-first-app) Hubleto for your customers.<br/>You do not publish apps. Read more about [partnership](partnership). |
+| **App developer**  | You want to make money by [publish your apps](publish-app).<br/>You also might want to [become a partner](partnership).                                                                         |
+| **Core developer** | You want to contribute to [development of Hubleto core](core-development).<br/>You must be a collaborator.                                                                                                  |
 
 ## Why Hubleto
 
@@ -27,16 +31,3 @@ Hubleto provides stable and steadily improved platform with ecosystem to develop
 | Community support and comprehensive dev guide                                 | Platform to publish your apps             | Large network of local partners |
 
 Summary showing what you get from Hubleto
-
-## Getting started
-
-Hubleto can be used in many different ways. Check the table below.
-
-> **BUSINESS TIP** In all modes, you are allowed to sell your product to your customer.
-
-| Mode                              | Description                                                                                                                                                                                                                                                      |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Only use**                      | You want to use Hubleto and existing [Hubleto apps](apps) without any further development. You only need to [download and install](download-and-install) Hubleto.                                                                                                |
-| **Use and develop app**           | Same as before, plus you want to [develop your own apps](create-first-app) without publishing them to Hubleto app store. |
-| **Use, develop app, publish app** | Same mode as before and you want to [publish your apps and make money](publish-app).                                                                                                                                                                             |
-| **Core developer**                | This is the most advanced mode. In this mode you will be able to contribute to [development of Hubleto core](core-development).                                                                                                                                  |
