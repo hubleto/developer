@@ -20,12 +20,12 @@ class Contact extends \HubletoMain\Core\Model {
     return parent::columns(array_merge($columns, [
       'first_name' => [
         'type' => 'varchar',
-        'title' => $this->translate('Type'),
+        'title' => $this->translate('First name'),
         'required' => true,
       ],
       'last_name' => [
         'type' => 'varchar',
-        'title' => $this->translate('Type'),
+        'title' => $this->translate('Last name'),
         'required' => true,
       ],
     ]));
@@ -160,3 +160,20 @@ php hubleto install-app \HubletoApp\MyApp
 ```
 
 This command will re-install all apps in your project, including your new *MyApp*.
+
+### Add a button to your table of contacts
+
+You need to be able to navigate to your new table. Simply add a button in your `Dashboard.twig`:
+
+```html
+<div class="mt-2">
+  <a class="btn btn-primary" href="my-app/contacts">
+    <span class="icon"><i class="fas fa-user"></i></span>
+    <span class="text">{{ '{{' }} translate("Contacts") {{ '}}' }}</span>
+  </a>
+</div>
+```
+
+### Download the app
+
+To check if you did everything correctly, you can [download the full source code of this app](../downloads/MyApp.zip).
