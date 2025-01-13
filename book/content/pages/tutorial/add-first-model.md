@@ -162,8 +162,6 @@ And run following command in your `project root folder`:
 php hubleto install-app \HubletoApp\MyApp
 ```
 
-This command will re-install all apps in your project, including your new *MyApp*.
-
 ## Add a button to your new addressbook
 
 Last step is to publish your new addressbook. Simply add a button in your `Dashboard.twig`:
