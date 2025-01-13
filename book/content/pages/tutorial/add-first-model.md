@@ -13,7 +13,7 @@ Let's learn by examples. We will create a very simple addressbook app.
 
 The first file to create is `Models/Contact.php`.
 
-**./apps/MyAppWitModels/Models/Contact.php**
+**./apps/MyApp/Models/Contact.php**
 ```php
 <?php
 namespace HubletoApp\MyApp\Models;
@@ -39,7 +39,7 @@ class Contact extends \HubletoMain\Core\Model {
 
 And the second file is `Models/Eloquent/Contact.php`.
 
-**./apps/MyAppWitModels/Models/Eloquent/Contact.php**
+**./apps/MyApp/Models/Eloquent/Contact.php**
 ```php
 <?php
 namespace HubletoApp\MyApps\Models\Eloquent;
