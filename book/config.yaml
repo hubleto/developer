@@ -29,6 +29,7 @@ tableOfContents:
           - page: ui-components/special-input-types
       - page: routing
       - page: permissions
+  - page: core-development
   - page: apps
     icon: fas fa-bolt
     children:
