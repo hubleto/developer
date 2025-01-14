@@ -27,6 +27,7 @@ With partnership you will get:
   * access to premium content (enterprise apps, learning materials, workshops, ...)
   * special prices for [enterprise apps](apps/enterprise)
   * opportunity to contribute to development of enterprise apps
+  * opportunity to develop more advanced [external apps](apps/external)
 
 Read [this guide](partnership) on how to become a partner.
 

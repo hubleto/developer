@@ -12,6 +12,9 @@ Check this guide on how to create forks: https://docs.github.com/en/pull-request
 
 In following steps, we assume you have forked Hubleto to the folder named `hubleto`.
 
+> **IMPORTANT, DO NOT SKIP** To officially become a contributor, you must sign the [Individual Contributor License Agreement (ICLA)](licenses/contributor/individual). See [this article](licenses/contributor/individual) on how to sign. **If you do not sign ICLA, your pull requests will not be accepted.**
+> If you are representing a company or a corporation, you also must sign [Corporate Contributor License Agreement (CCLA)](licenses/contributor/corporate).
+
 ## Clone ADIOS framework
 
 Hubleto uses [ADIOS framework](https://github.com/wai-blue/adios). Clone it to any folder under your webserver's document root.

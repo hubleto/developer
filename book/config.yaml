@@ -105,8 +105,8 @@ tableOfContents:
               - page: apps/community/leads/models/lead-history
               - page: apps/community/leads/models/lead-service
               - page: apps/community/leads/models/lead-activity
-      - page: apps/external
       - page: apps/enterprise
+      - page: apps/external
   - page: partnership
     icon: fas fa-handshake-angle
   - page: licenses
