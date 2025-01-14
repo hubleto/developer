@@ -94,7 +94,7 @@ class Dashboard extends \HubletoMain\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();
     $this->viewParams['now'] = date('Y-m-d H:i:s');
-    $this->setView('@app/MyApp/Views/Dashboard.twig');
+    $this->setView('@app/external/MyApp/Views/Dashboard.twig');
   }
 }
 ```
