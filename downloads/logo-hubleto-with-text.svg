@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="246.1167mm"
+   height="71.253517mm"
+   viewBox="0 0 246.1167 71.253517"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="logo-hubleto-with-text.svg"
+   inkscape:export-filename="q:\workspace\www\hubleto\developer\downloads\logo-hubleto-with-text.png"
+   inkscape:export-xdpi="210"
+   inkscape:export-ydpi="210">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath884">
+      <rect
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.51900005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect886"
+         width="60.402912"
+         height="60.670189"
+         x="90.337097"
+         y="102.15513"
+         rx="0"
+         ry="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="740.42097"
+     inkscape:cy="-21.983486"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-292.27215,128.41003)">
+    <g
+       id="g860"
+       transform="matrix(1.1744404,0,0,1.1744404,186.17661,-248.38514)"
+       clip-path="url(#clipPath884)"
+       style="stroke-width:0.85146934"
+       inkscape:export-filename="q:\workspace\www\ceremonycrm\app\assets\images\logo-hubleto-s-textom.png"
+       inkscape:export-xdpi="210"
+       inkscape:export-ydpi="210">
+      <circle
+         r="33.639881"
+         cy="131.8244"
+         cx="120.5744"
+         id="path815"
+         style="opacity:1;vector-effect:none;fill:#008000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.14485121;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <text
+         transform="rotate(-143.8819)"
+         id="text819"
+         y="-8.093729"
+         x="-202.2166"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80.90390015px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22528461"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:fredoka;-inkscape-font-specification:'fredoka Medium';fill:#ffffff;stroke-width:0.22528461"
+           y="-8.093729"
+           x="-202.2166"
+           id="tspan817"
+           sodipodi:role="line">H</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22528458"
+         x="15.234363"
+         y="192.49762"
+         id="text890"><tspan
+           sodipodi:role="line"
+           id="tspan888"
+           x="15.234363"
+           y="192.49762"
+           style="fill:#008000;stroke-width:0.22528458">Hubleto</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.75881958px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       x="379.68875"
+       y="-83.106636"
+       id="text894"
+       inkscape:export-filename="q:\workspace\www\ceremonycrm\app\assets\images\logo-hubleto-s-textom.png"
+       inkscape:export-xdpi="210"
+       inkscape:export-ydpi="210"><tspan
+         sodipodi:role="line"
+         id="tspan892"
+         x="379.68875"
+         y="-83.106636"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Fredoka;-inkscape-font-specification:Fredoka;fill:#008000;stroke-width:0.26458335">Hubleto</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75326443px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458338"
+       x="381.20078"
+       y="-66.833542"
+       id="text894-2"
+       inkscape:export-filename="q:\workspace\www\ceremonycrm\app\assets\images\logo-hubleto-s-textom.png"
+       inkscape:export-xdpi="210"
+       inkscape:export-ydpi="210"><tspan
+         sodipodi:role="line"
+         id="tspan892-9"
+         x="381.20078"
+         y="-66.833542"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Fredoka;-inkscape-font-specification:Fredoka;fill:#c8b7b7;stroke-width:0.26458338">Business Application Hub</tspan></text>
+  </g>
+</svg>

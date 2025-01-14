@@ -105,7 +105,7 @@
   .sidebar .collapsed + * { @apply hidden; }
   .sidebar .expanded + * { @apply block; }
 
-  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 hidden lg:block; border-left: 1px solid #008000; }
+  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 p-4 hidden shadow-lg lg:block; }
   aside.on-this-page > div:nth-child(1) { @apply text-sm p-2.5 flex items-center font-semibold; }
   aside.on-this-page > div:nth-child(2) { @apply p-2; }
   aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-2 pb-2 text-sm font-normal; }

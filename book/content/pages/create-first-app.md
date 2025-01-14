@@ -205,3 +205,5 @@ class Company extends \ADIOS\Core\Model\Eloquent {
   // Here go definitions of relations using Eloquent's HasMany, BelongsTo or other.
 }
 ```
+
+> **DO YOU LIKE HUBLETO?** [Help us improve](improve) it.

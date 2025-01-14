@@ -516,7 +516,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../github/guidevis",
-                "reference": "cef177a21019fb0306ee8a5360f0122873a36517"
+                "reference": "915f031e96012b1662e70557dc58e737ea062a3f"
             },
             "require": {
                 "erusev/parsedown": "^1.7",

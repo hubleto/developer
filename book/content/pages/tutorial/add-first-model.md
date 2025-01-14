@@ -177,7 +177,7 @@ Last step is to publish your new addressbook. Simply add a button in your `Dashb
 </div>
 ```
 
-> **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜.
+> **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜. If you like Hubleto, [help us improve](../improve) it.
 
 ## Download the app
 

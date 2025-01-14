@@ -1,7 +1,15 @@
 # Become a partner
 
-This page is under development. Visit us later.
+With partnership you will get access to premium content and more.
 
-Topics to cover:
-  * benefits of partnerhip
-  * how to become a partner
+## Why should I be partner
+
+With partnership you will get:
+
+  * access to premium content (enterprise apps, learning materials, workshops, ...)
+  * special prices for [enterprise apps](apps/enterprise)
+  * opportunity to contribute to development of enterprise apps
+
+## How to become a partner
+
+To become a partner, contact us at partner ~AT~ hubleto ~DOT~ com.

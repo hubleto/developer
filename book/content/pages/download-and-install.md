@@ -47,3 +47,4 @@ php hubleto init
 
 That's all. Now, follow the instructions of the init script and open the Hubleto in your browser.
 
+> **DO YOU LIKE HUBLETO?** [Help us improve](improve) it.

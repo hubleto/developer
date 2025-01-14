@@ -109,4 +109,10 @@ tableOfContents:
       - page: apps/enterprise
   - page: partnership
     icon: fas fa-handshake-angle
+  - page: licenses
+    icon: fas fa-stamp
+  - page: improve
+    icon: fas fa-heart
+  - page: download
+    icon: fas fa-file
   # - page: examples
