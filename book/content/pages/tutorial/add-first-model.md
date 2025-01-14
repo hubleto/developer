@@ -136,7 +136,7 @@ Then create following view in `./apps/external/MyApp/Views/Contacts.twig`:
 
 **./apps/external/MyApp/Views/Contacts.twig**
 ```php
-<app-table string:model="HubletoApp/MyApp/Models/Contact"></app-table>
+<app-table string:model="HubletoApp/External/MyApp/Models/Contact"></app-table>
 ```
 
 > **NOTE** Hubleto uses `<app-*` HTML notation to insert React components into the browser's DOM.
