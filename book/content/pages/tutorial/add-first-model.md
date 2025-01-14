@@ -42,7 +42,7 @@ And the second file is `Models/Eloquent/Contact.php`.
 **./apps/external/MyApp/Models/Eloquent/Contact.php**
 ```php
 <?php
-namespace HubletoApp\External\MyApps\Models\Eloquent;
+namespace HubletoApp\External\MyApp\Models\Eloquent;
 class Contact extends \ADIOS\Core\Model\Eloquent {
   public $table = 'my_app_contacts';
 }
@@ -50,7 +50,7 @@ class Contact extends \ADIOS\Core\Model\Eloquent {
 
 With this setup, you will create a model with:
 
-  * two *varchar* columns 
+  * two *varchar* columns
   * no relations
 
 We have used following properties and methods:
