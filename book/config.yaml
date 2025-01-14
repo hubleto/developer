@@ -36,8 +36,8 @@ tableOfContents:
           - page: customizing-ui/component
           - page: customizing-ui/forms
           - page: customizing-ui/special-input-types
-      - page: contribute
-        icon: fas fa-terminal
+  - page: contribute
+    icon: fas fa-terminal
   - page: apps
     icon: fas fa-bolt
     children:

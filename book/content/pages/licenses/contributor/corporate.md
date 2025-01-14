@@ -8,7 +8,7 @@ Thank you for your interest in The Apache Software Hubleto (the "Hubleto"). In o
 
 This version of the Agreement allows an entity (the "Corporation") to submit Contributions to the Hubleto, to authorize Contributions submitted by its designated employees to the Hubleto, and to grant copyright and patent licenses thereto.
 
-**To sign this Agreement, you must create a Markdown file on Hubleto Github repository, under the folder "legal/corporate".** The name of the file must be unique, must represent your public profile and content of the file must undoubtly recognize yourself as the corporate contributor. To create this file, you must issue a pull request to Hubleto Github repository. Once the pull request will be accepted by Hubleto team, you will officially become a corporate contributor. Below is the example content of such file. To use this example, you must replace all placeholders.
+**To sign this Agreement, you must create a Markdown file on Hubleto Github repository, under the folder "legal/corporate".** The name of the file must be unique, must represent your public profile and content of the file must undoubtly recognize yourself as the corporate contributor. To create this file, you must create a pull request named "Sign CCLA". Once the pull request will be accepted by Hubleto team, you will officially become a corporate contributor. Below is the example content of such file. To use this example, you must replace all placeholders.
 
 &nbsp;
 

@@ -6,7 +6,7 @@
 
 Thank you for your interest in Hubleto Business Application Hub (the "Hubleto"). To clarify the intellectual property license granted with Contributions from any person or entity, the Hubleto must have on file a signed Contributor License Agreement ("CLA") from each Contributor, indicating agreement with the license terms below. This agreement is for your protection as a Contributor as well as the protection of the Hubleto and its users. It does not change your rights to use your own Contributions for any other purpose.
 
-**To sign this Agreement, you must create a Markdown file on Hubleto Github repository, under the folder "legal/individual".** The name of the file must be unique, must represent your public profile and content of the file must undoubtly recognize yourself as the individual contributor. To create this file, you must issue a pull request to Hubleto Github repository. Once the pull request will be accepted by Hubleto team, you will officially become a individual contributor. Below is the example content of such file. To use this example, you must replace all placeholders.
+**To sign this Agreement, you must create a Markdown file on Hubleto Github repository, under the folder "legal/individual".** The name of the file must be unique, must represent your public profile and content of the file must undoubtly recognize yourself as the individual contributor. To create this file, you must create a pull request named "Sign ICLA". Once the pull request will be accepted by Hubleto team, you will officially become a individual contributor. Below is the example content of such file. To use this example, you must replace all placeholders.
 
 &nbsp;
 
