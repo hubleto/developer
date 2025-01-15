@@ -1,4 +1,4 @@
-# Nginx
+# Nginx configuration
 
 Configuration of local development environment with Nginx
 

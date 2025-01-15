@@ -10,6 +10,8 @@ tableOfContents:
     icon: fas fa-download
     prev: features
     next: create-first-app
+    children:
+      - page: nginx
   - page: create-first-app
     icon: fas fa-star
     prev: download-and-install
@@ -17,6 +19,16 @@ tableOfContents:
     children:
       - page: tutorial/add-first-model
         prev: create-first-app
+        next: tutorial/add-1-n-relation
+      - page: tutorial/add-1-n-relation
+        prev: tutorial/add-first-model
+        next: tutorial/customize-tables-and-forms
+      - page: tutorial/customize-tables-and-forms
+        prev: tutorial/add-1-n-relation
+        next: tutorial/custom-ui-components
+      - page: tutorial/custom-ui-components
+        prev: tutorial/add-1-n-relation
+        next: advanced-development
   - page: advanced-development
     icon: fas fa-medal
     children:
