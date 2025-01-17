@@ -187,7 +187,7 @@ class Loader extends \HubletoMain\Core\App {
 And run following command in your `project root folder`:
 
 ```
-php hubleto install-app \HubletoApp\External\MyApp
+php hubleto app install \HubletoApp\External\MyApp\Loader
 ```
 
 > **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜. If you like Hubleto, [help us improve](../improve) it.

@@ -95,7 +95,7 @@ class Contact extends \HubletoMain\Core\ModelEloquent {
 
 ### Re-install SQL tables
 
-Run `php hubleto install-app \HubletoApp\External\MyApp` in your project root folder.
+Run `php hubleto app install \HubletoApp\External\MyApp\Loader` in your project root folder.
 
 ## Download the source code
 
