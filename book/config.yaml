@@ -12,6 +12,7 @@ tableOfContents:
     next: create-first-app
     children:
       - page: nginx
+      - page: cli-agent
   - page: create-first-app
     icon: fas fa-star
     prev: download-and-install
