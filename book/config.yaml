@@ -28,7 +28,10 @@ tableOfContents:
         prev: tutorial/add-1-n-relation
         next: tutorial/custom-ui-components
       - page: tutorial/custom-ui-components
-        prev: tutorial/add-1-n-relation
+        prev: tutorial/customize-tables-and-forms
+        next: tutorial/writing-tests
+      - page: tutorial/writing-tests
+        prev: tutorial/custom-ui-components
         next: advanced-development
   - page: advanced-development
     icon: fas fa-medal
