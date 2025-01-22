@@ -12,11 +12,11 @@ Installation takes only a few minutes and it's super easy.
 
 ## Steps
 
-| Step       | Command                                                                               |
-| ---------- | ------------------------------------------------------------------------------------- |
-| Download   | ```https://www.hubleto.com/downloads/releases/community-edition/hubleto-0.5-ce.zip``` |
-| Unzip      | ```unzip hubleto-0.5-ce.zip```                                                        |
-| Initialize | ```php hubleto init```                                                                |
+| Step                     | Command                                      |
+| ------------------------ | -------------------------------------------- |
+| Download Hubleto CE      | https://www.hubleto.com/en/install           |
+| Unzip downloaded package | ```unzip hubleto-[RELEASE_VERSION]-ce.zip``` |
+| Initialize project       | ```php hubleto init```                       |
 Table: Steps to install community edition of Hubleto
 
 **Nginx users**: See [this note](nginx) on how to configure URL rewrite rules for Nginx.
