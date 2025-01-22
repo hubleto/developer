@@ -124,12 +124,12 @@ public function installDefaultPermissions()
 
 ## Register the module
 
-After creating a Loader.php in your app and having created the correct file structure you need to register your app in the account to initialize it during installation. In the `./ConfigEnv.php` add the Loader class of your app to the `enabledApps` config to successfully register your app.
+After creating a Loader.php in your app and having created the correct file structure you need to register your app in the account to initialize it during installation. In the `./ConfigEnv.php` add the Loader class of your app to the `apps` config to successfully register your app.
 
 **./ConfigEnv.php**
 ```php
 ...
-$config['enabledApps'] = [
+$config['apps'] = [
   \HubletoApp\Billing\Loader::class,
   \HubletoApp\Calendar\Loader::class,
   \HubletoApp\Customers\Loader::class,

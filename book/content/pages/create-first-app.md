@@ -15,12 +15,12 @@ namespace HubletoApp\External\MyApp;
 class Loader extends \HubletoMain\Core\App { }
 ```
 
-Then, you must let Hubleto know that you want to use this app in your project. Do this by modifying the `./ConfigEnv.php` file; add your app loader class to `enabledApps` config:
+Then, you must let Hubleto know that you want to use this app in your project. Do this by modifying the `./ConfigEnv.php` file; add your app loader class to `apps` config:
 
 **./ConfigEnv.php**
 ```php
 ...
-$config['enabledApps'] = [
+$config['apps'] = [
   \HubletoApp\Billing\Loader::class,
   \HubletoApp\Calendar\Loader::class,
   \HubletoApp\Customers\Loader::class,
