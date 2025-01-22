@@ -14,8 +14,8 @@ Installation takes only a few minutes and it's super easy.
 
 | Step       | Command                                                                               |
 | ---------- | ------------------------------------------------------------------------------------- |
-| Download   | ```https://www.hubleto.com/downloads/releases/community-edition/hubleto-0.4-ce.zip``` |
-| Unzip      | ```unzip hubleto-0.4-ce.zip```                                                        |
+| Download   | ```https://www.hubleto.com/downloads/releases/community-edition/hubleto-0.5-ce.zip``` |
+| Unzip      | ```unzip hubleto-0.5-ce.zip```                                                        |
 | Initialize | ```php hubleto init```                                                                |
 Table: Steps to install community edition of Hubleto
 
