@@ -3,6 +3,7 @@ redirects:
   some-old-page:
     newPage: some-new-page
     code: 301
+router:
 tableOfContents:
   - json: '{ "page": "home", "icon": "fas fa-home", "next": "features" }'
   - json: '{ "page": "features", "icon": "fas fa-check", "prev": "home", "next": "download-and-install" }'
