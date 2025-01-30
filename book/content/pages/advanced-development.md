@@ -1,9 +1,7 @@
 # Advanced development
 
-This page is under development. Visit us later.
+Learn more about development of Hubleto apps.
 
-Topics to cover:
-  * architecture basics
-  * advanced development tips&tricks
-  * customizing UI
-  * how to contribute to core development
+  * [Dynamic routes with variables](tutorial/advanced/dynamic-routes)
+  * [Core classes](core-classes)
+  * [Special input types](customizing-ui/special-input-types)
