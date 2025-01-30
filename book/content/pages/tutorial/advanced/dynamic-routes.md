@@ -33,14 +33,22 @@ class Loader extends \HubletoMain\Core\App {
 
 However, the controller will not be able to request the ID of the customer. However, thanks to [named groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) in regular expressions, you may specify what variables will be 'encoded' in the route.
 
-So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will be parsed and `idCustomer` route variable will be extracted. With such, you can use
+So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will be parsed and `idCustomer` route variable will be extracted. With such, you can use:
 
-```$idCustomer = $this->main->router->routeVarAsInteger('idCustomer')```
+```php
+$idCustomer = $this->main->router->routeVarAsInteger('idCustomer')
+```
 
 to store the $idCustomer variable which can be then forwarded to the view:
 
-```$this->viewParams['idCustomer'] = $idCustomer```
+```php
+$this->viewParams['idCustomer'] = $idCustomer
+```
 
 and used there:
 
-```<b>Hi user, are you sure you want to synchronize customer with ID = {{ viewParams.idCustomer }}```
+```
+Hi {{ '{{' }} viewParams.name {{ '}}' }},
+are you sure you want to synchronize customer
+with <b>ID = {{ '{{' }} viewParams.idCustomer {{ '}}' }}</b>
+```
