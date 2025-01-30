@@ -12,7 +12,7 @@ to be forwarded to this controller:
 
 This controller then will set the view showing the form to update the customer with `ID = 123`.
 
-## How to define dynemic route
+## How to define dynamic route
 
 To define any route, you need to create routing table of your app using `$this->main->router->httpGet()` method.
 
@@ -33,7 +33,20 @@ class Loader extends \HubletoMain\Core\App {
 
 However, the controller will not be able to request the ID of the customer. However, thanks to [named groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) in regular expressions, you may specify what variables will be 'encoded' in the route.
 
-So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will be parsed and `idCustomer` route variable will be extracted. With such, you can use:
+So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will be parsed and `idCustomer` route variable will be extracted. So, by modifying previous example followingly:
+
+**./apps/external/MyApp/Loader.php**
+```php
+<?php
+namespace HubletoApp\External\MyApp;
+class Loader extends \HubletoMain\Core\App {
+  public function init(): void {
+    $this->main->router->httpGet([ '/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
+  }
+}
+```
+
+in your controller you can use:
 
 ```php
 $idCustomer = $this->main->router->routeVarAsInteger('idCustomer')
