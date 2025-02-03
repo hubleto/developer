@@ -60,8 +60,8 @@ Got it? With this description API, you have full power to configure the behaviou
 
 ## Table description
 
-See [this chapter](../advanced-development/description-api/table) to read about configuration parameters that you can use to describe tables.
+See [this chapter](description-api/table) to read about configuration parameters that you can use to describe tables.
 
 ## Form description
 
-See [this chapter](../advanced-development/description-api/form) to read about configuration parameters that you can use to describe forms.
+See [this chapter](description-api/form) to read about configuration parameters that you can use to describe forms.

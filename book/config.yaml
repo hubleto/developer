@@ -40,22 +40,26 @@ tableOfContents:
   - page: advanced-development
     icon: fas fa-medal
     children:
-      - page: core-architecture
-      - page: core-classes
+      - page: advanced-development/core-architecture
+      - page: advanced-development/description-api
+        children:
+          - page: advanced-development/description-api/table
+          - page: advanced-development/description-api/form
+      - page: advanced-development/core-classes
         icon: fas fa-code
         children:
-          - page: core-classes/loader
-          - page: core-classes/model
-          - page: core-classes/eloquent
-          - page: core-classes/controller
-          - page: core-classes/router
-          - page: core-classes/permissions
-      - page: customizing-ui
+          - page: advanced-development/core-classes/loader
+          - page: advanced-development/core-classes/model
+          - page: advanced-development/core-classes/eloquent
+          - page: advanced-development/core-classes/controller
+          - page: advanced-development/core-classes/router
+          - page: advanced-development/core-classes/permissions
+      - page: advanced-development/customizing-ui
         children:
-          - page: customizing-ui/view
-          - page: customizing-ui/component
-          - page: customizing-ui/forms
-          - page: customizing-ui/special-input-types
+          - page: advanced-development/customizing-ui/view
+          - page: advanced-development/customizing-ui/component
+          - page: advanced-development/customizing-ui/forms
+          - page: advanced-development/customizing-ui/special-input-types
   - page: contribute
     icon: fas fa-terminal
   - page: apps
