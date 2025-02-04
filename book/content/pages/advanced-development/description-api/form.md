@@ -36,3 +36,7 @@ Property `$description->columns` is an array of objects of `ADIOS\Core\Db\Column
 ## DefaultValues
 
 Property `$description->defaultValues` is an array of default values to be used when creating a record.
+
+## IncludeRelations
+
+Property `$description->includeRelations` is an array of relations to be used during loading, creating or updating a record.
