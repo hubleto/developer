@@ -35,8 +35,16 @@ class Contact extends \HubletoMain\Core\Model {
   public string $eloquentClass = Eloquent\Contact::class;
   public function columns(array $columns = []): array {
     return parent::columns(array_merge($columns, [
-      'first_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('First name')))->setRequired(),
-      'last_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('Last name')))->setRequired(),
+      'first_name' => [
+        'type' => 'varchar',
+        'title' => $this->translate('First name'),
+        'required' => true,
+      ],
+      'last_name' => [
+        'type' => 'varchar',
+        'title' => $this->translate('Last name'),
+        'required' => true,
+      ],
     ]));
   }
 }
@@ -72,13 +80,13 @@ Table: Properties and methods used in the example.
 
 At this moment, we have to slow down a bit. Definition of *columns* in Hubleto model is crucial part of development of models. This is because many other functionalities, including rendering of some core UI components like [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx), [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) or [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx) heavily use definition of *columns* in the model.
 
-Columns are defines using the `columns()` method. In the example above, whe defined two columns: *first_name* and *last_name*. Both columns have their `type` which is the most important attribute of the columns. The *type* determines:
+Columns are defined using the `columns()` method. In the example above, whe defined two columns: *first_name* and *last_name*. Both columns have their `type` which is the most important attribute of the columns. The *type* determines:
 
   * what will be the SQL data type of the column;
   * how the column will be displayed in a [Table](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx) or [Form](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) components;
   * how the [Input](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx) for the column will look like.
 
-For the list of default types of columns, check the `DataTypes` folder in `Adios` framework: https://github.com/wai-blue/adios/tree/main/src/Core/Db/DataTypes.
+For the list of default types of columns, check the `Columns` folder in `Adios` framework: https://github.com/wai-blue/adios/tree/main/src/Core/Db/Columns.
 
 Each column then can have various additional attributes. Some examples are listed below. For the full list of available attributes see [documentation of Adios framework](https://github.com/wai-blue/adios/tree/main/docs/pages).
 
@@ -179,7 +187,7 @@ class Loader extends \HubletoMain\Core\App {
 And run following command in your `project root folder`:
 
 ```
-php hubleto app install \HubletoApp\External\MyApp\Loader
+php hubleto install-app \HubletoApp\External\MyApp
 ```
 
 > **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜. If you like Hubleto, [help us improve](../improve) it.
