@@ -35,16 +35,8 @@ class Contact extends \HubletoMain\Core\Model {
   public string $eloquentClass = Eloquent\Contact::class;
   public function columns(array $columns = []): array {
     return parent::columns(array_merge($columns, [
-      'first_name' => [
-        'type' => 'varchar',
-        'title' => $this->translate('First name'),
-        'required' => true,
-      ],
-      'last_name' => [
-        'type' => 'varchar',
-        'title' => $this->translate('Last name'),
-        'required' => true,
-      ],
+      'first_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('First name')))->setRequired(),
+      'last_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('Last name')))->setRequired(),
     ]));
   }
 }
@@ -187,7 +179,7 @@ class Loader extends \HubletoMain\Core\App {
 And run following command in your `project root folder`:
 
 ```
-php hubleto install-app \HubletoApp\External\MyApp
+php hubleto app install \HubletoApp\External\MyApp\Loader
 ```
 
 > **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜. If you like Hubleto, [help us improve](../improve) it.
