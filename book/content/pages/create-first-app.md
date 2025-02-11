@@ -8,7 +8,7 @@ An app is a custom class which extends from [`\HubletoMain\Core\App`](https://gi
 
 To start, create `./apps/external/MyApp/Loader.php` with the following content:
 
-**./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyApp;
@@ -17,7 +17,7 @@ class Loader extends \HubletoMain\Core\App { }
 
 Then, you must let Hubleto know that you want to use this app in your project. Do this by modifying the `./ConfigEnv.php` file; add your app loader class to `apps` config:
 
-**./ConfigEnv.php**
+###### ./ConfigEnv.php
 ```php
 ...
 $config['apps'] = [
@@ -69,7 +69,7 @@ Each route is a very simple key/value pair where key is a regular expression to 
 
 An example of a simple routing table is shown below. This routing adds a `my-app` URL which will show your app's dashboard.
 
-**./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyApp;
@@ -86,7 +86,7 @@ However, to see anything at this URL, you need to create a *controller* and a *v
 
 To create a controller for your dashboard, create `./apps/external/MyApp/Controllers/Dashboard.php` file with the following content:
 
-**./apps/external/MyApp/Controllers/Dashboard.php**
+###### ./apps/external/MyApp/Controllers/Dashboard.php
 ```php
 <?php
 namespace HubletoApp\External\MyApp\Controllers;
@@ -125,7 +125,7 @@ To add a button to the sidebar, simply call the app's `$this->main-sidebar->addL
 
 So, to add a button to the sidebar, replace `Loader.php` file with the following content:
 
-**./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyApp;
@@ -154,7 +154,7 @@ If your app requires specific settings, it should be managed via the app's setti
 
 To add a button to this manager, run the `$this->main->addSetting()` method. See example below.
 
-**./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyApp/Loader.php
 ```php
 namespace HubletoApp\External\MyApp;
 class Loader extends \HubletoMain\Core\App {
@@ -181,7 +181,7 @@ The *Eloquent model* provides functionality to load records and describes relati
 
 So, to create a model, you must create two files, see example for model Customer.
 
-**./apps/external/MyApp/Models/Customer.php**
+###### ./apps/external/MyApp/Models/Customer.php
 ```php
 namespace HubletoApp\External\MyApp\Models;
 class Company extends \HubletoMain\Core\Model {
@@ -197,7 +197,7 @@ class Company extends \HubletoMain\Core\Model {
 }
 ```
 
-**./apps/external/MyApp/Models/Eloquent/Customer.php**
+###### ./apps/external/MyApp/Models/Eloquent/Customer.php
 ```php
 namespace HubletoApp\External\MyApp\Models\Eloquent;
 class Company extends \ADIOS\Core\Model\Eloquent {

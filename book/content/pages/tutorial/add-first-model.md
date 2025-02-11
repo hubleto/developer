@@ -26,7 +26,7 @@ Let's learn by examples. We will create a very simple addressbook app.
 
 The first file to create is `Models/Contact.php`.
 
-**./apps/external/MyApp/Models/Contact.php**
+###### ./apps/external/MyApp/Models/Contact.php**
 ```php
 <?php
 namespace HubletoApp\External\MyApp\Models;
@@ -44,7 +44,7 @@ class Contact extends \HubletoMain\Core\Model {
 
 And the second file is `Models/Eloquent/Contact.php`.
 
-**./apps/external/MyApp/Models/Eloquent/Contact.php**
+###### ./apps/external/MyApp/Models/Eloquent/Contact.php**
 ```php
 <?php
 namespace HubletoApp\External\MyApp\Models\Eloquent;
@@ -108,7 +108,7 @@ To render the table, you need to:
 
 Add following line anywhere in the `init()` method of your app's `Loader.php`:
 
-**./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyApp/Loader.php**
 ```php
 <?php
 namespace HubletoApp\External\MyApp;
@@ -125,7 +125,7 @@ class Loader extends \HubletoMain\Core\App {
 
 Create following controller in `./apps/external/MyApp/Controllers/Contacts.php`:
 
-**./apps/external/MyApp/Controllers/Contacts.php**
+###### ./apps/external/MyApp/Controllers/Contacts.php**
 ```php
 <?php
 namespace HubletoApp\External\MyApp\Controllers;
@@ -139,7 +139,7 @@ class Contacts extends \HubletoMain\Core\Controller {
 
 Then create following view in `./apps/external/MyApp/Views/Contacts.twig`:
 
-**./apps/external/MyApp/Views/Contacts.twig**
+###### ./apps/external/MyApp/Views/Contacts.twig**
 ```php
 <app-table string:model="HubletoApp/External/MyApp/Models/Contact"></app-table>
 ```
@@ -163,7 +163,7 @@ Last step is to publish your new addressbook. Simply add a button in your `Dashb
 
 Add a new method `installTables()` into your app's `Loader.php`:
 
-**./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyApp/Loader.php**
 ```php
 <?php
 namespace HubletoApp\External\MyApp;

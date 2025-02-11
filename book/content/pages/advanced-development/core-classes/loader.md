@@ -126,7 +126,7 @@ public function installDefaultPermissions()
 
 After creating a Loader.php in your app and having created the correct file structure you need to register your app in the account to initialize it during installation. In the `./ConfigEnv.php` add the Loader class of your app to the `apps` config to successfully register your app.
 
-**./ConfigEnv.php**
+###### ./ConfigEnv.php
 ```php
 ...
 $config['apps'] = [

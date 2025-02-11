@@ -6,4 +6,4 @@ Topics to cover:
   * custom tables
   * custom forms
   * custom inputs
-  * custom UI components
+  * custom UI: React components, skins

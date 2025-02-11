@@ -60,6 +60,7 @@ tableOfContents:
           - page: advanced-development/customizing-ui/component
           - page: advanced-development/customizing-ui/forms
           - page: advanced-development/customizing-ui/special-input-types
+          - page: advanced-development/customizing-ui/skin
   - page: contribute
     icon: fas fa-terminal
   - page: apps
