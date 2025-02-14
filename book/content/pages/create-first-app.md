@@ -112,7 +112,7 @@ Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 
 You need to have some button to access your app, don't you? It's realy simple to have some.
 
-For this, you must create a `manifest.yaml` file and set several properties. For start, simply copy below example and create your app manifest in your apps's root folder.
+For this, you must create a `manifest.yaml` file and set several properties there. For the beginning, simply copy below example and create your app manifest in your apps's root folder.
 
 ###### ./apps/external/MyApp/manifest.yaml
 ```yaml
@@ -130,6 +130,8 @@ highlight: Very usefull business app.
 Following parameters are used in sidebar: `rootUrlSlug`, `name` and `icon`.
 
 > **VISUAL_CHECK** | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [FontAwesome icon](https://www.fontawesome.com).
+
+For additionals tips & tricks on how to customize the sidebar, check [this page](advanced-development/customizing-ui/customizing-sidebar).
 
 Well done! You are becoming a real Hubleto developer. Keep going and we'll show you more secrets about initialization phase, creating models and implementing custom UI components.
 
