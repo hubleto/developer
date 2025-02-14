@@ -45,7 +45,7 @@ However, such app does nothing. To add a functionality, you may:
 
   * initialize the app during the Hubleto bootstrap phase:
     * add routing table with `$this->main->router->httpGet()`, or
-    * add buttons to the sidebar with `$this->main->sidebar->addLink()`, or
+    * add entry button to main sidebar, or
     * add button to the settings manager with `$this->main->addSetting()`.
   * create `models`, `views` or `controllers`
   * create `react components` to be used in views
@@ -108,41 +108,26 @@ Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 
 > **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app` (modify the URL according to your local environment) and see the content of Dashboard.twig.
 
-#### Customize sidebar (add button)
+#### Add entry button to sidebar
 
-To add a button to the sidebar, simply call the app's `$this->main-sidebar->addLink()` method. It takes following arguments:
+You need to have some button to access your app, don't you? It's realy simple to have some.
 
-| Argument             | Description                                                                                       |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
-| int $level           | Into which level of sidebar the link should be added. Currently only levels 1 or 2 are supported. |
-| int $order           | A number specifying the ordering index of the button.                                             |
-| string $url          | Which url to open .                                                                               |
-| string $title        | Title/text of the button.                                                                         |
-| string $icon         | Icon of the button, from the FontAwesome set.                                                     |
-| boolean $highlighted | Whether the button should be highlighted.                                                         |
+For this, you must create a `manifest.yaml` file and set several properties. For start, simply copy below example and create your app manifest in your apps's root folder.
 
-> **TIP** | Check [Sidebar.php](https://github.com/wai-blue/hubleto/blob/main/src/core/Sidebar.php) for more details about how sidebar works.
-
-So, to add a button to the sidebar, replace `Loader.php` file with the following content:
-
-###### ./apps/external/MyApp/Loader.php
-```php
-<?php
-namespace HubletoApp\External\MyApp;
-class Loader extends \HubletoMain\Core\App {
-  public function init(): void {
-    $this->main->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
-    $this->main->sidebar->addLink(
-      1, // sidebar level to add link to
-      1000, // link ordering index
-      'my-app', // URL to navigate to
-      $this->translate('My App'), // title
-      'fas fa-star', // icon
-      str_starts_with($this->main->requestedUri, 'my-app') // is highlighted
-    );
-  }
-}
+###### ./apps/external/MyApp/manifest.yaml
+```yaml
+namespace: HubletoApp\External\MyApp
+rootUrlSlug: my-app
+name: My App
+icon: fas fa-home
+author:
+  name: "Mike Superdev"
+  nick: "mike.superdev"
+  company: "best.devs"
+highlight: Very usefull business app.
 ```
+
+Following parameters are used in sidebar: `rootUrlSlug`, `name` and `icon`.
 
 > **VISUAL_CHECK** | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [FontAwesome icon](https://www.fontawesome.com).
 

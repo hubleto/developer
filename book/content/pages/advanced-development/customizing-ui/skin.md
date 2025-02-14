@@ -36,12 +36,12 @@ Change this configuration group whatever you want.
 
 In the `Main.twcss` file, you can find this line of code:
 
-###### src/Main.twcss
+###### ./src/Main.twcss
 ```css
 @layer theme, base, components, utilities, primereact, adios, app;
 ```
 
-This tells TailwindCSS to prioritize some layers over the other. The last layer, `app`, is then the most important. This means that everything you will declare in this layer, will override the layers before.
+This tells TailwindCSS to prioritize some layers over the others. The last layer, `@app`, is then the most important. This means that everything you will declare in this layer, will override the layers before.
 
 So, if you want for example to change the size of the font in buttons, override the `.btn` class in this layer:
 
