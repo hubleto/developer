@@ -51,10 +51,10 @@ We have to add few things to:
   *  **Models/Eloquent/Contact.php**:
     1. definition of Eloquent relation
 
-###### ./apps/external/MyApp/Models/Contact.php
+###### ./apps/external/MyCompany/MyApp/Models/Contact.php
 ```php
 <?php
-namespace HubletoApp\External\MyApp\Models;
+namespace HubletoApp\External\MyCompany\MyApp\Models;
 use \Illuminate\Database\Eloquent\Relations\BelongsTo; // <-- use Eloquent's BelongsTo
 use \HubletoApp\Community\Settings\Models\User; // <-- use model for users
 class Contact extends \HubletoMain\Core\Model {
@@ -83,9 +83,9 @@ class Contact extends \HubletoMain\Core\Model {
 }
 ```
 
-###### ./apps/external/MyApp/Models/Eloquent/Contact.php**
+###### ./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php**
 ```php
-namespace HubletoApp\External\MyApp\Models\Eloquent;
+namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
 use \HubletoApp\Community\Settings\Models\Eloquent\User; // <-- use model for users
 class Contact extends \HubletoMain\Core\ModelEloquent {
   public $table = 'my_app_contacts';
@@ -95,7 +95,7 @@ class Contact extends \HubletoMain\Core\ModelEloquent {
 
 ### Re-install SQL tables
 
-Run `php hubleto app install \HubletoApp\External\MyApp\Loader` in your project root folder.
+Run `php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader` in your project root folder.
 
 ## Download the source code
 

@@ -2,7 +2,7 @@
 
 In this tutorial, you learn how to add your first model into your app and how to create UI for managing data in SQL database.
 
-> **IMPORTANT** In this tutorial, we will follow up with the **MyApp** developed in [this tutorial](../create-first-app).
+> **IMPORTANT** In this tutorial, we will follow up with the **MyApp** developed in [this tutorial](add-route-controller-and-view).
 
 All app models are stored in two separated files. In this tutorial, we'll create a simple model without any relation.
 
@@ -26,10 +26,10 @@ Let's learn by examples. We will create a very simple addressbook app.
 
 The first file to create is `Models/Contact.php`.
 
-###### ./apps/external/MyApp/Models/Contact.php**
+###### ./apps/external/MyCompany/MyApp/Models/Contact.php**
 ```php
 <?php
-namespace HubletoApp\External\MyApp\Models;
+namespace HubletoApp\External\MyCompany\MyApp\Models;
 class Contact extends \HubletoMain\Core\Model {
   public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
@@ -44,10 +44,10 @@ class Contact extends \HubletoMain\Core\Model {
 
 And the second file is `Models/Eloquent/Contact.php`.
 
-###### ./apps/external/MyApp/Models/Eloquent/Contact.php**
+###### ./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php**
 ```php
 <?php
-namespace HubletoApp\External\MyApp\Models\Eloquent;
+namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
 class Contact extends \HubletoMain\Core\ModelEloquent {
   public $table = 'my_app_contacts';
 }
@@ -108,10 +108,10 @@ To render the table, you need to:
 
 Add following line anywhere in the `init()` method of your app's `Loader.php`:
 
-###### ./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyCompany/MyApp/Loader.php**
 ```php
 <?php
-namespace HubletoApp\External\MyApp;
+namespace HubletoApp\External\MyCompany\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     ...
@@ -123,12 +123,12 @@ class Loader extends \HubletoMain\Core\App {
 
 #### Create controller and view
 
-Create following controller in `./apps/external/MyApp/Controllers/Contacts.php`:
+Create following controller in `./apps/external/MyCompany/MyApp/Controllers/Contacts.php`:
 
-###### ./apps/external/MyApp/Controllers/Contacts.php**
+###### ./apps/external/MyCompany/MyApp/Controllers/Contacts.php**
 ```php
 <?php
-namespace HubletoApp\External\MyApp\Controllers;
+namespace HubletoApp\External\MyCompany\MyApp\Controllers;
 class Contacts extends \HubletoMain\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();
@@ -137,9 +137,9 @@ class Contacts extends \HubletoMain\Core\Controller {
 }
 ```
 
-Then create following view in `./apps/external/MyApp/Views/Contacts.twig`:
+Then create following view in `./apps/external/MyCompany/MyApp/Views/Contacts.twig`:
 
-###### ./apps/external/MyApp/Views/Contacts.twig**
+###### ./apps/external/MyCompany/MyApp/Views/Contacts.twig**
 ```php
 <app-table string:model="HubletoApp/External/MyApp/Models/Contact"></app-table>
 ```
@@ -163,14 +163,14 @@ Last step is to publish your new addressbook. Simply add a button in your `Dashb
 
 Add a new method `installTables()` into your app's `Loader.php`:
 
-###### ./apps/external/MyApp/Loader.php**
+###### ./apps/external/MyCompany/MyApp/Loader.php**
 ```php
 <?php
-namespace HubletoApp\External\MyApp;
+namespace HubletoApp\External\MyCompany\MyApp;
 class Loader extends \HubletoMain\Core\App {
   ...
   public function installTables() {
-    $mContact = new \HubletoApp\External\MyApp\Models\Contact($this->main);
+    $mContact = new \HubletoApp\External\MyCompany\MyApp\Models\Contact($this->main);
     $mContact->dropTableIfExists()->install();
   }
 }
@@ -179,7 +179,7 @@ class Loader extends \HubletoMain\Core\App {
 And run following command in your `project root folder`:
 
 ```
-php hubleto app install \HubletoApp\External\MyApp\Loader
+php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader
 ```
 
 > **YOU ARE READY** Now open Hubleto in your browser, go to your app and then to contacts. Enjoy your new addressbook 😜. If you like Hubleto, [help us improve](../improve) it.

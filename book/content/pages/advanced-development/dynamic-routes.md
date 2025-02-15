@@ -8,7 +8,7 @@ In this tutorial, you'll learn how to create *dynamic routes*. For example, you 
 
 to be forwarded to this controller:
 
-```\HubletoApp\External\MyApp\Customers\Sync```.
+```\HubletoApp\External\MyCompany\MyApp\Customers\Sync```.
 
 This controller then will set the view showing the form to update the customer with `ID = 123`.
 
@@ -20,10 +20,10 @@ This method takes an array of routes as the only argument. The array of routes i
 
 For example, regular expression `/^my-app\/customers\/(\d+)\/sync\/?$/` will capture the above URL and you can forward it to the `Sync.php` controller followingly:
 
-###### ./apps/external/MyApp/Loader.php
+###### ./apps/external/MyCompany/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyApp;
+namespace HubletoApp\External\MyCompany\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->main->router->httpGet([ '/^my-app\/customers\/(\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
@@ -35,10 +35,10 @@ However, the controller will not be able to request the ID of the customer. Howe
 
 So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will be parsed and `idCustomer` route variable will be extracted. So, by modifying previous example followingly:
 
-###### ./apps/external/MyApp/Loader.php
+###### ./apps/external/MyCompany/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyApp;
+namespace HubletoApp\External\MyCompany\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->main->router->httpGet([ '/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);

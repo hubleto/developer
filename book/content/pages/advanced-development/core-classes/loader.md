@@ -6,11 +6,11 @@ A class that defines routing, permissions of models and installation of models.
 
 This is the base of a Loader.php file:
 
-**./apps/external/MyApp/Loader.php**
+**./apps/external/MyCompany/MyApp/Loader.php**
 
 ```php
   <?php
-  namespace HubletoApp\External\MyApp;
+  namespace HubletoApp\External\MyCompany\MyApp;
   class Loader extends \HubletoMain\Core\App { }
 ```
 
@@ -141,7 +141,7 @@ $config['apps'] = [
   \HubletoApp\Pipeline\Loader::class,
   \HubletoApp\Deals\Loader::class,
   \HubletoApp\Leads\Loader::class,
-  \HubletoApp\External\MyApp\Loader::class, // <-- your app goes here
+  \HubletoApp\External\MyCompany\MyApp\Loader::class, // <-- your app goes here
 ];
 ...
 ```

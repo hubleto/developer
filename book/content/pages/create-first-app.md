@@ -2,195 +2,32 @@
 
 An app is a basic functional element of Hubleto. Every functionality available in Hubleto is thus built using apps.
 
-An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
+An app is a basic functional element of Hubleto. And so, every functionality available in Hubleto is built in Hubleto apps.
 
-## Create app Loader
+It's realy easy to start developing Hubleto apps but before that check the list below if you have all things ready.
 
-To start, create `./apps/external/MyApp/Loader.php` with the following content:
+## What you should know
 
-###### ./apps/external/MyApp/Loader.php
-```php
-<?php
-namespace HubletoApp\External\MyApp;
-class Loader extends \HubletoMain\Core\App { }
-```
+For programming the backend part of your application, you should have experience with:
 
-Then, you must let Hubleto know that you want to use this app in your project. Do this by modifying the `./ConfigEnv.php` file; add your app loader class to `apps` config:
+  * PHP
+  * Model-View-Controller (MVC) architecture principles
+  * Object oriented programming (OOP)
+  * SQL Databases
+  * *composer* PHP package manager (https://getcomposer.org)
 
-###### ./ConfigEnv.php
-```php
-...
-$config['apps'] = [
-  \HubletoApp\Billing\Loader::class,
-  \HubletoApp\Calendar\Loader::class,
-  \HubletoApp\Customers\Loader::class,
-  \HubletoApp\Dashboard\Loader::class,
-  \HubletoApp\Documents\Loader::class,
-  \HubletoApp\Invoices\Loader::class,
-  \HubletoApp\Services\Loader::class,
-  \HubletoApp\Settings\Loader::class,
-  \HubletoApp\Pipeline\Loader::class,
-  \HubletoApp\Deals\Loader::class,
-  \HubletoApp\Leads\Loader::class,
-  \HubletoApp\External\MyApp\Loader::class, // <-- your app goes here
-];
-...
-```
+For the frontend part, you should have experience with:
+  * Javascript, HTML and CSS
+  * React (https://react.dev)
+  * TWIG templating engine (https://twig.symfony.com)
+  * *npm* Node package manager (https://www.npmjs.com)
 
-> **VISUAL_CHECK** | Now, when you open the Hubleto in your browser and navigate to `Settings > Manage Installed Apps`, you should see `HubletoApp\External\MyApp` at the end of installed apps.
+## Download and install
 
-## Adding functionality
+Ready? Now, [download and install your Hubleto](download-and-install).
 
-However, such app does nothing. To add a functionality, you may:
+## Tutorial: How to create Hubleto app
 
-  * initialize the app during the Hubleto bootstrap phase:
-    * add routing table with `$this->main->router->httpGet()`, or
-    * add entry button to main sidebar, or
-    * add button to the settings manager with `$this->main->addSetting()`.
-  * create `models`, `views` or `controllers`
-  * create `react components` to be used in views
+Do you have your Hubleto running? Great!
 
-Let's illustrate everything step-by-step with examples in following chapters.
-
-> **TIP** | If your are experienced developer, you know about MVC and you can easily read PHP code directly, you may [download the full source code of *MyApp*](downloads/MyApp.zip).
-
-
-### Initialization
-
-Each app is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each app in the order in which they have been registered.
-
-#### Add routes
-
-To create a routing table for HTTP GET requests, use `httpGet()` method of the main router which is available in `$this->main->router` property. The method takes an array of routes as an argument and adds these routes to the router's routing table.
-
-> **REMEMBER** `$this->main` is the secret word for accessing the Hubleto main core. It contains project config, router, permission manager and other useful components.
-
-Each route is a very simple key/value pair where key is a regular expression to match relative URL (the URL without the rewritebase) against and the value is the class name of controller to be executed.
-
-An example of a simple routing table is shown below. This routing adds a `my-app` URL which will show your app's dashboard.
-
-###### ./apps/external/MyApp/Loader.php
-```php
-<?php
-namespace HubletoApp\External\MyApp;
-class Loader extends \HubletoMain\Core\App {
-  public function init(): void {
-    $this->main->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
-  }
-}
-```
-
-> **TIP** | To learn how router works, check [this script](https://github.com/wai-blue/hubleto/blob/main/src/core/Router.php) and [this script](https://github.com/wai-blue/adios/blob/main/src/Core/Router.php).
-
-However, to see anything at this URL, you need to create a *controller* and a *view*. Let's do it.
-
-To create a controller for your dashboard, create `./apps/external/MyApp/Controllers/Dashboard.php` file with the following content:
-
-###### ./apps/external/MyApp/Controllers/Dashboard.php
-```php
-<?php
-namespace HubletoApp\External\MyApp\Controllers;
-class Dashboard extends \HubletoMain\Core\Controller {
-  public function prepareView(): void {
-    parent::prepareView();
-    $this->viewParams['now'] = date('Y-m-d H:i:s');
-    $this->setView('@app/external/MyApp/Views/Dashboard.twig');
-  }
-}
-```
-
-To create a corresponding view, create `./apps/external/MyApp/Views/Dashboard.twig` file with the following content:
-
-**./apps/external/MyApp/Views/Dashboard.twig**
-```html
-Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
-```
-
-> **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app` (modify the URL according to your local environment) and see the content of Dashboard.twig.
-
-#### Add entry button to sidebar
-
-You need to have some button to access your app, don't you? It's realy simple to have some.
-
-For this, you must create a `manifest.yaml` file and set several properties there. For the beginning, simply copy below example and create your app manifest in your apps's root folder.
-
-###### ./apps/external/MyApp/manifest.yaml
-```yaml
-namespace: HubletoApp\External\MyApp
-rootUrlSlug: my-app
-name: My App
-icon: fas fa-home
-author:
-  name: "Mike Superdev"
-  nick: "mike.superdev"
-  company: "best.devs"
-highlight: Very usefull business app.
-```
-
-Following parameters are used in sidebar: `rootUrlSlug`, `name` and `icon`.
-
-> **VISUAL_CHECK** | Refresh Hubleto in the browser and now in the sidebar you should see the `My App` link with a star-shaped [FontAwesome icon](https://www.fontawesome.com).
-
-For additionals tips & tricks on how to customize the sidebar, check [this page](advanced-development/customizing-ui/customizing-sidebar).
-
-Well done! You are becoming a real Hubleto developer. Keep going and we'll show you more secrets about initialization phase, creating models and implementing custom UI components.
-
-#### Add button to the settings manager
-
-If your app requires specific settings, it should be managed via the app's setting manager. This manager is available under `Settings` button in the app's sidebar.
-
-To add a button to this manager, run the `$this->main->addSetting()` method. See example below.
-
-###### ./apps/external/MyApp/Loader.php
-```php
-namespace HubletoApp\External\MyApp;
-class Loader extends \HubletoMain\Core\App {
-  public function init(): void {
-    $this->main->addSetting([
-      'title' => $this->translate('Countries'),
-      'icon' => 'fas fa-globe',
-      'url' => 'settings/countries',
-    ]);
-  }
-}
-```
-
-### Create first model
-
-Models are stored in the `Models` folder and consist of two files:
-
-  * a base model which is a class extending from [`\HubletoMain\Core\Model`](https://github.com/wai-blue/adios/blob/main/src/Core/Model.php)
-  * a representing Eloquent model which is a class extending from [`\ADIOS\Core\Model\Eloquent`](https://github.com/wai-blue/adios/blob/main/src/Core/Model/Eloquent.php)
-
-The *base model* provides classes and properties to configure data structure of the model (columns in the database), as well as some UI-related definitions, e.g. how the particular data (a column in database) should be displayed in UI components like [Table.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx), [Form.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Form.tsx) or [Input.tsx](https://github.com/wai-blue/adios/blob/main/src/Components/Input.tsx).
-
-The *Eloquent model* provides functionality to load records and describes relations in the models.
-
-So, to create a model, you must create two files, see example for model Customer.
-
-###### ./apps/external/MyApp/Models/Customer.php
-```php
-namespace HubletoApp\External\MyApp\Models;
-class Company extends \HubletoMain\Core\Model {
-  public string $table = 'companies';
-  public string $eloquentClass = Eloquent\Company::class;
-
-  // public function columns(array $columns = []): array
-  // public function tableDescribe(array $description = []): array
-  // public function formDescribe(array $description = []): array
-  // public function prepareLoadRecordQuery(array|null $includeRelations = null, int $maxRelationLevel = 0, $query = null, int $level = 0)
-  // ...
-
-}
-```
-
-###### ./apps/external/MyApp/Models/Eloquent/Customer.php
-```php
-namespace HubletoApp\External\MyApp\Models\Eloquent;
-class Company extends \ADIOS\Core\Model\Eloquent {
-  public $table = 'customers'
-  // Here go definitions of relations using Eloquent's HasMany, BelongsTo or other.
-}
-```
-
-> **DO YOU LIKE HUBLETO?** [Help us improve](improve) it.
+Now, start [this tutorial](tutorial/create-app-loader-and-manifest) to learn how to create your first Hubleto app.

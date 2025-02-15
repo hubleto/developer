@@ -19,8 +19,13 @@ tableOfContents:
     prev: download-and-install
     next: tutorial/add-first-model
     children:
+      - page: tutorial/create-app-loader-and-manifest
+        next: tutorial/add-route-controller-and-view
+      - page: tutorial/add-route-controller-and-view
+        prev: tutorial/create-app-loader-and-manifest
+        next: tutorial/add-route-controller-and-view
       - page: tutorial/add-first-model
-        prev: create-first-app
+        prev: tutorial/create-first-app
         next: tutorial/add-1-n-relation
       - page: tutorial/add-1-n-relation
         prev: tutorial/add-first-model
