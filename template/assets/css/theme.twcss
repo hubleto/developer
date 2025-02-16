@@ -28,6 +28,9 @@
   pre code { @apply p-0 m-0 bg-transparent border-none font-normal; }
   h2 code { @apply text-lg; }
 
+  .youtube-video { @apply shadow-lg; }
+  .youtube-video iframe { @apply w-full min-h-60 rounded; }
+
   h6:has(+pre) { @apply bg-gray-900 text-xs text-slate-100 p-1 rounded; position: relative; top: 1em; }
 
   table { @apply border border-slate-200 !mt-4; }

@@ -6,6 +6,10 @@ In the [previous tutorial](create-app-loader) we have created and installed an e
 
 Now we will learn how to add first simple functionality - one controller and one view.
 
+<div class="youtube-video">
+  <iframe src="https://www.youtube.com/embed/Cz-MC2xuTkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Introduction
 
 Hubleto follows the Model-View-Controller (MVC) architecture. This means that to create any user interface, you must create views. These views will be initiated in controllers. And, finally, these controllers will be initiated by accessing some URL and applying a routing.
@@ -43,10 +47,13 @@ An example of a simple routing table is shown below. This routing adds a `my-app
 namespace HubletoApp\External\MyCompany\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
+    parent::init();
     $this->main->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
   }
 }
 ```
+
+Do not forget to call also `parent::init()`.
 
 > **TIP** | To learn how router works, check [this script](https://github.com/wai-blue/hubleto/blob/main/src/core/Router.php) and [this script](https://github.com/wai-blue/adios/blob/main/src/Core/Router.php).
 

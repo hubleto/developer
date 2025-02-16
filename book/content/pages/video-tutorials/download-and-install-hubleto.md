@@ -9,7 +9,9 @@ Video tutorial
   * How to install into a specified folder
   * How to open in browser and sign in for the first time
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c3nTklJntW0?si=jPs7FgrMcfgRgkE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="youtube-video">
+  <iframe src="https://www.youtube.com/embed/c3nTklJntW0?si=jPs7FgrMcfgRgkE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Captions
 

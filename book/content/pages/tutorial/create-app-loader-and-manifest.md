@@ -4,6 +4,10 @@ An app is a basic functional element of Hubleto. Every functionality available i
 
 An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
 
+<div class="youtube-video">
+  <iframe src="https://www.youtube.com/embed/EDwpRQBVIuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Where are apps stored?
 
 There are three types of Hubleto apps: community, enterprise or external.
@@ -12,7 +16,7 @@ Community apps are stored in `./apps/community`. External and enterprise apps ar
 
 By default, a repository for external apps is in `./apps/external`. For the beginning, we will use this folder to put our app in. If you want to learn how to configure external app repositories, check [advanced app development tutorial](../advanced-development).
 
-> In this tutorial, we will be creating an external app. We will use `MyCompany` as the vendor name and `MyApp` as the application name.
+> In this tutorial, we will be creating an **external app**. We will use `MyCompany` as the vendor name and `MyApp` as the application name.
 
 So, our app will be located in `./apps/external/MyCompany/MyApp` folder. We will always use paths relative to your Hubleto's root folder.
 
@@ -46,10 +50,10 @@ highlight: Very usefull business app.
 
 ## Install empty app
 
-Now, you can install this empty app into your project. Do this by running the `php hubleto init` command as follows:
+Now, you can install this empty app into your project. Do this by running the `php hubleto app install` command as follows:
 
 ```
-php hubleto init \HubletoApp\External\MyCompany\MyApp\Loader
+php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader
 ```
 
 > **VISUAL_CHECK** | Now, when you open the Hubleto in your browser your app should show up somewhere in the left sidebar.

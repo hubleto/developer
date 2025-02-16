@@ -2,7 +2,7 @@
 module.exports = {
   darkMode: 'selector',
   content: [
-    "./book/**/*.{html,js,twig,tsx}",
+    "./book/**/*.{html,js,twig,tsx,md}",
     "./template/**/*.{html,js,twig,tsx}",
   ],
   safelist: [
