@@ -70,7 +70,7 @@ class Contact extends \HubletoMain\Core\Model {
 }
 ```
 
-###### ./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php**
+###### ./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php
 ```php
 namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
 use \HubletoApp\Community\Settings\Models\Eloquent\User; // <-- use model for users
