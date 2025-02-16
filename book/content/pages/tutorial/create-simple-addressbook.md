@@ -8,11 +8,13 @@ In the previous tutorials we created Hubleto application named `MyApp` containin
   * one controller activated by this route
   * one view set by the controller
 
-Now we'll learn how to **create models, database relations and how to create CRUD-like user interface just in few lines of HTML code**.
+Now we'll learn how to **create models, database relations and how to create CRUD-like user interface just with few lines of HTML code**.
 
 Once done, your app will contain a simple addressbook for managing contacts and users responsible for these contact. It will look like this:
 
-<img src="{{ bookRootUrl }}/content/assets/images/my-app-contacts.png">
+<div class="youtube-video">
+  <iframe src="https://www.youtube.com/embed/OGFznX3PSSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 This table and form were rendered just by creating this simple view:
 

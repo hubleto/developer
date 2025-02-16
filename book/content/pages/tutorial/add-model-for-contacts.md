@@ -89,7 +89,7 @@ Add a new method `installTables()` into your app's `Loader.php`:
 namespace HubletoApp\External\MyCompany\MyApp;
 class Loader extends \HubletoMain\Core\App {
   ...
-  public function installTables() {
+  public function installTables(): void {
     $mContact = new \HubletoApp\External\MyCompany\MyApp\Models\Contact($this->main);
     $mContact->dropTableIfExists()->install();
   }

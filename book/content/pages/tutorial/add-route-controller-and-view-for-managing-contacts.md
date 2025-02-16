@@ -34,7 +34,7 @@ namespace HubletoApp\External\MyCompany\MyApp\Controllers;
 class Contacts extends \HubletoMain\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();
-    $this->setView('@HubletoApp:External:MyCompany:MyApp/Views/Contacts.twig');
+    $this->setView('@HubletoApp:External:MyCompany:MyApp/Contacts.twig');
   }
 }
 ```
@@ -45,7 +45,7 @@ Create following view in `./apps/external/MyCompany/MyApp/Views/Contacts.twig`:
 
 ###### ./apps/external/MyCompany/MyApp/Views/Contacts.twig**
 ```php
-<app-table string:model="HubletoApp/External/MyApp/Models/Contact"></app-table>
+<app-table string:model="HubletoApp/External/MyCompany/MyApp/Models/Contact"></app-table>
 ```
 
 > **NOTE** Hubleto uses `<app-*` HTML notation to insert React components into the browser's DOM.
@@ -61,13 +61,6 @@ Last step is to publish your new addressbook. Modify `Dashboard.twig` file to lo
     <span class="text">{{ '{{' }} translate("Contacts") {{ '}}' }}</span>
   </a>
 </div>
-```
-
-
-And run following command in your `project root folder`:
-
-```
-php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader
 ```
 
 ## You addressbook is ready!
