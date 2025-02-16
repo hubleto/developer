@@ -1,4 +1,4 @@
-# Add first model
+# Add model for contacts
 
 In this tutorial, you learn how to add your first model into your app and how to create UI for managing data in SQL database.
 

@@ -2,7 +2,7 @@
 
 In this tutorial, you learn how to add a simple 1:N relation to your model and how to create UI to manage data in SQL database.
 
-> **IMPORTANT** In this tutorial, we will follow up with the **MyApp** developed in [this tutorial](add-first-model).
+> **IMPORTANT** In this tutorial, we will follow up with the **MyApp** developed in [this tutorial](add-model-for-contacts).
 
 ## Introduction
 
@@ -39,7 +39,7 @@ left join `users` on `users`.`id` = `my_table`.`id_user`
 
 ## Addressbook app: Contact owner
 
-Let's continue in the development of the addressbook app from the [previous tutorial](add-first-model). We will add a new column with a 1:N relation to the [Hubleto's model User](https://github.com/wai-blue/hubleto/blob/main/apps/community/Settings/Models/User.php).
+Let's continue in the development of the addressbook app from the [previous tutorial](add-model-for-contacts). We will add a new column with a 1:N relation to the [Hubleto's model User](https://github.com/wai-blue/hubleto/blob/main/apps/community/Settings/Models/User.php).
 
 ### Add relation to contact owner
 
@@ -55,30 +55,17 @@ We have to add few things to:
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp\Models;
-use \Illuminate\Database\Eloquent\Relations\BelongsTo; // <-- use Eloquent's BelongsTo
-use \HubletoApp\Community\Settings\Models\User; // <-- use model for users
+use \HubletoApp\Community\Settings\Models\User;
 class Contact extends \HubletoMain\Core\Model {
   public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
-  public array $relations = [ 'OWNER' => [ self::BELONGS_TO, User::class, 'id_owner', 'id' ]]; // <-- Hubleto relation
-  public function columns(array $columns = []): array {
-    return parent::columns(array_merge($columns, [
-      'first_name' => [
-        'type' => 'varchar',
-        'title' => $this->translate('First name'),
-        'required' => true,
-      ],
-      'last_name' => [
-        'type' => 'varchar',
-        'title' => $this->translate('Last name'),
-        'required' => true,
-      ],
-      'id_owner' => [ // <--- new column
-        'type' => 'lookup',
-        'title' => $this->translate('Owner'),
-        'model' => User::class,
-      ],
-    ]));
+  public array $relations = [ 'OWNER' => [ self::BELONGS_TO, User::class, 'id_owner', 'id' ] ];
+  public function describeColumns(): array {
+    return array_merge(parent::describeColumns(), [
+      'first_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('First name')))->setRequired(),
+      'last_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('Last name')))->setRequired(),
+      'id_responsible' => (new \ADIOS\Core\Db\Column\Lookup($this, $this->translate('Responsible'), User::class)),
+    ]);
   }
 }
 ```

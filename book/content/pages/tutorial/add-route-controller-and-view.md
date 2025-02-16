@@ -24,19 +24,8 @@ Let's learn step by step.
 
 ## Add route
 
-So, we installed an app that does nothing. To add a functionality, you may:
-
-  * initialize the app during the Hubleto bootstrap phase:
-    * add routing table with `$this->main->router->httpGet()`, or
-    * add entry button to main sidebar, or
-    * add button to the settings manager with `$this->main->addSetting()`.
-  * create `models`, `views` or `controllers`
-  * create `react components` to be used in views
-
-Let's illustrate everything step-by-step with examples in following chapters.
 
 > **TIP** | If your are experienced developer, you know about MVC and you can easily read PHP code directly, you may [download the full source code of *MyApp*](downloads/MyApp.zip).
-
 
 Each app is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each app in the order in which they have been registered.
 
@@ -44,9 +33,9 @@ To create a routing table for HTTP GET requests, use `httpGet()` method of the m
 
 > **REMEMBER** `$this->main` is the secret word for accessing the Hubleto main core. It contains project config, router, permission manager and other useful components.
 
-Each route is a very simple key/value pair where key is a regular expression to match relative URL (the URL without the rewritebase) against and the value is the class name of controller to be executed.
+Each route is a very simple key/value pair where key is a regular expression to match relative URL (in our case the `my-app` part of the URL) against and the value is the reference to the controller to be executed.
 
-An example of a simple routing table is shown below. This routing adds a `my-app` URL which will show your app's dashboard.
+An example of a simple routing table is shown below. This routing adds a `my-app` URL which will activate the `Dashboard` controller.
 
 ###### ./apps/external/MyCompany/MyApp/Loader.php
 ```php
@@ -63,7 +52,9 @@ class Loader extends \HubletoMain\Core\App {
 
 ## Add controller
 
-To create a controller for your app's dashboard, create `./apps/external/MyCompany/MyApp/Controllers/Dashboard.php` file with the following content:
+Now we need to aa a controller `Dashboard` which will be activated by the `my-app` URL.
+
+To add this controller, create `./apps/external/MyCompany/MyApp/Controllers/Dashboard.php` file with the following content:
 
 ###### ./apps/external/MyCompany/MyApp/Controllers/Dashboard.php
 ```php
@@ -78,9 +69,13 @@ class Dashboard extends \HubletoMain\Core\Controller {
 }
 ```
 
-This controller will prepare a variable `now`, stored in the controller's property `viewParams` and sets the view to be rendered to `@HubletoApp:External:MyCompany:MyApp/Dashboard.twig`.
+This controller will prepare a variable `now`, stored in the controller's property `viewParams` and sets the view to be rendered to `@HubletoApp:External:MyCompany:MyApp/Dashboard.twig`. All this is done in the `prepareView()` method.
 
-Setting a view to be rendered is done by controller's `setView()` method which takes a reference to the view as an argument. Our view is referenced by '@HubletoApp:External:MyCompany:MyApp/Dashboard.twig'.
+### Referencing views
+
+Setting a view to be rendered is done by controller's `setView()` method which takes a reference to the view as an argument.
+
+Our view is referenced by `@HubletoApp:External:MyCompany:MyApp/Dashboard.twig`.
 
 First part of this reference (`@HubletoApp:External:MyCompany:MyApp`) contains a reference to the app where the view is available. Simply said, this reference is always the same as the app's namespace, just using colons (`:`) instead of slashes (`\`). This reference always points to the `Views` folder in your app.
 
@@ -88,14 +83,14 @@ Second part is the relative path of the file containing the view. In our case, i
 
 ## Add view
 
-Now we understand how the views are referenced. So, create a file in `./apps/external/MyCompany/MyApp/Views/Dashboard.twig` file with the following content:
+Now, as we understand how the views are referenced we know that we need to create `./apps/external/MyCompany/MyApp/Views/Dashboard.twig` file with the following content:
 
-**./apps/external/MyCompany/MyApp/Views/Dashboard.twig**
+###### ./apps/external/MyCompany/MyApp/Views/Dashboard.twig
 ```html
 Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 ```
 
-> **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app` (modify the URL according to your local environment) and see the content of Dashboard.twig.
+> **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app`  and see the content of Dashboard.twig.
 > <img src="{{ bookRootUrl }}/content/assets/images/my-app-dashboard.png">
 
-Well done! You are becoming a real Hubleto developer. Keep going and we'll show you more secrets about initialization phase, creating models and implementing custom UI components.
+Well done! You are becoming a real Hubleto developer. In the next tutorial, we'll learn how to create a very simple addressbook.
