@@ -12,3 +12,4 @@ Apps freely available in the Github repository.
 | [HubletoApp/Community/Deals](community/deals)         |
 | [HubletoApp/Community/Leads](community/leads)         |
 | [HubletoApp/Community/Calendar](community/calendar)   |
+| [HubletoApp/Community/CalendarSync](community/calendar-sync) |
