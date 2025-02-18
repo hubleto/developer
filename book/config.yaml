@@ -130,6 +130,7 @@ tableOfContents:
               - page: apps/community/leads/models/lead-history
               - page: apps/community/leads/models/lead-service
               - page: apps/community/leads/models/lead-activity
+          - page: apps/community/calendar-sync
       - page: apps/enterprise
       - page: apps/external
   - page: partnership
