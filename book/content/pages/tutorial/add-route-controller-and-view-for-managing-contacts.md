@@ -63,7 +63,7 @@ Last step is to publish your new addressbook. Modify `Dashboard.twig` file to lo
 </div>
 ```
 
-## You addressbook is ready!
+## You addressbook is ready
 
 Now open Hubleto in your browser, go to your app and then click `Contacts`. Enjoy your new addressbook 😜. If you like Hubleto, [help us improve](../improve) it.
 
