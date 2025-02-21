@@ -35,14 +35,13 @@
 {# https://preline.co/templates/admin/index.html #}
 
 <!-- On this page -->
-<aside class="on-this-page">
-  <div class=""><div>On this page</div></div>
-  <div class="">
-    {% for h2, h3list in onThisPage %}
-      <div class="heading-level-1"><a href="#{{ h2 }}">{{ h2 }}</a></div>
-      {% for h3 in h3list %}
-        <div class="heading-level-2"><a href="#{{ h3 }}">{{ h3 }}</a></div>
+{% if onThisPage|length > 0 %}
+  <aside class="on-this-page">
+    <div><div>On this page</div></div>
+    <div>
+      {% for h2, h3list in onThisPage %}
+        <a href="#{{ h2 }}" class="btn btn-transparent w-full mb-2"><span class="text">{{ h2 }}</span></a>
       {% endfor %}
-    {% endfor %}
-  </div>
-</aside>
+    </div>
+  </aside>
+{% endif %}

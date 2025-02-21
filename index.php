@@ -27,6 +27,14 @@ $templateConfig = [
 ];
 
 class MyGuideVis extends \WaiBlue\GuideVis\Loader {
+  public function getOnThisPage(string $mdContent): array
+  {
+    $onThisPage = parent::getOnThisPage($mdContent);
+    foreach ($onThisPage as $key => $value) {
+      if (empty($key)) unset($onThisPage[$key]);
+    }
+    return $onThisPage;
+  }
 }
 
 try {

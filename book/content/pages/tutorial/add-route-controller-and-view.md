@@ -59,7 +59,7 @@ Do not forget to call also `parent::init()`.
 
 ## Add controller
 
-Now we need to aa a controller `Dashboard` which will be activated by the `my-app` URL.
+Now we need to add a controller `Dashboard` which will be activated by the `my-app` URL.
 
 To add this controller, create `./apps/external/MyCompany/MyApp/Controllers/Dashboard.php` file with the following content:
 

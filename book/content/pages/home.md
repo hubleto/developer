@@ -1,41 +1,78 @@
-# Hubleto
+# Welcome
 
-Developer's guide
+Hubleto developer guide
 
-## Open source CRM and ERP
+<div class="alert alert-info">
+  Hubleto is a web-application framework combining other popular libraries like <b>ReactJS, TailwindcCSS, Twig, Adios or Primereact</b>.<br/>
+  <br/>
+  Has many built-in features and also community app repository. Start directly developing your web application and do not waste your
+  time with project setup.<br/>
+  <br/>
+  It's easy like this:
+  <a href="download-and-install" style="text-decoration:none"><pre><code>php hubleto init
+php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader
+</code></pre></a>
+  <div class="text-gray-400 text-xs text-right">Example usage of <a href="cli-agent">CLI agent</a></div>
+</div>
 
-Hubleto is an **open source PHP-based platform for ERP and CRM solutions**, a.k.a business applications. It does not matter if your you're developing a CRM or an ERP, it is always only about the set of applications that your project will be using.
+<div class="grid gap-8 md:grid-cols-2">
+  <div class="card">
+    <div class="card-header">Introduction</div>
+    <div class="card-body flex flex-col gap-2">
+      <a href="about" class="btn btn-white block"><span class="text">About</span></a>
+      <a href="download-and-install" class="btn btn-white block"><span class="text">Download & install</span></a>
+      <a href="benefits" class="btn btn-white block"><span class="text">Benefits</span></a>
+    </div>
+  </div>
 
-## Source code
+  <div class="card">
+    <div class="card-header">Development</div>
+    <div class="card-body flex flex-col gap-2">
+      <a href="download-and-install" class="btn btn-white block">
+        <span class="text flex-col items-start"><b>Download & install</b><small>It's free</small></span>
+      </a>
+      <a href="cli-agent" class="btn btn-white block">
+        <span class="text flex-col items-start">CLI agent<small>Powerful automation tool</small></span>
+      </a>
+      <a href="create-first-app" class="btn btn-white block">
+        <span class="text flex-col items-start">Create first Hubleto app<small>Create simple addressbook</small></span>
+      </a>
+      <a href="adios-framework" class="btn btn-white block">
+        <span class="text">Adios framework</span>
+      </a>
+      <a href="advanced-development" class="btn btn-white block">
+        <span class="text">Advanced development</span>
+      </a>
+    </div>
+  </div>
 
-Source code is available on [Github](https://github.com/wai-blue/hubleto).
+  <div class="card">
+    <div class="card-header">Application repositories</div>
+    <div class="card-body flex flex-col gap-2">
+      <a href="apps/community" class="btn btn-white block">
+        <span class="text flex-col items-start"><b>Free community apps</b><small>Free for your commercial use</small></span>
+      </a>
+      <a href="apps/enterpries" class="btn btn-white block">
+        <span class="text flex-col items-start">Enterprise apps<small>Richer features and strong support</small></span>
+      </a>
+      <a href="apps/external" class="btn btn-white block">
+        <span class="text flex-col items-start">External apps<small>Publish and sell via Hubleto app store</small></span>
+      </a>
+    </div>
+  </div>
 
-## Getting started
-
-Hubleto can be used in many different ways. Check the table below.
-
-| Mode            | Description                                                                                                                                                |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **User**        | You only want to use Hubleto with its default set of free apps.<br/>You only need to [download and install](download-and-install) Hubleto.                 |
-| **Partner**     | You want to [download](download-and-install) and [customize](add-model-for-contacts) Hubleto for your customers.<br/>Read more about [partnership](partnership). |
-| **Developer**   | You want to make money by [publish your apps](publish-app).                                                                                                |
-| **Contributor** | You want to contribute to [development of Hubleto](contribute).                                                                                            |
-
-Table: Summary of different cooperation modes.
-
-You may also work in all modes together. For example, you may be a [partner](partnership) and you also may [publish apps](publish-app) and [contribute to Hubleto](contribute).
-
-## Why Hubleto
-
-Hubleto provides stable and steadily improved platform with ecosystem to develop, publish and use bussiness applications. See the summary below showing what each interested party gets from Hubleto.
-
-| Developer                                                                     | Local Partner                             | Customer                        |
-| ----------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------- |
-| DevOps with preinstalled **Node**, **React** and **Tailwind CSS**             | Ready-to-use CRM or ERP                   | Ready-to-use CRM or ERP         |
-| Consistent UI design based on [Primereact](https://www.primereact.org)        | New potential customers                   | Custom solutions                |
-| Secure database layer with [Eloquent](https://laravel.com/docs/11.x/eloquent) | Opportunities for consultancy services    | Community of users              |
-| Rich set of [default features](features)                                      | Opportunities for implementation services | Proven and stable solutions     |
-| Platform to publish your apps                                                 | Continuous development                    | 24/7 support                    |
-| Community support and comprehensive dev guide                                 | Platform to publish your apps             | Large network of local partners |
-
-Summary showing what you get from Hubleto
+  <div class="card">
+    <div class="card-header">Join us</div>
+    <div class="card-body flex flex-col gap-2">
+      <a href="contribute" class="btn btn-white block">
+        <span class="text flex-col items-start">Contribute</span>
+      </a>
+      <a href="partnership" class="btn btn-white block">
+        <span class="text flex-col items-start">Become a partner</span>
+      </a>
+      <a href="improve" class="btn btn-white block">
+        <span class="text flex-col items-start">Support us</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-# Download
+# Media
 
 Download interesting content.
 

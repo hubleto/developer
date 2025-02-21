@@ -1,4 +1,4 @@
-# Help us improve
+# Join us
 
 Hubleto, open source ERP and CRM, is looking for your support.
 
@@ -39,9 +39,4 @@ Read [this guide](partnership) on how to become a partner.
   * Share, repost or like on social networks.
   * Write blogs or comment on existing blogs.
   * Get listed on interesting listings.
-  * Use [logos and other media files](download).
-
-## Donate
-
-Donations are currently not possible.
-
+  * Use [logos and other media files](media).

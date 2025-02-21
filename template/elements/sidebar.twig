@@ -5,11 +5,14 @@
       {% if item.children is iterable %}
         <a href="{{ env.guideRootUrl }}/{{ item.page ?? '' }}"
           class="
-            {% if level == 0 %} btn {% else %} btn btn-small {% endif %}
+            btn
             {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %}
             {% if item.page in breadcrumbs %} expanded {% else %} collapsed {% endif %}
             has-children
-            w-full level-{{ level }}
+            w-full
+            {% if level == 1 %} level-1 {% endif %}
+            {% if level == 2 %} level-2 {% endif %}
+            {% if level == 2 %} level-3 {% endif %}
           "
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
@@ -29,10 +32,13 @@
         <a
           href="{{ env.guideRootUrl }}/{{ item.page }}"
           class="
-            {% if level == 0 %} btn {% else %} btn btn-small {% endif %}
+            btn
             {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %}
             {% if item.page in breadcrumbs %} expanded {% else %} collapsed {% endif %}
-            w-full level-{{ level }}
+            w-full
+            {% if level == 1 %} level-1 {% endif %}
+            {% if level == 2 %} level-2 {% endif %}
+            {% if level == 2 %} level-3 {% endif %}
           "
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}

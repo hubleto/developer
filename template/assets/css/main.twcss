@@ -1,7 +1,20 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@config "../../../tailwind.config.js";
+@layer theme, base, components, utilities, theme, components;
+
+@theme {
+  --font-sans: system-ui, 'sans-serif';
+  --font-serif: 'Merriweather', 'serif';
+
+  --color-primary: #008000;
+  --color-secondary: #7FB562;
+  
+  --spacing-8xl: 96rem;
+  --spacing-9x: 128rem;
+
+  --radius-4xl: 2rem;
+}
+
+@import "tailwindcss";
 
 @import "./theme.twcss";
-@import "./template-basic.twcss";
-@import "./template-without-sidebar.twcss";
+@import "./components.twcss";

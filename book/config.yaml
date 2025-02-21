@@ -5,8 +5,21 @@ redirects:
     code: 301
 router:
 tableOfContents:
-  - json: '{ "page": "home", "icon": "fas fa-home", "next": "features" }'
-  - json: '{ "page": "features", "icon": "fas fa-check", "prev": "home", "next": "download-and-install" }'
+  - page: home
+    icon: fas fa-home
+    children:
+      - page: about
+        children:
+          - page: media
+          - page: benefits
+      - page: improve
+        children:
+          - page: contribute
+            icon: fas fa-terminal
+          - page: partnership
+            icon: fas fa-handshake-angle
+          - page: licenses
+            icon: fas fa-stamp
   - page: download-and-install
     icon: fas fa-download
     prev: features
@@ -73,8 +86,7 @@ tableOfContents:
           - page: advanced-development/customizing-ui/forms
           - page: advanced-development/customizing-ui/special-input-types
           - page: advanced-development/customizing-ui/skin
-  - page: contribute
-    icon: fas fa-terminal
+      - page: adios-framework
   - page: apps
     icon: fas fa-bolt
     children:
@@ -145,12 +157,3 @@ tableOfContents:
           - page: apps/community/calendar-sync
       - page: apps/enterprise
       - page: apps/external
-  - page: partnership
-    icon: fas fa-handshake-angle
-  - page: licenses
-    icon: fas fa-stamp
-  - page: improve
-    icon: fas fa-heart
-  - page: download
-    icon: fas fa-file
-  # - page: examples

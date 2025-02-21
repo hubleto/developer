@@ -1,14 +1,23 @@
 @layer base {
 
-  * { @apply text-base scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300; }
+  * { @apply text-base; }
 
-  html { @apply bg-slate-50; }
-  html body { @apply bg-gradient-to-br from-white to-green-50; }
+  html { @apply bg-white; }
 
-  h1 { @apply text-3xl text-slate-800 font-logo; }
-  h2 { @apply text-xl font-bold text-slate-800 pt-10 pb-2 font-logo; }
-  h3 { @apply text-lg font-semibold text-primary pt-4 pb-0 first-of-type:pt-4 font-logo; }
-  h4 { @apply text-base font-semibold text-primary pt-4 pb-0 first-of-type:pt-4 font-logo; }
+  html.template-without-sidebar { @apply bg-slate-50; }
+  html.template-without-sidebar body { @apply bg-white text-gray-800 mx-auto; max-width: 800px; }
+
+  html.template-without-sidebar .header { @apply mb-2 shadow rounded-sm p-1; }
+  html.template-without-sidebar .content-wrapper { @apply flex; }
+  html.template-without-sidebar .sidebar { @apply flex-auto w-14 shadow rounded-sm p-1 mb-2; }
+  html.template-without-sidebar .content { @apply flex-auto w-64 shadow rounded-sm p-1 mb-2; }
+  html.template-without-sidebar .footer { @apply mb-2 shadow rounded-sm p-1; }
+
+
+  h1 { @apply text-3xl text-slate-800; }
+  h2 { @apply text-xl font-bold text-slate-800 pt-10 pb-2; }
+  h3 { @apply text-lg font-semibold text-primary pt-4 pb-0 first-of-type:pt-4; }
+  h4 { @apply text-base font-semibold text-primary pt-4 pb-0 first-of-type:pt-4; }
   a { @apply text-primary; font-size: inherit; }
   a:hover { @apply underline; }
   b, strong { font-size: inherit; }
@@ -42,71 +51,32 @@
   blockquote { @apply !m-8 p-4 bg-slate-100 max-w-xl border border-slate-200 rounded; }
   blockquote p { @apply p-0 font-serif tracking-wider !leading-7; }
 
-  .btn { @apply divide-x rounded inline-flex text-left p-0 m-0 items-center bg-primary border border-transparent text-white hover:text-white hover:no-underline; box-sizing: border-box; }
-  .btn .icon { @apply block px-2 py-1 text-sm h-full; width: 2.5em; text-align: center; }
-  .btn .text { @apply block px-2 py-1 text-sm; }
-  .btn .text > small { @apply block text-xs text-slate-600; }
-
-  .btn.btn-transparent { @apply text-slate-800 dark:text-white bg-transparent border border-slate-100 hover:border-slate-200; }
-  .btn.btn-transparent:hover .icon { @apply bg-slate-100; }
-
-  .btn.btn-extra-small .icon { @apply text-xs px-1 py-0.5; }
-  .btn.btn-extra-small .text { @apply text-xs px-1 py-0.5; min-height: 1rem; }
-  .btn.btn-small .icon { @apply text-sm px-1.5 py-0.5; }
-  .btn.btn-small .text { @apply text-sm px-1.5 py-0.5; }
-  .btn.btn-large .icon { @apply text-lg px-2.5 py-1.5; }
-  .btn.btn-large .text { @apply text-lg px-2.5 py-1.5; }
-  .btn.btn-extra-large .icon { @apply text-2xl px-3.5 py-2; }
-  .btn.btn-extra-large .text { @apply text-2xl px-3.5 py-2; }
-
-  .btn-list-item { @apply flex rounded-none border-none shadow-none; }
-  .btn-list-item .text { @apply border-none flex-1; }
-  .btn-list-item .icon { @apply self-stretch flex items-center; }
-
-  .card { @apply border border-solid border-primary/10 shadow-sm overflow-x-auto; }
-  .card-header { @apply flex justify-between items-center font-normal shadow-sm px-2 py-1 text-primary bg-primary/10; }
-  .card-header.small { @apply text-sm p-1; }
-  /* .card-header .btn { @apply !font-normal border border-gray-300; } */
-  .card-body { @apply p-2; }
-  .card-footer { @apply flex justify-between border-t p-4; }
-
   .content { @apply p-8 flex-1 max-w-3xl mb-4 sm:ml-0 md:ml-72 mr-4 lg:mr-60  space-y-1; }
   .content img { @apply mt-4 border border-slate-200 max-w-xl p-2 bg-slate-100 text-xs; }
   .content img + em { @apply text-slate-400 mb-4 text-xs; }
 
-  .header { @apply sticky top-0 inset-x-0 flex flex-wrap z-10 bg-white border-b text-sm py-2.5 ps-2 md:justify-start md:flex-nowrap md:ms-72 lg:ms-72 dark:bg-neutral-800 dark:border-neutral-700; }
-  .header-inner { @apply flex items-center gap-x-2 text-gray-300; }
+  .header { @apply sticky top-0 inset-x-0 flex flex-wrap z-10 bg-gray-800 text-sm py-2.5 ps-2 md:justify-start md:flex-nowrap md:ms-72 lg:ms-72 dark:bg-neutral-800 dark:border-neutral-700; }
+  .header-inner { @apply flex items-center gap-x-2 text-white; }
   .header-inner .logo { @apply h-4; }
-  .header .menu-button {@apply block md:hidden}
+  .header .menu-button { @apply block md:hidden }
+  .header a { @apply text-white; }
 
-  .step-by-step { @apply p-0 py-12; }
-  .step-by-step .step { @apply flex gap-4 mb-2 p-1 items-start; }
-  .step-by-step .step-counter { @apply text-sm rounded-sm bg-slate-100 border border-slate-200 font-bold p-0.5 w-8 text-center; }
-  .step-by-step .step-content { @apply flex-1 border-t border-gray-300; }
-  .step-by-step .step-content .step-title { @apply font-semibold pt-2 pb-4; }
-  .step-by-step .step-content .step-description { @apply text-sm pb-2 }
-  .step-by-step .step-example { @apply flex-1 overflow-x-auto overflow-y-hidden; }
-
-  .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 md:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700; }
+  .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] bg-gray-50 border-e border-gray-200 md:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700; }
   .sidebar .sidebar-content { @apply h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500; }
 
   .sidebar ul.level-0 { @apply ps-2 pt-0.5 space-y-0; }
   .sidebar ul.level-1 { @apply pt-0 ps-2; }
   .sidebar a.expanded:not(.btn-primary) > .text { @apply font-bold; }
-  .sidebar a.has-children.collapsed { @apply after:content-['▾'] after:pr-2 ; }
+  .sidebar a.has-children.collapsed { @apply after:content-['⋮'] after:pr-2 ; }
+  .sidebar a.has-children.expanded { @apply after:content-['⋮'] after:pr-2 ; }
 
   .sidebar .btn.level-1 { @apply border-none p-0 before:content-['❖'] before:text-xs before:text-primary before:pl-2; }
   .sidebar .btn.level-1.btn-primary { @apply border-none before:text-white; }
   .sidebar .btn.level-1:not(.btn-primary) { @apply hover:bg-slate-100 hover:text-gray-800; }
-  .sidebar .btn.level-1 .text { @apply text-sm; }
+  .sidebar .btn.level-1 .text { font-size: 0.7rem; }
 
-  .sidebar .btn.level-2.btn-primary { @apply p-0 border-none; }
-  .sidebar .btn.level-2 { @apply ml-2 border-l border-l-primary hover:bg-slate-100 hover:text-gray-800; }
-  .sidebar .btn.level-2 .text { @apply text-xs; }
-
-  .sidebar .btn.level-3.btn-primary { @apply p-0 border-none; }
-  .sidebar .btn.level-3 { @apply border-none hover:bg-slate-100 hover:text-gray-800; }
-  .sidebar .btn.level-3 .text { @apply text-xs; }
+  .sidebar .btn.level-2 { @apply border-none;  }
+  .sidebar .btn.level-2 .text { font-size: 0.7rem;  }
 
   .sidebar .collapsed + * { @apply hidden; }
   .sidebar .expanded + * { @apply block; }
