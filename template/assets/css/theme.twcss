@@ -64,6 +64,8 @@
   .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] bg-gray-50 border-e border-gray-200 md:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700; }
   .sidebar .sidebar-content { @apply h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500; }
 
+  .sidebar .logo { @apply w-1/2 m-auto; }
+
   .sidebar ul.level-0 { @apply ps-2 pt-0.5 space-y-0; }
   .sidebar ul.level-1 { @apply pt-0 ps-2; }
   .sidebar a.expanded:not(.btn-primary) > .text { @apply font-bold; }

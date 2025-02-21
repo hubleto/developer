@@ -3,15 +3,12 @@
 Hubleto developer guide
 
 <div class="alert alert-info">
-  Hubleto is a web-application framework combining other popular libraries like <b>ReactJS, TailwindcCSS, Twig, Adios or Primereact</b>.<br/>
+  Hubleto is a web-application framework combining other popular libraries like <b>ReactJS, TailwindCSS, Adios, Twig or Primereact</b>. Has many built-in features and community app repository.<br/>
   <br/>
-  Has many built-in features and also community app repository. Start directly developing your web application and do not waste your
-  time with project setup.<br/>
+  <b>In only few minutes</b>, you can have your development environment with lots of <a href="apps">apps</a> and popular libraries ready.<br/>
   <br/>
-  It's easy like this:
-  <a href="download-and-install" style="text-decoration:none"><pre><code>php hubleto init
-php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader
-</code></pre></a>
+  Just <a href="download-and-install">download</a>, unzip and then it's easy like this:
+  <a href="download-and-install" style="text-decoration:none"><pre><code>php hubleto init</code></pre></a>
   <div class="text-gray-400 text-xs text-right">Example usage of <a href="cli-agent">CLI agent</a></div>
 </div>
 

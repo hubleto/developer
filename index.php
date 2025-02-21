@@ -27,6 +27,13 @@ $templateConfig = [
 ];
 
 class MyGuideVis extends \WaiBlue\GuideVis\Loader {
+  public function getPageVars(array $pageData = []): array
+  {
+    $pageVars = parent::getPageVars($pageData);
+    $pageVars['bookIndex'] = $this->buildBookIndex();
+    return $pageVars;
+  }
+
   public function getOnThisPage(string $mdContent): array
   {
     $onThisPage = parent::getOnThisPage($mdContent);
