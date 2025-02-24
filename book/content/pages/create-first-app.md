@@ -2,6 +2,20 @@
 
 An app is a basic functional element of Hubleto. Every functionality available in Hubleto is thus built using apps.
 
+> **NEW FEATURE** | You can now create by using [CLI agent](cli-agent)
+
+> &nbsp;
+
+> Run following command in your project's root folder:
+
+> `php hubleto app create HubletoApp\Custom\MyFirstApp`
+
+> &nbsp;
+
+> **This will create default app with some functional examples.**
+
+An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
+
 An app is a basic functional element of Hubleto. And so, every functionality available in Hubleto is built in Hubleto apps.
 
 It's realy easy to start developing Hubleto apps but before that check the list below if you have all things ready.

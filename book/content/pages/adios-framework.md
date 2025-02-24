@@ -17,4 +17,4 @@ If you want to understand how Hubleto works and it's lowest level, check out thi
 
 Adios is MIT licensed. You may also use it for your own projects.
 
-https://github.com/wai-blue/adios
+https://github.com/wai-blue/adios/blob/main/docs/pages/home.md
