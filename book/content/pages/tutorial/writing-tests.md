@@ -41,5 +41,5 @@ You must provide full namespace of your app's loader class.
 For example, to run a *RenderAllRoutes* created earlier, run following command:
 
 ```
-php hubleto app test \HubletoApp\External\MyCompany\MyApp\Loader RenderAllRoutes
+php hubleto app test \HubletoApp\External\MyCompany\MyApp RenderAllRoutes
 ```

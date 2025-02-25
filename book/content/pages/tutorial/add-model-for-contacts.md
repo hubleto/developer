@@ -101,7 +101,7 @@ class Loader extends \HubletoMain\Core\App {
 To reinstall the app run following command:
 
 ```
-php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader force
+php hubleto app install \HubletoApp\External\MyCompany\MyApp force
 ```
 
 See, there is a new argument `force` which will forcefully reinstall the app even if it is already installed.

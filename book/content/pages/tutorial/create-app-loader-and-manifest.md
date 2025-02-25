@@ -51,7 +51,7 @@ highlight: Very usefull business app.
 Now, you can install this empty app into your project. Do this by running the `php hubleto app install` command as follows:
 
 ```
-php hubleto app install \HubletoApp\External\MyCompany\MyApp\Loader
+php hubleto app install \HubletoApp\External\MyCompany\MyApp
 ```
 
 > **VISUAL_CHECK** | Now, when you open the Hubleto in your browser your app should show up somewhere in the left sidebar.
