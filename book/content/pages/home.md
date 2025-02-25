@@ -12,7 +12,11 @@ Hubleto developer guide
   <div class="text-gray-400 text-xs text-right">Example usage of <a href="cli-agent">CLI agent</a></div>
 </div>
 
-<div class="grid gap-8 md:grid-cols-2">
+<div class="alert alert-warning">
+  Note: this developer guide, as well as Hubleto platform, are still in active development. Some texts or instructions may not be accurate.
+</div>
+
+<div class="grid gap-4 mt-8 md:grid-cols-2">
   <div class="card border-yellow-300">
     <div class="card-header bg-yellow-50">Introduction</div>
     <div class="card-body flex flex-col gap-2">
