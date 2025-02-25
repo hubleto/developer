@@ -14,6 +14,7 @@ Hubleto developer guide
 
 <div class="alert alert-warning">
   Note: this developer guide, as well as Hubleto platform, are still in active development. Some texts or instructions may not be accurate.
+  If you find a bug or missing some information, please <a href="https://github.com/wai-blue/hubleto/issues" target="_blank">report an issue via GitHub</a>.
 </div>
 
 <div class="grid gap-4 mt-8 md:grid-cols-2">
@@ -23,6 +24,7 @@ Hubleto developer guide
       <a href="about" class="btn btn-white block"><span class="text">About</span></a>
       <a href="download-and-install" class="btn btn-white block"><span class="text">Download & install</span></a>
       <a href="benefits" class="btn btn-white block"><span class="text">Benefits</span></a>
+      <a href="advanced-development/core-architecture" class="btn btn-white block"><span class="text">Core architecture</span></a>
     </div>
   </div>
 
