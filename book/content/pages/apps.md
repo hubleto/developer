@@ -7,5 +7,6 @@ There are following types of apps in Hubleto:
 | App type            | Namespace                | Description                                                 |
 | ------------------- | ------------------------ | ----------------------------------------------------------- |
 | **Community apps**  | `\HubletoApp\Community`  | Apps freely available in the Github repository.             |
+| **Custom apps**     | `\HubletoApp\Custom`     | Apps used only in your custom Hubleto project.              |
 | **External apps**   | `\HubletoApp\External`   | Apps developed by external developers to customize Hubleto. |
 | **Enterprise apps** | `\HubletoApp\Enterprise` | Apps available only to Hubleto partners.                    |

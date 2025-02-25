@@ -2,7 +2,7 @@
 
 An app is a basic functional element of Hubleto. Every functionality available in Hubleto is thus built using apps.
 
-> **NEW FEATURE** | You can now create by using [CLI agent](cli-agent)
+> **NEW FEATURE** | You can now create app with [CLI agent](cli-agent)
 
 > &nbsp;
 

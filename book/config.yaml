@@ -66,6 +66,8 @@ tableOfContents:
     icon: fas fa-medal
     children:
       - page: advanced-development/core-architecture
+        children:
+          - page: advanced-development/core-architecture/user-management-and-authentication
       - page: advanced-development/description-api
         children:
           - page: advanced-development/description-api/table
