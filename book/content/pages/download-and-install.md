@@ -15,10 +15,7 @@ To run Hubleto, you will need:
 
 | <img src="{{ bookRootUrl }}/content/assets/images/linux-logo.png" style="width:2em;padding:0;border:0;" />                          | <img src="{{ bookRootUrl }}/content/assets/images/windows-logo.png" style="width:2em;padding:0;border:0;" />                               |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| For Linux developers, the easiest way to get all this is to install **LAMP server**.   It is available here: https://ampps.com/lamp | For Windows developers, the easiest way to get all this is to install **WAMP server**. It is available here: https://www.wampserver.com/en |
-
-
-
+| For Linux developers, the easiest way to get all this is to install **LAMP server**.   It is available here: https://ampps.com/lamp | For Windows developers, the easiest way to get all this is to install **XAMPP server**. It is available here: https://www.apachefriends.org |
 
 ## How to install
 
