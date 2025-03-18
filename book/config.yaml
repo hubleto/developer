@@ -84,6 +84,7 @@ tableOfContents:
           - page: advanced-development/core-classes/permissions
       - page: advanced-development/customizing-ui
         children:
+          - page: advanced-development/customizing-ui/customizing-sidebar
           - page: advanced-development/customizing-ui/view
           - page: advanced-development/customizing-ui/component
           - page: advanced-development/customizing-ui/forms
@@ -158,5 +159,6 @@ tableOfContents:
               - page: apps/community/leads/models/lead-service
               - page: apps/community/leads/models/lead-activity
           - page: apps/community/calendar-sync
+          - page: apps/community/report
       - page: apps/enterprise
       - page: apps/external

@@ -45,24 +45,13 @@ For the tables to be created in your database when installing Models, you first 
 ```php
 public function describeColumns(): array
 {
-  return array_merge(parent::describeColumns([
-    'name' => new \ADIOS\Core\Db\Column\Varchar($this, 'Name')
+  return array_merge(parent::describeColumns(), [
+    'name' => (new Varchar($this, $this->translate('Name'))),
   ]);
 }
 ```
 
-The array key specifies the column name in the database. Each column can be further defined by several key-value pairs:
-
-| parameter          | Description                                                                               | type               |
-| ------------------ | ----------------------------------------------------------------------------------------- | ------------------ |
-| type               | The [ADIOS input type](https://github.com/wai-blue/adios/tree/main/src/Core/Db/DataTypes) | string             |
-| title              | The title of the column that wil be shown in the UI                                       | string             |
-| model              | Full path to the lookup model or a model class                                            | string/Model class |
-| foreignKeyOnUpdate | SQL notation of the foreign key OnUpdate parameter                                        | string             |
-| foreignKeyOnDelete | SQL notation of the foreign key OnDelete parameter                                        | string             |
-| required           | Sets the requirement for the column to be filled                                          | boolean            |
-| readonly           | Disables input                                                                            | boolean            |
-| enumValues         | An array of values that will be available for selection                                   | key-value Array    |
+The array key specifies the column name in the database. Each column can be further defined by `ADIOS\Core\Db\Column` classes. Check out how to describe each column type in the [ADIOS repo](https://github.com/wai-blue/adios/tree/main/src/Core/Db/Column).
 
 ## Example of a lookup column
 
@@ -79,7 +68,7 @@ The array key specifies the column name in the database. Each column can be furt
 
 ## Notable overridable methods
 
-**describeTable**(array $description = [])
+**describeTable()**
 
 This method allows you to describe the CRUD permissions, columns and the UI elements of a table during runtime.
 By default the permissions of a table will be set depending on the permissions of the role of a user and some of the UI elements of the table will not be present.
@@ -87,29 +76,68 @@ By default the permissions of a table will be set depending on the permissions o
 This example shows the options of how you can describe the table:
 
 ```php
-public function describeTable(): array
+public function describeTable(): \ADIOS\Core\Description\Table
   {
     $description = parent::describeTable();
+
     $description->ui['title'] = 'Table Title';
     $description->ui['addButtonText'] = 'Add Model';
     $description->ui['showHeader'] = true;
     $description->ui['showFooter'] = false;
+    $description->ui['showFilter'] = false;
     $description->permissions['canRead'] = true;
     $description->permissions['canCreate'] = true;
     $description->permissions['canUpdate'] = true;
     $description->permissions['canDelete'] = true;
+
     return $description;
   }
 ```
 
 The columns of a table can be accessed with `$description->columns`. Columns can be removed, edited or even added.
 
-**describeTable**(): array
+**describeForm()**
 
 This method allows you to describe the CRUD permissions, columns, default values and relations of a form during runtime.
-By default the permissions of a form will be set depending on the permissions of the role of a user and relations of the model for the form won't be set. This will mean that the form won't retrieve data from the relations.
+By default the permissions of a form will be set depending on the permissions of the role of a user.
 
-**prepareLoadRecordQuery**(array|null $includeRelations = null, int $maxRelationLevel = 0, $query = null, int $level = 0)
+```php
+public function describeForm(): \ADIOS\Core\Description\Form
+  {
+    $description = parent::describeForm();
+
+    $description->defaultValues['is_active'] = 0;
+    $description->defaultValues['id_user'] = $this->main->auth->getUserId();
+    $description->defaultValues['date_created'] = date("Y-m-d");
+
+    return $description;
+  }
+```
+
+**describeInput(string $columnName)**
+
+This method can further override the default description of a column. With this method you can accurately pinpoint the column you want to modify.
+
+With this example we changed the default react element of a `Varchar` column and added a description below the new input.
+
+```php
+public function describeInput(string $columnName): \ADIOS\Core\Description\Input
+{
+  $description = parent::describeInput($columnName);
+  switch ($columnName) {
+    case 'shared_folder':
+      $description
+        ->setReactComponent('InputHyperlink')
+        ->setDescription($this->translate('Link to shared folder (online storage) with related documents'))
+      ;
+    break;
+  }
+  return $description;
+}
+```
+
+
+**prepareLoadRecordQuery(array|null $includeRelations = null, int $maxRelationLevel = 0, $query = null, int $level = 0)**
 
 This method allows you to modify the database query for retrieving data of the model. The query can be modified using Eloquent's query building.
 

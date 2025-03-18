@@ -6,7 +6,7 @@ With a Form Component you can create CRUD functionality over an entry of a model
 
 ## Accessing the data of an entry
 
-In the Form component you can access the data of an entry with `this.state.record`. Most of the Form components in Hubleto saves record data into another variable `R`, which is used throughout the forms for accessing data or updating the record state with it.
+In the Form component you can access the data of an entry with `this.state.record`. Most of the Form components in Hubleto store record data into another variable `R`, which is used throughout the forms for accessing data or updating the record state with it.
 
 ## Adding input elements
 
@@ -33,10 +33,10 @@ renderContent(): JSX.Element {
 You can also pass some props to the input wrapper method, for example props like `readonly`:
 
 ```tsx
-{this.inputWrapper("name", { readonly: true })}
+{this.inputWrapper("name", { readonly: true });}
 ```
 
-However, this method of adding input elements has limitations. With this type of input elements you **cannot create event callbacks or calls to other functions**. This is possible with the next method of adding input elements.
+You can also add an `onChange` event callback as a prop to the `inputWrapper` method. But sometimes you might need to use another method of creating input elements with the `onChange` event callback due to the erroneous state management, like in the examples below.
 
 ### Form Input and Input Components
 
@@ -50,7 +50,7 @@ After choosing an [ADIOS input component](https://github.com/wai-blue/adios/tree
 <Varchar {...this.getDefaultInputProps()} />
 ```
 
-Different [ADIOS input components](https://github.com/wai-blue/adios/tree/main/src/Components/Inputs)  will have different required props to correctly function, but the two main ones are `value` and `onChange`.
+Different [ADIOS input components](https://github.com/wai-blue/adios/tree/main/src/Components/Inputs) will have different required props to correctly function, but the two main ones are `value` and `onChange`.
 
 - `value` is a value that will be inserted and displayed in the input element on form load
 - `onChange` is an event callback that will be called every time something in the input changes
@@ -88,16 +88,16 @@ The Lookup inputs are created the same way as the input from the example above. 
 
 Lookup inputs can also get **data from custom endpoints** with optional parameters. This can be used for data filtering. For example, in Hubleto, it is used to filter contact persons in the Lead and Deal forms based on the selected company.
 
-For the example below we used the API endpoint `customers/get-company-contacts` specified in Loader.php of the Customer module. We also added the `customEndpointParams` prop that will pass the ID of the company as a parameter to the API endpoint, which will be then available to use in the endpoint. Check out how to create an [API endpoint](../controller#Creating%20an%20API%20Controller).
+For the example below we used the API endpoint `customers/get-company-contacts` specified in Loader.php of the Customer app. We also added the `customEndpointParams` prop that will pass the ID of the company as a parameter to the API endpoint, which will be then available to use in the endpoint. Check out how to create an [API endpoint](../core-classes/controller#Creating%20an%20API%20Controller).
 
 ```tsx
 <FormInput title={"Contact Person"}>
   <Lookup
     {...this.getDefaultInputProps()}
     model="HubletoApp/Customers/Models/Person"
+    endpoint={`customers/get-company-contacts`}
     customEndpointParams={ id_company: R.id_company }
     readonly={R.is_archived}
-    endpoint={`customers/get-company-contacts`}
     value={R.id_person}
     onChange={(value: any) => {
       this.updateRecord( id_person: value );
@@ -111,8 +111,6 @@ For the example below we used the API endpoint `customers/get-company-contacts` 
 You can add Table components, that were created for other models into Form components. Firstly, you need to import your desired Table component into the Form component. After this, you need to specify some props:
 
 - `uid` - generated UID
-- `showHeader` - a boolean that shows/hides the header of the table with a title and buttons
-- `showFooter` - a boolean that shows/hides the footer of the table
 - `descriptionSource` - specifies which description source to use (both, props)
 - `description` - a description of a table
 - `data` - data for the table
@@ -122,11 +120,11 @@ You can add Table components, that were created for other models into Form compo
 - `onChange` - a callback for changing a value in the inputs of the Table component
 - `onDeleteSelectionChange` - a callback for selecting an entry for deletion
 
+###### FormComponent.tsx
+
 ```tsx
 <TablePersons
   uid={this.props.uid + "_table_persons"}
-  showHeader={false}
-  showFooter={false}
   descriptionSource="props"
   data={ data: R.PERSONS }
   parentForm={this}
@@ -141,6 +139,11 @@ You can add Table components, that were created for other models into Form compo
       addButtonText: globalThis.app.translate('Add contact person'),
     },
     columns: {
+      first_name: { type: "varchar", title: globalThis.app.translate("First name") },
+      last_name: { type: "varchar", title: globalThis.app.translate("Last name") },
+      is_main: { type: "boolean", title: globalThis.app.translate("Main Contact") },
+    },
+    inputs: {
       first_name: { type: "varchar", title: globalThis.app.translate("First name") },
       last_name: { type: "varchar", title: globalThis.app.translate("Last name") },
       is_main: { type: "boolean", title: globalThis.app.translate("Main Contact") },
@@ -160,7 +163,7 @@ You can add Table components, that were created for other models into Form compo
 ></TablePersons>
 ```
 
-*Example of a Table component inside a Form component*
+_Example of a Table component inside a Form component_
 
 ### Description prop of a Table component
 
@@ -172,7 +175,7 @@ You don't have to add the `description` prop or the `descriptionSource` prop to 
 
 If you want to choose which columns to display, change the UI or change permissions, you can specify the `description` prop. You also have to add the `descriptionSource` prop and set its value to `props` or `both`, if you want to merge the descriptions of the Model class and the `description` prop.
 
-For the Table component you have to specify the `onChange` prop and the `onDeleteSelectionChange` prop with the `updateRecord` method. You have to specify the `onDeleteSelectionChange` prop too, because when you select an *already existing* entry for deletion, the entry will gain a deletion flag in the record data.
+For the Table component you have to specify the `onChange` prop and the `onDeleteSelectionChange` prop with the `updateRecord` method. You have to specify the `onDeleteSelectionChange` prop too, because when you select an _already existing_ entry for deletion, the entry will gain a deletion flag in the record data.
 
 ## Opening forms of the added Table components
 
@@ -188,7 +191,9 @@ onRowClick={(table: TableDeals, row: any) => {
 }}
 ```
 
-When you save or delete an entry with the newly opened form, it will not update the data that was previously in the table immediately. You have to specify in the `onSaveCallback` or `onDeleteCallback` in the Table component that it should reload the form to update the data. You firstly need to add a `parentForm` prop to the Table component you are using in a Form component, like this `parentForm={this}` or like in the Table component example above. After this, in the Table component's `getFormProps()` method specify the callbacks:
+When you save or delete an entry with the newly opened form, it will not update the data that was previously in the table immediately. You have to specify in the `onSaveCallback` or `onDeleteCallback` in the **Table component** that it should reload the form to update the data. You firstly need to add a `parentForm` prop to the Table component you are using in a Form component, like this `parentForm={this}` or like in the Table component example above. After this, in the Table component's `getFormProps()` method specify the callbacks:
+
+###### TableComponent.tsx
 
 ```tsx
 getFormProps(): any {
@@ -220,19 +225,18 @@ You can use two ways to add a new entry through a Table component in a Form comp
 
 ### Adding an entry directly through a Table component
 
-You can directly add a new entry through a Table component by creating an event / trigger that will update an the record data with an empty entry.
+You can directly add a new entry through a Table component by creating an event / trigger that will update the record data with an empty entry.
 
-**./apps/Customers/Components/FormPerson.tsx**
-
+###### Contacts/Components/FormPerson.tsx
 ```tsx
 <a
-  role='button'
+  role="button"
   onClick={() => {
     if (!R.CONTACTS) R.CONTACTS = [];
     R.CONTACTS.push({
       id: this.state.newEntryId,
       id_person: { _useMasterRecordId_: true },
-      type: 'email',
+      type: "email",
     });
     this.setState({ record: R });
     this.setState({ newEntryId: this.state.newEntryId - 1 } as FormPersonState);
@@ -241,13 +245,14 @@ You can directly add a new entry through a Table component by creating an event 
   + Add Contact
 </a>
 ```
+
 We created a button that adds a new entry to the record data. We add data to `R.CONTACTS`, which is the data from a relation of the Person model. We ensure that it creates an empty array, if `R.CONTACTS` does not yet exist. After this we push required data to the `R.CONTACTS` array.
 
-> If you are creating entries with this method, ensure that the `id` value is **always a negative number and also different from other *new* entries**. A negative number flags the entry as to be created. Hubleto will automatically assign an ID number that's next in line. This also ensures that the correct entry will be deleted when the delete button in a table row is pressed.
+> If you are creating entries with this method, ensure that the `id` value is **always a negative number and also different from other _new_ entries**. A negative number flags the entry as to be created. Hubleto will automatically assign an ID number that's next in line. This also ensures that the correct entry will be deleted when the delete button in a table row is pressed.
 
-If you want to add an ID of the currently opened entry to the record data use `{ _useMasterRecordId_: true }` and Hubleto will automatically insert the ID into the entry after saving.
+If you want to add an ID of the currently opened form entry to the record data, use `{ _useMasterRecordId_: true }` and Hubleto will automatically insert the ID into the entry after saving.
 
-> The newly added entries will be saved only after pressing the save button of the form
+> The newly added entries will be saved only after pressing the **save button of the form**
 
 ### Opening an empty Form component
 
@@ -255,7 +260,7 @@ Other method to add an entry through a Table component is to open an empty Form 
 
 With this method you have to manage a state that will open the empty form.
 
-Firstly, you need to wrap a chosen Form component in a `ModalSimple` component. This will allow you to slightly customize how the form will look upon opening, the `type` prop allows you to change the location or width of the form using CSS classes specified in `App.css`.
+Firstly, you need to wrap a chosen Form component in a `ModalSimple` component. This will allow you to slightly customize how the form will look upon opening, the `type` prop allows you to change the location or width of the form using CSS classes specified in `Main.twcss`.
 
 Similarly to the Table component you need to specify the `description` and `descriptionSource` of the Form component. The easiest way is to use the description defined in the Model class and adding a description with only default values in the Form component using `descriptionSource="both"`. You also need to add an `id` prop with a negative value to let Hubleto know, that this entry is being created.
 
@@ -263,8 +268,8 @@ Similarly to the Table component, the parent form wont be updated when saving th
 
 > Don't forget to change the state that opens the form with the `onClose` callback.
 
-**./apps/Customers/Components/FormCompany.tsx**
 
+###### Customers/Components/FormCompany.tsx
 ```tsx
 {this.state.createNewDeal == true ? (
 <ModalSimple
