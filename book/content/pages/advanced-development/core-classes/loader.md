@@ -43,7 +43,7 @@ Check out the [Customizing sidebar page](./../customizing-ui/customizing-sidebar
 
 ## Installing tables of models
 
-During installation of Hubleto the `installTables()` method will be called for every Loader class in every app. You need to initialize the models of the apps and use the `install()` method of the models to properly create the tables and columns of the models.
+During installation of Hubleto the `installTables()` method will be called for every Loader class in every app. You need to initialize the models of the apps and use the `install()` method of the models to properly create the tables and columns of the models in your database.
 
 ### Example of model installation
 

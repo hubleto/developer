@@ -158,6 +158,7 @@ tableOfContents:
               - page: apps/community/leads/models/lead-history
               - page: apps/community/leads/models/lead-service
               - page: apps/community/leads/models/lead-activity
+          - page: apps/community/calendar
           - page: apps/community/calendar-sync
           - page: apps/community/report
       - page: apps/enterprise
