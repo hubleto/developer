@@ -4,16 +4,16 @@ The Calendar app allows you to manage and create calendars and activities throug
 
 ## Introduction
 
-The Calendar app allows you to create new calendars inside various apps allowing you to show all the activities together in one main calendar of the Calendar app. You can do so by utilizing the Calendar Manager that comes with the Calendar app. The activities are still divided between separate Activity models, so the entries for the activities wont mix. This will also allow you to see specific activities, for example to see activities of a specific customer inside a Customer form.
+The Calendar app allows you to create new calendars inside various apps allowing you to show all the activities together in one main calendar of the Calendar app. You can do so by utilizing the Calendar Manager that comes with the Calendar app. The activities are still divided between separate Activity models, so the entries for the activities won't mix. This will also allow you to see specific activities, for example to see activities of a specific customer inside a Customer form.
 
-The Calandar app by itself creates a single View that shows a Calendar component, where all the activities from the different calendars are loaded into.
+The Calendar app by itself creates a single View that shows a Calendar component, where all the activities from the different calendars are loaded into.
 
 ## Creating a calendar
 
 There are few steps you need to take to successfully create a calendar:
 
 - create an Activity model and Eloquent class for the app and a relation between the models
-- create a Calendar class for the Calendar Manager
+- create a Calendar class
 - register the new Calendar class for the Calendar Manager
 - create an API to get the Activity data
 - create a Form component for the new Activity model
@@ -81,7 +81,7 @@ Other key-pairs can be found in the FullCalendar library documentation.
 
 ## Register the calendar
 
-In the Loader class of your app you need to register your calendar with the Calendar Manager. This will then allow the main Calendar component to retrieve the data of your newly created Calendar class.
+In the Loader class of your app in the `init()` method you need to register your calendar with the Calendar Manager. This will then allow the main Calendar component to retrieve the data of your newly created Calendar class.
 
 ###### .\apps\external\MyApp\Loader.php
 
@@ -112,7 +112,7 @@ class GetCalendarEvents extends \HubletoMain\Core\Controller {
 }
 ```
 
-You also need to create a new route in the router.
+You also need to create a new route in the router of the `init()` method.
 
 ###### .\apps\external\MyApp\Loader.php
 
@@ -143,7 +143,7 @@ Optional props you can specify:
 
 As we mentioned in the previous chapters you can add more parameters to the event retrieval API. You can do so by adding a parameter to the end of the `eventsEndpoint` URL.
 
-For the example below we filled all the props:
+For the example below, we filled all the props:
 
 ###### .\apps\external\MyApp\Components\FormMyApp.tsx
 
@@ -160,7 +160,8 @@ For the example below we filled all the props:
 
 `onDateClick` and `onEventClick` is primarily used to open an Activity form that you created for either a new entry or to open an existing entry.
 
-`onDateClick` passes the **date** and the **time** for the date cell that was clicked. This can be used to pre-set the date or time values in the Activity form for a new entry.
-`onEventClick` is used to retrieve the ID of the activity to open an Activity form of a existing entry. The ID can be received by accessing `info.event.id`.
+`onDateClick` passes the **date** and the **time** for the date cell that was clicked. This can be, for example, used to pre-set the date or time values in the Activity form for a new entry.
 
-After creating an Activity form, opening a form can be done by managing a state after clicking on either event or a date cell. Don't forget to use a negative value of the ID for the new entry.
+`onEventClick` is used to retrieve the information of an activity to open an Activity form of an existing entry. An of an entry ID can be received by accessing `info.event.id`.
+
+After creating an Activity form, opening a form can be done by managing a state after clicking on either an event or a date cell. Don't forget to use a negative value of the ID for the new entry.
