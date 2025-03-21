@@ -10,7 +10,7 @@ A View by default follows a HTML structure.
 
 A View can be a Twig file. This allows us to access variables that the file can work with, and for example can loop through data, do if statements and many other functionalities. Please consult the [Twig website](https://twig.symfony.com/doc/) to learn more about Twig.
 
-The View can also render React components that were registered in the Loader.tsx of the app.
+The View can also render React components that were registered in the Loader.tsx of an app.
 To learn how to register a React component to use in a View check out the [Component page](./component).
 
 A registered component can be used almost like a HTML tag:
@@ -21,7 +21,7 @@ Note that you have to pass the `record-id` prop for the forms to open with a cor
 
 ### The naming convention of a HTML React tag
 
-If the React component in the App.tsx is registered under `TableAppModel`, than you can create the HTML tag with `<app-table-app-model></app-table-app-model>`.
+If the React component in the Loader.tsx is registered under `TableAppModel`, than you can create the HTML tag with `<app-table-app-model></app-table-app-model>`.
 
 The HTML React component tag can also pass props to the component. For example, if the component has a prop of an integer type, you have to specify the type, the name and the value of the prop you want to pass to the component: `<app-table-app-model int:new-prop=22></app-table-app-model>`
 

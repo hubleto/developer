@@ -36,7 +36,7 @@ For the View to be used you need to set the View in the Controller by specifying
 public function prepareView(): void
   {
     parent::prepareView();
-    $this->setView('@mod/Customers/Views/Activity.twig');
+    $this->setView('@HubletoApp:Customer:Views/Activity.twig');
   }
 ```
 
@@ -46,9 +46,9 @@ Within the `prepareView()` method you can also specify values that will be passe
 
 Now the `newValue` is available to use in the View.
 
-Check out [View](view) to see how to use this value.
+Check out [View](../customizing-ui/view) to see how to use this value.
 
-Within a View Controller you can access submitted form data through `$this->main->params`. For example, you can work with these values to decide what `viewParams` to pass to the View or decide what View to set.
+Within a View Controller you can access submitted form data through various parameter getters like  `$this->main->urlParamAsInteger("newValue")`. For example, you can work with these values to decide what `viewParams` to pass to the View or decide what View to set.
 
 ## Creating an API Controller
 

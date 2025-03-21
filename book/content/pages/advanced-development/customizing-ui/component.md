@@ -8,61 +8,58 @@ Components, specifically React Components are used to create the majority of the
 
 This is how a base table component looks like. The component itself describes what model it should be linked to and from what model it should retrieve its data. These few default props is all you need to create a base table component.
 
+###### TableComponent.tsx
 ```tsx
-// TableModule.tsx
-
 import React, { Component } from "react";
-import Table, { TableProps, TableState } from "adios/Table";
+import HubletoTable, {HubletoTableProps, HubletoTableState} from "../../../../src/core/Components/HubletoForm";
 
-interface TableModuleProps extends TableProps {}
+interface TableComponentProps extends HubletoTableProps {}
 
-interface TableModuleState extends TableState {}
+interface TableComponentState extends HubletoTableState {}
 
-export default class TableModule extends Table<
-  TableModuleProps,
-  TableModuleState
-> {
+export default class TableComponent extends HubletoTable<TableComponentProps, TableComponentState> {
   static defaultProps = {
     ...Table.defaultProps,
     itemsPerPage: 15,
     formUseModalSimple: true,
-    model: "HubletoApp/Module/Models/Module",
+    model: "HubletoApp/App/Models/SubApp",
   };
 
-  props: TableModuleProps;
-  state: TableModuleState;
+  props: TableComponentProps;
+  state: TableComponentState;
 
-  constructor(props: TableModuleProps) {
+  constructor(props: TableComponentProps) {
     super(props);
     this.state = this.getStateFromProps(props);
   }
 }
 ```
 
-### Form for a table
+### Form component for a Table component
 
 If you click on any entry in a table component you will open a form. A form can be described in a table component in two ways. You can either not describe what form component to use, which will result in Hubleto to use a basic form that generates the inputs based on the model's description of columns, or you can specify which form component to use.
 
 To specify which form component to use, you can use the `renderForm()` method like in the example below. Within the `renderForm()` method you need to retrieve props from the `getFormProps()` method in order for the form to function properly. Then you need to pass these props to the form component.
 
+###### TableComponent.tsx
 ```tsx
 renderForm(): JSX.Element {
     let formProps: FormProps = this.getFormProps();
-    return <FormModule {...formProps}/>;
+    return <FormComponent {...formProps}/>;
   }
 ```
 
-Before specifying a form to use in a table component, you can also specify the width of the form, like in the example below. The width is based on CSS classes defined in `App.css`.
+Before specifying a form to use in a table component, you can also specify the width of the form, like in the example below. The width is based on CSS classes defined in `Main.twcss`.
 
 ```tsx
 getFormModalProps() {
-    if (getUrlParam('recordId') > 0) {
-      return {
-        ...super.getFormModalProps(),
-        type: 'right'
-      }
-    } else return {...super.getFormModalProps()}
-  }
+  if (getUrlParam('recordId') > 0) {
+    return {
+      ...super.getFormModalProps(),
+      type: 'right'
+    }
+  } else return {...super.getFormModalProps()}
+}
 ```
 
 For more insight on the table component please visit the ADIOS documentation's [Table component](https://github.com/wai-blue/adios/blob/main/src/Components/Table.tsx).
@@ -71,69 +68,47 @@ For more insight on the table component please visit the ADIOS documentation's [
 
 This is how a base form component looks like. The component itself describes what model it should be linked to and from what model it should retrieve its data. After this you can specify other aspects of the form component. For example you can specify how a title of a record will generate based on a value or you can specify how the buttons will change based on the editing state.
 
+###### FormComponent.tsx
 ```tsx
 import React, { Component } from 'react';
-import Form, { FormProps, FormState } from 'adios/Form';
-export interface FormModuleProps extends FormProps {}
+import HubletoForm, {HubletoFormProps, HubletoFormState} from "../../../../src/core/Components/HubletoForm";
 
-export interface FormModuleState extends FormState {}
+export interface FormComponentProps extends HubletoFormProps {}
 
-export default class FormModule<P, S> extends Form<FormModuleProps,FormModuleState> {
+export interface FormComponentState extends HubletoFormState {}
+
+export default class FormComponent<P, S> extends HubletoForm<FormComponentProps,FormComponentState> {
   static defaultProps: any = {
     ...Form.defaultProps,
-    model: 'HubletoApp/Module/Models/Module',
+    model: 'HubletoApp/App/Models/App',
   };
 
-  props: FormModuleProps;
-  state: FormModuleState;
-
-  renderHeaderLeft(): JSX.Element {
-    return this.state.isInlineEditing ? this.renderSaveButton() : this.renderEditButton();
-  }
-
-  renderHeaderRight(): JSX.Element {
-    return <>
-      {this.state.isInlineEditing ? this.renderDeleteButton() : null}
-      {this.props.showInModal ? this.renderCloseButton() : null}
-    </>;
-  }
+  props: FormComponentProps;
+  state: FormComponentState;
 
   renderContent(): JSX.Element {
     return (
       <>
-      /* rest of the code */
+      /* rest of the code, columns, ect. */
       </>
     );
   }
 }
 ```
 
-The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various React components, like ADIOS input components. For more explanation on how to build a form component please visit the [advanced form creation](../ui-components/form-component).
+The `renderContent()` method is the main method used in rendering the content of the form. Within the method you can describe how the form component will look like using HTML tags or various React components, like ADIOS input components. For more explanation on how to build a form component please visit the [advanced form creation](./forms).
 
 ## Registering a Component to be used in a View
 
 You can register a React component to use in a View in the Loader.tsx file of an app. Below is an example of the registered table components of the Customer app.
 
-You can name the imported components however you want, but you still need to follow the tag writing convention that was described on the [View page](../view).
+You can name the imported components however you want, but you still need to follow the tag writing convention that was described on the [View page](./view).
 
+###### Customers/Loader.tsx
 ```tsx
-// Customers/Loader.tsx
+import CustomersTableCustomers from "./Components/TableCustomers"
+import CustomersTableActivities from "./Components/TableActivities"
 
-import CeremonyCrmApp from "../../App";
-import CoreCustomersTablePersons from "./Components/TablePersons"
-import CoreCustomersTableCompanies from "./Components/TableCompanies"
-import CoreCustomersTableActivities from "./Components/TableActivities"
-import CoreCustomersTableAddresses from "./Components/TableAddresses"
-import CoreCustomersTableContacts from "./Components/TableContacts"
-
-export default class Loader {
-  uid: string = 'customers';
-  constructor(app: CeremonyCrmApp) {
-    app.registerReactComponent('CoreCustomersTablePersons', CoreCustomersTablePersons);
-    app.registerReactComponent('CoreCustomersTableCompanies', CoreCustomersTableCompanies);
-    app.registerReactComponent('CoreCustomersTableActivities', CoreCustomersTableActivities);
-    app.registerReactComponent('CoreCustomersTableAddresses', CoreCustomersTableAddresses);
-    app.registerReactComponent('CoreCustomersTableContacts', CoreCustomersTableContacts);
-  }
-}
+globalThis.main.registerReactComponent('CustomersTableCustomers', CustomersTableCustomers);
+globalThis.main.registerReactComponent('CustomersTableActivities', CustomersTableActivities);
 ```

@@ -2,16 +2,23 @@
 
 ### Tags Input
 
-After creating a Tag model for a specific model, you can create a Tag input element using the ADIOS Tag component. This displays the tags names created in the Tag model and displays them in the input using the cross-table for the specified model and the Tag model.
+The Tags input shows tags from the **source** tag model using a cross-table tag model.
 
-For the Tag Input component you need to specify the `model` the tags were created in, `targetColumn` specifying the ID of the connected model's entry, `sourceColumn` specifying the ID of the Tag and `colorColumn` specifying the column for the color for the displayed tags in the model they were created in.
+After creating a cross-table tag model, you can create a Tag input element using the ADIOS Tag component. This displays the tag names created in the **source** Tag model and displays them in the input using the cross-table for the specified model.
+
+For the Tag Input component you need to:
+- specify the source `model` for the original tags
+- `value`, the value that will contain the saved tags (usually the data of a relation)
+- `sourceColumn` specifying the ID of the source tag
+- `targetColumn` specifying the ID of the cross-table model's entry
+- `colorColumn` specifying the color column of the source tag model
 
 ```tsx
 <FormInput title="Tags">
   <InputTags2
     {...this.getDefaultInputProps()}
-    value={this.state.record.TAGS}
     model="HubletoApp/Settings/Models/Tag"
+    value={this.state.record.TAGS}
     targetColumn="id_company"
     sourceColumn="id_tag"
     colorColumn="color"
