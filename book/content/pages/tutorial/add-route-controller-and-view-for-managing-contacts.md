@@ -10,7 +10,7 @@ In the previous tutorial we created a model for contacts but did not create a us
 
 Add following line anywhere in the `init()` method of your app's `Loader.php`:
 
-###### ./apps/external/MyCompany/MyApp/Loader.php
+###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp;
@@ -25,9 +25,9 @@ class Loader extends \HubletoMain\Core\App {
 
 ## Create controller
 
-Create following controller in `./apps/external/MyCompany/MyApp/Controllers/Contacts.php`:
+Create following controller in `./apps/custom/MyApp/Controllers/Contacts.php`:
 
-###### ./apps/external/MyCompany/MyApp/Controllers/Contacts.php
+###### ./apps/custom/MyApp/Controllers/Contacts.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp\Controllers;
@@ -41,11 +41,11 @@ class Contacts extends \HubletoMain\Core\Controller {
 
 ## Create view
 
-Create following view in `./apps/external/MyCompany/MyApp/Views/Contacts.twig`:
+Create following view in `./apps/custom/MyApp/Views/Contacts.twig`:
 
-###### ./apps/external/MyCompany/MyApp/Views/Contacts.twig**
+###### ./apps/custom/MyApp/Views/Contacts.twig**
 ```php
-<app-table string:model="HubletoApp/External/MyCompany/MyApp/Models/Contact"></app-table>
+<app-table string:model="HubletoApp/custom/MyApp/Models/Contact"></app-table>
 ```
 
 > **NOTE** Hubleto uses `<app-*` HTML notation to insert React components into the browser's DOM.

@@ -20,7 +20,7 @@ The `sidebarOrder` is a parameter used to prioritize apps in your sidebar. To ch
 
 To change the DEFAULT_INSTALLATION_CONFIG, open your app's `Loader.php` and add following lines at the begginning of your app's class:
 
-###### ./src/apps/external/MyCompany/MyApp/Loader.php
+###### ./src/apps/custom/MyApp/Loader.php
 ```php
   const DEFAULT_INSTALLATION_CONFIG = [
     'sidebarOrder' => ANY_VALUE,
@@ -30,7 +30,7 @@ To change the DEFAULT_INSTALLATION_CONFIG, open your app's `Loader.php` and add 
 
 To set the `sidebarOrder` value dynamically you can use your app's `setConfigAsInteger()` method during the *init* phase. To do this, add following line into `init()` method of your app's class:
 
-###### ./src/apps/external/MyCompany/MyApp/Loader.php
+###### ./src/apps/custom/MyApp/Loader.php
 ```php
   public function init(): void
   {

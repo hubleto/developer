@@ -16,8 +16,8 @@ To make Hubleto model compatible with Eloquent, additional file has to be create
 
 Summary... To add a model to your Hubleto app, e.g. model for contacts, you have to create two files:
 
-  * ./apps/external/MyCompany/MyApp/**Models/**Contact.php and
-  * ./apps/external/MyCompany/MyApp/**Models/Eloquent/**Contact.php
+  * ./apps/custom/MyApp/**Models/**Contact.php and
+  * ./apps/custom/MyApp/**Models/Eloquent/**Contact.php
 
 Let's show this in an example.
 
@@ -25,9 +25,9 @@ Let's show this in an example.
 
 ### Add model
 
-The first file we need to create is `./apps/external/MyCompany/MyApp/Models/Contact.php`. It will be very simple, containg description of columns in this model and a reference to its Eloquent class:
+The first file we need to create is `./apps/custom/MyApp/Models/Contact.php`. It will be very simple, containg description of columns in this model and a reference to its Eloquent class:
 
-###### ./apps/external/MyCompany/MyApp/Models/Contact.php
+###### ./apps/custom/MyApp/Models/Contact.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp\Models;
@@ -58,9 +58,9 @@ Method `describeColumns()` returns an array defined as *array<string, \ADIOS\Cor
 
 Now we have the base model created. To be able to use the Eloquent features, we need to create a second file - a class specifying Eloquent relations in this model. For now, we will have no relations but they will come later.
 
-To create a model's equivalentt for Eloquent, create the second file `./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php`.
+To create a model's equivalentt for Eloquent, create the second file `./apps/custom/MyApp/Models/Eloquent/Contact.php`.
 
-###### ./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php
+###### ./apps/custom/MyApp/Models/Eloquent/Contact.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
@@ -83,7 +83,7 @@ The `installTables()` method is called everytime the app is installed. The metho
 
 Add a new method `installTables()` into your app's `Loader.php`:
 
-###### ./apps/external/MyCompany/MyApp/Loader.php
+###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp;

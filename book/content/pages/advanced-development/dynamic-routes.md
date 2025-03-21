@@ -20,7 +20,7 @@ This method takes an array of routes as the only argument. The array of routes i
 
 For example, regular expression `/^my-app\/customers\/(\d+)\/sync\/?$/` will capture the above URL and you can forward it to the `Sync.php` controller followingly:
 
-###### ./apps/external/MyCompany/MyApp/Loader.php
+###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp;
@@ -35,7 +35,7 @@ However, the controller will not be able to request the ID of the customer. Howe
 
 So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will be parsed and `idCustomer` route variable will be extracted. So, by modifying previous example followingly:
 
-###### ./apps/external/MyCompany/MyApp/Loader.php
+###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp;

@@ -41,7 +41,7 @@ Each route is a very simple key/value pair where key is a regular expression to 
 
 An example of a simple routing table is shown below. This routing adds a `my-app` URL which will activate the `Dashboard` controller.
 
-###### ./apps/external/MyCompany/MyApp/Loader.php
+###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp;
@@ -61,9 +61,9 @@ Do not forget to call also `parent::init()`.
 
 Now we need to add a controller `Dashboard` which will be activated by the `my-app` URL.
 
-To add this controller, create `./apps/external/MyCompany/MyApp/Controllers/Dashboard.php` file with the following content:
+To add this controller, create `./apps/custom/MyApp/Controllers/Dashboard.php` file with the following content:
 
-###### ./apps/external/MyCompany/MyApp/Controllers/Dashboard.php
+###### ./apps/custom/MyApp/Controllers/Dashboard.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp\Controllers;
@@ -90,9 +90,9 @@ Second part is the relative path of the file containing the view. In our case, i
 
 ## Add view
 
-Now, as we understand how the views are referenced we know that we need to create `./apps/external/MyCompany/MyApp/Views/Dashboard.twig` file with the following content:
+Now, as we understand how the views are referenced we know that we need to create `./apps/custom/MyApp/Views/Dashboard.twig` file with the following content:
 
-###### ./apps/external/MyCompany/MyApp/Views/Dashboard.twig
+###### ./apps/custom/MyApp/Views/Dashboard.twig
 ```html
 Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 ```

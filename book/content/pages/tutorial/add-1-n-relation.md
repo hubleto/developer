@@ -51,7 +51,7 @@ We have to add few things to:
   *  **Models/Eloquent/Contact.php**:
     1. definition of Eloquent relation
 
-###### ./apps/external/MyCompany/MyApp/Models/Contact.php
+###### ./apps/custom/MyApp/Models/Contact.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp\Models;
@@ -70,7 +70,7 @@ class Contact extends \HubletoMain\Core\Model {
 }
 ```
 
-###### ./apps/external/MyCompany/MyApp/Models/Eloquent/Contact.php
+###### ./apps/custom/MyApp/Models/Eloquent/Contact.php
 ```php
 namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
 use \HubletoApp\Community\Settings\Models\Eloquent\User; // <-- use model for users

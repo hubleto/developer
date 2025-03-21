@@ -8,21 +8,19 @@ An app is a basic functional element of Hubleto. Every functionality available i
 
 ## Where are apps stored?
 
-There are three types of Hubleto apps: community, enterprise or external.
+There are three types of Hubleto apps: community, enterprise, external or custom. See [this page](../apps) to learn more about their differences.
 
-Community apps are stored in `./apps/community`. External and enterprise apps are stored in their own repositories.
+*Community* apps are stored in `./apps/community`. To create them, it's enough to create an app folder here. *External* and *enterprise* apps are stored in their own repositories and they will need to have a repository configured. To learn how to configure app repositories, check [advanced app development tutorial](../advanced-development).
 
-By default, a repository for external apps is in `./apps/external`. For the beginning, we will use this folder to put our app in. If you want to learn how to configure external app repositories, check [advanced app development tutorial](../advanced-development).
+> In this tutorial, we will be creating a **custom app**. We will use `MyCompany` as the vendor name and `MyApp` as the application name.
 
-> In this tutorial, we will be creating an **external app**. We will use `MyCompany` as the vendor name and `MyApp` as the application name.
-
-So, our app will be located in `./apps/external/MyCompany/MyApp` folder. We will always use paths relative to your Hubleto's root folder.
+So, our app will be located in `./apps/custom/MyApp` folder. We will always use paths relative to your Hubleto's root folder.
 
 ## Create app loader
 
-To start, create `./apps/external/MyCompany/MyApp/Loader.php` with the following content:
+To start, create `./apps/custom/MyApp/Loader.php` with the following content:
 
-###### ./apps/external/MyCompany/MyApp/Loader.php
+###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
 namespace HubletoApp\External\MyCompany\MyApp;
@@ -31,9 +29,9 @@ class Loader extends \HubletoMain\Core\App { }
 
 ## Create app manifest
 
-Each app must provide its manifest. This is stored in `manifest.yaml` file in the same folder where app's loader is stored. Create `./apps/external/MyCompany/MyApp/manifest.yaml` with the following content:
+Each app must provide its [manifest](../app-manifest). This is stored in `manifest.yaml` file in the same folder where app's loader is stored. Create `./apps/custom/MyApp/manifest.yaml` with the following content:
 
-###### ./apps/external/MyCompany/MyApp/manifest.yaml
+###### ./apps/custom/MyApp/manifest.yaml
 ```yaml
 namespace: HubletoApp\External\MyCompany\MyApp
 rootUrlSlug: my-app

@@ -6,7 +6,7 @@ A class that defines routing, permissions of models and installation of models.
 
 This is the base of a Loader.php file:
 
-**./apps/external/MyCompany/MyApp/Loader.php**
+**./apps/custom/MyApp/Loader.php**
 
 ```php
   <?php
