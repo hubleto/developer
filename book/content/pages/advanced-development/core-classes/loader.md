@@ -10,7 +10,7 @@ This is the base of a Loader.php file:
 
 ```php
   <?php
-  namespace HubletoApp\External\MyCompany\MyApp;
+  namespace HubletoApp\Custom\MyApp;
   class Loader extends \HubletoMain\Core\App { }
 ```
 

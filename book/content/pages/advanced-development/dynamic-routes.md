@@ -8,7 +8,7 @@ In this tutorial, you'll learn how to create *dynamic routes*. For example, you 
 
 to be forwarded to this controller:
 
-```\HubletoApp\External\MyCompany\MyApp\Customers\Sync```.
+```\HubletoApp\Custom\MyApp\Customers\Sync```.
 
 This controller then will set the view showing the form to update the customer with `ID = 123`.
 
@@ -23,7 +23,7 @@ For example, regular expression `/^my-app\/customers\/(\d+)\/sync\/?$/` will cap
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp;
+namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->main->router->httpGet([ '/^my-app\/customers\/(\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
@@ -38,7 +38,7 @@ So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp;
+namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     $this->main->router->httpGet([ '/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);

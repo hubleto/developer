@@ -13,7 +13,7 @@ Add following line anywhere in the `init()` method of your app's `Loader.php`:
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp;
+namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     ...
@@ -30,7 +30,7 @@ Create following controller in `./apps/custom/MyApp/Controllers/Contacts.php`:
 ###### ./apps/custom/MyApp/Controllers/Contacts.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp\Controllers;
+namespace HubletoApp\Custom\MyApp\Controllers;
 class Contacts extends \HubletoMain\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();

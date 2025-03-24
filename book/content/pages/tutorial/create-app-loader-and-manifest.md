@@ -23,9 +23,11 @@ To start, create `./apps/custom/MyApp/Loader.php` with the following content:
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp;
+namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App { }
 ```
+
+> **BE CAREFUL** | The 'Custom' in the namespace should start with capital 'C' (not 'custom'), although the folder where you create the app is called 'custom'.
 
 ## Create app manifest
 
@@ -33,7 +35,7 @@ Each app must provide its [manifest](../app-manifest). This is stored in `manife
 
 ###### ./apps/custom/MyApp/manifest.yaml
 ```yaml
-namespace: HubletoApp\External\MyCompany\MyApp
+namespace: HubletoApp\Custom\MyApp
 rootUrlSlug: my-app
 name: My App
 icon: fas fa-home
@@ -49,7 +51,7 @@ highlight: Very usefull business app.
 Now, you can install this empty app into your project. Do this by running the `php hubleto app install` command as follows:
 
 ```
-php hubleto app install \HubletoApp\External\MyCompany\MyApp
+php hubleto app install \HubletoApp\Custom\MyApp
 ```
 
 > **VISUAL_CHECK** | Now, when you open the Hubleto in your browser your app should show up somewhere in the left sidebar.
