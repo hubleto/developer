@@ -30,7 +30,7 @@ The first file we need to create is `./apps/custom/MyApp/Models/Contact.php`. It
 ###### ./apps/custom/MyApp/Models/Contact.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp\Models;
+namespace HubletoApp\Custom\MyApp\Models;
 class Contact extends \HubletoMain\Core\Model {
   public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
@@ -63,7 +63,7 @@ To create a model's equivalentt for Eloquent, create the second file `./apps/cus
 ###### ./apps/custom/MyApp/Models/Eloquent/Contact.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
+namespace HubletoApp\Custom\MyApp\Models\Eloquent;
 class Contact extends \HubletoMain\Core\ModelEloquent {
   public $table = 'my_app_contacts';
   // Eloquent relations will get here later
@@ -86,11 +86,11 @@ Add a new method `installTables()` into your app's `Loader.php`:
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp;
+namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   ...
   public function installTables(): void {
-    $mContact = new \HubletoApp\External\MyCompany\MyApp\Models\Contact($this->main);
+    $mContact = new \HubletoApp\Custom\MyApp\Models\Contact($this->main);
     $mContact->dropTableIfExists()->install();
   }
 }
@@ -101,7 +101,7 @@ class Loader extends \HubletoMain\Core\App {
 To reinstall the app run following command:
 
 ```
-php hubleto app install \HubletoApp\External\MyCompany\MyApp force
+php hubleto app install \HubletoApp\Custom\MyApp force
 ```
 
 See, there is a new argument `force` which will forcefully reinstall the app even if it is already installed.

@@ -54,7 +54,7 @@ We have to add few things to:
 ###### ./apps/custom/MyApp/Models/Contact.php
 ```php
 <?php
-namespace HubletoApp\External\MyCompany\MyApp\Models;
+namespace HubletoApp\Custom\MyApp\Models;
 use \HubletoApp\Community\Settings\Models\User;
 class Contact extends \HubletoMain\Core\Model {
   public string $table = 'my_app_contacts';
@@ -72,7 +72,7 @@ class Contact extends \HubletoMain\Core\Model {
 
 ###### ./apps/custom/MyApp/Models/Eloquent/Contact.php
 ```php
-namespace HubletoApp\External\MyCompany\MyApp\Models\Eloquent;
+namespace HubletoApp\Custom\MyApp\Models\Eloquent;
 use \HubletoApp\Community\Settings\Models\Eloquent\User; // <-- use model for users
 class Contact extends \HubletoMain\Core\ModelEloquent {
   public $table = 'my_app_contacts';
@@ -82,7 +82,7 @@ class Contact extends \HubletoMain\Core\ModelEloquent {
 
 ### Re-install SQL tables
 
-Run `php hubleto app install \HubletoApp\External\MyCompany\MyApp` in your project root folder.
+Run `php hubleto app install \HubletoApp\Custom\MyApp` in your project root folder.
 
 ## Download the source code
 

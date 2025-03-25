@@ -19,7 +19,7 @@ To create a test, first create a `Tests` folder in your app's folder. Then, for 
 
 ###### ./apps/custom/MyApp/Tests/RenderAllRoutes.php
 ```php
-namespace HubletoApp\External\MyCompany\MyApp\Tests;
+namespace HubletoApp\Custom\MyApp\Tests;
 class RenderAllRoutes extends \HubletoMain\Core\AppTest {
   public function run(): void {
     $this->main->render('my-app');
@@ -41,5 +41,5 @@ You must provide full namespace of your app's loader class.
 For example, to run a *RenderAllRoutes* created earlier, run following command:
 
 ```
-php hubleto app test \HubletoApp\External\MyCompany\MyApp RenderAllRoutes
+php hubleto app test \HubletoApp\Custom\MyApp RenderAllRoutes
 ```
