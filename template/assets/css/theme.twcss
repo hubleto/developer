@@ -1,7 +1,5 @@
 @layer base {
 
-  * { @apply text-base; }
-
   html { @apply bg-white; }
 
   html.template-without-sidebar { @apply bg-slate-50; }
@@ -53,7 +51,7 @@
 
   .content { @apply p-8 flex-1 max-w-3xl mb-4 sm:ml-0 md:ml-72 mr-4 lg:mr-60  space-y-1; }
   .content img { @apply mt-4 border border-slate-200 max-w-xl p-2 bg-slate-100 text-xs; }
-  .content img + em { @apply text-slate-400 mb-4 text-xs; }
+  .content img + p { @apply text-slate-400 mb-4 text-xs pt-0 pb-4; }
 
   .header { @apply sticky top-0 inset-x-0 flex flex-wrap z-10 bg-gray-800 text-sm py-2.5 ps-2 md:justify-start md:flex-nowrap md:ms-72 lg:ms-72 dark:bg-neutral-800 dark:border-neutral-700; }
   .header-inner { @apply flex items-center gap-x-2 text-white; }

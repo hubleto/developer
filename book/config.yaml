@@ -90,6 +90,9 @@ tableOfContents:
           - page: advanced-development/customizing-ui/forms
           - page: advanced-development/customizing-ui/special-input-types
           - page: advanced-development/customizing-ui/skin
+      - page: advanced-development/misc-features
+        children:
+          - page: advanced-development/misc-features/dashboard
       - page: adios-framework
   - page: apps
     icon: fas fa-bolt
