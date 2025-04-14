@@ -1,6 +1,6 @@
 # CalendarSync
 
-CalendarSync is a community app that allows you to link external calendars to Hubleto.
+namespace HubletoApp\Community\CalendarSync
 
 **Currently supported sources of calendars:**
 - Google Calendar

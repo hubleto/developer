@@ -1,6 +1,6 @@
 # Calendar
 
-The Calendar app allows you to manage and create calendars and activities throughout all connected apps.
+namespace HubletoApp\Community\Calendar
 
 ## Introduction
 

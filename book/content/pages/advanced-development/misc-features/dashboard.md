@@ -13,7 +13,7 @@ These boards can be shown on the welcome dashboard (see picture below).
 <img src="{{ bookRootUrl }}/content/assets/images/dashboard.jpg">
 *Example of dashboard with boards 'Most valuable deals' and 'Deals value by status'.*
 
-> *NOTE* | Dashboard is the feature of [Community/Desktop](../../apps/community/desktop) app.
+> **NOTE** | Dashboard is the feature of [Community/Desktop](../../apps/community/desktop) app.
 
 ## How to add your board
 

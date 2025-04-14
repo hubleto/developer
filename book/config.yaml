@@ -99,13 +99,13 @@ tableOfContents:
     children:
       - page: apps/community
         children:
-          - page: apps/community/billing
-            children:
-              - page: apps/community/billing/models/billing-account
-              - page: apps/community/billing/models/billing-account-service
-              - page: apps/community/billing/controllers/billing-accounts
-              - page: apps/community/billing/views/billing-accounts
-              - page: apps/community/billing/components/table-billing-account-services
+          # - page: apps/community/billing
+          #   children:
+          #     - page: apps/community/billing/models/billing-account
+          #     - page: apps/community/billing/models/billing-account-service
+          #     - page: apps/community/billing/controllers/billing-accounts
+          #     - page: apps/community/billing/views/billing-accounts
+          #     - page: apps/community/billing/components/table-billing-account-services
           - page: apps/community/customers
             children:
               - page: apps/community/customers/models/activity
