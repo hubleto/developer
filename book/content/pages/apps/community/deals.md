@@ -10,7 +10,7 @@ manage statuses, progress, history, responsible person and many more.
   * create, browse and manage deals
   * complex set of metadata for each deal, e.g. list of services included in the deal
   * convert lead to deal with a single click
-  * manage own deal status (e.g., New / In progress / Paused)
+  * manage own deal progress (e.g., Won / Lost)
   * manage calendar events (phone calls, emails, meetings)
   * assign responsible salesperson
   * manage deals in different currencies
@@ -21,7 +21,7 @@ manage statuses, progress, history, responsible person and many more.
 ## Dashboard boards
 
   * Most valuable deals
-  * Deal value by status
+  * Deal value by progress
 
 ## Reports
 
