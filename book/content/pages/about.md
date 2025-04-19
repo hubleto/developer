@@ -6,7 +6,7 @@ Hubleto is an **open source PHP-based platform for ERP and CRM solutions**, a.k.
 
 ## Source code
 
-Source code is available on [Github](https://github.com/wai-blue/hubleto).
+Source code is available on [Github](https://github.com/hubleto/main).
 
 ## Why Hubleto
 

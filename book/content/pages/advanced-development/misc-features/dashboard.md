@@ -24,8 +24,8 @@ implementation can be found in the Community/Deals app, check out following file
 
 | Board                  | Files                                                                                                                                                                                                                                    |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Most valuable deals`  | [Controller](https://github.com/wai-blue/hubleto/blob/main/apps/community/Deals/Controllers/Boards/MostValuableDeals.php) [View](https://github.com/wai-blue/hubleto/blob/main/apps/community/Deals/Views/Boards/MostValuableDeals.twig) |
-| `Deal value by status` | [Controller](https://github.com/wai-blue/hubleto/blob/main/apps/community/Deals/Controllers/Boards/DealValueByStatus.php) [View](https://github.com/wai-blue/hubleto/blob/main/apps/community/Deals/Views/Boards/DealValueByStatus.twig) |
+| `Most valuable deals`  | [Controller](https://github.com/hubleto/main/blob/main/apps/community/Deals/Controllers/Boards/MostValuableDeals.php) [View](https://github.com/hubleto/main/blob/main/apps/community/Deals/Views/Boards/MostValuableDeals.twig) |
+| `Deal value by status` | [Controller](https://github.com/hubleto/main/blob/main/apps/community/Deals/Controllers/Boards/DealValueByStatus.php) [View](https://github.com/hubleto/main/blob/main/apps/community/Deals/Views/Boards/DealValueByStatus.twig) |
 *Source files for sample boards*
 
 Feel free to make a copy of them into your app and modify.

@@ -39,7 +39,7 @@ left join `users` on `users`.`id` = `my_table`.`id_user`
 
 ## Addressbook app: Contact owner
 
-Let's continue in the development of the addressbook app from the [previous tutorial](add-model-for-contacts). We will add a new column with a 1:N relation to the [Hubleto's model User](https://github.com/wai-blue/hubleto/blob/main/apps/community/Settings/Models/User.php).
+Let's continue in the development of the addressbook app from the [previous tutorial](add-model-for-contacts). We will add a new column with a 1:N relation to the [Hubleto's model User](https://github.com/hubleto/main/blob/main/apps/community/Settings/Models/User.php).
 
 ### Add relation to contact owner
 

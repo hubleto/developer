@@ -14,7 +14,7 @@ An app is a basic functional element of Hubleto. Every functionality available i
 
 > **This will create default app with some functional examples.**
 
-An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/wai-blue/hubleto/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
+An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/hubleto/main/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
 
 An app is a basic functional element of Hubleto. And so, every functionality available in Hubleto is built in Hubleto apps.
 
