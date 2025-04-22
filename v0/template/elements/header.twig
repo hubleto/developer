@@ -9,8 +9,14 @@
       <a href="{{ guideRootUrl }}/{{ item }}">{{ bookConfig.pages[item].title }}</a>
     {% endfor %}
   </div>
+  <div class="mr-2">
+      <div>
+        <a class="btn btn-extra-small btn-primary" href="{{ env.guideRootUrl}}/../v0"><span class="text">v0</span></a>
+        <a class="btn btn-extra-small btn-light" href="{{ env.guideRootUrl}}/../v1"><span class="text">v1</span></a>
+      </div>
+  </div>
   <div class="menu-button mx-2 cursor-pointer" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars text-white"></i>
   </div>
 </header>
 <!-- ========== END HEADER ========== -->
