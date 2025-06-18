@@ -8,9 +8,9 @@ An app is a basic functional element of Hubleto. Every functionality available i
 
 ## Where are apps stored?
 
-There are three types of Hubleto apps: community, enterprise, external or custom. See [this page](../apps) to learn more about their differences.
+There are three types of Hubleto apps: community, premium, external or custom. See [this page](../apps) to learn more about their differences.
 
-*Community* apps are stored in `./apps/community`. To create them, it's enough to create an app folder here. *External* and *enterprise* apps are stored in their own repositories and they will need to have a repository configured. To learn how to configure app repositories, check [advanced app development tutorial](../advanced-development).
+*Community* apps are stored in `./apps/community`. To create them, it's enough to create an app folder here. *External* and *premium* apps are stored in their own repositories and they will need to have a repository configured. To learn how to configure app repositories, check [advanced app development tutorial](../advanced-development).
 
 > In this tutorial, we will be creating a **custom app**. We will use `MyCompany` as the vendor name and `MyApp` as the application name.
 

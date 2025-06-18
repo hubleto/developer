@@ -10,7 +10,6 @@ tableOfContents:
     children:
       - page: about
         children:
-          - page: media
           - page: benefits
       - page: improve
         children:
@@ -164,5 +163,5 @@ tableOfContents:
           - page: apps/community/calendar
           - page: apps/community/calendar-sync
           - page: apps/community/report
-      - page: apps/enterprise
+      - page: apps/premium
       - page: apps/external

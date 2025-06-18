@@ -1,7 +1,6 @@
 <!-- ========== HEADER ========== -->
 <header class="header flex flex-row justify-between">
   <div class="header-inner">
-    {# <a href="{{ guideRootUrl }}"><img class="logo" src="{{ templateRootUrl }}/assets/logo-hubleto.png"/></a> #}
     {% for item in breadcrumbs %}
       <svg version="1.1" style="width:0.5em;height:0.5em" viewBox="0 0 460 531">
         <polygon class="fill-white" points="0.5,0.5 459.5,265 0.5,530.5 0.5,445 100,265.5 0.5,85.5"/>
@@ -10,10 +9,10 @@
     {% endfor %}
   </div>
   <div class="mr-2">
-      <div>
-        <a class="btn btn-extra-small btn-primary" href="{{ env.guideRootUrl}}/../v0"><span class="text">v0</span></a>
-        <a class="btn btn-extra-small btn-light" href="{{ env.guideRootUrl}}/../v1"><span class="text">v1</span></a>
-      </div>
+    <div>
+      <a class="btn btn-extra-small btn-primary" href="{{ env.guideRootUrl }}/../v0"><span class="text">v0</span></a>
+      {# <a class="btn btn-extra-small btn-light" href="{{ env.guideRootUrl }}/../v1"><span class="text">v1</span></a> #}
+    </div>
   </div>
   <div class="menu-button mx-2 cursor-pointer" onclick="toggleMenu()">
     <i class="fas fa-bars text-white"></i>

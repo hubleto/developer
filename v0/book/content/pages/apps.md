@@ -9,7 +9,7 @@ There are following types of apps in Hubleto:
 | **Community apps**  | `\HubletoApp\Community`  | Apps freely available in the Github repository. Download them and use freely.                        |
 | **Custom apps**     | `\HubletoApp\Custom`     | Use custom apps if you are developing a custom project and do not plan to re-use your app elsewhere. |
 | **External apps**   | `\HubletoApp\External`   | External apps are developed by external companies and are planned to be re-used in many projects.    |
-| **Enterprise apps** | `\HubletoApp\Enterprise` | Hubleto team develops enterprise apps as the paid and more complex version of community apps.        |
+| **Premium apps** | `\HubletoApp\Premium` | Hubleto team develops premium apps as the paid and more complex version of community apps.        |
 
 ## Create app using `php hubleto` CLI agent
 

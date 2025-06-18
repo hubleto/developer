@@ -13,10 +13,11 @@
 
 
   h1 { @apply text-3xl text-slate-800; }
-  h2 { @apply text-xl font-bold text-slate-800 pt-10 pb-2; }
+  h2 { @apply text-xl font-bold text-slate-800 pt-0 pb-2; }
   h3 { @apply text-lg font-semibold text-primary pt-4 pb-0 first-of-type:pt-4; }
   h4 { @apply text-base font-semibold text-primary pt-4 pb-0 first-of-type:pt-4; }
   a { @apply text-primary; font-size: inherit; }
+  h1 a, h2 a, h3 a { @apply inline-block pt-16; }
   a:hover { @apply underline; }
   b, strong { font-size: inherit; }
   h2+a+h3 { @apply pt-0; }

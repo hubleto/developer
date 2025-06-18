@@ -1,12 +1,12 @@
 @config "../../../tailwind.config.js";
-@layer theme, base, components, utilities, theme, components;
+@layer theme, base, components, utilities, theme, components, app;
 
 @theme {
-  --font-sans: system-ui, 'sans-serif';
+  --font-sans: 'Gabarito', 'sans-serif';
   --font-serif: 'Merriweather', 'serif';
 
-  --color-primary: #008000;
-  --color-secondary: #7FB562;
+  --color-primary: #4780bf;
+  --color-secondary: #41c50d;
   
   --spacing-8xl: 96rem;
   --spacing-9x: 128rem;
@@ -18,3 +18,16 @@
 
 @import "./theme.twcss";
 @import "./components.twcss";
+
+@layer app {
+  @font-face {
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/Gabarito/static/Gabarito-Regular.ttf) format('truetype');
+  }
+
+  :root {
+    --font-family: 'Gabarito' !important;
+  }
+}

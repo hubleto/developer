@@ -56,7 +56,7 @@ Hubleto developer guide
         <span class="text flex-col items-start"><b>Free community apps</b><small>Free for your commercial use</small></span>
       </a>
       <a href="apps/enterpries" class="btn btn-white block">
-        <span class="text flex-col items-start">Enterprise apps<small>Richer features and strong support</small></span>
+        <span class="text flex-col items-start">Premium apps<small>Richer features and strong support</small></span>
       </a>
       <a href="apps/external" class="btn btn-white block">
         <span class="text flex-col items-start">External apps<small>Publish and sell via Hubleto app store</small></span>
