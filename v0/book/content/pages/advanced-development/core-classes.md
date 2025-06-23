@@ -36,7 +36,7 @@ ModuleName
 
 **Models** - Contains models that define your data structures
 
-**Models/Eloquent** - Contains classes that define the relations of models
+**Models/RecordManagers** - Contains classes that define the relations of models
 
 **Views** - Contains Twig files with HTML structures
 

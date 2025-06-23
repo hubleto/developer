@@ -14,13 +14,13 @@ An app is a basic functional element of Hubleto. Every functionality available i
 
 > **This will create default app with some functional examples.**
 
-An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/hubleto/main/blob/main/src/core/App.php) class. Most simple implementation of the app is shown below.
+An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/hubleto/main/blob/main/src/core/App.php) class.
 
-An app is a basic functional element of Hubleto. And so, every functionality available in Hubleto is built in Hubleto apps.
+An app is a basic functional element of Hubleto. And so, every functionality available in Hubleto is built around Hubleto apps.
+
+## How to develop Hubleto apps
 
 It's realy easy to start developing Hubleto apps but before that check the list below if you have all things ready.
-
-## What you should know
 
 For programming the backend part of your application, you should have experience with:
 
@@ -36,11 +36,11 @@ For the frontend part, you should have experience with:
   * TWIG templating engine (https://twig.symfony.com)
   * *npm* Node package manager (https://www.npmjs.com)
 
-## Download and install
+### Step 1: Download and install
 
 Ready? Now, [download and install your Hubleto](download-and-install).
 
-## Tutorial: How to create Hubleto app
+### Step 2: Simple tutorial
 
 Do you have your Hubleto running? Great!
 

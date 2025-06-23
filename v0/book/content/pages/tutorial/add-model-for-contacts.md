@@ -12,12 +12,12 @@ Each model in Hubleto app is located in `Models` sub-folder of your app's root f
 
 > **REMEMBER** | Hubleto uses [Symphony Eloquent](https://laravel.com/docs/11.x/eloquent) as the default database layer. It's flexible, secure and well-maintained.
 
-To make Hubleto model compatible with Eloquent, additional file has to be created in `Models/Eloquent` subfolder and this file must contain a class which extends from `\HubletoMain\Core\ModelEloquent` class.
+To make Hubleto model compatible with Eloquent, additional file has to be created in `Models/RecordManagers` subfolder and this file must contain a class which extends from `\HubletoMain\Core\RecordManagers` class.
 
 Summary... To add a model to your Hubleto app, e.g. model for contacts, you have to create two files:
 
   * ./apps/custom/MyApp/**Models/**Contact.php and
-  * ./apps/custom/MyApp/**Models/Eloquent/**Contact.php
+  * ./apps/custom/MyApp/**Models/RecordManagers/**Contact.php
 
 Let's show this in an example.
 
@@ -31,9 +31,9 @@ The first file we need to create is `./apps/custom/MyApp/Models/Contact.php`. It
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp\Models;
-class Contact extends \HubletoMain\Core\Model {
+class Contact extends \HubletoMain\Core\Models\Model {
   public string $table = 'my_app_contacts';
-  public string $eloquentClass = Eloquent\Contact::class;
+  public string $recordManagerClass = RecordManager\Contact::class;
   public function describeColumns(): array {
     return array_merge(parent::describeColumns(), [
       'first_name' => (new \ADIOS\Core\Db\Column\Varchar($this, $this->translate('First name')))->setRequired(),
@@ -58,13 +58,13 @@ Method `describeColumns()` returns an array defined as *array<string, \ADIOS\Cor
 
 Now we have the base model created. To be able to use the Eloquent features, we need to create a second file - a class specifying Eloquent relations in this model. For now, we will have no relations but they will come later.
 
-To create a model's equivalentt for Eloquent, create the second file `./apps/custom/MyApp/Models/Eloquent/Contact.php`.
+To create a model's equivalentt for Eloquent, create the second file `./apps/custom/MyApp/Models/RecordManagers/Contact.php`.
 
-###### ./apps/custom/MyApp/Models/Eloquent/Contact.php
+###### ./apps/custom/MyApp/Models/RecordManagers/Contact.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp\Models\Eloquent;
-class Contact extends \HubletoMain\Core\ModelEloquent {
+namespace HubletoApp\Custom\MyApp\Models\RecordManagers;
+class Contact extends \HubletoMain\Core\RecordManager {
   public $table = 'my_app_contacts';
   // Eloquent relations will get here later
 }

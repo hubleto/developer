@@ -25,8 +25,8 @@ The new Activity model needs to have at least the lookup column for the model th
 
 Check out the examples in the Deal app.
 
-- [Deal model](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/Deal.php) and [Eloquent class](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/Eloquent/Deal.php)
-- [DealActivity model](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/DealActivity.php) and [Eloquent class](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/Eloquent/DealActivity.php)
+- [Deal model](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/Deal.php) and [Eloquent class](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/RecordManagers/Deal.php)
+- [DealActivity model](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/DealActivity.php) and [Eloquent class](https://github.com/hubleto/main/blob/main/apps/community/Deals/Models/RecordManagers/DealActivity.php)
 
 > Don't forget to install the model
 

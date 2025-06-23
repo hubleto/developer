@@ -31,10 +31,10 @@ Create following controller in `./apps/custom/MyApp/Controllers/Contacts.php`:
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp\Controllers;
-class Contacts extends \HubletoMain\Core\Controller {
+class Contacts extends \HubletoMain\Core\Controllers\Controller {
   public function prepareView(): void {
     parent::prepareView();
-    $this->setView('@HubletoApp:External:MyCompany:MyApp/Contacts.twig');
+    $this->setView('@HubletoApp:Custom:MyApp/Contacts.twig');
   }
 }
 ```
@@ -45,7 +45,7 @@ Create following view in `./apps/custom/MyApp/Views/Contacts.twig`:
 
 ###### ./apps/custom/MyApp/Views/Contacts.twig**
 ```php
-<app-table string:model="HubletoApp/custom/MyApp/Models/Contact"></app-table>
+<app-table string:model="HubletoApp/Custom/MyApp/Models/Contact"></app-table>
 ```
 
 > **NOTE** Hubleto uses `<app-*` HTML notation to insert React components into the browser's DOM.

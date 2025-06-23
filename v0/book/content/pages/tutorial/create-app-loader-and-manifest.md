@@ -6,15 +6,45 @@ An app is a basic functional element of Hubleto. Every functionality available i
   <iframe src="https://www.youtube.com/embed/EDwpRQBVIuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Where are apps stored?
+## Folder structure
 
-There are three types of Hubleto apps: community, premium, external or custom. See [this page](../apps) to learn more about their differences.
+First let's explain the folder structure of the Hubleto app. It's relatively simple and follows the MVC principle.
 
-*Community* apps are stored in `./apps/community`. To create them, it's enough to create an app folder here. *External* and *premium* apps are stored in their own repositories and they will need to have a repository configured. To learn how to configure app repositories, check [advanced app development tutorial](../advanced-development).
+###### Hubleto folder structure
+```
+my-app/
+├─ apps/
+│  ├─ community/
+│  │  ├─ Calendar/
+│  │  ├─ Contacts/
+│  │  ├─ ...
+│  ├─ custom/
+│  │  ├─ MyApp/                <-- your app goes here
+│  │  │  ├─ Components/        <-- your app's React components
+│  │  │  ├─ Controllers/       <-- your app's controllers
+│  │  │  ├─ Models/            <-- your app's models
+│  │  │  │  ├─ RecordManagers/ <-- your app's record managers
+│  │  │  ├─ Views/             <-- your app's views
+│  │  │  ├─ Loader.php         <-- your app's PHP loader
+│  │  │  ├─ Loader.tsx         <-- your app's React loader
+│  │  │  └─ manifest.yaml      <-- your app's manifest
+├─ assets/
+├─ lang/
+├─ src/
+├─ upload/
+├─ vendor/
+├─ .htaccess
+├─ ConfigEnv.php
+└─ index.php
+```
 
-> In this tutorial, we will be creating a **custom app**. We will use `MyCompany` as the vendor name and `MyApp` as the application name.
+As you can see, there are folders for *models*, *views*, *controllers* and there are also scripts for loading app, both for PHP (backend) and React (frontend) side.
 
-So, our app will be located in `./apps/custom/MyApp` folder. We will always use paths relative to your Hubleto's root folder.
+## Prepare the folders
+
+In this tutorial, we will be creating a **custom app** called `MyApp`. So, our app will be located in `./apps/custom/MyApp` folder and its namespace will be `\HubletoApp\Custom\MyApp`.
+
+> **NOTE** | To learn how to configure external app repositories, check [advanced app development tutorial](../advanced-development).
 
 ## Create app loader
 
@@ -48,7 +78,9 @@ highlight: Very usefull business app.
 
 ## Install empty app
 
-Now, you can install this empty app into your project. Do this by running the `php hubleto app install` command as follows:
+You have created an empty app `MyApp` which does nothing, but it can already be included in your Hubleto project.
+
+To do so, you must **install this empty app**. Do this by running the `php hubleto app install` command as follows:
 
 ```
 php hubleto app install \HubletoApp\Custom\MyApp

@@ -78,26 +78,63 @@ class Dashboard extends \HubletoMain\Core\Controller {
 
 This controller will prepare a variable `now`, stored in the controller's property `viewParams` and sets the view to be rendered to `@HubletoApp:External:MyCompany:MyApp/Dashboard.twig`. All this is done in the `prepareView()` method.
 
+Doublecheck your app's folders and files, you should have:
+
+###### Your app's folders and files
+```
+my-app/
+└─ apps/
+   └─ custom/
+      └─ MyApp/
+         ├─ Controllers/
+         │  └─ Dashbaoard.php
+         ├─ Loader.php
+         └─ manifest.yaml
+```
+
 ### Referencing views
 
-Setting a view to be rendered is done by controller's `setView()` method which takes a reference to the view as an argument.
+Setting a view to be rendered is done by controller's `setView()` method which takes a reference to the view as an argument. The reference to the view has a specific pattern derived from the app's namespace. Principles of generating the reference to the view are following:
 
-Our view is referenced by `@HubletoApp:External:MyCompany:MyApp/Dashboard.twig`.
+  1. Start with `@`.
+  2. Mimic the app's namespace (in our case the `\HubletoApp\Custom\MyApp') and replace all `\` with `:`.
+  3. Add `/`.
+  4. Add the view file, most common a file ending with `.twig` extension.
 
-First part of this reference (`@HubletoApp:External:MyCompany:MyApp`) contains a reference to the app where the view is available. Simply said, this reference is always the same as the app's namespace, just using colons (`:`) instead of slashes (`\`). This reference always points to the `Views` folder in your app.
+So, our new view is referenced by `@HubletoApp:Custom:MyApp/Dashboard.twig`.
 
-Second part is the relative path of the file containing the view. In our case, it is `Dashboard.twig`.
+Explained once more, the first part of this reference (`@HubletoApp:Custom:MyApp`) contains a reference to the app where the view is available. Simply said, this reference is always the same as the app's namespace, just using colons (`:`) instead of slashes (`\`). This reference always points to the `Views` folder in your app. Then, the second part is the relative path of the file containing the view. In our case, it is `Dashboard.twig`.
 
 ## Add view
 
-Now, as we understand how the views are referenced we know that we need to create `./apps/custom/MyApp/Views/Dashboard.twig` file with the following content:
+Now, as we understand how the views are referenced, we know that we need to create `./apps/custom/MyApp/Views/Dashboard.twig` file with the following content:
 
 ###### ./apps/custom/MyApp/Views/Dashboard.twig
 ```html
 Hello. Current date and time is <b>{{ '{{' }} viewParams.now {{ '}}' }}</b>.
 ```
 
+Doublecheck your app's folders and files, you should have:
+
+###### Your app's folders and files
+```
+my-app/
+└─ apps/
+   └─ custom/
+      └─ MyApp/
+         ├─ Controllers/
+         │  └─ Dashbaoard.php
+         ├─ Views/
+         │  └─ Dashbaoard.twig
+         ├─ Loader.php
+         └─ manifest.yaml
+```
+
 > **VISUAL_CHECK** | Now you should be able to navigate to `http://localhost/my-hubleto/my-app`  and see the content of Dashboard.twig.
 > <img src="{{ bookRootUrl }}/content/assets/images/my-app-dashboard.png">
+
+## Conclusion
+
+We have learn how to create controllers and their views. And, we also learned how to configure URL routing for our new controller and view.
 
 Well done! You are becoming a real Hubleto developer. In the next tutorial, we'll learn how to create a very simple addressbook.

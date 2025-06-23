@@ -18,8 +18,9 @@ Once done, your app will contain a simple addressbook for managing contacts and 
 
 This table and form were rendered just by creating this simple view:
 
+###### ./apps/custom/MyApp/Views/Contacts.twig
 ```html
-<app-table string:model="HubletoApp/custom/MyApp/Models/Contact"></app-table>
+<app-table string:model="HubletoApp/Custom/MyApp/Models/Contact"></app-table>
 ```
 
 Only a single line of HTML code and you get full-featured tables and forms to manage your data.
