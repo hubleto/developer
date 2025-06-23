@@ -68,6 +68,19 @@ tableOfContents:
       - page: advanced-development/core-architecture
         children:
           - page: advanced-development/core-architecture/user-management-and-authentication
+      - page: advanced-development/dynamic-routes
+      - page: advanced-development/data-management
+        children:
+          - page: advanced-development/data-management/adding-custom-columns
+          - page: advanced-development/data-management/create-own-data-grid-table-component
+      - page: advanced-development/customizing-ui
+        children:
+          - page: advanced-development/customizing-ui/customizing-sidebar
+          - page: advanced-development/customizing-ui/view
+          - page: advanced-development/customizing-ui/component
+          - page: advanced-development/customizing-ui/forms
+          - page: advanced-development/customizing-ui/special-inputs
+          - page: advanced-development/customizing-ui/skin
       - page: advanced-development/description-api
         children:
           - page: advanced-development/description-api/table
@@ -81,17 +94,9 @@ tableOfContents:
           - page: advanced-development/core-classes/controller
           - page: advanced-development/core-classes/router
           - page: advanced-development/core-classes/permissions
-      - page: advanced-development/customizing-ui
+      - page: advanced-development/miscellaneous
         children:
-          - page: advanced-development/customizing-ui/customizing-sidebar
-          - page: advanced-development/customizing-ui/view
-          - page: advanced-development/customizing-ui/component
-          - page: advanced-development/customizing-ui/forms
-          - page: advanced-development/customizing-ui/special-input-types
-          - page: advanced-development/customizing-ui/skin
-      - page: advanced-development/misc-features
-        children:
-          - page: advanced-development/misc-features/dashboard
+          - page: advanced-development/miscellaneous/dashboard
       - page: adios-framework
   - page: apps
     icon: fas fa-bolt

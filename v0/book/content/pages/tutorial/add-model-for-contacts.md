@@ -51,7 +51,7 @@ The code above contains:
 
 Method `describeColumns()` returns an array defined as *array<string, \ADIOS\Core\Db\Column>*. The keys of this array are names of the columns as they will be present in the SQL table and values are objects of [`\ADIOS\Core\Db\Column` class](https://github.com/wai-blue/adios/blob/main/src/Core/Db/Column.php).
 
-> **IMPORTANT** | Description of columns is very important part of Hubleto app. We recommend reading [this guide](../advanced-development/understanding-columns-in-model) to understand *Hubleto columns* much better.
+> **IMPORTANT** | Description of columns is very important part of Hubleto app. We recommend reading [this guide](../advanced-development/data-management/understanding-columns-in-model) to understand *Hubleto columns* much better.
 
 
 ### Specify model's equivalent for Eloquent

@@ -1,9 +1,10 @@
 # Customizing UI
 
-This page is under development. Visit us later.
-
-Topics to cover:
-  * custom tables
-  * custom forms
-  * custom inputs
-  * custom UI: React components, skins
+| Topics                                                    |
+| --------------------------------------------------------- |
+| [Components and Loader.tsx](customizing-ui/component)     |
+| [Customizing sidebar](customizing-ui/customizing-sidebar) |
+| [Form Component](customizing-ui/forms) |
+| [Skin](customizing-ui/skin) |
+| [Special inputs](customizing-ui/special-inputs) |
+| [View](customizing-ui/view) |

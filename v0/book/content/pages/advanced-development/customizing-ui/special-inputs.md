@@ -1,4 +1,4 @@
-# Special Input Component Types
+# Special inputs
 
 ### Tags Input
 

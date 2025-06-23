@@ -32,7 +32,7 @@ This will create an empty class prepared for your customizations.
 
 ## Register React component
 
-If you will want to use your new table using `<app-my-custom-table>` syntax in your app's view (read [more about MVC principles in Hubleto](../../tutorial/add-route-controller-and-view)], you need to register your component as a React component.
+If you will want to use your new table using `<app-my-custom-table>` syntax in your app's view (read [more about MVC principles in Hubleto](../../../tutorial/add-route-controller-and-view)], you need to register your component as a React component.
 
 This is done in your apps's entry .tsx file which is by default `MyApp/Loader.tsx`. Add following lines there:
 
