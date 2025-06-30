@@ -40,7 +40,7 @@ Examples:
 
 Create your first Hubleto app with just few terminal commands.
 
-First, **download the [latest Hubleto release](https://www.hubleto.com/en/install)** and then run following commands in your terminal.
+First, **download the [latest Hubleto release](https://www.hubleto.com/en/download)** and then run following commands in your terminal.
 
 ###### Init the project
 ```bash

@@ -21,7 +21,7 @@ To run Hubleto, you will need:
 
 | Step                     | Command                                      |
 | ------------------------ | -------------------------------------------- |
-| Download Hubleto CE      | https://www.hubleto.com/en/install           |
+| Download Hubleto CE      | https://www.hubleto.com/en/download           |
 | Unzip downloaded package | ```unzip hubleto-[RELEASE_VERSION]-ce.zip``` |
 | Initialize project       | ```php hubleto init```                       |
 Table: Steps to install community edition of Hubleto

@@ -1,9 +1,0 @@
-namespace: HubletoApp\Custom\MyApp
-rootUrlSlug: my-app
-name: My App
-icon: fas fa-home
-author:
-  name: "Mike Superdev"
-  nick: "mike.superdev"
-  company: "best.devs"
-highlight: Very usefull business app.
