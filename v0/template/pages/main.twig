@@ -2,39 +2,12 @@
 
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel='shortcut icon' href='{{ templateRootUrl }}/assets/images/logo-hubleto.png'>
-  <title>Hubleto | Open source CRM and ERP | Developer's guide</title>
-  <link rel="stylesheet" type="text/css" href="{{ templateRootUrl }}/assets/css/book.css">
-  <link rel="stylesheet" type="text/css" href="{{ templateRootUrl }}/assets/css/fontawesome-6.6.css">
-  <link rel="stylesheet" type="text/css" href="{{ templateRootUrl }}/assets/css/atom-one-dark.min.css">
-  <script src="{{ templateRootUrl }}/assets/js/highlight.min.js"></script>
-
-  <style>
-    @font-face {
-      font-family: 'Fredoka-Regular';
-      font-style: normal;
-      font-weight: 500;
-      src: url({{ templateRootUrl }}/assets/Fredoka/static/Fredoka-Regular.ttf) format('truetype');
-    }
-
-    .logo-font {
-      font-family: "Fredoka-Regular", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 500;
-      font-style: normal;
-    }
-  </style>
-
-  {{ elements.htmlHead|raw }}
+  {% include('elements/html-head.twig') %}
 </head>
 <body>
-  {{ elements.header|raw }}
-  {{ elements.sidebar|raw }}
+  {% include('elements/header.twig') %}
+  {% include('elements/sidebar.twig') %}
+
   <!-- Content -->
   <div class="content">
     {{ content|raw }}
@@ -55,8 +28,9 @@
       </div>
     </div>
   {% endif %}
-  {{ elements.onThisPage|raw }}
-  {{ elements.footer|raw }}
+
+  {% include('elements/on-this-page.twig') %}
+  {% include('elements/footer.twig') %}
 
   <script src="{{ guideRootUrl }}/node_modules/preline/dist/preline.js"></script>
 
