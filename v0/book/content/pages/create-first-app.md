@@ -2,23 +2,7 @@
 
 An app is a basic functional element of Hubleto. Every functionality available in Hubleto is thus built using apps.
 
-> **NEW FEATURE** | You can now create app with [CLI agent](cli-agent)
-
-> &nbsp;
-
-> Run following command in your project's root folder:
-
-> `php hubleto app create HubletoApp\Custom\MyFirstApp`
-
-> &nbsp;
-
-> **This will create default app with some functional examples.**
-
-An app is a custom class which extends from [`\HubletoMain\Core\App`](https://github.com/hubleto/main/blob/main/src/core/App.php) class.
-
-An app is a basic functional element of Hubleto. And so, every functionality available in Hubleto is built around Hubleto apps.
-
-## How to develop Hubleto apps
+## Get prepared
 
 It's realy easy to start developing Hubleto apps but before that check the list below if you have all things ready.
 
@@ -36,12 +20,26 @@ For the frontend part, you should have experience with:
   * TWIG templating engine (https://twig.symfony.com)
   * *npm* Node package manager (https://www.npmjs.com)
 
-### Step 1: Download and install
+## Download Hubleto
 
 Ready? Now, [download and install your Hubleto](download-and-install).
 
-### Step 2: Simple tutorial
+## Init your project
 
-Do you have your Hubleto running? Great!
+With Hubleto downloaded and all other components (PHP, webserver and SQL engine) ready, init the project by running following command in your project's folder:
 
-Now, start [this tutorial](tutorial/create-app-loader-and-manifest) to learn how to create your first Hubleto app.
+```
+php hubleto init
+```
+
+Carefully follow instructions in the terminal. You might be prompted to perform additional actions.
+
+## Create Hubleto app
+
+Creating Hubleto app is as easy as running following command in your project's root folder:
+
+```
+php hubleto app create \HubletoApp\Custom\MyApp
+```
+
+Carefully follow instructions in the terminal. You might be prompted to perform additional actions.

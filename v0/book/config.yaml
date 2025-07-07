@@ -30,12 +30,15 @@ tableOfContents:
   - page: create-first-app
     icon: fas fa-star
     prev: download-and-install
-    next: tutorial/create-app-loader-and-manifest
+    next: basics/about-apps
     children:
-      - page: tutorial/create-app-loader-and-manifest
+      - page: basics/about-apps
+        next: basics/app-folder-structure
+      - page: basics/app-folder-structure
+        prev: basics/about-apps
         next: tutorial/add-route-controller-and-view
       - page: tutorial/add-route-controller-and-view
-        prev: tutorial/create-app-loader-and-manifest
+        prev: basics/app-folder-structure
         next: tutorial/create-simple-addressbook
       - page: tutorial/create-simple-addressbook
         prev: tutorial/add-route-controller-and-view
@@ -81,6 +84,7 @@ tableOfContents:
           - page: advanced-development/customizing-ui/forms
           - page: advanced-development/customizing-ui/special-inputs
           - page: advanced-development/customizing-ui/skin
+          - page: advanced-development/customizing-ui/material-ui
       - page: advanced-development/description-api
         children:
           - page: advanced-development/description-api/table
