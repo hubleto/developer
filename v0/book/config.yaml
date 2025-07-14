@@ -98,6 +98,7 @@ tableOfContents:
           - page: advanced-development/core-classes/controller
           - page: advanced-development/core-classes/router
           - page: advanced-development/core-classes/permissions
+      - page: advanced-development/crons
       - page: advanced-development/hooks
         children:
           - page: advanced-development/hooks/introduction
