@@ -8,7 +8,7 @@
         <div class="step-title">{{ step.title|raw }}</div>
         <div class="step-description">{{ markdown(step.description)|raw }}</div>
       </div>
-      {% if step.example %} <span class="step-example"><pre>{{ step.example|raw }}</pre></span> {% endif %}
+      {% if step.example %} <span class="step-example">{{ step.example|raw }}</span> {% endif %}
     </div>
   {% endfor %}
 </div>
