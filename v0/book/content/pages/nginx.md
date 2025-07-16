@@ -2,7 +2,7 @@
 
 Configuration of local development environment with Nginx
 
-If you have installed Hubleto using [this](download-and-install) guide and you are using Nginx, you will probable run into a problem right after you sign in into Hubleto and you will start using it.
+If you have installed Hubleto using [this](install) guide and you are using Nginx, you will probable run into a problem right after you sign in into Hubleto and you will start using it.
 
 **By default, your project will not respond to SEO friendly URLs becuase rewriting will not work.**
 

@@ -17,7 +17,7 @@ There are many ways you can help us improve Hubleto. Some of them are mentioned 
 There are several options to contribute:
 
   * [Fork a Github](contribute) repo and develop [community apps](apps/community) or even Hubleto core.
-  * [Download](download-and-install) your copy of Hubleto, [develop your apps](apps/external) and publish them to [Hubleto app store](publish-app).
+  * [Install](install) your copy of Hubleto, [develop your apps](apps/external) and publish them to [Hubleto app store](publish-app).
   * Report a bug via [Github issues](https://github.com/hubleto/main/issues).
 
 Read [this page](contribute) to learn more about contribution.

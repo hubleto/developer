@@ -7,8 +7,8 @@ Hubleto developer guide
   <br/>
   <b>In only few minutes</b>, you can have your development environment with lots of <a href="apps">apps</a> and popular libraries ready.<br/>
   <br/>
-  Just <a href="download-and-install">download</a>, unzip and then it's easy like this:
-  <a href="download-and-install" style="text-decoration:none"><pre><code>php hubleto init</code></pre></a>
+  <a href="install" style="text-decoration:none"><pre><code>/var/www/html/hubleto > composer create-project hubleto/project .
+/var/www/html/hubleto > php hubleto init</code></pre></a>
   <div class="text-gray-400 text-xs text-right">Example usage of <a href="cli-agent">CLI agent</a></div>
 </div>
 
@@ -22,7 +22,7 @@ Hubleto developer guide
     <div class="card-header bg-yellow-50">Introduction</div>
     <div class="card-body flex flex-col gap-2">
       <a href="about" class="btn btn-white block"><span class="text">About</span></a>
-      <a href="download-and-install" class="btn btn-white block"><span class="text">Download & install</span></a>
+      <a href="install" class="btn btn-white block"><span class="text">Install</span></a>
       <a href="benefits" class="btn btn-white block"><span class="text">Benefits</span></a>
       <a href="advanced-development/core-architecture" class="btn btn-white block"><span class="text">Core architecture</span></a>
     </div>
@@ -31,7 +31,7 @@ Hubleto developer guide
   <div class="card border-green-300">
     <div class="card-header bg-green-50">Development</div>
     <div class="card-body flex flex-col gap-2">
-      <a href="download-and-install" class="btn btn-white block">
+      <a href="install" class="btn btn-white block">
         <span class="text flex-col items-start"><b>Download & install</b><small>It's free</small></span>
       </a>
       <a href="cli-agent" class="btn btn-white block">
