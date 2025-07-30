@@ -19,15 +19,34 @@ To run Hubleto, you will need:
 
 ## Install using `composer`
 
-The easiest way is to install using `composer create-project`.
+The easiest way is to install using `composer create-project`. There are two types of installations:
 
-| Step                                  | Command                                     |
-| ------------------------------------- | ------------------------------------------- |
-| Run composer in your project's folder | `composer create-project hubleto/project .` |
-| Initialize project                    | `php hubleto init`                          |
-Table: Steps to install Hubleto using `composer`
+  * installation of the production-ready ERP
+  * installation of the development environment
+
+### Production-ready ERP
+
+| Step                                  | Command                                 |
+| ------------------------------------- | --------------------------------------- |
+| Run composer in your project's folder | `composer create-project hubleto/erp .` |
+| Initialize ERP                        | `php hubleto init`                      |
+Table: Steps to install production-ready Hubleto ERP using `composer`
+
+### Development environment
+
+| Step                                  | Command                                          |
+| ------------------------------------- | ------------------------------------------------ |
+| Run composer in your project's folder | `composer create-project hubleto/dev -s="dev" .` |
+| Install TypeScript libraries          | `npm install`                                    |
+| Build JS and CSS assets               | `npm run build`                                  |
+| Initialize database and folders       | `php hubleto init`                               |
+Table: Steps to install development environment for Hubleto using `composer`
+
+For advanced configuration of the development environment see https://github.com/hubleto/dev.
 
 ## Install from .zip package
+
+Zip package contains production-ready Hubleto ERP.
 
 | Step                     | Command                                  |
 | ------------------------ | ---------------------------------------- |
