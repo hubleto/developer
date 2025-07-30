@@ -109,6 +109,7 @@ tableOfContents:
       - page: advanced-development/miscellaneous
         children:
           - page: advanced-development/miscellaneous/dashboard
+          - page: advanced-development/miscellaneous/hubleto-chatgpt
       - page: adios-framework
   - page: apps
     icon: fas fa-bolt
