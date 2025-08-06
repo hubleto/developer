@@ -36,7 +36,7 @@ Table: Steps to install production-ready Hubleto ERP using `composer`
 
 | Step                                  | Command                                          |
 | ------------------------------------- | ------------------------------------------------ |
-| Run composer in your project's folder | `composer create-project hubleto/dev -s="dev" .` |
+| Run composer in your project's folder | `composer create-project hubleto/dev . dev-main` |
 | Install TypeScript libraries          | `npm install`                                    |
 | Build JS and CSS assets               | `npm run build`                                  |
 | Initialize database and folders       | `php hubleto init`                               |

@@ -30,6 +30,8 @@ tableOfContents:
       - page: nginx
   - page: cli-agent
     icon: fas fa-terminal
+    children:
+      - page: cli/init
   - page: create-first-app
     icon: fas fa-star
     prev: install
