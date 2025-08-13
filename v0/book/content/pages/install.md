@@ -4,6 +4,8 @@ Use Hubleto for your projects.
 
 Installation takes only a few minutes and it's super easy.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xgzfHUWl-TM?si=bVSb1GMwduJTi-7J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Prerequisities
 
 To run Hubleto, you will need:
