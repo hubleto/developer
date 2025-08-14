@@ -28,23 +28,15 @@ The easiest way is to install using `composer create-project`. There are two typ
 
 ### Production-ready ERP
 
-| Step                                  | Command                                 |
-| ------------------------------------- | --------------------------------------- |
-| Run composer in your project's folder | `composer create-project hubleto/erp .` |
-| Initialize ERP                        | `php hubleto init`                      |
+| Step               | Command                                 |
+| ------------------ | --------------------------------------- |
+| Create the project | `composer create-project hubleto/erp .` |
+| Initialize ERP     | `php hubleto init`                      |
 Table: Steps to install production-ready Hubleto ERP using `composer`
 
 ### Development environment
 
-| Step                                  | Command                                          |
-| ------------------------------------- | ------------------------------------------------ |
-| Run composer in your project's folder | `composer create-project hubleto/dev . dev-main` |
-| Install TypeScript libraries          | `npm install`                                    |
-| Build JS and CSS assets               | `npm run build`                                  |
-| Initialize database and folders       | `php hubleto init`                               |
-Table: Steps to install development environment for Hubleto using `composer`
-
-For advanced configuration of the development environment see https://github.com/hubleto/dev.
+Instructions to prepare the development environment are at https://github.com/hubleto/erp.
 
 ## Install from .zip package
 
