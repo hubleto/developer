@@ -86,7 +86,8 @@ In the Loader class of your app in the `init()` method you need to register your
 ###### .\apps\external\MyApp\Loader.php
 
 ```php
-$this->main->calendarManager->addCalendar(Calendar::class);
+$calendarManager = $this->main->load(\HubletoApp\Community\Calendar\Manager::class);
+$calendarManager->addCalendar($this, Calendar::class);
 ```
 
 ## Create an API for events
