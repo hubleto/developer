@@ -75,10 +75,12 @@ tableOfContents:
     children:
       - page: docs/apps
         children:
+          - page: docs/apps/how-to-create-app
           - page: docs/apps/folder-structure
           - page: docs/apps/types
           - page: docs/apps/manifest
           - page: docs/apps/loader
+          - page: docs/apps/how-to-install-app
           - page: docs/apps/publish-external-app
       - page: docs/routing
         children:
