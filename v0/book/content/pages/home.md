@@ -26,7 +26,6 @@ Hubleto developer guide
       <a href="advanced-development/core-architecture" class="btn btn-white block"><span class="text">Core architecture</span></a>
     </div>
   </div>
-
   <div class="card border-green-300">
     <div class="card-header bg-green-50">Development</div>
     <div class="card-body flex flex-col gap-2">
@@ -47,7 +46,6 @@ Hubleto developer guide
       </a>
     </div>
   </div>
-
   <div class="card border-blue-300">
     <div class="card-header bg-blue-50">Application repositories</div>
     <div class="card-body flex flex-col gap-2">
@@ -62,7 +60,6 @@ Hubleto developer guide
       </a>
     </div>
   </div>
-
   <div class="card border-stone-300">
     <div class="card-header bg-stone-50">Join us</div>
     <div class="card-body flex flex-col gap-2">

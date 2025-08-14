@@ -14,14 +14,14 @@ tableOfContents:
       - page: about
         children:
           - page: benefits
-      - page: improve
-        children:
-          - page: contribute
-            icon: fas fa-terminal
-          - page: partnership
-            icon: fas fa-handshake-angle
-          - page: licenses
-            icon: fas fa-stamp
+      - page: join-us
+      #   children:
+      #     - page: contribute
+      #       icon: fas fa-terminal
+      #     - page: partnership
+      #       icon: fas fa-handshake-angle
+      #     - page: licenses
+      #       icon: fas fa-stamp
   - page: install
     icon: fas fa-download
     prev: features
@@ -70,49 +70,88 @@ tableOfContents:
       - page: tutorial/more-reading
         prev: tutorial/writing-tests
         next: advanced-development
-  - page: advanced-development
-    icon: fas fa-medal
+  - page: docs
+    icon: fas fa-book
     children:
-      - page: advanced-development/core-architecture
+      - page: docs/apps
         children:
-          - page: advanced-development/core-architecture/user-management-and-authentication
-      - page: advanced-development/dynamic-routes
-      - page: advanced-development/data-management
+          - page: docs/apps/folder-structure
+          - page: docs/apps/types
+          - page: docs/apps/manifest
+          - page: docs/apps/loader
+          - page: docs/apps/publish-external-app
+      - page: docs/routing
         children:
-          - page: advanced-development/data-management/adding-custom-columns
-          - page: advanced-development/data-management/create-own-data-grid-table-component
-      - page: advanced-development/customizing-ui
+          - page: docs/routing/defining-routes
+          - page: docs/routing/accessing-route-params
+          - page: docs/routing/routes-with-variables
+      - page: docs/models
         children:
-          - page: advanced-development/customizing-ui/customizing-sidebar
-          - page: advanced-development/customizing-ui/view
-          - page: advanced-development/customizing-ui/component
-          - page: advanced-development/customizing-ui/forms
-          - page: advanced-development/customizing-ui/special-inputs
-          - page: advanced-development/customizing-ui/skin
-          - page: advanced-development/customizing-ui/material-ui
-      - page: advanced-development/description-api
+          - page: docs/models/columns
+          - page: docs/models/description-api
+          - page: docs/models/relations
+          - page: docs/models/record-manager
+      - page: docs/views
         children:
-          - page: advanced-development/description-api/table
-          - page: advanced-development/description-api/form
-      - page: advanced-development/core-classes
-        icon: fas fa-code
+          - page: docs/views/namespaces
+          - page: docs/views/twig
+      - page: docs/controllers
         children:
-          - page: advanced-development/core-classes/loader
-          - page: advanced-development/core-classes/model
-          - page: advanced-development/core-classes/eloquent
-          - page: advanced-development/core-classes/controller
-          - page: advanced-development/core-classes/router
-          - page: advanced-development/core-classes/permissions
-      - page: advanced-development/crons
-      - page: advanced-development/hooks
+          - page: docs/controllers/html-output
+          - page: docs/controllers/json-output
+      - page: docs/ui
         children:
-          - page: advanced-development/hooks/introduction
-          - page: advanced-development/hooks/events
-      - page: advanced-development/miscellaneous
+          - page: docs/ui/creating-custom-components
+          - page: docs/ui/tables
+          - page: docs/ui/forms
+          - page: docs/ui/inputs
+      - page: docs/testing
         children:
-          - page: advanced-development/miscellaneous/dashboard
-          - page: advanced-development/miscellaneous/hubleto-chatgpt
-      - page: adios-framework
+          - page: docs/testing/writing-tests
+          - page: docs/testing/running-tests
+      - page: advanced-development
+        icon: fas fa-medal
+        children:
+          - page: advanced-development/core-architecture
+            children:
+              - page: advanced-development/core-architecture/user-management-and-authentication
+          - page: advanced-development/dynamic-routes
+          - page: advanced-development/data-management
+            children:
+              - page: advanced-development/data-management/adding-custom-columns
+              - page: advanced-development/data-management/create-own-data-grid-table-component
+          - page: advanced-development/customizing-ui
+            children:
+              - page: advanced-development/customizing-ui/customizing-sidebar
+              - page: advanced-development/customizing-ui/view
+              - page: advanced-development/customizing-ui/component
+              - page: advanced-development/customizing-ui/forms
+              - page: advanced-development/customizing-ui/special-inputs
+              - page: advanced-development/customizing-ui/skin
+              - page: advanced-development/customizing-ui/material-ui
+          - page: advanced-development/description-api
+            children:
+              - page: advanced-development/description-api/table
+              - page: advanced-development/description-api/form
+          - page: advanced-development/core-classes
+            icon: fas fa-code
+            children:
+              - page: advanced-development/core-classes/loader
+              - page: advanced-development/core-classes/model
+              - page: advanced-development/core-classes/eloquent
+              - page: advanced-development/core-classes/controller
+              - page: advanced-development/core-classes/router
+              - page: advanced-development/core-classes/permissions
+          - page: advanced-development/crons
+          - page: advanced-development/hooks
+            children:
+              - page: advanced-development/hooks/introduction
+              - page: advanced-development/hooks/events
+          - page: advanced-development/miscellaneous
+            children:
+              - page: advanced-development/miscellaneous/dashboard
+              - page: advanced-development/miscellaneous/hubleto-chatgpt
+          - page: adios-framework
   - page: apps
     icon: fas fa-bolt
     children:
