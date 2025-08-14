@@ -17,6 +17,10 @@ MyApp/
 │  ├─ RecordManagers
 │  │  └─ Contact.php
 │  └─ Contact.php
+├─ Integrations/             # App's integrations
+│  ├─ AppMenu.php
+│  ├─ ProductTypes.php
+│  └─ Settings.php
 ├─ Views/                    # App's views
 │  └─ Home.twig
 ├─ Tests/                    # App's tests (PHPUnit)

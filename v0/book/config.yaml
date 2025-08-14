@@ -107,6 +107,7 @@ tableOfContents:
           - page: docs/ui/tables
           - page: docs/ui/forms
           - page: docs/ui/inputs
+      - page: docs/integrations
       - page: docs/testing
         children:
           - page: docs/testing/writing-tests

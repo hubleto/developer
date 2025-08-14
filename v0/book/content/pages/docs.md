@@ -58,6 +58,12 @@
     </div>
   </div>
   <div class="card border-stone-300">
+    <div class="card-header bg-stone-50">Integrations</div>
+    <div class="card-body flex flex-col gap-2">
+      <a href="docs/integrations" class="btn btn-white block"><span class="text">Introduction</span></a>
+    </div>
+  </div>
+  <div class="card border-stone-300">
     <div class="card-header bg-stone-50">Testing</div>
     <div class="card-body flex flex-col gap-2">
       <a href="docs/testing" class="btn btn-white block"><span class="text">Introduction</span></a>
