@@ -49,8 +49,8 @@
   table thead th { @apply border-b border-slate-200 font-bold text-left p-2 bg-white text-sm; }
   table + p { @apply text-slate-400 mb-4 text-xs pt-0 pb-4; }
 
-  blockquote { @apply m-8 p-4 border border-primary shadow max-w-xl border rounded; }
-  blockquote p { @apply p-0 font-serif text-primary tracking-wider !leading-7; }
+  blockquote { @apply m-8 p-4 border border-primary shadow max-w-xl border rounded before:text-primary before:p-4 before:inline-block before:rounded before:content-['☝'] before:bg-primary/50 before:text-white before:mb-2; }
+  blockquote p { @apply p-0 font-serif tracking-wider !leading-7; }
 
   .content { @apply p-8 flex-1 max-w-3xl mb-4 sm:ml-0 md:ml-72 mr-4 lg:mr-60  space-y-1; }
   .content img { @apply mt-4 border border-slate-200 max-w-xl p-2 bg-slate-100 text-xs; }
