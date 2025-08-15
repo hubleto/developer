@@ -1,4 +1,4 @@
-# `php hubleto init`
+# php hubleto init
 
 `php hubleto init` is the first Hubleto-CLI command you will use.
 

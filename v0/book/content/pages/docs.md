@@ -29,6 +29,7 @@
       <a href="docs/models/description-api" class="btn btn-white block"><span class="text">Description API</span></a>
       <a href="docs/models/relations" class="btn btn-white block"><span class="text">Relations</span></a>
       <a href="docs/models/record-manager" class="btn btn-white block"><span class="text">Record manager</span></a>
+      <a href="docs/models/data-transfer-objects" class="btn btn-white block"><span class="text">Data Transfer Objects (DTO)</span></a>
     </div>
   </div>
   <div class="card border-blue-300">

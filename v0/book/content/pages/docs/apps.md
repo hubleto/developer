@@ -1,10 +1,12 @@
 # Apps
 
-Apps are like bundles of functionality.
+Apps are packages containg some functionality.
 
 A Hubleto app is a bundle or package which contains a functionality covering specific goal. For example, there are apps like `Customers`, `Contacts`, `Campaings`, `Deals`, `Projects`, `Tasks` or others.
 
 There are several [types](apps/types) of apps: community, custom or external.
+
+> **NOTE** This is developer's documentation. If you want to read about apps included in the default Hubleto package, read [this](../apps) or [this](https://help.hubleto.com/v0/en/apps/community).
 
 ## Create an app
 
