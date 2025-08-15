@@ -32,44 +32,6 @@ tableOfContents:
     icon: fas fa-terminal
     children:
       - page: cli/init
-  - page: create-first-app
-    icon: fas fa-star
-    prev: install
-    next: basics/about-apps
-    children:
-      - page: basics/about-apps
-        next: basics/app-folder-structure
-      - page: basics/app-folder-structure
-        prev: basics/about-apps
-        next: tutorial/add-route-controller-and-view
-      - page: tutorial/add-route-controller-and-view
-        prev: basics/app-folder-structure
-        next: tutorial/create-simple-addressbook
-      - page: tutorial/create-simple-addressbook
-        prev: tutorial/add-route-controller-and-view
-        next: tutorial/add-model-for-contacts
-        children:
-        - page: tutorial/add-model-for-contacts
-          prev: tutorial/create-simple-addressbook
-          next: tutorial/add-route-controller-and-view-for-managing-contacts
-        - page: tutorial/add-route-controller-and-view-for-managing-contacts
-          prev: tutorial/add-model-for-contacts
-          next: tutorial/add-1-n-relation
-        - page: tutorial/add-1-n-relation
-          prev: tutorial/add-route-controller-and-view-for-managing-contacts
-          next: tutorial/customize-tables-and-forms
-      - page: tutorial/customize-tables-and-forms
-        prev: tutorial/add-1-n-relation
-        next: tutorial/custom-ui-components
-      - page: tutorial/custom-ui-components
-        prev: tutorial/customize-tables-and-forms
-        next: tutorial/writing-tests
-      - page: tutorial/writing-tests
-        prev: tutorial/custom-ui-components
-        next: tutorial/more-reading
-      - page: tutorial/more-reading
-        prev: tutorial/writing-tests
-        next: advanced-development
   - page: docs
     icon: fas fa-book
     children:
@@ -107,7 +69,7 @@ tableOfContents:
           - page: docs/ui/tables
           - page: docs/ui/forms
           - page: docs/ui/inputs
-      - page: docs/integrations
+      - page: docs/extendibles
       - page: docs/testing
         children:
           - page: docs/testing/writing-tests
@@ -155,6 +117,24 @@ tableOfContents:
               - page: advanced-development/miscellaneous/dashboard
               - page: advanced-development/miscellaneous/hubleto-chatgpt
           - page: adios-framework
+  - page: tutorials
+    icon: fa-solid fa-graduation-cap
+    children:
+      - page: tutorials/hello-world-app
+        icon: fas fa-star
+        children:
+          - page: basics/about-apps
+          - page: basics/app-folder-structure
+          - page: tutorial/add-route-controller-and-view
+          - page: tutorial/create-simple-addressbook
+            children:
+            - page: tutorial/add-model-for-contacts
+            - page: tutorial/add-route-controller-and-view-for-managing-contacts
+            - page: tutorial/add-1-n-relation
+          - page: tutorial/customize-tables-and-forms
+          - page: tutorial/custom-ui-components
+          - page: tutorial/writing-tests
+          - page: tutorial/more-reading
   - page: apps
     icon: fas fa-bolt
     children:

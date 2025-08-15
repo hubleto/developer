@@ -22,7 +22,7 @@ More about creating Hubleto apps is [here](apps/how-to-create-app).
 
 Each app must have at least a [manifest](apps/manifest) and a [Loader class](apps/loader). Most apps also contain [models](models), [views](views), [controllers](controllers) or [UI components](ui). And, of course, if you want to access some view, you must define [routing](routing).
 
-There is also a concept called [integrations](integrations) which connects all installed Hubleto apps together.
+There is also a concept called [Extendibles](extendibles) used for extending apps by another apps.
 
 ## Folder structure
 

@@ -1,4 +1,4 @@
-# Create first app
+# Hello World app
 
 An app is a basic functional element of Hubleto. Every functionality available in Hubleto is thus built using apps.
 

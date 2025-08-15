@@ -58,9 +58,9 @@
     </div>
   </div>
   <div class="card border-stone-300">
-    <div class="card-header bg-stone-50">Integrations</div>
+    <div class="card-header bg-stone-50">Extendibles</div>
     <div class="card-body flex flex-col gap-2">
-      <a href="docs/integrations" class="btn btn-white block"><span class="text">Introduction</span></a>
+      <a href="docs/extendibles" class="btn btn-white block"><span class="text">Introduction</span></a>
     </div>
   </div>
   <div class="card border-stone-300">
