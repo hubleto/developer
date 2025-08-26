@@ -37,7 +37,7 @@ public function prepareReadQuery(): mixed
 
   $main = \ADIOS\Core\Helper::getGlobalApp();
 
-  if ($main->urlParamAsBool("showArchive")) {
+  if ($main->getRouter()->urlParamAsBool("showArchive")) {
     $query = $query->where("deals.is_archived", 1);
   } else {
     $query = $query->where("deals.is_archived", 0);

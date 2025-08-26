@@ -82,7 +82,7 @@ The `Controllers/Home.php` does the all AI magic. Replace the `prepareView` meth
 public function prepareView(): void
 {
   parent::prepareView();
-  $prompt = $this->main->urlParamAsString('prompt');
+  $prompt = $this->getRouter()->urlParamAsString('prompt');
   if (!empty($prompt)) {
     $client = \OpenAI::client('your-openai-api-key');
     $this->viewParams['result'] = $client->chat()->create([

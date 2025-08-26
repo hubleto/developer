@@ -48,7 +48,7 @@ Now the `newValue` is available to use in the View.
 
 Check out [View](../customizing-ui/view) to see how to use this value.
 
-Within a View Controller you can access submitted form data through various parameter getters like  `$this->main->urlParamAsInteger("newValue")`. For example, you can work with these values to decide what `viewParams` to pass to the View or decide what View to set.
+Within a View Controller you can access submitted form data through various parameter getters like  `$this->getRouter()->urlParamAsInteger("newValue")`. For example, you can work with these values to decide what `viewParams` to pass to the View or decide what View to set.
 
 ## Creating an API Controller
 
