@@ -48,7 +48,7 @@ $this->main->router->httpGet([
 In your app's `init()` method, add the board to the dashboard manager:
 
 ```php
-$dashboardManager = $this->main->apps->getAppInstance(\HubletoApp\Community\Desktop::class)->dashboardManager;
+$dashboardManager = $this->getAppManager()->getApp(\HubletoApp\Community\Desktop::class)->dashboardManager;
 
 $dashboardManager->addBoard(new \HubletoApp\Community\Desktop\Types\Board(
   'Most valuable deals',
