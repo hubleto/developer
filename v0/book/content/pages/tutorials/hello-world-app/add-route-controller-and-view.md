@@ -33,7 +33,7 @@ Let's learn step by step.
 
 Each app is initialized during the Hubleto bootstrap. The initialization is done by executing `init()` method of each app in the order in which they have been registered.
 
-To create a routing table for HTTP GET requests, use `httpGet()` method of the main router which is available in `$this->main->router` property. The method takes an array of routes as an argument and adds these routes to the router's routing table.
+To create a routing table for HTTP GET requests, use `httpGet()` method of the main router which is available in `$this->getRouter()` property. The method takes an array of routes as an argument and adds these routes to the router's routing table.
 
 > **REMEMBER** `$this->main` is the secret word for accessing the Hubleto main core. It contains project config, router, permission manager and other useful components.
 
@@ -48,7 +48,7 @@ namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
     parent::init();
-    $this->main->router->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
+    $this->getRouter()->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
   }
 }
 ```

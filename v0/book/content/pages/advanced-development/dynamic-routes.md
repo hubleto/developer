@@ -14,7 +14,7 @@ This controller then will set the view showing the form to update the customer w
 
 ## How to define dynamic route
 
-To define any route, you need to create routing table of your app using `$this->main->router->httpGet()` method.
+To define any route, you need to create routing table of your app using `$this->getRouter()->httpGet()` method.
 
 This method takes an array of routes as the only argument. The array of routes is a key-value pair, where key is the regular expression for the route and a value is the class of the controller to be activated.
 
@@ -26,7 +26,7 @@ For example, regular expression `/^my-app\/customers\/(\d+)\/sync\/?$/` will cap
 namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
-    $this->main->router->httpGet([ '/^my-app\/customers\/(\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
+    $this->getRouter()->httpGet([ '/^my-app\/customers\/(\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
   }
 }
 ```
@@ -41,7 +41,7 @@ So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will
 namespace HubletoApp\Custom\MyApp;
 class Loader extends \HubletoMain\Core\App {
   public function init(): void {
-    $this->main->router->httpGet([ '/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
+    $this->getRouter()->httpGet([ '/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
   }
 }
 ```
@@ -49,7 +49,7 @@ class Loader extends \HubletoMain\Core\App {
 in your controller you can use:
 
 ```php
-$idCustomer = $this->main->router->routeVarAsInteger('idCustomer')
+$idCustomer = $this->getRouter()->routeVarAsInteger('idCustomer')
 ```
 
 to store the $idCustomer variable which can be then forwarded to the view:

@@ -33,7 +33,7 @@ The string on the left is the URL for the route. The string on the right is the 
 ```php
 public function init(): void
 {
-  $this->main->router->httpGet([
+  $this->getRouter()->httpGet([
     '/new-route' => Controllers\ControllerName::class
   ]);
 }

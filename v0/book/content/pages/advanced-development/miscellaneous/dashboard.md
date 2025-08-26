@@ -37,7 +37,7 @@ The board renderer is accessible via an endpoint specified in a router. Basicall
 Modify your app's router so that it will contain routes for your board controllers:
 
 ```php
-$this->main->router->httpGet([
+$this->getRouter()->httpGet([
   '/^my-app\/boards\/most-valuable-deals\/?$/' => Controllers\Boards\MostValuableDeals::class,
   '/^my-app\/boards\/deal-value-by-status\/?$/' => Controllers\Boards\DealValueByStatus::class,
 ]);

@@ -119,7 +119,7 @@ You also need to create a new route in the router of the `init()` method.
 ###### .\apps\external\MyApp\Loader.php
 
 ```php
-$this->main->router->httpGet([
+$this->getRouter()->httpGet([
   '/^my-app\/get-calendar-events\/?$/' => Controllers\Api\GetCalendarEvents::class,
 ]);
 ```
