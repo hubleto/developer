@@ -58,7 +58,7 @@ To specify the fields that will act as the filter for the data, you need to fill
 - `value` - the filter value
 
 ```php
- ["fieldName" => "id_user", "field" => $model->getColumn("id_user"), "option" => 1,  "value" => $this->getAuth()->getUser()["id"]],
+ ["fieldName" => "id_user", "field" => $model->getColumn("id_user"), "option" => 1,  "value" => $this->getAuthProvider()->getUser()["id"]],
 ```
 
 With the **field option 6** you also need to specify `value2`. For example, if you were searching data between two dates:
@@ -71,7 +71,7 @@ The complete `$config["searchGroups"]` should look like this:
 
 ```php
 $config["searchGroups"] = [
-  ["fieldName" => "id_user", "field" => $model->getColumn("id_user"), "option" => 1,  "value" => $this->getAuth()->getUser()["id"],],
+  ["fieldName" => "id_user", "field" => $model->getColumn("id_user"), "option" => 1,  "value" => $this->getAuthProvider()->getUser()["id"],],
   ["fieldName" => "date_created", "field" => $model->getColumn("date_created"), "option" => 6,  "value" => date("Y-m-01"), "value2" => date('Y-m-t')],
 ];
 ```
@@ -146,7 +146,7 @@ class MonthlyRevenue extends \HubletoMain\Core\Report {
       ],
     ];
     $config["searchGroups"] = [
-      ["fieldName" => "id_user", "field" => $model->getColumn("id_user"), "option" => 1,  "value" => $this->getAuth()->getUser()["id"]],
+      ["fieldName" => "id_user", "field" => $model->getColumn("id_user"), "option" => 1,  "value" => $this->getAuthProvider()->getUser()["id"]],
       ["fieldName" => "date_created", "field" => $model->getColumn("date_created"), "option" => 6,  "value" => date("Y-m-01"), "value2" => date('Y-m-t')],
     ];
 
