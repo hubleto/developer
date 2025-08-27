@@ -1,4 +1,4 @@
-# HubletoMain\Core\Model
+# Hubleto\Erp\Core\Model
 
 ## Introduction
 
@@ -11,7 +11,7 @@ The Model class allows you to define data structures, UI and permissions of form
 
 namespace HubletoApp\Custom\MyApp\Models;
 
-class MyModel extends \HubletoMain\Core\Model {}
+class MyModel extends \Hubleto\Erp\Core\Model {}
 ```
 
 ## Class parameters

@@ -38,12 +38,12 @@ This is done in your apps's entry .tsx file which is by default `MyApp/Loader.ts
 
 ###### MyApp/Loader.tsx
 ```javascript
-import HubletoMain from "../../../App";
+import HubletoErp from "../../../App";
 import MyCustomTable from "./Components/MyCustomTable.tsx";
 
 export default class Loader {
   uid: string = 'my-app';
-  constructor(app: HubletoMain) {
+  constructor(app: HubletoErp) {
     app.registerReactComponent('MyCustomTable', MyCustomTable); // <-- add following line
   }
 }  

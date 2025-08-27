@@ -1,4 +1,4 @@
-# HubletoMain\Core\Loader
+# Hubleto\Erp\Core\Loader
 
 ## Introduction
 
@@ -11,7 +11,7 @@ This is the base of a Loader.php file:
 ```php
   <?php
   namespace HubletoApp\Custom\MyApp;
-  class Loader extends \HubletoMain\Core\App { }
+  class Loader extends \Hubleto\Erp\Core\App { }
 ```
 
 ## Routing

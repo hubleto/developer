@@ -2,7 +2,7 @@
 
 You can customize sidebar in many ways.
 
-By default, your app receives a `sidebarOrder` at value `500` during the installation. This is configured in the `\HubletoMain\Core\App` class, in the `DEFAULT_INSTALLATION_CONFIG` constant:
+By default, your app receives a `sidebarOrder` at value `500` during the installation. This is configured in the `\Hubleto\Erp\Core\App` class, in the `DEFAULT_INSTALLATION_CONFIG` constant:
 
 ###### ./src/core/App.php
 
@@ -78,4 +78,4 @@ if (str_starts_with($this->getEnv()->requestedUri, 'customers')) { //specifying 
 }
 ```
 
-> The sidebar order for the native Hubleto apps is by default set in `HubletoMain\Installer\Installer` class.
+> The sidebar order for the native Hubleto apps is by default set in `Hubleto\Erp\Installer\Installer` class.

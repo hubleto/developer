@@ -45,7 +45,7 @@ An example of a simple routing table is shown below. This routing adds a `my-app
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp;
-class Loader extends \HubletoMain\Core\App {
+class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     parent::init();
     $this->getRouter()->httpGet([ '/^my-app\/?$/' => Controllers\Dashboard::class ]);
@@ -67,7 +67,7 @@ To add this controller, create `./apps/custom/MyApp/Controllers/Dashboard.php` f
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp\Controllers;
-class Dashboard extends \HubletoMain\Core\Controller {
+class Dashboard extends \Hubleto\Erp\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();
     $this->viewParams['now'] = date('Y-m-d H:i:s');

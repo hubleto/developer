@@ -12,7 +12,7 @@ This is the base file for a custom report:
 ```php
 namespace HubletoApp\Community\MyApp\Reports;
 
-class MonthlyRevenue extends \HubletoMain\Core\Report {
+class MonthlyRevenue extends \Hubleto\Erp\Core\Report {
 
   protected string $urlSlug = '';
   public string $name = '';
@@ -126,7 +126,7 @@ $config['groupsBy'] = [
 ```php
 namespace HubletoApp\Community\MyApp\Reports;
 
-class MonthlyRevenue extends \HubletoMain\Core\Report {
+class MonthlyRevenue extends \Hubleto\Erp\Core\Report {
 
   protected string $urlSlug = 'month-revenue';
   public string $name = 'My revenue this month';

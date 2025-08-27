@@ -8,11 +8,11 @@ All app models are stored in two separated files. In this tutorial, we'll create
 
 ## Introduction
 
-Each model in Hubleto app is located in `Models` sub-folder of your app's root folder. And, each model is a class that extends from `\HubletoMain\Core\Model` class.
+Each model in Hubleto app is located in `Models` sub-folder of your app's root folder. And, each model is a class that extends from `\Hubleto\Erp\Core\Model` class.
 
 > **REMEMBER** | Hubleto uses [Symphony Eloquent](https://laravel.com/docs/11.x/eloquent) as the default database layer. It's flexible, secure and well-maintained.
 
-To make Hubleto model compatible with Eloquent, additional file has to be created in `Models/RecordManagers` subfolder and this file must contain a class which extends from `\HubletoMain\Core\RecordManagers` class.
+To make Hubleto model compatible with Eloquent, additional file has to be created in `Models/RecordManagers` subfolder and this file must contain a class which extends from `\Hubleto\Erp\Core\RecordManagers` class.
 
 Summary... To add a model to your Hubleto app, e.g. model for contacts, you have to create two files:
 
@@ -31,7 +31,7 @@ The first file we need to create is `./apps/custom/MyApp/Models/Contact.php`. It
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp\Models;
-class Contact extends \HubletoMain\Core\Models\Model {
+class Contact extends \Hubleto\Erp\Core\Models\Model {
   public string $table = 'my_app_contacts';
   public string $recordManagerClass = RecordManager\Contact::class;
   public function describeColumns(): array {
@@ -64,7 +64,7 @@ To create a model's equivalentt for Eloquent, create the second file `./apps/cus
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp\Models\RecordManagers;
-class Contact extends \HubletoMain\Core\RecordManager {
+class Contact extends \Hubleto\Erp\Core\RecordManager {
   public $table = 'my_app_contacts';
   // Eloquent relations will get here later
 }
@@ -87,7 +87,7 @@ Add a new method `installTables()` into your app's `Loader.php`:
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp;
-class Loader extends \HubletoMain\Core\App {
+class Loader extends \Hubleto\Erp\Core\App {
   ...
   public function installTables(): void {
     $mContact = new \HubletoApp\Custom\MyApp\Models\Contact($this->main);

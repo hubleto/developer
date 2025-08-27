@@ -55,7 +55,7 @@ When you initialize your Hubleto project, all Hubleto Core features will be avai
 In most cases, customizations are implemented in two steps:
 
   * implement your custom, fully separated class
-  * modify `\HubletoMain` class in `src/Main.php` to use your new class.
+  * modify `\Hubleto\Erp` class in `src/Main.php` to use your new class.
 
 ## Adios framework
 

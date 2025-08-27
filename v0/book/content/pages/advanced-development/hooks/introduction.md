@@ -8,8 +8,8 @@ Take a look at this example:
 
 ###### ./hooks/Default/LogUsage.php
 ```php
-namespace HubletoMain\Hook\Default;
-class LogUsage extends \HubletoMain\Core\Hook {
+namespace Hubleto\Erp\Hook\Default;
+class LogUsage extends \Hubleto\Erp\Core\Hook {
   public function run(string $event, array $args): void {
     if ($event == 'controller:init-start') {
       $controller = $args[0];
@@ -25,16 +25,16 @@ This is the simplest hook utlizing the `Usage` app and its `logUsage()` method t
 
 A hook is a PHP script located in `./hooks` folder. The example above is a `./hooks/Default/LogUsage.php` file. To create your own hook, simply create your script.
 
-You may create your script (your hook) in any subfolder of `./hooks`. Just don't forget to set the proper namespace. In the example above, we have the hook in the `Default` folder, so the namespace is `HubletoMain\Hook\Default`.
+You may create your script (your hook) in any subfolder of `./hooks`. Just don't forget to set the proper namespace. In the example above, we have the hook in the `Default` folder, so the namespace is `Hubleto\Erp\Hook\Default`.
 
 ## Create a Hook class
 
-Once you have your file ready, create a class that extends the `\HubletoMain\Core\Hook`. Do not forget to properly specify the namespace (based on the location of your hook) and name of the class (the same as the name of your script). Your script should now look similar to this:
+Once you have your file ready, create a class that extends the `\Hubleto\Erp\Core\Hook`. Do not forget to properly specify the namespace (based on the location of your hook) and name of the class (the same as the name of your script). Your script should now look similar to this:
 
 ###### ./hooks/MyHooks/MyFirstHook.php
 ```php
-namespace HubletoMain\Hook\MyHooks;
-class MyFirstHook extends \HubletoMain\Core\Hook { }
+namespace Hubleto\Erp\Hook\MyHooks;
+class MyFirstHook extends \Hubleto\Erp\Core\Hook { }
 ```
 
 ## Add a `run()` method
@@ -43,8 +43,8 @@ Now, add the `run()` method:
 
 ###### ./hooks/MyHooks/MyFirstHook.php
 ```php
-namespace HubletoMain\Hook\MyHooks;
-class MyFirstHook extends \HubletoMain\Core\Hook {
+namespace Hubleto\Erp\Hook\MyHooks;
+class MyFirstHook extends \Hubleto\Erp\Core\Hook {
   public function run(string $event, array $args): void { }
 }
 ```

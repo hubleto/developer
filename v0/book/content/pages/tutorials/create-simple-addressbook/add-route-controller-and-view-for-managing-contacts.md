@@ -14,7 +14,7 @@ Add following line anywhere in the `init()` method of your app's `Loader.php`:
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp;
-class Loader extends \HubletoMain\Core\App {
+class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     ...
     $this->getRouter()->httpGet([ '/^my-app\/contacts\/?$/' => Controllers\Contacts::class ]);
@@ -31,7 +31,7 @@ Create following controller in `./apps/custom/MyApp/Controllers/Contacts.php`:
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp\Controllers;
-class Contacts extends \HubletoMain\Core\Controllers\Controller {
+class Contacts extends \Hubleto\Erp\Core\Controllers\Controller {
   public function prepareView(): void {
     parent::prepareView();
     $this->setView('@HubletoApp:Custom:MyApp/Contacts.twig');

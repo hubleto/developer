@@ -56,7 +56,7 @@ We have to add few things to:
 <?php
 namespace HubletoApp\Custom\MyApp\Models;
 use \HubletoApp\Community\Settings\Models\User;
-class Contact extends \HubletoMain\Core\Models\Model {
+class Contact extends \Hubleto\Erp\Core\Models\Model {
   public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
   public array $relations = [ 'OWNER' => [ self::BELONGS_TO, User::class, 'id_owner', 'id' ] ];
@@ -74,7 +74,7 @@ class Contact extends \HubletoMain\Core\Models\Model {
 ```php
 namespace HubletoApp\Custom\MyApp\Models\RecordManagers;
 use \HubletoApp\Community\Settings\Models\Eloquent\User; // <-- use model for users
-class Contact extends \HubletoMain\Core\RecordManager {
+class Contact extends \Hubleto\Erp\Core\RecordManager {
   public $table = 'my_app_contacts';
   public function USER(): BelongsTo { return $this->belongsTo(User::class, 'id_user', 'id'); } // <-- Eloquent relation
 }

@@ -24,7 +24,7 @@ For example, regular expression `/^my-app\/customers\/(\d+)\/sync\/?$/` will cap
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp;
-class Loader extends \HubletoMain\Core\App {
+class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     $this->getRouter()->httpGet([ '/^my-app\/customers\/(\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
   }
@@ -39,7 +39,7 @@ So, regular expression `/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/` will
 ```php
 <?php
 namespace HubletoApp\Custom\MyApp;
-class Loader extends \HubletoMain\Core\App {
+class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     $this->getRouter()->httpGet([ '/^my-app\/customers\/(?<idCustomer>\d+)\/sync\/?$/' => Controllers\Customers\Sync::class ]);
   }

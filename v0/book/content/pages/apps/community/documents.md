@@ -26,7 +26,7 @@ This is an example from the `LeadDocument` cross-table model:
 ###### ./src/apps/community/Leads/Models/LeadDocument.php
 
 ```php
-class LeadDocument extends \HubletoMain\Core\Model
+class LeadDocument extends \Hubleto\Erp\Core\Model
 {
   public string $table = 'lead_documents';
   public string $eloquentClass = Eloquent\LeadDocument::class;
@@ -51,7 +51,7 @@ You also need to create an **Eloquent** class for the model.
 ###### ./src/apps/community/Leads/Models/Eloquent/LeadDocument.php
 
 ```php
-class LeadDocument extends \HubletoMain\Core\ModelEloquent
+class LeadDocument extends \Hubleto\Erp\Core\ModelEloquent
 {
   public $table = 'lead_documents';
 

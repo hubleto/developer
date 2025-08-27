@@ -41,7 +41,7 @@ You have to create a new Calendar class file inside the your App's folder. This 
 
 namespace HubletoApp\External\MyApp;
 
-class Calendar extends \HubletoMain\Core\Calendar {
+class Calendar extends \Hubleto\Erp\Core\Calendar {
 
   public function loadEvents(): array {
     $event = []
@@ -102,7 +102,7 @@ Create a new API in the `Controller\Api` folder of your app. This will retrieve 
 
 namespace HubletoApp\External\MyApp\Controllers\Api;
 
-class GetCalendarEvents extends \HubletoMain\Core\Controller {
+class GetCalendarEvents extends \Hubleto\Erp\Core\Controller {
 
   public function renderJson(): array
   {

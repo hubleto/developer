@@ -6,8 +6,8 @@ Take a look at this example:
 
 ###### ./crons/Example.php
 ```php
-namespace HubletoMain\Cron;
-class Example extends \HubletoMain\Core\Cron {
+namespace Hubleto\Erp\Cron;
+class Example extends \Hubleto\Erp\Core\Cron {
   public string $schedulingPattern = '*/10 * * * *';
   public function run(): void { $this->getLogger()->info("Sample cron started."); }
 }
@@ -20,16 +20,16 @@ uses the Hubleto's default logger to log some activity.
 
 A cron is a PHP script located in `./crons` folder. The example above is a `./crons/Example.php` file. To create your own cron, simply create your script.
 
-You may create your script (your cron) in any subfolder of `./crons`. Just don't forget to set the proper namespace. In the example above, we have the cron in the root folder, so the namespace is `HubletoMain\Cron`.
+You may create your script (your cron) in any subfolder of `./crons`. Just don't forget to set the proper namespace. In the example above, we have the cron in the root folder, so the namespace is `Hubleto\Erp\Cron`.
 
 ## Create a cron class
 
-Once you have your file ready, create a class that extends the `\HubletoMain\Core\Cron`. Do not forget to properly specify the namespace (based on the location of your cron) and name of the class (the same as the name of your script). Your script should now look similar to this:
+Once you have your file ready, create a class that extends the `\Hubleto\Erp\Core\Cron`. Do not forget to properly specify the namespace (based on the location of your cron) and name of the class (the same as the name of your script). Your script should now look similar to this:
 
 ###### ./crons/MyFirstCron.php
 ```php
-namespace HubletoMain\Cron;
-class MyFirstCron extends \HubletoMain\Core\Cron { }
+namespace Hubleto\Erp\Cron;
+class MyFirstCron extends \Hubleto\Erp\Core\Cron { }
 ```
 
 ## Add a `run()` method
@@ -38,8 +38,8 @@ Now, add the `run()` method:
 
 ###### ./crons/MyFirstCron.php
 ```php
-namespace HubletoMain\Cron;
-class MyFirstCron extends \HubletoMain\Core\Cron {
+namespace Hubleto\Erp\Cron;
+class MyFirstCron extends \Hubleto\Erp\Core\Cron {
   public function run(): void { }
 }
 ```

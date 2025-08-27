@@ -1,4 +1,4 @@
-# HubletoMain\Core\Controller
+# Hubleto\Erp\Core\Controller
 
 _extends \CeremonyCrmApp\Core\Controller extends \ADIOS\Core\Controller_
 
