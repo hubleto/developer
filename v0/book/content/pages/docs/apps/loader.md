@@ -12,7 +12,7 @@ A loader class is in the `Loader.php` file in the app's root folder. For example
 /path/to/your/hubleto/src/apps/MyFirstApp/Loader.php
 ```
 
-App's loader is a class implementing interface [AppInterface](https://github.com/hubleto/framework/blob/main/src/Interfaces/AppInterface.php) and extending from default Hubleto [App class](https://github.com/hubleto/main/blob/main/src/App.php).
+App's loader is a class implementing interface [AppInterface](https://github.com/hubleto/framework/blob/main/src/Interfaces/AppInterface.php) and extending from default Hubleto [App class](https://github.com/hubleto/erp/blob/main/src/App.php).
 
 It must implement at least following methods:
 
@@ -35,7 +35,7 @@ The `init()` method does the initialization of the app when it is loaded by Hubl
   * registering app's context help
   * and more ...
 
-There are many examples of how these initialization steps can be implemented, most valuable resource for examples is the [github repository of community apps](https://github.com/hubleto/apps).
+There are many examples of how these initialization steps can be implemented, most valuable resource for examples is the [github repository of community apps](https://github.com/hubleto/erp/apps).
 
 ## installTables()
 

@@ -17,6 +17,6 @@ Each app type has its specific location. See summary below. Each location is a r
 
 | App type           | Namespace              | Location                |
 | ------------------ | ---------------------- | ----------------------- |
-| **Community apps** | `Hubleto\App\Community` | `./vendor/hubleto/apps` |
+| **Community apps** | `Hubleto\App\Community` | `./vendor/hubleto/erp/apps` |
 | **Custom apps**    | `HubletoApp\Custom`    | `./src/apps`            |
 | **External apps**  | `HubletoApp\External`  | `./vendor`              |

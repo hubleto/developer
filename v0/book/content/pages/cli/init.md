@@ -28,7 +28,7 @@ Full example of this file is at https://github.com/hubleto/erp/blob/main/init-co
 | ----------------- | ------- | ----------------------------------------------------------------- |
 | rewriteBase       | string  | An 'apache-like' RewriteBase of the project's folder.             |
 | projectUrl        | string  | Full URL to the project's folder.                                 |
-| srcUrl            | string  | Full URL to the `hubleto/main` repository.                        |
+| srcUrl            | string  | Full URL to the `hubleto/erp` repository.                        |
 | assetsUrl         | string  | Full URL to the folder with assets.                               |
 | dbHost            | string  | Database host.                                                    |
 | dbUser            | string  | Database user.                                                    |

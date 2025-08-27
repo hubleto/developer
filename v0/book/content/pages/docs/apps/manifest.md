@@ -48,7 +48,7 @@ appType: custom
 
 ## sidebarGroup (optional)
 
-Specifies the sidebar group under which the app's entry button will be displayed. List of default sidebar groups is [here](https://github.com/hubleto/apps/blob/main/src/Desktop/Controllers/Desktop.php).
+Specifies the sidebar group under which the app's entry button will be displayed. List of default sidebar groups is [here](https://github.com/hubleto/erp/apps/blob/main/src/Desktop/Controllers/Desktop.php).
 
 Example:
 

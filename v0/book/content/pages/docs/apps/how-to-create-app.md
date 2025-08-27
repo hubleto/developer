@@ -62,6 +62,6 @@ Folder structure of an external app should be similar to this:
 
 ## Community apps
 
-Community apps are bundled with the Hubleto projects. They are located in `vendor/hubleto/apps`.
+Community apps are bundled with the Hubleto projects. They are located in `vendor/hubleto/erp/apps`.
 
 These apps are developed by the Hubleto contributors. If you want to contribute, <a href="{{ guideRootUrl }}/join-us">join us</a>.

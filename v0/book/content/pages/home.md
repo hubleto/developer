@@ -6,14 +6,14 @@ Hubleto developer guide
   Hubleto is a web-application framework combining other popular libraries like <b>ReactJS, TailwindCSS, Twig or Primereact</b>. Has many built-in features and repository of <b>free apps</b> ready for your project.<br/>
   <br/>
   <b>In only few minutes</b>, you can have your development environment with lots of <a href="apps">apps</a> and popular libraries ready.<br/>
-  <a href="install" style="text-decoration:none"><pre><code>/var/www/html/hubleto > composer create-project hubleto/erp .
+  <a href="install" style="text-decoration:none"><pre><code>/var/www/html/hubleto > composer create-project hubleto/erp-project .
 /var/www/html/hubleto > php hubleto init</code></pre></a>
   <div class="text-gray-400 text-xs text-right">Example usage of <a href="cli-agent">CLI agent</a></div>
 </div>
 
 <div class="alert alert-warning">
   Note: this developer guide, as well as Hubleto platform, are still in active development. Some texts or instructions may not be accurate.
-  If you find a bug or some missing information, please <a href="https://github.com/hubleto/main/issues" target="_blank">report an issue via GitHub</a>.
+  If you find a bug or some missing information, please <a href="https://github.com/hubleto/erp/issues" target="_blank">report an issue via GitHub</a>.
 </div>
 
 <div class="grid gap-4 mt-8 md:grid-cols-2">

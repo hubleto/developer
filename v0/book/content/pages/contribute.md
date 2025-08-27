@@ -6,7 +6,7 @@ If you want to contribute to the Hubleto core (not only developing apps), follow
 
 ## Fork Hubleto from Github
 
-First, you need to create your own fork of Hubleto (https://github.com/hubleto/main).
+First, you need to create your own fork of Hubleto (https://github.com/hubleto/erp).
 
 Check this guide on how to create forks: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 
@@ -24,7 +24,7 @@ In your Hubleto root folder, create a `composer-dev.json` file:
 
 ```
 {
-    "name": "hubleto/main",
+    "name": "hubleto/erp",
     "require": {
         ...
         "wai-blue/adios": "@dev",    <-- change version to '@dev'
@@ -37,7 +37,7 @@ In your Hubleto root folder, create a `composer-dev.json` file:
 
 ```
 {
-    "name": "hubleto/main",
+    "name": "hubleto/erp",
     "require": {
         ...
         "wai-blue/adios": "@dev",

@@ -27,10 +27,10 @@ The easiest way is to install using `composer create-project`. There are two typ
 
 ### Production-ready ERP
 
-| Step               | Command                                 |
-| ------------------ | --------------------------------------- |
-| Create the project | `composer create-project hubleto/erp .` |
-| Initialize ERP     | `php hubleto init`                      |
+| Step               | Command                                         |
+| ------------------ | ----------------------------------------------- |
+| Create the project | `composer create-project hubleto/erp-project .` |
+| Initialize ERP     | `php hubleto init`                              |
 Table: Steps to install production-ready Hubleto ERP using `composer`
 
 ### Development environment

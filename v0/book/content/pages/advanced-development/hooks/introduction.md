@@ -66,4 +66,4 @@ See [list of availabe events](events).
 
 ## Learn by examples
 
-There are many built-in hooks available. Check the source here: https://github.com/hubleto/main/tree/main/hooks
+There are many built-in hooks available. Check the source here: https://github.com/hubleto/erp/tree/main/hooks

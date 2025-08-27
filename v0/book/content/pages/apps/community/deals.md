@@ -29,7 +29,7 @@ manage statuses, progress, history, responsible person and many more.
 
 ## Source code
 
-https://github.com/hubleto/main/blob/main/apps/community/Deals
+https://github.com/hubleto/erp/blob/main/apps/community/Deals
 
 ## User guide
 

@@ -22,7 +22,7 @@ Given all that, you definitely need to extend the model for *customers* by follo
 
 ## Adding a custom column
 
-You can add new column only to the model which has the property `$isExtendableByCustomColumns` set to true. Fortunately, the model for *customers* has this property set to true ([code here](https://github.com/hubleto/main/blob/main/apps/community/Customers/Models/Customer.php)).
+You can add new column only to the model which has the property `$isExtendableByCustomColumns` set to true. Fortunately, the model for *customers* has this property set to true ([code here](https://github.com/hubleto/erp/blob/main/apps/community/Customers/Models/Customer.php)).
 
 To add a column, you need to:
 

@@ -55,7 +55,7 @@ class Loader extends \Hubleto\Erp\Core\App {
 
 Do not forget to call also `parent::init()`.
 
-> **TIP** | To learn how router works, check [this script](https://github.com/hubleto/main/blob/main/src/core/Router.php) and [this script](https://github.com/wai-blue/adios/blob/main/src/Core/Router.php).
+> **TIP** | To learn how router works, check [this script](https://github.com/hubleto/erp/blob/main/src/core/Router.php) and [this script](https://github.com/wai-blue/adios/blob/main/src/Core/Router.php).
 
 ## Add controller
 
