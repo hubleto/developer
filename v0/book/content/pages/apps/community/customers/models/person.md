@@ -1,6 +1,6 @@
 # Model Person
 
-namespace HubletoApp\Customers\Models\Person
+namespace Hubleto\App\Customers\Models\Person
 
 List of contact persons existing in the system
 

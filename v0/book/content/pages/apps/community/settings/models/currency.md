@@ -1,6 +1,6 @@
 # Model Currency
 
-namespace HubletoApp\Settings\Models\Currency
+namespace Hubleto\App\Settings\Models\Currency
 
 List of currencies existing in the system
 

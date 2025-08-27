@@ -36,7 +36,7 @@ For the View to be used you need to set the View in the Controller by specifying
 public function prepareView(): void
   {
     parent::prepareView();
-    $this->setView('@HubletoApp:Customer:Views/Activity.twig');
+    $this->setView('@Hubleto:App:Customer:Views/Activity.twig');
   }
 ```
 

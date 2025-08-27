@@ -10,7 +10,7 @@ This is the base file for a custom report:
 ###### ./src/apps/external/MyCompany/MyApp/Reports/MonthlyRevenue.php
 
 ```php
-namespace HubletoApp\Community\MyApp\Reports;
+namespace Hubleto\App\Community\MyApp\Reports;
 
 class MonthlyRevenue extends \Hubleto\Erp\Core\Report {
 
@@ -124,7 +124,7 @@ $config['groupsBy'] = [
 ###### ./src/apps/external/MyCompany/MyApp/Reports/MonthlyRevenue.php
 
 ```php
-namespace HubletoApp\Community\MyApp\Reports;
+namespace Hubleto\App\Community\MyApp\Reports;
 
 class MonthlyRevenue extends \Hubleto\Erp\Core\Report {
 

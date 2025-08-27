@@ -1,5 +1,5 @@
 # Controller BillingAccounts
 
-namespace HubletoApp\Billing\Controllers
+namespace Hubleto\App\Billing\Controllers
 
 ...

@@ -1,6 +1,6 @@
 # Model BillingAccount
 
-namespace HubletoApp\Billing\Models\BillingAccount
+namespace Hubleto\App\Billing\Models\BillingAccount
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus, orci sit amet dictum aliquet, nisl nulla condimentum est, congue venenatis leo velit ut massa. Vivamus vitae risus sapien. Maecenas metus quam, mattis vel sapien vel, vulputate tempor ante.
 

@@ -1,6 +1,6 @@
 # Model Profile
 
-namespace HubletoApp\Settings\Models\Profile
+namespace Hubleto\App\Settings\Models\Profile
 
 A list of profiles created for the company
 

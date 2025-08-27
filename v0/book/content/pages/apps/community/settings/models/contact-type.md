@@ -1,6 +1,6 @@
 # Model ContactType
 
-namespace HubletoApp\Settings\Models\ContactType
+namespace Hubleto\App\Settings\Models\ContactType
 
 A list of assignable types for a contact.
 

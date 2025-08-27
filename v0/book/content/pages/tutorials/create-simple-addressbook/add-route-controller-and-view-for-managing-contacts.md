@@ -13,7 +13,7 @@ Add following line anywhere in the `init()` method of your app's `Loader.php`:
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp;
+namespace Hubleto\App\Custom\MyApp;
 class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     ...
@@ -30,11 +30,11 @@ Create following controller in `./apps/custom/MyApp/Controllers/Contacts.php`:
 ###### ./apps/custom/MyApp/Controllers/Contacts.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp\Controllers;
+namespace Hubleto\App\Custom\MyApp\Controllers;
 class Contacts extends \Hubleto\Erp\Core\Controllers\Controller {
   public function prepareView(): void {
     parent::prepareView();
-    $this->setView('@HubletoApp:Custom:MyApp/Contacts.twig');
+    $this->setView('@Hubleto:App:Custom:MyApp/Contacts.twig');
   }
 }
 ```
@@ -45,7 +45,7 @@ Create following view in `./apps/custom/MyApp/Views/Contacts.twig`:
 
 ###### ./apps/custom/MyApp/Views/Contacts.twig**
 ```php
-<app-table string:model="HubletoApp/Custom/MyApp/Models/Contact"></app-table>
+<app-table string:model="Hubleto/App/Custom/MyApp/Models/Contact"></app-table>
 ```
 
 > **NOTE** Hubleto uses `<app-*` HTML notation to insert React components into the browser's DOM.

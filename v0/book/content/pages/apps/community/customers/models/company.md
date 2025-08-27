@@ -1,6 +1,6 @@
 # Model Company
 
-namespace HubletoApp\Customers\Models\Company
+namespace Hubleto\App\Customers\Models\Company
 
 List of companies existing in the system.
 

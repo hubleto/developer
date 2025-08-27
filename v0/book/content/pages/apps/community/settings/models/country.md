@@ -1,6 +1,6 @@
 # Model Country
 
-namespace HubletoApp\Settings\Models\Country
+namespace Hubleto\App\Settings\Models\Country
 
 List of countries existing in the system.
 

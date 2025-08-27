@@ -1,6 +1,6 @@
 # Model DealActivity
 
-namespace HubletoApp\Deals\Models\DealActivity
+namespace Hubleto\App\Deals\Models\DealActivity
 
 List of activities connected to the Deal model.
 

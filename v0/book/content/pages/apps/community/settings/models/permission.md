@@ -1,6 +1,6 @@
 # Model Permission
 
-namespace HubletoApp\Settings\Models\Permission
+namespace Hubleto\App\Settings\Models\Permission
 
 A list of available permissions for models and controllers that are in the system.
 

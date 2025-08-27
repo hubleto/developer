@@ -4,4 +4,4 @@ Premium apps are developed by the internal Hubleto team and its contributors. Th
 
 | App                                                          |
 | ------------------------------------------------------------ |
-| [HubletoApp/Premium/DbUpdater](premium/dbupdater)            |
+| [Hubleto/App/Premium/DbUpdater](premium/dbupdater)            |

@@ -30,7 +30,7 @@ The first file we need to create is `./apps/custom/MyApp/Models/Contact.php`. It
 ###### ./apps/custom/MyApp/Models/Contact.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp\Models;
+namespace Hubleto\App\Custom\MyApp\Models;
 class Contact extends \Hubleto\Erp\Core\Models\Model {
   public string $table = 'my_app_contacts';
   public string $recordManagerClass = RecordManager\Contact::class;
@@ -63,7 +63,7 @@ To create a model's equivalentt for Eloquent, create the second file `./apps/cus
 ###### ./apps/custom/MyApp/Models/RecordManagers/Contact.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp\Models\RecordManagers;
+namespace Hubleto\App\Custom\MyApp\Models\RecordManagers;
 class Contact extends \Hubleto\Erp\Core\RecordManager {
   public $table = 'my_app_contacts';
   // Eloquent relations will get here later
@@ -86,7 +86,7 @@ Add a new method `installTables()` into your app's `Loader.php`:
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp;
+namespace Hubleto\App\Custom\MyApp;
 class Loader extends \Hubleto\Erp\Core\App {
   ...
   public function installTables(): void {

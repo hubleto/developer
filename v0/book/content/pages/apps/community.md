@@ -4,13 +4,13 @@ Apps freely available in the Github repository.
 
 | App                                                          |
 | ------------------------------------------------------------ |
-| [HubletoApp/Community/Billing](community/billing)            |
-| [HubletoApp/Community/Customers](community/customers)        |
-| [HubletoApp/Community/Documents](community/documents)        |
-| [HubletoApp/Community/Settings](community/settings)          |
-| [HubletoApp/Community/Services](community/services)          |
-| [HubletoApp/Community/Deals](community/deals)                |
-| [HubletoApp/Community/Leads](community/leads)                |
-| [HubletoApp/Community/Calendar](community/calendar)          |
-| [HubletoApp/Community/CalendarSync](community/calendar-sync) |
-| [HubletoApp/Community/Report](community/report)              |
+| [Hubleto/App/Community/Billing](community/billing)            |
+| [Hubleto/App/Community/Customers](community/customers)        |
+| [Hubleto/App/Community/Documents](community/documents)        |
+| [Hubleto/App/Community/Settings](community/settings)          |
+| [Hubleto/App/Community/Services](community/services)          |
+| [Hubleto/App/Community/Deals](community/deals)                |
+| [Hubleto/App/Community/Leads](community/leads)                |
+| [Hubleto/App/Community/Calendar](community/calendar)          |
+| [Hubleto/App/Community/CalendarSync](community/calendar-sync) |
+| [Hubleto/App/Community/Report](community/report)              |

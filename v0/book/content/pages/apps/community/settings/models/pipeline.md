@@ -1,6 +1,6 @@
 # Model Pipeline
 
-namespace HubletoApp\Settings\Models\Pipeline
+namespace Hubleto\App\Settings\Models\Pipeline
 
 List of pipelines that can be chosen for a Deal.
 

@@ -1,6 +1,6 @@
 # Model User
 
-namespace HubletoApp\Settings\Models\User
+namespace Hubleto\App\Settings\Models\User
 
 A list of user in the system.
 

@@ -1,6 +1,6 @@
 # Model PipelineStep
 
-namespace HubletoApp\Settings\Models\PipelineStep
+namespace Hubleto\App\Settings\Models\PipelineStep
 
 List of pipeline stages for specific pipilines.
 

@@ -1,6 +1,6 @@
 # Model DealService
 
-namespace HubletoApp\Deals\Models\DealService
+namespace Hubleto\App\Deals\Models\DealService
 
 A list of services attached to a Deal
 

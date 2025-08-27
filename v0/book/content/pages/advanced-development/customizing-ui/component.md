@@ -22,7 +22,7 @@ export default class TableComponent extends HubletoTable<TableComponentProps, Ta
     ...Table.defaultProps,
     itemsPerPage: 15,
     formUseModalSimple: true,
-    model: "HubletoApp/App/Models/SubApp",
+    model: "Hubleto/App/App/Models/SubApp",
   };
 
   props: TableComponentProps;
@@ -80,7 +80,7 @@ export interface FormComponentState extends HubletoFormState {}
 export default class FormComponent<P, S> extends HubletoForm<FormComponentProps,FormComponentState> {
   static defaultProps: any = {
     ...Form.defaultProps,
-    model: 'HubletoApp/App/Models/App',
+    model: 'Hubleto/App/App/Models/App',
   };
 
   props: FormComponentProps;

@@ -1,6 +1,6 @@
 # Model RolePermission
 
-namespace HubletoApp\Settings\Models\RolePermission
+namespace Hubleto\App\Settings\Models\RolePermission
 
 An table for assigning permissions to a role
 

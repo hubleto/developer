@@ -1,6 +1,6 @@
 # Billing
 
-namespace HubletoApp\Premium\Billing
+namespace Hubleto\App\Premium\Billing
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus, orci sit amet dictum aliquet, nisl nulla condimentum est, congue venenatis leo velit ut massa. Vivamus vitae risus sapien. Maecenas metus quam, mattis vel sapien vel, vulputate tempor ante. Praesent elementum laoreet luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam nisl mi, venenatis at dui at, gravida commodo magna.
 

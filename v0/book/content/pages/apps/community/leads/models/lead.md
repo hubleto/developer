@@ -1,6 +1,6 @@
 # Model Lead
 
-namespace HubletoApp\Leads\Models\Lead
+namespace Hubleto\App\Leads\Models\Lead
 
 List of created Leads
 

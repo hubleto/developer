@@ -1,6 +1,6 @@
 # Model LeadService
 
-namespace HubletoApp\Leads\Models\LeadService
+namespace Hubleto\App\Leads\Models\LeadService
 
 A list of services attached to a Lead
 

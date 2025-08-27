@@ -1,6 +1,6 @@
 # Model DealLabel
 
-namespace HubletoApp\Deals\Models\DealLabel
+namespace Hubleto\App\Deals\Models\DealLabel
 
 Labels given to a Deal
 

@@ -1,6 +1,6 @@
 # Model Service
 
-namespace HubletoApp\Services\Models\Service
+namespace Hubleto\App\Services\Models\Service
 
 List of services/products available in the system.
 

@@ -1,6 +1,6 @@
 # Model DealHistory
 
-namespace HubletoApp\Deals\Models\DealHistory
+namespace Hubleto\App\Deals\Models\DealHistory
 
 History for each of created Deals
 

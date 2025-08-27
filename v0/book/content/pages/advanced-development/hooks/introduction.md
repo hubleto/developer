@@ -13,7 +13,7 @@ class LogUsage extends \Hubleto\Erp\Core\Hook {
   public function run(string $event, array $args): void {
     if ($event == 'controller:init-start') {
       $controller = $args[0];
-      $this->getAppManager()->getApp(\HubletoApp\Community\Usage::class)->logUsage($controller);
+      $this->getAppManager()->getApp(\Hubleto\App\Community\Usage::class)->logUsage($controller);
     }
   }
 }

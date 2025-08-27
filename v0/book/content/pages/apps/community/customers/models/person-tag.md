@@ -1,6 +1,6 @@
 # Model PersonTag
 
-namespace HubletoApp\Customers\Models\PersonTag
+namespace Hubleto\App\Customers\Models\PersonTag
 
 List of assigned tags to a Person
 

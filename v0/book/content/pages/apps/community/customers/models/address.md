@@ -1,6 +1,6 @@
 # Model Address
 
-namespace HubletoApp\Customers\Models\Address
+namespace Hubleto\App\Customers\Models\Address
 
 List of addresses belonging to a Person.
 

@@ -6,7 +6,7 @@ By default, Hubleto project uses `\Hubleto\Erp\Auth` class to provide user authe
 
 ## User model
 
-This default authentication provider uses `\HubletoApp\Community\Settings\Models\User` model to store information about users. The implementation of this model is in https://github.com/hubleto/main/blob/main/apps/community/Settings/Models/User.php.
+This default authentication provider uses `\Hubleto\App\Community\Settings\Models\User` model to store information about users. The implementation of this model is in https://github.com/hubleto/main/blob/main/apps/community/Settings/Models/User.php.
 
 ## Customizations
 

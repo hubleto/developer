@@ -1,5 +1,5 @@
 # Customers
 
-namespace HubletoApp\Community\Customers
+namespace Hubleto\App\Community\Customers
 
 ...

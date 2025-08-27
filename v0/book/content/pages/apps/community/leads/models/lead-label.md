@@ -1,6 +1,6 @@
 # Model LeadLabel
 
-namespace HubletoApp\Leads\Models\LeadLabel
+namespace Hubleto\App\Leads\Models\LeadLabel
 
 Labels given to a Lead
 

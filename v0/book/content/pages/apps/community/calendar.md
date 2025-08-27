@@ -1,6 +1,6 @@
 # Calendar
 
-namespace HubletoApp\Community\Calendar
+namespace Hubleto\App\Community\Calendar
 
 ## Introduction
 
@@ -39,7 +39,7 @@ You have to create a new Calendar class file inside the your App's folder. This 
 ```php
 <?php
 
-namespace HubletoApp\External\MyApp;
+namespace Hubleto\App\External\MyApp;
 
 class Calendar extends \Hubleto\Erp\Core\Calendar {
 
@@ -86,8 +86,8 @@ In the Loader class of your app in the `init()` method you need to register your
 ###### .\apps\external\MyApp\Loader.php
 
 ```php
-/** @var \HubletoApp\Community\Calendar\Manager $calendarManager */
-$calendarManager = $this->getService(\HubletoApp\Community\Calendar\Manager::class);
+/** @var \Hubleto\App\Community\Calendar\Manager $calendarManager */
+$calendarManager = $this->getService(\Hubleto\App\Community\Calendar\Manager::class);
 $calendarManager->addCalendar($this, Calendar::class);
 ```
 
@@ -100,7 +100,7 @@ Create a new API in the `Controller\Api` folder of your app. This will retrieve 
 ```php
 <?php
 
-namespace HubletoApp\External\MyApp\Controllers\Api;
+namespace Hubleto\App\External\MyApp\Controllers\Api;
 
 class GetCalendarEvents extends \Hubleto\Erp\Core\Controller {
 

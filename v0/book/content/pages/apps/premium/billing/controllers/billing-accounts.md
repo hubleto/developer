@@ -1,5 +1,5 @@
 # View BillingAccounts
 
-namespace HubletoApp\Billing\Views
+namespace Hubleto\App\Billing\Views
 
 ...

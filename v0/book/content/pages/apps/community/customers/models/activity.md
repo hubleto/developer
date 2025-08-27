@@ -1,6 +1,6 @@
 # Model Activity
 
-namespace HubletoApp\Customers\Models\Activity
+namespace Hubleto\App\Customers\Models\Activity
 
 List of activities. Some activies are connected to a model.
 

@@ -90,7 +90,7 @@ public function prepareView(): void
       'messages' => [ ['role' => 'user', 'content' => $prompt] ],
     ]);
   }
-  $this->setView('@HubletoApp:Custom:ChatGpt/Home.twig');
+  $this->setView('@Hubleto:App:Custom:ChatGpt/Home.twig');
 }
 ```
 

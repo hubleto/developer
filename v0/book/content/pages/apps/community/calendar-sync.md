@@ -1,6 +1,6 @@
 # CalendarSync
 
-namespace HubletoApp\Community\CalendarSync
+namespace Hubleto\App\Community\CalendarSync
 
 **Currently supported sources of calendars:**
 - Google Calendar

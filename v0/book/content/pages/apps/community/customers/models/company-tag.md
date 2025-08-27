@@ -1,6 +1,6 @@
 # Model CompanyTag
 
-namespace HubletoApp\Customers\Models\CompanyTag
+namespace Hubleto\App\Customers\Models\CompanyTag
 
 List of assigned tags to a Company
 

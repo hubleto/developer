@@ -1,6 +1,6 @@
 # Model Label
 
-namespace HubletoApp\Settings\Models\Label
+namespace Hubleto\App\Settings\Models\Label
 
 Label for a Lead or a Deal entry
 

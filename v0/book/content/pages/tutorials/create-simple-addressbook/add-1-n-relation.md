@@ -46,7 +46,7 @@ Let's continue in the development of the addressbook app from the [previous tuto
 We have to add few things to:
 
   * **Models/Contact.php**:
-    1. column `id_owner` of type `lookup` connected to `HubletoApp\Community\Settings\Models\User`
+    1. column `id_owner` of type `lookup` connected to `Hubleto\App\Community\Settings\Models\User`
     2. definition of Hubleto relation
   *  **Models/RecordManagers/Contact.php**:
     1. definition of Eloquent relation
@@ -54,8 +54,8 @@ We have to add few things to:
 ###### ./apps/custom/MyApp/Models/Contact.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp\Models;
-use \HubletoApp\Community\Settings\Models\User;
+namespace Hubleto\App\Custom\MyApp\Models;
+use \Hubleto\App\Community\Settings\Models\User;
 class Contact extends \Hubleto\Erp\Core\Models\Model {
   public string $table = 'my_app_contacts';
   public string $eloquentClass = Eloquent\Contact::class;
@@ -72,8 +72,8 @@ class Contact extends \Hubleto\Erp\Core\Models\Model {
 
 ###### ./apps/custom/MyApp/Models/RecordManagers/Contact.php
 ```php
-namespace HubletoApp\Custom\MyApp\Models\RecordManagers;
-use \HubletoApp\Community\Settings\Models\Eloquent\User; // <-- use model for users
+namespace Hubleto\App\Custom\MyApp\Models\RecordManagers;
+use \Hubleto\App\Community\Settings\Models\Eloquent\User; // <-- use model for users
 class Contact extends \Hubleto\Erp\Core\RecordManager {
   public $table = 'my_app_contacts';
   public function USER(): BelongsTo { return $this->belongsTo(User::class, 'id_user', 'id'); } // <-- Eloquent relation

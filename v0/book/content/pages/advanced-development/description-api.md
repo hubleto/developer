@@ -10,7 +10,7 @@ For even better understanding, let's give an example.
 
 As already said, the *description API* can be used on numerous parts of Hubleto App. We will explain it on a simple example - to describe how table showing a list of rows for a specific model should behave in the user interface.
 
-Say, we have a `Customer` model - a class in the `HubletoApp\Community\Customers\Models` namespace. This class contains a method called `describeTable()` and this method returns an object consisting of
+Say, we have a `Customer` model - a class in the `Hubleto\App\Community\Customers\Models` namespace. This class contains a method called `describeTable()` and this method returns an object consisting of
 
   * UI configuration parameters (`Table->$ui`),
   * permissions (`Table->$permissions`) and

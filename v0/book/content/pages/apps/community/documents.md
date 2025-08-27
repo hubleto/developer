@@ -91,14 +91,14 @@ To open the Document Form component you need to manage a state to render the For
       id_document: {
         type: "lookup",
         title: "Document",
-        model: "HubletoApp/Community/Documents/Models/Document",
+        model: "Hubleto/App/Community/Documents/Models/Document",
       },
     },
     inputs {
       id_document: {
         type: "lookup",
         title: "Document",
-        model: "HubletoApp/Community/Documents/Models/Document",
+        model: "Hubleto/App/Community/Documents/Models/Document",
       },
     },
   }
@@ -136,7 +136,7 @@ You can also set up the callbacks for saving and deleting a Document entry like 
     descriptionSource="both"
     description={
       defaultValues: {
-        creatingForModel: "HubletoApp/Community/Leads/Models/LeadDocument",
+        creatingForModel: "Hubleto/App/Community/Leads/Models/LeadDocument",
         creatingForId: this.state.record.id,
         origin_link: window.location.pathname + "?recordId=" + this.state.record.id,
       }

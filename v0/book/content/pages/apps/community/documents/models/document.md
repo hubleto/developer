@@ -1,6 +1,6 @@
 # Model Document
 
-namespace HubletoApp\Documents\Models\Documents
+namespace Hubleto\App\Documents\Models\Documents
 
 List of all documents that were uploaded to the system.
 

@@ -1,6 +1,6 @@
 # Model Tag
 
-namespace HubletoApp\Settings\Models\Tag
+namespace Hubleto\App\Settings\Models\Tag
 
 A list of asignable tags for a Company or a Person
 

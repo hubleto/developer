@@ -9,7 +9,7 @@ The Model class allows you to define data structures, UI and permissions of form
 ```php
 <?php
 
-namespace HubletoApp\Custom\MyApp\Models;
+namespace Hubleto\App\Custom\MyApp\Models;
 
 class MyModel extends \Hubleto\Erp\Core\Model {}
 ```

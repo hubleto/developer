@@ -1,6 +1,6 @@
 # Model Setting
 
-namespace HubletoApp\Settings\Models\Setting
+namespace Hubleto\App\Settings\Models\Setting
 
 A list of custom settings
 

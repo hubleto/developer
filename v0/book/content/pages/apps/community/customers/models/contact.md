@@ -1,6 +1,6 @@
 # Model Contact
 
-namespace HubletoApp\Customers\Models\Contact
+namespace Hubleto\App\Customers\Models\Contact
 
 List of contact information for a person
 

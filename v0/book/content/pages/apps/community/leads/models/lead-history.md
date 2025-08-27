@@ -1,6 +1,6 @@
 # Model LeadHistory
 
-namespace HubletoApp\Leads\Models\LeadHistory
+namespace Hubleto\App\Leads\Models\LeadHistory
 
 History for each of created Leads
 

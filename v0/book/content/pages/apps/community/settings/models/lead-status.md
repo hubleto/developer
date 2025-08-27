@@ -1,6 +1,6 @@
 # Model LeadStatus
 
-namespace HubletoApp\Settings\Models\LeadStatus
+namespace Hubleto\App\Settings\Models\LeadStatus
 
 A status for a Lead
 

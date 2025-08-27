@@ -1,6 +1,6 @@
 # Deals
 
-namespace HubletoApp\Community\Deals
+namespace Hubleto\App\Community\Deals
 
 Free Community\Deals app implements powerful funcionality for managing deals. It contains many features to create or browse your deals,
 manage statuses, progress, history, responsible person and many more.

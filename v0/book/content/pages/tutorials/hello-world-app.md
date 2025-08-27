@@ -33,7 +33,7 @@ php hubleto init
     'description': markdown('Creating Hubleto app is as easy as running following command on the right in your project\'s root folder.'),
     'example': markdown('
 ```
-php hubleto app create \\HubletoApp\\Custom\\MyApp
+php hubleto app create \\Hubleto\\App\\Custom\\MyApp
 ```
 '),
   },

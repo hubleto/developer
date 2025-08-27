@@ -1,6 +1,6 @@
 # Model LeadActivity
 
-namespace HubletoApp\Leads\Models\LeadActivity
+namespace Hubleto\App\Leads\Models\LeadActivity
 
 List of activities connected to the Lead model.
 

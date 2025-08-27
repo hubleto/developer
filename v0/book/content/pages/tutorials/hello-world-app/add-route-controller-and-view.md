@@ -44,7 +44,7 @@ An example of a simple routing table is shown below. This routing adds a `my-app
 ###### ./apps/custom/MyApp/Loader.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp;
+namespace Hubleto\App\Custom\MyApp;
 class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     parent::init();
@@ -66,17 +66,17 @@ To add this controller, create `./apps/custom/MyApp/Controllers/Dashboard.php` f
 ###### ./apps/custom/MyApp/Controllers/Dashboard.php
 ```php
 <?php
-namespace HubletoApp\Custom\MyApp\Controllers;
+namespace Hubleto\App\Custom\MyApp\Controllers;
 class Dashboard extends \Hubleto\Erp\Core\Controller {
   public function prepareView(): void {
     parent::prepareView();
     $this->viewParams['now'] = date('Y-m-d H:i:s');
-    $this->setView('@HubletoApp:External:MyCompany:MyApp/Dashboard.twig');
+    $this->setView('@Hubleto:App:External:MyCompany:MyApp/Dashboard.twig');
   }
 }
 ```
 
-This controller will prepare a variable `now`, stored in the controller's property `viewParams` and sets the view to be rendered to `@HubletoApp:External:MyCompany:MyApp/Dashboard.twig`. All this is done in the `prepareView()` method.
+This controller will prepare a variable `now`, stored in the controller's property `viewParams` and sets the view to be rendered to `@Hubleto:App:External:MyCompany:MyApp/Dashboard.twig`. All this is done in the `prepareView()` method.
 
 Doublecheck your app's folders and files, you should have:
 
@@ -101,9 +101,9 @@ Setting a view to be rendered is done by controller's `setView()` method which t
   3. Add `/`.
   4. Add the view file, most common a file ending with `.twig` extension.
 
-So, our new view is referenced by `@HubletoApp:Custom:MyApp/Dashboard.twig`.
+So, our new view is referenced by `@Hubleto:App:Custom:MyApp/Dashboard.twig`.
 
-Explained once more, the first part of this reference (`@HubletoApp:Custom:MyApp`) contains a reference to the app where the view is available. Simply said, this reference is always the same as the app's namespace, just using colons (`:`) instead of slashes (`\`). This reference always points to the `Views` folder in your app. Then, the second part is the relative path of the file containing the view. In our case, it is `Dashboard.twig`.
+Explained once more, the first part of this reference (`@Hubleto:App:Custom:MyApp`) contains a reference to the app where the view is available. Simply said, this reference is always the same as the app's namespace, just using colons (`:`) instead of slashes (`\`). This reference always points to the `Views` folder in your app. Then, the second part is the relative path of the file containing the view. In our case, it is `Dashboard.twig`.
 
 ## Add view
 

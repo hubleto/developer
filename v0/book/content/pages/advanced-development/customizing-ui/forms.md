@@ -77,7 +77,7 @@ The Lookup inputs are created the same way as the input from the example above. 
 <FormInput title={"Contact Person"}>
   <Lookup
     {...this.getDefaultInputProps()}
-    model="HubletoApp/Customers/Models/Person"
+    model="Hubleto/App/Customers/Models/Person"
     value={this.record.id_person}
     onChange={(value: any) => {
       this.updateRecord({ id_person: value });
@@ -94,7 +94,7 @@ For the example below we used the API endpoint `customers/get-company-contacts` 
 <FormInput title={"Contact Person"}>
   <Lookup
     {...this.getDefaultInputProps()}
-    model="HubletoApp/Customers/Models/Person"
+    model="Hubleto/App/Customers/Models/Person"
     endpoint={`customers/get-company-contacts`}
     customEndpointParams={ id_company: R.id_company }
     readonly={R.is_archived}

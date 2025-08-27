@@ -1,6 +1,6 @@
 # Model DealStatus
 
-namespace HubletoApp\Settings\Models\DeaStatus
+namespace Hubleto\App\Settings\Models\DeaStatus
 
 A status for a Deal
 

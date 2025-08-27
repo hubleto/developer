@@ -1,6 +1,6 @@
 # Model UserHasRole
 
-namespace HubletoApp\Settings\Models\UserHasRole
+namespace Hubleto\App\Settings\Models\UserHasRole
 
 A list of roles assigned to a user
 

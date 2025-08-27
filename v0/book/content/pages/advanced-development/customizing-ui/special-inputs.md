@@ -17,7 +17,7 @@ For the Tag Input component you need to:
 <FormInput title="Tags">
   <InputTags2
     {...this.getDefaultInputProps()}
-    model="HubletoApp/Settings/Models/Tag"
+    model="Hubleto/App/Settings/Models/Tag"
     value={this.state.record.TAGS}
     targetColumn="id_company"
     sourceColumn="id_tag"

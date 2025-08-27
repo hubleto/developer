@@ -35,7 +35,7 @@ To add the definition of the column into the config, you may either modify `Conf
 
 ###### ./ConfigEnv.php
 ```
-$config['models']['HubletoApp\\Community\\Customers\\Models\\Customer']['customColumns'] = [
+$config['models']['Hubleto\\App\\Community\\Customers\\Models\\Customer']['customColumns'] = [
   'favorite_holiday_destination' => [
     'class' => \ADIOS\Core\Db\Column\Varchar::class,
     'title' => 'Favourite holiday destination',

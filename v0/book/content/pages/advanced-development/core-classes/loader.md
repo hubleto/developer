@@ -10,7 +10,7 @@ This is the base of a Loader.php file:
 
 ```php
   <?php
-  namespace HubletoApp\Custom\MyApp;
+  namespace Hubleto\App\Custom\MyApp;
   class Loader extends \Hubleto\Erp\Core\App { }
 ```
 
@@ -69,14 +69,14 @@ You also need to add the full path to the sub-app as a whole.
 ```php
 public function installDefaultPermissions()
 {
-  $mPermission = new \HubletoApp\Settings\Models\Permission($this->main);
+  $mPermission = new \Hubleto\App\Community\Settings\Models\Permission($this->main);
   $permissions = [
-    "HubletoApp/Customers/Models/Activity:Create",
-    "HubletoApp/Customers/Models/Activity:Read",
-    "HubletoApp/Customers/Models/Activity:Update",
-    "HubletoApp/Customers/Models/Activity:Delete",
-    "HubletoApp/Customers/Controllers/Activity"
-    "HubletoApp/Customers/Activity"
+    "Hubleto/App/Community/Customers/Models/Activity:Create",
+    "Hubleto/App/Community/Customers/Models/Activity:Read",
+    "Hubleto/App/Community/Customers/Models/Activity:Update",
+    "Hubleto/App/Community/Customers/Models/Activity:Delete",
+    "Hubleto/App/Community/Customers/Controllers/Activity"
+    "Hubleto/App/Community/Customers/Activity"
   ]
 
   foreach ($permissions as $key => $permission) {

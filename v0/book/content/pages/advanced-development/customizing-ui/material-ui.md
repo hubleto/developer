@@ -27,7 +27,7 @@ Now, having all libraries in place, let's integrate all them together. Follow in
   '1': {
     'title': 'Create Hubleto app',
     'description': 'Run this command in your project\'s folder to create a very basic app.',
-    'example': markdown('`php hubleto create app HubletoApp\\Custom\\Mui`'),
+    'example': markdown('`php hubleto create app Hubleto\\App\\Custom\\Mui`'),
   },
   '2': {
     'title': 'Create a UI component',

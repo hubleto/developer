@@ -1,6 +1,6 @@
 # Model Deal
 
-namespace HubletoApp\Deals\Models\Deal
+namespace Hubleto\App\Deals\Models\Deal
 
 List of created Deals
 
