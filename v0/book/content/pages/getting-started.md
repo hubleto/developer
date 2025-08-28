@@ -1,4 +1,4 @@
-# Install
+# Getting started
 
 Use Hubleto for your projects.
 
