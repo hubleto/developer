@@ -6,6 +6,9 @@ redirects:
   install:
     newPage: getting-started
     code: 301
+  docs/hooks:
+    newPage: advanced-development/hooks
+    code: 301
   some-old-page:
     newPage: some-new-page
     code: 301
@@ -186,16 +189,18 @@ tableOfContents:
               - page: advanced-development/core-classes/controller
               - page: advanced-development/core-classes/router
               - page: advanced-development/core-classes/permissions
-          - page: advanced-development/crons
-          - page: advanced-development/hooks
+          - page: advanced-development/design-patterns
             children:
-              - page: advanced-development/hooks/introduction
-              - page: advanced-development/hooks/events
+            - page: advanced-development/crons
+            - page: advanced-development/hooks
+              children:
+                - page: advanced-development/hooks/introduction
+                - page: advanced-development/hooks/events
+            - page: advanced-development/pipeline
+            - page: advanced-development/miscellaneous/dashboard
           - page: advanced-development/miscellaneous
             children:
-              - page: advanced-development/miscellaneous/dashboard
               - page: advanced-development/miscellaneous/hubleto-chatgpt
-          - page: adios-framework
   - page: tutorials
     icon: fa-solid fa-graduation-cap
     children:

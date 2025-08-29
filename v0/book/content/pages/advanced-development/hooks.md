@@ -1,6 +1,6 @@
 # Automation hooks
 
-Automation hooks serve the purpes as their name suggest - to automate workflow.
+Automation hooks serve the purpose as their name suggest - to automate workflow.
 
 | Topic                                                                               |
 | ----------------------------------------------------------------------------------- |
