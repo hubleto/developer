@@ -46,7 +46,7 @@ There also is a Docker image ready for installation, which already contains the 
 
 ### Showcase build
 
-You only need to run the command `docker run -d -p 8080:80 mrgopes/hubleto-webapp` to set up a demo build of Hubleto. You can log in with the credentials `admin@example.com` and password `changeme` at `http://localhost:8080/`.
+You only need to run the command `docker run -d -p 8080:80 mrgopes/hubleto-webapp` to set up a demo build of Hubleto. You can log in with the credentials `admin@example.com` and password `changeme` at `http://localhost:8080/hubleto/`.
 
 ### Production-ready build
 
@@ -64,6 +64,8 @@ Also do not forget to specify your account details `accountName`, `adminName`, `
 Specify all arguments as if you were defining the initialization config (except `url`), see [php hubleto init](cli/init).
 
 The `-p 8080:80` specifies, that the container should run on port `8080`. If your port `80` is not being used, we advise you to use `-p 80:80` instead. Otherwise, you can use e.g. NGINX to forward traffic from a specific route to this port, however, in that case don't forget to set the `url` argument accordingly. 
+
+> Important: When using the `-p` directive, always also specify the `-e url=".."` argument accordingly, Hubleto will otherwise assume your outer port (the one you access) is 80 and it will not work correctly because of this.
 
 Example installation command with default values for all arguments:
 <pre><code>
