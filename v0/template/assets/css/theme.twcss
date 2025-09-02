@@ -43,6 +43,7 @@
 
   h6:has(+pre) { @apply bg-gray-900 text-xs text-slate-100 p-1 rounded-t; position: relative; top: 1.5em; }
   pre + h6 { @apply italic text-sm text-gray-600; }
+  table + h6 { @apply italic text-sm text-gray-600; }
 
   table { @apply border border-slate-200 !mt-4; }
   table tr { @apply odd:bg-slate-100; }
@@ -85,7 +86,7 @@
   .sidebar .collapsed + * { @apply hidden; }
   .sidebar .expanded + * { @apply block; }
 
-  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 p-2 hidden shadow-lg lg:block; }
+  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 p-2 hidden lg:block; }
   aside.on-this-page .btn { @apply text-xs; }
   aside.on-this-page > div:nth-child(1) { @apply text-sm p-1 flex items-center font-semibold; }
   aside.on-this-page > div:nth-child(2) { @apply p-2; }
