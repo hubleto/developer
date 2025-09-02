@@ -19,6 +19,7 @@ class MyGuideVis extends \WaiBlue\GuideVis\Loader {
     $pageVars = parent::getPageVars($pageData);
     $pageVars['bookIndex'] = $this->buildBookIndex();
     $pageVars['guide'] = $this;
+    $pageVars['onThisPage'] = $this->getOnThisPage($this->pageContentMd);
     return $pageVars;
   }
 

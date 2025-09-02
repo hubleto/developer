@@ -1,12 +1,21 @@
 <!-- ========== HEADER ========== -->
 <header class="header flex flex-row justify-between">
-  <div class="header-inner">
-    {% for item in breadcrumbs %}
-      <svg version="1.1" style="width:0.5em;height:0.5em" viewBox="0 0 460 531">
-        <polygon class="fill-white" points="0.5,0.5 459.5,265 0.5,530.5 0.5,445 100,265.5 0.5,85.5"/>
-      </svg>
-      <a href="{{ guideRootUrl }}/{{ item }}">{{ bookConfig.pages[item].title }}</a>
-    {% endfor %}
+  <div>
+    <div class="header-inner">
+      {% for item in breadcrumbs %}
+        <svg version="1.1" style="width:0.5em;height:0.5em" viewBox="0 0 460 531">
+          <polygon class="fill-white" points="0.5,0.5 459.5,265 0.5,530.5 0.5,445 100,265.5 0.5,85.5"/>
+        </svg>
+        <a href="{{ guideRootUrl }}/{{ item }}">{{ bookConfig.pages[item].title }}</a>
+      {% endfor %}
+    </div>
+    {% if onThisPage|length > 0 %}
+      <div class="mt-2 flex gap-x-2">
+        {% for h2, h3list in onThisPage %}
+          <a href="#{{ h2 }}" class="border border-white py-1 px-2 bg-white/10 rounded hover:bg-white/20 hover:no-underline">{{ h2 }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
   <div class="mr-2">
     <div>

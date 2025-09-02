@@ -1,4 +1,4 @@
-# Manifest
+# Application manifest
 
 Each Hubleto app must provide its `manifest.yaml` file containg basic description of the app.
 

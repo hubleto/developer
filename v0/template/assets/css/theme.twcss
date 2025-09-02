@@ -18,6 +18,7 @@
   h4 { @apply text-base font-semibold text-primary pt-4 pb-0 first-of-type:pt-4; }
   a { @apply text-primary; font-size: inherit; }
   h1 a, h2 a, h3 a { @apply inline-block pt-16; }
+  h1 i.fa-link, h2 i.fa-link, h3 i.fa-link { @apply text-secondary; }
   a:hover { @apply underline; }
   b, strong { font-size: inherit; }
   h2+a+h3 { @apply pt-0; }
@@ -84,8 +85,9 @@
   .sidebar .collapsed + * { @apply hidden; }
   .sidebar .expanded + * { @apply block; }
 
-  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 p-4 hidden shadow-lg lg:block; }
-  aside.on-this-page > div:nth-child(1) { @apply text-sm p-2.5 flex items-center font-semibold; }
+  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-white z-20 p-2 hidden shadow-lg lg:block; }
+  aside.on-this-page .btn { @apply text-xs; }
+  aside.on-this-page > div:nth-child(1) { @apply text-sm p-1 flex items-center font-semibold; }
   aside.on-this-page > div:nth-child(2) { @apply p-2; }
   aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-2 pb-2 text-sm font-normal; }
   aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs ml-2 p-0 text-gray-800; }

@@ -1,3 +1,3 @@
-# Accessing route params
+# Parametric routes
 
 {% include 'components/work-in-progress.twig' %}

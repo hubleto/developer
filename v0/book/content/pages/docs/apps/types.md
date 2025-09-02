@@ -1,4 +1,4 @@
-# Types
+# Types of Hubleto apps
 
 There are community, custom and external apps.
 

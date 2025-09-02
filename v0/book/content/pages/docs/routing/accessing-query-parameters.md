@@ -1,3 +1,3 @@
-# Routes with variables
+# Accessing query parameters
 
 {% include 'components/work-in-progress.twig' %}

@@ -125,8 +125,8 @@ tableOfContents:
       - page: docs/routing
         children:
           - page: docs/routing/defining-routes
-          - page: docs/routing/accessing-route-params
-          - page: docs/routing/routes-with-variables
+          - page: docs/routing/accessing-query-parameters
+          - page: docs/routing/parametric-routes
       - page: docs/models
         children:
           - page: docs/models/columns

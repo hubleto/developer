@@ -1,6 +1,6 @@
 # Loader
 
-Each must have a loader class. This class implements app's installation or initialization.
+Each app must have a loader class.
 
 Every time Hubleto needs to initialize the app, it will instantiate its `Loader.php` class and calls its `init()` method. Thus, each app must have a loader class.
 
