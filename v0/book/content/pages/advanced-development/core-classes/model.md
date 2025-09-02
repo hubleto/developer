@@ -107,7 +107,7 @@ public function describeForm(): \ADIOS\Core\Description\Form
     $description = parent::describeForm();
 
     $description->defaultValues['is_active'] = 0;
-    $description->defaultValues['id_user'] = $this->getAuthProvider()->getUserId();
+    $description->defaultValues['id_user'] = $this->authProvider()->getUserId();
     $description->defaultValues['date_created'] = date("Y-m-d");
 
     return $description;

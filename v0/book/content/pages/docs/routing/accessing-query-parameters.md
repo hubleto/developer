@@ -19,7 +19,7 @@ To define the route, the `httpGet()` method of the [router](defining-routes) sha
 To get the value of the `idContact` parameter in your controller, you should use the method called `urlParamAsInteger()` which is accessible via the router. The syntax is following:
 
 ```php
-$idContact = $this->getRouter()->urlParamAsInteger('idContact');
+$idContact = $this->router()->urlParamAsInteger('idContact');
 ```
 
 This method takes a name of the parameter as the argument and returns its sanitized value. Optionally, it can take a *deafult value* as a second argument which will be used if the desired parameter is not set.
@@ -46,7 +46,7 @@ Example implementation of the `ContactDetail` controller which takes the `idCont
 namespace Hubleto\App\Custom\Addressbook\Controllers;
 class ContactDetail extends \Hubleto\Erp\Controller {
   public function prepareView(): void {
-    $idContact = $this->getRouter()->urlParamAsInteger('idContact');
+    $idContact = $this->router()->urlParamAsInteger('idContact');
     // Load your contact with ID = $idContact
     $this->setView('@Hubleto:App:Custom:Addressbook:ContactDetail.twig');
   }

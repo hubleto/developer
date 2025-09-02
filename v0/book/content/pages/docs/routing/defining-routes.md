@@ -1,6 +1,6 @@
 # Defining routes
 
-Routes are defined with `$this->getRouter()->httpGet()` method.
+Routes are defined with `$this->router()->get()` method.
 
 Routes in [Hubleto router](https://github.com/hubleto/framework/blob/main/src/Router.php) are defined by calling router's `httpGet()` method.
 
@@ -13,7 +13,7 @@ In one `httpGet()` call you can specify multiple routes (or even all routes for 
 Take a look at this example:
 
 ```php
-$this->getRouter()->httpGet([
+$this->router()->get([
   '/^contacts\/?$/' => Controllers\Contacts::class,
   '/^contacts\/add\/?$/' => ['controller' => Controllers\Contacts::class, 'vars' => ['recordId' => -1]],
   '/^contacts(\/(?<recordId>\d+))?\/?$/' => Controllers\Contacts::class,

@@ -37,7 +37,7 @@ The board renderer is accessible via an endpoint specified in a router. Basicall
 Modify your app's router so that it will contain routes for your board controllers:
 
 ```php
-$this->getRouter()->httpGet([
+$this->router()->get([
   '/^my-app\/boards\/most-valuable-deals\/?$/' => Controllers\Boards\MostValuableDeals::class,
   '/^my-app\/boards\/deal-value-by-status\/?$/' => Controllers\Boards\DealValueByStatus::class,
 ]);
@@ -48,7 +48,7 @@ $this->getRouter()->httpGet([
 In your app's `init()` method, add the board to the dashboard manager:
 
 ```php
-$dashboardManager = $this->getAppManager()->getApp(\Hubleto\App\Community\Desktop::class)->dashboardManager;
+$dashboardManager = $this->appManager()->getApp(\Hubleto\App\Community\Desktop::class)->dashboardManager;
 
 $dashboardManager->addBoard(new \Hubleto\App\Community\Desktop\Types\Board(
   'Most valuable deals',

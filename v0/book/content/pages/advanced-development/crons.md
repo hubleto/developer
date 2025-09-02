@@ -9,7 +9,7 @@ Take a look at this example:
 namespace Hubleto\Erp\Cron;
 class Example extends \Hubleto\Erp\Core\Cron {
   public string $schedulingPattern = '*/10 * * * *';
-  public function run(): void { $this->getLogger()->info("Sample cron started."); }
+  public function run(): void { $this->logger()->info("Sample cron started."); }
 }
 ```
 
@@ -57,8 +57,8 @@ To run your crons, you must invoke the cron runner in some way. Default implemen
 ###### ./index.php
 ```php
 if (isset($_GET['cron'])) {
-  echo $main->getCronManager()->init();
-  echo $main->getCronManager()->run();
+  echo $main->cronManager()->init();
+  echo $main->cronManager()->run();
 } else {
   echo $main->render();
 }

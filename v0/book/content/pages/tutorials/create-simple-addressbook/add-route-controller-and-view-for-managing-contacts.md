@@ -17,7 +17,7 @@ namespace Hubleto\App\Custom\MyApp;
 class Loader extends \Hubleto\Erp\Core\App {
   public function init(): void {
     ...
-    $this->getRouter()->httpGet([ '/^my-app\/contacts\/?$/' => Controllers\Contacts::class ]);
+    $this->router()->get([ '/^my-app\/contacts\/?$/' => Controllers\Contacts::class ]);
     ...
   }
 }

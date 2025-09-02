@@ -18,7 +18,7 @@ The simplest example is following:
 ```
 class Loader {
   public function init(): void {
-    $this->getRouter()->httpGet([
+    $this->router()->get([
       '/^contact\/(\d+)?\/?$/' => Controllers\ContactDetail::class,
     ])
   }
@@ -27,18 +27,18 @@ class Loader {
 
 In this example, the route is `/^contact\/(\d+)?\/?$/`. Reading the regular expression, this route will match URLs like `contact/1234`, `contact/5678` or similar. The `(\d+)` is the first variable, counting from zero, so the *index* of this variable is '0' (integer zero).
 
-In this case, if you use `$this->getRouter()->routeVarAsInteger(0)` in your controller, you will get the value of this route variable.
+In this case, if you use `$this->router()->routeVarAsInteger(0)` in your controller, you will get the value of this route variable.
 
 But, you also can have named variables.
 
 ## Named variables
 
-The only difference in named variables is that they are accessible by some name - a string. For example, we will name the variable `idContact` and so we want to get its value by calling `$this->getRouter()->routeVarAsInteger('idContact')`.
+The only difference in named variables is that they are accessible by some name - a string. For example, we will name the variable `idContact` and so we want to get its value by calling `$this->router()->routeVarAsInteger('idContact')`.
 
 To get this, the route pattern must be following:
 
 ```
-$this->getRouter()->httpGet([
+$this->router()->get([
   '/^contact\/(<idContact>\d+)?\/?$/' => Controllers\ContactDetail::class,
 ])
 ```
@@ -52,13 +52,13 @@ As already shown before, to get the value of the `idContact` parameter in your c
 The syntax for named variables is following:
 
 ```php
-$idContact = $this->getRouter()->routeVarAsInteger('idContact');
+$idContact = $this->router()->routeVarAsInteger('idContact');
 ```
 
 and for variables indexed by numbers:
 
 ```php
-$idContact = $this->getRouter()->routeVarAsInteger(0);
+$idContact = $this->router()->routeVarAsInteger(0);
 ```
 
 This method takes a name of the parameter as the argument and returns its sanitized value.
@@ -85,7 +85,7 @@ Example implementation of the `ContactDetail` controller which takes the `idCont
 namespace Hubleto\App\Custom\Addressbook\Controllers;
 class ContactDetail extends \Hubleto\Erp\Controller {
   public function prepareView(): void {
-    $idContact = $this->getRouter()->routeVarAsInteger('idContact');
+    $idContact = $this->router()->routeVarAsInteger('idContact');
     // Load your contact with ID = $idContact
     $this->setView('@Hubleto:App:Custom:Addressbook:ContactDetail.twig');
   }

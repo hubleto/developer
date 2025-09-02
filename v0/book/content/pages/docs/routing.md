@@ -12,7 +12,7 @@ For example, the `Hubleto\Erp\Loader` adds following default routes:
 
 ###### Hubleto\Erp\Loader.php
 ```php
-$this->getRouter()->httpGet([
+$this->router()->get([
   '/^api\/get-apps-info\/?$/' => Api\GetAppsInfo::class,
   '/^api\/search\/?$/' =>  Api\Search::class,
 ]);
@@ -23,7 +23,7 @@ In the example above, the `api/get-apps-info` route leads to the `Api/GetAppsInf
 
 ## Defining routes
 
-Routes are defined with `$this->getRouter()->httpGet()` method. Read more about [defining routes](routing/defining-routes).
+Routes are defined with `$this->router()->get()` method. Read more about [defining routes](routing/defining-routes).
 
 ## Accessing query parameters
 

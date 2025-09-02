@@ -71,7 +71,7 @@ When creating the second level of the sidebar navigation, you need to correctly 
 ###### ./src/apps/external/MyCompany/MyApp/Loader.php
 
 ```php
-if (str_starts_with($this->getEnv()->requestedUri, 'customers')) { //specifying the url that the second level links can be shown in
+if (str_starts_with($this->env()->requestedUri, 'customers')) { //specifying the url that the second level links can be shown in
   $this->sidebar->addHeading1($this->translate('Customers'));
   $this->sidebar->addLink('customers/companies', $this->translate('Companies'), 'fas fa-building');
   $this->sidebar->addLink('customers/persons', $this->translate('Contact Persons'), 'fas fa-users');
