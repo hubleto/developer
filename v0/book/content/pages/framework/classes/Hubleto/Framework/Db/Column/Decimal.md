@@ -1,26 +1,20 @@
 
-***
+# \Hubleto\Framework\Db\Column\Decimal
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./">\Hubleto\Framework\Db\Column</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Db\Column\Decimal`
-* Parent class: [`\Hubleto\Framework\Db\Column`](./)
 
 ## Properties
 
 ### type
 
-```php
-protected string $type
-```
+`protected string $type`
 
-***
 
 ### sqlDataType
 
-```php
-protected string $sqlDataType
-```
+`protected string $sqlDataType`
 
-***
 
 ## Methods
 
@@ -36,7 +30,6 @@ public normalize(mixed $value): mixed
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
-***
 
 ### validate
 
@@ -50,7 +43,6 @@ public validate(mixed $value): bool
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
-***
 
 ### sqlCreateString
 
@@ -65,7 +57,6 @@ public sqlCreateString(string $table, string $columnName): string
 | `$table`      | **string** |             |
 | `$columnName` | **string** |             |
 
-***
 
 ## Inherited methods
 
@@ -82,7 +73,6 @@ public __construct(\Hubleto\Framework\Model $model, string $title): mixed
 | `$model`  | **\Hubleto\Framework\Model** |             |
 | `$title`  | **string**                   |             |
 
-***
 
 ### addIndex
 
@@ -96,7 +86,6 @@ public addIndex(string $indexDefinition): \Hubleto\Framework\Db\Column
 |--------------------|------------|-------------|
 | `$indexDefinition` | **string** |             |
 
-***
 
 ### getIndexes
 
@@ -104,7 +93,6 @@ public addIndex(string $indexDefinition): \Hubleto\Framework\Db\Column
 public getIndexes(): array
 ```
 
-***
 
 ### getProperty
 
@@ -118,7 +106,6 @@ public getProperty(string $pName): mixed
 |-----------|------------|-------------|
 | `$pName`  | **string** |             |
 
-***
 
 ### setProperty
 
@@ -133,7 +120,6 @@ public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Db\Column
 | `$pName`  | **string** |             |
 | `$pValue` | **mixed**  |             |
 
-***
 
 ### getReactComponent
 
@@ -141,7 +127,6 @@ public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Db\Column
 public getReactComponent(): string
 ```
 
-***
 
 ### setReactComponent
 
@@ -155,7 +140,6 @@ public setReactComponent(string $reactComponent): \Hubleto\Framework\Db\Column
 |-------------------|------------|-------------|
 | `$reactComponent` | **string** |             |
 
-***
 
 ### getByteSize
 
@@ -163,7 +147,6 @@ public setReactComponent(string $reactComponent): \Hubleto\Framework\Db\Column
 public getByteSize(): int
 ```
 
-***
 
 ### setByteSize
 
@@ -177,7 +160,6 @@ public setByteSize(int $byteSize): \Hubleto\Framework\Db\Column
 |-------------|---------|-------------|
 | `$byteSize` | **int** |             |
 
-***
 
 ### getType
 
@@ -185,7 +167,6 @@ public setByteSize(int $byteSize): \Hubleto\Framework\Db\Column
 public getType(): string
 ```
 
-***
 
 ### setType
 
@@ -199,7 +180,6 @@ public setType(string $type): \Hubleto\Framework\Db\Column
 |-----------|------------|-------------|
 | `$type`   | **string** |             |
 
-***
 
 ### getSqlDataType
 
@@ -207,7 +187,6 @@ public setType(string $type): \Hubleto\Framework\Db\Column
 public getSqlDataType(): string
 ```
 
-***
 
 ### setSqlDataType
 
@@ -221,7 +200,6 @@ public setSqlDataType(string $sqlDataType): \Hubleto\Framework\Db\Column
 |----------------|------------|-------------|
 | `$sqlDataType` | **string** |             |
 
-***
 
 ### getTitle
 
@@ -229,7 +207,6 @@ public setSqlDataType(string $sqlDataType): \Hubleto\Framework\Db\Column
 public getTitle(): string
 ```
 
-***
 
 ### setTitle
 
@@ -243,7 +220,6 @@ public setTitle(string $title): \Hubleto\Framework\Db\Column
 |-----------|------------|-------------|
 | `$title`  | **string** |             |
 
-***
 
 ### getReadonly
 
@@ -251,7 +227,6 @@ public setTitle(string $title): \Hubleto\Framework\Db\Column
 public getReadonly(): bool
 ```
 
-***
 
 ### setReadonly
 
@@ -265,7 +240,6 @@ public setReadonly(bool $readonly = true): \Hubleto\Framework\Db\Column
 |-------------|----------|-------------|
 | `$readonly` | **bool** |             |
 
-***
 
 ### getRequired
 
@@ -273,7 +247,6 @@ public setReadonly(bool $readonly = true): \Hubleto\Framework\Db\Column
 public getRequired(): bool
 ```
 
-***
 
 ### setRequired
 
@@ -287,7 +260,6 @@ public setRequired(bool $required = true): \Hubleto\Framework\Db\Column
 |-------------|----------|-------------|
 | `$required` | **bool** |             |
 
-***
 
 ### getPlaceholder
 
@@ -295,7 +267,6 @@ public setRequired(bool $required = true): \Hubleto\Framework\Db\Column
 public getPlaceholder(): bool
 ```
 
-***
 
 ### setPlaceholder
 
@@ -309,7 +280,6 @@ public setPlaceholder(bool $placeholder = true): \Hubleto\Framework\Db\Column
 |----------------|----------|-------------|
 | `$placeholder` | **bool** |             |
 
-***
 
 ### getUnit
 
@@ -317,7 +287,6 @@ public setPlaceholder(bool $placeholder = true): \Hubleto\Framework\Db\Column
 public getUnit(): string
 ```
 
-***
 
 ### setUnit
 
@@ -331,7 +300,6 @@ public setUnit(string $unit): \Hubleto\Framework\Db\Column
 |-----------|------------|-------------|
 | `$unit`   | **string** |             |
 
-***
 
 ### getColorScale
 
@@ -339,7 +307,6 @@ public setUnit(string $unit): \Hubleto\Framework\Db\Column
 public getColorScale(): string
 ```
 
-***
 
 ### setColorScale
 
@@ -353,7 +320,6 @@ public setColorScale(string $colorScale): \Hubleto\Framework\Db\Column
 |---------------|------------|-------------|
 | `$colorScale` | **string** |             |
 
-***
 
 ### getCssClass
 
@@ -361,7 +327,6 @@ public setColorScale(string $colorScale): \Hubleto\Framework\Db\Column
 public getCssClass(): string
 ```
 
-***
 
 ### setCssClass
 
@@ -375,7 +340,6 @@ public setCssClass(string $cssClass): \Hubleto\Framework\Db\Column
 |-------------|------------|-------------|
 | `$cssClass` | **string** |             |
 
-***
 
 ### getFormat
 
@@ -383,7 +347,6 @@ public setCssClass(string $cssClass): \Hubleto\Framework\Db\Column
 public getFormat(): bool
 ```
 
-***
 
 ### setFormat
 
@@ -397,7 +360,6 @@ public setFormat(bool $format = true): \Hubleto\Framework\Db\Column
 |-----------|----------|-------------|
 | `$format` | **bool** |             |
 
-***
 
 ### getDescription
 
@@ -405,7 +367,6 @@ public setFormat(bool $format = true): \Hubleto\Framework\Db\Column
 public getDescription(): string
 ```
 
-***
 
 ### setDescription
 
@@ -419,7 +380,6 @@ public setDescription(string $description): \Hubleto\Framework\Db\Column
 |----------------|------------|-------------|
 | `$description` | **string** |             |
 
-***
 
 ### getExamples
 
@@ -427,7 +387,6 @@ public setDescription(string $description): \Hubleto\Framework\Db\Column
 public getExamples(): array
 ```
 
-***
 
 ### setExamples
 
@@ -441,7 +400,6 @@ public setExamples(array $examples): \Hubleto\Framework\Db\Column
 |-------------|-----------|-------------|
 | `$examples` | **array** |             |
 
-***
 
 ### getEnumValues
 
@@ -449,7 +407,6 @@ public setExamples(array $examples): \Hubleto\Framework\Db\Column
 public getEnumValues(): array
 ```
 
-***
 
 ### setEnumValues
 
@@ -463,7 +420,6 @@ public setEnumValues(array $enumValues): \Hubleto\Framework\Db\Column
 |---------------|-----------|-------------|
 | `$enumValues` | **array** |             |
 
-***
 
 ### getEnumCssClasses
 
@@ -471,7 +427,6 @@ public setEnumValues(array $enumValues): \Hubleto\Framework\Db\Column
 public getEnumCssClasses(): array
 ```
 
-***
 
 ### setEnumCssClasses
 
@@ -485,7 +440,6 @@ public setEnumCssClasses(array $enumCssClasses): \Hubleto\Framework\Db\Column
 |-------------------|-----------|-------------|
 | `$enumCssClasses` | **array** |             |
 
-***
 
 ### getPredefinedValues
 
@@ -493,7 +447,6 @@ public setEnumCssClasses(array $enumCssClasses): \Hubleto\Framework\Db\Column
 public getPredefinedValues(): array
 ```
 
-***
 
 ### setPredefinedValues
 
@@ -507,7 +460,6 @@ public setPredefinedValues(array $predefinedValues): \Hubleto\Framework\Db\Colum
 |---------------------|-----------|-------------|
 | `$predefinedValues` | **array** |             |
 
-***
 
 ### getHidden
 
@@ -515,7 +467,6 @@ public setPredefinedValues(array $predefinedValues): \Hubleto\Framework\Db\Colum
 public getHidden(): bool
 ```
 
-***
 
 ### setHidden
 
@@ -529,7 +480,6 @@ public setHidden(bool $hidden = true): \Hubleto\Framework\Db\Column
 |-----------|----------|-------------|
 | `$hidden` | **bool** |             |
 
-***
 
 ### getRawSqlDefinition
 
@@ -537,7 +487,6 @@ public setHidden(bool $hidden = true): \Hubleto\Framework\Db\Column
 public getRawSqlDefinition(): string
 ```
 
-***
 
 ### setRawSqlDefinition
 
@@ -551,7 +500,6 @@ public setRawSqlDefinition(string $rawSqlDefinition): \Hubleto\Framework\Db\Colu
 |---------------------|------------|-------------|
 | `$rawSqlDefinition` | **string** |             |
 
-***
 
 ### getDefaultValue
 
@@ -559,7 +507,6 @@ public setRawSqlDefinition(string $rawSqlDefinition): \Hubleto\Framework\Db\Colu
 public getDefaultValue(): mixed
 ```
 
-***
 
 ### setDefaultValue
 
@@ -573,7 +520,6 @@ public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Db\Column
 |-----------------|-----------|-------------|
 | `$defaultValue` | **mixed** |             |
 
-***
 
 ### getTableCellRenderer
 
@@ -581,7 +527,6 @@ public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Db\Column
 public getTableCellRenderer(): string
 ```
 
-***
 
 ### setTableCellRenderer
 
@@ -595,7 +540,6 @@ public setTableCellRenderer(string $tableCellRenderer): \Hubleto\Framework\Db\Co
 |----------------------|------------|-------------|
 | `$tableCellRenderer` | **string** |             |
 
-***
 
 ### getLookupModel
 
@@ -603,7 +547,6 @@ public setTableCellRenderer(string $tableCellRenderer): \Hubleto\Framework\Db\Co
 public getLookupModel(): string
 ```
 
-***
 
 ### setLookupModel
 
@@ -617,7 +560,6 @@ public setLookupModel(string $lookupModel): \Hubleto\Framework\Db\Column
 |----------------|------------|-------------|
 | `$lookupModel` | **string** |             |
 
-***
 
 ### getDecimals
 
@@ -625,7 +567,6 @@ public setLookupModel(string $lookupModel): \Hubleto\Framework\Db\Column
 public getDecimals(): int
 ```
 
-***
 
 ### setDecimals
 
@@ -639,7 +580,6 @@ public setDecimals(int $decimals): \Hubleto\Framework\Db\Column
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
 
-***
 
 ### describeInput
 
@@ -647,7 +587,6 @@ public setDecimals(int $decimals): \Hubleto\Framework\Db\Column
 public describeInput(): \Hubleto\Framework\Description\Input
 ```
 
-***
 
 ### loadFromArray
 
@@ -661,7 +600,6 @@ public loadFromArray(array $columnConfig): \Hubleto\Framework\Db\Column
 |-----------------|-----------|-------------|
 | `$columnConfig` | **array** |             |
 
-***
 
 ### jsonSerialize
 
@@ -669,7 +607,6 @@ public loadFromArray(array $columnConfig): \Hubleto\Framework\Db\Column
 public jsonSerialize(): array
 ```
 
-***
 
 ### toArray
 
@@ -677,7 +614,6 @@ public jsonSerialize(): array
 public toArray(): array
 ```
 
-***
 
 ### getNullValue
 
@@ -685,7 +621,6 @@ public toArray(): array
 public getNullValue(): mixed
 ```
 
-***
 
 ### isEmpty
 
@@ -699,7 +634,6 @@ public isEmpty(mixed $value): bool
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
-***
 
 ### normalize
 
@@ -713,7 +647,6 @@ public normalize(mixed $value): mixed
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
-***
 
 ### validate
 
@@ -727,7 +660,6 @@ public validate(mixed $value): bool
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
-***
 
 ### sqlCreateString
 
@@ -742,7 +674,6 @@ public sqlCreateString(string $table, string $columnName): string
 | `$table`      | **string** |             |
 | `$columnName` | **string** |             |
 
-***
 
 ### sqlIndexString
 
@@ -757,4 +688,3 @@ public sqlIndexString(string $table, string $columnName): string
 | `$table`      | **string** |             |
 | `$columnName` | **string** |             |
 
-***

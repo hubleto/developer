@@ -1,5 +1,6 @@
 
-This is an automatically generated documentation for **Hubleto Framework**.
+# 
+# Hubleto Framework
 
 ## Namespaces
 

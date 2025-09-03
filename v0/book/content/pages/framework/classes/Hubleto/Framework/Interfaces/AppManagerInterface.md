@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\AppManagerInterface`
+# \Hubleto\Framework\Interfaces\AppManagerInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public init(): void
 ```
 
-***
 
 ### sanitizeAppNamespace
 
@@ -25,7 +22,6 @@ public sanitizeAppNamespace(string $appNamespace): string
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### validateAppNamespace
 
@@ -39,7 +35,6 @@ public validateAppNamespace(string $appNamespace): void
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### onBeforeRender
 
@@ -47,7 +42,6 @@ public validateAppNamespace(string $appNamespace): void
 public onBeforeRender(): void
 ```
 
-***
 
 ### getAppNamespaceForConfig
 
@@ -61,7 +55,6 @@ public getAppNamespaceForConfig(string $appNamespace): string
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### getAvailableApps
 
@@ -69,7 +62,6 @@ public getAppNamespaceForConfig(string $appNamespace): string
 public getAvailableApps(): array
 ```
 
-***
 
 ### getInstalledAppNamespaces
 
@@ -77,7 +69,6 @@ public getAvailableApps(): array
 public getInstalledAppNamespaces(): array
 ```
 
-***
 
 ### createAppInstance
 
@@ -91,7 +82,6 @@ public createAppInstance(string $appNamespace): \Hubleto\Framework\Interfaces\Ap
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### getEnabledApps
 
@@ -99,7 +89,6 @@ public createAppInstance(string $appNamespace): \Hubleto\Framework\Interfaces\Ap
 public getEnabledApps(): array
 ```
 
-***
 
 ### getDisabledApps
 
@@ -107,7 +96,6 @@ public getEnabledApps(): array
 public getDisabledApps(): array
 ```
 
-***
 
 ### getInstalledApps
 
@@ -115,7 +103,6 @@ public getDisabledApps(): array
 public getInstalledApps(): array
 ```
 
-***
 
 ### getActivatedApp
 
@@ -123,7 +110,6 @@ public getInstalledApps(): array
 public getActivatedApp(): null|\Hubleto\Framework\Interfaces\AppInterface
 ```
 
-***
 
 ### getApp
 
@@ -137,7 +123,6 @@ public getApp(string $appNamespace): null|\Hubleto\Framework\Interfaces\AppInter
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### isAppInstalled
 
@@ -151,7 +136,6 @@ public isAppInstalled(string $appNamespace): bool
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### isAppEnabled
 
@@ -165,7 +149,6 @@ public isAppEnabled(string $appNamespace): bool
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### installApp
 
@@ -182,7 +165,6 @@ public installApp(int $round, string $appNamespace, array $appConfig = [], bool 
 | `$appConfig`    | **array**  |             |
 | `$forceInstall` | **bool**   |             |
 
-***
 
 ### disableApp
 
@@ -196,7 +178,6 @@ public disableApp(string $appNamespace): void
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### enableApp
 
@@ -210,7 +191,6 @@ public enableApp(string $appNamespace): void
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***
 
 ### createApp
 
@@ -225,7 +205,6 @@ public createApp(string $appNamespace, string $appSrcFolder): void
 | `$appNamespace` | **string** |             |
 | `$appSrcFolder` | **string** |             |
 
-***
 
 ### canAppDangerouslyInjectDesktopHtmlContent
 
@@ -239,4 +218,3 @@ public canAppDangerouslyInjectDesktopHtmlContent(string $appNamespace): bool
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
-***

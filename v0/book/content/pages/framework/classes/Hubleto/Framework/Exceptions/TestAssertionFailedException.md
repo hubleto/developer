@@ -1,7 +1,7 @@
 
 Thrown when a test assertion fails.
 
-***
+# \Hubleto\Framework\Exceptions\TestAssertionFailedException
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="../../../Exception">Exception</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Exceptions\TestAssertionFailedException`
-* Parent class: [`Exception`](../../../Exception)

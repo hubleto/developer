@@ -1,21 +1,19 @@
 
 Various helper functions.
 
-***
+# \Hubleto\Framework\Helper
+<table class='table-default dense'>
+</table>
 
-* Full name: `\Hubleto\Framework\Helper`
 
 ## Properties
 
 ### loadUrlError
 
-```php
-public static $loadUrlError
-```
+`public static $loadUrlError`
 
 * This property is **static**.
 
-***
 
 ## Methods
 
@@ -25,7 +23,6 @@ public static $loadUrlError
 public __construct(): mixed
 ```
 
-***
 
 ### deleteTags
 
@@ -44,7 +41,6 @@ public deleteTags(array $recordTagsIds, mixed $mCrossTag, string $lookupColumnNa
 | `$lookupColumnName` | **string** | Name of the lookup column in the cross tag model |
 | `$lookupId`         | **int**    | The id of the lookup                             |
 
-***
 
 ### minifyHtml
 
@@ -65,7 +61,6 @@ public static minifyHtml(string $html): string
 
 Minified HTML
 
-***
 
 ### loadUrl
 
@@ -87,7 +82,6 @@ public static loadUrl(string $url, array $post = []): string
 
 Loaded content of remote URL
 
-***
 
 ### rmspecialchars
 
@@ -108,7 +102,6 @@ public static rmspecialchars(string $string): string
 
 String with removed special characters
 
-***
 
 ### rmdiacritic
 
@@ -129,7 +122,6 @@ public static rmdiacritic(string $string): string
 
 String with removed punctuation characters
 
-***
 
 ### str2url
 
@@ -151,7 +143,6 @@ public static str2url(string $string, bool $replaceSlashes = TRUE): string
 
 URL-compatible string
 
-***
 
 ### str2uid
 
@@ -167,7 +158,6 @@ public static str2uid(mixed $string, mixed $replaceSlashes = TRUE): mixed
 | `$string`         | **mixed** |             |
 | `$replaceSlashes` | **mixed** |             |
 
-***
 
 ### generateUuidV4
 
@@ -176,7 +166,6 @@ public static generateUuidV4(): string
 ```
 
 * This method is **static**.
-***
 
 ### randomPassword
 
@@ -191,7 +180,6 @@ public static randomPassword(): string
 
 Generated random password
 
-***
 
 ### scanDirRecursively
 
@@ -206,7 +194,6 @@ public static scanDirRecursively(mixed $dir): array
 |-----------|-----------|-------------|
 | `$dir`    | **mixed** |             |
 
-***
 
 ### capitalizeFirstLetter
 
@@ -221,7 +208,6 @@ public static capitalizeFirstLetter(string $s): mixed
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
-***
 
 ### kebabToCamel
 
@@ -236,7 +222,6 @@ public static kebabToCamel(string $s): mixed
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
-***
 
 ### kebabToPascal
 
@@ -251,7 +236,6 @@ public static kebabToPascal(string $s): mixed
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
-***
 
 ### camelToKebab
 
@@ -266,7 +250,6 @@ public static camelToKebab(string $s): mixed
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
-***
 
 ### pascalToKebab
 
@@ -281,7 +264,6 @@ public static pascalToKebab(string $s): mixed
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
-***
 
 ### pluck
 
@@ -297,7 +279,6 @@ public static pluck(string $key, array $data): array
 | `$key`    | **string** |             |
 | `$data`   | **array**  |             |
 
-***
 
 ### keyBy
 
@@ -313,7 +294,6 @@ public static keyBy(string $key, array $data): array
 | `$key`    | **string** |             |
 | `$data`   | **array**  |             |
 
-***
 
 ### groupBy
 
@@ -329,7 +309,6 @@ public static groupBy(string $key, array $data): array
 | `$key`    | **string** |             |
 | `$data`   | **array**  |             |
 
-***
 
 ### encrypt
 
@@ -346,7 +325,6 @@ public static encrypt(string $value, string $seed = '', mixed $force = false): m
 | `$seed`   | **string** |             |
 | `$force`  | **mixed**  |             |
 
-***
 
 ### decrypt
 
@@ -363,4 +341,3 @@ public static decrypt(string $value, string $seed = '', mixed $force = false): m
 | `$seed`   | **string** |             |
 | `$force`  | **mixed**  |             |
 
-***

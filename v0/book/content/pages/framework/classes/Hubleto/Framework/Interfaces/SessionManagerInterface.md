@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\SessionManagerInterface`
+# \Hubleto\Framework\Interfaces\SessionManagerInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public getSalt(): string
 ```
 
-***
 
 ### start
 
@@ -26,7 +23,6 @@ public start(bool $persist, array $options = []): void
 | `$persist` | **bool**  |             |
 | `$options` | **array** |             |
 
-***
 
 ### stop
 
@@ -34,7 +30,6 @@ public start(bool $persist, array $options = []): void
 public stop(): void
 ```
 
-***
 
 ### set
 
@@ -50,7 +45,6 @@ public set(string $path, mixed $value, string $key = ''): mixed
 | `$value`  | **mixed**  |             |
 | `$key`    | **string** |             |
 
-***
 
 ### get
 
@@ -65,7 +59,6 @@ public get(string $path = '', string $key = ''): mixed
 | `$path`   | **string** |             |
 | `$key`    | **string** |             |
 
-***
 
 ### push
 
@@ -80,7 +73,6 @@ public push(string $path, mixed $value): void
 | `$path`   | **string** |             |
 | `$value`  | **mixed**  |             |
 
-***
 
 ### isset
 
@@ -94,7 +86,6 @@ public isset(string $path): bool
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
-***
 
 ### unset
 
@@ -108,7 +99,6 @@ public unset(string $path): void
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
-***
 
 ### clear
 
@@ -116,4 +106,3 @@ public unset(string $path): void
 public clear(): void
 ```
 
-***

@@ -1,9 +1,10 @@
 
 Default implementation of dependency injection.
 
-***
+# \Hubleto\Framework\DependencyInjection
+<table class='table-default dense'>
+</table>
 
-* Full name: `\Hubleto\Framework\DependencyInjection`
 
 ## Properties
 
@@ -11,23 +12,17 @@ Default implementation of dependency injection.
 
 [Description for $serviceProviders]
 
-```php
-private static array<string,string> $serviceProviders
-```
+`private static array<string,string> $serviceProviders`
 
 * This property is **static**.
 
-***
 
 ### services
 
-```php
-private static array $services
-```
+`private static array $services`
 
 * This property is **static**.
 
-***
 
 ## Methods
 
@@ -45,7 +40,6 @@ public static setServiceProvider(string $service, string $provider): void
 | `$service`  | **string** |             |
 | `$provider` | **string** |             |
 
-***
 
 ### setServiceProviders
 
@@ -60,7 +54,6 @@ public static setServiceProviders(array $providers): void
 |--------------|-----------|-------------|
 | `$providers` | **array** |             |
 
-***
 
 ### create
 
@@ -76,4 +69,3 @@ public static create(string $service, bool $noSingleton = false): mixed
 | `$service`     | **string** |             |
 | `$noSingleton` | **bool**   |             |
 
-***

@@ -1,43 +1,30 @@
 
-***
+# \Hubleto\Framework\Description\Table
+<table class='table-default dense'>
+<tr><td>Implements</td><td>  `JsonSerializable`</td></tr></table>
 
-* Full name: `\Hubleto\Framework\Description\Table`
-* This class implements:
-  `JsonSerializable`
 
 ## Properties
 
 ### ui
 
-```php
-public array $ui
-```
+`public array $ui`
 
-***
 
 ### permissions
 
-```php
-public array $permissions
-```
+`public array $permissions`
 
-***
 
 ### columns
 
-```php
-public array $columns
-```
+`public array $columns`
 
-***
 
 ### inputs
 
-```php
-public array $inputs
-```
+`public array $inputs`
 
-***
 
 ## Methods
 
@@ -47,7 +34,6 @@ public array $inputs
 public jsonSerialize(): array
 ```
 
-***
 
 ### toArray
 
@@ -55,4 +41,3 @@ public jsonSerialize(): array
 public toArray(): array
 ```
 
-***

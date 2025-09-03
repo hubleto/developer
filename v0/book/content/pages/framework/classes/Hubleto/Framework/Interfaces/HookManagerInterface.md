@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\HookManagerInterface`
+# \Hubleto\Framework\Interfaces\HookManagerInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public init(): void
 ```
 
-***
 
 ### log
 
@@ -25,7 +22,6 @@ public log(string $msg): void
 |-----------|------------|-------------|
 | `$msg`    | **string** |             |
 
-***
 
 ### addHook
 
@@ -39,7 +35,6 @@ public addHook(string $hookClass): void
 |--------------|------------|-------------|
 | `$hookClass` | **string** |             |
 
-***
 
 ### getHooks
 
@@ -47,7 +42,6 @@ public addHook(string $hookClass): void
 public getHooks(): array
 ```
 
-***
 
 ### run
 
@@ -62,4 +56,3 @@ public run(string $trigger, array $args): void
 | `$trigger` | **string** |             |
 | `$args`    | **array**  |             |
 
-***

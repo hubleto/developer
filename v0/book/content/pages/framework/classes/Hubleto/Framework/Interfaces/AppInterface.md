@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\AppInterface`
+# \Hubleto\Framework\Interfaces\AppInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public validateManifest(): mixed
 ```
 
-***
 
 ### init
 
@@ -19,7 +16,6 @@ public validateManifest(): mixed
 public init(): void
 ```
 
-***
 
 ### onBeforeRender
 
@@ -27,7 +23,6 @@ public init(): void
 public onBeforeRender(): void
 ```
 
-***
 
 ### hook
 
@@ -41,7 +36,6 @@ public hook(string $hook): void
 |-----------|------------|-------------|
 | `$hook`   | **string** |             |
 
-***
 
 ### getRootUrlSlug
 
@@ -49,7 +43,6 @@ public hook(string $hook): void
 public getRootUrlSlug(): string
 ```
 
-***
 
 ### getNotificationsCount
 
@@ -57,7 +50,6 @@ public getRootUrlSlug(): string
 public getNotificationsCount(): int
 ```
 
-***
 
 ### translate
 
@@ -73,7 +65,6 @@ public translate(string $string, array $vars = [], string $context = 'root'): st
 | `$vars`    | **array**  |             |
 | `$context` | **string** |             |
 
-***
 
 ### installTables
 
@@ -87,7 +78,6 @@ public installTables(int $round): void
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
-***
 
 ### getAvailableControllerClasses
 
@@ -95,7 +85,6 @@ public installTables(int $round): void
 public getAvailableControllerClasses(): array
 ```
 
-***
 
 ### getAvailableModelClasses
 
@@ -103,7 +92,6 @@ public getAvailableControllerClasses(): array
 public getAvailableModelClasses(): array
 ```
 
-***
 
 ### installDefaultPermissions
 
@@ -111,7 +99,6 @@ public getAvailableModelClasses(): array
 public installDefaultPermissions(): void
 ```
 
-***
 
 ### assignPermissionsToRoles
 
@@ -119,7 +106,6 @@ public installDefaultPermissions(): void
 public assignPermissionsToRoles(): void
 ```
 
-***
 
 ### generateDemoData
 
@@ -127,7 +113,6 @@ public assignPermissionsToRoles(): void
 public generateDemoData(): void
 ```
 
-***
 
 ### renderSecondSidebar
 
@@ -135,7 +120,6 @@ public generateDemoData(): void
 public renderSecondSidebar(): string
 ```
 
-***
 
 ### search
 
@@ -149,7 +133,6 @@ public search(array $expressions): array
 |----------------|-----------|-------------|
 | `$expressions` | **array** |             |
 
-***
 
 ### addSetting
 
@@ -164,7 +147,6 @@ public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $settin
 | `$app`     | **\Hubleto\Framework\Interfaces\AppInterface** |             |
 | `$setting` | **array**                                      |             |
 
-***
 
 ### getSettings
 
@@ -172,7 +154,6 @@ public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $settin
 public getSettings(): array
 ```
 
-***
 
 ### getFullConfigPath
 
@@ -186,7 +167,6 @@ public getFullConfigPath(string $path): string
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
-***
 
 ### saveConfig
 
@@ -201,7 +181,6 @@ public saveConfig(string $path, string $value = ''): void
 | `$path`   | **string** |             |
 | `$value`  | **string** |             |
 
-***
 
 ### saveConfigForUser
 
@@ -216,7 +195,6 @@ public saveConfigForUser(string $path, string $value = ''): void
 | `$path`   | **string** |             |
 | `$value`  | **string** |             |
 
-***
 
 ### configAsString
 
@@ -231,7 +209,6 @@ public configAsString(string $path, string $defaultValue = ''): string
 | `$path`         | **string** |             |
 | `$defaultValue` | **string** |             |
 
-***
 
 ### configAsInteger
 
@@ -246,7 +223,6 @@ public configAsInteger(string $path, int $defaultValue): int
 | `$path`         | **string** |             |
 | `$defaultValue` | **int**    |             |
 
-***
 
 ### configAsFloat
 
@@ -261,7 +237,6 @@ public configAsFloat(string $path, float $defaultValue): float
 | `$path`         | **string** |             |
 | `$defaultValue` | **float**  |             |
 
-***
 
 ### configAsBool
 
@@ -276,7 +251,6 @@ public configAsBool(string $path, bool $defaultValue = false): bool
 | `$path`         | **string** |             |
 | `$defaultValue` | **bool**   |             |
 
-***
 
 ### configAsArray
 
@@ -291,7 +265,6 @@ public configAsArray(string $path, array $defaultValue = []): array
 | `$path`         | **string** |             |
 | `$defaultValue` | **array**  |             |
 
-***
 
 ### setConfigAsString
 
@@ -306,7 +279,6 @@ public setConfigAsString(string $path, string $value = ''): void
 | `$path`   | **string** |             |
 | `$value`  | **string** |             |
 
-***
 
 ### setConfigAsInteger
 
@@ -321,7 +293,6 @@ public setConfigAsInteger(string $path, int $value): void
 | `$path`   | **string** |             |
 | `$value`  | **int**    |             |
 
-***
 
 ### setConfigAsFloat
 
@@ -336,7 +307,6 @@ public setConfigAsFloat(string $path, float $value): void
 | `$path`   | **string** |             |
 | `$value`  | **float**  |             |
 
-***
 
 ### setConfigAsBool
 
@@ -351,7 +321,6 @@ public setConfigAsBool(string $path, bool $value = false): void
 | `$path`   | **string** |             |
 | `$value`  | **bool**   |             |
 
-***
 
 ### setConfigAsArray
 
@@ -366,7 +335,6 @@ public setConfigAsArray(string $path, array $value = []): void
 | `$path`   | **string** |             |
 | `$value`  | **array**  |             |
 
-***
 
 ### dangerouslyInjectDesktopHtmlContent
 
@@ -380,7 +348,6 @@ public dangerouslyInjectDesktopHtmlContent(string $where): string
 |-----------|------------|-------------|
 | `$where`  | **string** |             |
 
-***
 
 ### collectExtendibles
 
@@ -394,7 +361,6 @@ public collectExtendibles(string $extendibleName): array
 |-------------------|------------|-------------|
 | `$extendibleName` | **string** |             |
 
-***
 
 ### addSearchSwitch
 
@@ -409,7 +375,6 @@ public addSearchSwitch(string $switch, string $name): void
 | `$switch` | **string** |             |
 | `$name`   | **string** |             |
 
-***
 
 ### canHandleSearchSwith
 
@@ -423,4 +388,3 @@ public canHandleSearchSwith(string $switch): bool
 |-----------|------------|-------------|
 | `$switch` | **string** |             |
 
-***

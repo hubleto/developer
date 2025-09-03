@@ -1,18 +1,15 @@
 
-***
+# \Hubleto\Framework\Auth\KeycloakOAuth2Provider
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./">Auth</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Auth\KeycloakOAuth2Provider`
-* Parent class: [`Auth`](./)
 
 ## Properties
 
 ### provider
 
-```php
-public $provider
-```
+`public $provider`
 
-***
 
 ## Methods
 
@@ -28,7 +25,6 @@ public __construct(array $config = []): mixed
 |-----------|-----------|-------------|
 | `$config` | **array** |             |
 
-***
 
 ### signOut
 
@@ -36,7 +32,6 @@ public __construct(array $config = []): mixed
 public signOut(): mixed
 ```
 
-***
 
 ### getAccessToken
 
@@ -44,7 +39,6 @@ public signOut(): mixed
 public getAccessToken(): mixed
 ```
 
-***
 
 ### setAccessToken
 
@@ -58,7 +52,6 @@ public setAccessToken(mixed $accessToken): mixed
 |----------------|-----------|-------------|
 | `$accessToken` | **mixed** |             |
 
-***
 
 ### auth
 
@@ -66,4 +59,3 @@ public setAccessToken(mixed $accessToken): mixed
 public auth(): void
 ```
 
-***

@@ -1,7 +1,7 @@
 
 Thrown when a database query execution is blocked by any foreign key constraint.
 
-***
+# \Hubleto\Framework\Exceptions\TestAssertionFailed
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="../../../Exception">Exception</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Exceptions\TestAssertionFailed`
-* Parent class: [`Exception`](../../../Exception)

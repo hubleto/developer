@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\CronManagerInterface`
+# \Hubleto\Framework\Interfaces\CronManagerInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public init(): void
 ```
 
-***
 
 ### log
 
@@ -25,7 +22,6 @@ public log(string $msg): void
 |-----------|------------|-------------|
 | `$msg`    | **string** |             |
 
-***
 
 ### addCron
 
@@ -39,7 +35,6 @@ public addCron(string $cronClass): void
 |--------------|------------|-------------|
 | `$cronClass` | **string** |             |
 
-***
 
 ### getCrons
 
@@ -47,7 +42,6 @@ public addCron(string $cronClass): void
 public getCrons(): array
 ```
 
-***
 
 ### run
 
@@ -55,4 +49,3 @@ public getCrons(): array
 public run(): void
 ```
 
-***

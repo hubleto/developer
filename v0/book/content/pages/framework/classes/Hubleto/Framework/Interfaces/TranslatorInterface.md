@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\TranslatorInterface`
+# \Hubleto\Framework\Interfaces\TranslatorInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public getContext(): string
 ```
 
-***
 
 ### setContext
 
@@ -25,7 +22,6 @@ public setContext(string $context): void
 |------------|------------|-------------|
 | `$context` | **string** |             |
 
-***
 
 ### getDictionaryFilename
 
@@ -40,7 +36,6 @@ public getDictionaryFilename(string $context, string $language = ''): string
 | `$context`  | **string** |             |
 | `$language` | **string** |             |
 
-***
 
 ### addToDictionary
 
@@ -56,7 +51,6 @@ public addToDictionary(string $string, string $context, string $toLanguage): voi
 | `$context`    | **string** |             |
 | `$toLanguage` | **string** |             |
 
-***
 
 ### loadDictionary
 
@@ -70,7 +64,6 @@ public loadDictionary(string $language = ""): array
 |-------------|------------|-------------|
 | `$language` | **string** |             |
 
-***
 
 ### translate
 
@@ -85,4 +78,3 @@ public translate(string $string, array $vars = []): string
 | `$string` | **string** |             |
 | `$vars`   | **array**  |             |
 
-***

@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\PermissionsManagerInterface`
+# \Hubleto\Framework\Interfaces\PermissionsManagerInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public init(): void
 ```
 
-***
 
 ### createUserRoleModel
 
@@ -19,7 +16,6 @@ public init(): void
 public createUserRoleModel(): null|\Hubleto\Framework\Model
 ```
 
-***
 
 ### DANGEROUS__grantAllPermissions
 
@@ -27,7 +23,6 @@ public createUserRoleModel(): null|\Hubleto\Framework\Model
 public DANGEROUS__grantAllPermissions(): void
 ```
 
-***
 
 ### revokeGrantAllPermissions
 
@@ -35,7 +30,6 @@ public DANGEROUS__grantAllPermissions(): void
 public revokeGrantAllPermissions(): void
 ```
 
-***
 
 ### loadAdministratorRoles
 
@@ -43,7 +37,6 @@ public revokeGrantAllPermissions(): void
 public loadAdministratorRoles(): array
 ```
 
-***
 
 ### loadAdministratorTypes
 
@@ -51,7 +44,6 @@ public loadAdministratorRoles(): array
 public loadAdministratorTypes(): array
 ```
 
-***
 
 ### expandPermissionGroups
 
@@ -59,7 +51,6 @@ public loadAdministratorTypes(): array
 public expandPermissionGroups(): void
 ```
 
-***
 
 ### set
 
@@ -75,7 +66,6 @@ public set(string $permission, int $idUserRole, bool $isEnabled): mixed
 | `$idUserRole` | **int**    |             |
 | `$isEnabled`  | **bool**   |             |
 
-***
 
 ### hasRole
 
@@ -89,7 +79,6 @@ public hasRole(int|string $role): bool
 |-----------|-----------------|-------------|
 | `$role`   | **int\|string** |             |
 
-***
 
 ### granted
 
@@ -105,7 +94,6 @@ public granted(string $permission, array $userRoles = [], int $userType): bool
 | `$userRoles`  | **array**  |             |
 | `$userType`   | **int**    |             |
 
-***
 
 ### check
 
@@ -119,7 +107,6 @@ public check(string $permission): void
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
-***
 
 ### loadPermissions
 
@@ -127,7 +114,6 @@ public check(string $permission): void
 public loadPermissions(): array
 ```
 
-***
 
 ### isAppPermittedForActiveUser
 
@@ -141,4 +127,3 @@ public isAppPermittedForActiveUser(\Hubleto\Framework\Interfaces\AppInterface $a
 |-----------|------------------------------------------------|-------------|
 | `$app`    | **\Hubleto\Framework\Interfaces\AppInterface** |             |
 
-***

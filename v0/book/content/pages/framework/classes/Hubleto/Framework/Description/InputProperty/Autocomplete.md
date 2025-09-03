@@ -1,26 +1,20 @@
 
-***
+# \Hubleto\Framework\Description\InputProperty\Autocomplete
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./">\Hubleto\Framework\Description\InputProperty</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Description\InputProperty\Autocomplete`
-* Parent class: [`\Hubleto\Framework\Description\InputProperty`](./)
 
 ## Properties
 
 ### endpoint
 
-```php
-protected string $endpoint
-```
+`protected string $endpoint`
 
-***
 
 ### creatable
 
-```php
-protected bool $creatable
-```
+`protected bool $creatable`
 
-***
 
 ## Methods
 
@@ -36,7 +30,6 @@ public __construct(string $endpoint = ''): mixed
 |-------------|------------|-------------|
 | `$endpoint` | **string** |             |
 
-***
 
 ### getEndpoint
 
@@ -44,7 +37,6 @@ public __construct(string $endpoint = ''): mixed
 public getEndpoint(): string
 ```
 
-***
 
 ### setEndpoint
 
@@ -58,7 +50,6 @@ public setEndpoint(string $endpoint): \Hubleto\Framework\Description\InputProper
 |-------------|------------|-------------|
 | `$endpoint` | **string** |             |
 
-***
 
 ### getCreatable
 
@@ -66,7 +57,6 @@ public setEndpoint(string $endpoint): \Hubleto\Framework\Description\InputProper
 public getCreatable(): bool
 ```
 
-***
 
 ### setCreatable
 
@@ -80,7 +70,6 @@ public setCreatable(bool $creatable = true): \Hubleto\Framework\Description\Inpu
 |--------------|----------|-------------|
 | `$creatable` | **bool** |             |
 
-***
 
 ### jsonSerialize
 
@@ -88,7 +77,6 @@ public setCreatable(bool $creatable = true): \Hubleto\Framework\Description\Inpu
 public jsonSerialize(): array
 ```
 
-***
 
 ## Inherited methods
 
@@ -98,4 +86,3 @@ public jsonSerialize(): array
 public __construct(): mixed
 ```
 
-***

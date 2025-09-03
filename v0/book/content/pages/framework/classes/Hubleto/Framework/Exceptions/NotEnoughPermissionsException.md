@@ -3,7 +3,7 @@ Thrown by the custom implementation of \Hubleto\Framework\checkPermissionsForAct
 
 Blocks rendering of the action's content.
 
-***
+# \Hubleto\Framework\Exceptions\NotEnoughPermissionsException
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="../../../Exception">Exception</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Exceptions\NotEnoughPermissionsException`
-* Parent class: [`Exception`](../../../Exception)

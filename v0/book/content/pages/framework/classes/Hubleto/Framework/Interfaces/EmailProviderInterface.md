@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\EmailProviderInterface`
+# \Hubleto\Framework\Interfaces\EmailProviderInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public init(): void
 ```
 
-***
 
 ### getFormattedBody
 
@@ -27,7 +24,6 @@ public getFormattedBody(string $title, string $rawBody, string $template = ''): 
 | `$rawBody`  | **string** |             |
 | `$template` | **string** |             |
 
-***
 
 ### send
 
@@ -45,7 +41,6 @@ public send(string $to, string $subject, string $rawBody, string $template = '',
 | `$template` | **string** |             |
 | `$fromName` | **string** |             |
 
-***
 
 ### sendEmail
 
@@ -62,7 +57,6 @@ public sendEmail(string $to, string $subject, string $body, string $fromName = '
 | `$body`     | **string** |             |
 | `$fromName` | **string** |             |
 
-***
 
 ### sendResetPasswordEmail
 
@@ -79,7 +73,6 @@ public sendResetPasswordEmail(string $login, string $name, string $language, str
 | `$language` | **string** |             |
 | `$token`    | **string** |             |
 
-***
 
 ### sendWelcomeEmail
 
@@ -96,4 +89,3 @@ public sendWelcomeEmail(string $login, string $name, string $language, string $t
 | `$language` | **string** |             |
 | `$token`    | **string** |             |
 
-***

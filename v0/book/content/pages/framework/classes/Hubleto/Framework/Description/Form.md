@@ -1,51 +1,35 @@
 
-***
+# \Hubleto\Framework\Description\Form
+<table class='table-default dense'>
+<tr><td>Implements</td><td>  `JsonSerializable`</td></tr></table>
 
-* Full name: `\Hubleto\Framework\Description\Form`
-* This class implements:
-  `JsonSerializable`
 
 ## Properties
 
 ### ui
 
-```php
-public array $ui
-```
+`public array $ui`
 
-***
 
 ### permissions
 
-```php
-public array $permissions
-```
+`public array $permissions`
 
-***
 
 ### inputs
 
-```php
-public array $inputs
-```
+`public array $inputs`
 
-***
 
 ### defaultValues
 
-```php
-public array $defaultValues
-```
+`public array $defaultValues`
 
-***
 
 ### includeRelations
 
-```php
-public array $includeRelations
-```
+`public array $includeRelations`
 
-***
 
 ## Methods
 
@@ -55,7 +39,6 @@ public array $includeRelations
 public jsonSerialize(): array
 ```
 
-***
 
 ### toArray
 
@@ -63,4 +46,3 @@ public jsonSerialize(): array
 public toArray(): array
 ```
 
-***

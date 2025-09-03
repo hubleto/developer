@@ -1,163 +1,105 @@
 
-***
+# \Hubleto\Framework\Description\Input
+<table class='table-default dense'>
+<tr><td>Implements</td><td>  `JsonSerializable`</td></tr></table>
 
-* Full name: `\Hubleto\Framework\Description\Input`
-* This class implements:
-  `JsonSerializable`
 
 ## Properties
 
 ### type
 
-```php
-protected string $type
-```
+`protected string $type`
 
-***
 
 ### title
 
-```php
-protected string $title
-```
+`protected string $title`
 
-***
 
 ### readonly
 
-```php
-protected bool $readonly
-```
+`protected bool $readonly`
 
-***
 
 ### required
 
-```php
-protected bool $required
-```
+`protected bool $required`
 
-***
 
 ### placeholder
 
-```php
-protected string $placeholder
-```
+`protected string $placeholder`
 
-***
 
 ### decimals
 
-```php
-protected int $decimals
-```
+`protected int $decimals`
 
-***
 
 ### unit
 
-```php
-protected string $unit
-```
+`protected string $unit`
 
-***
 
 ### format
 
-```php
-protected string $format
-```
+`protected string $format`
 
-***
 
 ### description
 
-```php
-protected string $description
-```
+`protected string $description`
 
-***
 
 ### reactComponent
 
-```php
-protected string $reactComponent
-```
+`protected string $reactComponent`
 
-***
 
 ### lookupModel
 
-```php
-protected string $lookupModel
-```
+`protected string $lookupModel`
 
-***
 
 ### extendedProps
 
-```php
-protected array $extendedProps
-```
+`protected array $extendedProps`
 
-***
 
 ### examples
 
-```php
-protected array $examples
-```
+`protected array $examples`
 
-***
 
 ### enumValues
 
-```php
-protected array $enumValues
-```
+`protected array $enumValues`
 
-***
 
 ### enumCssClasses
 
-```php
-protected array $enumCssClasses
-```
+`protected array $enumCssClasses`
 
-***
 
 ### predefinedValues
 
-```php
-protected array $predefinedValues
-```
+`protected array $predefinedValues`
 
-***
 
 ### defaultValue
 
-```php
-protected mixed $defaultValue
-```
+`protected mixed $defaultValue`
 
-***
 
 ### cssClass
 
-```php
-protected string $cssClass
-```
+`protected string $cssClass`
 
-***
 
 ### properties
 
-```php
-protected array $properties
-```
+`protected array $properties`
 
-***
 
 ## Methods
 
@@ -173,7 +115,6 @@ public getProperty(string $pName): mixed
 |-----------|------------|-------------|
 | `$pName`  | **string** |             |
 
-***
 
 ### setProperty
 
@@ -188,7 +129,6 @@ public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Description
 | `$pName`  | **string** |             |
 | `$pValue` | **mixed**  |             |
 
-***
 
 ### getType
 
@@ -196,7 +136,6 @@ public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Description
 public getType(): string
 ```
 
-***
 
 ### setType
 
@@ -210,7 +149,6 @@ public setType(string $type): \Hubleto\Framework\Description\Input
 |-----------|------------|-------------|
 | `$type`   | **string** |             |
 
-***
 
 ### getTitle
 
@@ -218,7 +156,6 @@ public setType(string $type): \Hubleto\Framework\Description\Input
 public getTitle(): string
 ```
 
-***
 
 ### setTitle
 
@@ -232,7 +169,6 @@ public setTitle(string $title): \Hubleto\Framework\Description\Input
 |-----------|------------|-------------|
 | `$title`  | **string** |             |
 
-***
 
 ### getReactComponent
 
@@ -240,7 +176,6 @@ public setTitle(string $title): \Hubleto\Framework\Description\Input
 public getReactComponent(): string
 ```
 
-***
 
 ### setReactComponent
 
@@ -254,7 +189,6 @@ public setReactComponent(string $reactComponent): \Hubleto\Framework\Description
 |-------------------|------------|-------------|
 | `$reactComponent` | **string** |             |
 
-***
 
 ### getReadonly
 
@@ -262,7 +196,6 @@ public setReactComponent(string $reactComponent): \Hubleto\Framework\Description
 public getReadonly(): bool
 ```
 
-***
 
 ### setReadonly
 
@@ -276,7 +209,6 @@ public setReadonly(bool $readonly = true): \Hubleto\Framework\Description\Input
 |-------------|----------|-------------|
 | `$readonly` | **bool** |             |
 
-***
 
 ### getRequired
 
@@ -284,7 +216,6 @@ public setReadonly(bool $readonly = true): \Hubleto\Framework\Description\Input
 public getRequired(): bool
 ```
 
-***
 
 ### setRequired
 
@@ -298,7 +229,6 @@ public setRequired(bool $required = true): \Hubleto\Framework\Description\Input
 |-------------|----------|-------------|
 | `$required` | **bool** |             |
 
-***
 
 ### getPlaceholder
 
@@ -306,7 +236,6 @@ public setRequired(bool $required = true): \Hubleto\Framework\Description\Input
 public getPlaceholder(): bool
 ```
 
-***
 
 ### setPlaceholder
 
@@ -320,7 +249,6 @@ public setPlaceholder(bool $placeholder = true): \Hubleto\Framework\Description\
 |----------------|----------|-------------|
 | `$placeholder` | **bool** |             |
 
-***
 
 ### getDecimals
 
@@ -328,7 +256,6 @@ public setPlaceholder(bool $placeholder = true): \Hubleto\Framework\Description\
 public getDecimals(): int
 ```
 
-***
 
 ### setDecimals
 
@@ -342,7 +269,6 @@ public setDecimals(int $decimals): \Hubleto\Framework\Description\Input
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
 
-***
 
 ### getUnit
 
@@ -350,7 +276,6 @@ public setDecimals(int $decimals): \Hubleto\Framework\Description\Input
 public getUnit(): string
 ```
 
-***
 
 ### setUnit
 
@@ -364,7 +289,6 @@ public setUnit(string $unit): \Hubleto\Framework\Description\Input
 |-----------|------------|-------------|
 | `$unit`   | **string** |             |
 
-***
 
 ### getFormat
 
@@ -372,7 +296,6 @@ public setUnit(string $unit): \Hubleto\Framework\Description\Input
 public getFormat(): bool
 ```
 
-***
 
 ### setFormat
 
@@ -386,7 +309,6 @@ public setFormat(bool $format = true): \Hubleto\Framework\Description\Input
 |-----------|----------|-------------|
 | `$format` | **bool** |             |
 
-***
 
 ### getDescription
 
@@ -394,7 +316,6 @@ public setFormat(bool $format = true): \Hubleto\Framework\Description\Input
 public getDescription(): string
 ```
 
-***
 
 ### setDescription
 
@@ -408,7 +329,6 @@ public setDescription(string $description): \Hubleto\Framework\Description\Input
 |----------------|------------|-------------|
 | `$description` | **string** |             |
 
-***
 
 ### getLookupModel
 
@@ -416,7 +336,6 @@ public setDescription(string $description): \Hubleto\Framework\Description\Input
 public getLookupModel(): string
 ```
 
-***
 
 ### setLookupModel
 
@@ -430,7 +349,6 @@ public setLookupModel(string $lookupModel): \Hubleto\Framework\Description\Input
 |----------------|------------|-------------|
 | `$lookupModel` | **string** |             |
 
-***
 
 ### getExtendedProps
 
@@ -438,7 +356,6 @@ public setLookupModel(string $lookupModel): \Hubleto\Framework\Description\Input
 public getExtendedProps(): array
 ```
 
-***
 
 ### setExtendedProps
 
@@ -452,7 +369,6 @@ public setExtendedProps(array $extendedProps): \Hubleto\Framework\Description\In
 |------------------|-----------|-------------|
 | `$extendedProps` | **array** |             |
 
-***
 
 ### getExamples
 
@@ -460,7 +376,6 @@ public setExtendedProps(array $extendedProps): \Hubleto\Framework\Description\In
 public getExamples(): array
 ```
 
-***
 
 ### setExamples
 
@@ -474,7 +389,6 @@ public setExamples(array $examples): \Hubleto\Framework\Description\Input
 |-------------|-----------|-------------|
 | `$examples` | **array** |             |
 
-***
 
 ### getEnumValues
 
@@ -482,7 +396,6 @@ public setExamples(array $examples): \Hubleto\Framework\Description\Input
 public getEnumValues(): array
 ```
 
-***
 
 ### setEnumValues
 
@@ -496,7 +409,6 @@ public setEnumValues(array $enumValues): \Hubleto\Framework\Description\Input
 |---------------|-----------|-------------|
 | `$enumValues` | **array** |             |
 
-***
 
 ### getEnumCssClasses
 
@@ -504,7 +416,6 @@ public setEnumValues(array $enumValues): \Hubleto\Framework\Description\Input
 public getEnumCssClasses(): array
 ```
 
-***
 
 ### setEnumCssClasses
 
@@ -518,7 +429,6 @@ public setEnumCssClasses(array $enumCssClasses): \Hubleto\Framework\Description\
 |-------------------|-----------|-------------|
 | `$enumCssClasses` | **array** |             |
 
-***
 
 ### getPredefinedValues
 
@@ -526,7 +436,6 @@ public setEnumCssClasses(array $enumCssClasses): \Hubleto\Framework\Description\
 public getPredefinedValues(): array
 ```
 
-***
 
 ### setPredefinedValues
 
@@ -540,7 +449,6 @@ public setPredefinedValues(array $predefinedValues): \Hubleto\Framework\Descript
 |---------------------|-----------|-------------|
 | `$predefinedValues` | **array** |             |
 
-***
 
 ### getDefaultValue
 
@@ -548,7 +456,6 @@ public setPredefinedValues(array $predefinedValues): \Hubleto\Framework\Descript
 public getDefaultValue(): mixed
 ```
 
-***
 
 ### setDefaultValue
 
@@ -562,7 +469,6 @@ public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Description\Inpu
 |-----------------|-----------|-------------|
 | `$defaultValue` | **mixed** |             |
 
-***
 
 ### getCssClass
 
@@ -570,7 +476,6 @@ public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Description\Inpu
 public getCssClass(): string
 ```
 
-***
 
 ### setCssClass
 
@@ -584,7 +489,6 @@ public setCssClass(string $cssClass): \Hubleto\Framework\Description\Input
 |-------------|------------|-------------|
 | `$cssClass` | **string** |             |
 
-***
 
 ### jsonSerialize
 
@@ -592,7 +496,6 @@ public setCssClass(string $cssClass): \Hubleto\Framework\Description\Input
 public jsonSerialize(): array
 ```
 
-***
 
 ### toArray
 
@@ -600,4 +503,3 @@ public jsonSerialize(): array
 public toArray(): array
 ```
 
-***

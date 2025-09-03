@@ -1,10 +1,8 @@
 
-***
+# \Hubleto\Framework\Description\InputProperty
+<table class='table-default dense'>
+<tr><td>Implements</td><td>  `JsonSerializable`</td></tr><tr><td>Abstract</td><td>* This class is an **Abstract class**</td></tr></table>
 
-* Full name: `\Hubleto\Framework\Description\InputProperty`
-* This class implements:
-  `JsonSerializable`
-* This class is an **Abstract class**
 
 ## Methods
 
@@ -14,4 +12,3 @@
 public __construct(): mixed
 ```
 
-***

@@ -1,10 +1,10 @@
 
 Default implementation of model for Hubleto project.
 
-***
+# \Hubleto\Framework\Model
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Model`
-* Parent class: [`\Hubleto\Framework\Core`](./Core)
 
 ## Constants
 
@@ -20,114 +20,75 @@ Default implementation of model for Hubleto project.
 
 Full name of the model. Useful for getModel() function
 
-```php
-public string $fullName
-```
+`public string $fullName`
 
-***
 
 ### shortName
 
 Short name of the model. Useful for debugging purposes
 
-```php
-public string $shortName
-```
+`public string $shortName`
 
-***
 
 ### record
 
-```php
-public object $record
-```
+`public object $record`
 
-***
 
 ### lookupSqlValue
 
 SQL-compatible string used to render displayed value of the record when used
 as a lookup.
 
-```php
-public ?string $lookupSqlValue
-```
+`public ?string $lookupSqlValue`
 
-***
 
 ### lookupUrlDetail
 
-```php
-public ?string $lookupUrlDetail
-```
+`public ?string $lookupUrlDetail`
 
-***
 
 ### lookupUrlAdd
 
-```php
-public ?string $lookupUrlAdd
-```
+`public ?string $lookupUrlAdd`
 
-***
 
 ### isJunctionTable
 
 If set to TRUE, the SQL table will not contain the ID autoincrement column
 
-```php
-public bool $isJunctionTable
-```
+`public bool $isJunctionTable`
 
-***
 
 ### sqlEngine
 
-```php
-public string $sqlEngine
-```
+`public string $sqlEngine`
 
-***
 
 ### table
 
-```php
-public string $table
-```
+`public string $table`
 
-***
 
 ### recordManagerClass
 
-```php
-public string $recordManagerClass
-```
+`public string $recordManagerClass`
 
-***
 
 ### relations
 
-```php
-public array $relations
-```
+`public array $relations`
 
-***
 
 ### junctions
 
-```php
-public ?array $junctions
-```
+`public ?array $junctions`
 
-***
 
 ### columns
 
-```php
-protected array $columns
-```
+`protected array $columns`
 
-***
 
 ## Methods
 
@@ -139,7 +100,6 @@ Creates instance of model's object.
 public __construct(): void
 ```
 
-***
 
 ### initRecordManager
 
@@ -147,7 +107,6 @@ public __construct(): void
 public initRecordManager(): null|object
 ```
 
-***
 
 ### isDatabaseConnected
 
@@ -155,7 +114,6 @@ public initRecordManager(): null|object
 public isDatabaseConnected(): bool
 ```
 
-***
 
 ### getConfigFullPath
 
@@ -169,7 +127,6 @@ public getConfigFullPath(string $configName): string
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
-***
 
 ### configAsString
 
@@ -185,7 +142,6 @@ public configAsString(string $configName): void
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
-***
 
 ### configAsInteger
 
@@ -201,7 +157,6 @@ public configAsInteger(string $configName): void
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
-***
 
 ### configAsArray
 
@@ -217,7 +172,6 @@ public configAsArray(string $configName): void
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
-***
 
 ### upgrades
 
@@ -231,7 +185,6 @@ public upgrades(): array
 
 List of available upgrades. Keys of the array are simple numbers starting from 1.
 
-***
 
 ### getSqlCreateTableCommands
 
@@ -239,7 +192,6 @@ List of available upgrades. Keys of the array are simple numbers starting from 1
 public getSqlCreateTableCommands(): array
 ```
 
-***
 
 ### createSqlTable
 
@@ -247,7 +199,6 @@ public getSqlCreateTableCommands(): array
 public createSqlTable(): mixed
 ```
 
-***
 
 ### install
 
@@ -257,7 +208,6 @@ Installs the first version of the model into SQL database. Automatically creates
 public install(): void
 ```
 
-***
 
 ### dropTableIfExists
 
@@ -265,7 +215,6 @@ public install(): void
 public dropTableIfExists(): \Hubleto\Framework\Model
 ```
 
-***
 
 ### createSqlForeignKeys
 
@@ -275,7 +224,6 @@ Create foreign keys for the SQL table. Called when all models are installed.
 public createSqlForeignKeys(): void
 ```
 
-***
 
 ### getFullTableSqlName
 
@@ -289,7 +237,6 @@ public getFullTableSqlName(): string
 
 Full name of the model's SQL table
 
-***
 
 ### getLookupSqlValue
 
@@ -303,7 +250,6 @@ public getLookupSqlValue(string $tableAlias = ''): string
 |---------------|------------|-------------|
 | `$tableAlias` | **string** |             |
 
-***
 
 ### hasColumn
 
@@ -317,7 +263,6 @@ public hasColumn(string $column): bool
 |-----------|------------|-------------|
 | `$column` | **string** |             |
 
-***
 
 ### describeColumns
 
@@ -325,7 +270,6 @@ public hasColumn(string $column): bool
 public describeColumns(): array<string,\Hubleto\Framework\Db\Column>
 ```
 
-***
 
 ### getColumns
 
@@ -333,7 +277,6 @@ public describeColumns(): array<string,\Hubleto\Framework\Db\Column>
 public getColumns(): array
 ```
 
-***
 
 ### getColumn
 
@@ -347,7 +290,6 @@ public getColumn(string $column): \Hubleto\Framework\Db\Column
 |-----------|------------|-------------|
 | `$column` | **string** |             |
 
-***
 
 ### columnNames
 
@@ -357,7 +299,6 @@ columnNames
 public columnNames(): string[]
 ```
 
-***
 
 ### indexes
 
@@ -373,7 +314,6 @@ public indexes(array<string,mixed> $indexes = []): array<string,mixed>
 |------------|-------------------------|-------------|
 | `$indexes` | **array<string,mixed>** |             |
 
-***
 
 ### indexNames
 
@@ -383,7 +323,6 @@ indexNames
 public indexNames(): string[]
 ```
 
-***
 
 ### getById
 
@@ -397,7 +336,6 @@ public getById(int $id): mixed
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
-***
 
 ### describeInput
 
@@ -411,7 +349,6 @@ public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 |---------------|------------|-------------|
 | `$columnName` | **string** |             |
 
-***
 
 ### describeTable
 
@@ -419,7 +356,6 @@ public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
-***
 
 ### describeForm
 
@@ -427,7 +363,6 @@ public describeTable(): \Hubleto\Framework\Description\Table
 public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
-***
 
 ### recordGet
 
@@ -443,7 +378,6 @@ public recordGet(callable|null $queryModifierCallback = null): array
 |--------------------------|--------------------|-------------|
 | `$queryModifierCallback` | **callable\|null** |             |
 
-***
 
 ### recordGetList
 
@@ -463,7 +397,6 @@ public recordGetList(string $fulltextSearch = '', array $columnSearch = [], arra
 | `$itemsPerPage`   | **int**    |             |
 | `$page`           | **int**    |             |
 
-***
 
 ### onBeforeCreate
 
@@ -479,7 +412,6 @@ public onBeforeCreate(array<string,mixed> $record): array<string,mixed>
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
-***
 
 ### onBeforeUpdate
 
@@ -495,7 +427,6 @@ public onBeforeUpdate(array<string,mixed> $record): array<string,mixed>
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
-***
 
 ### onAfterCreate
 
@@ -511,7 +442,6 @@ public onAfterCreate(array<string,mixed> $savedRecord): array<string,mixed>
 |----------------|-------------------------|-------------|
 | `$savedRecord` | **array<string,mixed>** |             |
 
-***
 
 ### onAfterUpdate
 
@@ -528,7 +458,6 @@ public onAfterUpdate(array<string,mixed> $originalRecord, array<string,mixed> $s
 | `$originalRecord` | **array<string,mixed>** |             |
 | `$savedRecord`    | **array<string,mixed>** |             |
 
-***
 
 ### onBeforeDelete
 
@@ -544,7 +473,6 @@ public onBeforeDelete(int $id): int
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
-***
 
 ### onAfterDelete
 
@@ -560,7 +488,6 @@ public onAfterDelete(int $id): int
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
-***
 
 ### onAfterLoadRecord
 
@@ -576,7 +503,6 @@ public onAfterLoadRecord(array<string,mixed> $record): array<string,mixed>
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
-***
 
 ### onAfterLoadRecords
 
@@ -590,7 +516,6 @@ public onAfterLoadRecords(array $records): array
 |------------|-----------|-------------|
 | `$records` | **array** |             |
 
-***
 
 ### encryptPassword
 
@@ -606,7 +531,6 @@ public encryptPassword(string $original): string
 |-------------|------------|-------------|
 | `$original` | **string** |             |
 
-***
 
 ## Inherited methods
 
@@ -616,7 +540,6 @@ public encryptPassword(string $original): string
 public __construct(): mixed
 ```
 
-***
 
 ### getServiceStatic
 
@@ -633,7 +556,6 @@ public static getServiceStatic(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### getService
 
@@ -649,7 +571,6 @@ public getService(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### env
 
@@ -659,7 +580,6 @@ Shortcut for the env service.
 public env(): \Hubleto\Framework\Env
 ```
 
-***
 
 ### authProvider
 
@@ -669,7 +589,6 @@ Shortcut for the authentication service.
 public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
-***
 
 ### db
 
@@ -679,7 +598,6 @@ Shortcut for the database service.
 public db(): \Hubleto\Framework\Db
 ```
 
-***
 
 ### appManager
 
@@ -689,7 +607,6 @@ Shortcut for the app manager service.
 public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
-***
 
 ### router
 
@@ -699,7 +616,6 @@ Shortcut for the router service.
 public router(): \Hubleto\Framework\Router
 ```
 
-***
 
 ### hookManager
 
@@ -709,7 +625,6 @@ Shortcut for the hook manager service.
 public hookManager(): \Hubleto\Framework\HookManager
 ```
 
-***
 
 ### sessionManager
 
@@ -719,7 +634,6 @@ Shortcut for the session manager service.
 public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
-***
 
 ### permissionsManager
 
@@ -729,7 +643,6 @@ Shortcut for the permissions manager service.
 public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
-***
 
 ### cronManager
 
@@ -739,7 +652,6 @@ Shortcut for the cron manager service.
 public cronManager(): \Hubleto\Framework\CronManager
 ```
 
-***
 
 ### emailProvider
 
@@ -749,7 +661,6 @@ Shortcut for the email provider service.
 public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
-***
 
 ### config
 
@@ -759,7 +670,6 @@ Shortcut for the config service.
 public config(): \Hubleto\Framework\Config
 ```
 
-***
 
 ### logger
 
@@ -769,7 +679,6 @@ Shortcut for the logger service.
 public logger(): \Hubleto\Framework\Logger
 ```
 
-***
 
 ### locale
 
@@ -779,7 +688,6 @@ Shortcut for the locale service.
 public locale(): \Hubleto\Framework\Locale
 ```
 
-***
 
 ### renderer
 
@@ -789,7 +697,6 @@ Shortcut for the renderer service.
 public renderer(): \Hubleto\Framework\Renderer
 ```
 
-***
 
 ### translator
 
@@ -799,7 +706,6 @@ Shortcut for the translator service.
 public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
-***
 
 ### getModel
 
@@ -815,7 +721,6 @@ public getModel(string $model): \Hubleto\Framework\Models\Model
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
-***
 
 ### getController
 
@@ -831,7 +736,6 @@ public getController(string $controller): \Hubleto\Framework\Controller
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
-***
 
 ### translate
 
@@ -852,4 +756,3 @@ public translate(string $string, array $vars = []): string
 
 Translated string.
 
-***

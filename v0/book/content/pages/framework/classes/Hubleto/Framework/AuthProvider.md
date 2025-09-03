@@ -1,54 +1,37 @@
 
 Default implementation of authentication provider.
 
-***
+# \Hubleto\Framework\AuthProvider
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  `AuthInterface`</td></tr></table>
 
-* Full name: `\Hubleto\Framework\AuthProvider`
-* Parent class: [`\Hubleto\Framework\Core`](./Core)
-* This class implements:
-  `AuthInterface`
 
 ## Properties
 
 ### loginAttribute
 
-```php
-public $loginAttribute
-```
+`public $loginAttribute`
 
-***
 
 ### passwordAttribute
 
-```php
-public $passwordAttribute
-```
+`public $passwordAttribute`
 
-***
 
 ### activeAttribute
 
-```php
-public $activeAttribute
-```
+`public $activeAttribute`
 
-***
 
 ### verifyMethod
 
-```php
-public $verifyMethod
-```
+`public $verifyMethod`
 
-***
 
 ### user
 
-```php
-public array $user
-```
+`public array $user`
 
-***
 
 ## Methods
 
@@ -58,7 +41,6 @@ public array $user
 public init(): void
 ```
 
-***
 
 ### getUserFromSession
 
@@ -66,7 +48,6 @@ public init(): void
 public getUserFromSession(): array
 ```
 
-***
 
 ### updateUserInSession
 
@@ -80,7 +61,6 @@ public updateUserInSession(array $user): void
 |-----------|-----------|-------------|
 | `$user`   | **array** |             |
 
-***
 
 ### isUserInSession
 
@@ -88,7 +68,6 @@ public updateUserInSession(array $user): void
 public isUserInSession(): bool
 ```
 
-***
 
 ### deleteSession
 
@@ -96,7 +75,6 @@ public isUserInSession(): bool
 public deleteSession(): mixed
 ```
 
-***
 
 ### signIn
 
@@ -110,7 +88,6 @@ public signIn(array $user): mixed
 |-----------|-----------|-------------|
 | `$user`   | **array** |             |
 
-***
 
 ### signOut
 
@@ -118,7 +95,6 @@ public signIn(array $user): mixed
 public signOut(): mixed
 ```
 
-***
 
 ### createUserModel
 
@@ -126,7 +102,6 @@ public signOut(): mixed
 public createUserModel(): \Hubleto\Framework\Model
 ```
 
-***
 
 ### findUsersByLogin
 
@@ -140,7 +115,6 @@ public findUsersByLogin(string $login): array
 |-----------|------------|-------------|
 | `$login`  | **string** |             |
 
-***
 
 ### verifyPassword
 
@@ -155,7 +129,6 @@ public verifyPassword(mixed $password1, mixed $password2): bool
 | `$password1` | **mixed** |             |
 | `$password2` | **mixed** |             |
 
-***
 
 ### getActiveUsers
 
@@ -163,7 +136,6 @@ public verifyPassword(mixed $password1, mixed $password2): bool
 public getActiveUsers(): array
 ```
 
-***
 
 ### auth
 
@@ -171,7 +143,6 @@ public getActiveUsers(): array
 public auth(): void
 ```
 
-***
 
 ### getUser
 
@@ -179,7 +150,6 @@ public auth(): void
 public getUser(): array
 ```
 
-***
 
 ### getUserType
 
@@ -187,7 +157,6 @@ public getUser(): array
 public getUserType(): int
 ```
 
-***
 
 ### getUserRoles
 
@@ -195,7 +164,6 @@ public getUserType(): int
 public getUserRoles(): array
 ```
 
-***
 
 ### userHasRole
 
@@ -209,7 +177,6 @@ public userHasRole(int $idRole): bool
 |-----------|---------|-------------|
 | `$idRole` | **int** |             |
 
-***
 
 ### getUserId
 
@@ -217,7 +184,6 @@ public userHasRole(int $idRole): bool
 public getUserId(): int
 ```
 
-***
 
 ### forgotPassword
 
@@ -225,7 +191,6 @@ public getUserId(): int
 public forgotPassword(): void
 ```
 
-***
 
 ### resetPassword
 
@@ -233,7 +198,6 @@ public forgotPassword(): void
 public resetPassword(): void
 ```
 
-***
 
 ### getUserLanguage
 
@@ -241,7 +205,6 @@ public resetPassword(): void
 public getUserLanguage(): string
 ```
 
-***
 
 ### setUserLanguage
 
@@ -255,7 +218,6 @@ public setUserLanguage(string $language): void
 |-------------|------------|-------------|
 | `$language` | **string** |             |
 
-***
 
 ## Inherited methods
 
@@ -265,7 +227,6 @@ public setUserLanguage(string $language): void
 public __construct(): mixed
 ```
 
-***
 
 ### getServiceStatic
 
@@ -282,7 +243,6 @@ public static getServiceStatic(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### getService
 
@@ -298,7 +258,6 @@ public getService(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### env
 
@@ -308,7 +267,6 @@ Shortcut for the env service.
 public env(): \Hubleto\Framework\Env
 ```
 
-***
 
 ### authProvider
 
@@ -318,7 +276,6 @@ Shortcut for the authentication service.
 public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
-***
 
 ### db
 
@@ -328,7 +285,6 @@ Shortcut for the database service.
 public db(): \Hubleto\Framework\Db
 ```
 
-***
 
 ### appManager
 
@@ -338,7 +294,6 @@ Shortcut for the app manager service.
 public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
-***
 
 ### router
 
@@ -348,7 +303,6 @@ Shortcut for the router service.
 public router(): \Hubleto\Framework\Router
 ```
 
-***
 
 ### hookManager
 
@@ -358,7 +312,6 @@ Shortcut for the hook manager service.
 public hookManager(): \Hubleto\Framework\HookManager
 ```
 
-***
 
 ### sessionManager
 
@@ -368,7 +321,6 @@ Shortcut for the session manager service.
 public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
-***
 
 ### permissionsManager
 
@@ -378,7 +330,6 @@ Shortcut for the permissions manager service.
 public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
-***
 
 ### cronManager
 
@@ -388,7 +339,6 @@ Shortcut for the cron manager service.
 public cronManager(): \Hubleto\Framework\CronManager
 ```
 
-***
 
 ### emailProvider
 
@@ -398,7 +348,6 @@ Shortcut for the email provider service.
 public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
-***
 
 ### config
 
@@ -408,7 +357,6 @@ Shortcut for the config service.
 public config(): \Hubleto\Framework\Config
 ```
 
-***
 
 ### logger
 
@@ -418,7 +366,6 @@ Shortcut for the logger service.
 public logger(): \Hubleto\Framework\Logger
 ```
 
-***
 
 ### locale
 
@@ -428,7 +375,6 @@ Shortcut for the locale service.
 public locale(): \Hubleto\Framework\Locale
 ```
 
-***
 
 ### renderer
 
@@ -438,7 +384,6 @@ Shortcut for the renderer service.
 public renderer(): \Hubleto\Framework\Renderer
 ```
 
-***
 
 ### translator
 
@@ -448,7 +393,6 @@ Shortcut for the translator service.
 public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
-***
 
 ### getModel
 
@@ -464,7 +408,6 @@ public getModel(string $model): \Hubleto\Framework\Models\Model
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
-***
 
 ### getController
 
@@ -480,7 +423,6 @@ public getController(string $controller): \Hubleto\Framework\Controller
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
-***
 
 ### translate
 
@@ -501,4 +443,3 @@ public translate(string $string, array $vars = []): string
 
 Translated string.
 
-***

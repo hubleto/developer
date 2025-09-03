@@ -1,17 +1,15 @@
 
-***
+# \Hubleto\Framework\Test
+<table class='table-default dense'>
+</table>
 
-* Full name: `\Hubleto\Framework\Test`
 
 ## Properties
 
 ### main
 
-```php
-public \Hubleto\Framework\Loader $main
-```
+`public \Hubleto\Framework\Loader $main`
 
-***
 
 ## Methods
 
@@ -27,4 +25,3 @@ public __construct(\Hubleto\Framework\Loader $main): mixed
 |-----------|-------------------------------|-------------|
 | `$main`   | **\Hubleto\Framework\Loader** |             |
 
-***

@@ -1,30 +1,24 @@
 
 Record manager based on Laravel's Eloquent.
 
-***
+# \Hubleto\Framework\Models\RecordManagers\Config
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="../../EloquentRecordManager">\Hubleto\Framework\EloquentRecordManager</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\Models\RecordManagers\Config`
-* Parent class: [`\Hubleto\Framework\EloquentRecordManager`](../../EloquentRecordManager)
 
 ## Properties
 
 ### snakeAttributes
 
-```php
-public static $snakeAttributes
-```
+`public static $snakeAttributes`
 
 * This property is **static**.
 
-***
 
 ### table
 
-```php
-public $table
-```
+`public $table`
 
-***
 
 ## Inherited methods
 
@@ -40,7 +34,6 @@ public __construct(array $attributes = []): mixed
 |---------------|-----------|-------------|
 | `$attributes` | **array** |             |
 
-***
 
 ### getPermissions
 
@@ -54,7 +47,6 @@ public getPermissions(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### prepareReadQuery
 
@@ -75,7 +67,6 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 
 Eloquent query used to read record.
 
-***
 
 ### prepareLookupQuery
 
@@ -91,7 +82,6 @@ public prepareLookupQuery(string $search): mixed
 |-----------|------------|-------------|
 | `$search` | **string** |             |
 
-***
 
 ### prepareLookupData
 
@@ -105,7 +95,6 @@ public prepareLookupData(array $dataRaw): array
 |------------|-----------|-------------|
 | `$dataRaw` | **array** |             |
 
-***
 
 ### addFulltextSearchToQuery
 
@@ -120,7 +109,6 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 | `$query`          | **mixed**  |             |
 | `$fulltextSearch` | **string** |             |
 
-***
 
 ### addColumnSearchToQuery
 
@@ -135,7 +123,6 @@ public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 | `$query`        | **mixed** |             |
 | `$columnSearch` | **array** |             |
 
-***
 
 ### addOrderByToQuery
 
@@ -150,7 +137,6 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 | `$query`   | **mixed** |             |
 | `$orderBy` | **array** |             |
 
-***
 
 ### recordReadMany
 
@@ -166,7 +152,6 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 | `$itemsPerPage` | **int**   |             |
 | `$page`         | **int**   |             |
 
-***
 
 ### recordRead
 
@@ -180,7 +165,6 @@ public recordRead(mixed $query): array
 |-----------|-----------|-------------|
 | `$query`  | **mixed** |             |
 
-***
 
 ### recordEncryptIds
 
@@ -194,7 +178,6 @@ public recordEncryptIds(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### recordDecryptIds
 
@@ -208,7 +191,6 @@ public recordDecryptIds(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### recordCreate
 
@@ -222,7 +204,6 @@ public recordCreate(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### recordUpdate
 
@@ -237,7 +218,6 @@ public recordUpdate(array $record, array $originalRecord = []): array
 | `$record`         | **array** |             |
 | `$originalRecord` | **array** |             |
 
-***
 
 ### recordDelete
 
@@ -251,7 +231,6 @@ public recordDelete(int|string $id): int
 |-----------|-----------------|-------------|
 | `$id`     | **int\|string** |             |
 
-***
 
 ### recordSave
 
@@ -267,7 +246,6 @@ public recordSave(array $record, int $idMasterRecord, bool $saveRelationsRecursi
 | `$idMasterRecord`           | **int**   |             |
 | `$saveRelationsRecursively` | **bool**  |             |
 
-***
 
 ### recordValidate
 
@@ -284,7 +262,6 @@ public recordValidate(array<string,mixed> $record, bool $validateRelationsRecurs
 | `$record`                       | **array<string,mixed>** |             |
 | `$validateRelationsRecursively` | **bool**                |             |
 
-***
 
 ### recordNormalize
 
@@ -298,4 +275,3 @@ public recordNormalize(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***

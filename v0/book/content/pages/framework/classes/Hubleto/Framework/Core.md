@@ -1,19 +1,17 @@
 
 Shortcut to access all services used in the Hubleto project.
 
-***
+# \Hubleto\Framework\Core
+<table class='table-default dense'>
+</table>
 
-* Full name: `\Hubleto\Framework\Core`
 
 ## Properties
 
 ### translationContext
 
-```php
-public string $translationContext
-```
+`public string $translationContext`
 
-***
 
 ## Methods
 
@@ -23,7 +21,6 @@ public string $translationContext
 public __construct(): mixed
 ```
 
-***
 
 ### getServiceStatic
 
@@ -40,7 +37,6 @@ public static getServiceStatic(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### getService
 
@@ -56,7 +52,6 @@ public getService(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### env
 
@@ -66,7 +61,6 @@ Shortcut for the env service.
 public env(): \Hubleto\Framework\Env
 ```
 
-***
 
 ### authProvider
 
@@ -76,7 +70,6 @@ Shortcut for the authentication service.
 public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
-***
 
 ### db
 
@@ -86,7 +79,6 @@ Shortcut for the database service.
 public db(): \Hubleto\Framework\Db
 ```
 
-***
 
 ### appManager
 
@@ -96,7 +88,6 @@ Shortcut for the app manager service.
 public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
-***
 
 ### router
 
@@ -106,7 +97,6 @@ Shortcut for the router service.
 public router(): \Hubleto\Framework\Router
 ```
 
-***
 
 ### hookManager
 
@@ -116,7 +106,6 @@ Shortcut for the hook manager service.
 public hookManager(): \Hubleto\Framework\HookManager
 ```
 
-***
 
 ### sessionManager
 
@@ -126,7 +115,6 @@ Shortcut for the session manager service.
 public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
-***
 
 ### permissionsManager
 
@@ -136,7 +124,6 @@ Shortcut for the permissions manager service.
 public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
-***
 
 ### cronManager
 
@@ -146,7 +133,6 @@ Shortcut for the cron manager service.
 public cronManager(): \Hubleto\Framework\CronManager
 ```
 
-***
 
 ### emailProvider
 
@@ -156,7 +142,6 @@ Shortcut for the email provider service.
 public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
-***
 
 ### config
 
@@ -166,7 +151,6 @@ Shortcut for the config service.
 public config(): \Hubleto\Framework\Config
 ```
 
-***
 
 ### logger
 
@@ -176,7 +160,6 @@ Shortcut for the logger service.
 public logger(): \Hubleto\Framework\Logger
 ```
 
-***
 
 ### locale
 
@@ -186,7 +169,6 @@ Shortcut for the locale service.
 public locale(): \Hubleto\Framework\Locale
 ```
 
-***
 
 ### renderer
 
@@ -196,7 +178,6 @@ Shortcut for the renderer service.
 public renderer(): \Hubleto\Framework\Renderer
 ```
 
-***
 
 ### translator
 
@@ -206,7 +187,6 @@ Shortcut for the translator service.
 public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
-***
 
 ### getModel
 
@@ -222,7 +202,6 @@ public getModel(string $model): \Hubleto\Framework\Models\Model
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
-***
 
 ### getController
 
@@ -238,7 +217,6 @@ public getController(string $controller): \Hubleto\Framework\Controller
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
-***
 
 ### translate
 
@@ -259,4 +237,3 @@ public translate(string $string, array $vars = []): string
 
 Translated string.
 
-***

@@ -2,9 +2,7 @@
 Record-management
 CRUD-like layer for manipulating records (data)
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\RecordManagerInterface`
+# \Hubleto\Framework\Interfaces\RecordManagerInterface
 
 ## Methods
 
@@ -27,7 +25,6 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 
 Object for reading records.
 
-***
 
 ### addFulltextSearchToQuery
 
@@ -42,7 +39,6 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 | `$query`          | **mixed**  |             |
 | `$fulltextSearch` | **string** |             |
 
-***
 
 ### addColumnSearchToQuery
 
@@ -57,7 +53,6 @@ public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 | `$query`        | **mixed** |             |
 | `$columnSearch` | **array** |             |
 
-***
 
 ### addOrderByToQuery
 
@@ -72,7 +67,6 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 | `$query`   | **mixed** |             |
 | `$orderBy` | **array** |             |
 
-***
 
 ### recordReadMany
 
@@ -88,7 +82,6 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 | `$itemsPerPage` | **int**   |             |
 | `$page`         | **int**   |             |
 
-***
 
 ### recordRead
 
@@ -102,7 +95,6 @@ public recordRead(mixed $query): array
 |-----------|-----------|-------------|
 | `$query`  | **mixed** |             |
 
-***
 
 ### recordEncryptIds
 
@@ -116,7 +108,6 @@ public recordEncryptIds(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### recordDecryptIds
 
@@ -130,7 +121,6 @@ public recordDecryptIds(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### recordCreate
 
@@ -144,7 +134,6 @@ public recordCreate(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***
 
 ### recordUpdate
 
@@ -159,7 +148,6 @@ public recordUpdate(array $record, array $originalRecord = []): array
 | `$record`         | **array** |             |
 | `$originalRecord` | **array** |             |
 
-***
 
 ### recordDelete
 
@@ -173,7 +161,6 @@ public recordDelete(int|string $id): int
 |-----------|-----------------|-------------|
 | `$id`     | **int\|string** |             |
 
-***
 
 ### recordSave
 
@@ -188,7 +175,6 @@ public recordSave(array $record, int $idMasterRecord): array
 | `$record`         | **array** |             |
 | `$idMasterRecord` | **int**   |             |
 
-***
 
 ### recordValidate
 
@@ -204,7 +190,6 @@ public recordValidate(array<string,mixed> $record): array<string,mixed>
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
-***
 
 ### recordNormalize
 
@@ -218,4 +203,3 @@ public recordNormalize(array $record): array
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
-***

@@ -1,54 +1,37 @@
 
 Default manager for permissions and user access for Hubleto project.
 
-***
+# \Hubleto\Framework\PermissionsManager
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/PermissionsManagerInterface">\Hubleto\Framework\Interfaces\PermissionsManagerInterface</a></td></tr></table>
 
-* Full name: `\Hubleto\Framework\PermissionsManager`
-* Parent class: [`\Hubleto\Framework\Core`](./Core)
-* This class implements:
-  [`\Hubleto\Framework\Interfaces\PermissionsManagerInterface`](./Interfaces/PermissionsManagerInterface)
 
 ## Properties
 
 ### grantAllPermissions
 
-```php
-protected bool $grantAllPermissions
-```
+`protected bool $grantAllPermissions`
 
-***
 
 ### permissionsData
 
-```php
-protected array $permissionsData
-```
+`protected array $permissionsData`
 
-***
 
 ### administratorRoles
 
-```php
-public array $administratorRoles
-```
+`public array $administratorRoles`
 
-***
 
 ### administratorTypes
 
-```php
-public array $administratorTypes
-```
+`public array $administratorTypes`
 
-***
 
 ### permission
 
-```php
-protected string $permission
-```
+`protected string $permission`
 
-***
 
 ## Methods
 
@@ -58,7 +41,6 @@ protected string $permission
 public init(): void
 ```
 
-***
 
 ### getPermission
 
@@ -66,7 +48,6 @@ public init(): void
 public getPermission(): string
 ```
 
-***
 
 ### setPermission
 
@@ -80,7 +61,6 @@ public setPermission(string $permission): void
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
-***
 
 ### createUserRoleModel
 
@@ -88,7 +68,6 @@ public setPermission(string $permission): void
 public createUserRoleModel(): \Hubleto\Framework\Model
 ```
 
-***
 
 ### createRolePermissionModel
 
@@ -96,7 +75,6 @@ public createUserRoleModel(): \Hubleto\Framework\Model
 public createRolePermissionModel(): \Hubleto\Framework\Model
 ```
 
-***
 
 ### DANGEROUS__grantAllPermissions
 
@@ -104,7 +82,6 @@ public createRolePermissionModel(): \Hubleto\Framework\Model
 public DANGEROUS__grantAllPermissions(): void
 ```
 
-***
 
 ### revokeGrantAllPermissions
 
@@ -112,7 +89,6 @@ public DANGEROUS__grantAllPermissions(): void
 public revokeGrantAllPermissions(): void
 ```
 
-***
 
 ### loadAdministratorRoles
 
@@ -120,7 +96,6 @@ public revokeGrantAllPermissions(): void
 public loadAdministratorRoles(): array
 ```
 
-***
 
 ### loadAdministratorTypes
 
@@ -128,7 +103,6 @@ public loadAdministratorRoles(): array
 public loadAdministratorTypes(): array
 ```
 
-***
 
 ### expandPermissionGroups
 
@@ -136,7 +110,6 @@ public loadAdministratorTypes(): array
 public expandPermissionGroups(): void
 ```
 
-***
 
 ### set
 
@@ -152,7 +125,6 @@ public set(string $permission, int $idUserRole, bool $isEnabled): mixed
 | `$idUserRole` | **int**    |             |
 | `$isEnabled`  | **bool**   |             |
 
-***
 
 ### hasRole
 
@@ -166,7 +138,6 @@ public hasRole(int|string $role): bool
 |-----------|-----------------|-------------|
 | `$role`   | **int\|string** |             |
 
-***
 
 ### grantedForRole
 
@@ -181,7 +152,6 @@ public grantedForRole(string $permission, int|string $userRole): bool
 | `$permission` | **string**      |             |
 | `$userRole`   | **int\|string** |             |
 
-***
 
 ### granted
 
@@ -197,7 +167,6 @@ public granted(string $permission, array $userRoles = [], int $userType): bool
 | `$userRoles`  | **array**  |             |
 | `$userType`   | **int**    |             |
 
-***
 
 ### checkPermission
 
@@ -205,7 +174,6 @@ public granted(string $permission, array $userRoles = [], int $userType): bool
 public checkPermission(): void
 ```
 
-***
 
 ### check
 
@@ -219,7 +187,6 @@ public check(string $permission): void
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
-***
 
 ### loadPermissions
 
@@ -227,7 +194,6 @@ public check(string $permission): void
 public loadPermissions(): array<int,array<int,string>>
 ```
 
-***
 
 ### isAppPermittedForActiveUser
 
@@ -241,7 +207,6 @@ public isAppPermittedForActiveUser(\Hubleto\Framework\Interfaces\AppInterface $a
 |-----------|------------------------------------------------|-------------|
 | `$app`    | **\Hubleto\Framework\Interfaces\AppInterface** |             |
 
-***
 
 ## Inherited methods
 
@@ -251,7 +216,6 @@ public isAppPermittedForActiveUser(\Hubleto\Framework\Interfaces\AppInterface $a
 public __construct(): mixed
 ```
 
-***
 
 ### getServiceStatic
 
@@ -268,7 +232,6 @@ public static getServiceStatic(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### getService
 
@@ -284,7 +247,6 @@ public getService(string $service): mixed
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
-***
 
 ### env
 
@@ -294,7 +256,6 @@ Shortcut for the env service.
 public env(): \Hubleto\Framework\Env
 ```
 
-***
 
 ### authProvider
 
@@ -304,7 +265,6 @@ Shortcut for the authentication service.
 public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
-***
 
 ### db
 
@@ -314,7 +274,6 @@ Shortcut for the database service.
 public db(): \Hubleto\Framework\Db
 ```
 
-***
 
 ### appManager
 
@@ -324,7 +283,6 @@ Shortcut for the app manager service.
 public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
-***
 
 ### router
 
@@ -334,7 +292,6 @@ Shortcut for the router service.
 public router(): \Hubleto\Framework\Router
 ```
 
-***
 
 ### hookManager
 
@@ -344,7 +301,6 @@ Shortcut for the hook manager service.
 public hookManager(): \Hubleto\Framework\HookManager
 ```
 
-***
 
 ### sessionManager
 
@@ -354,7 +310,6 @@ Shortcut for the session manager service.
 public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
-***
 
 ### permissionsManager
 
@@ -364,7 +319,6 @@ Shortcut for the permissions manager service.
 public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
-***
 
 ### cronManager
 
@@ -374,7 +328,6 @@ Shortcut for the cron manager service.
 public cronManager(): \Hubleto\Framework\CronManager
 ```
 
-***
 
 ### emailProvider
 
@@ -384,7 +337,6 @@ Shortcut for the email provider service.
 public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
-***
 
 ### config
 
@@ -394,7 +346,6 @@ Shortcut for the config service.
 public config(): \Hubleto\Framework\Config
 ```
 
-***
 
 ### logger
 
@@ -404,7 +355,6 @@ Shortcut for the logger service.
 public logger(): \Hubleto\Framework\Logger
 ```
 
-***
 
 ### locale
 
@@ -414,7 +364,6 @@ Shortcut for the locale service.
 public locale(): \Hubleto\Framework\Locale
 ```
 
-***
 
 ### renderer
 
@@ -424,7 +373,6 @@ Shortcut for the renderer service.
 public renderer(): \Hubleto\Framework\Renderer
 ```
 
-***
 
 ### translator
 
@@ -434,7 +382,6 @@ Shortcut for the translator service.
 public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
-***
 
 ### getModel
 
@@ -450,7 +397,6 @@ public getModel(string $model): \Hubleto\Framework\Models\Model
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
-***
 
 ### getController
 
@@ -466,7 +412,6 @@ public getController(string $controller): \Hubleto\Framework\Controller
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
-***
 
 ### translate
 
@@ -487,4 +432,3 @@ public translate(string $string, array $vars = []): string
 
 Translated string.
 
-***

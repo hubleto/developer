@@ -1,7 +1,5 @@
 
-***
-
-* Full name: `\Hubleto\Framework\Interfaces\RouterInterface`
+# \Hubleto\Framework\Interfaces\RouterInterface
 
 ## Methods
 
@@ -11,7 +9,6 @@
 public init(): void
 ```
 
-***
 
 ### isAjax
 
@@ -19,7 +16,6 @@ public init(): void
 public isAjax(): bool
 ```
 
-***
 
 ### extractParamsFromRequest
 
@@ -27,7 +23,6 @@ public isAjax(): bool
 public extractParamsFromRequest(): array
 ```
 
-***
 
 ### extractRouteFromRequest
 
@@ -35,7 +30,6 @@ public extractParamsFromRequest(): array
 public extractRouteFromRequest(): string
 ```
 
-***
 
 ### get
 
@@ -49,7 +43,6 @@ public get(array $routes): mixed
 |-----------|-----------|-------------|
 | `$routes` | **array** |             |
 
-***
 
 ### getRoutes
 
@@ -63,7 +56,6 @@ public getRoutes(string $method): array
 |-----------|------------|-------------|
 | `$method` | **string** |             |
 
-***
 
 ### parseRoute
 
@@ -78,7 +70,6 @@ public parseRoute(string $method, string $route): array
 | `$method` | **string** |             |
 | `$route`  | **string** |             |
 
-***
 
 ### getRoute
 
@@ -86,7 +77,6 @@ public parseRoute(string $method, string $route): array
 public getRoute(): string
 ```
 
-***
 
 ### setRoute
 
@@ -100,7 +90,6 @@ public setRoute(string $route): void
 |-----------|------------|-------------|
 | `$route`  | **string** |             |
 
-***
 
 ### setRouteVars
 
@@ -114,7 +103,6 @@ public setRouteVars(array $routeVars): void
 |--------------|-----------|-------------|
 | `$routeVars` | **array** |             |
 
-***
 
 ### getRouteVars
 
@@ -122,7 +110,6 @@ public setRouteVars(array $routeVars): void
 public getRouteVars(): array
 ```
 
-***
 
 ### getRouteVar
 
@@ -136,7 +123,6 @@ public getRouteVar(string|int $varIndex): string
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
-***
 
 ### routeVarAsString
 
@@ -150,7 +136,6 @@ public routeVarAsString(string|int $varIndex): string
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
-***
 
 ### routeVarAsInteger
 
@@ -164,7 +149,6 @@ public routeVarAsInteger(string|int $varIndex): int
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
-***
 
 ### routeVarAsFloat
 
@@ -178,7 +162,6 @@ public routeVarAsFloat(string|int $varIndex): float
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
-***
 
 ### routeVarAsBool
 
@@ -192,7 +175,6 @@ public routeVarAsBool(string|int $varIndex): bool
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
-***
 
 ### redirectTo
 
@@ -207,7 +189,6 @@ public redirectTo(string $url, int $code = 302): void
 | `$url`    | **string** |             |
 | `$code`   | **int**    |             |
 
-***
 
 ### getUrlParams
 
@@ -215,7 +196,6 @@ public redirectTo(string $url, int $code = 302): void
 public getUrlParams(): array
 ```
 
-***
 
 ### isUrlParam
 
@@ -229,7 +209,6 @@ public isUrlParam(string $paramName): bool
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
-***
 
 ### urlParamNotEmpty
 
@@ -243,7 +222,6 @@ public urlParamNotEmpty(string $paramName): bool
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
-***
 
 ### setUrlParam
 
@@ -258,7 +236,6 @@ public setUrlParam(string $paramName, string $newValue): void
 | `$paramName` | **string** |             |
 | `$newValue`  | **string** |             |
 
-***
 
 ### removeUrlParam
 
@@ -272,7 +249,6 @@ public removeUrlParam(string $paramName): void
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
-***
 
 ### urlParamAsString
 
@@ -287,7 +263,6 @@ public urlParamAsString(string $paramName, string $defaultValue = ''): string
 | `$paramName`    | **string** |             |
 | `$defaultValue` | **string** |             |
 
-***
 
 ### urlParamAsInteger
 
@@ -302,7 +277,6 @@ public urlParamAsInteger(string $paramName, int $defaultValue): int
 | `$paramName`    | **string** |             |
 | `$defaultValue` | **int**    |             |
 
-***
 
 ### urlParamAsFloat
 
@@ -317,7 +291,6 @@ public urlParamAsFloat(string $paramName, float $defaultValue): float
 | `$paramName`    | **string** |             |
 | `$defaultValue` | **float**  |             |
 
-***
 
 ### urlParamAsBool
 
@@ -332,7 +305,6 @@ public urlParamAsBool(string $paramName, bool $defaultValue = false): bool
 | `$paramName`    | **string** |             |
 | `$defaultValue` | **bool**   |             |
 
-***
 
 ### urlParamAsArray
 
@@ -347,4 +319,3 @@ public urlParamAsArray(string $paramName, array $defaultValue = []): array
 | `$paramName`    | **string** |             |
 | `$defaultValue` | **array**  |             |
 
-***
