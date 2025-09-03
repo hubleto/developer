@@ -201,6 +201,11 @@ tableOfContents:
           - page: advanced-development/miscellaneous
             children:
               - page: advanced-development/miscellaneous/hubleto-chatgpt
+  - page: source-code
+    icon: fa-solid fa-code
+    children:
+      - page: source-code/framework/Home
+      - page: source-code/erp/Home
   - page: tutorials
     icon: fa-solid fa-graduation-cap
     children:
