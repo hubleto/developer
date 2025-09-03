@@ -206,6 +206,20 @@ tableOfContents:
     children:
       - page: source-code/framework/Home
       - page: source-code/erp/Home
+      - page: source-code/apps
+        children:
+          - page: source-code/apps/Calendar/Home
+          - page: source-code/apps/Campaigns/Home
+          - page: source-code/apps/Contacts/Home
+          - page: source-code/apps/Customers/Home
+          - page: source-code/apps/Deals/Home
+          - page: source-code/apps/Invoices/Home
+          - page: source-code/apps/Leads/Home
+          - page: source-code/apps/Orders/Home
+          - page: source-code/apps/Pipeline/Home
+          - page: source-code/apps/Projects/Home
+          - page: source-code/apps/Settings/Home
+          - page: source-code/apps/Worksheets/Home
   - page: tutorials
     icon: fa-solid fa-graduation-cap
     children:
