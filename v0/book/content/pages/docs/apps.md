@@ -1,6 +1,6 @@
 # Apps
 
-Apps are packages containg some functionality.
+Apps are packages containg most of Hubleto functionality.
 
 A Hubleto app is a bundle or package which contains a functionality covering specific goal. For example, there are apps like `Customers`, `Contacts`, `Campaings`, `Deals`, `Projects`, `Tasks` or others.
 
