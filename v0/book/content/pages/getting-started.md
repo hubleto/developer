@@ -46,7 +46,7 @@ There also is a Docker image ready for installation, which already contains the 
 
 ### Showcase build
 
-You only need to run the command `docker run -d -p 8080:80 mrgopes/hubleto-webapp` to set up a demo build of Hubleto. You can log in with the credentials `admin@example.com` and password `changeme` at `http://localhost:8080/hubleto/`.
+You only need to run the command `docker run -d -p 8080:80 -e url="http://localhost:8080/" mrgopes/hubleto-webapp` to set up a demo build of Hubleto. You can log in with the credentials `admin@example.com` and password `changeme` at `http://localhost:8080/hubleto/`.
 
 ### Production-ready build
 
