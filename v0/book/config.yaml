@@ -238,3 +238,5 @@ tableOfContents:
           - page: tutorial/custom-ui-components
           - page: tutorial/writing-tests
           - page: tutorial/more-reading
+      - page: tutorials/set-up-environment-for-development
+        icon: fas fa-gears
