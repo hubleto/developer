@@ -20,7 +20,7 @@ You may provide additional argument pointing to the YAML configuration file. Par
 will be used and will not be prompted by the user. If you will all parameters in the config file, you may
 install the Hubleto without being prompted at all.
 
-Full example of this file is at https://github.com/hubleto/erp/blob/main/init-config-example.yaml.
+Full example of this file is at https://github.com/hubleto/erp-project/blob/main/init-config-example.yaml.
 
 ## Configuration parameters
 
