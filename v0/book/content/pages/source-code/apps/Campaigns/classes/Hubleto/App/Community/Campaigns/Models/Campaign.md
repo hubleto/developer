@@ -60,19 +60,3 @@ public onAfterCreate(array $savedRecord): array
 |----------------|-----------|-------------|
 | `$savedRecord` | **array** |             |
 
-
-### onAfterUpdate
-
-[Description for onAfterUpdate]
-
-```php
-public onAfterUpdate(array $originalRecord, array $savedRecord): array
-```
-
-**Parameters:**
-
-| Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
-| `$originalRecord` | **array** |             |
-| `$savedRecord`    | **array** |             |
-

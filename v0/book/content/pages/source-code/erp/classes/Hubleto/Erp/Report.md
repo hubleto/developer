@@ -73,14 +73,14 @@ public loadData(): array
 ### loadDataDefault
 
 ```php
-public loadDataDefault(\Hubleto\Framework\Models\Model $model): array
+public loadDataDefault(\Hubleto\Framework\Interfaces\ModelInterface $model): array
 ```
 
 **Parameters:**
 
-| Parameter | Type                                | Description |
-|-----------|-------------------------------------|-------------|
-| `$model`  | **\Hubleto\Framework\Models\Model** |             |
+| Parameter | Type                                             | Description |
+|-----------|--------------------------------------------------|-------------|
+| `$model`  | **\Hubleto\Framework\Interfaces\ModelInterface** |             |
 
 
 ### generateRandomColor

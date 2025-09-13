@@ -20,11 +20,6 @@
 
 ## Properties
 
-### record
-
-`public \Illuminate\Database\Eloquent\Model $record`
-
-
 ### table
 
 `public string $table`

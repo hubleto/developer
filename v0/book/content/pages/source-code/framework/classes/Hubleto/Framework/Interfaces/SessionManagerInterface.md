@@ -24,6 +24,19 @@ public start(bool $persist, array $options = []): void
 | `$options` | **array** |             |
 
 
+### prolongSession
+
+```php
+public prolongSession(int $seconds = 2592000): void
+```
+
+**Parameters:**
+
+| Parameter  | Type    | Description |
+|------------|---------|-------------|
+| `$seconds` | **int** |             |
+
+
 ### stop
 
 ```php

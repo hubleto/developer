@@ -41,17 +41,17 @@ public CURRENCY(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\C
 ```
 
 
-### PIPELINE
+### WORKFLOW
 
 ```php
-public PIPELINE(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Pipeline\Models\RecordManagers\Pipeline,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
+public WORKFLOW(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\Workflow,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
 ```
 
 
-### PIPELINE_STEP
+### WORKFLOW_STEP
 
 ```php
-public PIPELINE_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Pipeline\Models\RecordManagers\PipelineStep,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
+public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\WorkflowStep,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
 ```
 
 

@@ -27,17 +27,24 @@ public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App
 ```
 
 
-### PIPELINE
+### ACTIVITIES
 
 ```php
-public PIPELINE(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Pipeline\Models\RecordManagers\Pipeline,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
+public ACTIVITIES(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Orders\Models\RecordManagers\OrderActivity,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
 ```
 
 
-### PIPELINE_STEP
+### WORKFLOW
 
 ```php
-public PIPELINE_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Pipeline\Models\RecordManagers\PipelineStep,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
+public WORKFLOW(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\Workflow,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
+```
+
+
+### WORKFLOW_STEP
+
+```php
+public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\WorkflowStep,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
 ```
 
 

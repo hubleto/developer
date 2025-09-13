@@ -159,7 +159,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
@@ -344,12 +344,16 @@ View to be used to render the HTML.
 
 ### prepareView
 
+[Description for prepareView]
+
 ```php
 public prepareView(): void
 ```
 
 
 ### setView
+
+[Description for setView]
 
 ```php
 public setView(string $view): void
@@ -364,6 +368,8 @@ public setView(string $view): void
 
 ### getView
 
+[Description for getView]
+
 ```php
 public getView(): string
 ```
@@ -371,12 +377,16 @@ public getView(): string
 
 ### getViewParams
 
+[Description for getViewParams]
+
 ```php
 public getViewParams(): array
 ```
 
 
 ### render
+
+[Description for render]
 
 ```php
 public render(): string

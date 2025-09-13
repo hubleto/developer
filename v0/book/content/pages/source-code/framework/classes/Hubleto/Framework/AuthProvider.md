@@ -185,6 +185,13 @@ public getUserId(): int
 ```
 
 
+### getUserEmail
+
+```php
+public getUserEmail(): string
+```
+
+
 ### forgotPassword
 
 ```php
@@ -354,7 +361,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

@@ -3,7 +3,7 @@ Default implementation of model for Hubleto project.
 
 # \Hubleto\Framework\Models\User
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./Model">\Hubleto\Framework\Models\Model</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../Model">\Hubleto\Framework\Model</a></td></tr></table>
 
 
 ## Constants
@@ -31,6 +31,9 @@ Default implementation of model for Hubleto project.
 
 ### lookupSqlValue
 
+SQL-compatible string used to render displayed value of the record when used
+as a lookup.
+
 `public ?string $lookupSqlValue`
 
 
@@ -48,21 +51,23 @@ Default implementation of model for Hubleto project.
 
 ### __construct
 
-Creates instance of model's object.
-
 ```php
-public __construct(): void
+public __construct(): mixed
 ```
 
 
 ### describeColumns
 
+[Description for describeColumns]
+
 ```php
-public describeColumns(): array<string,\Hubleto\Framework\Db\Column>
+public describeColumns(): array
 ```
 
 
 ### describeTable
+
+[Description for describeTable]
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table
@@ -71,10 +76,10 @@ public describeTable(): \Hubleto\Framework\Description\Table
 
 ### indexes
 
-indexes
+[Description for indexes]
 
 ```php
-public indexes(array $indexes = []): array<string,mixed>
+public indexes(array $indexes = []): array
 ```
 
 **Parameters:**
@@ -266,10 +271,8 @@ public updatePassword(int $idUser, string $password): mixed
 
 ### __construct
 
-Creates instance of model's object.
-
 ```php
-public __construct(): void
+public __construct(): mixed
 ```
 
 
@@ -399,7 +402,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
@@ -491,6 +494,8 @@ Translated string.
 
 ### initRecordManager
 
+[Description for initRecordManager]
+
 ```php
 public initRecordManager(): null|object
 ```
@@ -498,12 +503,16 @@ public initRecordManager(): null|object
 
 ### isDatabaseConnected
 
+[Description for isDatabaseConnected]
+
 ```php
 public isDatabaseConnected(): bool
 ```
 
 
 ### getConfigFullPath
+
+[Description for getConfigFullPath]
 
 ```php
 public getConfigFullPath(string $configName): string
@@ -561,20 +570,9 @@ public configAsArray(string $configName): void
 | `$configName` | **string** |             |
 
 
-### upgrades
-
-Returns list of available upgrades. This method must be overriden by each model.
-
-```php
-public upgrades(): array
-```
-
-**Return Value:**
-
-List of available upgrades. Keys of the array are simple numbers starting from 1.
-
-
 ### getSqlCreateTableCommands
+
+[Description for getSqlCreateTableCommands]
 
 ```php
 public getSqlCreateTableCommands(): array
@@ -582,6 +580,8 @@ public getSqlCreateTableCommands(): array
 
 
 ### createSqlTable
+
+[Description for createSqlTable]
 
 ```php
 public createSqlTable(): mixed
@@ -598,6 +598,8 @@ public install(): void
 
 
 ### dropTableIfExists
+
+[Description for dropTableIfExists]
 
 ```php
 public dropTableIfExists(): \Hubleto\Framework\Model
@@ -626,20 +628,22 @@ public getFullTableSqlName(): string
 Full name of the model's SQL table
 
 
-### getLookupSqlValue
+### upgrades
+
+Returns list of available upgrades. This method must be overriden by each model.
 
 ```php
-public getLookupSqlValue(string $tableAlias = ''): string
+public upgrades(): array
 ```
 
-**Parameters:**
+**Return Value:**
 
-| Parameter     | Type       | Description |
-|---------------|------------|-------------|
-| `$tableAlias` | **string** |             |
+List of available upgrades. Keys of the array are simple numbers starting from 1.
 
 
 ### hasColumn
+
+[Description for hasColumn]
 
 ```php
 public hasColumn(string $column): bool
@@ -652,24 +656,21 @@ public hasColumn(string $column): bool
 | `$column` | **string** |             |
 
 
-### describeColumns
-
-```php
-public describeColumns(): array<string,\Hubleto\Framework\Db\Column>
-```
-
-
 ### getColumns
 
+[Description for getColumns]
+
 ```php
-public getColumns(): array
+public getColumns(): array<string,\Hubleto\Framework\Column>
 ```
 
 
 ### getColumn
 
+[Description for getColumn]
+
 ```php
-public getColumn(string $column): \Hubleto\Framework\Db\Column
+public getColumn(string $column): \Hubleto\Framework\Interfaces\ColumnInterface
 ```
 
 **Parameters:**
@@ -681,51 +682,49 @@ public getColumn(string $column): \Hubleto\Framework\Db\Column
 
 ### columnNames
 
-columnNames
+[Description for columnNames]
 
 ```php
-public columnNames(): string[]
+public columnNames(): array
 ```
 
 
 ### indexes
 
-indexes
+[Description for indexes]
 
 ```php
-public indexes(array<string,mixed> $indexes = []): array<string,mixed>
+public indexes(array $indexes = []): array
 ```
 
 **Parameters:**
 
-| Parameter  | Type                    | Description |
-|------------|-------------------------|-------------|
-| `$indexes` | **array<string,mixed>** |             |
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$indexes` | **array** |             |
 
 
 ### indexNames
 
-indexNames
+[Description for indexNames]
 
 ```php
-public indexNames(): string[]
+public indexNames(): array
 ```
 
 
-### getById
+### describeColumns
+
+[Description for describeColumns]
 
 ```php
-public getById(int $id): mixed
+public describeColumns(): array
 ```
-
-**Parameters:**
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
 
 
 ### describeInput
+
+[Description for describeInput]
 
 ```php
 public describeInput(string $columnName): \Hubleto\Framework\Description\Input
@@ -738,23 +737,27 @@ public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 | `$columnName` | **string** |             |
 
 
-### describeTable
-
-```php
-public describeTable(): \Hubleto\Framework\Description\Table
-```
-
-
 ### describeForm
+
+[Description for describeForm]
 
 ```php
 public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
 
+### describeTable
+
+[Description for describeTable]
+
+```php
+public describeTable(): \Hubleto\Framework\Description\Table
+```
+
+
 ### recordGet
 
-recordGet
+[Description for recordGet]
 
 ```php
 public recordGet(callable|null $queryModifierCallback = null): array
@@ -769,7 +772,7 @@ public recordGet(callable|null $queryModifierCallback = null): array
 
 ### recordGetList
 
-recordGetList
+[Description for recordGetList]
 
 ```php
 public recordGetList(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page): array
@@ -786,123 +789,50 @@ public recordGetList(string $fulltextSearch = '', array $columnSearch = [], arra
 | `$page`           | **int**    |             |
 
 
-### onBeforeCreate
+### diffRecords
 
-onBeforeCreate
-
-```php
-public onBeforeCreate(array<string,mixed> $record): array<string,mixed>
-```
-
-**Parameters:**
-
-| Parameter | Type                    | Description |
-|-----------|-------------------------|-------------|
-| `$record` | **array<string,mixed>** |             |
-
-
-### onBeforeUpdate
-
-onBeforeUpdate
+[Description for diffRecords]
 
 ```php
-public onBeforeUpdate(array<string,mixed> $record): array<string,mixed>
-```
-
-**Parameters:**
-
-| Parameter | Type                    | Description |
-|-----------|-------------------------|-------------|
-| `$record` | **array<string,mixed>** |             |
-
-
-### onAfterCreate
-
-onAfterCreate
-
-```php
-public onAfterCreate(array<string,mixed> $savedRecord): array<string,mixed>
-```
-
-**Parameters:**
-
-| Parameter      | Type                    | Description |
-|----------------|-------------------------|-------------|
-| `$savedRecord` | **array<string,mixed>** |             |
-
-
-### onAfterUpdate
-
-onAfterUpdate
-
-```php
-public onAfterUpdate(array $originalRecord, array $savedRecord): array<string,mixed>
-```
-
-**Parameters:**
-
-| Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
-| `$originalRecord` | **array** |             |
-| `$savedRecord`    | **array** |             |
-
-
-### onBeforeDelete
-
-onBeforeDelete
-
-```php
-public onBeforeDelete(int $id): int
-```
-
-**Parameters:**
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
-
-
-### onAfterDelete
-
-onAfterDelete
-
-```php
-public onAfterDelete(int $id): int
-```
-
-**Parameters:**
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
-
-
-### onAfterLoadRecord
-
-onAfterLoadRecord
-
-```php
-public onAfterLoadRecord(array<string,mixed> $record): array<string,mixed>
-```
-
-**Parameters:**
-
-| Parameter | Type                    | Description |
-|-----------|-------------------------|-------------|
-| `$record` | **array<string,mixed>** |             |
-
-
-### onAfterLoadRecords
-
-```php
-public onAfterLoadRecords(array $records): array
+public diffRecords(array $record1, array $record2): array
 ```
 
 **Parameters:**
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
-| `$records` | **array** |             |
+| `$record1` | **array** |             |
+| `$record2` | **array** |             |
+
+
+### getById
+
+[Description for getById]
+
+```php
+public getById(int $id): mixed
+```
+
+**Parameters:**
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$id`     | **int** |             |
+
+
+### getLookupSqlValue
+
+[Description for getLookupSqlValue]
+
+```php
+public getLookupSqlValue(string $tableAlias = ''): string
+```
+
+**Parameters:**
+
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$tableAlias` | **string** |             |
 
 
 ### encryptPassword
@@ -920,16 +850,123 @@ public encryptPassword(string $original): string
 | `$original` | **string** |             |
 
 
-### diffRecords
+### onBeforeCreate
+
+[Description for onBeforeCreate]
 
 ```php
-public diffRecords(array $record1, array $record2): array
+public onBeforeCreate(array $record): array
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
+### onBeforeUpdate
+
+[Description for onBeforeUpdate]
+
+```php
+public onBeforeUpdate(array $record): array
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
+### onAfterCreate
+
+[Description for onAfterCreate]
+
+```php
+public onAfterCreate(array $savedRecord): array
+```
+
+**Parameters:**
+
+| Parameter      | Type      | Description |
+|----------------|-----------|-------------|
+| `$savedRecord` | **array** |             |
+
+
+### onAfterUpdate
+
+[Description for onAfterUpdate]
+
+```php
+public onAfterUpdate(array $originalRecord, array $savedRecord): array
+```
+
+**Parameters:**
+
+| Parameter         | Type      | Description |
+|-------------------|-----------|-------------|
+| `$originalRecord` | **array** |             |
+| `$savedRecord`    | **array** |             |
+
+
+### onBeforeDelete
+
+[Description for onBeforeDelete]
+
+```php
+public onBeforeDelete(int $id): int
+```
+
+**Parameters:**
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$id`     | **int** |             |
+
+
+### onAfterDelete
+
+[Description for onAfterDelete]
+
+```php
+public onAfterDelete(int $id): int
+```
+
+**Parameters:**
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$id`     | **int** |             |
+
+
+### onAfterLoadRecord
+
+[Description for onAfterLoadRecord]
+
+```php
+public onAfterLoadRecord(array $record): array
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
+### onAfterLoadRecords
+
+[Description for onAfterLoadRecords]
+
+```php
+public onAfterLoadRecords(array $records): array
 ```
 
 **Parameters:**
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
-| `$record1` | **array** |             |
-| `$record2` | **array** |             |
+| `$records` | **array** |             |
 

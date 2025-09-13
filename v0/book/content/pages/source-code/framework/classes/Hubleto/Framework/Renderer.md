@@ -3,7 +3,7 @@ Default view renderer for Hubleto project.
 
 # \Hubleto\Framework\Renderer
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/RendererInterface">\Hubleto\Framework\Interfaces\RendererInterface</a></td></tr></table>
 
 
 ## Properties
@@ -323,7 +323,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

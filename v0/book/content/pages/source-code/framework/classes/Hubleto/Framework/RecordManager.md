@@ -256,16 +256,17 @@ public recordDelete(int|string $id): int
 ### recordSave
 
 ```php
-public recordSave(array $record, int $idMasterRecord, bool $saveRelationsRecursively = false): array
+public recordSave(array $record, int $idMasterRecord, array $saveRelations = [], string $relation = ''): array
 ```
 
 **Parameters:**
 
-| Parameter                   | Type      | Description |
-|-----------------------------|-----------|-------------|
-| `$record`                   | **array** |             |
-| `$idMasterRecord`           | **int**   |             |
-| `$saveRelationsRecursively` | **bool**  |             |
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `$record`         | **array**  |             |
+| `$idMasterRecord` | **int**    |             |
+| `$saveRelations`  | **array**  |             |
+| `$relation`       | **string** |             |
 
 
 ### recordValidate
@@ -273,15 +274,16 @@ public recordSave(array $record, int $idMasterRecord, bool $saveRelationsRecursi
 validate
 
 ```php
-public recordValidate(array<string,mixed> $record, bool $validateRelationsRecursively = false): array<string,mixed>
+public recordValidate(array<string,mixed> $record, array $validateRelations = [], string $relation = ''): array<string,mixed>
 ```
 
 **Parameters:**
 
-| Parameter                       | Type                    | Description |
-|---------------------------------|-------------------------|-------------|
-| `$record`                       | **array<string,mixed>** |             |
-| `$validateRelationsRecursively` | **bool**                |             |
+| Parameter            | Type                    | Description |
+|----------------------|-------------------------|-------------|
+| `$record`            | **array<string,mixed>** |             |
+| `$validateRelations` | **array**               |             |
+| `$relation`          | **string**              |             |
 
 
 ### recordNormalize

@@ -6,7 +6,7 @@ be rendered using Twig template or using custom render() method.
 
 # \Hubleto\Framework\Controller
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/ControllerInterface">\Hubleto\Framework\Interfaces\ControllerInterface</a></td></tr></table>
 
 
 ## Constants
@@ -226,12 +226,16 @@ View to be used to render the HTML.
 
 ### prepareView
 
+[Description for prepareView]
+
 ```php
 public prepareView(): void
 ```
 
 
 ### setView
+
+[Description for setView]
 
 ```php
 public setView(string $view): void
@@ -246,6 +250,8 @@ public setView(string $view): void
 
 ### getView
 
+[Description for getView]
+
 ```php
 public getView(): string
 ```
@@ -253,12 +259,16 @@ public getView(): string
 
 ### getViewParams
 
+[Description for getViewParams]
+
 ```php
 public getViewParams(): array
 ```
 
 
 ### render
+
+[Description for render]
 
 ```php
 public render(): string
@@ -400,7 +410,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

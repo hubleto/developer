@@ -3,7 +3,7 @@ Core implementation of model.
 
 # \Hubleto\Erp\Model
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../Framework/Models/Model">Model</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../Framework/Model">Model</a></td></tr></table>
 
 
 ## Methods

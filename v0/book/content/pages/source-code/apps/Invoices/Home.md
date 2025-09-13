@@ -11,8 +11,8 @@
 | Class                                                                         | Description |
 |-------------------------------------------------------------------------------|-------------|
 | [`Loader`](./classes/Hubleto/App/Community/Invoices/Loader)                   |             |
-| [`Pipeline`](./classes/Hubleto/App/Community/Invoices/Pipeline)               |             |
 | [`PriceCalculator`](./classes/Hubleto/App/Community/Invoices/PriceCalculator) |             |
+| [`Workflow`](./classes/Hubleto/App/Community/Invoices/Workflow)               |             |
 
 ### \Hubleto\App\Community\Invoices\Controllers
 

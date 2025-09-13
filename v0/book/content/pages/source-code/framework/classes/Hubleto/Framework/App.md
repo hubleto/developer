@@ -102,6 +102,8 @@ public validateManifest(): mixed
 
 ### init
 
+[Description for init]
+
 ```php
 public init(): void
 ```
@@ -109,12 +111,16 @@ public init(): void
 
 ### onBeforeRender
 
+[Description for onBeforeRender]
+
 ```php
 public onBeforeRender(): void
 ```
 
 
 ### hook
+
+[Description for hook]
 
 ```php
 public hook(string $hook): void
@@ -129,12 +135,16 @@ public hook(string $hook): void
 
 ### getRootUrlSlug
 
+[Description for getRootUrlSlug]
+
 ```php
 public getRootUrlSlug(): string
 ```
 
 
 ### getNotificationsCount
+
+[Description for getNotificationsCount]
 
 ```php
 public getNotificationsCount(): int
@@ -143,7 +153,7 @@ public getNotificationsCount(): int
 
 ### translate
 
-Shorthand for core translate() function. Uses own language dictionary.
+[Description for translate]
 
 ```php
 public translate(string $string, array $vars = [], string $context = 'root'): string
@@ -151,18 +161,16 @@ public translate(string $string, array $vars = [], string $context = 'root'): st
 
 **Parameters:**
 
-| Parameter  | Type       | Description             |
-|------------|------------|-------------------------|
-| `$string`  | **string** | String to be translated |
-| `$vars`    | **array**  |                         |
-| `$context` | **string** |                         |
-
-**Return Value:**
-
-Translated string.
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$string`  | **string** |             |
+| `$vars`    | **array**  |             |
+| `$context` | **string** |             |
 
 
 ### installTables
+
+[Description for installTables]
 
 ```php
 public installTables(int $round): void
@@ -177,12 +185,16 @@ public installTables(int $round): void
 
 ### getAvailableControllerClasses
 
+[Description for getAvailableControllerClasses]
+
 ```php
 public getAvailableControllerClasses(): array
 ```
 
 
 ### getAvailableModelClasses
+
+[Description for getAvailableModelClasses]
 
 ```php
 public getAvailableModelClasses(): array
@@ -191,12 +203,16 @@ public getAvailableModelClasses(): array
 
 ### installDefaultPermissions
 
+[Description for installDefaultPermissions]
+
 ```php
 public installDefaultPermissions(): void
 ```
 
 
 ### assignPermissionsToRoles
+
+[Description for assignPermissionsToRoles]
 
 ```php
 public assignPermissionsToRoles(): void
@@ -205,12 +221,16 @@ public assignPermissionsToRoles(): void
 
 ### generateDemoData
 
+[Description for generateDemoData]
+
 ```php
 public generateDemoData(): void
 ```
 
 
 ### renderSecondSidebar
+
+[Description for renderSecondSidebar]
 
 ```php
 public renderSecondSidebar(): string
@@ -219,7 +239,7 @@ public renderSecondSidebar(): string
 
 ### search
 
-Implements fulltext search functionality for the app
+[Description for search]
 
 ```php
 public search(array $expressions): array
@@ -227,12 +247,14 @@ public search(array $expressions): array
 
 **Parameters:**
 
-| Parameter      | Type      | Description                                                     |
-|----------------|-----------|-----------------------------------------------------------------|
-| `$expressions` | **array** | List of expressions to be searched and glued with logical 'or'. |
+| Parameter      | Type      | Description |
+|----------------|-----------|-------------|
+| `$expressions` | **array** |             |
 
 
 ### addSetting
+
+[Description for addSetting]
 
 ```php
 public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $setting): void
@@ -248,12 +270,16 @@ public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $settin
 
 ### getSettings
 
+[Description for getSettings]
+
 ```php
 public getSettings(): array
 ```
 
 
 ### getFullConfigPath
+
+[Description for getFullConfigPath]
 
 ```php
 public getFullConfigPath(string $path): string
@@ -267,6 +293,8 @@ public getFullConfigPath(string $path): string
 
 
 ### saveConfig
+
+[Description for saveConfig]
 
 ```php
 public saveConfig(string $path, string $value = ''): void
@@ -282,6 +310,8 @@ public saveConfig(string $path, string $value = ''): void
 
 ### saveConfigForUser
 
+[Description for saveConfigForUser]
+
 ```php
 public saveConfigForUser(string $path, string $value = ''): void
 ```
@@ -295,6 +325,8 @@ public saveConfigForUser(string $path, string $value = ''): void
 
 
 ### configAsString
+
+[Description for configAsString]
 
 ```php
 public configAsString(string $path, string $defaultValue = ''): string
@@ -310,6 +342,8 @@ public configAsString(string $path, string $defaultValue = ''): string
 
 ### configAsInteger
 
+[Description for configAsInteger]
+
 ```php
 public configAsInteger(string $path, int $defaultValue): int
 ```
@@ -323,6 +357,8 @@ public configAsInteger(string $path, int $defaultValue): int
 
 
 ### configAsFloat
+
+[Description for configAsFloat]
 
 ```php
 public configAsFloat(string $path, float $defaultValue): float
@@ -338,6 +374,8 @@ public configAsFloat(string $path, float $defaultValue): float
 
 ### configAsBool
 
+[Description for configAsBool]
+
 ```php
 public configAsBool(string $path, bool $defaultValue = false): bool
 ```
@@ -351,6 +389,8 @@ public configAsBool(string $path, bool $defaultValue = false): bool
 
 
 ### configAsArray
+
+[Description for configAsArray]
 
 ```php
 public configAsArray(string $path, array $defaultValue = []): array
@@ -366,6 +406,8 @@ public configAsArray(string $path, array $defaultValue = []): array
 
 ### setConfigAsString
 
+[Description for setConfigAsString]
+
 ```php
 public setConfigAsString(string $path, string $value = ''): void
 ```
@@ -379,6 +421,8 @@ public setConfigAsString(string $path, string $value = ''): void
 
 
 ### setConfigAsInteger
+
+[Description for setConfigAsInteger]
 
 ```php
 public setConfigAsInteger(string $path, int $value): void
@@ -394,6 +438,8 @@ public setConfigAsInteger(string $path, int $value): void
 
 ### setConfigAsFloat
 
+[Description for setConfigAsFloat]
+
 ```php
 public setConfigAsFloat(string $path, float $value): void
 ```
@@ -407,6 +453,8 @@ public setConfigAsFloat(string $path, float $value): void
 
 
 ### setConfigAsBool
+
+[Description for setConfigAsBool]
 
 ```php
 public setConfigAsBool(string $path, bool $value = false): void
@@ -422,6 +470,8 @@ public setConfigAsBool(string $path, bool $value = false): void
 
 ### setConfigAsArray
 
+[Description for setConfigAsArray]
+
 ```php
 public setConfigAsArray(string $path, array $value = []): void
 ```
@@ -436,6 +486,8 @@ public setConfigAsArray(string $path, array $value = []): void
 
 ### dangerouslyInjectDesktopHtmlContent
 
+[Description for dangerouslyInjectDesktopHtmlContent]
+
 ```php
 public dangerouslyInjectDesktopHtmlContent(string $where): string
 ```
@@ -448,6 +500,8 @@ public dangerouslyInjectDesktopHtmlContent(string $where): string
 
 
 ### addSearchSwitch
+
+[Description for addSearchSwitch]
 
 ```php
 public addSearchSwitch(string $switch, string $name): void
@@ -463,6 +517,8 @@ public addSearchSwitch(string $switch, string $name): void
 
 ### canHandleSearchSwith
 
+[Description for canHandleSearchSwith]
+
 ```php
 public canHandleSearchSwith(string $switch): bool
 ```
@@ -475,6 +531,8 @@ public canHandleSearchSwith(string $switch): bool
 
 
 ### collectExtendibles
+
+[Description for collectExtendibles]
 
 ```php
 public collectExtendibles(string $extendibleName): array
@@ -622,7 +680,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

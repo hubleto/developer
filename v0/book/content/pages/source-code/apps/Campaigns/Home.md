@@ -17,19 +17,22 @@
 
 #### Classes
 
-| Class                                                                          | Description |
-|--------------------------------------------------------------------------------|-------------|
-| [`Campaigns`](./classes/Hubleto/App/Community/Campaigns/Controllers/Campaigns) |             |
-| [`Tracker`](./classes/Hubleto/App/Community/Campaigns/Controllers/Tracker)     |             |
+| Class                                                                                | Description |
+|--------------------------------------------------------------------------------------|-------------|
+| [`Campaigns`](./classes/Hubleto/App/Community/Campaigns/Controllers/Campaigns)       |             |
+| [`ClickTracker`](./classes/Hubleto/App/Community/Campaigns/Controllers/ClickTracker) |             |
 
 ### \Hubleto\App\Community\Campaigns\Controllers\Api
 
 #### Classes
 
-| Class                                                                                                | Description |
-|------------------------------------------------------------------------------------------------------|-------------|
-| [`GetMailPreviewInfo`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetMailPreviewInfo) |             |
-| [`SaveContacts`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SaveContacts)             |             |
+| Class                                                                                                  | Description |
+|--------------------------------------------------------------------------------------------------------|-------------|
+| [`GetCampaignWarnings`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetCampaignWarnings) |             |
+| [`GetMailPreviewInfo`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetMailPreviewInfo)   |             |
+| [`Launch`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/Launch)                           |             |
+| [`SaveContacts`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SaveContacts)               |             |
+| [`SendTestEmailToMe`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SendTestEmailToMe)     |             |
 
 ### \Hubleto\App\Community\Campaigns\Extendibles
 
@@ -48,6 +51,7 @@
 | [`Campaign`](./classes/Hubleto/App/Community/Campaigns/Models/Campaign)               |             |
 | [`CampaignContact`](./classes/Hubleto/App/Community/Campaigns/Models/CampaignContact) |             |
 | [`CampaignTask`](./classes/Hubleto/App/Community/Campaigns/Models/CampaignTask)       |             |
+| [`Click`](./classes/Hubleto/App/Community/Campaigns/Models/Click)                     |             |
 
 ### \Hubleto\App\Community\Campaigns\Models\RecordManagers
 
@@ -58,3 +62,4 @@
 | [`Campaign`](./classes/Hubleto/App/Community/Campaigns/Models/RecordManagers/Campaign)               |             |
 | [`CampaignContact`](./classes/Hubleto/App/Community/Campaigns/Models/RecordManagers/CampaignContact) |             |
 | [`CampaignTask`](./classes/Hubleto/App/Community/Campaigns/Models/RecordManagers/CampaignTask)       |             |
+| [`Click`](./classes/Hubleto/App/Community/Campaigns/Models/RecordManagers/Click)                     |             |

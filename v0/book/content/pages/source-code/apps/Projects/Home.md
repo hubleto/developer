@@ -12,7 +12,7 @@
 |-----------------------------------------------------------------|-------------|
 | [`Calendar`](./classes/Hubleto/App/Community/Projects/Calendar) |             |
 | [`Loader`](./classes/Hubleto/App/Community/Projects/Loader)     |             |
-| [`Pipeline`](./classes/Hubleto/App/Community/Projects/Pipeline) |             |
+| [`Workflow`](./classes/Hubleto/App/Community/Projects/Workflow) |             |
 
 ### \Hubleto\App\Community\Projects\Controllers
 

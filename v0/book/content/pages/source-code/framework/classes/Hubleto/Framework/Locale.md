@@ -3,7 +3,7 @@ Methods to support locale in Hubleto project.
 
 # \Hubleto\Framework\Locale
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/LocaleInterface">\Hubleto\Framework\Interfaces\LocaleInterface</a></td></tr></table>
 
 
 ## Properties
@@ -24,12 +24,16 @@ public __construct(): mixed
 
 ### getDateShortFormat
 
+[Description for getDateShortFormat]
+
 ```php
 public getDateShortFormat(): string
 ```
 
 
 ### getDateLongFormat
+
+[Description for getDateLongFormat]
 
 ```php
 public getDateLongFormat(): string
@@ -38,12 +42,16 @@ public getDateLongFormat(): string
 
 ### getDatetimeFormat
 
+[Description for getDatetimeFormat]
+
 ```php
 public getDatetimeFormat(): string
 ```
 
 
 ### getTimeFormat
+
+[Description for getTimeFormat]
 
 ```php
 public getTimeFormat(bool $addSeconds = true): string
@@ -58,12 +66,16 @@ public getTimeFormat(bool $addSeconds = true): string
 
 ### getCurrencySymbol
 
+[Description for getCurrencySymbol]
+
 ```php
 public getCurrencySymbol(): string
 ```
 
 
 ### getCurrencyIsoCode
+
+[Description for getCurrencyIsoCode]
 
 ```php
 public getCurrencyIsoCode(): string
@@ -72,8 +84,10 @@ public getCurrencyIsoCode(): string
 
 ### getAll
 
+[Description for getAll]
+
 ```php
-public getAll(string $keyBy = ""): mixed
+public getAll(string $keyBy = ""): array
 ```
 
 **Parameters:**
@@ -84,6 +98,8 @@ public getAll(string $keyBy = ""): mixed
 
 
 ### formatCurrency
+
+[Description for formatCurrency]
 
 ```php
 public formatCurrency(string|float $value, string $symbol = ''): string
@@ -99,6 +115,8 @@ public formatCurrency(string|float $value, string $symbol = ''): string
 
 ### formatDateShort
 
+[Description for formatDateShort]
+
 ```php
 public formatDateShort(string|int $dateOrTimestamp): string
 ```
@@ -111,6 +129,8 @@ public formatDateShort(string|int $dateOrTimestamp): string
 
 
 ### formatDateLong
+
+[Description for formatDateLong]
 
 ```php
 public formatDateLong(string|int $dateOrTimestamp): string
@@ -125,6 +145,8 @@ public formatDateLong(string|int $dateOrTimestamp): string
 
 ### formatDatetime
 
+[Description for formatDatetime]
+
 ```php
 public formatDatetime(string|int $datetimeOrTimestamp): string
 ```
@@ -137,6 +159,8 @@ public formatDatetime(string|int $datetimeOrTimestamp): string
 
 
 ### formatTime
+
+[Description for formatTime]
 
 ```php
 public formatTime(string|int $timeOrTimestamp, bool $addSeconds = true): string
@@ -285,7 +309,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

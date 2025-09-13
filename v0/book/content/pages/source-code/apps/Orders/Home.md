@@ -10,8 +10,9 @@
 
 | Class                                                         | Description |
 |---------------------------------------------------------------|-------------|
+| [`Calendar`](./classes/Hubleto/App/Community/Orders/Calendar) |             |
 | [`Loader`](./classes/Hubleto/App/Community/Orders/Loader)     |             |
-| [`Pipeline`](./classes/Hubleto/App/Community/Orders/Pipeline) |             |
+| [`Workflow`](./classes/Hubleto/App/Community/Orders/Workflow) |             |
 
 ### \Hubleto\App\Community\Orders\Controllers
 
@@ -31,6 +32,15 @@
 | [`CreateFromDeal`](./classes/Hubleto/App/Community/Orders/Controllers/Api/CreateFromDeal)   |             |
 | [`GenerateInvoice`](./classes/Hubleto/App/Community/Orders/Controllers/Api/GenerateInvoice) |             |
 | [`GeneratePdf`](./classes/Hubleto/App/Community/Orders/Controllers/Api/GeneratePdf)         |             |
+| [`LogActivity`](./classes/Hubleto/App/Community/Orders/Controllers/Api/LogActivity)         |             |
+
+### \Hubleto\App\Community\Orders\Controllers\Boards
+
+#### Classes
+
+| Class                                                                                      | Description |
+|--------------------------------------------------------------------------------------------|-------------|
+| [`OrderWarnings`](./classes/Hubleto/App/Community/Orders/Controllers/Boards/OrderWarnings) |             |
 
 ### \Hubleto\App\Community\Orders\Models
 
@@ -40,6 +50,7 @@
 |--------------------------------------------------------------------------------|-------------|
 | [`History`](./classes/Hubleto/App/Community/Orders/Models/History)             |             |
 | [`Order`](./classes/Hubleto/App/Community/Orders/Models/Order)                 |             |
+| [`OrderActivity`](./classes/Hubleto/App/Community/Orders/Models/OrderActivity) |             |
 | [`OrderDeal`](./classes/Hubleto/App/Community/Orders/Models/OrderDeal)         |             |
 | [`OrderDocument`](./classes/Hubleto/App/Community/Orders/Models/OrderDocument) |             |
 | [`OrderInvoice`](./classes/Hubleto/App/Community/Orders/Models/OrderInvoice)   |             |
@@ -54,6 +65,7 @@
 |-----------------------------------------------------------------------------------------------|-------------|
 | [`History`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/History)             |             |
 | [`Order`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/Order)                 |             |
+| [`OrderActivity`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderActivity) |             |
 | [`OrderDeal`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderDeal)         |             |
 | [`OrderDocument`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderDocument) |             |
 | [`OrderInvoice`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderInvoice)   |             |

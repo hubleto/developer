@@ -45,6 +45,19 @@ public start(bool $persist, array $options = []): void
 | `$options` | **array** |             |
 
 
+### prolongSession
+
+```php
+public prolongSession(int $seconds = 2592000): void
+```
+
+**Parameters:**
+
+| Parameter  | Type    | Description |
+|------------|---------|-------------|
+| `$seconds` | **int** |             |
+
+
 ### stop
 
 ```php
@@ -263,7 +276,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

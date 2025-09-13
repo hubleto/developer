@@ -26,3 +26,10 @@ public CAMPAIGN(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\Ap
 public CONTACT(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Campaigns\Models\RecordManagers\LeadTag>
 ```
 
+
+### MAIL
+
+```php
+public MAIL(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Campaigns\Models\RecordManagers\LeadTag>
+```
+

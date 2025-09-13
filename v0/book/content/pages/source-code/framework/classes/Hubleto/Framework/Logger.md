@@ -3,7 +3,7 @@ Default implementation of logger in Hubleto project.
 
 # \Hubleto\Framework\Logger
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/LoggerInterface">\Hubleto\Framework\Interfaces\LoggerInterface</a></td></tr></table>
 
 
 ## Properties
@@ -39,8 +39,10 @@ public __construct(): mixed
 
 ### initInternalLogger
 
+[Description for initInternalLogger]
+
 ```php
-public initInternalLogger(string $loggerName = ""): mixed
+public initInternalLogger(string $loggerName = ""): void
 ```
 
 **Parameters:**
@@ -52,8 +54,10 @@ public initInternalLogger(string $loggerName = ""): mixed
 
 ### getInternalLogger
 
+[Description for getInternalLogger]
+
 ```php
-public getInternalLogger(mixed $loggerName): mixed
+public getInternalLogger(mixed $loggerName): object
 ```
 
 **Parameters:**
@@ -65,8 +69,10 @@ public getInternalLogger(mixed $loggerName): mixed
 
 ### cliEcho
 
+[Description for cliEcho]
+
 ```php
-public cliEcho(mixed $message, mixed $loggerName, mixed $severity): mixed
+public cliEcho(mixed $message, mixed $loggerName, mixed $severity): void
 ```
 
 **Parameters:**
@@ -78,49 +84,72 @@ public cliEcho(mixed $message, mixed $loggerName, mixed $severity): mixed
 | `$severity`   | **mixed** |             |
 
 
-### info
+### debug
+
+[Description for debug]
 
 ```php
-public info(mixed $message, array $context = [], mixed $loggerName = 'core'): mixed
+public debug(mixed $message, array $context = [], string $loggerName = 'core'): void
 ```
 
 **Parameters:**
 
-| Parameter     | Type      | Description |
-|---------------|-----------|-------------|
-| `$message`    | **mixed** |             |
-| `$context`    | **array** |             |
-| `$loggerName` | **mixed** |             |
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$message`    | **mixed**  |             |
+| `$context`    | **array**  |             |
+| `$loggerName` | **string** |             |
+
+
+### info
+
+[Description for info]
+
+```php
+public info(mixed $message, array $context = [], string $loggerName = 'core'): void
+```
+
+**Parameters:**
+
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$message`    | **mixed**  |             |
+| `$context`    | **array**  |             |
+| `$loggerName` | **string** |             |
 
 
 ### warning
 
+[Description for warning]
+
 ```php
-public warning(mixed $message, array $context = [], mixed $loggerName = 'core'): mixed
+public warning(mixed $message, array $context = [], string $loggerName = 'core'): void
 ```
 
 **Parameters:**
 
-| Parameter     | Type      | Description |
-|---------------|-----------|-------------|
-| `$message`    | **mixed** |             |
-| `$context`    | **array** |             |
-| `$loggerName` | **mixed** |             |
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$message`    | **mixed**  |             |
+| `$context`    | **array**  |             |
+| `$loggerName` | **string** |             |
 
 
 ### error
 
+[Description for error]
+
 ```php
-public error(mixed $message, array $context = [], mixed $loggerName = 'core'): mixed
+public error(mixed $message, array $context = [], string $loggerName = 'core'): void
 ```
 
 **Parameters:**
 
-| Parameter     | Type      | Description |
-|---------------|-----------|-------------|
-| `$message`    | **mixed** |             |
-| `$context`    | **array** |             |
-| `$loggerName` | **mixed** |             |
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$message`    | **mixed**  |             |
+| `$context`    | **array**  |             |
+| `$loggerName` | **string** |             |
 
 
 ## Inherited methods
@@ -258,7 +287,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 Shortcut for the config service.
 
 ```php
-public config(): \Hubleto\Framework\Config
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 

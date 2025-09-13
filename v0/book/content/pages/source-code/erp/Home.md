@@ -8,19 +8,20 @@
 
 #### Classes
 
-| Class                                                            | Description                            |
-|------------------------------------------------------------------|----------------------------------------|
-| [`AuthProvider`](./classes/Hubleto/Erp/AuthProvider)             | Default authentication provider class. |
-| [`Calendar`](./classes/Hubleto/Erp/Calendar)                     |                                        |
-| [`Controller`](./classes/Hubleto/Erp/Controller)                 |                                        |
-| [`Cron`](./classes/Hubleto/Erp/Cron)                             |                                        |
-| [`Hook`](./classes/Hubleto/Erp/Hook)                             |                                        |
-| [`Loader`](./classes/Hubleto/Erp/Loader)                         |                                        |
-| [`Model`](./classes/Hubleto/Erp/Model)                           | Core implementation of model.          |
-| [`PermissionsManager`](./classes/Hubleto/Erp/PermissionsManager) | Class managing Hubleto permissions.    |
-| [`RecordManager`](./classes/Hubleto/Erp/RecordManager)           |                                        |
-| [`Renderer`](./classes/Hubleto/Erp/Renderer)                     |                                        |
-| [`Report`](./classes/Hubleto/Erp/Report)                         |                                        |
+| Class                                                            | Description                                     |
+|------------------------------------------------------------------|-------------------------------------------------|
+| [`AuthProvider`](./classes/Hubleto/Erp/AuthProvider)             | Default authentication provider class.          |
+| [`Calendar`](./classes/Hubleto/Erp/Calendar)                     |                                                 |
+| [`Controller`](./classes/Hubleto/Erp/Controller)                 |                                                 |
+| [`Cron`](./classes/Hubleto/Erp/Cron)                             |                                                 |
+| [`Env`](./classes/Hubleto/Erp/Env)                               | Storage for environment-specific configuration. |
+| [`Hook`](./classes/Hubleto/Erp/Hook)                             |                                                 |
+| [`Loader`](./classes/Hubleto/Erp/Loader)                         |                                                 |
+| [`Model`](./classes/Hubleto/Erp/Model)                           | Core implementation of model.                   |
+| [`PermissionsManager`](./classes/Hubleto/Erp/PermissionsManager) | Class managing Hubleto permissions.             |
+| [`RecordManager`](./classes/Hubleto/Erp/RecordManager)           |                                                 |
+| [`Renderer`](./classes/Hubleto/Erp/Renderer)                     |                                                 |
+| [`Report`](./classes/Hubleto/Erp/Report)                         |                                                 |
 
 ### \Hubleto\Erp\Api
 

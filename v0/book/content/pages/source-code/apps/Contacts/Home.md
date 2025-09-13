@@ -30,6 +30,7 @@
 | Class                                                                                                 | Description |
 |-------------------------------------------------------------------------------------------------------|-------------|
 | [`CheckPrimaryContact`](./classes/Hubleto/App/Community/Contacts/Controllers/Api/CheckPrimaryContact) |             |
+| [`GetContacts`](./classes/Hubleto/App/Community/Contacts/Controllers/Api/GetContacts)                 |             |
 | [`GetCustomerContacts`](./classes/Hubleto/App/Community/Contacts/Controllers/Api/GetCustomerContacts) |             |
 
 ### \Hubleto\App\Community\Contacts\Extendibles

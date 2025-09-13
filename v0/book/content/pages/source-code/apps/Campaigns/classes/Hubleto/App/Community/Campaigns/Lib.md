@@ -6,7 +6,26 @@
 
 ## Methods
 
+### getMailPreview
+
+[Description for getMailPreview]
+
+```php
+public static getMailPreview(array $campaign, array $contact): string
+```
+
+* This method is **static**.
+**Parameters:**
+
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `$campaign` | **array** |             |
+| `$contact`  | **array** |             |
+
+
 ### addUtmVariablesToEmailLinks
+
+[Description for addUtmVariablesToEmailLinks]
 
 ```php
 public static addUtmVariablesToEmailLinks(string $body, string $utmSource, string $utmCampaign, string $utmTerm, string $utmContent): string

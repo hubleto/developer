@@ -61,9 +61,9 @@
 `protected string $lookupModel`
 
 
-### extendedProps
+### inputProps
 
-`protected array $extendedProps`
+`protected array $inputProps`
 
 
 ### examples
@@ -94,6 +94,16 @@
 ### cssClass
 
 `protected string $cssClass`
+
+
+### endpoint
+
+`protected string $endpoint`
+
+
+### creatable
+
+`protected bool $creatable`
 
 
 ### properties
@@ -350,24 +360,24 @@ public setLookupModel(string $lookupModel): \Hubleto\Framework\Description\Input
 | `$lookupModel` | **string** |             |
 
 
-### getExtendedProps
+### getInputProps
 
 ```php
-public getExtendedProps(): array
+public getInputProps(): array
 ```
 
 
-### setExtendedProps
+### setInputProps
 
 ```php
-public setExtendedProps(array $extendedProps): \Hubleto\Framework\Description\Input
+public setInputProps(array $inputProps): \Hubleto\Framework\Description\Input
 ```
 
 **Parameters:**
 
-| Parameter        | Type      | Description |
-|------------------|-----------|-------------|
-| `$extendedProps` | **array** |             |
+| Parameter     | Type      | Description |
+|---------------|-----------|-------------|
+| `$inputProps` | **array** |             |
 
 
 ### getExamples
@@ -488,6 +498,46 @@ public setCssClass(string $cssClass): \Hubleto\Framework\Description\Input
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$cssClass` | **string** |             |
+
+
+### getEndpoint
+
+```php
+public getEndpoint(): string
+```
+
+
+### setEndpoint
+
+```php
+public setEndpoint(string $endpoint): \Hubleto\Framework\Description\Input
+```
+
+**Parameters:**
+
+| Parameter   | Type       | Description |
+|-------------|------------|-------------|
+| `$endpoint` | **string** |             |
+
+
+### getCreatable
+
+```php
+public getCreatable(): bool
+```
+
+
+### setCreatable
+
+```php
+public setCreatable(bool $creatable = true): \Hubleto\Framework\Description\Input
+```
+
+**Parameters:**
+
+| Parameter    | Type     | Description |
+|--------------|----------|-------------|
+| `$creatable` | **bool** |             |
 
 
 ### jsonSerialize

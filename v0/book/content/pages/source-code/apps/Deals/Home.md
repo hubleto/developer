@@ -12,7 +12,7 @@
 |--------------------------------------------------------------|-------------|
 | [`Calendar`](./classes/Hubleto/App/Community/Deals/Calendar) |             |
 | [`Loader`](./classes/Hubleto/App/Community/Deals/Loader)     |             |
-| [`Pipeline`](./classes/Hubleto/App/Community/Deals/Pipeline) |             |
+| [`Workflow`](./classes/Hubleto/App/Community/Deals/Workflow) |             |
 
 ### \Hubleto\App\Community\Deals\Controllers
 
@@ -33,7 +33,7 @@
 
 | Class                                                                                                | Description |
 |------------------------------------------------------------------------------------------------------|-------------|
-| [`ChangePipeline`](./classes/Hubleto/App/Community/Deals/Controllers/Api/ChangePipeline)             |             |
+| [`ChangeWorkflow`](./classes/Hubleto/App/Community/Deals/Controllers/Api/ChangeWorkflow)             |             |
 | [`CreateFromLead`](./classes/Hubleto/App/Community/Deals/Controllers/Api/CreateFromLead)             |             |
 | [`DailyDigest`](./classes/Hubleto/App/Community/Deals/Controllers/Api/DailyDigest)                   |             |
 | [`GenerateInvoice`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GenerateInvoice)           |             |
