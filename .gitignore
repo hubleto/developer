@@ -2,6 +2,5 @@ v0/vendor
 v0/composer.lock
 v0/node_modules
 v0/package-lock.json
-v0/template/assets/css/book.css
 v0/env.php
 .vscode
