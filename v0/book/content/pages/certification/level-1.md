@@ -42,7 +42,7 @@ Watch this webinar to get insights to Hubleto in a more engaging way. This step 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9agAiqGtqmI?si=7R88l7M2eTpfIhcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Download the webinar presentatiions here: [Introduction to Hubleto.pdf](../downloads/webinar-introduction-to-hubleto/Introduction%20to%20Hubleto.pdf), [How to setup dev env.pdf](../downloads/webinar-introduction-to-hubleto/How%20to%20setup%20dev%20env.pdf), [Overview of Hubleto apps.pdf](../downloads/webinar-introduction-to-hubleto/Overview%20of%20Hubleto%20apps.pdf).
+Download the webinar presentations here: [Introduction to Hubleto.pdf](../downloads/webinar-introduction-to-hubleto/Introduction%20to%20Hubleto.pdf), [How to setup dev env.pdf](../downloads/webinar-introduction-to-hubleto/How%20to%20setup%20dev%20env.pdf), [Overview of Hubleto apps.pdf](../downloads/webinar-introduction-to-hubleto/Overview%20of%20Hubleto%20apps.pdf).
 
 ## Prerequisities
 
