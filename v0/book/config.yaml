@@ -240,3 +240,10 @@ tableOfContents:
           - page: tutorial/more-reading
       - page: tutorials/set-up-environment-for-development
         icon: fas fa-gears
+  - page: certification
+    icon: fas fa-id-badge
+    children:
+      - page: certification/level-1
+      - page: certification/level-2
+      - page: certification/level-3
+      
