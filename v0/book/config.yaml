@@ -240,6 +240,7 @@ tableOfContents:
           - page: tutorial/more-reading
       - page: tutorials/set-up-environment-for-development
         icon: fas fa-gears
+      - page: tutorials/code-samples
   - page: certification
     icon: fas fa-id-badge
     children:
