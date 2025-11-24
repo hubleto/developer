@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities, theme, components, app;
 :root, :host {
@@ -394,6 +394,9 @@
   }
   .table {
     display: table;
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
   }
   .h-full {
     height: 100%;
@@ -1047,7 +1050,7 @@
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
@@ -1105,21 +1108,18 @@
   }
   .before\:content-\[\'\*\'\] {
     &::before {
-      content: var(--tw-content);
       --tw-content: '*';
       content: var(--tw-content);
     }
   }
   .before\:content-\[\'☝\'\] {
     &::before {
-      content: var(--tw-content);
       --tw-content: '☝';
       content: var(--tw-content);
     }
   }
   .before\:content-\[\'❖\'\] {
     &::before {
-      content: var(--tw-content);
       --tw-content: '❖';
       content: var(--tw-content);
     }
@@ -1132,7 +1132,6 @@
   }
   .after\:content-\[\'⋮\'\] {
     &::after {
-      content: var(--tw-content);
       --tw-content: '⋮';
       content: var(--tw-content);
     }
@@ -1644,7 +1643,6 @@
       color: var(--color-white);
     }
     &::before {
-      content: var(--tw-content);
       --tw-content: '☝';
       content: var(--tw-content);
     }
@@ -1832,7 +1830,6 @@
       padding-right: calc(var(--spacing) * 2);
     }
     &::after {
-      content: var(--tw-content);
       --tw-content: '⋮';
       content: var(--tw-content);
     }
@@ -1843,7 +1840,6 @@
       padding-right: calc(var(--spacing) * 2);
     }
     &::after {
-      content: var(--tw-content);
       --tw-content: '⋮';
       content: var(--tw-content);
     }
@@ -1866,7 +1862,6 @@
       color: var(--color-primary);
     }
     &::before {
-      content: var(--tw-content);
       --tw-content: '❖';
       content: var(--tw-content);
     }
@@ -2815,7 +2810,6 @@
       color: var(--color-red-600);
     }
     &::before {
-      content: var(--tw-content);
       --tw-content: '*';
       content: var(--tw-content);
     }
