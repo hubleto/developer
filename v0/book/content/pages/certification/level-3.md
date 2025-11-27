@@ -1,6 +1,6 @@
 # Level 3
 
-Be a top-class expert in Hubleto development.
+Become a top-class expert in Hubleto development.
 
 ## Welcome
 

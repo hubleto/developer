@@ -35,7 +35,7 @@ The graduate student will learn how to:
   * integrate with other apps like *Calendars* or *Tasks*
   * various tips&tricks to boost effectivity
 
-<a class="btn" href="certification/level-1">
+<a class="btn" href="certification/level-2">
   <span class="icon"><i class="fas fa-arrow-right"></i></span>
   <span class="text">Start level 2 certification</span>
 </a>
@@ -54,7 +54,7 @@ The graduate student will learn how to:
   * integrate with other apps like *Workflow*, *Documents* or *Mails*
   * implement REST API endpoints
 
-<a class="btn" href="certification/level-1">
+<a class="btn" href="certification/level-3">
   <span class="icon"><i class="fas fa-arrow-right"></i></span>
-  <span class="text">Start level 3 certification</span>
+  <span class="text">Start Level 3 certification</span>
 </a>
