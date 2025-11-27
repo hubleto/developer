@@ -245,6 +245,12 @@ tableOfContents:
     icon: fas fa-id-badge
     children:
       - page: certification/level-1
+        children:
+          - page: certification/level-1/about-hubleto
+          - page: certification/level-1/starting-the-development
+          - page: certification/level-1/hubleto-core
+          - page: certification/level-1/hubleto-apps
+          - page: certification/level-1/recapitulation
       - page: certification/level-2
       - page: certification/level-3
       

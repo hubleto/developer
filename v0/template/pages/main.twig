@@ -13,17 +13,17 @@
   <div class="content">
     {{ content|raw }}
   </div>
-  {% if pageConfig.tocData.prev or pageConfig.tocData.next %}
+  {% if pageConfig.tocData.prevPageData or pageConfig.tocData.nextPageData %}
     <div class="content flex justify-between">
       <div class="flex-1 text-left">
-        {% if pageConfig.tocData.prev %}
-          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.prev }}">&laquo; Previous page</a><br/>
+        {% if pageConfig.tocData.prevPageData %}
+          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.prevPageData.page }}">&laquo; Previous page</a><br/>
           <small>{{ pageConfig.tocData.prevPageData.title }}</small>
         {% endif %}
       </div>
       <div class="flex-1 text-right">
-        {% if pageConfig.tocData.next %}
-          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.next }}">Next page &raquo;</a><br/>
+        {% if pageConfig.tocData.nextPageData %}
+          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.nextPageData.page }}">Next page &raquo;</a><br/>
           <small>{{ pageConfig.tocData.nextPageData.title }}</small>
         {% endif %}
       </div>
