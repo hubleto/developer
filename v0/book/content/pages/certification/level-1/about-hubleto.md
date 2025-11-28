@@ -21,3 +21,9 @@ However, it can be anybody looking for a solution to digitalize and streamline i
   * Clean and easy to understand software architecture
   * Modern and intuitive user interface
   * Strictly separated backend and frontend development.
+
+## Conclusion
+
+So far, you have learn basics about Hubleto.
+
+It's time to proceed to the next lesson.

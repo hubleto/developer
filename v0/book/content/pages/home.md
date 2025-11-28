@@ -30,7 +30,7 @@ Hubleto developer guide
     <div class="card-header bg-yellow-50">Introduction</div>
     <div class="card-body flex flex-col gap-2">
       <a href="about" class="btn btn-white block"><span class="text">About</span></a>
-      <a href="install" class="btn btn-white block"><span class="text">Install</span></a>
+      <a href="installation" class="btn btn-white block"><span class="text">Install</span></a>
       <a href="benefits" class="btn btn-white block"><span class="text">Benefits</span></a>
       <a href="advanced-development/core-architecture" class="btn btn-white block"><span class="text">Core architecture</span></a>
     </div>

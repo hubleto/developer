@@ -33,6 +33,7 @@ tableOfContents:
     prev: features
     next: create-first-app
     children:
+      - page: installation
       - page: nginx
   - page: cli-agent
     icon: fas fa-terminal
