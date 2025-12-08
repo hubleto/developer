@@ -19,60 +19,83 @@ Encapsulation for Hubleto app.
 
 ### manifest
 
+Basic identification of the app. More details at https://developer.hubleto.com/docs/apps/manifest
+
 `public array $manifest`
 
 
 ### enabled
 
+If set to `false`, app is not accessible.
+
 `public bool $enabled`
+
+Apps get enabled in `AppManager`.
 
 
 ### canBeDisabled
 
+If set to `false`, app cannot be disabled.
+
 `public bool $canBeDisabled`
+
+Some core apps (e.g., `Desktop`) have this set to `false`.
 
 
 ### permittedForAllUsers
+
+If set to `true`, permission checking is not performed for this app.`
 
 `public bool $permittedForAllUsers`
 
 
 ### srcFolder
 
+Path to source code of this app. Usefull when accessing app's resources.
+
 `public string $srcFolder`
 
 
 ### viewNamespace
+
+TWIG namespace of this app.
 
 `public string $viewNamespace`
 
 
 ### namespace
 
+PHP namespace of this app.
+
 `public string $namespace`
 
 
 ### fullName
+
+Full classname of this app.
 
 `public string $fullName`
 
 
 ### shortName
 
+Short name of this app, extracted from the namespace.
+
 `public string $shortName`
 
 
 ### isActivated
 
+If set to `true`, app is activated in the UI. Only enabled app can be activated.
+
 `public bool $isActivated`
 
-
-### hasCustomSettings
-
-`public bool $hasCustomSettings`
+Only one app can be activated at a time.
 
 
 ### sidebarView
+
+Path to TWIG view for rendering the apps's sidebar.
 
 `public string $sidebarView`
 
@@ -84,12 +107,16 @@ Encapsulation for Hubleto app.
 
 ### searchSwitches
 
+List of app's search switches used in global Hubleto fulltext search.
+
 `public array $searchSwitches`
 
 
 ## Methods
 
 ### __construct
+
+Default app's constructor.
 
 ```php
 public __construct(): mixed
