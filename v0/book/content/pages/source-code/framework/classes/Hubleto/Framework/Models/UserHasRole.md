@@ -8,26 +8,38 @@ Default implementation of model for Hubleto project.
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### isJunctionTable
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ isJunctionTable
+```php
+public bool $isJunctionTable
+```
 
 If set to TRUE, the SQL table will not contain the ID autoincrement column
 
-`public bool $isJunctionTable`
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -38,14 +50,14 @@ public describeColumns(): array
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -54,14 +66,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -69,14 +81,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -85,7 +97,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -94,7 +106,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -103,7 +115,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -112,7 +124,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -121,7 +133,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -130,7 +142,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -139,7 +151,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -148,7 +160,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -157,7 +169,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -166,7 +178,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -175,7 +187,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -184,7 +196,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -193,7 +205,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -202,7 +214,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -211,7 +223,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -220,7 +232,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -228,14 +240,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -243,20 +255,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|
@@ -265,7 +277,7 @@ public translate(string $string, array<string,string> $vars = [], string $contex
 | `$contextInner` | **string**               |             |
 
 
-### initRecordManager
+### ƒ initRecordManager
 
 [Description for initRecordManager]
 
@@ -274,7 +286,7 @@ public initRecordManager(): null|object
 ```
 
 
-### isDatabaseConnected
+### ƒ isDatabaseConnected
 
 [Description for isDatabaseConnected]
 
@@ -283,7 +295,7 @@ public isDatabaseConnected(): bool
 ```
 
 
-### getConfigFullPath
+### ƒ getConfigFullPath
 
 [Description for getConfigFullPath]
 
@@ -291,14 +303,14 @@ public isDatabaseConnected(): bool
 public getConfigFullPath(string $configName): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
 
-### configAsString
+### ƒ configAsString
 
 Retrieves value of configuration parameter.
 
@@ -306,14 +318,14 @@ Retrieves value of configuration parameter.
 public configAsString(string $configName): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
 
-### configAsInteger
+### ƒ configAsInteger
 
 Retrieves value of configuration parameter.
 
@@ -321,14 +333,14 @@ Retrieves value of configuration parameter.
 public configAsInteger(string $configName): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
 
-### configAsArray
+### ƒ configAsArray
 
 Retrieves value of configuration parameter.
 
@@ -336,14 +348,14 @@ Retrieves value of configuration parameter.
 public configAsArray(string $configName): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$configName` | **string** |             |
 
 
-### getSqlCreateTableCommands
+### ƒ getSqlCreateTableCommands
 
 [Description for getSqlCreateTableCommands]
 
@@ -352,7 +364,7 @@ public getSqlCreateTableCommands(): array
 ```
 
 
-### createSqlTable
+### ƒ createSqlTable
 
 [Description for createSqlTable]
 
@@ -361,7 +373,7 @@ public createSqlTable(): mixed
 ```
 
 
-### install
+### ƒ install
 
 Installs the first version of the model into SQL database. Automatically creates indexes.
 
@@ -370,7 +382,7 @@ public install(): void
 ```
 
 
-### dropTableIfExists
+### ƒ dropTableIfExists
 
 [Description for dropTableIfExists]
 
@@ -379,7 +391,7 @@ public dropTableIfExists(): \Hubleto\Framework\Model
 ```
 
 
-### createSqlForeignKeys
+### ƒ createSqlForeignKeys
 
 Create foreign keys for the SQL table. Called when all models are installed.
 
@@ -388,7 +400,7 @@ public createSqlForeignKeys(): void
 ```
 
 
-### getFullTableSqlName
+### ƒ getFullTableSqlName
 
 Returns full name of the model's SQL table
 
@@ -396,12 +408,12 @@ Returns full name of the model's SQL table
 public getFullTableSqlName(): string
 ```
 
-**Return Value:**
+#### Return Value
 
 Full name of the model's SQL table
 
 
-### upgrades
+### ƒ upgrades
 
 Returns list of available upgrades. This method must be overriden by each model.
 
@@ -409,12 +421,12 @@ Returns list of available upgrades. This method must be overriden by each model.
 public upgrades(): array
 ```
 
-**Return Value:**
+#### Return Value
 
 List of available upgrades. Keys of the array are simple numbers starting from 1.
 
 
-### hasColumn
+### ƒ hasColumn
 
 [Description for hasColumn]
 
@@ -422,14 +434,14 @@ List of available upgrades. Keys of the array are simple numbers starting from 1
 public hasColumn(string $column): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$column` | **string** |             |
 
 
-### getColumns
+### ƒ getColumns
 
 [Description for getColumns]
 
@@ -438,7 +450,7 @@ public getColumns(): array<string,\Hubleto\Framework\Column>
 ```
 
 
-### getColumn
+### ƒ getColumn
 
 [Description for getColumn]
 
@@ -446,14 +458,14 @@ public getColumns(): array<string,\Hubleto\Framework\Column>
 public getColumn(string $column): \Hubleto\Framework\Interfaces\ColumnInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$column` | **string** |             |
 
 
-### columnNames
+### ƒ columnNames
 
 [Description for columnNames]
 
@@ -462,7 +474,7 @@ public columnNames(): array
 ```
 
 
-### indexes
+### ƒ indexes
 
 [Description for indexes]
 
@@ -470,14 +482,14 @@ public columnNames(): array
 public indexes(array $indexes = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
 | `$indexes` | **array** |             |
 
 
-### indexNames
+### ƒ indexNames
 
 [Description for indexNames]
 
@@ -486,7 +498,7 @@ public indexNames(): array
 ```
 
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -495,7 +507,7 @@ public describeColumns(): array
 ```
 
 
-### describeInput
+### ƒ describeInput
 
 [Description for describeInput]
 
@@ -503,14 +515,14 @@ public describeColumns(): array
 public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$columnName` | **string** |             |
 
 
-### describeForm
+### ƒ describeForm
 
 [Description for describeForm]
 
@@ -519,7 +531,7 @@ public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 [Description for describeTable]
 
@@ -528,7 +540,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### convertRecordsToTree
+### ƒ convertRecordsToTree
 
 [Description for convertRecordsToTree]
 
@@ -536,7 +548,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 public convertRecordsToTree(array $records, int $idParent, int $level): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type      | Description |
 |-------------|-----------|-------------|
@@ -545,7 +557,7 @@ public convertRecordsToTree(array $records, int $idParent, int $level): array
 | `$level`    | **int**   |             |
 
 
-### loadTableData
+### ƒ loadTableData
 
 [Description for loadTableData]
 
@@ -553,7 +565,7 @@ public convertRecordsToTree(array $records, int $idParent, int $level): array
 public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
@@ -565,7 +577,7 @@ public loadTableData(string $fulltextSearch = '', array $columnSearch = [], arra
 | `$dataView`       | **string** |             |
 
 
-### diffRecords
+### ƒ diffRecords
 
 [Description for diffRecords]
 
@@ -573,7 +585,7 @@ public loadTableData(string $fulltextSearch = '', array $columnSearch = [], arra
 public diffRecords(array $record1, array $record2): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -581,7 +593,7 @@ public diffRecords(array $record1, array $record2): array
 | `$record2` | **array** |             |
 
 
-### getById
+### ƒ getById
 
 [Description for getById]
 
@@ -589,14 +601,14 @@ public diffRecords(array $record1, array $record2): array
 public getById(int $id): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
 
-### getLookupSqlValue
+### ƒ getLookupSqlValue
 
 [Description for getLookupSqlValue]
 
@@ -604,27 +616,27 @@ public getById(int $id): mixed
 public getLookupSqlValue(string $tableAlias = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$tableAlias` | **string** |             |
 
 
-### getLookupValue
+### ƒ getLookupValue
 
 ```php
 public getLookupValue(array $dataRaw): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
 | `$dataRaw` | **array** |             |
 
 
-### encryptPassword
+### ƒ encryptPassword
 
 Used to encrypt passowrd to store it securely.
 
@@ -632,14 +644,14 @@ Used to encrypt passowrd to store it securely.
 public encryptPassword(string $original): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$original` | **string** |             |
 
 
-### onBeforeCreate
+### ƒ onBeforeCreate
 
 [Description for onBeforeCreate]
 
@@ -647,14 +659,14 @@ public encryptPassword(string $original): string
 public onBeforeCreate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onBeforeUpdate
+### ƒ onBeforeUpdate
 
 [Description for onBeforeUpdate]
 
@@ -662,14 +674,14 @@ public onBeforeCreate(array $record): array
 public onBeforeUpdate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onAfterCreate
+### ƒ onAfterCreate
 
 [Description for onAfterCreate]
 
@@ -677,14 +689,14 @@ public onBeforeUpdate(array $record): array
 public onAfterCreate(array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$savedRecord` | **array** |             |
 
 
-### onAfterUpdate
+### ƒ onAfterUpdate
 
 [Description for onAfterUpdate]
 
@@ -692,7 +704,7 @@ public onAfterCreate(array $savedRecord): array
 public onAfterUpdate(array $originalRecord, array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -700,7 +712,7 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 | `$savedRecord`    | **array** |             |
 
 
-### onBeforeDelete
+### ƒ onBeforeDelete
 
 [Description for onBeforeDelete]
 
@@ -708,14 +720,14 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 public onBeforeDelete(int $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
 
-### onAfterDelete
+### ƒ onAfterDelete
 
 [Description for onAfterDelete]
 
@@ -723,14 +735,14 @@ public onBeforeDelete(int $id): int
 public onAfterDelete(int $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
 
-### onAfterLoadRecord
+### ƒ onAfterLoadRecord
 
 [Description for onAfterLoadRecord]
 
@@ -738,14 +750,14 @@ public onAfterDelete(int $id): int
 public onAfterLoadRecord(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onAfterLoadRecords
+### ƒ onAfterLoadRecords
 
 [Description for onAfterLoadRecords]
 
@@ -753,7 +765,7 @@ public onAfterLoadRecord(array $record): array
 public onAfterLoadRecords(array $records): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|

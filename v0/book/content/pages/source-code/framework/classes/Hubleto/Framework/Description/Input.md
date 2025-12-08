@@ -6,143 +6,235 @@
 
 ## Properties
 
-### type
 
-`protected string $type`
+<div class="mt-2">&nbsp;</div>
+### ☍ type
+```php
+protected string $type
+```
 
 
-### title
 
-`protected string $title`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ title
+```php
+protected string $title
+```
 
-### readonly
 
-`protected bool $readonly`
 
 
-### required
+<div class="mt-2">&nbsp;</div>
+### ☍ readonly
+```php
+protected bool $readonly
+```
 
-`protected bool $required`
 
 
-### placeholder
 
-`protected string $placeholder`
+<div class="mt-2">&nbsp;</div>
+### ☍ required
+```php
+protected bool $required
+```
 
 
-### decimals
 
-`protected int $decimals`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ placeholder
+```php
+protected string $placeholder
+```
 
-### step
 
-`protected float $step`
 
 
-### icon
+<div class="mt-2">&nbsp;</div>
+### ☍ decimals
+```php
+protected int $decimals
+```
 
-`protected string $icon`
 
 
-### unit
 
-`protected string $unit`
+<div class="mt-2">&nbsp;</div>
+### ☍ step
+```php
+protected float $step
+```
 
 
-### format
 
-`protected string $format`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ icon
+```php
+protected string $icon
+```
 
-### description
 
-`protected string $description`
 
 
-### reactComponent
+<div class="mt-2">&nbsp;</div>
+### ☍ unit
+```php
+protected string $unit
+```
 
-`protected string $reactComponent`
 
 
-### lookupModel
 
-`protected string $lookupModel`
+<div class="mt-2">&nbsp;</div>
+### ☍ format
+```php
+protected string $format
+```
 
 
-### inputProps
 
-`protected array $inputProps`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ description
+```php
+protected string $description
+```
 
-### examples
 
-`protected array $examples`
 
 
-### enumValues
+<div class="mt-2">&nbsp;</div>
+### ☍ reactComponent
+```php
+protected string $reactComponent
+```
 
-`protected array $enumValues`
 
 
-### enumCssClasses
 
-`protected array $enumCssClasses`
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupModel
+```php
+protected string $lookupModel
+```
 
 
-### predefinedValues
 
-`protected array $predefinedValues`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ inputProps
+```php
+protected array $inputProps
+```
 
-### defaultValue
 
-`protected mixed $defaultValue`
 
 
-### cssClass
+<div class="mt-2">&nbsp;</div>
+### ☍ examples
+```php
+protected array $examples
+```
 
-`protected string $cssClass`
 
 
-### endpoint
 
-`protected string $endpoint`
+<div class="mt-2">&nbsp;</div>
+### ☍ enumValues
+```php
+protected array $enumValues
+```
 
 
-### creatable
 
-`protected bool $creatable`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ enumCssClasses
+```php
+protected array $enumCssClasses
+```
 
-### properties
 
-`protected array $properties`
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ predefinedValues
+```php
+protected array $predefinedValues
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ defaultValue
+```php
+protected mixed $defaultValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ cssClass
+```php
+protected string $cssClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ endpoint
+```php
+protected string $endpoint
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ creatable
+```php
+protected bool $creatable
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ properties
+```php
+protected array $properties
+```
+
 
 
 ## Methods
 
-### getProperty
+### ƒ getProperty
 
 ```php
 public getProperty(string $pName): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$pName`  | **string** |             |
 
 
-### setProperty
+### ƒ setProperty
 
 ```php
 public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -150,454 +242,454 @@ public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Description
 | `$pValue` | **mixed**  |             |
 
 
-### getType
+### ƒ getType
 
 ```php
 public getType(): string
 ```
 
 
-### setType
+### ƒ setType
 
 ```php
 public setType(string $type): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$type`   | **string** |             |
 
 
-### getTitle
+### ƒ getTitle
 
 ```php
 public getTitle(): string
 ```
 
 
-### setTitle
+### ƒ setTitle
 
 ```php
 public setTitle(string $title): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$title`  | **string** |             |
 
 
-### getReactComponent
+### ƒ getReactComponent
 
 ```php
 public getReactComponent(): string
 ```
 
 
-### setReactComponent
+### ƒ setReactComponent
 
 ```php
 public setReactComponent(string $reactComponent): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
 | `$reactComponent` | **string** |             |
 
 
-### getReadonly
+### ƒ getReadonly
 
 ```php
 public getReadonly(): bool
 ```
 
 
-### setReadonly
+### ƒ setReadonly
 
 ```php
 public setReadonly(bool $readonly = true): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type     | Description |
 |-------------|----------|-------------|
 | `$readonly` | **bool** |             |
 
 
-### getRequired
+### ƒ getRequired
 
 ```php
 public getRequired(): bool
 ```
 
 
-### setRequired
+### ƒ setRequired
 
 ```php
 public setRequired(bool $required = true): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type     | Description |
 |-------------|----------|-------------|
 | `$required` | **bool** |             |
 
 
-### getPlaceholder
+### ƒ getPlaceholder
 
 ```php
 public getPlaceholder(): bool
 ```
 
 
-### setPlaceholder
+### ƒ setPlaceholder
 
 ```php
 public setPlaceholder(bool $placeholder = true): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type     | Description |
 |----------------|----------|-------------|
 | `$placeholder` | **bool** |             |
 
 
-### getDecimals
+### ƒ getDecimals
 
 ```php
 public getDecimals(): int
 ```
 
 
-### setDecimals
+### ƒ setDecimals
 
 ```php
 public setDecimals(int $decimals): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type    | Description |
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
 
 
-### getStep
+### ƒ getStep
 
 ```php
 public getStep(): float
 ```
 
 
-### setStep
+### ƒ setStep
 
 ```php
 public setStep(float $step): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$step`   | **float** |             |
 
 
-### getIcon
+### ƒ getIcon
 
 ```php
 public getIcon(): string
 ```
 
 
-### setIcon
+### ƒ setIcon
 
 ```php
 public setIcon(string $icon): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$icon`   | **string** |             |
 
 
-### getUnit
+### ƒ getUnit
 
 ```php
 public getUnit(): string
 ```
 
 
-### setUnit
+### ƒ setUnit
 
 ```php
 public setUnit(string $unit): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$unit`   | **string** |             |
 
 
-### getFormat
+### ƒ getFormat
 
 ```php
 public getFormat(): bool
 ```
 
 
-### setFormat
+### ƒ setFormat
 
 ```php
 public setFormat(bool $format = true): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type     | Description |
 |-----------|----------|-------------|
 | `$format` | **bool** |             |
 
 
-### getDescription
+### ƒ getDescription
 
 ```php
 public getDescription(): string
 ```
 
 
-### setDescription
+### ƒ setDescription
 
 ```php
 public setDescription(string $description): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|
 | `$description` | **string** |             |
 
 
-### getLookupModel
+### ƒ getLookupModel
 
 ```php
 public getLookupModel(): string
 ```
 
 
-### setLookupModel
+### ƒ setLookupModel
 
 ```php
 public setLookupModel(string $lookupModel): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|
 | `$lookupModel` | **string** |             |
 
 
-### getInputProps
+### ƒ getInputProps
 
 ```php
 public getInputProps(): array
 ```
 
 
-### setInputProps
+### ƒ setInputProps
 
 ```php
 public setInputProps(array $inputProps): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$inputProps` | **array** |             |
 
 
-### getExamples
+### ƒ getExamples
 
 ```php
 public getExamples(): array
 ```
 
 
-### setExamples
+### ƒ setExamples
 
 ```php
 public setExamples(array $examples): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type      | Description |
 |-------------|-----------|-------------|
 | `$examples` | **array** |             |
 
 
-### getEnumValues
+### ƒ getEnumValues
 
 ```php
 public getEnumValues(): array
 ```
 
 
-### setEnumValues
+### ƒ setEnumValues
 
 ```php
 public setEnumValues(array $enumValues): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$enumValues` | **array** |             |
 
 
-### getEnumCssClasses
+### ƒ getEnumCssClasses
 
 ```php
 public getEnumCssClasses(): array
 ```
 
 
-### setEnumCssClasses
+### ƒ setEnumCssClasses
 
 ```php
 public setEnumCssClasses(array $enumCssClasses): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
 | `$enumCssClasses` | **array** |             |
 
 
-### getPredefinedValues
+### ƒ getPredefinedValues
 
 ```php
 public getPredefinedValues(): array
 ```
 
 
-### setPredefinedValues
+### ƒ setPredefinedValues
 
 ```php
 public setPredefinedValues(array $predefinedValues): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter           | Type      | Description |
 |---------------------|-----------|-------------|
 | `$predefinedValues` | **array** |             |
 
 
-### getDefaultValue
+### ƒ getDefaultValue
 
 ```php
 public getDefaultValue(): mixed
 ```
 
 
-### setDefaultValue
+### ƒ setDefaultValue
 
 ```php
 public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
 | `$defaultValue` | **mixed** |             |
 
 
-### getCssClass
+### ƒ getCssClass
 
 ```php
 public getCssClass(): string
 ```
 
 
-### setCssClass
+### ƒ setCssClass
 
 ```php
 public setCssClass(string $cssClass): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$cssClass` | **string** |             |
 
 
-### getEndpoint
+### ƒ getEndpoint
 
 ```php
 public getEndpoint(): string
 ```
 
 
-### setEndpoint
+### ƒ setEndpoint
 
 ```php
 public setEndpoint(string $endpoint): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$endpoint` | **string** |             |
 
 
-### getCreatable
+### ƒ getCreatable
 
 ```php
 public getCreatable(): bool
 ```
 
 
-### setCreatable
+### ƒ setCreatable
 
 ```php
 public setCreatable(bool $creatable = true): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type     | Description |
 |--------------|----------|-------------|
 | `$creatable` | **bool** |             |
 
 
-### jsonSerialize
+### ƒ jsonSerialize
 
 ```php
 public jsonSerialize(): array
 ```
 
 
-### toArray
+### ƒ toArray
 
 ```php
 public toArray(): array

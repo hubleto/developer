@@ -8,14 +8,14 @@ Thrown during the installation process of a model.
 
 ## Inherited methods
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
 ```
 
 
-### getResponseArray
+### ƒ getResponseArray
 
 ```php
 public getResponseArray(): array

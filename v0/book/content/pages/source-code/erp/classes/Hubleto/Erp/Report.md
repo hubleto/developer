@@ -12,78 +12,106 @@
 
 ## Properties
 
-### hubletoApp
 
-`public \Hubleto\Framework\Interfaces\AppInterface $hubletoApp`
-
-
-### modelClass
-
-`public string $modelClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ hubletoApp
+```php
+public \Hubleto\Framework\Interfaces\AppInterface $hubletoApp
+```
 
 
-### returnWith
-
-`public array $returnWith`
 
 
-### groupsBy
-
-`public array $groupsBy`
-
-
-### fields
-
-`public array $fields`
+<div class="mt-2">&nbsp;</div>
+### ☍ modelClass
+```php
+public string $modelClass
+```
 
 
-### urlSlug
-
-`protected string $urlSlug`
 
 
-### name
+<div class="mt-2">&nbsp;</div>
+### ☍ returnWith
+```php
+public array $returnWith
+```
 
-`protected string $name`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ groupsBy
+```php
+public array $groupsBy
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ fields
+```php
+public array $fields
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ urlSlug
+```php
+protected string $urlSlug
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ name
+```php
+protected string $name
+```
+
 
 
 ## Methods
 
-### getUrlSlug
+### ƒ getUrlSlug
 
 ```php
 public getUrlSlug(): string
 ```
 
 
-### getReportConfig
+### ƒ getReportConfig
 
 ```php
 public getReportConfig(): array
 ```
 
 
-### loadData
+### ƒ loadData
 
 ```php
 public loadData(): array
 ```
 
 
-### loadDataDefault
+### ƒ loadDataDefault
 
 ```php
 public loadDataDefault(\Hubleto\Framework\Interfaces\ModelInterface $model): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                                             | Description |
 |-----------|--------------------------------------------------|-------------|
 | `$model`  | **\Hubleto\Framework\Interfaces\ModelInterface** |             |
 
 
-### generateRandomColor
+### ƒ generateRandomColor
 
 ```php
 public generateRandomColor(): string

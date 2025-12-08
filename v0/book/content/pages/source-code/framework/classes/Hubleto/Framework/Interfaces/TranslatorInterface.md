@@ -3,13 +3,13 @@
 
 ## Methods
 
-### getDictionaryFilename
+### ƒ getDictionaryFilename
 
 ```php
 public getDictionaryFilename(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                            | Description |
 |-------------|-------------------------------------------------|-------------|
@@ -18,13 +18,13 @@ public getDictionaryFilename(\Hubleto\Framework\Interfaces\CoreInterface $core, 
 | `$context`  | **string**                                      |             |
 
 
-### addToDictionary
+### ƒ addToDictionary
 
 ```php
 public addToDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context, string $contextInner, string $string): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                                            | Description |
 |-----------------|-------------------------------------------------|-------------|
@@ -35,13 +35,13 @@ public addToDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string
 | `$string`       | **string**                                      |             |
 
 
-### loadDictionary
+### ƒ loadDictionary
 
 ```php
 public loadDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                            | Description |
 |-------------|-------------------------------------------------|-------------|
@@ -50,13 +50,13 @@ public loadDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string 
 | `$context`  | **string**                                      |             |
 
 
-### loadFullDictionary
+### ƒ loadFullDictionary
 
 ```php
 public loadFullDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                            | Description |
 |-------------|-------------------------------------------------|-------------|
@@ -64,13 +64,13 @@ public loadFullDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, str
 | `$language` | **string**                                      |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(\Hubleto\Framework\Interfaces\CoreInterface $service, string $string, array $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                                            | Description |
 |-----------------|-------------------------------------------------|-------------|

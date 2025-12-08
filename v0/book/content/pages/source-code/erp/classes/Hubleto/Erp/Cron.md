@@ -6,14 +6,18 @@
 
 ## Properties
 
-### schedulingPattern
 
-`public string $schedulingPattern`
+<div class="mt-2">&nbsp;</div>
+### ☍ schedulingPattern
+```php
+public string $schedulingPattern
+```
+
 
 
 ## Methods
 
-### run
+### ƒ run
 
 ```php
 public run(): void

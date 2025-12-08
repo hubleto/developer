@@ -3,88 +3,88 @@
 
 ## Methods
 
-### getTimezones
+### ƒ getTimezones
 
 ```php
 public getTimezones(): array
 ```
 
 
-### getTimezone
+### ƒ getTimezone
 
 ```php
 public getTimezone(): string
 ```
 
 
-### getDateShortFormat
+### ƒ getDateShortFormat
 
 ```php
 public getDateShortFormat(): string
 ```
 
 
-### getDateLongFormat
+### ƒ getDateLongFormat
 
 ```php
 public getDateLongFormat(): string
 ```
 
 
-### getDatetimeFormat
+### ƒ getDatetimeFormat
 
 ```php
 public getDatetimeFormat(): string
 ```
 
 
-### getTimeFormat
+### ƒ getTimeFormat
 
 ```php
 public getTimeFormat(bool $addSeconds = true): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type     | Description |
 |---------------|----------|-------------|
 | `$addSeconds` | **bool** |             |
 
 
-### getCurrencySymbol
+### ƒ getCurrencySymbol
 
 ```php
 public getCurrencySymbol(): string
 ```
 
 
-### getCurrencyIsoCode
+### ƒ getCurrencyIsoCode
 
 ```php
 public getCurrencyIsoCode(): string
 ```
 
 
-### getAll
+### ƒ getAll
 
 ```php
 public getAll(string $keyBy = ""): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$keyBy`  | **string** |             |
 
 
-### formatCurrency
+### ƒ formatCurrency
 
 ```php
 public formatCurrency(string|float $value, string $symbol = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type              | Description |
 |-----------|-------------------|-------------|
@@ -92,52 +92,52 @@ public formatCurrency(string|float $value, string $symbol = ''): string
 | `$symbol` | **string**        |             |
 
 
-### formatDateShort
+### ƒ formatDateShort
 
 ```php
 public formatDateShort(string|int $dateOrTimestamp): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type            | Description |
 |--------------------|-----------------|-------------|
 | `$dateOrTimestamp` | **string\|int** |             |
 
 
-### formatDateLong
+### ƒ formatDateLong
 
 ```php
 public formatDateLong(string|int $dateOrTimestamp): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type            | Description |
 |--------------------|-----------------|-------------|
 | `$dateOrTimestamp` | **string\|int** |             |
 
 
-### formatDatetime
+### ƒ formatDatetime
 
 ```php
 public formatDatetime(string|int $datetimeOrTimestamp): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter              | Type            | Description |
 |------------------------|-----------------|-------------|
 | `$datetimeOrTimestamp` | **string\|int** |             |
 
 
-### formatTime
+### ƒ formatTime
 
 ```php
 public formatTime(string|int $timeOrTimestamp, bool $addSeconds = true): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type            | Description |
 |--------------------|-----------------|-------------|

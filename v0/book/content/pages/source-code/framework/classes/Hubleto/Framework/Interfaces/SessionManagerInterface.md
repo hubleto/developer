@@ -3,20 +3,20 @@
 
 ## Methods
 
-### getSalt
+### ƒ getSalt
 
 ```php
 public getSalt(): string
 ```
 
 
-### start
+### ƒ start
 
 ```php
 public start(bool $persist, array $options = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -24,33 +24,33 @@ public start(bool $persist, array $options = []): void
 | `$options` | **array** |             |
 
 
-### prolongSession
+### ƒ prolongSession
 
 ```php
 public prolongSession(int $seconds = 2592000): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type    | Description |
 |------------|---------|-------------|
 | `$seconds` | **int** |             |
 
 
-### stop
+### ƒ stop
 
 ```php
 public stop(): void
 ```
 
 
-### set
+### ƒ set
 
 ```php
 public set(string $path, mixed $value, string $key = ''): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -59,13 +59,13 @@ public set(string $path, mixed $value, string $key = ''): mixed
 | `$key`    | **string** |             |
 
 
-### get
+### ƒ get
 
 ```php
 public get(string $path = '', string $key = ''): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -73,13 +73,13 @@ public get(string $path = '', string $key = ''): mixed
 | `$key`    | **string** |             |
 
 
-### push
+### ƒ push
 
 ```php
 public push(string $path, mixed $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -87,33 +87,33 @@ public push(string $path, mixed $value): void
 | `$value`  | **mixed**  |             |
 
 
-### isset
+### ƒ isset
 
 ```php
 public isset(string $path): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
 
-### unset
+### ƒ unset
 
 ```php
 public unset(string $path): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
 
-### clear
+### ƒ clear
 
 ```php
 public clear(): void

@@ -10,14 +10,14 @@ Blocks rendering of the action's content.
 
 ## Inherited methods
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
 ```
 
 
-### getResponseArray
+### ƒ getResponseArray
 
 ```php
 public getResponseArray(): array

@@ -9,14 +9,14 @@ action occurs. Thrown by model's recordValidate() method.
 
 ## Inherited methods
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
 ```
 
 
-### getResponseArray
+### ƒ getResponseArray
 
 ```php
 public getResponseArray(): array

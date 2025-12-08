@@ -6,20 +6,24 @@
 
 ## Properties
 
-### main
 
-`public \Hubleto\Framework\Loader $main`
+<div class="mt-2">&nbsp;</div>
+### ☍ main
+```php
+public \Hubleto\Framework\Loader $main
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(\Hubleto\Framework\Loader $main): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                          | Description |
 |-----------|-------------------------------|-------------|

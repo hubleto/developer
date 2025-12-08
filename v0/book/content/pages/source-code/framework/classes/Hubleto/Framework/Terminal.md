@@ -6,47 +6,51 @@
 
 ## Properties
 
-### output
 
-`public mixed $output`
+<div class="mt-2">&nbsp;</div>
+### ☍ output
+```php
+public mixed $output
+```
+
 
 
 ## Methods
 
-### setOutput
+### ƒ setOutput
 
 ```php
 public setOutput(mixed $output): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$output` | **mixed** |             |
 
 
-### isLaunchedFromTerminal
+### ƒ isLaunchedFromTerminal
 
 ```php
 public isLaunchedFromTerminal(): bool
 ```
 
 
-### echo
+### ƒ echo
 
 ```php
 public echo(string $string): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$string` | **string** |             |
 
 
-### color
+### ƒ color
 
 Print special strings setting a specified color
 
@@ -54,7 +58,7 @@ Print special strings setting a specified color
 public color(string $fgColor, string $bgColor = 'default'): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -62,7 +66,7 @@ public color(string $fgColor, string $bgColor = 'default'): void
 | `$bgColor` | **string** |             |
 
 
-### readRaw
+### ƒ readRaw
 
 Read input from terminal/console
 
@@ -71,7 +75,7 @@ public readRaw(): string
 ```
 
 
-### read
+### ƒ read
 
 Read input from terminal/console and return $default is none is entered.
 
@@ -79,7 +83,7 @@ Read input from terminal/console and return $default is none is entered.
 public read(string $message, string $default = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -87,7 +91,7 @@ public read(string $message, string $default = ''): string
 | `$default` | **string** |             |
 
 
-### choose
+### ƒ choose
 
 Get user selection from pre-defined options using terminal/console.
 
@@ -95,7 +99,7 @@ Get user selection from pre-defined options using terminal/console.
 public choose(array $options, string $message, string $default = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -104,7 +108,7 @@ public choose(array $options, string $message, string $default = ''): string
 | `$default` | **string** |             |
 
 
-### confirm
+### ƒ confirm
 
 Ask for user confirmation
 
@@ -112,7 +116,7 @@ Ask for user confirmation
 public confirm(string $question, array $yesAnswers = ['yes', 'y', '1']): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description                                 |
 |---------------|------------|---------------------------------------------|
@@ -120,7 +124,7 @@ public confirm(string $question, array $yesAnswers = ['yes', 'y', '1']): bool
 | `$yesAnswers` | **array**  | Possible answers representing confirmation. |
 
 
-### yellow
+### ƒ yellow
 
 Print message in terminal in yellow color
 
@@ -128,14 +132,14 @@ Print message in terminal in yellow color
 public yellow(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### green
+### ƒ green
 
 Print message in terminal in green color
 
@@ -143,14 +147,14 @@ Print message in terminal in green color
 public green(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### red
+### ƒ red
 
 Print message in terminal in red color
 
@@ -158,27 +162,27 @@ Print message in terminal in red color
 public red(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### error
+### ƒ error
 
 ```php
 public error(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### blue
+### ƒ blue
 
 Print message in terminal in blue color
 
@@ -186,14 +190,14 @@ Print message in terminal in blue color
 public blue(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### cyan
+### ƒ cyan
 
 Print message in terminal in cyan color
 
@@ -201,14 +205,14 @@ Print message in terminal in cyan color
 public cyan(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### white
+### ƒ white
 
 Print message in terminal in white color
 
@@ -216,14 +220,14 @@ Print message in terminal in white color
 public white(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### colored
+### ƒ colored
 
 Print message in terminal in specified color
 
@@ -231,7 +235,7 @@ Print message in terminal in specified color
 public colored(string $bgColor, string $fgColor, string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -240,7 +244,7 @@ public colored(string $bgColor, string $fgColor, string $message): void
 | `$message` | **string** |             |
 
 
-### insertCodeToFile
+### ƒ insertCodeToFile
 
 [Description for insertCodeToFile]
 
@@ -248,7 +252,7 @@ public colored(string $bgColor, string $fgColor, string $message): void
 public insertCodeToFile(string $file, string $tag, array $codeLines): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|

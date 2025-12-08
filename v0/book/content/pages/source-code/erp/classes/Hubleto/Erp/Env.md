@@ -8,7 +8,7 @@ Storage for environment-specific configuration.
 
 ## Methods
 
-### isPremium
+### ƒ isPremium
 
 Checks whether this Hubleto installation can use premium features.
 

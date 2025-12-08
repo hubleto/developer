@@ -6,14 +6,14 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 Callback called before the rendering starts.
 
@@ -22,7 +22,7 @@ public onBeforeRender(): void
 ```
 
 
-### render
+### ƒ render
 
 [Description for render]
 
@@ -30,7 +30,7 @@ public onBeforeRender(): void
 public render(string $route = '', array $params = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|

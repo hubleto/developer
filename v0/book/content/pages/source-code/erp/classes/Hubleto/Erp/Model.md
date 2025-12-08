@@ -19,7 +19,7 @@ Core implementation of model.
 
 ## Methods
 
-### onBeforeCreate
+### ƒ onBeforeCreate
 
 onBeforeCreate
 
@@ -27,14 +27,14 @@ onBeforeCreate
 public onBeforeCreate(array<string,mixed> $record): array<string,mixed>
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                    | Description |
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
 
-### onBeforeUpdate
+### ƒ onBeforeUpdate
 
 onBeforeUpdate
 
@@ -42,14 +42,14 @@ onBeforeUpdate
 public onBeforeUpdate(array<string,mixed> $record): array<string,mixed>
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                    | Description |
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
 
-### onAfterCreate
+### ƒ onAfterCreate
 
 onAfterCreate
 
@@ -57,14 +57,14 @@ onAfterCreate
 public onAfterCreate(array<string,mixed> $savedRecord): array<string,mixed>
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type                    | Description |
 |----------------|-------------------------|-------------|
 | `$savedRecord` | **array<string,mixed>** |             |
 
 
-### onAfterUpdate
+### ƒ onAfterUpdate
 
 onAfterUpdate
 
@@ -72,7 +72,7 @@ onAfterUpdate
 public onAfterUpdate(array<string,mixed> $originalRecord, array<string,mixed> $savedRecord): array<string,mixed>
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type                    | Description |
 |-------------------|-------------------------|-------------|
@@ -80,7 +80,7 @@ public onAfterUpdate(array<string,mixed> $originalRecord, array<string,mixed> $s
 | `$savedRecord`    | **array<string,mixed>** |             |
 
 
-### onBeforeDelete
+### ƒ onBeforeDelete
 
 onBeforeDelete
 
@@ -88,14 +88,14 @@ onBeforeDelete
 public onBeforeDelete(int $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
 
-### onAfterDelete
+### ƒ onAfterDelete
 
 onAfterDelete
 
@@ -103,7 +103,7 @@ onAfterDelete
 public onAfterDelete(int $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|

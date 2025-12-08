@@ -8,23 +8,27 @@ Various helper functions.
 
 ## Properties
 
-### loadUrlError
 
-`public static $loadUrlError`
+<div class="mt-2">&nbsp;</div>
+### ☍ loadUrlError
+```php
+public static $loadUrlError
+```
+
 
 * This property is **static**.
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### deleteTags
+### ƒ deleteTags
 
 Function serves as a delete funtion for the Tag Input
 
@@ -32,7 +36,7 @@ Function serves as a delete funtion for the Tag Input
 public deleteTags(array $recordTagsIds, mixed $mCrossTag, string $lookupColumnName, int $lookupId): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter           | Type       | Description                                      |
 |---------------------|------------|--------------------------------------------------|
@@ -42,7 +46,7 @@ public deleteTags(array $recordTagsIds, mixed $mCrossTag, string $lookupColumnNa
 | `$lookupId`         | **int**    | The id of the lookup                             |
 
 
-### minifyHtml
+### ƒ minifyHtml
 
 Minifies HTML
 
@@ -51,18 +55,18 @@ public static minifyHtml(string $html): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$html`   | **string** | Input HTML  |
 
-**Return Value:**
+#### Return Value
 
 Minified HTML
 
 
-### loadUrl
+### ƒ loadUrl
 
 Load content of remote URL using PHP's CURL library.
 
@@ -71,19 +75,19 @@ public static loadUrl(string $url, array $post = []): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description                                      |
 |-----------|------------|--------------------------------------------------|
 | `$url`    | **string** | URL to be loaded                                 |
 | `$post`   | **array**  | Array of POST values to be posted to the request |
 
-**Return Value:**
+#### Return Value
 
 Loaded content of remote URL
 
 
-### rmspecialchars
+### ƒ rmspecialchars
 
 Removes special characters from string
 
@@ -92,18 +96,18 @@ public static rmspecialchars(string $string): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description     |
 |-----------|------------|-----------------|
 | `$string` | **string** | Original string |
 
-**Return Value:**
+#### Return Value
 
 String with removed special characters
 
 
-### rmdiacritic
+### ƒ rmdiacritic
 
 Removes punctuation characters from string
 
@@ -112,18 +116,18 @@ public static rmdiacritic(string $string): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description     |
 |-----------|------------|-----------------|
 | `$string` | **string** | Original string |
 
-**Return Value:**
+#### Return Value
 
 String with removed punctuation characters
 
 
-### str2url
+### ƒ str2url
 
 Convert string with to URL-compatible string
 
@@ -132,26 +136,26 @@ public static str2url(string $string, bool $replaceSlashes = TRUE): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description                                    |
 |-------------------|------------|------------------------------------------------|
 | `$string`         | **string** | Original string                                |
 | `$replaceSlashes` | **bool**   | If TRUE, slashes are replaced with hyphenation |
 
-**Return Value:**
+#### Return Value
 
 URL-compatible string
 
 
-### str2uid
+### ƒ str2uid
 
 ```php
 public static str2uid(mixed $string, mixed $replaceSlashes = TRUE): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -159,7 +163,7 @@ public static str2uid(mixed $string, mixed $replaceSlashes = TRUE): mixed
 | `$replaceSlashes` | **mixed** |             |
 
 
-### generateUuidV4
+### ƒ generateUuidV4
 
 ```php
 public static generateUuidV4(): string
@@ -167,7 +171,7 @@ public static generateUuidV4(): string
 
 * This method is **static**.
 
-### randomPassword
+### ƒ randomPassword
 
 Generates random password
 
@@ -176,103 +180,103 @@ public static randomPassword(): string
 ```
 
 * This method is **static**.
-**Return Value:**
+#### Return Value
 
 Generated random password
 
 
-### scanDirRecursively
+### ƒ scanDirRecursively
 
 ```php
 public static scanDirRecursively(mixed $dir): array
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$dir`    | **mixed** |             |
 
 
-### capitalizeFirstLetter
+### ƒ capitalizeFirstLetter
 
 ```php
 public static capitalizeFirstLetter(string $s): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
 
-### kebabToCamel
+### ƒ kebabToCamel
 
 ```php
 public static kebabToCamel(string $s): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
 
-### kebabToPascal
+### ƒ kebabToPascal
 
 ```php
 public static kebabToPascal(string $s): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
 
-### camelToKebab
+### ƒ camelToKebab
 
 ```php
 public static camelToKebab(string $s): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
 
-### pascalToKebab
+### ƒ pascalToKebab
 
 ```php
 public static pascalToKebab(string $s): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$s`      | **string** |             |
 
 
-### pluck
+### ƒ pluck
 
 ```php
 public static pluck(string $key, array $data): array
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -280,14 +284,14 @@ public static pluck(string $key, array $data): array
 | `$data`   | **array**  |             |
 
 
-### keyBy
+### ƒ keyBy
 
 ```php
 public static keyBy(string $key, array $data): array
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -295,14 +299,14 @@ public static keyBy(string $key, array $data): array
 | `$data`   | **array**  |             |
 
 
-### groupBy
+### ƒ groupBy
 
 ```php
 public static groupBy(string $key, array $data): array
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -310,14 +314,14 @@ public static groupBy(string $key, array $data): array
 | `$data`   | **array**  |             |
 
 
-### encrypt
+### ƒ encrypt
 
 ```php
 public static encrypt(string $value, string $seed = '', mixed $force = false): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -326,14 +330,14 @@ public static encrypt(string $value, string $seed = '', mixed $force = false): m
 | `$force`  | **mixed**  |             |
 
 
-### decrypt
+### ƒ decrypt
 
 ```php
 public static decrypt(string $value, string $seed = '', mixed $force = false): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|

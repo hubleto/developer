@@ -3,47 +3,47 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### log
+### ƒ log
 
 ```php
 public log(string $msg): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$msg`    | **string** |             |
 
 
-### addCron
+### ƒ addCron
 
 ```php
 public addCron(string $cronClass): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$cronClass` | **string** |             |
 
 
-### getCrons
+### ƒ getCrons
 
 ```php
 public getCrons(): array
 ```
 
 
-### run
+### ƒ run
 
 ```php
 public run(): void

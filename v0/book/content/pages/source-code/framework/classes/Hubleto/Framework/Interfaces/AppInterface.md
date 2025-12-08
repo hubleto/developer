@@ -3,129 +3,129 @@
 
 ## Methods
 
-### validateManifest
+### ƒ validateManifest
 
 ```php
 public validateManifest(): mixed
 ```
 
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 ```php
 public onBeforeRender(): void
 ```
 
 
-### hook
+### ƒ hook
 
 ```php
 public hook(string $hook): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$hook`   | **string** |             |
 
 
-### getRootUrlSlug
+### ƒ getRootUrlSlug
 
 ```php
 public getRootUrlSlug(): string
 ```
 
 
-### getNotificationsCount
+### ƒ getNotificationsCount
 
 ```php
 public getNotificationsCount(): int
 ```
 
 
-### installTables
+### ƒ installTables
 
 ```php
 public installTables(int $round): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
 
-### getAvailableControllerClasses
+### ƒ getAvailableControllerClasses
 
 ```php
 public getAvailableControllerClasses(): array
 ```
 
 
-### getAvailableModelClasses
+### ƒ getAvailableModelClasses
 
 ```php
 public getAvailableModelClasses(): array
 ```
 
 
-### installDefaultPermissions
+### ƒ installDefaultPermissions
 
 ```php
 public installDefaultPermissions(): void
 ```
 
 
-### assignPermissionsToRoles
+### ƒ assignPermissionsToRoles
 
 ```php
 public assignPermissionsToRoles(): void
 ```
 
 
-### generateDemoData
+### ƒ generateDemoData
 
 ```php
 public generateDemoData(): void
 ```
 
 
-### renderSecondSidebar
+### ƒ renderSecondSidebar
 
 ```php
 public renderSecondSidebar(): string
 ```
 
 
-### search
+### ƒ search
 
 ```php
 public search(array $expressions): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$expressions` | **array** |             |
 
 
-### addSetting
+### ƒ addSetting
 
 ```php
 public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $setting): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type                                           | Description |
 |------------|------------------------------------------------|-------------|
@@ -133,33 +133,33 @@ public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $settin
 | `$setting` | **array**                                      |             |
 
 
-### getSettings
+### ƒ getSettings
 
 ```php
 public getSettings(): array
 ```
 
 
-### getFullConfigPath
+### ƒ getFullConfigPath
 
 ```php
 public getFullConfigPath(string $path): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
 
-### saveConfig
+### ƒ saveConfig
 
 ```php
 public saveConfig(string $path, string $value = ''): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -167,13 +167,13 @@ public saveConfig(string $path, string $value = ''): void
 | `$value`  | **string** |             |
 
 
-### saveConfigForUser
+### ƒ saveConfigForUser
 
 ```php
 public saveConfigForUser(string $path, string $value = ''): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -181,13 +181,13 @@ public saveConfigForUser(string $path, string $value = ''): void
 | `$value`  | **string** |             |
 
 
-### configAsString
+### ƒ configAsString
 
 ```php
 public configAsString(string $path, string $defaultValue = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -195,13 +195,13 @@ public configAsString(string $path, string $defaultValue = ''): string
 | `$defaultValue` | **string** |             |
 
 
-### configAsInteger
+### ƒ configAsInteger
 
 ```php
 public configAsInteger(string $path, int $defaultValue): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -209,13 +209,13 @@ public configAsInteger(string $path, int $defaultValue): int
 | `$defaultValue` | **int**    |             |
 
 
-### configAsFloat
+### ƒ configAsFloat
 
 ```php
 public configAsFloat(string $path, float $defaultValue): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -223,13 +223,13 @@ public configAsFloat(string $path, float $defaultValue): float
 | `$defaultValue` | **float**  |             |
 
 
-### configAsBool
+### ƒ configAsBool
 
 ```php
 public configAsBool(string $path, bool $defaultValue = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -237,13 +237,13 @@ public configAsBool(string $path, bool $defaultValue = false): bool
 | `$defaultValue` | **bool**   |             |
 
 
-### configAsArray
+### ƒ configAsArray
 
 ```php
 public configAsArray(string $path, array $defaultValue = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -251,13 +251,13 @@ public configAsArray(string $path, array $defaultValue = []): array
 | `$defaultValue` | **array**  |             |
 
 
-### setConfigAsString
+### ƒ setConfigAsString
 
 ```php
 public setConfigAsString(string $path, string $value = ''): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -265,13 +265,13 @@ public setConfigAsString(string $path, string $value = ''): void
 | `$value`  | **string** |             |
 
 
-### setConfigAsInteger
+### ƒ setConfigAsInteger
 
 ```php
 public setConfigAsInteger(string $path, int $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -279,13 +279,13 @@ public setConfigAsInteger(string $path, int $value): void
 | `$value`  | **int**    |             |
 
 
-### setConfigAsFloat
+### ƒ setConfigAsFloat
 
 ```php
 public setConfigAsFloat(string $path, float $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -293,13 +293,13 @@ public setConfigAsFloat(string $path, float $value): void
 | `$value`  | **float**  |             |
 
 
-### setConfigAsBool
+### ƒ setConfigAsBool
 
 ```php
 public setConfigAsBool(string $path, bool $value = false): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -307,13 +307,13 @@ public setConfigAsBool(string $path, bool $value = false): void
 | `$value`  | **bool**   |             |
 
 
-### setConfigAsArray
+### ƒ setConfigAsArray
 
 ```php
 public setConfigAsArray(string $path, array $value = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -321,39 +321,39 @@ public setConfigAsArray(string $path, array $value = []): void
 | `$value`  | **array**  |             |
 
 
-### dangerouslyInjectDesktopHtmlContent
+### ƒ dangerouslyInjectDesktopHtmlContent
 
 ```php
 public dangerouslyInjectDesktopHtmlContent(string $where): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$where`  | **string** |             |
 
 
-### collectExtendibles
+### ƒ collectExtendibles
 
 ```php
 public collectExtendibles(string $extendibleName): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
 | `$extendibleName` | **string** |             |
 
 
-### addSearchSwitch
+### ƒ addSearchSwitch
 
 ```php
 public addSearchSwitch(string $switch, string $name): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -361,13 +361,13 @@ public addSearchSwitch(string $switch, string $name): void
 | `$name`   | **string** |             |
 
 
-### canHandleSearchSwith
+### ƒ canHandleSearchSwith
 
 ```php
 public canHandleSearchSwith(string $switch): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|

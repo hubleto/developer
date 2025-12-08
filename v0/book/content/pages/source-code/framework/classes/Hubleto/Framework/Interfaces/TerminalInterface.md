@@ -3,33 +3,33 @@
 
 ## Methods
 
-### setOutput
+### ƒ setOutput
 
 ```php
 public setOutput(mixed $output): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$output` | **mixed** |             |
 
 
-### isLaunchedFromTerminal
+### ƒ isLaunchedFromTerminal
 
 ```php
 public isLaunchedFromTerminal(): bool
 ```
 
 
-### color
+### ƒ color
 
 ```php
 public color(string $fgColor, string $bgColor = 'black'): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -37,20 +37,20 @@ public color(string $fgColor, string $bgColor = 'black'): void
 | `$bgColor` | **string** |             |
 
 
-### readRaw
+### ƒ readRaw
 
 ```php
 public readRaw(): string
 ```
 
 
-### read
+### ƒ read
 
 ```php
 public read(string $message, string $default = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -58,13 +58,13 @@ public read(string $message, string $default = ''): string
 | `$default` | **string** |             |
 
 
-### choose
+### ƒ choose
 
 ```php
 public choose(array $options, string $message, string $default = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -73,13 +73,13 @@ public choose(array $options, string $message, string $default = ''): string
 | `$default` | **string** |             |
 
 
-### confirm
+### ƒ confirm
 
 ```php
 public confirm(string $question, mixed $yesAnswers = ['yes', 'y', '1']): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -87,91 +87,91 @@ public confirm(string $question, mixed $yesAnswers = ['yes', 'y', '1']): bool
 | `$yesAnswers` | **mixed**  |             |
 
 
-### yellow
+### ƒ yellow
 
 ```php
 public yellow(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### green
+### ƒ green
 
 ```php
 public green(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### red
+### ƒ red
 
 ```php
 public red(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### blue
+### ƒ blue
 
 ```php
 public blue(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### cyan
+### ƒ cyan
 
 ```php
 public cyan(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### white
+### ƒ white
 
 ```php
 public white(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$message` | **string** |             |
 
 
-### colored
+### ƒ colored
 
 ```php
 public colored(string $bgColor, string $fgColor, string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -180,13 +180,13 @@ public colored(string $bgColor, string $fgColor, string $message): void
 | `$message` | **string** |             |
 
 
-### insertCodeToFile
+### ƒ insertCodeToFile
 
 ```php
 public insertCodeToFile(string $file, string $tag, array $codeLines): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
@@ -195,13 +195,13 @@ public insertCodeToFile(string $file, string $tag, array $codeLines): bool
 | `$codeLines` | **array**  |             |
 
 
-### error
+### ƒ error
 
 ```php
 public error(string $message): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|

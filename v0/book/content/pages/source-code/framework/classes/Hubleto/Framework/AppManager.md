@@ -8,29 +8,45 @@ Default manager of Hubleto apps used in the Hubleto project.
 
 ## Properties
 
-### activatedApp
 
-`public \Hubleto\Framework\Interfaces\AppInterface $activatedApp`
-
-
-### enabledApps
-
-`public \Hubleto\Framework\Interfaces\AppInterface[] $enabledApps`
+<div class="mt-2">&nbsp;</div>
+### ☍ activatedApp
+```php
+public \Hubleto\Framework\Interfaces\AppInterface $activatedApp
+```
 
 
-### disabledApps
-
-`public \Hubleto\Framework\Interfaces\AppInterface[] $disabledApps`
 
 
-### registeredAppNamespaces
+<div class="mt-2">&nbsp;</div>
+### ☍ enabledApps
+```php
+public \Hubleto\Framework\Interfaces\AppInterface[] $enabledApps
+```
 
-`public string[] $registeredAppNamespaces`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ disabledApps
+```php
+public \Hubleto\Framework\Interfaces\AppInterface[] $disabledApps
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ registeredAppNamespaces
+```php
+public string[] $registeredAppNamespaces
+```
+
 
 
 ## Methods
 
-### init
+### ƒ init
 
 [Description for init]
 
@@ -39,7 +55,7 @@ public init(): void
 ```
 
 
-### sanitizeAppNamespace
+### ƒ sanitizeAppNamespace
 
 [Description for sanitizeAppNamespace]
 
@@ -47,14 +63,14 @@ public init(): void
 public sanitizeAppNamespace(string $appNamespace): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### validateAppNamespace
+### ƒ validateAppNamespace
 
 [Description for validateAppNamespace]
 
@@ -62,14 +78,14 @@ public sanitizeAppNamespace(string $appNamespace): string
 public validateAppNamespace(string $appNamespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 [Description for onBeforeRender]
 
@@ -78,7 +94,7 @@ public onBeforeRender(): void
 ```
 
 
-### getAppNamespaceForConfig
+### ƒ getAppNamespaceForConfig
 
 [Description for getAppNamespaceForConfig]
 
@@ -86,14 +102,14 @@ public onBeforeRender(): void
 public getAppNamespaceForConfig(string $appNamespace): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### getAvailableApps
+### ƒ getAvailableApps
 
 [Description for getAvailableApps]
 
@@ -102,7 +118,7 @@ public getAvailableApps(): array
 ```
 
 
-### getInstalledAppNamespaces
+### ƒ getInstalledAppNamespaces
 
 [Description for getInstalledAppNamespaces]
 
@@ -111,7 +127,7 @@ public getInstalledAppNamespaces(): array
 ```
 
 
-### createAppInstance
+### ƒ createAppInstance
 
 [Description for createAppInstance]
 
@@ -119,35 +135,35 @@ public getInstalledAppNamespaces(): array
 public createAppInstance(string $appNamespace): \Hubleto\Framework\Interfaces\AppInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### getEnabledApps
+### ƒ getEnabledApps
 
 ```php
 public getEnabledApps(): \Hubleto\Framework\Interfaces\AppInterface[]
 ```
 
 
-### getDisabledApps
+### ƒ getDisabledApps
 
 ```php
 public getDisabledApps(): \Hubleto\Framework\Interfaces\AppInterface[]
 ```
 
 
-### getInstalledApps
+### ƒ getInstalledApps
 
 ```php
 public getInstalledApps(): \Hubleto\Framework\Interfaces\AppInterface[]
 ```
 
 
-### getActivatedApp
+### ƒ getActivatedApp
 
 [Description for getActivatedApp]
 
@@ -156,7 +172,7 @@ public getActivatedApp(): null|\Hubleto\Framework\Interfaces\AppInterface
 ```
 
 
-### getApp
+### ƒ getApp
 
 [Description for getApp]
 
@@ -164,14 +180,14 @@ public getActivatedApp(): null|\Hubleto\Framework\Interfaces\AppInterface
 public getApp(string $appNamespace): null|\Hubleto\Framework\Interfaces\AppInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### isAppInstalled
+### ƒ isAppInstalled
 
 [Description for isAppInstalled]
 
@@ -179,14 +195,14 @@ public getApp(string $appNamespace): null|\Hubleto\Framework\Interfaces\AppInter
 public isAppInstalled(string $appNamespace): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### isAppEnabled
+### ƒ isAppEnabled
 
 [Description for isAppEnabled]
 
@@ -194,20 +210,20 @@ public isAppInstalled(string $appNamespace): bool
 public isAppEnabled(string $appNamespace): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### installApp
+### ƒ installApp
 
 ```php
 public installApp(int $round, string $appNamespace, array<string,mixed> $appConfig = [], bool $forceInstall = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                    | Description |
 |-----------------|-------------------------|-------------|
@@ -217,39 +233,39 @@ public installApp(int $round, string $appNamespace, array<string,mixed> $appConf
 | `$forceInstall` | **bool**                |             |
 
 
-### disableApp
+### ƒ disableApp
 
 ```php
 public disableApp(string $appNamespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### enableApp
+### ƒ enableApp
 
 ```php
 public enableApp(string $appNamespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### canAppDangerouslyInjectDesktopHtmlContent
+### ƒ canAppDangerouslyInjectDesktopHtmlContent
 
 ```php
 public canAppDangerouslyInjectDesktopHtmlContent(string $appNamespace): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -258,14 +274,14 @@ public canAppDangerouslyInjectDesktopHtmlContent(string $appNamespace): bool
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -274,14 +290,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -289,14 +305,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -305,7 +321,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -314,7 +330,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -323,7 +339,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -332,7 +348,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -341,7 +357,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -350,7 +366,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -359,7 +375,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -368,7 +384,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -377,7 +393,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -386,7 +402,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -395,7 +411,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -404,7 +420,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -413,7 +429,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -422,7 +438,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -431,7 +447,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -440,7 +456,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -448,14 +464,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -463,20 +479,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|

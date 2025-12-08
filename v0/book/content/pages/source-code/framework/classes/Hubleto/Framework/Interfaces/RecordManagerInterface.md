@@ -6,7 +6,7 @@ CRUD-like layer for manipulating records (data)
 
 ## Methods
 
-### prepareReadQuery
+### ƒ prepareReadQuery
 
 prepareReadQuery
 
@@ -14,38 +14,38 @@ prepareReadQuery
 public prepareReadQuery(mixed $query = null, int $level): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description                        |
 |-----------|-----------|------------------------------------|
 | `$query`  | **mixed** | Leave empty for default behaviour. |
 | `$level`  | **int**   | Leave empty for default behaviour. |
 
-**Return Value:**
+#### Return Value
 
 Object for reading records.
 
 
-### recordGet
+### ƒ recordGet
 
 ```php
 public recordGet(callable|null $queryModifierCallback = null): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter                | Type               | Description |
 |--------------------------|--------------------|-------------|
 | `$queryModifierCallback` | **callable\|null** |             |
 
 
-### addFulltextSearchToQuery
+### ƒ addFulltextSearchToQuery
 
 ```php
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
@@ -53,13 +53,13 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 | `$fulltextSearch` | **string** |             |
 
 
-### addColumnSearchToQuery
+### ƒ addColumnSearchToQuery
 
 ```php
 public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
@@ -67,13 +67,13 @@ public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 | `$columnSearch` | **array** |             |
 
 
-### addOrderByToQuery
+### ƒ addOrderByToQuery
 
 ```php
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -81,13 +81,13 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 | `$orderBy` | **array** |             |
 
 
-### recordReadMany
+### ƒ recordReadMany
 
 ```php
 public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
@@ -96,52 +96,52 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 | `$page`         | **int**   |             |
 
 
-### recordRead
+### ƒ recordRead
 
 ```php
 public recordRead(mixed $query): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$query`  | **mixed** |             |
 
 
-### recordEncryptIds
+### ƒ recordEncryptIds
 
 ```php
 public recordEncryptIds(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### recordDecryptIds
+### ƒ recordDecryptIds
 
 ```php
 public recordDecryptIds(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### recordCreate
+### ƒ recordCreate
 
 ```php
 public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter              | Type      | Description |
 |------------------------|-----------|-------------|
@@ -149,13 +149,13 @@ public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 | `$useProvidedRecordId` | **mixed** |             |
 
 
-### recordUpdate
+### ƒ recordUpdate
 
 ```php
 public recordUpdate(array $record, array $originalRecord = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -163,26 +163,26 @@ public recordUpdate(array $record, array $originalRecord = []): array
 | `$originalRecord` | **array** |             |
 
 
-### recordDelete
+### ƒ recordDelete
 
 ```php
 public recordDelete(int|string $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type            | Description |
 |-----------|-----------------|-------------|
 | `$id`     | **int\|string** |             |
 
 
-### recordSave
+### ƒ recordSave
 
 ```php
 public recordSave(array $record, int $idMasterRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -190,7 +190,7 @@ public recordSave(array $record, int $idMasterRecord): array
 | `$idMasterRecord` | **int**   |             |
 
 
-### recordValidate
+### ƒ recordValidate
 
 validate
 
@@ -198,20 +198,20 @@ validate
 public recordValidate(array<string,mixed> $record): array<string,mixed>
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                    | Description |
 |-----------|-------------------------|-------------|
 | `$record` | **array<string,mixed>** |             |
 
 
-### recordNormalize
+### ƒ recordNormalize
 
 ```php
 public recordNormalize(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|

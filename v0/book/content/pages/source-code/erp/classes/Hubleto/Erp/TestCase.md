@@ -6,7 +6,7 @@
 
 ## Methods
 
-### generateRandomIds
+### ƒ generateRandomIds
 
 [Description for generateRandomIds]
 
@@ -14,14 +14,14 @@
 public generateRandomIds(int $count): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$count`  | **int** |             |
 
 
-### expandRoutesByVars
+### ƒ expandRoutesByVars
 
 [Description for expandRoutesByVars]
 
@@ -29,7 +29,7 @@ public generateRandomIds(int $count): array
 public expandRoutesByVars(string $route, array $vars = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -37,7 +37,7 @@ public expandRoutesByVars(string $route, array $vars = []): array
 | `$vars`   | **array**  |             |
 
 
-### _testRouteContainsAppMainTitle
+### ƒ _testRouteContainsAppMainTitle
 
 [Description for _testRouteContainsAppMainTitle]
 
@@ -45,7 +45,7 @@ public expandRoutesByVars(string $route, array $vars = []): array
 public _testRouteContainsAppMainTitle(string $route, array $vars = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -53,7 +53,7 @@ public _testRouteContainsAppMainTitle(string $route, array $vars = []): void
 | `$vars`   | **array**  |             |
 
 
-### _testRouteContainsError
+### ƒ _testRouteContainsError
 
 [Description for _testRouteContainsError]
 
@@ -61,7 +61,7 @@ public _testRouteContainsAppMainTitle(string $route, array $vars = []): void
 public _testRouteContainsError(string $route, array $vars = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -69,7 +69,7 @@ public _testRouteContainsError(string $route, array $vars = []): void
 | `$vars`   | **array**  |             |
 
 
-### _testRouteRendersJson
+### ƒ _testRouteRendersJson
 
 [Description for _testRouteRendersJson]
 
@@ -77,7 +77,7 @@ public _testRouteContainsError(string $route, array $vars = []): void
 public _testRouteRendersJson(string $route, array $vars = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -85,7 +85,7 @@ public _testRouteRendersJson(string $route, array $vars = []): void
 | `$vars`   | **array**  |             |
 
 
-### _testModelCrud
+### ƒ _testModelCrud
 
 [Description for testModelCrud]
 
@@ -93,7 +93,7 @@ public _testRouteRendersJson(string $route, array $vars = []): void
 public _testModelCrud(string $modelClass, string $modelBaseUrl): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|

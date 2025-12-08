@@ -17,104 +17,156 @@ Encapsulation for Hubleto app.
 
 ## Properties
 
-### manifest
+
+<div class="mt-2">&nbsp;</div>
+### ☍ manifest
+```php
+public array $manifest
+```
 
 Basic identification of the app. More details at https://developer.hubleto.com/docs/apps/manifest
 
-`public array $manifest`
 
 
-### enabled
+
+<div class="mt-2">&nbsp;</div>
+### ☍ enabled
+```php
+public bool $enabled
+```
 
 If set to `false`, app is not accessible.
 
-`public bool $enabled`
 
 Apps get enabled in `AppManager`.
 
 
-### canBeDisabled
+
+<div class="mt-2">&nbsp;</div>
+### ☍ canBeDisabled
+```php
+public bool $canBeDisabled
+```
 
 If set to `false`, app cannot be disabled.
 
-`public bool $canBeDisabled`
 
 Some core apps (e.g., `Desktop`) have this set to `false`.
 
 
-### permittedForAllUsers
+
+<div class="mt-2">&nbsp;</div>
+### ☍ permittedForAllUsers
+```php
+public bool $permittedForAllUsers
+```
 
 If set to `true`, permission checking is not performed for this app.`
 
-`public bool $permittedForAllUsers`
 
 
-### srcFolder
+
+<div class="mt-2">&nbsp;</div>
+### ☍ srcFolder
+```php
+public string $srcFolder
+```
 
 Path to source code of this app. Usefull when accessing app's resources.
 
-`public string $srcFolder`
 
 
-### viewNamespace
+
+<div class="mt-2">&nbsp;</div>
+### ☍ viewNamespace
+```php
+public string $viewNamespace
+```
 
 TWIG namespace of this app.
 
-`public string $viewNamespace`
 
 
-### namespace
 
-PHP namespace of this app.
+<div class="mt-2">&nbsp;</div>
+### ☍ namespace
+```php
+public string $namespace
+```
 
-`public string $namespace`
-
-
-### fullName
-
-Full classname of this app.
-
-`public string $fullName`
+App's PHP namespace.
 
 
-### shortName
-
-Short name of this app, extracted from the namespace.
-
-`public string $shortName`
 
 
-### isActivated
+<div class="mt-2">&nbsp;</div>
+### ☍ fullName
+```php
+public string $fullName
+```
+
+App's full classname.
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ shortName
+```php
+public string $shortName
+```
+
+App's short name, extracted from the namespace.
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ isActivated
+```php
+public bool $isActivated
+```
 
 If set to `true`, app is activated in the UI. Only enabled app can be activated.
 
-`public bool $isActivated`
 
 Only one app can be activated at a time.
 
 
-### sidebarView
+
+<div class="mt-2">&nbsp;</div>
+### ☍ sidebarView
+```php
+public string $sidebarView
+```
 
 Path to TWIG view for rendering the apps's sidebar.
 
-`public string $sidebarView`
 
 
-### settings
 
-`private array $settings`
+<div class="mt-2">&nbsp;</div>
+### ☍ settings
+```php
+private array $settings
+```
 
 
-### searchSwitches
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ searchSwitches
+```php
+public array $searchSwitches
+```
 
 List of app's search switches used in global Hubleto fulltext search.
 
-`public array $searchSwitches`
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 Default app's constructor.
 
@@ -123,7 +175,7 @@ public __construct(): mixed
 ```
 
 
-### validateManifest
+### ƒ validateManifest
 
 [Description for validateManifest]
 
@@ -132,7 +184,7 @@ public validateManifest(): mixed
 ```
 
 
-### init
+### ƒ init
 
 [Description for init]
 
@@ -141,7 +193,7 @@ public init(): void
 ```
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 [Description for onBeforeRender]
 
@@ -150,7 +202,7 @@ public onBeforeRender(): void
 ```
 
 
-### hook
+### ƒ hook
 
 [Description for hook]
 
@@ -158,14 +210,14 @@ public onBeforeRender(): void
 public hook(string $hook): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$hook`   | **string** |             |
 
 
-### getRootUrlSlug
+### ƒ getRootUrlSlug
 
 [Description for getRootUrlSlug]
 
@@ -174,7 +226,7 @@ public getRootUrlSlug(): string
 ```
 
 
-### getNotificationsCount
+### ƒ getNotificationsCount
 
 [Description for getNotificationsCount]
 
@@ -183,7 +235,7 @@ public getNotificationsCount(): int
 ```
 
 
-### installTables
+### ƒ installTables
 
 [Description for installTables]
 
@@ -191,14 +243,14 @@ public getNotificationsCount(): int
 public installTables(int $round): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
 
-### getAvailableControllerClasses
+### ƒ getAvailableControllerClasses
 
 [Description for getAvailableControllerClasses]
 
@@ -207,7 +259,7 @@ public getAvailableControllerClasses(): array
 ```
 
 
-### getAvailableModelClasses
+### ƒ getAvailableModelClasses
 
 [Description for getAvailableModelClasses]
 
@@ -216,7 +268,7 @@ public getAvailableModelClasses(): array
 ```
 
 
-### installDefaultPermissions
+### ƒ installDefaultPermissions
 
 [Description for installDefaultPermissions]
 
@@ -225,7 +277,7 @@ public installDefaultPermissions(): void
 ```
 
 
-### assignPermissionsToRoles
+### ƒ assignPermissionsToRoles
 
 [Description for assignPermissionsToRoles]
 
@@ -234,7 +286,7 @@ public assignPermissionsToRoles(): void
 ```
 
 
-### generateDemoData
+### ƒ generateDemoData
 
 [Description for generateDemoData]
 
@@ -243,7 +295,7 @@ public generateDemoData(): void
 ```
 
 
-### renderSecondSidebar
+### ƒ renderSecondSidebar
 
 [Description for renderSecondSidebar]
 
@@ -252,7 +304,7 @@ public renderSecondSidebar(): string
 ```
 
 
-### search
+### ƒ search
 
 [Description for search]
 
@@ -260,14 +312,14 @@ public renderSecondSidebar(): string
 public search(array $expressions): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$expressions` | **array** |             |
 
 
-### addSetting
+### ƒ addSetting
 
 [Description for addSetting]
 
@@ -275,7 +327,7 @@ public search(array $expressions): array
 public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $setting): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type                                           | Description |
 |------------|------------------------------------------------|-------------|
@@ -283,7 +335,7 @@ public addSetting(\Hubleto\Framework\Interfaces\AppInterface $app, array $settin
 | `$setting` | **array**                                      |             |
 
 
-### getSettings
+### ƒ getSettings
 
 [Description for getSettings]
 
@@ -292,7 +344,7 @@ public getSettings(): array
 ```
 
 
-### getFullConfigPath
+### ƒ getFullConfigPath
 
 [Description for getFullConfigPath]
 
@@ -300,14 +352,14 @@ public getSettings(): array
 public getFullConfigPath(string $path): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
 
-### saveConfig
+### ƒ saveConfig
 
 [Description for saveConfig]
 
@@ -315,7 +367,7 @@ public getFullConfigPath(string $path): string
 public saveConfig(string $path, string $value = ''): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -323,7 +375,7 @@ public saveConfig(string $path, string $value = ''): void
 | `$value`  | **string** |             |
 
 
-### saveConfigForUser
+### ƒ saveConfigForUser
 
 [Description for saveConfigForUser]
 
@@ -331,7 +383,7 @@ public saveConfig(string $path, string $value = ''): void
 public saveConfigForUser(string $path, string $value = ''): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -339,7 +391,7 @@ public saveConfigForUser(string $path, string $value = ''): void
 | `$value`  | **string** |             |
 
 
-### configAsString
+### ƒ configAsString
 
 [Description for configAsString]
 
@@ -347,7 +399,7 @@ public saveConfigForUser(string $path, string $value = ''): void
 public configAsString(string $path, string $defaultValue = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -355,7 +407,7 @@ public configAsString(string $path, string $defaultValue = ''): string
 | `$defaultValue` | **string** |             |
 
 
-### configAsInteger
+### ƒ configAsInteger
 
 [Description for configAsInteger]
 
@@ -363,7 +415,7 @@ public configAsString(string $path, string $defaultValue = ''): string
 public configAsInteger(string $path, int $defaultValue): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -371,7 +423,7 @@ public configAsInteger(string $path, int $defaultValue): int
 | `$defaultValue` | **int**    |             |
 
 
-### configAsFloat
+### ƒ configAsFloat
 
 [Description for configAsFloat]
 
@@ -379,7 +431,7 @@ public configAsInteger(string $path, int $defaultValue): int
 public configAsFloat(string $path, float $defaultValue): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -387,7 +439,7 @@ public configAsFloat(string $path, float $defaultValue): float
 | `$defaultValue` | **float**  |             |
 
 
-### configAsBool
+### ƒ configAsBool
 
 [Description for configAsBool]
 
@@ -395,7 +447,7 @@ public configAsFloat(string $path, float $defaultValue): float
 public configAsBool(string $path, bool $defaultValue = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -403,7 +455,7 @@ public configAsBool(string $path, bool $defaultValue = false): bool
 | `$defaultValue` | **bool**   |             |
 
 
-### configAsArray
+### ƒ configAsArray
 
 [Description for configAsArray]
 
@@ -411,7 +463,7 @@ public configAsBool(string $path, bool $defaultValue = false): bool
 public configAsArray(string $path, array $defaultValue = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -419,7 +471,7 @@ public configAsArray(string $path, array $defaultValue = []): array
 | `$defaultValue` | **array**  |             |
 
 
-### setConfigAsString
+### ƒ setConfigAsString
 
 [Description for setConfigAsString]
 
@@ -427,7 +479,7 @@ public configAsArray(string $path, array $defaultValue = []): array
 public setConfigAsString(string $path, string $value = ''): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -435,7 +487,7 @@ public setConfigAsString(string $path, string $value = ''): void
 | `$value`  | **string** |             |
 
 
-### setConfigAsInteger
+### ƒ setConfigAsInteger
 
 [Description for setConfigAsInteger]
 
@@ -443,7 +495,7 @@ public setConfigAsString(string $path, string $value = ''): void
 public setConfigAsInteger(string $path, int $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -451,7 +503,7 @@ public setConfigAsInteger(string $path, int $value): void
 | `$value`  | **int**    |             |
 
 
-### setConfigAsFloat
+### ƒ setConfigAsFloat
 
 [Description for setConfigAsFloat]
 
@@ -459,7 +511,7 @@ public setConfigAsInteger(string $path, int $value): void
 public setConfigAsFloat(string $path, float $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -467,7 +519,7 @@ public setConfigAsFloat(string $path, float $value): void
 | `$value`  | **float**  |             |
 
 
-### setConfigAsBool
+### ƒ setConfigAsBool
 
 [Description for setConfigAsBool]
 
@@ -475,7 +527,7 @@ public setConfigAsFloat(string $path, float $value): void
 public setConfigAsBool(string $path, bool $value = false): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -483,7 +535,7 @@ public setConfigAsBool(string $path, bool $value = false): void
 | `$value`  | **bool**   |             |
 
 
-### setConfigAsArray
+### ƒ setConfigAsArray
 
 [Description for setConfigAsArray]
 
@@ -491,7 +543,7 @@ public setConfigAsBool(string $path, bool $value = false): void
 public setConfigAsArray(string $path, array $value = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -499,7 +551,7 @@ public setConfigAsArray(string $path, array $value = []): void
 | `$value`  | **array**  |             |
 
 
-### dangerouslyInjectDesktopHtmlContent
+### ƒ dangerouslyInjectDesktopHtmlContent
 
 [Description for dangerouslyInjectDesktopHtmlContent]
 
@@ -507,14 +559,14 @@ public setConfigAsArray(string $path, array $value = []): void
 public dangerouslyInjectDesktopHtmlContent(string $where): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$where`  | **string** |             |
 
 
-### addSearchSwitch
+### ƒ addSearchSwitch
 
 [Description for addSearchSwitch]
 
@@ -522,7 +574,7 @@ public dangerouslyInjectDesktopHtmlContent(string $where): string
 public addSearchSwitch(string $switch, string $name): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -530,7 +582,7 @@ public addSearchSwitch(string $switch, string $name): void
 | `$name`   | **string** |             |
 
 
-### canHandleSearchSwith
+### ƒ canHandleSearchSwith
 
 [Description for canHandleSearchSwith]
 
@@ -538,14 +590,14 @@ public addSearchSwitch(string $switch, string $name): void
 public canHandleSearchSwith(string $switch): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$switch` | **string** |             |
 
 
-### collectExtendibles
+### ƒ collectExtendibles
 
 [Description for collectExtendibles]
 
@@ -553,7 +605,7 @@ public canHandleSearchSwith(string $switch): bool
 public collectExtendibles(string $extendibleName): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
@@ -562,14 +614,14 @@ public collectExtendibles(string $extendibleName): array
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -578,14 +630,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -593,14 +645,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -609,7 +661,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -618,7 +670,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -627,7 +679,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -636,7 +688,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -645,7 +697,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -654,7 +706,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -663,7 +715,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -672,7 +724,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -681,7 +733,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -690,7 +742,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -699,7 +751,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -708,7 +760,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -717,7 +769,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -726,7 +778,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -735,7 +787,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -744,7 +796,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -752,14 +804,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -767,20 +819,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|

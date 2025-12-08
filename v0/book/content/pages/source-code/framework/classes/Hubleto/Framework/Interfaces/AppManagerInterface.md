@@ -3,160 +3,160 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### sanitizeAppNamespace
+### ƒ sanitizeAppNamespace
 
 ```php
 public sanitizeAppNamespace(string $appNamespace): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### validateAppNamespace
+### ƒ validateAppNamespace
 
 ```php
 public validateAppNamespace(string $appNamespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 ```php
 public onBeforeRender(): void
 ```
 
 
-### getAppNamespaceForConfig
+### ƒ getAppNamespaceForConfig
 
 ```php
 public getAppNamespaceForConfig(string $appNamespace): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### getAvailableApps
+### ƒ getAvailableApps
 
 ```php
 public getAvailableApps(): array
 ```
 
 
-### getInstalledAppNamespaces
+### ƒ getInstalledAppNamespaces
 
 ```php
 public getInstalledAppNamespaces(): array
 ```
 
 
-### createAppInstance
+### ƒ createAppInstance
 
 ```php
 public createAppInstance(string $appNamespace): \Hubleto\Framework\Interfaces\AppInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### getEnabledApps
+### ƒ getEnabledApps
 
 ```php
 public getEnabledApps(): array
 ```
 
 
-### getDisabledApps
+### ƒ getDisabledApps
 
 ```php
 public getDisabledApps(): array
 ```
 
 
-### getInstalledApps
+### ƒ getInstalledApps
 
 ```php
 public getInstalledApps(): array
 ```
 
 
-### getActivatedApp
+### ƒ getActivatedApp
 
 ```php
 public getActivatedApp(): null|\Hubleto\Framework\Interfaces\AppInterface
 ```
 
 
-### getApp
+### ƒ getApp
 
 ```php
 public getApp(string $appNamespace): null|\Hubleto\Framework\Interfaces\AppInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### isAppInstalled
+### ƒ isAppInstalled
 
 ```php
 public isAppInstalled(string $appNamespace): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### isAppEnabled
+### ƒ isAppEnabled
 
 ```php
 public isAppEnabled(string $appNamespace): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### installApp
+### ƒ installApp
 
 ```php
 public installApp(int $round, string $appNamespace, array $appConfig = [], bool $forceInstall = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -166,39 +166,39 @@ public installApp(int $round, string $appNamespace, array $appConfig = [], bool 
 | `$forceInstall` | **bool**   |             |
 
 
-### disableApp
+### ƒ disableApp
 
 ```php
 public disableApp(string $appNamespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### enableApp
+### ƒ enableApp
 
 ```php
 public enableApp(string $appNamespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
 | `$appNamespace` | **string** |             |
 
 
-### canAppDangerouslyInjectDesktopHtmlContent
+### ƒ canAppDangerouslyInjectDesktopHtmlContent
 
 ```php
 public canAppDangerouslyInjectDesktopHtmlContent(string $appNamespace): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|

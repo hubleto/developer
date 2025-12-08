@@ -8,23 +8,27 @@ Default implementation of Hubleto controller.
 
 ## Properties
 
-### hideDefaultDesktop
+
+<div class="mt-2">&nbsp;</div>
+### ☍ hideDefaultDesktop
+```php
+public bool $hideDefaultDesktop
+```
 
 If set to TRUE, the default desktop will not be added to the rendered content
 
-`public bool $hideDefaultDesktop`
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### renderJson
+### ƒ renderJson
 
 If the controller shall only return JSON, this method must be overriden.
 
@@ -32,21 +36,21 @@ If the controller shall only return JSON, this method must be overriden.
 public renderJson(): array
 ```
 
-**Return Value:**
+#### Return Value
 
 Array to be returned as a JSON.
 
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -55,14 +59,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -70,14 +74,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -86,7 +90,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -95,7 +99,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -104,7 +108,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -113,7 +117,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -122,7 +126,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -131,7 +135,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -140,7 +144,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -149,7 +153,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -158,7 +162,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -167,7 +171,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -176,7 +180,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -185,7 +189,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -194,7 +198,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -203,7 +207,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -212,7 +216,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -221,7 +225,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -229,14 +233,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -244,20 +248,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|
@@ -266,7 +270,7 @@ public translate(string $string, array<string,string> $vars = [], string $contex
 | `$contextInner` | **string**               |             |
 
 
-### validateInputs
+### ƒ validateInputs
 
 Validates inputs used for the TWIG template.
 
@@ -277,7 +281,7 @@ public validateInputs(): bool
 return bool True if inputs are valid, otherwise false.
 
 
-### preInit
+### ƒ preInit
 
 1st phase of controller's initialization phase.
 
@@ -285,13 +289,13 @@ return bool True if inputs are valid, otherwise false.
 public preInit(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](../../../../Exception)
 
 
-### init
+### ƒ init
 
 2nd phase of controller's initialization phase.
 
@@ -299,13 +303,13 @@ Should throw an exception on error.
 public init(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](../../../../Exception)
 
 
-### postInit
+### ƒ postInit
 
 3rd phase of controller's initialization phase.
 
@@ -313,27 +317,27 @@ Should throw an exception on error.
 public postInit(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](../../../../Exception)
 
 
-### run
+### ƒ run
 
 ```php
 public run(): mixed
 ```
 
 
-### renderString
+### ƒ renderString
 
 ```php
 public renderString(): string
 ```
 
 
-### renderJson
+### ƒ renderJson
 
 If the controller shall only return JSON, this method must be overriden.
 
@@ -341,12 +345,12 @@ If the controller shall only return JSON, this method must be overriden.
 public renderJson(): array
 ```
 
-**Return Value:**
+#### Return Value
 
 Array to be returned as a JSON.
 
 
-### prepareViewParams
+### ƒ prepareViewParams
 
 If the controller shall return the HTML of the view, this method must be overriden.
 
@@ -354,12 +358,12 @@ If the controller shall return the HTML of the view, this method must be overrid
 public prepareViewParams(): array
 ```
 
-**Return Value:**
+#### Return Value
 
 View to be used to render the HTML.
 
 
-### prepareView
+### ƒ prepareView
 
 [Description for prepareView]
 
@@ -368,7 +372,7 @@ public prepareView(): void
 ```
 
 
-### setView
+### ƒ setView
 
 [Description for setView]
 
@@ -376,14 +380,14 @@ public prepareView(): void
 public setView(string $view): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$view`   | **string** |             |
 
 
-### getView
+### ƒ getView
 
 [Description for getView]
 
@@ -392,7 +396,7 @@ public getView(): string
 ```
 
 
-### getViewParams
+### ƒ getViewParams
 
 [Description for getViewParams]
 
@@ -401,7 +405,7 @@ public getViewParams(): array
 ```
 
 
-### render
+### ƒ render
 
 [Description for render]
 

@@ -8,19 +8,27 @@ Default translator for Hubleto project.
 
 ## Properties
 
-### service
 
-`public \Hubleto\Framework\Core $service`
+<div class="mt-2">&nbsp;</div>
+### ☍ service
+```php
+public \Hubleto\Framework\Core $service
+```
 
 
-### dictionary
 
-`public array $dictionary`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ dictionary
+```php
+public array $dictionary
+```
+
 
 
 ## Methods
 
-### getDictionaryFilename
+### ƒ getDictionaryFilename
 
 [Description for getDictionaryFilename]
 
@@ -28,7 +36,7 @@ Default translator for Hubleto project.
 public getDictionaryFilename(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                            | Description |
 |-------------|-------------------------------------------------|-------------|
@@ -37,7 +45,7 @@ public getDictionaryFilename(\Hubleto\Framework\Interfaces\CoreInterface $core, 
 | `$context`  | **string**                                      |             |
 
 
-### addToDictionary
+### ƒ addToDictionary
 
 [Description for addToDictionary]
 
@@ -45,7 +53,7 @@ public getDictionaryFilename(\Hubleto\Framework\Interfaces\CoreInterface $core, 
 public addToDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context, string $contextInner, string $string): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                                            | Description |
 |-----------------|-------------------------------------------------|-------------|
@@ -56,7 +64,7 @@ public addToDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string
 | `$string`       | **string**                                      |             |
 
 
-### loadDictionary
+### ƒ loadDictionary
 
 [Description for loadDictionary]
 
@@ -64,7 +72,7 @@ public addToDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string
 public loadDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                            | Description |
 |-------------|-------------------------------------------------|-------------|
@@ -73,7 +81,7 @@ public loadDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string 
 | `$context`  | **string**                                      |             |
 
 
-### loadFullDictionary
+### ƒ loadFullDictionary
 
 [Description for loadFullDictionary]
 
@@ -81,7 +89,7 @@ public loadDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string 
 public loadFullDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                            | Description |
 |-------------|-------------------------------------------------|-------------|
@@ -89,7 +97,7 @@ public loadFullDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, str
 | `$language` | **string**                                      |             |
 
 
-### translate
+### ƒ translate
 
 [Description for translate]
 
@@ -97,7 +105,7 @@ public loadFullDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, str
 public translate(\Hubleto\Framework\Interfaces\CoreInterface $service, string $string, array $vars = [], string $context = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type                                            | Description |
 |------------|-------------------------------------------------|-------------|

@@ -3,67 +3,67 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### isAjax
+### ƒ isAjax
 
 ```php
 public isAjax(): bool
 ```
 
 
-### extractParamsFromRequest
+### ƒ extractParamsFromRequest
 
 ```php
 public extractParamsFromRequest(): array
 ```
 
 
-### extractRouteFromRequest
+### ƒ extractRouteFromRequest
 
 ```php
 public extractRouteFromRequest(): string
 ```
 
 
-### get
+### ƒ get
 
 ```php
 public get(array $routes): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$routes` | **array** |             |
 
 
-### getRoutes
+### ƒ getRoutes
 
 ```php
 public getRoutes(string $method): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$method` | **string** |             |
 
 
-### parseRoute
+### ƒ parseRoute
 
 ```php
 public parseRoute(string $method, string $route): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -71,118 +71,118 @@ public parseRoute(string $method, string $route): array
 | `$route`  | **string** |             |
 
 
-### getRoute
+### ƒ getRoute
 
 ```php
 public getRoute(): string
 ```
 
 
-### setRoute
+### ƒ setRoute
 
 ```php
 public setRoute(string $route): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$route`  | **string** |             |
 
 
-### setRouteVars
+### ƒ setRouteVars
 
 ```php
 public setRouteVars(array $routeVars): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
 | `$routeVars` | **array** |             |
 
 
-### getRouteVars
+### ƒ getRouteVars
 
 ```php
 public getRouteVars(): array
 ```
 
 
-### getRouteVar
+### ƒ getRouteVar
 
 ```php
 public getRouteVar(string|int $varIndex): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsString
+### ƒ routeVarAsString
 
 ```php
 public routeVarAsString(string|int $varIndex): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsInteger
+### ƒ routeVarAsInteger
 
 ```php
 public routeVarAsInteger(string|int $varIndex): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsFloat
+### ƒ routeVarAsFloat
 
 ```php
 public routeVarAsFloat(string|int $varIndex): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsBool
+### ƒ routeVarAsBool
 
 ```php
 public routeVarAsBool(string|int $varIndex): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### redirectTo
+### ƒ redirectTo
 
 ```php
 public redirectTo(string $url, int $code = 302): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -190,46 +190,46 @@ public redirectTo(string $url, int $code = 302): void
 | `$code`   | **int**    |             |
 
 
-### getUrlParams
+### ƒ getUrlParams
 
 ```php
 public getUrlParams(): array
 ```
 
 
-### isUrlParam
+### ƒ isUrlParam
 
 ```php
 public isUrlParam(string $paramName): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
 
-### urlParamNotEmpty
+### ƒ urlParamNotEmpty
 
 ```php
 public urlParamNotEmpty(string $paramName): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
 
-### setUrlParam
+### ƒ setUrlParam
 
 ```php
 public setUrlParam(string $paramName, string $newValue): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
@@ -237,26 +237,26 @@ public setUrlParam(string $paramName, string $newValue): void
 | `$newValue`  | **string** |             |
 
 
-### removeUrlParam
+### ƒ removeUrlParam
 
 ```php
 public removeUrlParam(string $paramName): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
 
-### urlParamAsString
+### ƒ urlParamAsString
 
 ```php
 public urlParamAsString(string $paramName, string $defaultValue = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -264,13 +264,13 @@ public urlParamAsString(string $paramName, string $defaultValue = ''): string
 | `$defaultValue` | **string** |             |
 
 
-### urlParamAsInteger
+### ƒ urlParamAsInteger
 
 ```php
 public urlParamAsInteger(string $paramName, int $defaultValue): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -278,13 +278,13 @@ public urlParamAsInteger(string $paramName, int $defaultValue): int
 | `$defaultValue` | **int**    |             |
 
 
-### urlParamAsFloat
+### ƒ urlParamAsFloat
 
 ```php
 public urlParamAsFloat(string $paramName, float $defaultValue): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -292,13 +292,13 @@ public urlParamAsFloat(string $paramName, float $defaultValue): float
 | `$defaultValue` | **float**  |             |
 
 
-### urlParamAsBool
+### ƒ urlParamAsBool
 
 ```php
 public urlParamAsBool(string $paramName, bool $defaultValue = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -306,13 +306,13 @@ public urlParamAsBool(string $paramName, bool $defaultValue = false): bool
 | `$defaultValue` | **bool**   |             |
 
 
-### urlParamAsArray
+### ƒ urlParamAsArray
 
 ```php
 public urlParamAsArray(string $paramName, array $defaultValue = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|

@@ -8,32 +8,40 @@ Default implementation of dependency injection.
 
 ## Properties
 
-### serviceProviders
+
+<div class="mt-2">&nbsp;</div>
+### ☍ serviceProviders
+```php
+private static array<string,string> $serviceProviders
+```
 
 [Description for $serviceProviders]
 
-`private static array<string,string> $serviceProviders`
 
 * This property is **static**.
 
 
-### services
 
-`private static array $services`
+<div class="mt-2">&nbsp;</div>
+### ☍ services
+```php
+private static array $services
+```
+
 
 * This property is **static**.
 
 
 ## Methods
 
-### setServiceProvider
+### ƒ setServiceProvider
 
 ```php
 public static setServiceProvider(string $service, string $provider): void
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -41,28 +49,28 @@ public static setServiceProvider(string $service, string $provider): void
 | `$provider` | **string** |             |
 
 
-### setServiceProviders
+### ƒ setServiceProviders
 
 ```php
 public static setServiceProviders(array $providers): void
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
 | `$providers` | **array** |             |
 
 
-### create
+### ƒ create
 
 ```php
 public static create(string $service, bool $noSingleton = false): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|

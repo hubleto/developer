@@ -6,29 +6,45 @@
 
 ## Properties
 
-### ui
 
-`public array $ui`
-
-
-### permissions
-
-`public array $permissions`
+<div class="mt-2">&nbsp;</div>
+### ☍ ui
+```php
+public array $ui
+```
 
 
-### columns
-
-`public array $columns`
 
 
-### inputs
+<div class="mt-2">&nbsp;</div>
+### ☍ permissions
+```php
+public array $permissions
+```
 
-`public array $inputs`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ columns
+```php
+public array $columns
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ inputs
+```php
+public array $inputs
+```
+
 
 
 ## Methods
 
-### jsonSerialize
+### ƒ jsonSerialize
 
 [Description for jsonSerialize]
 
@@ -37,7 +53,7 @@ public jsonSerialize(): array
 ```
 
 
-### toArray
+### ƒ toArray
 
 [Description for toArray]
 
@@ -46,7 +62,7 @@ public toArray(): array
 ```
 
 
-### show
+### ƒ show
 
 [Description for show]
 
@@ -54,14 +70,14 @@ public toArray(): array
 public show(array $what): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$what`   | **array** |             |
 
 
-### hide
+### ƒ hide
 
 [Description for hide]
 
@@ -69,14 +85,14 @@ public show(array $what): void
 public hide(array $what): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$what`   | **array** |             |
 
 
-### showOnlyColumns
+### ƒ showOnlyColumns
 
 [Description for showOnlyColumns]
 
@@ -84,14 +100,14 @@ public hide(array $what): void
 public showOnlyColumns(array $columnNames): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$columnNames` | **array** |             |
 
 
-### addFilter
+### ƒ addFilter
 
 [Description for addFilter]
 
@@ -99,7 +115,7 @@ public showOnlyColumns(array $columnNames): void
 public addFilter(string $filterName, array $filterConfig): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|

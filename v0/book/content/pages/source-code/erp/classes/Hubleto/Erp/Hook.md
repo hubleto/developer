@@ -6,7 +6,7 @@
 
 ## Methods
 
-### run
+### ƒ run
 
 [Description for run]
 
@@ -14,7 +14,7 @@
 public run(string $event, array $args): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|

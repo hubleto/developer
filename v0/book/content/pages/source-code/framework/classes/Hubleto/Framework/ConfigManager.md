@@ -8,77 +8,85 @@ Configuration management for the Hubleto project.
 
 ## Properties
 
-### configData
 
-`protected array $configData`
+<div class="mt-2">&nbsp;</div>
+### ☍ configData
+```php
+protected array $configData
+```
 
 
-### prefix
 
-`private string $prefix`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ prefix
+```php
+private string $prefix
+```
+
 
 
 ## Methods
 
-### forApp
+### ƒ forApp
 
 ```php
 public forApp(string $appClass): \Hubleto\Framework\ConfigManager
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$appClass` | **string** |             |
 
 
-### setPrefix
+### ƒ setPrefix
 
 ```php
 public setPrefix(string $prefix): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$prefix` | **string** |             |
 
 
-### setConfig
+### ƒ setConfig
 
 ```php
 public setConfig(array $configData): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$configData` | **array** |             |
 
 
-### empty
+### ƒ empty
 
 ```php
 public empty(string $path): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
 
-### get
+### ƒ get
 
 ```php
 public get(string $path = '', mixed $default = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -86,13 +94,13 @@ public get(string $path = '', mixed $default = null): mixed
 | `$default` | **mixed**  |             |
 
 
-### getAsString
+### ƒ getAsString
 
 ```php
 public getAsString(string $path, string $defaultValue = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -100,13 +108,13 @@ public getAsString(string $path, string $defaultValue = ''): string
 | `$defaultValue` | **string** |             |
 
 
-### getAsInteger
+### ƒ getAsInteger
 
 ```php
 public getAsInteger(string $path, int $defaultValue): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -114,13 +122,13 @@ public getAsInteger(string $path, int $defaultValue): int
 | `$defaultValue` | **int**    |             |
 
 
-### getAsFloat
+### ƒ getAsFloat
 
 ```php
 public getAsFloat(string $path, float $defaultValue): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -128,13 +136,13 @@ public getAsFloat(string $path, float $defaultValue): float
 | `$defaultValue` | **float**  |             |
 
 
-### getAsBool
+### ƒ getAsBool
 
 ```php
 public getAsBool(string $path, bool $defaultValue = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -142,13 +150,13 @@ public getAsBool(string $path, bool $defaultValue = false): bool
 | `$defaultValue` | **bool**   |             |
 
 
-### getAsArray
+### ƒ getAsArray
 
 ```php
 public getAsArray(string $path, array $defaultValue = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -156,13 +164,13 @@ public getAsArray(string $path, array $defaultValue = []): array
 | `$defaultValue` | **array**  |             |
 
 
-### set
+### ƒ set
 
 ```php
 public set(string $path, mixed $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -170,13 +178,13 @@ public set(string $path, mixed $value): void
 | `$value`  | **mixed**  |             |
 
 
-### save
+### ƒ save
 
 ```php
 public save(string $path, string $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -184,13 +192,13 @@ public save(string $path, string $value): void
 | `$value`  | **string** |             |
 
 
-### saveForUser
+### ƒ saveForUser
 
 ```php
 public saveForUser(string $path, string $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -198,27 +206,27 @@ public saveForUser(string $path, string $value): void
 | `$value`  | **string** |             |
 
 
-### delete
+### ƒ delete
 
 ```php
 public delete(mixed $path): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$path`   | **mixed** |             |
 
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### filterByUser
+### ƒ filterByUser
 
 ```php
 public filterByUser(): void
@@ -227,14 +235,14 @@ public filterByUser(): void
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -243,14 +251,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -258,14 +266,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -274,7 +282,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -283,7 +291,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -292,7 +300,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -301,7 +309,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -310,7 +318,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -319,7 +327,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -328,7 +336,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -337,7 +345,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -346,7 +354,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -355,7 +363,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -364,7 +372,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -373,7 +381,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -382,7 +390,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -391,7 +399,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -400,7 +408,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -409,7 +417,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -417,14 +425,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -432,20 +440,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|

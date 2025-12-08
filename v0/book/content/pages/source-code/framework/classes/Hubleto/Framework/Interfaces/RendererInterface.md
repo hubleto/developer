@@ -3,27 +3,27 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### getTwig
+### ƒ getTwig
 
 ```php
 public getTwig(): \Twig\Environment
 ```
 
 
-### addNamespace
+### ƒ addNamespace
 
 ```php
 public addNamespace(string $folder, string $namespace): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
@@ -31,13 +31,13 @@ public addNamespace(string $folder, string $namespace): mixed
 | `$namespace` | **string** |             |
 
 
-### renderView
+### ƒ renderView
 
 ```php
 public renderView(string $view, array $vars = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -45,13 +45,13 @@ public renderView(string $view, array $vars = []): string
 | `$vars`   | **array**  |             |
 
 
-### render
+### ƒ render
 
 ```php
 public render(string $route = '', array $params = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -59,26 +59,26 @@ public render(string $route = '', array $params = []): string
 | `$params` | **array**  |             |
 
 
-### renderSuccess
+### ƒ renderSuccess
 
 ```php
 public renderSuccess(mixed $return): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$return` | **mixed** |             |
 
 
-### renderWarning
+### ƒ renderWarning
 
 ```php
 public renderWarning(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
@@ -86,13 +86,13 @@ public renderWarning(\Hubleto\Framework\Exceptions\Exception $exception, mixed $
 | `$isHtml`    | **mixed**                                   |             |
 
 
-### renderFatal
+### ƒ renderFatal
 
 ```php
 public renderFatal(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
@@ -100,26 +100,26 @@ public renderFatal(\Hubleto\Framework\Exceptions\Exception $exception, mixed $is
 | `$isHtml`    | **mixed**                                   |             |
 
 
-### renderHtmlFatal
+### ƒ renderHtmlFatal
 
 ```php
 public renderHtmlFatal(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
 | `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
-### renderExceptionHtml
+### ƒ renderExceptionHtml
 
 ```php
 public renderExceptionHtml(mixed $exception, array $args = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -127,27 +127,27 @@ public renderExceptionHtml(mixed $exception, array $args = []): string
 | `$args`      | **array** |             |
 
 
-### renderHtmlWarning
+### ƒ renderHtmlWarning
 
 ```php
 public renderHtmlWarning(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
 | `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 ```php
 public onBeforeRender(): void
 ```
 
 
-### onAfterRender
+### ƒ onAfterRender
 
 ```php
 public onAfterRender(): void

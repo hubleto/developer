@@ -8,14 +8,14 @@ Thrown when a database query execution is blocked by any foreign key constraint.
 
 ## Inherited methods
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
 ```
 
 
-### getResponseArray
+### ƒ getResponseArray
 
 ```php
 public getResponseArray(): array

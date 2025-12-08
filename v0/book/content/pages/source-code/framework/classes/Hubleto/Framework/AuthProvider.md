@@ -8,126 +8,150 @@ Default implementation of authentication provider.
 
 ## Properties
 
-### loginAttribute
 
-`public $loginAttribute`
-
-
-### passwordAttribute
-
-`public $passwordAttribute`
+<div class="mt-2">&nbsp;</div>
+### ☍ loginAttribute
+```php
+public $loginAttribute
+```
 
 
-### activeAttribute
-
-`public $activeAttribute`
 
 
-### verifyMethod
-
-`public $verifyMethod`
-
-
-### logInfo
-
-`public bool $logInfo`
+<div class="mt-2">&nbsp;</div>
+### ☍ passwordAttribute
+```php
+public $passwordAttribute
+```
 
 
-### user
 
-`public array $user`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ activeAttribute
+```php
+public $activeAttribute
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ verifyMethod
+```php
+public $verifyMethod
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ logInfo
+```php
+public bool $logInfo
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ user
+```php
+public array $user
+```
+
 
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### getUserFromSession
+### ƒ getUserFromSession
 
 ```php
 public getUserFromSession(): array
 ```
 
 
-### updateUserInSession
+### ƒ updateUserInSession
 
 ```php
 public updateUserInSession(array $user): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$user`   | **array** |             |
 
 
-### isUserInSession
+### ƒ isUserInSession
 
 ```php
 public isUserInSession(): bool
 ```
 
 
-### deleteSession
+### ƒ deleteSession
 
 ```php
 public deleteSession(): mixed
 ```
 
 
-### signIn
+### ƒ signIn
 
 ```php
 public signIn(array $user): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$user`   | **array** |             |
 
 
-### signOut
+### ƒ signOut
 
 ```php
 public signOut(): mixed
 ```
 
 
-### createUserModel
+### ƒ createUserModel
 
 ```php
 public createUserModel(): \Hubleto\Framework\Model
 ```
 
 
-### findUsersByLogin
+### ƒ findUsersByLogin
 
 ```php
 public findUsersByLogin(string $login): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$login`  | **string** |             |
 
 
-### verifyPassword
+### ƒ verifyPassword
 
 ```php
 public verifyPassword(mixed $password1, mixed $password2): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -135,96 +159,96 @@ public verifyPassword(mixed $password1, mixed $password2): bool
 | `$password2` | **mixed** |             |
 
 
-### getActiveUsers
+### ƒ getActiveUsers
 
 ```php
 public getActiveUsers(): array
 ```
 
 
-### auth
+### ƒ auth
 
 ```php
 public auth(): void
 ```
 
 
-### getUser
+### ƒ getUser
 
 ```php
 public getUser(): array
 ```
 
 
-### getUserType
+### ƒ getUserType
 
 ```php
 public getUserType(): int
 ```
 
 
-### getUserRoles
+### ƒ getUserRoles
 
 ```php
 public getUserRoles(): array
 ```
 
 
-### userHasRole
+### ƒ userHasRole
 
 ```php
 public userHasRole(int $idRole): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$idRole` | **int** |             |
 
 
-### getUserId
+### ƒ getUserId
 
 ```php
 public getUserId(): int
 ```
 
 
-### getUserEmail
+### ƒ getUserEmail
 
 ```php
 public getUserEmail(): string
 ```
 
 
-### forgotPassword
+### ƒ forgotPassword
 
 ```php
 public forgotPassword(): void
 ```
 
 
-### resetPassword
+### ƒ resetPassword
 
 ```php
 public resetPassword(): void
 ```
 
 
-### getUserLanguage
+### ƒ getUserLanguage
 
 ```php
 public getUserLanguage(): string
 ```
 
 
-### setUserLanguage
+### ƒ setUserLanguage
 
 ```php
 public setUserLanguage(string $language): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -233,14 +257,14 @@ public setUserLanguage(string $language): void
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -249,14 +273,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -264,14 +288,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -280,7 +304,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -289,7 +313,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -298,7 +322,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -307,7 +331,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -316,7 +340,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -325,7 +349,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -334,7 +358,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -343,7 +367,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -352,7 +376,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -361,7 +385,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -370,7 +394,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -379,7 +403,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -388,7 +412,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -397,7 +421,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -406,7 +430,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -415,7 +439,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -423,14 +447,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -438,20 +462,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|

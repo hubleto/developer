@@ -3,53 +3,53 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### log
+### ƒ log
 
 ```php
 public log(string $msg): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$msg`    | **string** |             |
 
 
-### addHook
+### ƒ addHook
 
 ```php
 public addHook(string $hookClass): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$hookClass` | **string** |             |
 
 
-### getHooks
+### ƒ getHooks
 
 ```php
 public getHooks(): array
 ```
 
 
-### run
+### ƒ run
 
 ```php
 public run(string $trigger, array $args): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|

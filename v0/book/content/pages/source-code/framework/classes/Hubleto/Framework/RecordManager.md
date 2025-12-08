@@ -8,7 +8,7 @@ Default record manager for Hubleto projects. Uses Laravel's Eloquent.
 
 ## Methods
 
-### getPermissions
+### ƒ getPermissions
 
 [Description for getPermissions]
 
@@ -16,14 +16,14 @@ Default record manager for Hubleto projects. Uses Laravel's Eloquent.
 public getPermissions(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### prepareReadQuery
+### ƒ prepareReadQuery
 
 [Description for prepareReadQuery]
 
@@ -31,7 +31,7 @@ public getPermissions(array $record): array
 public prepareReadQuery(mixed $query = null, int $level): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -41,20 +41,20 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(array $attributes = []): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$attributes` | **array** |             |
 
 
-### getPermissions
+### ƒ getPermissions
 
 [Description for getPermissions]
 
@@ -62,14 +62,14 @@ public __construct(array $attributes = []): mixed
 public getPermissions(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### prepareReadQuery
+### ƒ prepareReadQuery
 
 [Description for prepareReadQuery]
 
@@ -77,7 +77,7 @@ public getPermissions(array $record): array
 public prepareReadQuery(mixed|null $query = null, int $level): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type            | Description |
 |-----------|-----------------|-------------|
@@ -85,7 +85,7 @@ public prepareReadQuery(mixed|null $query = null, int $level): mixed
 | `$level`  | **int**         |             |
 
 
-### recordGet
+### ƒ recordGet
 
 [Description for recordGet]
 
@@ -93,14 +93,14 @@ public prepareReadQuery(mixed|null $query = null, int $level): mixed
 public recordGet(callable|null $queryModifierCallback = null): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter                | Type               | Description |
 |--------------------------|--------------------|-------------|
 | `$queryModifierCallback` | **callable\|null** |             |
 
 
-### prepareLookupQuery
+### ƒ prepareLookupQuery
 
 [Description for prepareLookupQuery]
 
@@ -108,14 +108,14 @@ public recordGet(callable|null $queryModifierCallback = null): array
 public prepareLookupQuery(string $search): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$search` | **string** |             |
 
 
-### prepareLookupData
+### ƒ prepareLookupData
 
 [Description for prepareLookupData]
 
@@ -123,14 +123,14 @@ public prepareLookupQuery(string $search): mixed
 public prepareLookupData(array $dataRaw): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
 | `$dataRaw` | **array** |             |
 
 
-### addFulltextSearchToQuery
+### ƒ addFulltextSearchToQuery
 
 [Description for addFulltextSearchToQuery]
 
@@ -138,7 +138,7 @@ public prepareLookupData(array $dataRaw): array
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
@@ -146,7 +146,7 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 | `$fulltextSearch` | **string** |             |
 
 
-### addColumnSearchToQuery
+### ƒ addColumnSearchToQuery
 
 [Description for addColumnSearchToQuery]
 
@@ -154,7 +154,7 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
@@ -162,7 +162,7 @@ public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 | `$columnSearch` | **array** |             |
 
 
-### addOrderByToQuery
+### ƒ addOrderByToQuery
 
 [Description for addOrderByToQuery]
 
@@ -170,7 +170,7 @@ public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -178,7 +178,7 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 | `$orderBy` | **array** |             |
 
 
-### recordReadMany
+### ƒ recordReadMany
 
 [Description for recordReadMany]
 
@@ -186,7 +186,7 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
@@ -195,7 +195,7 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 | `$page`         | **int**   |             |
 
 
-### recordRead
+### ƒ recordRead
 
 [Description for recordRead]
 
@@ -203,14 +203,14 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 public recordRead(mixed $query): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$query`  | **mixed** |             |
 
 
-### recordEncryptIds
+### ƒ recordEncryptIds
 
 [Description for recordEncryptIds]
 
@@ -218,14 +218,14 @@ public recordRead(mixed $query): array
 public recordEncryptIds(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### recordDecryptIds
+### ƒ recordDecryptIds
 
 [Description for recordDecryptIds]
 
@@ -233,14 +233,14 @@ public recordEncryptIds(array $record): array
 public recordDecryptIds(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### recordCreate
+### ƒ recordCreate
 
 [Description for recordCreate]
 
@@ -248,7 +248,7 @@ public recordDecryptIds(array $record): array
 public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter              | Type      | Description |
 |------------------------|-----------|-------------|
@@ -256,7 +256,7 @@ public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 | `$useProvidedRecordId` | **mixed** |             |
 
 
-### recordUpdate
+### ƒ recordUpdate
 
 [Description for recordUpdate]
 
@@ -264,7 +264,7 @@ public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 public recordUpdate(array $record, array $originalRecord = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -272,7 +272,7 @@ public recordUpdate(array $record, array $originalRecord = []): array
 | `$originalRecord` | **array** |             |
 
 
-### recordDelete
+### ƒ recordDelete
 
 [Description for recordDelete]
 
@@ -280,14 +280,14 @@ public recordUpdate(array $record, array $originalRecord = []): array
 public recordDelete(int|string $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type            | Description |
 |-----------|-----------------|-------------|
 | `$id`     | **int\|string** |             |
 
 
-### recordSave
+### ƒ recordSave
 
 [Description for recordSave]
 
@@ -295,7 +295,7 @@ public recordDelete(int|string $id): int
 public recordSave(array $record, int $idMasterRecord, array $saveRelations = [], string $relation = ''): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
@@ -305,7 +305,7 @@ public recordSave(array $record, int $idMasterRecord, array $saveRelations = [],
 | `$relation`       | **string** |             |
 
 
-### recordValidate
+### ƒ recordValidate
 
 [Description for recordValidate]
 
@@ -313,7 +313,7 @@ public recordSave(array $record, int $idMasterRecord, array $saveRelations = [],
 public recordValidate(array $record, array $validateRelations = [], string $relation = ''): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter            | Type       | Description |
 |----------------------|------------|-------------|
@@ -322,7 +322,7 @@ public recordValidate(array $record, array $validateRelations = [], string $rela
 | `$relation`          | **string** |             |
 
 
-### recordNormalize
+### ƒ recordNormalize
 
 [Description for recordNormalize]
 
@@ -330,7 +330,7 @@ public recordValidate(array $record, array $validateRelations = [], string $rela
 public recordNormalize(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|

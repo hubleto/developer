@@ -3,97 +3,97 @@
 
 ## Methods
 
-### validateInputs
+### ƒ validateInputs
 
 ```php
 public validateInputs(): bool
 ```
 
 
-### preInit
+### ƒ preInit
 
 ```php
 public preInit(): void
 ```
 
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### postInit
+### ƒ postInit
 
 ```php
 public postInit(): void
 ```
 
 
-### run
+### ƒ run
 
 ```php
 public run(): mixed
 ```
 
 
-### renderString
+### ƒ renderString
 
 ```php
 public renderString(): string
 ```
 
 
-### renderJson
+### ƒ renderJson
 
 ```php
 public renderJson(): array
 ```
 
 
-### prepareViewParams
+### ƒ prepareViewParams
 
 ```php
 public prepareViewParams(): mixed
 ```
 
 
-### prepareView
+### ƒ prepareView
 
 ```php
 public prepareView(): void
 ```
 
 
-### setView
+### ƒ setView
 
 ```php
 public setView(string $view): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$view`   | **string** |             |
 
 
-### getView
+### ƒ getView
 
 ```php
 public getView(): string
 ```
 
 
-### getViewParams
+### ƒ getViewParams
 
 ```php
 public getViewParams(): array
 ```
 
 
-### render
+### ƒ render
 
 ```php
 public render(): string

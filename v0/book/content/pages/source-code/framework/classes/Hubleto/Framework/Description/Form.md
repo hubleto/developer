@@ -6,41 +6,61 @@
 
 ## Properties
 
-### ui
 
-`public array $ui`
-
-
-### permissions
-
-`public array $permissions`
+<div class="mt-2">&nbsp;</div>
+### ☍ ui
+```php
+public array $ui
+```
 
 
-### inputs
-
-`public array $inputs`
 
 
-### defaultValues
+<div class="mt-2">&nbsp;</div>
+### ☍ permissions
+```php
+public array $permissions
+```
 
-`public array $defaultValues`
 
 
-### includeRelations
 
-`public array $includeRelations`
+<div class="mt-2">&nbsp;</div>
+### ☍ inputs
+```php
+public array $inputs
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ defaultValues
+```php
+public array $defaultValues
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ includeRelations
+```php
+public array $includeRelations
+```
+
 
 
 ## Methods
 
-### jsonSerialize
+### ƒ jsonSerialize
 
 ```php
 public jsonSerialize(): array
 ```
 
 
-### toArray
+### ƒ toArray
 
 ```php
 public toArray(): array

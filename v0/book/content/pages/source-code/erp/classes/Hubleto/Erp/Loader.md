@@ -6,14 +6,18 @@
 
 ## Properties
 
-### translationContext
 
-`public string $translationContext`
+<div class="mt-2">&nbsp;</div>
+### ☍ translationContext
+```php
+public string $translationContext
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 Class construtor.
 
@@ -21,14 +25,14 @@ Class construtor.
 public __construct(array $config = []): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$config` | **array** |             |
 
 
-### init
+### ƒ init
 
 Init phase after constructing.
 

@@ -15,20 +15,24 @@ action occurs. Thrown by model's recordValidate() method.
 
 ## Properties
 
-### invalidInputs
 
-`public array $invalidInputs`
+<div class="mt-2">&nbsp;</div>
+### ☍ invalidInputs
+```php
+public array $invalidInputs
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(string $message, array $invalidInputs = [], mixed $previous = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter        | Type       | Description |
 |------------------|------------|-------------|
@@ -37,7 +41,7 @@ public __construct(string $message, array $invalidInputs = [], mixed $previous =
 | `$previous`      | **mixed**  |             |
 
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
@@ -46,14 +50,14 @@ public getExtraParams(): array
 
 ## Inherited methods
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
 ```
 
 
-### getResponseArray
+### ƒ getResponseArray
 
 ```php
 public getResponseArray(): array

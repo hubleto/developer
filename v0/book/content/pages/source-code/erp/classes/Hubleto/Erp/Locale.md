@@ -8,7 +8,7 @@ Methods to support locale in Hubleto project.
 
 ## Methods
 
-### getTimezone
+### ƒ getTimezone
 
 [Description for getTimezone]
 

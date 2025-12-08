@@ -3,39 +3,39 @@
 
 ## Methods
 
-### initInternalLogger
+### ƒ initInternalLogger
 
 ```php
 public initInternalLogger(string $loggerName = ""): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$loggerName` | **string** |             |
 
 
-### getInternalLogger
+### ƒ getInternalLogger
 
 ```php
 public getInternalLogger(mixed $loggerName): object
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$loggerName` | **mixed** |             |
 
 
-### cliEcho
+### ƒ cliEcho
 
 ```php
 public cliEcho(mixed $message, mixed $loggerName, mixed $severity): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
@@ -44,13 +44,13 @@ public cliEcho(mixed $message, mixed $loggerName, mixed $severity): void
 | `$severity`   | **mixed** |             |
 
 
-### debug
+### ƒ debug
 
 ```php
 public debug(mixed $message, array $context = [], mixed $loggerName = 'core'): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
@@ -59,13 +59,13 @@ public debug(mixed $message, array $context = [], mixed $loggerName = 'core'): v
 | `$loggerName` | **mixed** |             |
 
 
-### info
+### ƒ info
 
 ```php
 public info(mixed $message, array $context = [], mixed $loggerName = 'core'): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
@@ -74,13 +74,13 @@ public info(mixed $message, array $context = [], mixed $loggerName = 'core'): vo
 | `$loggerName` | **mixed** |             |
 
 
-### warning
+### ƒ warning
 
 ```php
 public warning(mixed $message, array $context = [], mixed $loggerName = 'core'): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
@@ -89,13 +89,13 @@ public warning(mixed $message, array $context = [], mixed $loggerName = 'core'):
 | `$loggerName` | **mixed** |             |
 
 
-### error
+### ƒ error
 
 ```php
 public error(mixed $message, array $context = [], mixed $loggerName = 'core'): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|

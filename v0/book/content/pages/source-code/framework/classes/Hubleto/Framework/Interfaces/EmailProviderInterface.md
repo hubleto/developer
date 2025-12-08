@@ -3,20 +3,20 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### getFormattedBody
+### ƒ getFormattedBody
 
 ```php
 public getFormattedBody(string $title, string $rawBody, string $template = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -25,13 +25,13 @@ public getFormattedBody(string $title, string $rawBody, string $template = ''): 
 | `$template` | **string** |             |
 
 
-### send
+### ƒ send
 
 ```php
 public send(string $to, string $subject, string $rawBody, string $template = '', string $fromName = 'Hubleto'): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -42,13 +42,13 @@ public send(string $to, string $subject, string $rawBody, string $template = '',
 | `$fromName` | **string** |             |
 
 
-### sendEmail
+### ƒ sendEmail
 
 ```php
 public sendEmail(string $to, string $subject, string $body, string $fromName = 'Hubleto'): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -58,13 +58,13 @@ public sendEmail(string $to, string $subject, string $body, string $fromName = '
 | `$fromName` | **string** |             |
 
 
-### sendResetPasswordEmail
+### ƒ sendResetPasswordEmail
 
 ```php
 public sendResetPasswordEmail(string $login, string $name, string $language, string $token): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -74,13 +74,13 @@ public sendResetPasswordEmail(string $login, string $name, string $language, str
 | `$token`    | **string** |             |
 
 
-### sendWelcomeEmail
+### ƒ sendWelcomeEmail
 
 ```php
 public sendWelcomeEmail(string $login, string $name, string $language, string $token): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|

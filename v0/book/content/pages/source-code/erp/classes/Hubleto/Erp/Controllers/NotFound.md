@@ -6,29 +6,45 @@
 
 ## Properties
 
-### requiresAuthenticatedUser
 
-`public bool $requiresAuthenticatedUser`
-
-
-### hideDefaultDesktop
-
-`public bool $hideDefaultDesktop`
+<div class="mt-2">&nbsp;</div>
+### ☍ requiresAuthenticatedUser
+```php
+public bool $requiresAuthenticatedUser
+```
 
 
-### translationContext
-
-`public string $translationContext`
 
 
-### translationContextInner
+<div class="mt-2">&nbsp;</div>
+### ☍ hideDefaultDesktop
+```php
+public bool $hideDefaultDesktop
+```
 
-`public string $translationContextInner`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ translationContext
+```php
+public string $translationContext
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ translationContextInner
+```php
+public string $translationContextInner
+```
+
 
 
 ## Methods
 
-### prepareView
+### ƒ prepareView
 
 Used to set parametere for the view renderer.
 
@@ -39,21 +55,21 @@ public prepareView(): void
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### activeUserHasPermission
+### ƒ activeUserHasPermission
 
 ```php
 public activeUserHasPermission(): bool
 ```
 
 
-### validateInputs
+### ƒ validateInputs
 
 Executed after the init() phase.
 
@@ -66,7 +82,7 @@ Validates inputs used for the TWIG template.
 return bool True if inputs are valid, otherwise false.
 
 
-### init
+### ƒ init
 
 Executed at the end of the constructor.
 
@@ -74,13 +90,13 @@ Executed at the end of the constructor.
 public init(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](../../../Exception)
 
 
-### prepareView
+### ƒ prepareView
 
 Used to set parametere for the view renderer.
 
@@ -89,20 +105,20 @@ public prepareView(): void
 ```
 
 
-### setView
+### ƒ setView
 
 ```php
 public setView(string $view): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$view`   | **string** |             |
 
 
-### getBreadcrumbs
+### ƒ getBreadcrumbs
 
 ```php
 public getBreadcrumbs(): array

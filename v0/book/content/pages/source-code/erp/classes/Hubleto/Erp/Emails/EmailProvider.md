@@ -6,70 +6,98 @@
 
 ## Properties
 
-### defaultEmailTemplate
 
-`private string $defaultEmailTemplate`
-
-
-### smtpHost
-
-`private string $smtpHost`
+<div class="mt-2">&nbsp;</div>
+### ☍ defaultEmailTemplate
+```php
+private string $defaultEmailTemplate
+```
 
 
-### smtpPort
-
-`private int $smtpPort`
 
 
-### smtpEncryption
-
-`private string $smtpEncryption`
-
-
-### smtpUsername
-
-`private string $smtpUsername`
+<div class="mt-2">&nbsp;</div>
+### ☍ smtpHost
+```php
+private string $smtpHost
+```
 
 
-### smtpPassword
-
-`private string $smtpPassword`
 
 
-### main
+<div class="mt-2">&nbsp;</div>
+### ☍ smtpPort
+```php
+private int $smtpPort
+```
 
-`public \Hubleto\Framework\Loader $main`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ smtpEncryption
+```php
+private string $smtpEncryption
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ smtpUsername
+```php
+private string $smtpUsername
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ smtpPassword
+```php
+private string $smtpPassword
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ main
+```php
+public \Hubleto\Framework\Loader $main
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(\Hubleto\Framework\Loader $main): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                          | Description |
 |-----------|-------------------------------|-------------|
 | `$main`   | **\Hubleto\Framework\Loader** |             |
 
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### getFormattedBody
+### ƒ getFormattedBody
 
 ```php
 public getFormattedBody(string $title, string $rawBody, string $template = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -78,7 +106,7 @@ public getFormattedBody(string $title, string $rawBody, string $template = ''): 
 | `$template` | **string** |             |
 
 
-### send
+### ƒ send
 
 [Description for send]
 
@@ -86,7 +114,7 @@ public getFormattedBody(string $title, string $rawBody, string $template = ''): 
 public send(string $to, string $subject, string $rawBody, string $template = '', string $fromName = 'Hubleto'): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -97,7 +125,7 @@ public send(string $to, string $subject, string $rawBody, string $template = '',
 | `$fromName` | **string** |             |
 
 
-### sendEmail
+### ƒ sendEmail
 
 [Description for sendEmail]
 
@@ -105,7 +133,7 @@ public send(string $to, string $subject, string $rawBody, string $template = '',
 public sendEmail(string $to, string $subject, string $body, string $fromName = 'Hubleto'): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -115,7 +143,7 @@ public sendEmail(string $to, string $subject, string $body, string $fromName = '
 | `$fromName` | **string** |             |
 
 
-### sendResetPasswordEmail
+### ƒ sendResetPasswordEmail
 
 [Description for sendResetPasswordEmail]
 
@@ -123,7 +151,7 @@ public sendEmail(string $to, string $subject, string $body, string $fromName = '
 public sendResetPasswordEmail(string $login, string $name, string $language, string $token): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -133,7 +161,7 @@ public sendResetPasswordEmail(string $login, string $name, string $language, str
 | `$token`    | **string** |             |
 
 
-### sendWelcomeEmail
+### ƒ sendWelcomeEmail
 
 [Description for sendWelcomeEmail]
 
@@ -141,7 +169,7 @@ public sendResetPasswordEmail(string $login, string $name, string $language, str
 public sendWelcomeEmail(string $login, string $name, string $language, string $token): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|

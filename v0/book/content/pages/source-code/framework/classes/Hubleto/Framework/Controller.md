@@ -20,118 +20,182 @@ be rendered using Twig template or using custom render() method.
 
 ## Properties
 
-### gtp
+
+<div class="mt-2">&nbsp;</div>
+### ☍ gtp
+```php
+protected string $gtp
+```
 
 Shorthand for "global table prefix"
 
-`protected string $gtp`
 
 
-### params
+
+<div class="mt-2">&nbsp;</div>
+### ☍ params
+```php
+public array $params
+```
 
 DEPRECATED Array of parameters (arguments) passed to the controller
 
-`public array $params`
 
 
-### permissionsByUserRole
+
+<div class="mt-2">&nbsp;</div>
+### ☍ permissionsByUserRole
+```php
+public static array $permissionsByUserRole
+```
 
 TRUE/FALSE array with permissions for the user role
 
-`public static array $permissionsByUserRole`
 
 * This property is **static**.
 
 
-### requiresAuthenticatedUser
+
+<div class="mt-2">&nbsp;</div>
+### ☍ requiresAuthenticatedUser
+```php
+public bool $requiresAuthenticatedUser
+```
 
 If set to FALSE, the rendered content of controller is available to public
 
-`public bool $requiresAuthenticatedUser`
 
 
-### permittedForAllUsers
+
+<div class="mt-2">&nbsp;</div>
+### ☍ permittedForAllUsers
+```php
+public bool $permittedForAllUsers
+```
 
 If set to TRUE, the controller's permissions is not checked.
 
-`public bool $permittedForAllUsers`
 
 
-### hideDefaultDesktop
+
+<div class="mt-2">&nbsp;</div>
+### ☍ hideDefaultDesktop
+```php
+public bool $hideDefaultDesktop
+```
 
 If set to TRUE, the default desktop will not be added to the rendered content
 
-`public bool $hideDefaultDesktop`
 
 
-### cliSAPIEnabled
+
+<div class="mt-2">&nbsp;</div>
+### ☍ cliSAPIEnabled
+```php
+public static bool $cliSAPIEnabled
+```
 
 If set to FALSE, the controller will not be rendered in CLI
 
-`public static bool $cliSAPIEnabled`
 
 * This property is **static**.
 
 
-### webSAPIEnabled
+
+<div class="mt-2">&nbsp;</div>
+### ☍ webSAPIEnabled
+```php
+public static bool $webSAPIEnabled
+```
 
 If set to FALSE, the controller will not be rendered in WEB
 
-`public static bool $webSAPIEnabled`
 
 * This property is **static**.
 
 
-### dictionary
 
-`public array $dictionary`
-
-
-### viewParams
-
-`protected array $viewParams`
+<div class="mt-2">&nbsp;</div>
+### ☍ dictionary
+```php
+public array $dictionary
+```
 
 
-### name
-
-`public string $name`
 
 
-### shortName
-
-`public string $shortName`
-
-
-### fullName
-
-`public string $fullName`
+<div class="mt-2">&nbsp;</div>
+### ☍ viewParams
+```php
+protected array $viewParams
+```
 
 
-### permission
-
-`public string $permission`
 
 
-### view
+<div class="mt-2">&nbsp;</div>
+### ☍ name
+```php
+public string $name
+```
 
-`public string $view`
 
 
-### returnType
 
-`public int $returnType`
+<div class="mt-2">&nbsp;</div>
+### ☍ shortName
+```php
+public string $shortName
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ fullName
+```php
+public string $fullName
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ permission
+```php
+public string $permission
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ view
+```php
+public string $view
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ returnType
+```php
+public int $returnType
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### validateInputs
+### ƒ validateInputs
 
 Validates inputs used for the TWIG template.
 
@@ -142,7 +206,7 @@ public validateInputs(): bool
 return bool True if inputs are valid, otherwise false.
 
 
-### preInit
+### ƒ preInit
 
 1st phase of controller's initialization phase.
 
@@ -150,13 +214,13 @@ return bool True if inputs are valid, otherwise false.
 public preInit(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](./Exception)
 
 
-### init
+### ƒ init
 
 2nd phase of controller's initialization phase.
 
@@ -164,13 +228,13 @@ Should throw an exception on error.
 public init(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](./Exception)
 
 
-### postInit
+### ƒ postInit
 
 3rd phase of controller's initialization phase.
 
@@ -178,27 +242,27 @@ Should throw an exception on error.
 public postInit(): void
 ```
 
-**Throws:**
+#### Throws
 
 Should throw an exception on error.
 - [`Exception`](./Exception)
 
 
-### run
+### ƒ run
 
 ```php
 public run(): mixed
 ```
 
 
-### renderString
+### ƒ renderString
 
 ```php
 public renderString(): string
 ```
 
 
-### renderJson
+### ƒ renderJson
 
 If the controller shall only return JSON, this method must be overriden.
 
@@ -206,12 +270,12 @@ If the controller shall only return JSON, this method must be overriden.
 public renderJson(): array
 ```
 
-**Return Value:**
+#### Return Value
 
 Array to be returned as a JSON.
 
 
-### prepareViewParams
+### ƒ prepareViewParams
 
 If the controller shall return the HTML of the view, this method must be overriden.
 
@@ -219,12 +283,12 @@ If the controller shall return the HTML of the view, this method must be overrid
 public prepareViewParams(): array
 ```
 
-**Return Value:**
+#### Return Value
 
 View to be used to render the HTML.
 
 
-### prepareView
+### ƒ prepareView
 
 [Description for prepareView]
 
@@ -233,7 +297,7 @@ public prepareView(): void
 ```
 
 
-### setView
+### ƒ setView
 
 [Description for setView]
 
@@ -241,14 +305,14 @@ public prepareView(): void
 public setView(string $view): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$view`   | **string** |             |
 
 
-### getView
+### ƒ getView
 
 [Description for getView]
 
@@ -257,7 +321,7 @@ public getView(): string
 ```
 
 
-### getViewParams
+### ƒ getViewParams
 
 [Description for getViewParams]
 
@@ -266,7 +330,7 @@ public getViewParams(): array
 ```
 
 
-### render
+### ƒ render
 
 [Description for render]
 
@@ -277,14 +341,14 @@ public render(): string
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -293,14 +357,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -308,14 +372,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -324,7 +388,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -333,7 +397,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -342,7 +406,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -351,7 +415,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -360,7 +424,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -369,7 +433,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -378,7 +442,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -387,7 +451,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -396,7 +460,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -405,7 +469,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -414,7 +478,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -423,7 +487,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -432,7 +496,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -441,7 +505,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -450,7 +514,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -459,7 +523,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -467,14 +531,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -482,20 +546,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|

@@ -3,62 +3,62 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### createUserRoleModel
+### ƒ createUserRoleModel
 
 ```php
 public createUserRoleModel(): null|\Hubleto\Framework\Model
 ```
 
 
-### DANGEROUS__grantAllPermissions
+### ƒ DANGEROUS__grantAllPermissions
 
 ```php
 public DANGEROUS__grantAllPermissions(): void
 ```
 
 
-### revokeGrantAllPermissions
+### ƒ revokeGrantAllPermissions
 
 ```php
 public revokeGrantAllPermissions(): void
 ```
 
 
-### loadAdministratorRoles
+### ƒ loadAdministratorRoles
 
 ```php
 public loadAdministratorRoles(): array
 ```
 
 
-### loadAdministratorTypes
+### ƒ loadAdministratorTypes
 
 ```php
 public loadAdministratorTypes(): array
 ```
 
 
-### expandPermissionGroups
+### ƒ expandPermissionGroups
 
 ```php
 public expandPermissionGroups(): void
 ```
 
 
-### set
+### ƒ set
 
 ```php
 public set(string $permission, int $idUserRole, bool $isEnabled): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -67,26 +67,26 @@ public set(string $permission, int $idUserRole, bool $isEnabled): mixed
 | `$isEnabled`  | **bool**   |             |
 
 
-### hasRole
+### ƒ hasRole
 
 ```php
 public hasRole(int|string $role): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type            | Description |
 |-----------|-----------------|-------------|
 | `$role`   | **int\|string** |             |
 
 
-### granted
+### ƒ granted
 
 ```php
 public granted(string $permission, array $userRoles = [], int $userType): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -95,33 +95,33 @@ public granted(string $permission, array $userRoles = [], int $userType): bool
 | `$userType`   | **int**    |             |
 
 
-### check
+### ƒ check
 
 ```php
 public check(string $permission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
 
-### loadPermissions
+### ƒ loadPermissions
 
 ```php
 public loadPermissions(): array
 ```
 
 
-### isAppPermittedForActiveUser
+### ƒ isAppPermittedForActiveUser
 
 ```php
 public isAppPermittedForActiveUser(\Hubleto\Framework\Interfaces\AppInterface $app): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                                           | Description |
 |-----------|------------------------------------------------|-------------|

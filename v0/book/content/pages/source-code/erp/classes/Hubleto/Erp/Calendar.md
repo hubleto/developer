@@ -6,85 +6,97 @@
 
 ## Properties
 
-### calendarConfig
+
+<div class="mt-2">&nbsp;</div>
+### ☍ calendarConfig
+```php
+public array{"title": string, "formComponent": string} $calendarConfig
+```
 
 Specifies what Activity Form component will be opened and what title should be used for a new button in the `FormActivitySelector.tsx` component
 
-`public array{"title": string, "formComponent": string} $calendarConfig`
 
 
-### app
 
-`protected \Hubleto\Framework\Interfaces\AppInterface $app`
+<div class="mt-2">&nbsp;</div>
+### ☍ app
+```php
+protected \Hubleto\Framework\Interfaces\AppInterface $app
+```
 
 
-### color
 
-`protected string $color`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ color
+```php
+protected string $color
+```
+
 
 
 ## Methods
 
-### setApp
+### ƒ setApp
 
 ```php
 public setApp(\Hubleto\Framework\Interfaces\AppInterface $app): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                                           | Description |
 |-----------|------------------------------------------------|-------------|
 | `$app`    | **\Hubleto\Framework\Interfaces\AppInterface** |             |
 
 
-### getApp
+### ƒ getApp
 
 ```php
 public getApp(): \Hubleto\Framework\Interfaces\AppInterface
 ```
 
 
-### setColor
+### ƒ setColor
 
 ```php
 public setColor(string $color): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$color`  | **string** |             |
 
 
-### getColor
+### ƒ getColor
 
 ```php
 public getColor(): string
 ```
 
 
-### loadEvent
+### ƒ loadEvent
 
 ```php
 public loadEvent(int $id): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
 
-### loadEvents
+### ƒ loadEvents
 
 ```php
 public loadEvents(string $dateStart, string $dateEnd, array $filter = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
@@ -93,13 +105,13 @@ public loadEvents(string $dateStart, string $dateEnd, array $filter = []): array
 | `$filter`    | **array**  |             |
 
 
-### convertActivitiesToEvents
+### ƒ convertActivitiesToEvents
 
 ```php
 public convertActivitiesToEvents(string $source, array $activities, \Closure $detailsCallback): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type         | Description |
 |--------------------|--------------|-------------|

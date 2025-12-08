@@ -3,65 +3,65 @@
 
 ## Methods
 
-### forApp
+### ƒ forApp
 
 ```php
 public forApp(string $appClass): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$appClass` | **string** |             |
 
 
-### setPrefix
+### ƒ setPrefix
 
 ```php
 public setPrefix(string $prefix): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$prefix` | **string** |             |
 
 
-### setConfig
+### ƒ setConfig
 
 ```php
 public setConfig(array $configData): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$configData` | **array** |             |
 
 
-### empty
+### ƒ empty
 
 ```php
 public empty(string $path): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$path`   | **string** |             |
 
 
-### get
+### ƒ get
 
 ```php
 public get(string $path = '', mixed $default = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
@@ -69,13 +69,13 @@ public get(string $path = '', mixed $default = null): mixed
 | `$default` | **mixed**  |             |
 
 
-### getAsString
+### ƒ getAsString
 
 ```php
 public getAsString(string $path, string $defaultValue = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -83,13 +83,13 @@ public getAsString(string $path, string $defaultValue = ''): string
 | `$defaultValue` | **string** |             |
 
 
-### getAsInteger
+### ƒ getAsInteger
 
 ```php
 public getAsInteger(string $path, int $defaultValue): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -97,13 +97,13 @@ public getAsInteger(string $path, int $defaultValue): int
 | `$defaultValue` | **int**    |             |
 
 
-### getAsFloat
+### ƒ getAsFloat
 
 ```php
 public getAsFloat(string $path, float $defaultValue): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -111,13 +111,13 @@ public getAsFloat(string $path, float $defaultValue): float
 | `$defaultValue` | **float**  |             |
 
 
-### getAsBool
+### ƒ getAsBool
 
 ```php
 public getAsBool(string $path, bool $defaultValue = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -125,13 +125,13 @@ public getAsBool(string $path, bool $defaultValue = false): bool
 | `$defaultValue` | **bool**   |             |
 
 
-### getAsArray
+### ƒ getAsArray
 
 ```php
 public getAsArray(string $path, array $defaultValue = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -139,13 +139,13 @@ public getAsArray(string $path, array $defaultValue = []): array
 | `$defaultValue` | **array**  |             |
 
 
-### set
+### ƒ set
 
 ```php
 public set(string $path, mixed $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -153,13 +153,13 @@ public set(string $path, mixed $value): void
 | `$value`  | **mixed**  |             |
 
 
-### save
+### ƒ save
 
 ```php
 public save(string $path, string $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -167,13 +167,13 @@ public save(string $path, string $value): void
 | `$value`  | **string** |             |
 
 
-### saveForUser
+### ƒ saveForUser
 
 ```php
 public saveForUser(string $path, string $value): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -181,27 +181,27 @@ public saveForUser(string $path, string $value): void
 | `$value`  | **string** |             |
 
 
-### delete
+### ƒ delete
 
 ```php
 public delete(mixed $path): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$path`   | **mixed** |             |
 
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### filterByUser
+### ƒ filterByUser
 
 ```php
 public filterByUser(): void

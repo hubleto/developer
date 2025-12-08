@@ -3,27 +3,27 @@
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): mixed
 ```
 
 
-### connect
+### ƒ connect
 
 ```php
 public connect(): mixed
 ```
 
 
-### debugQuery
+### ƒ debugQuery
 
 ```php
 public debugQuery(mixed $query, mixed $data = []): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -31,13 +31,13 @@ public debugQuery(mixed $query, mixed $data = []): mixed
 | `$data`   | **mixed** |             |
 
 
-### execute
+### ƒ execute
 
 ```php
 public execute(string $query, array $data = []): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -45,13 +45,13 @@ public execute(string $query, array $data = []): void
 | `$data`   | **array**  |             |
 
 
-### fetchAll
+### ƒ fetchAll
 
 ```php
 public fetchAll(string $query, array $data = []): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -59,13 +59,13 @@ public fetchAll(string $query, array $data = []): mixed
 | `$data`   | **array**  |             |
 
 
-### fetchFirst
+### ƒ fetchFirst
 
 ```php
 public fetchFirst(string $query, array $data = []): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -73,21 +73,21 @@ public fetchFirst(string $query, array $data = []): mixed
 | `$data`   | **array**  |             |
 
 
-### startTransaction
+### ƒ startTransaction
 
 ```php
 public startTransaction(): void
 ```
 
 
-### commit
+### ƒ commit
 
 ```php
 public commit(): void
 ```
 
 
-### rollback
+### ƒ rollback
 
 ```php
 public rollback(): void

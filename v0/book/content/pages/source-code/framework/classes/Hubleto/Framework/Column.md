@@ -16,175 +16,303 @@
 
 ## Properties
 
-### model
 
-`protected \Hubleto\Framework\Model $model`
+<div class="mt-2">&nbsp;</div>
+### ☍ model
+```php
+protected \Hubleto\Framework\Model $model
+```
 
 
-### indexes
 
-`protected array $indexes`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ indexes
+```php
+protected array $indexes
+```
 
-### type
 
-`protected string $type`
 
 
-### sqlDataType
+<div class="mt-2">&nbsp;</div>
+### ☍ type
+```php
+protected string $type
+```
 
-`protected string $sqlDataType`
 
 
-### title
 
-`protected string $title`
+<div class="mt-2">&nbsp;</div>
+### ☍ sqlDataType
+```php
+protected string $sqlDataType
+```
 
 
-### readonly
 
-`protected bool $readonly`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ title
+```php
+protected string $title
+```
 
-### required
 
-`protected bool $required`
 
 
-### visibility
+<div class="mt-2">&nbsp;</div>
+### ☍ readonly
+```php
+protected bool $readonly
+```
 
-`protected int $visibility`
 
 
-### hidden
 
-`protected bool $hidden`
+<div class="mt-2">&nbsp;</div>
+### ☍ required
+```php
+protected bool $required
+```
 
 
-### rawSqlDefinition
 
-`protected string $rawSqlDefinition`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ visibility
+```php
+protected int $visibility
+```
 
-### placeholder
 
-`protected string $placeholder`
 
 
-### unit
+<div class="mt-2">&nbsp;</div>
+### ☍ hidden
+```php
+protected bool $hidden
+```
 
-`protected string $unit`
 
 
-### format
 
-`protected string $format`
+<div class="mt-2">&nbsp;</div>
+### ☍ rawSqlDefinition
+```php
+protected string $rawSqlDefinition
+```
 
 
-### description
 
-`protected string $description`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ placeholder
+```php
+protected string $placeholder
+```
 
-### defaultValue
 
-`protected mixed $defaultValue`
 
 
-### examples
+<div class="mt-2">&nbsp;</div>
+### ☍ unit
+```php
+protected string $unit
+```
 
-`protected array $examples`
 
 
-### enumValues
 
-`protected array $enumValues`
+<div class="mt-2">&nbsp;</div>
+### ☍ format
+```php
+protected string $format
+```
 
 
-### enumCssClasses
 
-`protected array $enumCssClasses`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ description
+```php
+protected string $description
+```
 
-### predefinedValues
 
-`protected array $predefinedValues`
 
 
-### colorScale
+<div class="mt-2">&nbsp;</div>
+### ☍ defaultValue
+```php
+protected mixed $defaultValue
+```
 
-`protected string $colorScale`
 
 
-### cssClass
 
-`protected string $cssClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ examples
+```php
+protected array $examples
+```
 
 
-### tableCellRenderer
 
-`protected string $tableCellRenderer`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ enumValues
+```php
+protected array $enumValues
+```
 
-### lookupModel
 
-`protected string $lookupModel`
 
 
-### reactComponent
+<div class="mt-2">&nbsp;</div>
+### ☍ enumCssClasses
+```php
+protected array $enumCssClasses
+```
 
-`protected string $reactComponent`
 
 
-### decimals
 
-`protected int $decimals`
+<div class="mt-2">&nbsp;</div>
+### ☍ predefinedValues
+```php
+protected array $predefinedValues
+```
 
 
-### step
 
-`protected float $step`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ colorScale
+```php
+protected string $colorScale
+```
 
-### icon
 
-`protected string $icon`
 
 
-### byteSize
+<div class="mt-2">&nbsp;</div>
+### ☍ cssClass
+```php
+protected string $cssClass
+```
 
-`protected int $byteSize`
 
 
-### inputProps
 
-`protected array $inputProps`
+<div class="mt-2">&nbsp;</div>
+### ☍ tableCellRenderer
+```php
+protected string $tableCellRenderer
+```
 
 
-### endpoint
 
-`protected string $endpoint`
 
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupModel
+```php
+protected string $lookupModel
+```
 
-### creatable
 
-`protected bool $creatable`
 
 
-### properties
+<div class="mt-2">&nbsp;</div>
+### ☍ reactComponent
+```php
+protected string $reactComponent
+```
 
-`protected array $properties`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ decimals
+```php
+protected int $decimals
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ step
+```php
+protected float $step
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ icon
+```php
+protected string $icon
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ byteSize
+```php
+protected int $byteSize
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ inputProps
+```php
+protected array $inputProps
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ endpoint
+```php
+protected string $endpoint
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ creatable
+```php
+protected bool $creatable
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ properties
+```php
+protected array $properties
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(\Hubleto\Framework\Model $model, string $title): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                         | Description |
 |-----------|------------------------------|-------------|
@@ -192,46 +320,46 @@ public __construct(\Hubleto\Framework\Model $model, string $title): mixed
 | `$title`  | **string**                   |             |
 
 
-### addIndex
+### ƒ addIndex
 
 ```php
 public addIndex(string $indexDefinition): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type       | Description |
 |--------------------|------------|-------------|
 | `$indexDefinition` | **string** |             |
 
 
-### getIndexes
+### ƒ getIndexes
 
 ```php
 public getIndexes(): array
 ```
 
 
-### getProperty
+### ƒ getProperty
 
 ```php
 public getProperty(string $pName): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$pName`  | **string** |             |
 
 
-### setProperty
+### ƒ setProperty
 
 ```php
 public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -239,621 +367,621 @@ public setProperty(string $pName, mixed $pValue): \Hubleto\Framework\Column
 | `$pValue` | **mixed**  |             |
 
 
-### getReactComponent
+### ƒ getReactComponent
 
 ```php
 public getReactComponent(): string
 ```
 
 
-### setReactComponent
+### ƒ setReactComponent
 
 ```php
 public setReactComponent(string $reactComponent): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
 | `$reactComponent` | **string** |             |
 
 
-### getByteSize
+### ƒ getByteSize
 
 ```php
 public getByteSize(): int
 ```
 
 
-### setByteSize
+### ƒ setByteSize
 
 ```php
 public setByteSize(int $byteSize): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type    | Description |
 |-------------|---------|-------------|
 | `$byteSize` | **int** |             |
 
 
-### getType
+### ƒ getType
 
 ```php
 public getType(): string
 ```
 
 
-### setType
+### ƒ setType
 
 ```php
 public setType(string $type): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$type`   | **string** |             |
 
 
-### getSqlDataType
+### ƒ getSqlDataType
 
 ```php
 public getSqlDataType(): string
 ```
 
 
-### setSqlDataType
+### ƒ setSqlDataType
 
 ```php
 public setSqlDataType(string $sqlDataType): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|
 | `$sqlDataType` | **string** |             |
 
 
-### getTitle
+### ƒ getTitle
 
 ```php
 public getTitle(): string
 ```
 
 
-### setTitle
+### ƒ setTitle
 
 ```php
 public setTitle(string $title): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$title`  | **string** |             |
 
 
-### getReadonly
+### ƒ getReadonly
 
 ```php
 public getReadonly(): bool
 ```
 
 
-### setReadonly
+### ƒ setReadonly
 
 ```php
 public setReadonly(bool $readonly = true): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type     | Description |
 |-------------|----------|-------------|
 | `$readonly` | **bool** |             |
 
 
-### getRequired
+### ƒ getRequired
 
 ```php
 public getRequired(): bool
 ```
 
 
-### setRequired
+### ƒ setRequired
 
 ```php
 public setRequired(bool $required = true): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type     | Description |
 |-------------|----------|-------------|
 | `$required` | **bool** |             |
 
 
-### getVisibility
+### ƒ getVisibility
 
 ```php
 public getVisibility(): int
 ```
 
 
-### setVisibility
+### ƒ setVisibility
 
 ```php
 public setVisibility(int $visibility): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type    | Description |
 |---------------|---------|-------------|
 | `$visibility` | **int** |             |
 
 
-### setAlwaysVisible
+### ƒ setAlwaysVisible
 
 ```php
 public setAlwaysVisible(): \Hubleto\Framework\Column
 ```
 
 
-### setAlwaysHidden
+### ƒ setAlwaysHidden
 
 ```php
 public setAlwaysHidden(): \Hubleto\Framework\Column
 ```
 
 
-### setDefaultVisible
+### ƒ setDefaultVisible
 
 ```php
 public setDefaultVisible(): \Hubleto\Framework\Column
 ```
 
 
-### setDefaultHidden
+### ƒ setDefaultHidden
 
 ```php
 public setDefaultHidden(): \Hubleto\Framework\Column
 ```
 
 
-### getPlaceholder
+### ƒ getPlaceholder
 
 ```php
 public getPlaceholder(): bool
 ```
 
 
-### setPlaceholder
+### ƒ setPlaceholder
 
 ```php
 public setPlaceholder(bool $placeholder = true): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type     | Description |
 |----------------|----------|-------------|
 | `$placeholder` | **bool** |             |
 
 
-### getUnit
+### ƒ getUnit
 
 ```php
 public getUnit(): string
 ```
 
 
-### setUnit
+### ƒ setUnit
 
 ```php
 public setUnit(string $unit): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$unit`   | **string** |             |
 
 
-### getColorScale
+### ƒ getColorScale
 
 ```php
 public getColorScale(): string
 ```
 
 
-### setColorScale
+### ƒ setColorScale
 
 ```php
 public setColorScale(string $colorScale): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$colorScale` | **string** |             |
 
 
-### getCssClass
+### ƒ getCssClass
 
 ```php
 public getCssClass(): string
 ```
 
 
-### setCssClass
+### ƒ setCssClass
 
 ```php
 public setCssClass(string $cssClass): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$cssClass` | **string** |             |
 
 
-### getFormat
+### ƒ getFormat
 
 ```php
 public getFormat(): bool
 ```
 
 
-### setFormat
+### ƒ setFormat
 
 ```php
 public setFormat(bool $format = true): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type     | Description |
 |-----------|----------|-------------|
 | `$format` | **bool** |             |
 
 
-### getDescription
+### ƒ getDescription
 
 ```php
 public getDescription(): string
 ```
 
 
-### setDescription
+### ƒ setDescription
 
 ```php
 public setDescription(string $description): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|
 | `$description` | **string** |             |
 
 
-### getExamples
+### ƒ getExamples
 
 ```php
 public getExamples(): array
 ```
 
 
-### setExamples
+### ƒ setExamples
 
 ```php
 public setExamples(array $examples): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type      | Description |
 |-------------|-----------|-------------|
 | `$examples` | **array** |             |
 
 
-### getEnumValues
+### ƒ getEnumValues
 
 ```php
 public getEnumValues(): array
 ```
 
 
-### setEnumValues
+### ƒ setEnumValues
 
 ```php
 public setEnumValues(array $enumValues): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$enumValues` | **array** |             |
 
 
-### getEnumCssClasses
+### ƒ getEnumCssClasses
 
 ```php
 public getEnumCssClasses(): array
 ```
 
 
-### setEnumCssClasses
+### ƒ setEnumCssClasses
 
 ```php
 public setEnumCssClasses(array $enumCssClasses): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
 | `$enumCssClasses` | **array** |             |
 
 
-### getPredefinedValues
+### ƒ getPredefinedValues
 
 ```php
 public getPredefinedValues(): array
 ```
 
 
-### setPredefinedValues
+### ƒ setPredefinedValues
 
 ```php
 public setPredefinedValues(array $predefinedValues): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter           | Type      | Description |
 |---------------------|-----------|-------------|
 | `$predefinedValues` | **array** |             |
 
 
-### getHidden
+### ƒ getHidden
 
 ```php
 public getHidden(): bool
 ```
 
 
-### setHidden
+### ƒ setHidden
 
 ```php
 public setHidden(bool $hidden = true): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type     | Description |
 |-----------|----------|-------------|
 | `$hidden` | **bool** |             |
 
 
-### getRawSqlDefinition
+### ƒ getRawSqlDefinition
 
 ```php
 public getRawSqlDefinition(): string
 ```
 
 
-### setRawSqlDefinition
+### ƒ setRawSqlDefinition
 
 ```php
 public setRawSqlDefinition(string $rawSqlDefinition): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter           | Type       | Description |
 |---------------------|------------|-------------|
 | `$rawSqlDefinition` | **string** |             |
 
 
-### getDefaultValue
+### ƒ getDefaultValue
 
 ```php
 public getDefaultValue(): mixed
 ```
 
 
-### setDefaultValue
+### ƒ setDefaultValue
 
 ```php
 public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
 | `$defaultValue` | **mixed** |             |
 
 
-### getTableCellRenderer
+### ƒ getTableCellRenderer
 
 ```php
 public getTableCellRenderer(): string
 ```
 
 
-### setTableCellRenderer
+### ƒ setTableCellRenderer
 
 ```php
 public setTableCellRenderer(string $tableCellRenderer): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter            | Type       | Description |
 |----------------------|------------|-------------|
 | `$tableCellRenderer` | **string** |             |
 
 
-### getLookupModel
+### ƒ getLookupModel
 
 ```php
 public getLookupModel(): string
 ```
 
 
-### setLookupModel
+### ƒ setLookupModel
 
 ```php
 public setLookupModel(string $lookupModel): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|
 | `$lookupModel` | **string** |             |
 
 
-### getDecimals
+### ƒ getDecimals
 
 ```php
 public getDecimals(): int
 ```
 
 
-### setDecimals
+### ƒ setDecimals
 
 ```php
 public setDecimals(int $decimals): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type    | Description |
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
 
 
-### getStep
+### ƒ getStep
 
 ```php
 public getStep(): float
 ```
 
 
-### setStep
+### ƒ setStep
 
 ```php
 public setStep(float $step): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$step`   | **float** |             |
 
 
-### getIcon
+### ƒ getIcon
 
 ```php
 public getIcon(): string
 ```
 
 
-### setIcon
+### ƒ setIcon
 
 ```php
 public setIcon(string $icon): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$icon`   | **string** |             |
 
 
-### getEndpoint
+### ƒ getEndpoint
 
 ```php
 public getEndpoint(): string
 ```
 
 
-### setEndpoint
+### ƒ setEndpoint
 
 ```php
 public setEndpoint(string $endpoint): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$endpoint` | **string** |             |
 
 
-### getCreatable
+### ƒ getCreatable
 
 ```php
 public getCreatable(): bool
 ```
 
 
-### setCreatable
+### ƒ setCreatable
 
 ```php
 public setCreatable(bool $creatable = true): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type     | Description |
 |--------------|----------|-------------|
 | `$creatable` | **bool** |             |
 
 
-### getInputProps
+### ƒ getInputProps
 
 ```php
 public getInputProps(): array
 ```
 
 
-### setInputProps
+### ƒ setInputProps
 
 ```php
 public setInputProps(array $inputProps): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
 | `$inputProps` | **array** |             |
 
 
-### setInputProp
+### ƒ setInputProp
 
 ```php
 public setInputProp(string $pName, mixed $pValue): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -861,93 +989,93 @@ public setInputProp(string $pName, mixed $pValue): \Hubleto\Framework\Column
 | `$pValue` | **mixed**  |             |
 
 
-### describeInput
+### ƒ describeInput
 
 ```php
 public describeInput(): \Hubleto\Framework\Description\Input
 ```
 
 
-### loadFromArray
+### ƒ loadFromArray
 
 ```php
 public loadFromArray(array $columnConfig): \Hubleto\Framework\Column
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
 | `$columnConfig` | **array** |             |
 
 
-### jsonSerialize
+### ƒ jsonSerialize
 
 ```php
 public jsonSerialize(): array
 ```
 
 
-### toArray
+### ƒ toArray
 
 ```php
 public toArray(): array
 ```
 
 
-### getNullValue
+### ƒ getNullValue
 
 ```php
 public getNullValue(): mixed
 ```
 
 
-### isEmpty
+### ƒ isEmpty
 
 ```php
 public isEmpty(mixed $value): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
 
-### normalize
+### ƒ normalize
 
 ```php
 public normalize(mixed $value): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
 
-### validate
+### ƒ validate
 
 ```php
 public validate(mixed $value): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$value`  | **mixed** |             |
 
 
-### sqlCreateString
+### ƒ sqlCreateString
 
 ```php
 public sqlCreateString(string $table, string $columnName): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -955,13 +1083,13 @@ public sqlCreateString(string $table, string $columnName): string
 | `$columnName` | **string** |             |
 
 
-### sqlIndexString
+### ƒ sqlIndexString
 
 ```php
 public sqlIndexString(string $table, string $columnName): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|

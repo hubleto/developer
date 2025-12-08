@@ -12,21 +12,25 @@
 
 ## Properties
 
-### status
 
-`private \Hubleto\Framework\Enums\ExceptionStatusEnum $status`
+<div class="mt-2">&nbsp;</div>
+### ☍ status
+```php
+private \Hubleto\Framework\Enums\ExceptionStatusEnum $status
+```
+
 
 
 ## Methods
 
-### getExtraParams
+### ƒ getExtraParams
 
 ```php
 public getExtraParams(): array
 ```
 
 
-### getResponseArray
+### ƒ getResponseArray
 
 ```php
 public getResponseArray(): array

@@ -8,33 +8,41 @@ Default view renderer for Hubleto project.
 
 ## Properties
 
-### twigLoader
 
-`public \Twig\Loader\FilesystemLoader $twigLoader`
+<div class="mt-2">&nbsp;</div>
+### ☍ twigLoader
+```php
+public \Twig\Loader\FilesystemLoader $twigLoader
+```
 
 
-### twig
 
-`public \Twig\Environment $twig`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ twig
+```php
+public \Twig\Environment $twig
+```
+
 
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### getTwig
+### ƒ getTwig
 
 ```php
 public getTwig(): \Twig\Environment
 ```
 
 
-### addNamespace
+### ƒ addNamespace
 
 Adds namespace for Twig renderer
 
@@ -42,7 +50,7 @@ Adds namespace for Twig renderer
 public addNamespace(string $folder, string $namespace): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
@@ -50,13 +58,13 @@ public addNamespace(string $folder, string $namespace): void
 | `$namespace` | **string** |             |
 
 
-### renderView
+### ƒ renderView
 
 ```php
 public renderView(string $view, array $vars = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -64,7 +72,7 @@ public renderView(string $view, array $vars = []): string
 | `$vars`   | **array**  |             |
 
 
-### render
+### ƒ render
 
 Renders the requested content. It can be the (1) whole desktop with complete <html>
 content; (2) the HTML of a controller requested dynamically using AJAX; or (3) a JSON
@@ -74,18 +82,18 @@ string requested dynamically using AJAX and further processed in Javascript.
 public render(string $route = '', mixed $params = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description                                                |
 |-----------|------------|------------------------------------------------------------|
 | `$route`  | **string** |                                                            |
 | `$params` | **mixed**  | Parameters (a.k.a. arguments) of the requested controller. |
 
-**Return Value:**
+#### Return Value
 
 Rendered content.
 
-**Throws:**
+#### Throws
 
 When running in CLI and requested controller is blocked for the CLI.
 - [`Exception`](./Exceptions/Exception)
@@ -93,26 +101,26 @@ When running in SAPI and requested controller is blocked for the SAPI.
 - [`Exception`](./Exceptions/Exception)
 
 
-### renderSuccess
+### ƒ renderSuccess
 
 ```php
 public renderSuccess(mixed $return): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$return` | **mixed** |             |
 
 
-### renderWarning
+### ƒ renderWarning
 
 ```php
 public renderWarning(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
@@ -120,13 +128,13 @@ public renderWarning(\Hubleto\Framework\Exceptions\Exception $exception, mixed $
 | `$isHtml`    | **mixed**                                   |             |
 
 
-### renderFatal
+### ƒ renderFatal
 
 ```php
 public renderFatal(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
@@ -134,26 +142,26 @@ public renderFatal(\Hubleto\Framework\Exceptions\Exception $exception, mixed $is
 | `$isHtml`    | **mixed**                                   |             |
 
 
-### renderHtmlFatal
+### ƒ renderHtmlFatal
 
 ```php
 public renderHtmlFatal(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
 | `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
-### renderExceptionHtml
+### ƒ renderExceptionHtml
 
 ```php
 public renderExceptionHtml(mixed $exception, array $args = []): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -161,27 +169,27 @@ public renderExceptionHtml(mixed $exception, array $args = []): string
 | `$args`      | **array** |             |
 
 
-### renderHtmlWarning
+### ƒ renderHtmlWarning
 
 ```php
 public renderHtmlWarning(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                        | Description |
 |--------------|---------------------------------------------|-------------|
 | `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
-### onBeforeRender
+### ƒ onBeforeRender
 
 ```php
 public onBeforeRender(): void
 ```
 
 
-### onAfterRender
+### ƒ onAfterRender
 
 ```php
 public onAfterRender(): void
@@ -190,14 +198,14 @@ public onAfterRender(): void
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -206,14 +214,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -221,14 +229,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -237,7 +245,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -246,7 +254,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -255,7 +263,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -264,7 +272,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -273,7 +281,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -282,7 +290,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -291,7 +299,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -300,7 +308,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -309,7 +317,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -318,7 +326,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -327,7 +335,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -336,7 +344,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -345,7 +353,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -354,7 +362,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -363,7 +371,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -372,7 +380,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -380,14 +388,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -395,20 +403,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|

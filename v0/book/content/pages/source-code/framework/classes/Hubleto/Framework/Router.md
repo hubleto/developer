@@ -14,110 +14,126 @@ Default router for Hubleto project.
 
 ## Properties
 
-### routing
 
-`public $routing`
-
-
-### route
-
-`protected string $route`
+<div class="mt-2">&nbsp;</div>
+### ☍ routing
+```php
+public $routing
+```
 
 
-### routesHttpGet
-
-`protected array $routesHttpGet`
 
 
-### routeVars
+<div class="mt-2">&nbsp;</div>
+### ☍ route
+```php
+protected string $route
+```
 
-`protected array $routeVars`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ routesHttpGet
+```php
+protected array $routesHttpGet
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ routeVars
+```php
+protected array $routeVars
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### extractParamsFromRequest
+### ƒ extractParamsFromRequest
 
 ```php
 public extractParamsFromRequest(): array
 ```
 
 
-### extractRouteFromRequest
+### ƒ extractRouteFromRequest
 
 ```php
 public extractRouteFromRequest(): string
 ```
 
 
-### isAjax
+### ƒ isAjax
 
 ```php
 public isAjax(): bool
 ```
 
 
-### get
+### ƒ get
 
 ```php
 public get(array $routes): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$routes` | **array** |             |
 
 
-### getRoutes
+### ƒ getRoutes
 
 ```php
 public getRoutes(string $method): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$method` | **string** |             |
 
 
-### getRoute
+### ƒ getRoute
 
 ```php
 public getRoute(): string
 ```
 
 
-### setRoute
+### ƒ setRoute
 
 ```php
 public setRoute(string $route): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$route`  | **string** |             |
 
 
-### parseRoute
+### ƒ parseRoute
 
 array<string, array<string, string>>
 
@@ -125,7 +141,7 @@ array<string, array<string, string>>
 public parseRoute(string $method, string $route): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -133,98 +149,98 @@ public parseRoute(string $method, string $route): array
 | `$route`  | **string** |             |
 
 
-### setRouteVars
+### ƒ setRouteVars
 
 ```php
 public setRouteVars(array $routeVars): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
 | `$routeVars` | **array** |             |
 
 
-### getRouteVars
+### ƒ getRouteVars
 
 ```php
 public getRouteVars(): array
 ```
 
 
-### getRouteVar
+### ƒ getRouteVar
 
 ```php
 public getRouteVar(string|int $varIndex): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsString
+### ƒ routeVarAsString
 
 ```php
 public routeVarAsString(string|int $varIndex): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsInteger
+### ƒ routeVarAsInteger
 
 ```php
 public routeVarAsInteger(string|int $varIndex): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsFloat
+### ƒ routeVarAsFloat
 
 ```php
 public routeVarAsFloat(string|int $varIndex): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### routeVarAsBool
+### ƒ routeVarAsBool
 
 ```php
 public routeVarAsBool(string|int $varIndex): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type            | Description |
 |-------------|-----------------|-------------|
 | `$varIndex` | **string\|int** |             |
 
 
-### getUploadedFile
+### ƒ getUploadedFile
 
 ```php
 public getUploadedFile(string $paramName, ?array $defaultValue = null): null|array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -232,13 +248,13 @@ public getUploadedFile(string $paramName, ?array $defaultValue = null): null|arr
 | `$defaultValue` | **?array** |             |
 
 
-### redirectTo
+### ƒ redirectTo
 
 ```php
 public redirectTo(string $url, int $code = 302): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -246,46 +262,46 @@ public redirectTo(string $url, int $code = 302): void
 | `$code`   | **int**    |             |
 
 
-### getUrlParams
+### ƒ getUrlParams
 
 ```php
 public getUrlParams(): array
 ```
 
 
-### isUrlParam
+### ƒ isUrlParam
 
 ```php
 public isUrlParam(string $paramName): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
 
-### urlParamNotEmpty
+### ƒ urlParamNotEmpty
 
 ```php
 public urlParamNotEmpty(string $paramName): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
 
-### setUrlParam
+### ƒ setUrlParam
 
 ```php
 public setUrlParam(string $paramName, string $newValue): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
@@ -293,26 +309,26 @@ public setUrlParam(string $paramName, string $newValue): void
 | `$newValue`  | **string** |             |
 
 
-### removeUrlParam
+### ƒ removeUrlParam
 
 ```php
 public removeUrlParam(string $paramName): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|
 | `$paramName` | **string** |             |
 
 
-### urlParamAsString
+### ƒ urlParamAsString
 
 ```php
 public urlParamAsString(string $paramName, string $defaultValue = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -320,13 +336,13 @@ public urlParamAsString(string $paramName, string $defaultValue = ''): string
 | `$defaultValue` | **string** |             |
 
 
-### urlParamAsInteger
+### ƒ urlParamAsInteger
 
 ```php
 public urlParamAsInteger(string $paramName, int $defaultValue): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -334,13 +350,13 @@ public urlParamAsInteger(string $paramName, int $defaultValue): int
 | `$defaultValue` | **int**    |             |
 
 
-### urlParamAsFloat
+### ƒ urlParamAsFloat
 
 ```php
 public urlParamAsFloat(string $paramName, float $defaultValue): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -348,13 +364,13 @@ public urlParamAsFloat(string $paramName, float $defaultValue): float
 | `$defaultValue` | **float**  |             |
 
 
-### urlParamAsBool
+### ƒ urlParamAsBool
 
 ```php
 public urlParamAsBool(string $paramName, bool $defaultValue = false): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -362,13 +378,13 @@ public urlParamAsBool(string $paramName, bool $defaultValue = false): bool
 | `$defaultValue` | **bool**   |             |
 
 
-### urlParamAsArray
+### ƒ urlParamAsArray
 
 ```php
 public urlParamAsArray(string $paramName, array $defaultValue = []): array<string,string>
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type       | Description |
 |-----------------|------------|-------------|
@@ -378,14 +394,14 @@ public urlParamAsArray(string $paramName, array $defaultValue = []): array<strin
 
 ## Inherited methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### getServiceStatic
+### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
 
@@ -394,14 +410,14 @@ public static getServiceStatic(string $service): mixed
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### getService
+### ƒ getService
 
 [Description for getService]
 
@@ -409,14 +425,14 @@ public static getServiceStatic(string $service): mixed
 public getService(string $service): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type       | Description |
 |------------|------------|-------------|
 | `$service` | **string** |             |
 
 
-### env
+### ƒ env
 
 Shortcut for the env service.
 
@@ -425,7 +441,7 @@ public env(): \Hubleto\Framework\Env
 ```
 
 
-### authProvider
+### ƒ authProvider
 
 Shortcut for the authentication service.
 
@@ -434,7 +450,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
 ```
 
 
-### db
+### ƒ db
 
 Shortcut for the database service.
 
@@ -443,7 +459,7 @@ public db(): \Hubleto\Framework\Db
 ```
 
 
-### appManager
+### ƒ appManager
 
 Shortcut for the app manager service.
 
@@ -452,7 +468,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 ```
 
 
-### router
+### ƒ router
 
 Shortcut for the router service.
 
@@ -461,7 +477,7 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### hookManager
+### ƒ hookManager
 
 Shortcut for the hook manager service.
 
@@ -470,7 +486,7 @@ public hookManager(): \Hubleto\Framework\HookManager
 ```
 
 
-### sessionManager
+### ƒ sessionManager
 
 Shortcut for the session manager service.
 
@@ -479,7 +495,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 ```
 
 
-### permissionsManager
+### ƒ permissionsManager
 
 Shortcut for the permissions manager service.
 
@@ -488,7 +504,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 ```
 
 
-### cronManager
+### ƒ cronManager
 
 Shortcut for the cron manager service.
 
@@ -497,7 +513,7 @@ public cronManager(): \Hubleto\Framework\CronManager
 ```
 
 
-### emailProvider
+### ƒ emailProvider
 
 Shortcut for the email provider service.
 
@@ -506,7 +522,7 @@ public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
-### config
+### ƒ config
 
 Shortcut for the config service.
 
@@ -515,7 +531,7 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
-### terminal
+### ƒ terminal
 
 Shortcut for the terminal service.
 
@@ -524,7 +540,7 @@ public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
 ```
 
 
-### logger
+### ƒ logger
 
 Shortcut for the logger service.
 
@@ -533,7 +549,7 @@ public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
-### locale
+### ƒ locale
 
 Shortcut for the locale service.
 
@@ -542,7 +558,7 @@ public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
-### renderer
+### ƒ renderer
 
 Shortcut for the renderer service.
 
@@ -551,7 +567,7 @@ public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
-### translator
+### ƒ translator
 
 Shortcut for the translator service.
 
@@ -560,7 +576,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 ```
 
 
-### getModel
+### ƒ getModel
 
 [Description for getModel]
 
@@ -568,14 +584,14 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$model`  | **string** |             |
 
 
-### getController
+### ƒ getController
 
 [Description for getController]
 
@@ -583,20 +599,20 @@ public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 public getController(string $controller): \Hubleto\Framework\Controller
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$controller` | **string** |             |
 
 
-### translate
+### ƒ translate
 
 ```php
 public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                     | Description |
 |-----------------|--------------------------|-------------|
