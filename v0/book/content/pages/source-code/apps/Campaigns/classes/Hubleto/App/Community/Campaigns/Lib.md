@@ -11,16 +11,33 @@
 [Description for getMailPreview]
 
 ```php
-public static getMailPreview(array $campaign, array $contact): string
+public static getMailPreview(array $campaign, array $recipient): string
 ```
 
 * This method is **static**.
 **Parameters:**
 
-| Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `$campaign` | **array** |             |
-| `$contact`  | **array** |             |
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `$campaign`  | **array** |             |
+| `$recipient` | **array** |             |
+
+
+### replaceVariables
+
+[Description for replaceVariables]
+
+```php
+public static replaceVariables(string $body, array $vars): string
+```
+
+* This method is **static**.
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$body`   | **string** |             |
+| `$vars`   | **array**  |             |
 
 
 ### addUtmVariablesToEmailLinks
@@ -45,16 +62,18 @@ public static addUtmVariablesToEmailLinks(string $body, string $utmSource, strin
 
 ### routeLinksThroughCampaignTracker
 
+[Description for routeLinksThroughCampaignTracker]
+
 ```php
-public static routeLinksThroughCampaignTracker(array $campaign, array $contact, string $body): string
+public static routeLinksThroughCampaignTracker(array $campaign, array $recipient, string $body): string
 ```
 
 * This method is **static**.
 **Parameters:**
 
-| Parameter   | Type       | Description |
-|-------------|------------|-------------|
-| `$campaign` | **array**  |             |
-| `$contact`  | **array**  |             |
-| `$body`     | **string** |             |
+| Parameter    | Type       | Description |
+|--------------|------------|-------------|
+| `$campaign`  | **array**  |             |
+| `$recipient` | **array**  |             |
+| `$body`      | **string** |             |
 

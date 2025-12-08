@@ -23,14 +23,14 @@ public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\Ap
 ### PROFILE
 
 ```php
-public PROFILE(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\InvoiceProfile,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+public PROFILE(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Invoices\Models\RecordManagers\Profile,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
 ```
 
 
 ### ISSUED_BY
 
 ```php
-public ISSUED_BY(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+public ISSUED_BY(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
 ```
 
 
@@ -52,13 +52,6 @@ public WORKFLOW(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\C
 
 ```php
 public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\WorkflowStep,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
-```
-
-
-### TEMPLATE
-
-```php
-public TEMPLATE(): \Hubleto\App\Community\Invoices\Models\RecordManagers\hasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Invoices\Models\RecordManagers\Lead>
 ```
 
 

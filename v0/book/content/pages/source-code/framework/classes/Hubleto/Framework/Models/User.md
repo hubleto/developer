@@ -91,15 +91,19 @@ public indexes(array $indexes = []): array
 
 ### getClientIpAddress
 
+[Description for getClientIpAddress]
+
 ```php
-public getClientIpAddress(): mixed
+public getClientIpAddress(): string
 ```
 
 
 ### updateAccessInformation
 
+[Description for updateAccessInformation]
+
 ```php
-public updateAccessInformation(int $idUser): mixed
+public updateAccessInformation(int $idUser): void
 ```
 
 **Parameters:**
@@ -111,8 +115,10 @@ public updateAccessInformation(int $idUser): mixed
 
 ### updateLoginAndAccessInformation
 
+[Description for updateLoginAndAccessInformation]
+
 ```php
-public updateLoginAndAccessInformation(int $idUser): mixed
+public updateLoginAndAccessInformation(int $idUser): void
 ```
 
 **Parameters:**
@@ -123,6 +129,8 @@ public updateLoginAndAccessInformation(int $idUser): mixed
 
 
 ### isUserActive
+
+[Description for isUserActive]
 
 ```php
 public isUserActive(mixed $user): bool
@@ -137,15 +145,19 @@ public isUserActive(mixed $user): bool
 
 ### authCookieGetLogin
 
+[Description for authCookieGetLogin]
+
 ```php
-public authCookieGetLogin(): mixed
+public authCookieGetLogin(): string
 ```
 
 
 ### authCookieSerialize
 
+[Description for authCookieSerialize]
+
 ```php
-public authCookieSerialize(mixed $login, mixed $password): mixed
+public authCookieSerialize(mixed $login, mixed $password): string
 ```
 
 **Parameters:**
@@ -158,8 +170,10 @@ public authCookieSerialize(mixed $login, mixed $password): mixed
 
 ### generateToken
 
+[Description for generateToken]
+
 ```php
-public generateToken(mixed $idUser, mixed $tokenSalt, mixed $tokenType): mixed
+public generateToken(mixed $idUser, mixed $tokenSalt, mixed $tokenType): string
 ```
 
 **Parameters:**
@@ -173,8 +187,10 @@ public generateToken(mixed $idUser, mixed $tokenSalt, mixed $tokenType): mixed
 
 ### generatePasswordResetToken
 
+[Description for generatePasswordResetToken]
+
 ```php
-public generatePasswordResetToken(mixed $idUser, mixed $tokenSalt): mixed
+public generatePasswordResetToken(mixed $idUser, mixed $tokenSalt): string
 ```
 
 **Parameters:**
@@ -187,8 +203,10 @@ public generatePasswordResetToken(mixed $idUser, mixed $tokenSalt): mixed
 
 ### validateToken
 
+[Description for validateToken]
+
 ```php
-public validateToken(mixed $token, mixed $deleteAfterValidation = TRUE): mixed
+public validateToken(mixed $token, bool $deleteAfterValidation = true): array
 ```
 
 **Parameters:**
@@ -196,10 +214,12 @@ public validateToken(mixed $token, mixed $deleteAfterValidation = TRUE): mixed
 | Parameter                | Type      | Description |
 |--------------------------|-----------|-------------|
 | `$token`                 | **mixed** |             |
-| `$deleteAfterValidation` | **mixed** |             |
+| `$deleteAfterValidation` | **bool**  |             |
 
 
 ### getQueryForUser
+
+[Description for getQueryForUser]
 
 ```php
 public getQueryForUser(int $idUser): mixed
@@ -214,8 +234,10 @@ public getQueryForUser(int $idUser): mixed
 
 ### loadUser
 
+[Description for loadUser]
+
 ```php
-public loadUser(int $idUser): mixed
+public loadUser(int $idUser): array
 ```
 
 **Parameters:**
@@ -227,8 +249,10 @@ public loadUser(int $idUser): mixed
 
 ### getByEmail
 
+[Description for getByEmail]
+
 ```php
-public getByEmail(string $email): mixed
+public getByEmail(string $email): array
 ```
 
 **Parameters:**
@@ -240,7 +264,7 @@ public getByEmail(string $email): mixed
 
 ### encryptPassword
 
-Used to encrypt passowrd to store it securely.
+[Description for encryptPassword]
 
 ```php
 public encryptPassword(string $password): string
@@ -254,6 +278,8 @@ public encryptPassword(string $password): string
 
 
 ### updatePassword
+
+[Description for updatePassword]
 
 ```php
 public updatePassword(int $idUser, string $password): mixed
@@ -406,12 +432,21 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
+### terminal
+
+Shortcut for the terminal service.
+
+```php
+public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
+```
+
+
 ### logger
 
 Shortcut for the logger service.
 
 ```php
-public logger(): \Hubleto\Framework\Logger
+public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
@@ -420,7 +455,7 @@ public logger(): \Hubleto\Framework\Logger
 Shortcut for the locale service.
 
 ```php
-public locale(): \Hubleto\Framework\Locale
+public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
@@ -429,7 +464,7 @@ public locale(): \Hubleto\Framework\Locale
 Shortcut for the renderer service.
 
 ```php
-public renderer(): \Hubleto\Framework\Renderer
+public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
@@ -447,7 +482,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 [Description for getModel]
 
 ```php
-public getModel(string $model): \Hubleto\Framework\Models\Model
+public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
 **Parameters:**
@@ -474,22 +509,17 @@ public getController(string $controller): \Hubleto\Framework\Controller
 
 ### translate
 
-Shorthand for core translate() function. Uses own language dictionary.
-
 ```php
-public translate(string $string, array $vars = []): string
+public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
 **Parameters:**
 
-| Parameter | Type       | Description             |
-|-----------|------------|-------------------------|
-| `$string` | **string** | String to be translated |
-| `$vars`   | **array**  |                         |
-
-**Return Value:**
-
-Translated string.
+| Parameter       | Type                     | Description |
+|-----------------|--------------------------|-------------|
+| `$string`       | **string**               |             |
+| `$vars`         | **array<string,string>** |             |
+| `$contextInner` | **string**               |             |
 
 
 ### initRecordManager
@@ -755,27 +785,29 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### recordGet
+### convertRecordsToTree
 
-[Description for recordGet]
+[Description for convertRecordsToTree]
 
 ```php
-public recordGet(callable|null $queryModifierCallback = null): array
+public convertRecordsToTree(array $records, int $idParent, int $level): array
 ```
 
 **Parameters:**
 
-| Parameter                | Type               | Description |
-|--------------------------|--------------------|-------------|
-| `$queryModifierCallback` | **callable\|null** |             |
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `$records`  | **array** |             |
+| `$idParent` | **int**   |             |
+| `$level`    | **int**   |             |
 
 
-### recordGetList
+### loadTableData
 
-[Description for recordGetList]
+[Description for loadTableData]
 
 ```php
-public recordGetList(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page): array
+public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
 ```
 
 **Parameters:**
@@ -787,6 +819,7 @@ public recordGetList(string $fulltextSearch = '', array $columnSearch = [], arra
 | `$orderBy`        | **array**  |             |
 | `$itemsPerPage`   | **int**    |             |
 | `$page`           | **int**    |             |
+| `$dataView`       | **string** |             |
 
 
 ### diffRecords
@@ -833,6 +866,19 @@ public getLookupSqlValue(string $tableAlias = ''): string
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$tableAlias` | **string** |             |
+
+
+### getLookupValue
+
+```php
+public getLookupValue(array $dataRaw): string
+```
+
+**Parameters:**
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$dataRaw` | **array** |             |
 
 
 ### encryptPassword

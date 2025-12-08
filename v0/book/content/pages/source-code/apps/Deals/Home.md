@@ -33,12 +33,12 @@
 
 | Class                                                                                                | Description |
 |------------------------------------------------------------------------------------------------------|-------------|
-| [`ChangeWorkflow`](./classes/Hubleto/App/Community/Deals/Controllers/Api/ChangeWorkflow)             |             |
 | [`CreateFromLead`](./classes/Hubleto/App/Community/Deals/Controllers/Api/CreateFromLead)             |             |
 | [`DailyDigest`](./classes/Hubleto/App/Community/Deals/Controllers/Api/DailyDigest)                   |             |
 | [`GenerateInvoice`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GenerateInvoice)           |             |
 | [`GenerateQuotationPdf`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GenerateQuotationPdf) |             |
 | [`LogActivity`](./classes/Hubleto/App/Community/Deals/Controllers/Api/LogActivity)                   |             |
+| [`SetParentLead`](./classes/Hubleto/App/Community/Deals/Controllers/Api/SetParentLead)               |             |
 
 ### \Hubleto\App\Community\Deals\Controllers\Boards
 
@@ -56,7 +56,6 @@
 
 | Class                                                                                              | Description |
 |----------------------------------------------------------------------------------------------------|-------------|
-| [`AppMenu`](./classes/Hubleto/App/Community/Deals/Extendibles/AppMenu)                             |             |
 | [`ContextHelp`](./classes/Hubleto/App/Community/Deals/Extendibles/ContextHelp)                     |             |
 | [`MailTemplateVariables`](./classes/Hubleto/App/Community/Deals/Extendibles/MailTemplateVariables) |             |
 | [`ProductTypes`](./classes/Hubleto/App/Community/Deals/Extendibles/ProductTypes)                   |             |

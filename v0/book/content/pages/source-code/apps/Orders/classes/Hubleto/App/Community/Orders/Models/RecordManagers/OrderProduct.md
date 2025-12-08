@@ -40,3 +40,16 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 | `$query`  | **mixed** |             |
 | `$level`  | **int**   |             |
 
+
+### prepareLookupQuery
+
+```php
+public prepareLookupQuery(string $search): mixed
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$search` | **string** |             |
+

@@ -65,14 +65,14 @@ public DEALS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Com
 ### OWNER
 
 ```php
-public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
+public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
 ### MANAGER
 
 ```php
-public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
+public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
@@ -116,18 +116,4 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 |-------------------|------------|-------------|
 | `$query`          | **mixed**  |             |
 | `$fulltextSearch` | **string** |             |
-
-
-### addColumnSearchToQuery
-
-```php
-public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
-```
-
-**Parameters:**
-
-| Parameter       | Type      | Description |
-|-----------------|-----------|-------------|
-| `$query`        | **mixed** |             |
-| `$columnSearch` | **array** |             |
 

@@ -16,6 +16,6 @@
 ### OWNER
 
 ```php
-public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Calendar\Models\RecordManagers\Customer>
+public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Calendar\Models\RecordManagers\Customer>
 ```
 

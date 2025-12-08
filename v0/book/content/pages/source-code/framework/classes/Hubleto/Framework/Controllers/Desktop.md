@@ -9,13 +9,6 @@ be rendered using Twig template or using custom render() method.
 <tr><td>Parent class</td><td><a href="../Controller">\Hubleto\Framework\Controller</a></td></tr></table>
 
 
-## Properties
-
-### translationContext
-
-`public string $translationContext`
-
-
 ## Inherited methods
 
 ### __construct
@@ -155,12 +148,21 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
+### terminal
+
+Shortcut for the terminal service.
+
+```php
+public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
+```
+
+
 ### logger
 
 Shortcut for the logger service.
 
 ```php
-public logger(): \Hubleto\Framework\Logger
+public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
@@ -169,7 +171,7 @@ public logger(): \Hubleto\Framework\Logger
 Shortcut for the locale service.
 
 ```php
-public locale(): \Hubleto\Framework\Locale
+public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
@@ -178,7 +180,7 @@ public locale(): \Hubleto\Framework\Locale
 Shortcut for the renderer service.
 
 ```php
-public renderer(): \Hubleto\Framework\Renderer
+public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
@@ -196,7 +198,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 [Description for getModel]
 
 ```php
-public getModel(string $model): \Hubleto\Framework\Models\Model
+public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
 **Parameters:**
@@ -223,22 +225,17 @@ public getController(string $controller): \Hubleto\Framework\Controller
 
 ### translate
 
-Shorthand for core translate() function. Uses own language dictionary.
-
 ```php
-public translate(string $string, array $vars = []): string
+public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
 **Parameters:**
 
-| Parameter | Type       | Description             |
-|-----------|------------|-------------------------|
-| `$string` | **string** | String to be translated |
-| `$vars`   | **array**  |                         |
-
-**Return Value:**
-
-Translated string.
+| Parameter       | Type                     | Description |
+|-----------------|--------------------------|-------------|
+| `$string`       | **string**               |             |
+| `$vars`         | **array<string,string>** |             |
+| `$contextInner` | **string**               |             |
 
 
 ### validateInputs

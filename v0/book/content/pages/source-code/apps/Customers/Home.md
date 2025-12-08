@@ -19,7 +19,6 @@
 
 | Class                                                                          | Description |
 |--------------------------------------------------------------------------------|-------------|
-| [`Activity`](./classes/Hubleto/App/Community/Customers/Controllers/Activity)   |             |
 | [`Customers`](./classes/Hubleto/App/Community/Customers/Controllers/Customers) |             |
 | [`Dashboard`](./classes/Hubleto/App/Community/Customers/Controllers/Dashboard) |             |
 | [`Settings`](./classes/Hubleto/App/Community/Customers/Controllers/Settings)   |             |

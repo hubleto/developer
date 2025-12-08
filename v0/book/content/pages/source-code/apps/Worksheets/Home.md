@@ -30,6 +30,14 @@
 |-------------------------------------------------------------------------------------------------------|-------------|
 | [`DailyActivityChart`](./classes/Hubleto/App/Community/Worksheets/Controllers/Api/DailyActivityChart) |             |
 
+### \Hubleto\App\Community\Worksheets\Controllers\Boards
+
+#### Classes
+
+| Class                                                                                    | Description |
+|------------------------------------------------------------------------------------------|-------------|
+| [`DailyChart`](./classes/Hubleto/App/Community/Worksheets/Controllers/Boards/DailyChart) |             |
+
 ### \Hubleto\App\Community\Worksheets\Models
 
 #### Classes

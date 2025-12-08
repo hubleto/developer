@@ -29,16 +29,3 @@
 public describeColumns(): array
 ```
 
-
-### describeInput
-
-```php
-public describeInput(string $columnName): \Hubleto\Framework\Description\Input
-```
-
-**Parameters:**
-
-| Parameter     | Type       | Description |
-|---------------|------------|-------------|
-| `$columnName` | **string** |             |
-

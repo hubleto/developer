@@ -37,28 +37,28 @@ public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\Ap
 ### OWNER
 
 ```php
-public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
 ### TEAM
 
 ```php
-public TEAM(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+public TEAM(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
 ### LEVEL
 
 ```php
-public LEVEL(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+public LEVEL(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
 ### MANAGER
 
 ```php
-public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
@@ -172,18 +172,4 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 |-------------------|------------|-------------|
 | `$query`          | **mixed**  |             |
 | `$fulltextSearch` | **string** |             |
-
-
-### addColumnSearchToQuery
-
-```php
-public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
-```
-
-**Parameters:**
-
-| Parameter       | Type      | Description |
-|-----------------|-----------|-------------|
-| `$query`        | **mixed** |             |
-| `$columnSearch` | **array** |             |
 

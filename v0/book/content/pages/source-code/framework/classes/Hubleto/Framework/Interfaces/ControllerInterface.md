@@ -48,7 +48,7 @@ public renderString(): string
 ### renderJson
 
 ```php
-public renderJson(): ?array
+public renderJson(): array
 ```
 
 

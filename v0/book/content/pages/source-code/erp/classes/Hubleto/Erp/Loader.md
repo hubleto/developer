@@ -4,6 +4,13 @@
 <tr><td>Parent class</td><td><a href="../Framework/Loader">Loader</a></td></tr></table>
 
 
+## Properties
+
+### translationContext
+
+`public string $translationContext`
+
+
 ## Methods
 
 ### __construct

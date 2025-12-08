@@ -3,6 +3,20 @@
 
 ## Methods
 
+### getTimezones
+
+```php
+public getTimezones(): array
+```
+
+
+### getTimezone
+
+```php
+public getTimezone(): string
+```
+
+
 ### getDateShortFormat
 
 ```php

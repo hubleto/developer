@@ -4,13 +4,6 @@
 <tr><td>Parent class</td><td><a href="../../../Framework/App">App</a></td></tr></table>
 
 
-## Properties
-
-### hasCustomSettings
-
-`public bool $hasCustomSettings`
-
-
 ## Methods
 
 ### init

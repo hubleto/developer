@@ -4,6 +4,17 @@
 <tr><td>Parent class</td><td><a href="../../../../Erp/Model">Model</a></td></tr></table>
 
 
+## Constants
+
+| Constant           | Visibility | Type | Value                                                                                     |
+|--------------------|------------|------|-------------------------------------------------------------------------------------------|
+| `TYPE_PROFORMA`    | public     |      | 1                                                                                         |
+| `TYPE_ADVANCE`     | public     |      | 2                                                                                         |
+| `TYPE_STANDARD`    | public     |      | 3                                                                                         |
+| `TYPE_CREDIT_NOTE` | public     |      | 4                                                                                         |
+| `TYPE_DEBIT_NOTE`  | public     |      | 5                                                                                         |
+| `TYPES`            | public     |      | [1 => 'Proforma', 2 => 'Advance', 3 => 'Standard', 4 => 'Credit Note', 5 => 'Debit Note'] |
+
 ## Properties
 
 ### table

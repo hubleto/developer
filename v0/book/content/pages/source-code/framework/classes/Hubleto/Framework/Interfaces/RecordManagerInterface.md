@@ -26,6 +26,19 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 Object for reading records.
 
 
+### recordGet
+
+```php
+public recordGet(callable|null $queryModifierCallback = null): array
+```
+
+**Parameters:**
+
+| Parameter                | Type               | Description |
+|--------------------------|--------------------|-------------|
+| `$queryModifierCallback` | **callable\|null** |             |
+
+
 ### addFulltextSearchToQuery
 
 ```php
@@ -125,14 +138,15 @@ public recordDecryptIds(array $record): array
 ### recordCreate
 
 ```php
-public recordCreate(array $record): array
+public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 ```
 
 **Parameters:**
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$record` | **array** |             |
+| Parameter              | Type      | Description |
+|------------------------|-----------|-------------|
+| `$record`              | **array** |             |
+| `$useProvidedRecordId` | **mixed** |             |
 
 
 ### recordUpdate

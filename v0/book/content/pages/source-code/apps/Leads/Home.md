@@ -12,6 +12,7 @@
 |--------------------------------------------------------------|-------------|
 | [`Calendar`](./classes/Hubleto/App/Community/Leads/Calendar) |             |
 | [`Loader`](./classes/Hubleto/App/Community/Leads/Loader)     |             |
+| [`Workflow`](./classes/Hubleto/App/Community/Leads/Workflow) |             |
 
 ### \Hubleto\App\Community\Leads\Controllers
 
@@ -33,7 +34,6 @@
 | Class                                                                                                | Description |
 |------------------------------------------------------------------------------------------------------|-------------|
 | [`LogActivity`](./classes/Hubleto/App/Community/Leads/Controllers/Api/LogActivity)                   |             |
-| [`MoveToArchive`](./classes/Hubleto/App/Community/Leads/Controllers/Api/MoveToArchive)               |             |
 | [`SaveBulkStatusChange`](./classes/Hubleto/App/Community/Leads/Controllers/Api/SaveBulkStatusChange) |             |
 
 ### \Hubleto\App\Community\Leads\Controllers\Boards

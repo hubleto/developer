@@ -5,6 +5,15 @@
   `JsonSerializable`</td></tr><tr><td>Abstract</td><td>* This class is an **Abstract class**</td></tr></table>
 
 
+## Constants
+
+| Constant          | Visibility | Type | Value |
+|-------------------|------------|------|-------|
+| `ALWAYS_VISIBLE`  | public     |      | 1     |
+| `ALWAYS_HIDDEN`   | public     |      | 2     |
+| `DEFAULT_VISIBLE` | public     |      | 3     |
+| `DEFAULT_HIDDEN`  | public     |      | 4     |
+
 ## Properties
 
 ### model
@@ -40,6 +49,11 @@
 ### required
 
 `protected bool $required`
+
+
+### visibility
+
+`protected int $visibility`
 
 
 ### hidden
@@ -125,6 +139,16 @@
 ### decimals
 
 `protected int $decimals`
+
+
+### step
+
+`protected float $step`
+
+
+### icon
+
+`protected string $icon`
 
 
 ### byteSize
@@ -353,6 +377,54 @@ public setRequired(bool $required = true): \Hubleto\Framework\Column
 | Parameter   | Type     | Description |
 |-------------|----------|-------------|
 | `$required` | **bool** |             |
+
+
+### getVisibility
+
+```php
+public getVisibility(): int
+```
+
+
+### setVisibility
+
+```php
+public setVisibility(int $visibility): \Hubleto\Framework\Column
+```
+
+**Parameters:**
+
+| Parameter     | Type    | Description |
+|---------------|---------|-------------|
+| `$visibility` | **int** |             |
+
+
+### setAlwaysVisible
+
+```php
+public setAlwaysVisible(): \Hubleto\Framework\Column
+```
+
+
+### setAlwaysHidden
+
+```php
+public setAlwaysHidden(): \Hubleto\Framework\Column
+```
+
+
+### setDefaultVisible
+
+```php
+public setDefaultVisible(): \Hubleto\Framework\Column
+```
+
+
+### setDefaultHidden
+
+```php
+public setDefaultHidden(): \Hubleto\Framework\Column
+```
 
 
 ### getPlaceholder
@@ -673,6 +745,46 @@ public setDecimals(int $decimals): \Hubleto\Framework\Column
 | Parameter   | Type    | Description |
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
+
+
+### getStep
+
+```php
+public getStep(): float
+```
+
+
+### setStep
+
+```php
+public setStep(float $step): \Hubleto\Framework\Column
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$step`   | **float** |             |
+
+
+### getIcon
+
+```php
+public getIcon(): string
+```
+
+
+### setIcon
+
+```php
+public setIcon(string $icon): \Hubleto\Framework\Column
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$icon`   | **string** |             |
 
 
 ### getEndpoint

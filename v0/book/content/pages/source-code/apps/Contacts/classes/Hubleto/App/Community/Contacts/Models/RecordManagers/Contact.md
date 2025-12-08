@@ -48,6 +48,34 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 | `$level`  | **int**   |             |
 
 
+### addOrderByToQuery
+
+```php
+public addOrderByToQuery(mixed $query, array $orderBy): mixed
+```
+
+**Parameters:**
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$query`   | **mixed** |             |
+| `$orderBy` | **array** |             |
+
+
+### addFulltextSearchToQuery
+
+```php
+public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
+```
+
+**Parameters:**
+
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `$query`          | **mixed**  |             |
+| `$fulltextSearch` | **string** |             |
+
+
 ### prepareLookupQuery
 
 ```php

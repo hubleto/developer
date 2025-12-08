@@ -183,12 +183,21 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
+### terminal
+
+Shortcut for the terminal service.
+
+```php
+public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
+```
+
+
 ### logger
 
 Shortcut for the logger service.
 
 ```php
-public logger(): \Hubleto\Framework\Logger
+public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
@@ -197,7 +206,7 @@ public logger(): \Hubleto\Framework\Logger
 Shortcut for the locale service.
 
 ```php
-public locale(): \Hubleto\Framework\Locale
+public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
@@ -206,7 +215,7 @@ public locale(): \Hubleto\Framework\Locale
 Shortcut for the renderer service.
 
 ```php
-public renderer(): \Hubleto\Framework\Renderer
+public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
@@ -224,7 +233,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 [Description for getModel]
 
 ```php
-public getModel(string $model): \Hubleto\Framework\Models\Model
+public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
 **Parameters:**
@@ -251,22 +260,17 @@ public getController(string $controller): \Hubleto\Framework\Controller
 
 ### translate
 
-Shorthand for core translate() function. Uses own language dictionary.
-
 ```php
-public translate(string $string, array $vars = []): string
+public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
 **Parameters:**
 
-| Parameter | Type       | Description             |
-|-----------|------------|-------------------------|
-| `$string` | **string** | String to be translated |
-| `$vars`   | **array**  |                         |
-
-**Return Value:**
-
-Translated string.
+| Parameter       | Type                     | Description |
+|-----------------|--------------------------|-------------|
+| `$string`       | **string**               |             |
+| `$vars`         | **array<string,string>** |             |
+| `$contextInner` | **string**               |             |
 
 
 ### initRecordManager
@@ -532,27 +536,29 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### recordGet
+### convertRecordsToTree
 
-[Description for recordGet]
+[Description for convertRecordsToTree]
 
 ```php
-public recordGet(callable|null $queryModifierCallback = null): array
+public convertRecordsToTree(array $records, int $idParent, int $level): array
 ```
 
 **Parameters:**
 
-| Parameter                | Type               | Description |
-|--------------------------|--------------------|-------------|
-| `$queryModifierCallback` | **callable\|null** |             |
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `$records`  | **array** |             |
+| `$idParent` | **int**   |             |
+| `$level`    | **int**   |             |
 
 
-### recordGetList
+### loadTableData
 
-[Description for recordGetList]
+[Description for loadTableData]
 
 ```php
-public recordGetList(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page): array
+public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
 ```
 
 **Parameters:**
@@ -564,6 +570,7 @@ public recordGetList(string $fulltextSearch = '', array $columnSearch = [], arra
 | `$orderBy`        | **array**  |             |
 | `$itemsPerPage`   | **int**    |             |
 | `$page`           | **int**    |             |
+| `$dataView`       | **string** |             |
 
 
 ### diffRecords
@@ -610,6 +617,19 @@ public getLookupSqlValue(string $tableAlias = ''): string
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$tableAlias` | **string** |             |
+
+
+### getLookupValue
+
+```php
+public getLookupValue(array $dataRaw): string
+```
+
+**Parameters:**
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$dataRaw` | **array** |             |
 
 
 ### encryptPassword

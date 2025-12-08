@@ -75,42 +75,42 @@ public renderSuccess(mixed $return): string
 ### renderWarning
 
 ```php
-public renderWarning(mixed $message, mixed $isHtml = true): string
+public renderWarning(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$message` | **mixed** |             |
-| `$isHtml`  | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
+| `$isHtml`    | **mixed**                                   |             |
 
 
 ### renderFatal
 
 ```php
-public renderFatal(mixed $message, mixed $isHtml = true): string
+public renderFatal(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$message` | **mixed** |             |
-| `$isHtml`  | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
+| `$isHtml`    | **mixed**                                   |             |
 
 
 ### renderHtmlFatal
 
 ```php
-public renderHtmlFatal(mixed $message): string
+public renderHtmlFatal(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$message` | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
 ### renderExceptionHtml
@@ -130,14 +130,14 @@ public renderExceptionHtml(mixed $exception, array $args = []): string
 ### renderHtmlWarning
 
 ```php
-public renderHtmlWarning(mixed $warning): string
+public renderHtmlWarning(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$warning` | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
 ### onBeforeRender

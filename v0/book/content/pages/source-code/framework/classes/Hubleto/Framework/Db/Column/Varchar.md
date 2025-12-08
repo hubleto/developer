@@ -11,6 +11,11 @@
 `protected string $type`
 
 
+### byteSize
+
+`protected int $byteSize`
+
+
 ## Methods
 
 ### sqlCreateString
@@ -228,6 +233,54 @@ public setRequired(bool $required = true): \Hubleto\Framework\Column
 | Parameter   | Type     | Description |
 |-------------|----------|-------------|
 | `$required` | **bool** |             |
+
+
+### getVisibility
+
+```php
+public getVisibility(): int
+```
+
+
+### setVisibility
+
+```php
+public setVisibility(int $visibility): \Hubleto\Framework\Column
+```
+
+**Parameters:**
+
+| Parameter     | Type    | Description |
+|---------------|---------|-------------|
+| `$visibility` | **int** |             |
+
+
+### setAlwaysVisible
+
+```php
+public setAlwaysVisible(): \Hubleto\Framework\Column
+```
+
+
+### setAlwaysHidden
+
+```php
+public setAlwaysHidden(): \Hubleto\Framework\Column
+```
+
+
+### setDefaultVisible
+
+```php
+public setDefaultVisible(): \Hubleto\Framework\Column
+```
+
+
+### setDefaultHidden
+
+```php
+public setDefaultHidden(): \Hubleto\Framework\Column
+```
 
 
 ### getPlaceholder
@@ -548,6 +601,46 @@ public setDecimals(int $decimals): \Hubleto\Framework\Column
 | Parameter   | Type    | Description |
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
+
+
+### getStep
+
+```php
+public getStep(): float
+```
+
+
+### setStep
+
+```php
+public setStep(float $step): \Hubleto\Framework\Column
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$step`   | **float** |             |
+
+
+### getIcon
+
+```php
+public getIcon(): string
+```
+
+
+### setIcon
+
+```php
+public setIcon(string $icon): \Hubleto\Framework\Column
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$icon`   | **string** |             |
 
 
 ### getEndpoint

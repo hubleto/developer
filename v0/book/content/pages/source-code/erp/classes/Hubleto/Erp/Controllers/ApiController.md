@@ -33,7 +33,7 @@ public response(): array
 ### renderJson
 
 ```php
-public renderJson(): ?array
+public renderJson(): array
 ```
 
 

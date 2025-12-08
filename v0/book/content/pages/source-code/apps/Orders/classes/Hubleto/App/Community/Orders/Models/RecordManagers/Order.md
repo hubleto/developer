@@ -16,14 +16,14 @@
 ### OWNER
 
 ```php
-public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
+public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Orders\Models\RecordManagers\Deal>
 ```
 
 
 ### MANAGER
 
 ```php
-public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Orders\Models\RecordManagers\Lead>
+public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Orders\Models\RecordManagers\Lead>
 ```
 
 
@@ -73,13 +73,6 @@ public DEALS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Com
 
 ```php
 public PROJECTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Projects\Models\RecordManagers\ProjectOrder,\Hubleto\App\Community\Orders\Models\RecordManagers\Order>
-```
-
-
-### INVOICES
-
-```php
-public INVOICES(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Orders\Models\RecordManagers\OrderInvoice,\Hubleto\App\Community\Orders\Models\RecordManagers\Order>
 ```
 
 

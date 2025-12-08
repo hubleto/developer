@@ -44,14 +44,14 @@ public LEAD(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Co
 ### OWNER
 
 ```php
-public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
+public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
 ### MANAGER
 
 ```php
-public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
@@ -139,52 +139,4 @@ public prepareReadQuery(mixed|null $query = null, int $level): mixed
 |-----------|-----------------|-------------|
 | `$query`  | **mixed\|null** |             |
 | `$level`  | **int**         |             |
-
-
-### addOrderByToQuery
-
-[Description for addOrderByToQuery]
-
-```php
-public addOrderByToQuery(mixed $query, array $orderBy): mixed
-```
-
-**Parameters:**
-
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$query`   | **mixed** |             |
-| `$orderBy` | **array** |             |
-
-
-### addFulltextSearchToQuery
-
-[Description for addFulltextSearchToQuery]
-
-```php
-public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
-```
-
-**Parameters:**
-
-| Parameter         | Type       | Description |
-|-------------------|------------|-------------|
-| `$query`          | **mixed**  |             |
-| `$fulltextSearch` | **string** |             |
-
-
-### addColumnSearchToQuery
-
-[Description for addColumnSearchToQuery]
-
-```php
-public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
-```
-
-**Parameters:**
-
-| Parameter       | Type      | Description |
-|-----------------|-----------|-------------|
-| `$query`        | **mixed** |             |
-| `$columnSearch` | **array** |             |
 

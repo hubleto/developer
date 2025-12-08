@@ -88,9 +88,9 @@ Rendered content.
 **Throws:**
 
 When running in CLI and requested controller is blocked for the CLI.
-- [`Exception`](./Exception)
+- [`Exception`](./Exceptions/Exception)
 When running in SAPI and requested controller is blocked for the SAPI.
-- [`Exception`](./Exception)
+- [`Exception`](./Exceptions/Exception)
 
 
 ### renderSuccess
@@ -109,42 +109,42 @@ public renderSuccess(mixed $return): string
 ### renderWarning
 
 ```php
-public renderWarning(mixed $message, mixed $isHtml = true): string
+public renderWarning(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$message` | **mixed** |             |
-| `$isHtml`  | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
+| `$isHtml`    | **mixed**                                   |             |
 
 
 ### renderFatal
 
 ```php
-public renderFatal(mixed $message, mixed $isHtml = true): string
+public renderFatal(\Hubleto\Framework\Exceptions\Exception $exception, mixed $isHtml = true): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$message` | **mixed** |             |
-| `$isHtml`  | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
+| `$isHtml`    | **mixed**                                   |             |
 
 
 ### renderHtmlFatal
 
 ```php
-public renderHtmlFatal(mixed $message): string
+public renderHtmlFatal(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$message` | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
 ### renderExceptionHtml
@@ -164,14 +164,14 @@ public renderExceptionHtml(mixed $exception, array $args = []): string
 ### renderHtmlWarning
 
 ```php
-public renderHtmlWarning(mixed $warning): string
+public renderHtmlWarning(\Hubleto\Framework\Exceptions\Exception $exception): string
 ```
 
 **Parameters:**
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$warning` | **mixed** |             |
+| Parameter    | Type                                        | Description |
+|--------------|---------------------------------------------|-------------|
+| `$exception` | **\Hubleto\Framework\Exceptions\Exception** |             |
 
 
 ### onBeforeRender
@@ -327,12 +327,21 @@ public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
 ```
 
 
+### terminal
+
+Shortcut for the terminal service.
+
+```php
+public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
+```
+
+
 ### logger
 
 Shortcut for the logger service.
 
 ```php
-public logger(): \Hubleto\Framework\Logger
+public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
 ```
 
 
@@ -341,7 +350,7 @@ public logger(): \Hubleto\Framework\Logger
 Shortcut for the locale service.
 
 ```php
-public locale(): \Hubleto\Framework\Locale
+public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
 ```
 
 
@@ -350,7 +359,7 @@ public locale(): \Hubleto\Framework\Locale
 Shortcut for the renderer service.
 
 ```php
-public renderer(): \Hubleto\Framework\Renderer
+public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
 ```
 
 
@@ -368,7 +377,7 @@ public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
 [Description for getModel]
 
 ```php
-public getModel(string $model): \Hubleto\Framework\Models\Model
+public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
 ```
 
 **Parameters:**
@@ -395,20 +404,15 @@ public getController(string $controller): \Hubleto\Framework\Controller
 
 ### translate
 
-Shorthand for core translate() function. Uses own language dictionary.
-
 ```php
-public translate(string $string, array $vars = []): string
+public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
 ```
 
 **Parameters:**
 
-| Parameter | Type       | Description             |
-|-----------|------------|-------------------------|
-| `$string` | **string** | String to be translated |
-| `$vars`   | **array**  |                         |
-
-**Return Value:**
-
-Translated string.
+| Parameter       | Type                     | Description |
+|-----------------|--------------------------|-------------|
+| `$string`       | **string**               |             |
+| `$vars`         | **array<string,string>** |             |
+| `$contextInner` | **string**               |             |
 

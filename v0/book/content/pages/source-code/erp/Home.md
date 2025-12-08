@@ -8,20 +8,20 @@
 
 #### Classes
 
-| Class                                                            | Description                                     |
-|------------------------------------------------------------------|-------------------------------------------------|
-| [`AuthProvider`](./classes/Hubleto/Erp/AuthProvider)             | Default authentication provider class.          |
-| [`Calendar`](./classes/Hubleto/Erp/Calendar)                     |                                                 |
-| [`Controller`](./classes/Hubleto/Erp/Controller)                 |                                                 |
-| [`Cron`](./classes/Hubleto/Erp/Cron)                             |                                                 |
-| [`Env`](./classes/Hubleto/Erp/Env)                               | Storage for environment-specific configuration. |
-| [`Hook`](./classes/Hubleto/Erp/Hook)                             |                                                 |
-| [`Loader`](./classes/Hubleto/Erp/Loader)                         |                                                 |
-| [`Model`](./classes/Hubleto/Erp/Model)                           | Core implementation of model.                   |
-| [`PermissionsManager`](./classes/Hubleto/Erp/PermissionsManager) | Class managing Hubleto permissions.             |
-| [`RecordManager`](./classes/Hubleto/Erp/RecordManager)           |                                                 |
-| [`Renderer`](./classes/Hubleto/Erp/Renderer)                     |                                                 |
-| [`Report`](./classes/Hubleto/Erp/Report)                         |                                                 |
+| Class                                                  | Description                                     |
+|--------------------------------------------------------|-------------------------------------------------|
+| [`Calendar`](./classes/Hubleto/Erp/Calendar)           |                                                 |
+| [`Controller`](./classes/Hubleto/Erp/Controller)       |                                                 |
+| [`Cron`](./classes/Hubleto/Erp/Cron)                   |                                                 |
+| [`Env`](./classes/Hubleto/Erp/Env)                     | Storage for environment-specific configuration. |
+| [`Hook`](./classes/Hubleto/Erp/Hook)                   |                                                 |
+| [`Loader`](./classes/Hubleto/Erp/Loader)               |                                                 |
+| [`Locale`](./classes/Hubleto/Erp/Locale)               | Methods to support locale in Hubleto project.   |
+| [`Model`](./classes/Hubleto/Erp/Model)                 | Core implementation of model.                   |
+| [`RecordManager`](./classes/Hubleto/Erp/RecordManager) |                                                 |
+| [`Renderer`](./classes/Hubleto/Erp/Renderer)           |                                                 |
+| [`Report`](./classes/Hubleto/Erp/Report)               |                                                 |
+| [`TestCase`](./classes/Hubleto/Erp/TestCase)           |                                                 |
 
 ### \Hubleto\Erp\Api
 
@@ -44,13 +44,10 @@
 
 #### Classes
 
-| Class                                                                | Description |
-|----------------------------------------------------------------------|-------------|
-| [`ApiController`](./classes/Hubleto/Erp/Controllers/ApiController)   |             |
-| [`ForgotPassword`](./classes/Hubleto/Erp/Controllers/ForgotPassword) |             |
-| [`NotFound`](./classes/Hubleto/Erp/Controllers/NotFound)             |             |
-| [`ResetPassword`](./classes/Hubleto/Erp/Controllers/ResetPassword)   |             |
-| [`SignIn`](./classes/Hubleto/Erp/Controllers/SignIn)                 |             |
+| Class                                                              | Description |
+|--------------------------------------------------------------------|-------------|
+| [`ApiController`](./classes/Hubleto/Erp/Controllers/ApiController) |             |
+| [`NotFound`](./classes/Hubleto/Erp/Controllers/NotFound)           |             |
 
 ### \Hubleto\Erp\Emails
 
@@ -69,3 +66,11 @@
 |---------------------------------------------------------------------------------------|-------------|
 | [`AccountAlreadyExists`](./classes/Hubleto/Erp/Exceptions/AccountAlreadyExists)       |             |
 | [`AccountValidationFailed`](./classes/Hubleto/Erp/Exceptions/AccountValidationFailed) |             |
+
+### \Hubleto\Erp\Interfaces
+
+#### Interfaces
+
+| Interface                                                                                     | Description |
+|-----------------------------------------------------------------------------------------------|-------------|
+| [`PermissionsManagerInterface`](./classes/Hubleto/Erp/Interfaces/PermissionsManagerInterface) |             |

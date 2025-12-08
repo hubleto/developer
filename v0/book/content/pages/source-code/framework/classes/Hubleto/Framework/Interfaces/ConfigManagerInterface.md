@@ -3,6 +3,32 @@
 
 ## Methods
 
+### forApp
+
+```php
+public forApp(string $appClass): mixed
+```
+
+**Parameters:**
+
+| Parameter   | Type       | Description |
+|-------------|------------|-------------|
+| `$appClass` | **string** |             |
+
+
+### setPrefix
+
+```php
+public setPrefix(string $prefix): mixed
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$prefix` | **string** |             |
+
+
 ### setConfig
 
 ```php

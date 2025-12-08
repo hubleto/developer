@@ -29,3 +29,12 @@
 public describeColumns(): array
 ```
 
+
+### describeTable
+
+[Description for describeTable]
+
+```php
+public describeTable(): \Hubleto\Framework\Description\Table
+```
+

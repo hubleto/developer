@@ -23,7 +23,7 @@
 |-----------------------------------------------------------------------------------|-------------|
 | [`Calendar`](./classes/Hubleto/App/Community/Calendar/Controllers/Calendar)       |             |
 | [`IcsCalendar`](./classes/Hubleto/App/Community/Calendar/Controllers/IcsCalendar) |             |
-| [`Settings`](./classes/Hubleto/App/Community/Calendar/Controllers/Settings)       |             |
+| [`Share`](./classes/Hubleto/App/Community/Calendar/Controllers/Share)             |             |
 
 ### \Hubleto\App\Community\Calendar\Controllers\Api
 
@@ -34,6 +34,7 @@
 | [`DailyDigest`](./classes/Hubleto/App/Community/Calendar/Controllers/Api/DailyDigest)                 |             |
 | [`GetCalendarEvents`](./classes/Hubleto/App/Community/Calendar/Controllers/Api/GetCalendarEvents)     |             |
 | [`GetSharedCalendars`](./classes/Hubleto/App/Community/Calendar/Controllers/Api/GetSharedCalendars)   |             |
+| [`SetInitialView`](./classes/Hubleto/App/Community/Calendar/Controllers/Api/SetInitialView)           |             |
 | [`StopSharingCalendar`](./classes/Hubleto/App/Community/Calendar/Controllers/Api/StopSharingCalendar) |             |
 
 ### \Hubleto\App\Community\Calendar\Controllers\Boards
@@ -50,6 +51,7 @@
 
 | Class                                                                             | Description |
 |-----------------------------------------------------------------------------------|-------------|
+| [`AppMenu`](./classes/Hubleto/App/Community/Calendar/Extendibles/AppMenu)         |             |
 | [`ContextHelp`](./classes/Hubleto/App/Community/Calendar/Extendibles/ContextHelp) |             |
 
 ### \Hubleto\App\Community\Calendar\Models

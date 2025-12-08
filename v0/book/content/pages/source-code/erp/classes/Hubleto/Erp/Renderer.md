@@ -21,3 +21,19 @@ Callback called before the rendering starts.
 public onBeforeRender(): void
 ```
 
+
+### render
+
+[Description for render]
+
+```php
+public render(string $route = '', array $params = []): string
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$route`  | **string** |             |
+| `$params` | **array**  |             |
+

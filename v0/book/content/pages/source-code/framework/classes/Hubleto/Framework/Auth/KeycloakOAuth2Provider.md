@@ -1,7 +1,9 @@
 
+Default implementation of authentication provider.
+
 # \Hubleto\Framework\Auth\KeycloakOAuth2Provider
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./">Auth</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../AuthProvider">\Hubleto\Framework\AuthProvider</a></td></tr></table>
 
 
 ## Properties
@@ -13,17 +15,25 @@
 
 ## Methods
 
-### __construct
+### init
 
 ```php
-public __construct(array $config = []): mixed
+public init(): void
 ```
 
-**Parameters:**
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$config` | **array** |             |
+### getUserFromSession
+
+```php
+public getUserFromSession(): array
+```
+
+
+### isUserInSession
+
+```php
+public isUserInSession(): bool
+```
 
 
 ### signOut
@@ -58,4 +68,424 @@ public setAccessToken(mixed $accessToken): mixed
 ```php
 public auth(): void
 ```
+
+
+## Inherited methods
+
+### __construct
+
+```php
+public __construct(): mixed
+```
+
+
+### getServiceStatic
+
+Shortcut for the dependency injection.
+
+```php
+public static getServiceStatic(string $service): mixed
+```
+
+* This method is **static**.
+**Parameters:**
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$service` | **string** |             |
+
+
+### getService
+
+[Description for getService]
+
+```php
+public getService(string $service): mixed
+```
+
+**Parameters:**
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$service` | **string** |             |
+
+
+### env
+
+Shortcut for the env service.
+
+```php
+public env(): \Hubleto\Framework\Env
+```
+
+
+### authProvider
+
+Shortcut for the authentication service.
+
+```php
+public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
+```
+
+
+### db
+
+Shortcut for the database service.
+
+```php
+public db(): \Hubleto\Framework\Db
+```
+
+
+### appManager
+
+Shortcut for the app manager service.
+
+```php
+public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
+```
+
+
+### router
+
+Shortcut for the router service.
+
+```php
+public router(): \Hubleto\Framework\Router
+```
+
+
+### hookManager
+
+Shortcut for the hook manager service.
+
+```php
+public hookManager(): \Hubleto\Framework\HookManager
+```
+
+
+### sessionManager
+
+Shortcut for the session manager service.
+
+```php
+public sessionManager(): \Hubleto\Framework\SessionManager
+```
+
+
+### permissionsManager
+
+Shortcut for the permissions manager service.
+
+```php
+public permissionsManager(): \Hubleto\Framework\PermissionsManager
+```
+
+
+### cronManager
+
+Shortcut for the cron manager service.
+
+```php
+public cronManager(): \Hubleto\Framework\CronManager
+```
+
+
+### emailProvider
+
+Shortcut for the email provider service.
+
+```php
+public emailProvider(): \Hubleto\Framework\EmailProvider
+```
+
+
+### config
+
+Shortcut for the config service.
+
+```php
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
+```
+
+
+### terminal
+
+Shortcut for the terminal service.
+
+```php
+public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
+```
+
+
+### logger
+
+Shortcut for the logger service.
+
+```php
+public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
+```
+
+
+### locale
+
+Shortcut for the locale service.
+
+```php
+public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
+```
+
+
+### renderer
+
+Shortcut for the renderer service.
+
+```php
+public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
+```
+
+
+### translator
+
+Shortcut for the translator service.
+
+```php
+public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
+```
+
+
+### getModel
+
+[Description for getModel]
+
+```php
+public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$model`  | **string** |             |
+
+
+### getController
+
+[Description for getController]
+
+```php
+public getController(string $controller): \Hubleto\Framework\Controller
+```
+
+**Parameters:**
+
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$controller` | **string** |             |
+
+
+### translate
+
+```php
+public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
+```
+
+**Parameters:**
+
+| Parameter       | Type                     | Description |
+|-----------------|--------------------------|-------------|
+| `$string`       | **string**               |             |
+| `$vars`         | **array<string,string>** |             |
+| `$contextInner` | **string**               |             |
+
+
+### init
+
+```php
+public init(): void
+```
+
+
+### getUserFromSession
+
+```php
+public getUserFromSession(): array
+```
+
+
+### updateUserInSession
+
+```php
+public updateUserInSession(array $user): void
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$user`   | **array** |             |
+
+
+### isUserInSession
+
+```php
+public isUserInSession(): bool
+```
+
+
+### deleteSession
+
+```php
+public deleteSession(): mixed
+```
+
+
+### signIn
+
+```php
+public signIn(array $user): mixed
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$user`   | **array** |             |
+
+
+### signOut
+
+```php
+public signOut(): mixed
+```
+
+
+### createUserModel
+
+```php
+public createUserModel(): \Hubleto\Framework\Model
+```
+
+
+### findUsersByLogin
+
+```php
+public findUsersByLogin(string $login): array
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$login`  | **string** |             |
+
+
+### verifyPassword
+
+```php
+public verifyPassword(mixed $password1, mixed $password2): bool
+```
+
+**Parameters:**
+
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `$password1` | **mixed** |             |
+| `$password2` | **mixed** |             |
+
+
+### getActiveUsers
+
+```php
+public getActiveUsers(): array
+```
+
+
+### auth
+
+```php
+public auth(): void
+```
+
+
+### getUser
+
+```php
+public getUser(): array
+```
+
+
+### getUserType
+
+```php
+public getUserType(): int
+```
+
+
+### getUserRoles
+
+```php
+public getUserRoles(): array
+```
+
+
+### userHasRole
+
+```php
+public userHasRole(int $idRole): bool
+```
+
+**Parameters:**
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$idRole` | **int** |             |
+
+
+### getUserId
+
+```php
+public getUserId(): int
+```
+
+
+### getUserEmail
+
+```php
+public getUserEmail(): string
+```
+
+
+### forgotPassword
+
+```php
+public forgotPassword(): void
+```
+
+
+### resetPassword
+
+```php
+public resetPassword(): void
+```
+
+
+### getUserLanguage
+
+```php
+public getUserLanguage(): string
+```
+
+
+### setUserLanguage
+
+```php
+public setUserLanguage(string $language): void
+```
+
+**Parameters:**
+
+| Parameter   | Type       | Description |
+|-------------|------------|-------------|
+| `$language` | **string** |             |
 

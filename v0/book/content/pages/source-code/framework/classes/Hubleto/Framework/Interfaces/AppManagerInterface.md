@@ -192,20 +192,6 @@ public enableApp(string $appNamespace): void
 | `$appNamespace` | **string** |             |
 
 
-### createApp
-
-```php
-public createApp(string $appNamespace, string $appSrcFolder): void
-```
-
-**Parameters:**
-
-| Parameter       | Type       | Description |
-|-----------------|------------|-------------|
-| `$appNamespace` | **string** |             |
-| `$appSrcFolder` | **string** |             |
-
-
 ### canAppDangerouslyInjectDesktopHtmlContent
 
 ```php

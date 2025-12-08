@@ -11,12 +11,31 @@
 `public $table`
 
 
+### readQueryHiddenRelations
+
+`public array $readQueryHiddenRelations`
+
+
 ## Methods
 
 ### MANAGER
 
 ```php
-public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Lead>
+public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Lead>
+```
+
+
+### OWNER
+
+```php
+public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Lead>
+```
+
+
+### LAUNCHED_BY
+
+```php
+public LAUNCHED_BY(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Lead>
 ```
 
 
@@ -48,10 +67,10 @@ public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\
 ```
 
 
-### CONTACTS
+### RECIPIENTS
 
 ```php
-public CONTACTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Campaigns\Models\RecordManagers\DealTask,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Deal>
+public RECIPIENTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Campaigns\Models\RecordManagers\DealTask,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Deal>
 ```
 
 

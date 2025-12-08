@@ -35,6 +35,7 @@
 | [`ConvertDealToProject`](./classes/Hubleto/App/Community/Projects/Controllers/Api/ConvertDealToProject) |             |
 | [`CreateFromOrder`](./classes/Hubleto/App/Community/Projects/Controllers/Api/CreateFromOrder)           |             |
 | [`GetStatistics`](./classes/Hubleto/App/Community/Projects/Controllers/Api/GetStatistics)               |             |
+| [`SetParentOrder`](./classes/Hubleto/App/Community/Projects/Controllers/Api/SetParentOrder)             |             |
 
 ### \Hubleto\App\Community\Projects\Models
 

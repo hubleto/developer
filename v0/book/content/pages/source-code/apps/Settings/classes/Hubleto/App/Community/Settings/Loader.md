@@ -36,3 +36,12 @@ public installTables(int $round): void
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
+
+### assignPermissionsToRoles
+
+[Description for assignPermissionsToRoles]
+
+```php
+public assignPermissionsToRoles(): void
+```
+

@@ -212,23 +212,10 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### recordGet
+### loadTableData
 
 ```php
-public recordGet(callable|null $queryModifierCallback = null): array
-```
-
-**Parameters:**
-
-| Parameter                | Type               | Description |
-|--------------------------|--------------------|-------------|
-| `$queryModifierCallback` | **callable\|null** |             |
-
-
-### recordGetList
-
-```php
-public recordGetList(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page): array
+public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
 ```
 
 **Parameters:**
@@ -240,6 +227,7 @@ public recordGetList(string $fulltextSearch = '', array $columnSearch = [], arra
 | `$orderBy`        | **array**  |             |
 | `$itemsPerPage`   | **int**    |             |
 | `$page`           | **int**    |             |
+| `$dataView`       | **string** |             |
 
 
 ### diffRecords

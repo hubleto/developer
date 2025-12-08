@@ -51,21 +51,6 @@ public getNotificationsCount(): int
 ```
 
 
-### translate
-
-```php
-public translate(string $string, array $vars = [], string $context = 'root'): string
-```
-
-**Parameters:**
-
-| Parameter  | Type       | Description |
-|------------|------------|-------------|
-| `$string`  | **string** |             |
-| `$vars`    | **array**  |             |
-| `$context` | **string** |             |
-
-
 ### installTables
 
 ```php

@@ -21,6 +21,11 @@
 `public string $translationContext`
 
 
+### translationContextInner
+
+`public string $translationContextInner`
+
+
 ## Methods
 
 ### prepareView

@@ -10,6 +10,8 @@ Default record manager for Hubleto projects. Uses Laravel's Eloquent.
 
 ### getPermissions
 
+[Description for getPermissions]
+
 ```php
 public getPermissions(array $record): array
 ```
@@ -23,7 +25,7 @@ public getPermissions(array $record): array
 
 ### prepareReadQuery
 
-prepareReadQuery
+[Description for prepareReadQuery]
 
 ```php
 public prepareReadQuery(mixed $query = null, int $level): mixed
@@ -31,14 +33,10 @@ public prepareReadQuery(mixed $query = null, int $level): mixed
 
 **Parameters:**
 
-| Parameter | Type      | Description                        |
-|-----------|-----------|------------------------------------|
-| `$query`  | **mixed** | Leave empty for default behaviour. |
-| `$level`  | **int**   | Leave empty for default behaviour. |
-
-**Return Value:**
-
-Eloquent query used to read record.
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$query`  | **mixed** |             |
+| `$level`  | **int**   |             |
 
 
 ## Inherited methods
@@ -58,6 +56,8 @@ public __construct(array $attributes = []): mixed
 
 ### getPermissions
 
+[Description for getPermissions]
+
 ```php
 public getPermissions(array $record): array
 ```
@@ -71,27 +71,38 @@ public getPermissions(array $record): array
 
 ### prepareReadQuery
 
-prepareReadQuery
+[Description for prepareReadQuery]
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareReadQuery(mixed|null $query = null, int $level): mixed
 ```
 
 **Parameters:**
 
-| Parameter | Type      | Description                        |
-|-----------|-----------|------------------------------------|
-| `$query`  | **mixed** | Leave empty for default behaviour. |
-| `$level`  | **int**   | Leave empty for default behaviour. |
+| Parameter | Type            | Description |
+|-----------|-----------------|-------------|
+| `$query`  | **mixed\|null** |             |
+| `$level`  | **int**         |             |
 
-**Return Value:**
 
-Eloquent query used to read record.
+### recordGet
+
+[Description for recordGet]
+
+```php
+public recordGet(callable|null $queryModifierCallback = null): array
+```
+
+**Parameters:**
+
+| Parameter                | Type               | Description |
+|--------------------------|--------------------|-------------|
+| `$queryModifierCallback` | **callable\|null** |             |
 
 
 ### prepareLookupQuery
 
-prepareLookupQuery
+[Description for prepareLookupQuery]
 
 ```php
 public prepareLookupQuery(string $search): mixed
@@ -106,6 +117,8 @@ public prepareLookupQuery(string $search): mixed
 
 ### prepareLookupData
 
+[Description for prepareLookupData]
+
 ```php
 public prepareLookupData(array $dataRaw): array
 ```
@@ -118,6 +131,8 @@ public prepareLookupData(array $dataRaw): array
 
 
 ### addFulltextSearchToQuery
+
+[Description for addFulltextSearchToQuery]
 
 ```php
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
@@ -133,6 +148,8 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 
 ### addColumnSearchToQuery
 
+[Description for addColumnSearchToQuery]
+
 ```php
 public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 ```
@@ -147,6 +164,8 @@ public addColumnSearchToQuery(mixed $query, array $columnSearch): mixed
 
 ### addOrderByToQuery
 
+[Description for addOrderByToQuery]
+
 ```php
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
 ```
@@ -160,6 +179,8 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 
 
 ### recordReadMany
+
+[Description for recordReadMany]
 
 ```php
 public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
@@ -176,6 +197,8 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 
 ### recordRead
 
+[Description for recordRead]
+
 ```php
 public recordRead(mixed $query): array
 ```
@@ -188,6 +211,8 @@ public recordRead(mixed $query): array
 
 
 ### recordEncryptIds
+
+[Description for recordEncryptIds]
 
 ```php
 public recordEncryptIds(array $record): array
@@ -202,6 +227,8 @@ public recordEncryptIds(array $record): array
 
 ### recordDecryptIds
 
+[Description for recordDecryptIds]
+
 ```php
 public recordDecryptIds(array $record): array
 ```
@@ -215,18 +242,23 @@ public recordDecryptIds(array $record): array
 
 ### recordCreate
 
+[Description for recordCreate]
+
 ```php
-public recordCreate(array $record): array
+public recordCreate(array $record, mixed $useProvidedRecordId = false): array
 ```
 
 **Parameters:**
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$record` | **array** |             |
+| Parameter              | Type      | Description |
+|------------------------|-----------|-------------|
+| `$record`              | **array** |             |
+| `$useProvidedRecordId` | **mixed** |             |
 
 
 ### recordUpdate
+
+[Description for recordUpdate]
 
 ```php
 public recordUpdate(array $record, array $originalRecord = []): array
@@ -242,6 +274,8 @@ public recordUpdate(array $record, array $originalRecord = []): array
 
 ### recordDelete
 
+[Description for recordDelete]
+
 ```php
 public recordDelete(int|string $id): int
 ```
@@ -254,6 +288,8 @@ public recordDelete(int|string $id): int
 
 
 ### recordSave
+
+[Description for recordSave]
 
 ```php
 public recordSave(array $record, int $idMasterRecord, array $saveRelations = [], string $relation = ''): array
@@ -271,22 +307,24 @@ public recordSave(array $record, int $idMasterRecord, array $saveRelations = [],
 
 ### recordValidate
 
-validate
+[Description for recordValidate]
 
 ```php
-public recordValidate(array<string,mixed> $record, array $validateRelations = [], string $relation = ''): array<string,mixed>
+public recordValidate(array $record, array $validateRelations = [], string $relation = ''): array
 ```
 
 **Parameters:**
 
-| Parameter            | Type                    | Description |
-|----------------------|-------------------------|-------------|
-| `$record`            | **array<string,mixed>** |             |
-| `$validateRelations` | **array**               |             |
-| `$relation`          | **string**              |             |
+| Parameter            | Type       | Description |
+|----------------------|------------|-------------|
+| `$record`            | **array**  |             |
+| `$validateRelations` | **array**  |             |
+| `$relation`          | **string** |             |
 
 
 ### recordNormalize
+
+[Description for recordNormalize]
 
 ```php
 public recordNormalize(array $record): array

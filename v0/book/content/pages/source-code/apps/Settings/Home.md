@@ -8,9 +8,10 @@
 
 #### Classes
 
-| Class                                                       | Description |
-|-------------------------------------------------------------|-------------|
-| [`Loader`](./classes/Hubleto/App/Community/Settings/Loader) |             |
+| Class                                                                               | Description                         |
+|-------------------------------------------------------------------------------------|-------------------------------------|
+| [`Loader`](./classes/Hubleto/App/Community/Settings/Loader)                         |                                     |
+| [`PermissionsManager`](./classes/Hubleto/App/Community/Settings/PermissionsManager) | Class managing Hubleto permissions. |
 
 ### \Hubleto\App\Community\Settings\Controllers
 
@@ -26,7 +27,6 @@
 | [`Currencies`](./classes/Hubleto/App/Community/Settings/Controllers/Currencies)                             |             |
 | [`Dashboard`](./classes/Hubleto/App/Community/Settings/Controllers/Dashboard)                               |             |
 | [`General`](./classes/Hubleto/App/Community/Settings/Controllers/General)                                   |             |
-| [`InvoiceProfiles`](./classes/Hubleto/App/Community/Settings/Controllers/InvoiceProfiles)                   |             |
 | [`MyAccount`](./classes/Hubleto/App/Community/Settings/Controllers/MyAccount)                               |             |
 | [`Permissions`](./classes/Hubleto/App/Community/Settings/Controllers/Permissions)                           |             |
 | [`RolePermissions`](./classes/Hubleto/App/Community/Settings/Controllers/RolePermissions)                   |             |
@@ -56,15 +56,11 @@
 | [`Company`](./classes/Hubleto/App/Community/Settings/Models/Company)               |             |
 | [`Country`](./classes/Hubleto/App/Community/Settings/Models/Country)               |             |
 | [`Currency`](./classes/Hubleto/App/Community/Settings/Models/Currency)             |             |
-| [`InvoiceProfile`](./classes/Hubleto/App/Community/Settings/Models/InvoiceProfile) |             |
 | [`Permission`](./classes/Hubleto/App/Community/Settings/Models/Permission)         |             |
 | [`RolePermission`](./classes/Hubleto/App/Community/Settings/Models/RolePermission) |             |
 | [`Setting`](./classes/Hubleto/App/Community/Settings/Models/Setting)               |             |
 | [`Team`](./classes/Hubleto/App/Community/Settings/Models/Team)                     |             |
 | [`TeamMember`](./classes/Hubleto/App/Community/Settings/Models/TeamMember)         |             |
-| [`User`](./classes/Hubleto/App/Community/Settings/Models/User)                     |             |
-| [`UserHasRole`](./classes/Hubleto/App/Community/Settings/Models/UserHasRole)       |             |
-| [`UserRole`](./classes/Hubleto/App/Community/Settings/Models/UserRole)             |             |
 
 ### \Hubleto\App\Community\Settings\Models\RecordManagers
 
@@ -76,12 +72,8 @@
 | [`Company`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/Company)               |             |
 | [`Country`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/Country)               |             |
 | [`Currency`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/Currency)             |             |
-| [`InvoiceProfile`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/InvoiceProfile) |             |
 | [`Permission`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/Permission)         |             |
 | [`RolePermission`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/RolePermission) |             |
 | [`Setting`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/Setting)               |             |
 | [`Team`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/Team)                     |             |
 | [`TeamMember`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/TeamMember)         |             |
-| [`User`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/User)                     |             |
-| [`UserHasRole`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/UserHasRole)       |             |
-| [`UserRole`](./classes/Hubleto/App/Community/Settings/Models/RecordManagers/UserRole)             |             |

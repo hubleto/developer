@@ -32,7 +32,9 @@
 | [`CreateFromDeal`](./classes/Hubleto/App/Community/Orders/Controllers/Api/CreateFromDeal)   |             |
 | [`GenerateInvoice`](./classes/Hubleto/App/Community/Orders/Controllers/Api/GenerateInvoice) |             |
 | [`GeneratePdf`](./classes/Hubleto/App/Community/Orders/Controllers/Api/GeneratePdf)         |             |
+| [`GetProduct`](./classes/Hubleto/App/Community/Orders/Controllers/Api/GetProduct)           |             |
 | [`LogActivity`](./classes/Hubleto/App/Community/Orders/Controllers/Api/LogActivity)         |             |
+| [`SetParentDeal`](./classes/Hubleto/App/Community/Orders/Controllers/Api/SetParentDeal)     |             |
 
 ### \Hubleto\App\Community\Orders\Controllers\Boards
 
@@ -53,7 +55,6 @@
 | [`OrderActivity`](./classes/Hubleto/App/Community/Orders/Models/OrderActivity) |             |
 | [`OrderDeal`](./classes/Hubleto/App/Community/Orders/Models/OrderDeal)         |             |
 | [`OrderDocument`](./classes/Hubleto/App/Community/Orders/Models/OrderDocument) |             |
-| [`OrderInvoice`](./classes/Hubleto/App/Community/Orders/Models/OrderInvoice)   |             |
 | [`OrderProduct`](./classes/Hubleto/App/Community/Orders/Models/OrderProduct)   |             |
 | [`State`](./classes/Hubleto/App/Community/Orders/Models/State)                 |             |
 
@@ -68,6 +69,5 @@
 | [`OrderActivity`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderActivity) |             |
 | [`OrderDeal`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderDeal)         |             |
 | [`OrderDocument`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderDocument) |             |
-| [`OrderInvoice`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderInvoice)   |             |
 | [`OrderProduct`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/OrderProduct)   |             |
 | [`State`](./classes/Hubleto/App/Community/Orders/Models/RecordManagers/State)                 |             |

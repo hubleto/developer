@@ -16,7 +16,7 @@
 ### ROLE
 
 ```php
-public ROLE(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\UserRole,\Hubleto\App\Community\Settings\Models\RecordManagers\RolePermission>
+public ROLE(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\UserRole,\Hubleto\App\Community\Settings\Models\RecordManagers\RolePermission>
 ```
 
 

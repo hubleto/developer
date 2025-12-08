@@ -21,6 +21,16 @@
 `public ?string $lookupSqlValue`
 
 
+### lookupUrlAdd
+
+`public ?string $lookupUrlAdd`
+
+
+### lookupUrlDetail
+
+`public ?string $lookupUrlDetail`
+
+
 ## Methods
 
 ### describeColumns

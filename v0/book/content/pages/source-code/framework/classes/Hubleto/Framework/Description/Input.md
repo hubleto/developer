@@ -36,6 +36,16 @@
 `protected int $decimals`
 
 
+### step
+
+`protected float $step`
+
+
+### icon
+
+`protected string $icon`
+
+
 ### unit
 
 `protected string $unit`
@@ -278,6 +288,46 @@ public setDecimals(int $decimals): \Hubleto\Framework\Description\Input
 | Parameter   | Type    | Description |
 |-------------|---------|-------------|
 | `$decimals` | **int** |             |
+
+
+### getStep
+
+```php
+public getStep(): float
+```
+
+
+### setStep
+
+```php
+public setStep(float $step): \Hubleto\Framework\Description\Input
+```
+
+**Parameters:**
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$step`   | **float** |             |
+
+
+### getIcon
+
+```php
+public getIcon(): string
+```
+
+
+### setIcon
+
+```php
+public setIcon(string $icon): \Hubleto\Framework\Description\Input
+```
+
+**Parameters:**
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$icon`   | **string** |             |
 
 
 ### getUnit

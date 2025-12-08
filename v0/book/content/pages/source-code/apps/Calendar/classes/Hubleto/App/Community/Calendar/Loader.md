@@ -4,13 +4,6 @@
 <tr><td>Parent class</td><td><a href="../../../Framework/App">App</a></td></tr></table>
 
 
-## Properties
-
-### hasCustomSettings
-
-`public bool $hasCustomSettings`
-
-
 ## Methods
 
 ### init
@@ -35,4 +28,24 @@ public installTables(int $round): void
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
+
+
+### getInitialView
+
+```php
+public getInitialView(): string
+```
+
+
+### setInitialView
+
+```php
+public setInitialView(string $initialView): void
+```
+
+**Parameters:**
+
+| Parameter      | Type       | Description |
+|----------------|------------|-------------|
+| `$initialView` | **string** |             |
 

@@ -3,19 +3,14 @@ Default translator for Hubleto project.
 
 # \Hubleto\Framework\Translator
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/TranslatorInterface">\Hubleto\Framework\Interfaces\TranslatorInterface</a></td></tr></table>
+<tr><td>Implements</td><td>  <a href="./Interfaces/TranslatorInterface">\Hubleto\Framework\Interfaces\TranslatorInterface</a></td></tr></table>
 
 
 ## Properties
 
-### context
+### service
 
-`public string $context`
-
-
-### dictionaryFilename
-
-`public string $dictionaryFilename`
+`public \Hubleto\Framework\Core $service`
 
 
 ### dictionary
@@ -25,336 +20,89 @@ Default translator for Hubleto project.
 
 ## Methods
 
-### getContext
-
-```php
-public getContext(): string
-```
-
-
-### setContext
-
-```php
-public setContext(string $context): void
-```
-
-**Parameters:**
-
-| Parameter  | Type       | Description |
-|------------|------------|-------------|
-| `$context` | **string** |             |
-
-
-### loadDictionaryFromJsonFile
-
-```php
-public loadDictionaryFromJsonFile(string $jsonFile): array|array<string,array<string,string>>
-```
-
-**Parameters:**
-
-| Parameter   | Type       | Description |
-|-------------|------------|-------------|
-| `$jsonFile` | **string** |             |
-
-
-### loadDictionaryForContext
-
-```php
-public loadDictionaryForContext(string $language, string $contextFileRef): array
-```
-
-**Parameters:**
-
-| Parameter         | Type       | Description |
-|-------------------|------------|-------------|
-| `$language`       | **string** |             |
-| `$contextFileRef` | **string** |             |
-
-
 ### getDictionaryFilename
 
+[Description for getDictionaryFilename]
+
 ```php
-public getDictionaryFilename(string $context, string $language = ''): string
+public getDictionaryFilename(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context): string
 ```
 
 **Parameters:**
 
-| Parameter   | Type       | Description |
-|-------------|------------|-------------|
-| `$context`  | **string** |             |
-| `$language` | **string** |             |
+| Parameter   | Type                                            | Description |
+|-------------|-------------------------------------------------|-------------|
+| `$core`     | **\Hubleto\Framework\Interfaces\CoreInterface** |             |
+| `$language` | **string**                                      |             |
+| `$context`  | **string**                                      |             |
 
 
 ### addToDictionary
 
+[Description for addToDictionary]
+
 ```php
-public addToDictionary(string $string, string $context, string $toLanguage): void
+public addToDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context, string $contextInner, string $string): void
 ```
 
 **Parameters:**
 
-| Parameter     | Type       | Description |
-|---------------|------------|-------------|
-| `$string`     | **string** |             |
-| `$context`    | **string** |             |
-| `$toLanguage` | **string** |             |
+| Parameter       | Type                                            | Description |
+|-----------------|-------------------------------------------------|-------------|
+| `$core`         | **\Hubleto\Framework\Interfaces\CoreInterface** |             |
+| `$language`     | **string**                                      |             |
+| `$context`      | **string**                                      |             |
+| `$contextInner` | **string**                                      |             |
+| `$string`       | **string**                                      |             |
 
 
 ### loadDictionary
 
+[Description for loadDictionary]
+
 ```php
-public loadDictionary(string $language = ""): array|array<string,array<string,string>>
+public loadDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language, string $context): void
 ```
 
 **Parameters:**
 
-| Parameter   | Type       | Description |
-|-------------|------------|-------------|
-| `$language` | **string** |             |
+| Parameter   | Type                                            | Description |
+|-------------|-------------------------------------------------|-------------|
+| `$core`     | **\Hubleto\Framework\Interfaces\CoreInterface** |             |
+| `$language` | **string**                                      |             |
+| `$context`  | **string**                                      |             |
+
+
+### loadFullDictionary
+
+[Description for loadFullDictionary]
+
+```php
+public loadFullDictionary(\Hubleto\Framework\Interfaces\CoreInterface $core, string $language): array
+```
+
+**Parameters:**
+
+| Parameter   | Type                                            | Description |
+|-------------|-------------------------------------------------|-------------|
+| `$core`     | **\Hubleto\Framework\Interfaces\CoreInterface** |             |
+| `$language` | **string**                                      |             |
 
 
 ### translate
 
-Shorthand for core translate() function. Uses own language dictionary.
+[Description for translate]
 
 ```php
-public translate(string $string, array<string,string> $vars = []): string
+public translate(\Hubleto\Framework\Interfaces\CoreInterface $service, string $string, array $vars = [], string $context = ''): string
 ```
 
 **Parameters:**
 
-| Parameter | Type                     | Description             |
-|-----------|--------------------------|-------------------------|
-| `$string` | **string**               | String to be translated |
-| `$vars`   | **array<string,string>** |                         |
-
-**Return Value:**
-
-Translated string.
-
-
-## Inherited methods
-
-### __construct
-
-```php
-public __construct(): mixed
-```
-
-
-### getServiceStatic
-
-Shortcut for the dependency injection.
-
-```php
-public static getServiceStatic(string $service): mixed
-```
-
-* This method is **static**.
-**Parameters:**
-
-| Parameter  | Type       | Description |
-|------------|------------|-------------|
-| `$service` | **string** |             |
-
-
-### getService
-
-[Description for getService]
-
-```php
-public getService(string $service): mixed
-```
-
-**Parameters:**
-
-| Parameter  | Type       | Description |
-|------------|------------|-------------|
-| `$service` | **string** |             |
-
-
-### env
-
-Shortcut for the env service.
-
-```php
-public env(): \Hubleto\Framework\Env
-```
-
-
-### authProvider
-
-Shortcut for the authentication service.
-
-```php
-public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
-```
-
-
-### db
-
-Shortcut for the database service.
-
-```php
-public db(): \Hubleto\Framework\Db
-```
-
-
-### appManager
-
-Shortcut for the app manager service.
-
-```php
-public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
-```
-
-
-### router
-
-Shortcut for the router service.
-
-```php
-public router(): \Hubleto\Framework\Router
-```
-
-
-### hookManager
-
-Shortcut for the hook manager service.
-
-```php
-public hookManager(): \Hubleto\Framework\HookManager
-```
-
-
-### sessionManager
-
-Shortcut for the session manager service.
-
-```php
-public sessionManager(): \Hubleto\Framework\SessionManager
-```
-
-
-### permissionsManager
-
-Shortcut for the permissions manager service.
-
-```php
-public permissionsManager(): \Hubleto\Framework\PermissionsManager
-```
-
-
-### cronManager
-
-Shortcut for the cron manager service.
-
-```php
-public cronManager(): \Hubleto\Framework\CronManager
-```
-
-
-### emailProvider
-
-Shortcut for the email provider service.
-
-```php
-public emailProvider(): \Hubleto\Framework\EmailProvider
-```
-
-
-### config
-
-Shortcut for the config service.
-
-```php
-public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
-```
-
-
-### logger
-
-Shortcut for the logger service.
-
-```php
-public logger(): \Hubleto\Framework\Logger
-```
-
-
-### locale
-
-Shortcut for the locale service.
-
-```php
-public locale(): \Hubleto\Framework\Locale
-```
-
-
-### renderer
-
-Shortcut for the renderer service.
-
-```php
-public renderer(): \Hubleto\Framework\Renderer
-```
-
-
-### translator
-
-Shortcut for the translator service.
-
-```php
-public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
-```
-
-
-### getModel
-
-[Description for getModel]
-
-```php
-public getModel(string $model): \Hubleto\Framework\Models\Model
-```
-
-**Parameters:**
-
-| Parameter | Type       | Description |
-|-----------|------------|-------------|
-| `$model`  | **string** |             |
-
-
-### getController
-
-[Description for getController]
-
-```php
-public getController(string $controller): \Hubleto\Framework\Controller
-```
-
-**Parameters:**
-
-| Parameter     | Type       | Description |
-|---------------|------------|-------------|
-| `$controller` | **string** |             |
-
-
-### translate
-
-Shorthand for core translate() function. Uses own language dictionary.
-
-```php
-public translate(string $string, array $vars = []): string
-```
-
-**Parameters:**
-
-| Parameter | Type       | Description             |
-|-----------|------------|-------------------------|
-| `$string` | **string** | String to be translated |
-| `$vars`   | **array**  |                         |
-
-**Return Value:**
-
-Translated string.
+| Parameter  | Type                                            | Description |
+|------------|-------------------------------------------------|-------------|
+| `$service` | **\Hubleto\Framework\Interfaces\CoreInterface** |             |
+| `$string`  | **string**                                      |             |
+| `$vars`    | **array**                                       |             |
+| `$context` | **string**                                      |             |
 

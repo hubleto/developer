@@ -46,6 +46,15 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
+### describeForm
+
+[Description for describeForm]
+
+```php
+public describeForm(): \Hubleto\Framework\Description\Form
+```
+
+
 ### onAfterCreate
 
 [Description for onAfterCreate]

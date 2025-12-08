@@ -35,6 +35,7 @@
 | [`Renderer`](./classes/Hubleto/Framework/Renderer)                           | Default view renderer for Hubleto project.                            |
 | [`Router`](./classes/Hubleto/Framework/Router)                               | Default router for Hubleto project.                                   |
 | [`SessionManager`](./classes/Hubleto/Framework/SessionManager)               | Default session manager for Hubleto project.                          |
+| [`Terminal`](./classes/Hubleto/Framework/Terminal)                           |                                                                       |
 | [`Test`](./classes/Hubleto/Framework/Test)                                   |                                                                       |
 | [`Translator`](./classes/Hubleto/Framework/Translator)                       | Default translator for Hubleto project.                               |
 
@@ -42,20 +43,21 @@
 
 #### Classes
 
-| Class                                                                               | Description |
-|-------------------------------------------------------------------------------------|-------------|
-| [`KeycloakOAuth2Provider`](./classes/Hubleto/Framework/Auth/KeycloakOAuth2Provider) |             |
+| Class                                                                               | Description                                        |
+|-------------------------------------------------------------------------------------|----------------------------------------------------|
+| [`KeycloakOAuth2Provider`](./classes/Hubleto/Framework/Auth/KeycloakOAuth2Provider) | Default implementation of authentication provider. |
 
 ### \Hubleto\Framework\Controllers
 
 #### Classes
 
-| Class                                                                    | Description                                   |
-|--------------------------------------------------------------------------|-----------------------------------------------|
-| [`ApiController`](./classes/Hubleto/Framework/Controllers/ApiController) | Default implementation of Hubleto controller. |
-| [`Desktop`](./classes/Hubleto/Framework/Controllers/Desktop)             | Default implementation of Hubleto controller. |
-| [`NotFound`](./classes/Hubleto/Framework/Controllers/NotFound)           | Default implementation of Hubleto controller. |
-| [`SignIn`](./classes/Hubleto/Framework/Controllers/SignIn)               | Default implementation of Hubleto controller. |
+| Class                                                                                  | Description                                   |
+|----------------------------------------------------------------------------------------|-----------------------------------------------|
+| [`ApiController`](./classes/Hubleto/Framework/Controllers/ApiController)               | Default implementation of Hubleto controller. |
+| [`Desktop`](./classes/Hubleto/Framework/Controllers/Desktop)                           | Default implementation of Hubleto controller. |
+| [`NotEnoughPermissions`](./classes/Hubleto/Framework/Controllers/NotEnoughPermissions) | Default implementation of Hubleto controller. |
+| [`NotFound`](./classes/Hubleto/Framework/Controllers/NotFound)                         | Default implementation of Hubleto controller. |
+| [`SignIn`](./classes/Hubleto/Framework/Controllers/SignIn)                             | Default implementation of Hubleto controller. |
 
 ### \Hubleto\Framework\Controllers\Api\Form
 
@@ -69,14 +71,14 @@
 
 #### Classes
 
-| Class                                                                             | Description                                   |
-|-----------------------------------------------------------------------------------|-----------------------------------------------|
-| [`Delete`](./classes/Hubleto/Framework/Controllers/Api/Record/Delete)             | Default implementation of Hubleto controller. |
-| [`Get`](./classes/Hubleto/Framework/Controllers/Api/Record/Get)                   | Default implementation of Hubleto controller. |
-| [`GetList`](./classes/Hubleto/Framework/Controllers/Api/Record/GetList)           | Default implementation of Hubleto controller. |
-| [`Lookup`](./classes/Hubleto/Framework/Controllers/Api/Record/Lookup)             | Default implementation of Hubleto controller. |
-| [`Save`](./classes/Hubleto/Framework/Controllers/Api/Record/Save)                 | Default implementation of Hubleto controller. |
-| [`SaveJunction`](./classes/Hubleto/Framework/Controllers/Api/Record/SaveJunction) | Default implementation of Hubleto controller. |
+| Class                                                                               | Description                                   |
+|-------------------------------------------------------------------------------------|-----------------------------------------------|
+| [`Delete`](./classes/Hubleto/Framework/Controllers/Api/Record/Delete)               | Default implementation of Hubleto controller. |
+| [`Get`](./classes/Hubleto/Framework/Controllers/Api/Record/Get)                     | Default implementation of Hubleto controller. |
+| [`LoadTableData`](./classes/Hubleto/Framework/Controllers/Api/Record/LoadTableData) | Default implementation of Hubleto controller. |
+| [`Lookup`](./classes/Hubleto/Framework/Controllers/Api/Record/Lookup)               | Default implementation of Hubleto controller. |
+| [`Save`](./classes/Hubleto/Framework/Controllers/Api/Record/Save)                   | Default implementation of Hubleto controller. |
+| [`SaveJunction`](./classes/Hubleto/Framework/Controllers/Api/Record/SaveJunction)   | Default implementation of Hubleto controller. |
 
 ### \Hubleto\Framework\Controllers\Api\Table
 
@@ -149,6 +151,7 @@
 | [`DBDuplicateEntryException`](./classes/Hubleto/Framework/Exceptions/DBDuplicateEntryException)         | Thrown when a database query execution is blocked by any foreign key constraint.                                                                      |
 | [`DBException`](./classes/Hubleto/Framework/Exceptions/DBException)                                     | Thrown when a database query execution occurs (instead of foreign key constraint errors).                                                             |
 | [`DBNotConnectedException`](./classes/Hubleto/Framework/Exceptions/DBNotConnectedException)             | Thrown when a database is not connected.                                                                                                              |
+| [`Exception`](./classes/Hubleto/Framework/Exceptions/Exception)                                         |                                                                                                                                                       |
 | [`GeneralException`](./classes/Hubleto/Framework/Exceptions/GeneralException)                           | General purpose exception.                                                                                                                            |
 | [`InvalidToken`](./classes/Hubleto/Framework/Exceptions/InvalidToken)                                   | InvalidToken                                                                                                                                          |
 | [`InvalidUidException`](./classes/Hubleto/Framework/Exceptions/InvalidUidException)                     | Thrown by \Hubleto\Framework\checkUid() method.                                                                                                       |
@@ -173,8 +176,11 @@ action occurs. Thrown by model's recordValidate() method. |
 | [`ColumnInterface`](./classes/Hubleto/Framework/Interfaces/ColumnInterface)                         |                                                                   |
 | [`ConfigManagerInterface`](./classes/Hubleto/Framework/Interfaces/ConfigManagerInterface)           |                                                                   |
 | [`ControllerInterface`](./classes/Hubleto/Framework/Interfaces/ControllerInterface)                 |                                                                   |
+| [`CoreInterface`](./classes/Hubleto/Framework/Interfaces/CoreInterface)                             |                                                                   |
 | [`CronManagerInterface`](./classes/Hubleto/Framework/Interfaces/CronManagerInterface)               |                                                                   |
+| [`DbInterface`](./classes/Hubleto/Framework/Interfaces/DbInterface)                                 |                                                                   |
 | [`EmailProviderInterface`](./classes/Hubleto/Framework/Interfaces/EmailProviderInterface)           |                                                                   |
+| [`EnvInterface`](./classes/Hubleto/Framework/Interfaces/EnvInterface)                               |                                                                   |
 | [`HookManagerInterface`](./classes/Hubleto/Framework/Interfaces/HookManagerInterface)               |                                                                   |
 | [`LocaleInterface`](./classes/Hubleto/Framework/Interfaces/LocaleInterface)                         |                                                                   |
 | [`LoggerInterface`](./classes/Hubleto/Framework/Interfaces/LoggerInterface)                         |                                                                   |
@@ -185,6 +191,7 @@ CRUD-like layer for manipulating records (data) |
 | [`RendererInterface`](./classes/Hubleto/Framework/Interfaces/RendererInterface)                     |                                                                   |
 | [`RouterInterface`](./classes/Hubleto/Framework/Interfaces/RouterInterface)                         |                                                                   |
 | [`SessionManagerInterface`](./classes/Hubleto/Framework/Interfaces/SessionManagerInterface)         |                                                                   |
+| [`TerminalInterface`](./classes/Hubleto/Framework/Interfaces/TerminalInterface)                     |                                                                   |
 | [`TranslatorInterface`](./classes/Hubleto/Framework/Interfaces/TranslatorInterface)                 |                                                                   |
 
 ### \Hubleto\Framework\Models
@@ -193,7 +200,7 @@ CRUD-like layer for manipulating records (data) |
 
 | Class                                                                 | Description                                                                |
 |-----------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [`Config`](./classes/Hubleto/Framework/Models/Config)                 |                                                                            |
+| [`Config`](./classes/Hubleto/Framework/Models/Config)                 | Default implementation of model for Hubleto project.                       |
 | [`RolePermission`](./classes/Hubleto/Framework/Models/RolePermission) | Default implementation of model for Hubleto project.                       |
 | [`Token`](./classes/Hubleto/Framework/Models/Token)                   | Model for storing various validation tokens. Stored in 'tokens' SQL table. |
 | [`User`](./classes/Hubleto/Framework/Models/User)                     | Default implementation of model for Hubleto project.                       |

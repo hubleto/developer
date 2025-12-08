@@ -3,5 +3,21 @@ Exception thrown when controller has not been found.
 
 # \Hubleto\Framework\Exceptions\ControllerNotFound
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Exception">Exception</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Exception">\Hubleto\Framework\Exceptions\Exception</a></td></tr></table>
+
+
+## Inherited methods
+
+### getExtraParams
+
+```php
+public getExtraParams(): array
+```
+
+
+### getResponseArray
+
+```php
+public getResponseArray(): array
+```
 
