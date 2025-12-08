@@ -14,7 +14,7 @@ Read [this guide](installation/composer) on how to install using Composer.
 
 Docker image bundles all necessary dependencies and creates a separated sandbox environment for your Hubleto
 
-Follow [this guide](installation/docer) on how to install using Docker.
+Follow [this guide](installation/docker) on how to install using Docker.
 
 ## Download .zip package
 
