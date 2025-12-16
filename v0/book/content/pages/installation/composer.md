@@ -8,11 +8,7 @@ To install Hubleto, you will need:
 
   * PHP 8.4+
   * MySQL or MariaDB
-  * any webserver (e.g. Apache or nginx) (Read [this note](nginx) if you are using nginx.)
-
-| <img src="{{ bookRootUrl }}/content/assets/images/linux-logo.png" style="width:2em;padding:0;border:0;" />                          | <img src="{{ bookRootUrl }}/content/assets/images/windows-logo.png" style="width:2em;padding:0;border:0;" />                               |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| For Linux developers, the easiest way to get all this is to install **LAMP server**.   It is available here: https://ampps.com/lamp | For Windows developers, the easiest way to get all this is to install **XAMPP server**. It is available here: https://www.apachefriends.org |
+  * any webserver (e.g. Apache or nginx)
 
 There are two types of installations:
 
@@ -30,6 +26,8 @@ This installation is suitable when you are deploying Hubleto to your customer an
 Table: Steps to install production-ready Hubleto ERP using `composer`
 
 > **PRO TIP**: Read about [initialization configuration file](init-config) to streamline the installation process without any user prompt.
+
+> **Note about Nginx:** Read [this note](nginx) if you are using nginx.
 
 ### Development environment
 
