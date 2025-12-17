@@ -43,6 +43,7 @@ Before starting, check out these additional resources:
 * [https://community.hubleto.com](https://community.hubleto.com)  
 * [https://www.linkedin.com/company/hubleto](https://www.linkedin.com/company/hubleto)  
 * [https://www.reddit.com/r/hubleto/](https://www.reddit.com/r/hubleto/)
+* [https://github.com/mrgopes/hubleto-car-rental](https://github.com/mrgopes/hubleto-car-rental)
 
 > **Webinar**
 > 
