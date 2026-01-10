@@ -53,12 +53,12 @@ public _testRouteContainsAppMainTitle(string $route, array $vars = []): void
 | `$vars`   | **array**  |             |
 
 
-### ƒ _testRouteContainsError
+### ƒ _testRouteDoesNotContainError
 
-[Description for _testRouteContainsError]
+[Description for _testRouteDoesNotContainError]
 
 ```php
-public _testRouteContainsError(string $route, array $vars = []): void
+public _testRouteDoesNotContainError(string $route, array $vars = []): void
 ```
 
 #### Parameters
@@ -69,12 +69,12 @@ public _testRouteContainsError(string $route, array $vars = []): void
 | `$vars`   | **array**  |             |
 
 
-### ƒ _testRouteRendersJson
+### ƒ _testApiRouteReturnsJson
 
-[Description for _testRouteRendersJson]
+[Description for _testApiRouteReturnsJson]
 
 ```php
-public _testRouteRendersJson(string $route, array $vars = []): void
+public _testApiRouteReturnsJson(string $route, array $vars = []): void
 ```
 
 #### Parameters
@@ -85,12 +85,12 @@ public _testRouteRendersJson(string $route, array $vars = []): void
 | `$vars`   | **array**  |             |
 
 
-### ƒ _testModelCrud
+### ƒ _testCrudRouteForModel
 
-[Description for testModelCrud]
+[Description for _testCrudRouteForModel]
 
 ```php
-public _testModelCrud(string $modelClass, string $modelBaseUrl): void
+public _testCrudRouteForModel(string $modelClass, string $modelBaseUrl): void
 ```
 
 #### Parameters

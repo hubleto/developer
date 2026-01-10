@@ -54,7 +54,7 @@ public __construct(array $attributes = []): mixed
 
 ### ƒ getPermissions
 
-[Description for getPermissions]
+Gets permissions for the given record.
 
 ```php
 public getPermissions(array $record): array
@@ -62,25 +62,77 @@ public getPermissions(array $record): array
 
 #### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$record` | **array** |             |
+| Parameter | Type      | Description                      |
+|-----------|-----------|----------------------------------|
+| `$record` | **array** | Record to check permissions for. |
 
 
-### ƒ prepareReadQuery
+### ƒ prepareSelectsForReadQuery
 
-[Description for prepareReadQuery]
+[Description for prepareSelectsForReadQuery]
 
 ```php
-public prepareReadQuery(mixed|null $query = null, int $level): mixed
+public prepareSelectsForReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): array
 ```
 
 #### Parameters
 
-| Parameter | Type            | Description |
-|-----------|-----------------|-------------|
-| `$query`  | **mixed\|null** |             |
-| `$level`  | **int**         |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
+
+
+### ƒ prepareJoinsForReadQuery
+
+[Description for prepareJoinsForReadQuery]
+
+```php
+public prepareJoinsForReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): array
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
+
+
+### ƒ prepareRelationsForReadQuery
+
+[Description for prepareRelationsForReadQuery]
+
+```php
+public prepareRelationsForReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): array
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
+
+
+### ƒ prepareReadQuery
+
+Prepares the read query for fetching records.
+
+```php
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description                                                           |
+|---------------------|-----------------|-----------------------------------------------------------------------|
+| `$query`            | **mixed\|null** | Leave empty for default behaviour.                                    |
+| `$level`            | **int**         | Level of recursion for including relations.                           |
+| `$includeRelations` | **array\|null** | If not null, only these relations will be included in the read query. |
 
 
 ### ƒ recordGet
@@ -100,7 +152,7 @@ public recordGet(callable|null $queryModifierCallback = null): array
 
 ### ƒ prepareLookupQuery
 
-[Description for prepareLookupQuery]
+Prepares the lookup query for fetching records.
 
 ```php
 public prepareLookupQuery(string $search): mixed
@@ -108,9 +160,9 @@ public prepareLookupQuery(string $search): mixed
 
 #### Parameters
 
-| Parameter | Type       | Description |
-|-----------|------------|-------------|
-| `$search` | **string** |             |
+| Parameter | Type       | Description                     |
+|-----------|------------|---------------------------------|
+| `$search` | **string** | String to filter lookup values. |
 
 
 ### ƒ prepareLookupData
@@ -123,9 +175,9 @@ public prepareLookupData(array $dataRaw): array
 
 #### Parameters
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `$dataRaw` | **array** |             |
+| Parameter  | Type      | Description                                   |
+|------------|-----------|-----------------------------------------------|
+| `$dataRaw` | **array** | List of raw records loaded from the database. |
 
 
 ### ƒ addFulltextSearchToQuery

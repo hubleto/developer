@@ -11,15 +11,16 @@ CRUD-like layer for manipulating records (data)
 prepareReadQuery
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
 #### Parameters
 
-| Parameter | Type      | Description                        |
-|-----------|-----------|------------------------------------|
-| `$query`  | **mixed** | Leave empty for default behaviour. |
-| `$level`  | **int**   | Leave empty for default behaviour. |
+| Parameter           | Type            | Description                        |
+|---------------------|-----------------|------------------------------------|
+| `$query`            | **mixed**       | Leave empty for default behaviour. |
+| `$level`            | **int**         | Leave empty for default behaviour. |
+| `$includeRelations` | **array\|null** |                                    |
 
 #### Return Value
 

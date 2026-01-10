@@ -6,7 +6,26 @@ Shortcut to access all services used in the Hubleto project.
 <tr><td>Implements</td><td>  <a href="./Interfaces/CoreInterface">\Hubleto\Framework\Interfaces\CoreInterface</a></td></tr></table>
 
 
+## Constants
+
+| Constant              | Visibility | Type | Value |
+|-----------------------|------------|------|-------|
+| `DEBUG_LEVEL_NONE`    | public     |      | 0     |
+| `DEBUG_LEVEL_ERROR`   | public     |      | 1     |
+| `DEBUG_LEVEL_WARNING` | public     |      | 2     |
+| `DEBUG_LEVEL_INFO`    | public     |      | 3     |
+| `DEBUG_LEVEL_DEBUG`   | public     |      | 4     |
+
 ## Properties
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ debugLevel
+```php
+protected int $debugLevel
+```
+
+
 
 
 <div class="mt-2">&nbsp;</div>
@@ -32,6 +51,30 @@ public string $translationContextInner
 
 ```php
 public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
 ```
 
 

@@ -17,6 +17,26 @@ public static getServiceStatic(string $service): mixed
 | `$service` | **string** |             |
 
 
+### ƒ setDebugLevel
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+```php
+public getDebugLevel(): int
+```
+
+
 ### ƒ getService
 
 ```php

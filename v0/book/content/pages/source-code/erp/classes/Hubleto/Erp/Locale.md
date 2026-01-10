@@ -16,3 +16,10 @@ Methods to support locale in Hubleto project.
 public getTimezone(): string
 ```
 
+
+### ƒ getAvailableLanguages
+
+```php
+public getAvailableLanguages(): array
+```
+

@@ -3,6 +3,13 @@
 
 ## Methods
 
+### ƒ getAvailableLanguages
+
+```php
+public getAvailableLanguages(): array
+```
+
+
 ### ƒ getTimezones
 
 ```php

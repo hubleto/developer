@@ -26,6 +26,13 @@ public __construct(): mixed
 ```
 
 
+### ƒ getAvailableLanguages
+
+```php
+public getAvailableLanguages(): array
+```
+
+
 ### ƒ getTimezones
 
 ```php
@@ -84,6 +91,24 @@ public getTimeFormat(bool $addSeconds = true): string
 | `$addSeconds` | **bool** |             |
 
 
+### ƒ getDecimalsSeparator
+
+[Description for getDecimalsSeparator]
+
+```php
+public getDecimalsSeparator(): string
+```
+
+
+### ƒ getThousandsSeparator
+
+[Description for getThousandsSeparator]
+
+```php
+public getThousandsSeparator(): string
+```
+
+
 ### ƒ getCurrencySymbol
 
 [Description for getCurrencySymbol]
@@ -115,6 +140,22 @@ public getAll(string $keyBy = ""): array
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$keyBy`  | **string** |             |
+
+
+### ƒ formatNumber
+
+[Description for formatNumber]
+
+```php
+public formatNumber(string|float $value, int $decimals): string
+```
+
+#### Parameters
+
+| Parameter   | Type              | Description |
+|-------------|-------------------|-------------|
+| `$value`    | **string\|float** |             |
+| `$decimals` | **int**           |             |
 
 
 ### ƒ formatCurrency
@@ -200,6 +241,30 @@ public formatTime(string|int $timeOrTimestamp, bool $addSeconds = true): string
 
 ```php
 public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
 ```
 
 

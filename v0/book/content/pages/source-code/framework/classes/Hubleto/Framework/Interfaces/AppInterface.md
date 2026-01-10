@@ -44,13 +44,6 @@ public getRootUrlSlug(): string
 ```
 
 
-### ƒ getNotificationsCount
-
-```php
-public getNotificationsCount(): int
-```
-
-
 ### ƒ installTables
 
 ```php

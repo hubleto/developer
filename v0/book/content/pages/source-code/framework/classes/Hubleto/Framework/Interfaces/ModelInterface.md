@@ -270,6 +270,19 @@ public getLookupSqlValue(string $tableAlias = ''): string
 | `$tableAlias` | **string** |             |
 
 
+### ƒ getItemDetailUrl
+
+```php
+public getItemDetailUrl(int $id): string
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$id`     | **int** |             |
+
+
 ### ƒ encryptPassword
 
 ```php

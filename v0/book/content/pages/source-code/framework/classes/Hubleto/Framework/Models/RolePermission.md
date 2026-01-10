@@ -42,6 +42,30 @@ public __construct(): mixed
 ```
 
 
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
+```
+
+
 ### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
@@ -411,6 +435,30 @@ public upgrades(): array
 List of available upgrades. Keys of the array are simple numbers starting from 1.
 
 
+### ƒ getAvailableUpgrades
+
+[Description for hasAvailableUpgrades]
+
+```php
+public getAvailableUpgrades(): array
+```
+
+
+### ƒ installUpgrades
+
+Installs all upgrades of the model. Internaly stores current version and
+compares it to list of available upgrades.
+
+```php
+public installUpgrades(): void
+```
+
+#### Throws
+
+When an error occured during the upgrade.
+- [`DBException`](../Exceptions/DBException)
+
+
 ### ƒ hasColumn
 
 [Description for hasColumn]
@@ -518,20 +566,24 @@ public describeForm(): \Hubleto\Framework\Description\Form
 
 ### ƒ describeTable
 
-[Description for describeTable]
+Returns a table description of the model.
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
+The descriptions contains configuration for table UI, columns and permissions.
+
 
 ### ƒ convertRecordsToTree
 
-[Description for convertRecordsToTree]
+Used to convert flat list of records into tree structure.
 
 ```php
 public convertRecordsToTree(array $records, int $idParent, int $level): array
 ```
+
+Suitable for models having parent-child relationship.
 
 #### Parameters
 
@@ -544,7 +596,7 @@ public convertRecordsToTree(array $records, int $idParent, int $level): array
 
 ### ƒ loadTableData
 
-[Description for loadTableData]
+Loads records to be displayed in table.
 
 ```php
 public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
@@ -610,6 +662,8 @@ public getLookupSqlValue(string $tableAlias = ''): string
 
 ### ƒ getLookupValue
 
+[Description for getLookupValue]
+
 ```php
 public getLookupValue(array $dataRaw): string
 ```
@@ -619,6 +673,60 @@ public getLookupValue(array $dataRaw): string
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
 | `$dataRaw` | **array** |             |
+
+
+### ƒ getLookupDetails
+
+[Description for getLookupDetailValue]
+
+```php
+public getLookupDetails(array $dataRaw): string
+```
+
+#### Parameters
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$dataRaw` | **array** |             |
+
+
+### ƒ getItemDetailUrl
+
+[Description for getItemDetailUrl]
+
+```php
+public getItemDetailUrl(int $id): string
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$id`     | **int** |             |
+
+
+### ƒ getMaxReadLevelForLoadTableData
+
+Returns maxReadLevel value used in loadTableData() method.
+
+```php
+public getMaxReadLevelForLoadTableData(): int
+```
+
+By default is set to 0 to save bandwidth when loading data.
+Override this method in your model if you need to load more details.
+
+
+### ƒ getRelationsIncludedInLoadTableData
+
+Returns list of relations to be included when loading table data.
+
+```php
+public getRelationsIncludedInLoadTableData(): array
+```
+
+By default, empty array is returned, which means no relations are included.
+Override this method in your model if you need to specify particular relations.
 
 
 ### ƒ encryptPassword
@@ -638,68 +746,41 @@ public encryptPassword(string $original): string
 
 ### ƒ onBeforeCreate
 
-[Description for onBeforeCreate]
+onBeforeCreate
 
 ```php
-public onBeforeCreate(array $record): array
+public onBeforeCreate(array<string,mixed> $record): array<string,mixed>
 ```
 
 #### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$record` | **array** |             |
+| Parameter | Type                    | Description |
+|-----------|-------------------------|-------------|
+| `$record` | **array<string,mixed>** |             |
+
+#### Throws
+
+- [`RecordSaveException`](../Exceptions/RecordSaveException)
 
 
 ### ƒ onBeforeUpdate
 
-[Description for onBeforeUpdate]
+onBeforeUpdate
 
 ```php
-public onBeforeUpdate(array $record): array
+public onBeforeUpdate(array<string,mixed> $record): array<string,mixed>
 ```
 
 #### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$record` | **array** |             |
-
-
-### ƒ onAfterCreate
-
-[Description for onAfterCreate]
-
-```php
-public onAfterCreate(array $savedRecord): array
-```
-
-#### Parameters
-
-| Parameter      | Type      | Description |
-|----------------|-----------|-------------|
-| `$savedRecord` | **array** |             |
-
-
-### ƒ onAfterUpdate
-
-[Description for onAfterUpdate]
-
-```php
-public onAfterUpdate(array $originalRecord, array $savedRecord): array
-```
-
-#### Parameters
-
-| Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
-| `$originalRecord` | **array** |             |
-| `$savedRecord`    | **array** |             |
+| Parameter | Type                    | Description |
+|-----------|-------------------------|-------------|
+| `$record` | **array<string,mixed>** |             |
 
 
 ### ƒ onBeforeDelete
 
-[Description for onBeforeDelete]
+onBeforeDelete
 
 ```php
 public onBeforeDelete(int $id): int
@@ -712,9 +793,40 @@ public onBeforeDelete(int $id): int
 | `$id`     | **int** |             |
 
 
+### ƒ onAfterCreate
+
+onAfterCreate
+
+```php
+public onAfterCreate(array<string,mixed> $savedRecord): array<string,mixed>
+```
+
+#### Parameters
+
+| Parameter      | Type                    | Description |
+|----------------|-------------------------|-------------|
+| `$savedRecord` | **array<string,mixed>** |             |
+
+
+### ƒ onAfterUpdate
+
+onAfterUpdate
+
+```php
+public onAfterUpdate(array<string,mixed> $originalRecord, array<string,mixed> $savedRecord): array<string,mixed>
+```
+
+#### Parameters
+
+| Parameter         | Type                    | Description |
+|-------------------|-------------------------|-------------|
+| `$originalRecord` | **array<string,mixed>** |             |
+| `$savedRecord`    | **array<string,mixed>** |             |
+
+
 ### ƒ onAfterDelete
 
-[Description for onAfterDelete]
+onAfterDelete
 
 ```php
 public onAfterDelete(int $id): int

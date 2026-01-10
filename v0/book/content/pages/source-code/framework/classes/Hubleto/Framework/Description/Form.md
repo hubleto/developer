@@ -66,3 +66,33 @@ public jsonSerialize(): array
 public toArray(): array
 ```
 
+
+### ƒ show
+
+[Description for show]
+
+```php
+public show(array $what): void
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$what`   | **array** |             |
+
+
+### ƒ hide
+
+[Description for hide]
+
+```php
+public hide(array $what): void
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$what`   | **array** |             |
+

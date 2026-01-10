@@ -71,7 +71,24 @@ public init(): void
 ```
 
 
+### ƒ normalizeUserProfile
+
+[Description for normalizeUserProfile]
+
+```php
+public normalizeUserProfile(array $user): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$user`   | **array** |             |
+
+
 ### ƒ getUserFromSession
+
+Get user information from the session.
 
 ```php
 public getUserFromSession(): array
@@ -79,6 +96,8 @@ public getUserFromSession(): array
 
 
 ### ƒ updateUserInSession
+
+[Description for updateUserInSession]
 
 ```php
 public updateUserInSession(array $user): void
@@ -93,6 +112,8 @@ public updateUserInSession(array $user): void
 
 ### ƒ isUserInSession
 
+[Description for isUserInSession]
+
 ```php
 public isUserInSession(): bool
 ```
@@ -100,12 +121,16 @@ public isUserInSession(): bool
 
 ### ƒ deleteSession
 
+[Description for deleteSession]
+
 ```php
 public deleteSession(): mixed
 ```
 
 
 ### ƒ signIn
+
+[Description for signIn]
 
 ```php
 public signIn(array $user): mixed
@@ -120,6 +145,8 @@ public signIn(array $user): mixed
 
 ### ƒ signOut
 
+[Description for signOut]
+
 ```php
 public signOut(): mixed
 ```
@@ -127,12 +154,16 @@ public signOut(): mixed
 
 ### ƒ createUserModel
 
+[Description for createUserModel]
+
 ```php
 public createUserModel(): \Hubleto\Framework\Model
 ```
 
 
 ### ƒ findUsersByLogin
+
+[Description for findUsersByLogin]
 
 ```php
 public findUsersByLogin(string $login): array
@@ -146,6 +177,8 @@ public findUsersByLogin(string $login): array
 
 
 ### ƒ verifyPassword
+
+[Description for verifyPassword]
 
 ```php
 public verifyPassword(mixed $password1, mixed $password2): bool
@@ -175,8 +208,19 @@ public auth(): void
 
 ### ƒ getUser
 
+[Description for getUser]
+
 ```php
 public getUser(): array
+```
+
+
+### ƒ getUserFromDatabase
+
+[Description for getUserFromDatabase]
+
+```php
+public getUserFromDatabase(): array
 ```
 
 
@@ -237,12 +281,16 @@ public resetPassword(): void
 
 ### ƒ getUserLanguage
 
+[Description for getUserLanguage]
+
 ```php
 public getUserLanguage(): string
 ```
 
 
 ### ƒ setUserLanguage
+
+[Description for setUserLanguage]
 
 ```php
 public setUserLanguage(string $language): void
@@ -261,6 +309,30 @@ public setUserLanguage(string $language): void
 
 ```php
 public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
 ```
 
 

@@ -79,6 +79,8 @@ public getColor(): string
 
 ### ƒ loadEvent
 
+Loads specified event info.
+
 ```php
 public loadEvent(int $id): array
 ```
@@ -91,6 +93,8 @@ public loadEvent(int $id): array
 
 
 ### ƒ loadEvents
+
+Loads event from calendar between dateStart and dateEnd.
 
 ```php
 public loadEvents(string $dateStart, string $dateEnd, array $filter = []): array

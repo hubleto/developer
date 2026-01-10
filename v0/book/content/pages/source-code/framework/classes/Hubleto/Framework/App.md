@@ -226,12 +226,12 @@ public getRootUrlSlug(): string
 ```
 
 
-### ƒ getNotificationsCount
+### ƒ getSidebarBadgeNumber
 
-[Description for getNotificationsCount]
+[Description for getSidebarBadgeNumber]
 
 ```php
-public getNotificationsCount(): int
+public getSidebarBadgeNumber(): int
 ```
 
 
@@ -618,6 +618,30 @@ public collectExtendibles(string $extendibleName): array
 
 ```php
 public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
 ```
 
 

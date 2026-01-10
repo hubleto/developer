@@ -8,6 +8,8 @@
 
 ### ƒ getPermissions
 
+[Description for getPermissions]
+
 ```php
 public getPermissions(array $record): array
 ```
@@ -21,14 +23,17 @@ public getPermissions(array $record): array
 
 ### ƒ prepareReadQuery
 
+[Description for prepareReadQuery]
+
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
 #### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

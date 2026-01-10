@@ -107,6 +107,37 @@ public showOnlyColumns(array $columnNames): void
 | `$columnNames` | **array** |             |
 
 
+### ƒ addColumn
+
+[Description for showOnlyColumns]
+
+```php
+public addColumn(string $colName, mixed $column): void
+```
+
+#### Parameters
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$colName` | **string** |             |
+| `$column`  | **mixed**  |             |
+
+
+### ƒ hideColumns
+
+[Description for hideColumns]
+
+```php
+public hideColumns(array $columnNames): void
+```
+
+#### Parameters
+
+| Parameter      | Type      | Description |
+|----------------|-----------|-------------|
+| `$columnNames` | **array** |             |
+
+
 ### ƒ addFilter
 
 [Description for addFilter]

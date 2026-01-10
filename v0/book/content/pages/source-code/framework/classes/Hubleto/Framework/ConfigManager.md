@@ -54,6 +54,13 @@ public setPrefix(string $prefix): void
 | `$prefix` | **string** |             |
 
 
+### ƒ getPrefix
+
+```php
+public getPrefix(): string
+```
+
+
 ### ƒ setConfig
 
 ```php
@@ -239,6 +246,30 @@ public filterByUser(): void
 
 ```php
 public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
 ```
 
 

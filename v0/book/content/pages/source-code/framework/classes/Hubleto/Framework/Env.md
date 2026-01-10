@@ -64,6 +64,15 @@ public string $releaseFolder
 
 
 <div class="mt-2">&nbsp;</div>
+### ☍ uploadUrl
+```php
+public string $uploadUrl
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
 ### ☍ assetsUrl
 ```php
 public string $assetsUrl
@@ -95,6 +104,30 @@ public __construct(): mixed
 
 ```php
 public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
 ```
 
 

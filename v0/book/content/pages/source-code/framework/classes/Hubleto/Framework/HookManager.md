@@ -82,6 +82,30 @@ public __construct(): mixed
 ```
 
 
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
+```
+
+
 ### ƒ getServiceStatic
 
 Shortcut for the dependency injection.
