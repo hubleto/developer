@@ -130,14 +130,12 @@ tableOfContents:
           - page: docs/routing/parametric-routes
       - page: docs/models
         children:
-          - page: docs/models/columns
-          - page: docs/models/description-api
-          - page: docs/models/enums
-          - page: docs/models/lookups
-          - page: docs/models/relations
           - page: docs/models/record-manager
+          - page: docs/models/records-api
+          - page: docs/models/description-api
+          - page: docs/models/enums-and-lookups
+          - page: docs/models/relations
           - page: docs/models/callbacks
-          - page: docs/models/data-transfer-objects
       - page: docs/views
         children:
           - page: docs/views/namespaces
