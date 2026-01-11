@@ -27,7 +27,85 @@ Optionally, there are other components like:
   * many callbacks (`onBeforeCreate`, `onAfterCreate`, ...), or 
   * methods for modification of read queries (`prepareReadQuery`, `prepareLookupQuery`).
 
-More details can be found in the pages listed below.
+More details can be found in the next chapters.
+
+## Example
+
+Below is an example of a simple model with following features:
+
+  * uses an `EloquentRecordManager`
+  * has a relationship (specified both in the model and its record manager)
+  * contains various types of columns, including `Lookup`, `Enum` and `Image`
+  * describes UI for its *Table*
+
+*Note: Example model is taken from the CarRental app and its full implementation can be found at https://github.com/mrgopes/hubleto-car-rental.*
+
+###### custom/apps/CarRental/Models/Car.php
+```php
+namespace Hubleto\App\Custom\CarRental\Models;
+
+use Hubleto\Erp\Model;
+use Hubleto\Framework\Db\Column;
+use Hubleto\Framework\Description;
+
+class Car extends Model {
+  public string $table = 'cars';
+  public string $recordManagerClass = RecordManagers\Car::class;
+
+  public array $relations = [
+    "HISTORY" => [ self::HAS_MANY, RentalHistory::class, "id_car" ]
+  ];
+
+  public function describeColumns(): array
+  {
+    return array_merge(parent::describeColumns(), [
+      "manufacturer" => (new Column\Varchar($this, "Manufacturer"))->setRequired(),
+      "model" => (new Column\Varchar($this, "Model")),
+      "licence_plate" => (new Column\Varchar($this, "Licence plate")),
+      "fuel" => (new Column\Integer($this, "Fuel"))->setEnumValues([
+        1 => "Gasoline",
+        2 => "Diesel",
+      ]),
+      "gearbox" => (new Column\Integer($this, "Gearbox"))->setEnumValues([
+        1 => "Automatic",
+        2 => "Manual",
+      ]),
+      "seats" => (new Column\Integer($this, "Number of seats")),
+      "price_per_day" => (new Column\Decimal($this, "Base price per day")),
+      "color" => (new Column\Color($this, "Color")),
+      "picture" => (new Column\Image($this, "Picture")),
+      "availability" => (new Column\Boolean($this, "Availability"))->setDefaultValue(1),
+    ]);
+  }
+
+  public function describeTable(): Description\Table
+  {
+    $description = parent::describeTable();
+    $description->ui['addButtonText'] = 'Add new car';
+    $description->ui['showFulltextSearch'] = true;
+    return $description;
+  }
+
+}
+```
+
+###### custom/apps/CarRental/Models/RecordManagers/Car.php
+```php
+namespace Hubleto\App\Custom\CarRental\Models\RecordManagers;
+
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Car extends \Hubleto\Erp\RecordManager
+{
+  public $table = 'cars';
+
+  /** @return HasMany<RentalHistory, covariant RentalHistory> */
+  public function HISTORY(): HasMany
+  {
+    return $this->hasMany(RentalHistory::class, 'id_car');
+  }
+}
+```
 
 ## See also
 
