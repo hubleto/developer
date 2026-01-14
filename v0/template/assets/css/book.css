@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities, theme, components, app;
 :root, :host {
@@ -22,8 +22,10 @@
   --color-yellow-300: oklch(0.905 0.182 98.111);
   --color-yellow-600: oklch(0.681 0.162 75.834);
   --color-yellow-800: oklch(0.476 0.114 61.907);
+  --color-lime-50: oklch(0.986 0.031 120.757);
   --color-lime-100: oklch(0.967 0.067 122.328);
   --color-lime-200: oklch(0.938 0.127 124.321);
+  --color-lime-600: oklch(0.648 0.2 131.684);
   --color-lime-800: oklch(0.453 0.124 130.933);
   --color-green-50: oklch(0.982 0.018 155.826);
   --color-green-100: oklch(0.962 0.044 156.743);
@@ -365,6 +367,9 @@
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+  .\!ml-2 {
+    margin-left: calc(var(--spacing) * 2) !important;
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -722,6 +727,9 @@
   .bg-green-700 {
     background-color: var(--color-green-700);
   }
+  .bg-lime-50 {
+    background-color: var(--color-lime-50);
+  }
   .bg-lime-100 {
     background-color: var(--color-lime-100);
   }
@@ -990,6 +998,9 @@
   .text-green-800 {
     color: var(--color-green-800);
   }
+  .text-lime-600 {
+    color: var(--color-lime-600);
+  }
   .text-lime-800 {
     color: var(--color-lime-800);
   }
@@ -1126,15 +1137,15 @@
       content: var(--tw-content);
     }
   }
-  .before\:content-\[\'☝\'\] {
+  .before\:content-\[\'→\'\] {
     &::before {
-      --tw-content: '☝';
+      --tw-content: '→';
       content: var(--tw-content);
     }
   }
-  .before\:content-\[\'❖\'\] {
+  .before\:content-\[\'☝\'\] {
     &::before {
-      --tw-content: '❖';
+      --tw-content: '☝';
       content: var(--tw-content);
     }
   }
@@ -1820,6 +1831,14 @@
     padding-inline-start: calc(var(--spacing) * 2);
     padding-top: calc(var(--spacing) * 0);
   }
+  .sidebar ul.level-2 {
+    padding-inline-start: calc(var(--spacing) * 2);
+    padding-top: calc(var(--spacing) * 0);
+  }
+  .sidebar ul.level-3 {
+    padding-inline-start: calc(var(--spacing) * 2);
+    padding-top: calc(var(--spacing) * 0);
+  }
   .sidebar a.expanded:not(.btn-primary) > .text {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -1844,28 +1863,6 @@
       content: var(--tw-content);
     }
   }
-  .sidebar .btn.level-1 {
-    --tw-border-style: none;
-    border-style: none;
-    padding: calc(var(--spacing) * 0);
-    &::before {
-      content: var(--tw-content);
-      padding-left: calc(var(--spacing) * 2);
-    }
-    &::before {
-      content: var(--tw-content);
-      font-size: var(--text-xs);
-      line-height: var(--tw-leading, var(--text-xs--line-height));
-    }
-    &::before {
-      content: var(--tw-content);
-      color: var(--color-primary);
-    }
-    &::before {
-      --tw-content: '❖';
-      content: var(--tw-content);
-    }
-  }
   .sidebar .btn.level-1.btn-primary {
     --tw-border-style: none;
     border-style: none;
@@ -1887,13 +1884,26 @@
     }
   }
   .sidebar .btn.level-1 .text {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .sidebar .btn.level-2 {
+    margin-left: calc(var(--spacing) * 2) !important;
     --tw-border-style: none;
     border-style: none;
   }
   .sidebar .btn.level-2 .text {
+    padding: calc(var(--spacing) * 0.5) !important;
+    font-size: 0.7rem;
+  }
+  .sidebar .btn.level-3 {
+    margin-left: calc(var(--spacing) * 2) !important;
+    border-right-style: var(--tw-border-style);
+    border-right-width: 0px;
+    --tw-border-style: none;
+    border-style: none;
+  }
+  .sidebar .btn.level-3 .text {
+    padding: calc(var(--spacing) * 0.5) !important;
     font-size: 0.7rem;
   }
   .sidebar .collapsed + * {

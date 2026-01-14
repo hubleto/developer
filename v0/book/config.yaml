@@ -114,47 +114,50 @@ tableOfContents:
   - page: docs
     icon: fas fa-book
     children:
-      - page: docs/apps
+      - page: docs/framework
         children:
-          - page: docs/apps/how-to-create-app
-          - page: docs/apps/folder-structure
-          - page: docs/apps/types
-          - page: docs/apps/manifest
-          - page: docs/apps/loader
-          - page: docs/apps/how-to-install-app
-          - page: docs/apps/publish-external-app
-      - page: docs/routing
+          - page: docs/framework/routing
+            children:
+              - page: docs/framework/routing/defining-routes
+              - page: docs/framework/routing/accessing-query-parameters
+              - page: docs/framework/routing/parametric-routes
+          - page: docs/framework/models
+            children:
+              - page: docs/framework/models/record-manager
+              - page: docs/framework/models/records-api
+              - page: docs/framework/models/description-api
+              - page: docs/framework/models/enums-and-lookups
+              - page: docs/framework/models/relations
+              - page: docs/framework/models/callbacks
+          - page: docs/framework/views
+            children:
+              - page: docs/framework/views/namespaces
+              - page: docs/framework/views/twig
+          - page: docs/framework/controllers
+            children:
+              - page: docs/framework/controllers/html-output
+              - page: docs/framework/controllers/json-output
+          - page: docs/framework/ui
+            children:
+              - page: docs/framework/ui/creating-custom-components
+              - page: docs/framework/ui/tables
+              - page: docs/framework/ui/forms
+              - page: docs/framework/ui/inputs
+          - page: docs/framework/testing
+            children:
+              - page: docs/framework/testing/writing-tests
+              - page: docs/framework/testing/running-tests
+      - page: docs/erp
         children:
-          - page: docs/routing/defining-routes
-          - page: docs/routing/accessing-query-parameters
-          - page: docs/routing/parametric-routes
-      - page: docs/models
-        children:
-          - page: docs/models/record-manager
-          - page: docs/models/records-api
-          - page: docs/models/description-api
-          - page: docs/models/enums-and-lookups
-          - page: docs/models/relations
-          - page: docs/models/callbacks
-      - page: docs/views
-        children:
-          - page: docs/views/namespaces
-          - page: docs/views/twig
-      - page: docs/controllers
-        children:
-          - page: docs/controllers/html-output
-          - page: docs/controllers/json-output
-      - page: docs/ui
-        children:
-          - page: docs/ui/creating-custom-components
-          - page: docs/ui/tables
-          - page: docs/ui/forms
-          - page: docs/ui/inputs
-      - page: docs/extendibles
-      - page: docs/testing
-        children:
-          - page: docs/testing/writing-tests
-          - page: docs/testing/running-tests
+          - page: docs/erp/apps
+            children:
+              - page: docs/apps/how-to-create-app
+              - page: docs/apps/folder-structure
+              - page: docs/apps/types
+              - page: docs/apps/manifest
+              - page: docs/apps/loader
+              - page: docs/apps/how-to-install-app
+              - page: docs/apps/publish-external-app
       - page: advanced-development
         icon: fas fa-medal
         children:
