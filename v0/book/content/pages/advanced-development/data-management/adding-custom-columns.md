@@ -52,7 +52,7 @@ Having this configured, the model for *customers* will also contain the column `
 To create the column in the database, you have basically two options:
 
   1. Manually run an SQL command similar to `alter table customers add favorite_holiday_destination varchar(255)` in your database.
-  2. Use the premium [DbUpdater app](../../apps/premium/dbupdater).
+  2. Use the premium [DbUpdater app](../../apps/enterprise/dbupdater).
 
 ## Conclusion
 

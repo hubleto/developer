@@ -51,7 +51,7 @@ class Cars extends \Hubleto\Framework\Controller {
 
 ## Accessing view parameters in the twig file
 
-All view parameters set in the controller's `prepareView()` method are accesible via twig's `{{ '{{' }} viewParams {{ '}}' }}` variable. For example, to retrieve the current date set in the previous example, you should put following in your view's twig file:
+All view parameters set in the controller's `prepareView()` method are accesible via `{{ '{{' }} viewParams {{ '}}' }}` variable in the view's twig file. For example, to retrieve the current date set in the previous example, you should put following in your view's twig file:
 
 ###### Views/Cars.twig
 ```html

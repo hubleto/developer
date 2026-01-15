@@ -10,6 +10,9 @@ There are following types of apps in Hubleto:
 | **Custom apps**     | `\HubletoApp\Custom`     | Use custom apps if you are developing a custom project and do not plan to re-use your app elsewhere. |
 | **External apps**   | `\HubletoApp\External`   | External apps are developed by external companies and are planned to be re-used in many projects.    |
 
+<img src="book/content/assets/images/app-management.jpg" />
+###### Screenshot from the app manager in Hubleto
+
 ## Create app with CLI agent
 
 Creating a new app is very easy. For example, to create an app that will be used in your project, simply run following code in your terminal (you must be inside a Hubleto project root folder):

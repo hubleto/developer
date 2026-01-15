@@ -109,7 +109,7 @@ tableOfContents:
           - page: apps/community/calendar
           - page: apps/community/calendar-sync
           - page: apps/community/report
-      - page: apps/premium
+      - page: apps/enterprise
       - page: apps/external
   - page: docs
     icon: fas fa-book
