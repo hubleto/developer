@@ -131,8 +131,7 @@ tableOfContents:
               - page: docs/framework/models/callbacks
           - page: docs/framework/views
             children:
-              - page: docs/framework/views/namespaces
-              - page: docs/framework/views/twig
+              - page: docs/framework/views/react-ui
           - page: docs/framework/controllers
             children:
               - page: docs/framework/controllers/html-output
