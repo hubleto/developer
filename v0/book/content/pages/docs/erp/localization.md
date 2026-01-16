@@ -4,9 +4,9 @@ About how localization in Hubleto works.
 
 ## Language packs
 
-Language packs are located in the `lang` folder of the public `hubleto/erp` package: https://github.com/hubleto/erp/tree/main/lang.
+Language packs are located in the `lang` folder of the public `hubleto/erp` package (see on [Github](https://github.com/hubleto/erp/tree/main/lang)).
 
-Each subfolder contains a language pack.
+Each subfolder contains a language pack and its name must have exactly 2 characters, as specified in ISO 639 language codes (more information at [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)).
 
 ## Structure of the language packs
 
