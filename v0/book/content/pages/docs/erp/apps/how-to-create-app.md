@@ -39,7 +39,6 @@ However, creating an external app is a bit more complicated. The most straightfo
 | 2   | Implement app's functionality and test it inside your Hubleto project.                                                                                               |
 | 3   | Once tested, prepare the github repository for your new app.                                                                                                         |
 | 4   | Move your app to this repository, under the `src` folder and manually change all namespaces from `HubletoApp\Custom\MyFirstApp` to `HubletoApp\External\MyFirstApp`. |
-| 5   | [Publish the app](publish-external-app).                                                                                                                             |
 Steps to create external app.
 
 Folder structure of an external app should be similar to this:

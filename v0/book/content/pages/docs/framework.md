@@ -55,7 +55,6 @@
       <a href="framework/apps/types" class="btn btn-white block"><span class="text">Types</span></a>
       <a href="framework/apps/manifest" class="btn btn-white block"><span class="text">Manifest</span></a>
       <a href="framework/apps/loader" class="btn btn-white block"><span class="text">Loader</span></a>
-      <a href="framework/apps/publish-external-app" class="btn btn-white block"><span class="text">Publishing external apps</span></a>
     </div>
   </div>
   <div class="card border-stone-300">

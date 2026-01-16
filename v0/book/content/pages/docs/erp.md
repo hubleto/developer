@@ -9,13 +9,13 @@
       <a href="erp/apps/types" class="btn btn-white block"><span class="text">Types</span></a>
       <a href="erp/apps/manifest" class="btn btn-white block"><span class="text">Manifest</span></a>
       <a href="erp/apps/loader" class="btn btn-white block"><span class="text">Loader</span></a>
-      <a href="erp/apps/publish-external-app" class="btn btn-white block"><span class="text">Publishing external apps</span></a>
     </div>
   </div>
   <div class="card border-stone-300">
-    <div class="card-header bg-stone-50">Extendibles</div>
+    <div class="card-header bg-stone-50">Misellaneous</div>
     <div class="card-body flex flex-col gap-2">
-      <a href="erp/extendibles" class="btn btn-white block"><span class="text">Introduction</span></a>
+      <a href="erp/localization" class="btn btn-white block"><span class="text">Localization</span></a>
+      <a href="erp/extendibles" class="btn btn-white block"><span class="text">Extendibles</span></a>
     </div>
   </div>
 </div>

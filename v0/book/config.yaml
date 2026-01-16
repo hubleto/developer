@@ -84,13 +84,12 @@ tableOfContents:
         children:
           - page: docs/erp/apps
             children:
-              - page: docs/apps/how-to-create-app
-              - page: docs/apps/folder-structure
-              - page: docs/apps/types
-              - page: docs/apps/manifest
-              - page: docs/apps/loader
-              - page: docs/apps/how-to-install-app
-              - page: docs/apps/publish-external-app
+              - page: docs/erp/apps/how-to-create-app
+              - page: docs/erp/apps/folder-structure
+              - page: docs/erp/apps/types
+              - page: docs/erp/apps/manifest
+              - page: docs/erp/apps/loader
+          - page: docs/erp/localization
       - page: advanced-development
         icon: fas fa-medal
         children:
