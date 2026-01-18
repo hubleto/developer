@@ -1,6 +1,15 @@
 # Tutorials
 
 <div class="grid gap-4 mt-8 md:grid-cols-2">
+  <div class="card border-green-300">
+    <div class="card-header bg-green-50">AI-supported development</div>
+    <div class="card-body flex flex-col gap-2 h-24">
+      Hubleto is nicely recognized by AI agents. Try using them to speed up your development.
+    </div>
+    <div class="card-footer">
+      <a href="tutorials/using-ai-to-create-code" class="btn btn-white block"><span class="text">Open tutorial</span></a>
+    </div>
+  </div>
   <div class="card border-yellow-300">
     <div class="card-header bg-yellow-50">Hello World app</div>
     <div class="card-body flex flex-col gap-2 h-24">

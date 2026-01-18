@@ -67,6 +67,11 @@ A model shall contain at least:
   * `describeForm()` method returning a descripiton of how the model's form for creating or updating a record should look like and behave.
   * Definition of *BELONGS_TO* `$relations` for each column of type lookup. All relation names shall be in UPPERCASE - this convention makes reading results from *record API* more readable.
 
+Optionally, a model can contain:
+
+  * `onBeforeCreate()`, `onAfterCreate()`, `onBeforeUpdate()`, `onAfterUpdate()`, `onBeforeDelete()`, `onAfterDelete()` callbacks.
+  * Various methods to implement specific data-manipulation algorithms.
+
 A model's record manager shall contain at least:
 
   * Implementation of all relations described in the model.

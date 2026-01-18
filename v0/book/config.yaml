@@ -158,6 +158,9 @@ tableOfContents:
   - page: tutorials
     icon: fa-solid fa-graduation-cap
     children:
+      - page: tutorials/using-ai-to-create-code
+        icon: fas fa-star
+        children:
       - page: tutorials/hello-world-app
         icon: fas fa-star
         children:
