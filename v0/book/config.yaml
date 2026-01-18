@@ -89,6 +89,7 @@ tableOfContents:
               - page: docs/erp/apps/types
               - page: docs/erp/apps/manifest
               - page: docs/erp/apps/loader
+          - page: docs/erp/conventions
           - page: docs/erp/localization
       - page: advanced-development
         icon: fas fa-medal

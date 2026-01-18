@@ -14,8 +14,8 @@
   <div class="card border-stone-300">
     <div class="card-header bg-stone-50">Misellaneous</div>
     <div class="card-body flex flex-col gap-2">
+      <a href="erp/conventions" class="btn btn-white block"><span class="text">Conventions</span></a>
       <a href="erp/localization" class="btn btn-white block"><span class="text">Localization</span></a>
-      <a href="erp/extendibles" class="btn btn-white block"><span class="text">Extendibles</span></a>
     </div>
   </div>
 </div>
