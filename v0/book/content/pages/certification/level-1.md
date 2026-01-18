@@ -61,7 +61,8 @@ Take following lessons to learn step-by-step topics covered by the Level 1 certi
 
 We occassionally organize free webinars explaining Level 1 certification topics in a more detail and with practical examples. Webinars are divided into 9 sessions as describedn below. Follow our social media (website, LinkedIn, Reddit, ...) to get the actual webinars schedule.
 
-**Webinar #1: Introduction to Hubleto	"- What is Hubleto**
+**Webinar #1: Introduction to Hubleto**
+  - What is Hubleto.
   - Install production ready Hubleto using Composer.
   - Overview of community apps.
 
@@ -69,7 +70,8 @@ We occassionally organize free webinars explaining Level 1 certification topics 
 
 Presentations from the webinar: [Introduction to Hubleto.pdf](../downloads/webinar-introduction-to-hubleto/Introduction%20to%20Hubleto.pdf), [How to setup dev env.pdf](../downloads/webinar-introduction-to-hubleto/How%20to%20setup%20dev%20env.pdf), [Overview of Hubleto apps.pdf](../downloads/webinar-introduction-to-hubleto/Overview%20of%20Hubleto%20apps.pdf).
 
-**Webinar #2: Custom App Development - backend basics	"- Create custom CarRental app**
+**Webinar #2: Custom App Development - backend basics**
+  - Create custom CarRental app.
   - Overview of Model and RecordManager concepts.
   - Create models (Car, RentalHistory) and their RecordManagers.
   - Overview of 1:N relations.
