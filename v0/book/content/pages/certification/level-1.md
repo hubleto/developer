@@ -45,12 +45,6 @@ Before starting, check out these additional resources:
 * [https://www.reddit.com/r/hubleto/](https://www.reddit.com/r/hubleto/)
 * [https://github.com/mrgopes/hubleto-car-rental](https://github.com/mrgopes/hubleto-car-rental)
 
-> **Webinar**
-> 
-> Watch this webinar to get the Hubleto vibe.
-> <iframe width="373" height="210" src="https://www.youtube.com/embed/9agAiqGtqmI?> si=7R88l7M2eTpfIhcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-> Presentations from the webinar: [Introduction to Hubleto.pdf](../downloads/webinar-introduction-to-hubleto/Introduction%20to%20Hubleto.pdf), [How to setup dev env.pdf](../downloads/webinar-introduction-to-hubleto/How%20to%20setup%20dev%20env.pdf), [Overview of Hubleto apps.pdf](../downloads/webinar-introduction-to-hubleto/Overview%20of%20Hubleto%20apps.pdf).
-
 ## Lessons
 
 Take following lessons to learn step-by-step topics covered by the Level 1 certification.
@@ -69,7 +63,11 @@ We occassionally organize free webinars explaining Level 1 certification topics 
 
 **Webinar #1: Introduction to Hubleto	"- What is Hubleto**
   - Install production ready Hubleto using Composer.
-  - Overivew of community apps.
+  - Overview of community apps.
+
+<iframe width="373" height="210" src="https://www.youtube.com/embed/9agAiqGtqmI?> si=7R88l7M2eTpfIhcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Presentations from the webinar: [Introduction to Hubleto.pdf](../downloads/webinar-introduction-to-hubleto/Introduction%20to%20Hubleto.pdf), [How to setup dev env.pdf](../downloads/webinar-introduction-to-hubleto/How%20to%20setup%20dev%20env.pdf), [Overview of Hubleto apps.pdf](../downloads/webinar-introduction-to-hubleto/Overview%20of%20Hubleto%20apps.pdf).
 
 **Webinar #2: Custom App Development - backend basics	"- Create custom CarRental app**
   - Overview of Model and RecordManager concepts.
