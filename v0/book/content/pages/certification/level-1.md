@@ -53,6 +53,8 @@ Before starting, check out these additional resources:
 
 ## Lessons
 
+Take following lessons to learn step-by-step topics covered by the Level 1 certification.
+
 | Lesson                   | &nbsp;                                           |
 | ------------------------ | ------------------------------------------------ |
 | About Hubleto            | [Start lesson](level-1/about-hubleto)            |
@@ -60,3 +62,56 @@ Before starting, check out these additional resources:
 | Hubleto Core             | [Start lesson](level-1/hubleto-core)             |
 | Hubleto Apps             | [Start lesson](level-1/hubleto-apps)             |
 | Recapitulation           | [Start lesson](level-1/recapitulation)           |
+
+## Webinars
+
+We occassionally organize free webinars explaining Level 1 certification topics in a more detail and with practical examples. Webinars are divided into 9 sessions as describedn below. Follow our social media (website, LinkedIn, Reddit, ...) to get the actual webinars schedule.
+
+**Webinar #1: Introduction to Hubleto	"- What is Hubleto**
+  - Install production ready Hubleto using Composer.
+  - Overivew of community apps.
+
+**Webinar #2: Custom App Development - backend basics	"- Create custom CarRental app**
+  - Overview of Model and RecordManager concepts.
+  - Create models (Car, RentalHistory) and their RecordManagers.
+  - Overview of 1:N relations.
+
+**Webinar #3 Custom App Development - frontend basics**
+  - Overview of previous developments in custom CarRental app.
+  - Overview of DescriptionAPI with practical example (describeTable).
+  - Create controllers and views (Cars, RentalHistories).
+  - Use built-in React UI components (<app-table>) in views.
+
+**Webinar #4: Custom App Development - fully functional CarRental app**
+  - Overview of previous developments in custom CarRental app.
+  - Recapitulation of backend programming.
+  - Recapitulation of frontend programming.
+  - Feedback from developers.
+
+**Webinar #5: ReactUi basics**
+  - Overview of ReactUi library.
+  - Using ReactUi in Twig.
+  - Most commonlty used properties of <app-table>.
+  - Customizing table and form look&feel using DescriptionAPI.
+
+**Webinar #6: Models and their RecordManagers**
+  - Overview of Model and RecordManager concepts.
+  - Definition of relations.
+  - Built-in record-manipulation API (record/save, record/delete, ...).
+  - Practical examples for belongsTo and hasMany relations.
+  - Customizing prepareReadQuery().
+
+**Webinar #7: Description API**
+  - Overview of Description API, it's purpose and basic principles.
+  - Configuration options for tables (describeTable).
+  - Configuration options for forms (describeForm).
+  - Configuration options for inputs (describeInput).
+
+**Webinar #8: Callbacks in models**
+  - Overview of available callbacks.
+  - Practical example with CarRental app.
+
+**Webinar #9: Finalilzation of Level 1 certification**
+  - What we have learned?
+  - Feedback from developers.
+  - How to get the Level 1 certificate.
