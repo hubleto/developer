@@ -7,7 +7,7 @@
       Hubleto is nicely recognized by AI agents. Try using them to speed up your development.
     </div>
     <div class="card-footer">
-      <a href="tutorials/using-ai-to-create-code" class="btn btn-white block"><span class="text">Open tutorial</span></a>
+      <a href="tutorials/using-ai-to-hubleto-vibe-code" class="btn btn-white block"><span class="text">Open tutorial</span></a>
     </div>
   </div>
   <div class="card border-yellow-300">
