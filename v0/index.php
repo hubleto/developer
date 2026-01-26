@@ -5,7 +5,7 @@ require('lib/MyGuideVis.php');
 require('cfg/env.php');
 require('cfg/template.php');
 
-$page = $_GET['page'] ?? '';
+$page = substr($_GET['page'] ?? '', 3); // remove v0/ from the page
 
 try {
   $renderer = new MyGuideVis($page, $env, $templateConfig);
