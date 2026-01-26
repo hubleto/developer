@@ -5,7 +5,7 @@ require('lib/MyGuideVis.php');
 require('cfg/env.php');
 require('cfg/template.php');
 
-$page = $_GET['page'];
+$page = $_GET['page'] ?? '';
 if (str_starts_with($page, 'v0/')) $page = substr($page, 3); // remove v0/ from the page
 
 try {
