@@ -1,12 +1,12 @@
 # External apps
 
-Apps developed by Hubleto contributors.
+Apps developed by Hubleto Hubleto partners.
 
-External apps are those developed externally by Hubleto contributors and are published as a `composer` package. External apps can be easily reused across different projects. Event apps from different contributors can be bundled into Hubleto installation. All this is thanks to composer package manager.
+External apps are those developed externally by Hubleto partners and are published as a standalone `composer` package. External apps can be easily reused across different projects. Even apps from different contributors can be bundled into Hubleto installation.
 
 ## Publishing external app
 
-Simply put, every Hubleto contributor can develop its own app and publish it as a composer package. Then, this app can be used in any Hubleto installation, as long as it is installed by the composer into the `vendor` folder.
+Simply put, every Hubleto partner can develop its own app and publish it as a standalone composer package. Then, this app can be used in any Hubleto installation, as long as it is installed by the composer into the `vendor` folder.
 
 ```bash
 composer require vendor-name/app-name
