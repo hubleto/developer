@@ -20,3 +20,9 @@ Hubleto Framework is a foundation for the further development of the Hubleto ERP
 > *Note:* Hubleto Framework is an MVC-based web application framework, which is used also in projects other than Hubleto ERP.
 
 To learn about the framework, go to [this chapter](docs/framework).
+
+## Hubleto ERP
+
+Hubleto ERP is a product built on Hubleto Framework, containing ERP-like functionality.
+
+To learn about how to develop ERP-like apps in Hubleto, go to [this chapter](docs/erp).
