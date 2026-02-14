@@ -10,11 +10,6 @@ To install Hubleto, you will need:
   * MySQL or MariaDB
   * any webserver (e.g. Apache or nginx)
 
-There are two types of installations:
-
-  * installation of the production-ready ERP
-  * installation of the development environment
-
 ## Production-ready version
 
 Production-ready version is suitable when you want to use Hubleto 'as-is'.
