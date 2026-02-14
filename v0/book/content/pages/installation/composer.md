@@ -12,10 +12,10 @@ To install Hubleto, you will need:
 
 ## Production-ready version
 
-Production-ready version is suitable when you want to use Hubleto 'as-is'.
+Production-ready version is suitable when you want to use Hubleto 'as-is'. Run following commands in any folder accessile by your webserver:
 
-  1. `composer create-project hubleto/erp-project .` |
-  2. `php hubleto init`                              |
+  1. `composer create-project hubleto/erp-project .`
+  2. `php hubleto init`
 
 > **PRO TIP**: Read about [initialization configuration file](init-config) to streamline the installation process without any user prompt.
 
@@ -27,7 +27,7 @@ If you need to customize Hubleto, you will most probably develop your [custom Ap
 
 Follow [steps described in README.md of hubleto/erp-project](https://github.com/hubleto/erp-project) to prepare the environment.
 
-### Development environment
+## Development environment
 
 If you want to develop [external apps](../apps) or you want to contribute to the development of [community apps](../apps) and you want tyour apps to contain *React components*, you must do additional steps to your production-ready installation.
 
