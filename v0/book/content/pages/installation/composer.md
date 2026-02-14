@@ -15,19 +15,22 @@ There are two types of installations:
   * installation of the production-ready ERP
   * installation of the development environment
 
-## Production-ready ERP
+## Production-ready version
 
-This installation is suitable when you are deploying Hubleto to your customer and you expect to customize it only with [custom Apps](../apps) and you do not need to develop custom *React components*.
+Production-ready version is suitable when you want to use Hubleto 'as-is'.
 
-| Step               | Command                                         |
-| ------------------ | ----------------------------------------------- |
-| Create the project | `composer create-project hubleto/erp-project .` |
-| Initialize ERP     | `php hubleto init`                              |
-Table: Steps to install production-ready Hubleto ERP using `composer`
+  1. `composer create-project hubleto/erp-project .` |
+  2. `php hubleto init`                              |
 
 > **PRO TIP**: Read about [initialization configuration file](init-config) to streamline the installation process without any user prompt.
 
 > **Note about Nginx:** Read [this note](nginx) if you are using nginx.
+
+## Customizing with your own apps
+
+If you need to customize Hubleto, you will most probably develop your [custom Apps](../apps). You need to do few more steps to prepare Javascript and Tailwind compilation environment.
+
+Follow [steps described in README.md of hubleto/erp-project](https://github.com/hubleto/erp-project) to prepare the environment.
 
 ### Development environment
 
