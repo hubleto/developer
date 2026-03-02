@@ -111,6 +111,7 @@ tableOfContents:
               - page: advanced-development/customizing-ui/special-inputs
               - page: advanced-development/customizing-ui/skin
               - page: advanced-development/customizing-ui/material-ui
+              - page: advanced-development/customizing-ui/custom-invoice-templates
           - page: advanced-development/description-api
             children:
               - page: advanced-development/description-api/table
