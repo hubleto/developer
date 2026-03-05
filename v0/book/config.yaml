@@ -63,6 +63,7 @@ tableOfContents:
               - page: docs/framework/models/enums-and-lookups
               - page: docs/framework/models/relations
               - page: docs/framework/models/callbacks
+              - page: docs/framework/models/migrations
           - page: docs/framework/views
             children:
               - page: docs/framework/views/react-ui
