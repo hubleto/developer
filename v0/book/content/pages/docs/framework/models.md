@@ -117,5 +117,6 @@ class Car extends \Hubleto\Erp\RecordManager
 | [Relations](models/relations)                 | Explains how the relations (belongs to, has one, has many, ...) are configured and handled.          |
 | [Enums and Lookups](models/enums-and-lookups) | Provides more detailed explanation on how 1:N relations are handled.                                 |
 | [Callbacks](models/callbacks)                 | Lists all available callbacks.                                                                       |
+| [Migrations](models/migrations)               | Explains how to create and use migrations for versioning database schema.                            |
 
 
