@@ -36,11 +36,11 @@ Having this knowledge, a developer shall be able to configure his local developm
 
 Before starting, check out these additional resources:
 
-* [https://www.hubleto.com](https://www.hubleto.com)  
+* [https://www.hubleto.eu](https://www.hubleto.eu)  
 * [https://github.com/hubleto](https://github.com/hubleto)  
-* [https://developer.hubleto.com](https://developer.hubleto.com)  
-* [https://help.hubleto.com](https://help.hubleto.com)  
-* [https://community.hubleto.com](https://community.hubleto.com)  
+* [https://developer.hubleto.eu](https://developer.hubleto.eu)  
+* [https://help.hubleto.eu](https://help.hubleto.eu)  
+* [https://community.hubleto.eu](https://community.hubleto.eu)  
 * [https://www.linkedin.com/company/hubleto](https://www.linkedin.com/company/hubleto)  
 * [https://www.reddit.com/r/hubleto/](https://www.reddit.com/r/hubleto/)
 * [https://github.com/mrgopes/hubleto-car-rental](https://github.com/mrgopes/hubleto-car-rental)

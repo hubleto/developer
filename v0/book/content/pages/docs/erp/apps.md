@@ -6,7 +6,7 @@ A Hubleto app is a bundle or package which contains a functionality covering spe
 
 There are several [types](apps/types) of apps: community, custom or external.
 
-> **NOTE** This is developer's documentation. If you want to read about apps included in the default Hubleto package, read [this](../apps) or [this](https://help.hubleto.com/v0/en/apps/community).
+> **NOTE** This is developer's documentation. If you want to read about apps included in the default Hubleto package, read [this](../apps) or [this](https://help.hubleto.eu/v0/en/apps/community).
 
 ## Create an app
 

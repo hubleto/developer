@@ -17,7 +17,7 @@ When you'll be ready, continue with the following steps.
 {% include 'components/step-by-step.twig' with {'steps': {
   '1': {
     'title': 'Download and unzip latest Hubleto',
-    'description': markdown('Download latest Hubleto at https://www.hubleto.com/en/download and unzip it into your project\'s folder.'),
+    'description': markdown('Download latest Hubleto at https://www.hubleto.eu/en/download and unzip it into your project\'s folder.'),
   },
   '2': {
     'title': 'Init the project',

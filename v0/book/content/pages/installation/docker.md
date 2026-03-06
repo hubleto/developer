@@ -59,7 +59,7 @@ Zip package contains production-ready Hubleto ERP.
 
 | Step                     | Command                                  |
 | ------------------------ | ---------------------------------------- |
-| Download Hubleto CE      | https://www.hubleto.com/en/download      |
+| Download Hubleto CE      | https://www.hubleto.eu/en/download      |
 | Unzip downloaded package | `unzip hubleto-[RELEASE_VERSION]-ce.zip` |
 | Initialize project       | `php hubleto init`                       |
 Table: Steps to install Hubleto from .zip package

@@ -29,7 +29,7 @@ Hubleto will significantly shorten time needed to develop and deploy your work.
 
 Hubleto is a PHP/SQL-based platform. To run in, you'll need only **PHP**, **SQL database engine** (e.g., MariaDB or MySQL) and a **webserver** (e.g. Apache or Nginx).
 
-So, let's download and install. First, we need to open the Hubleto website https://www.hubleto.com, then go to `Download` section and click `Download the latest release` button. This will download a small .zip package containig Hubleto core and required 3rd-party libraries.
+So, let's download and install. First, we need to open the Hubleto website https://www.hubleto.eu, then go to `Download` section and click `Download the latest release` button. This will download a small .zip package containig Hubleto core and required 3rd-party libraries.
 
 Unzip this file to any folder under your webserver's DocumentRoot. For example, if you are a Linux user, it may be `/var/www/html/my-hubleto`.
 
@@ -39,6 +39,6 @@ Once unpacked, go to this folder in terminal, run `php hubleto init` command and
 
 And, that's it. You have successfuly installed your Hubleto platform. Browse through available community applications and use them completely for free. Or you can start creating your own stunning CRM-like applications.
 
-Visit https://developer.hubleto.com for more details about how to create custom Hubleto applications.
+Visit https://developer.hubleto.eu for more details about how to create custom Hubleto applications.
 
 Thank you for watching.

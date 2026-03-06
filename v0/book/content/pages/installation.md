@@ -18,4 +18,4 @@ Follow [this guide](installation/docker) on how to install using Docker.
 
 ## Download .zip package
 
-There is also a .zip package available hich contains production-ready Hubleto ERP. Visit https://www.hubleto.com/en/download and follow the instructions there to download Hubleto
+There is also a .zip package available hich contains production-ready Hubleto ERP. Visit https://www.hubleto.eu/en/download and follow the instructions there to download Hubleto

@@ -29,4 +29,4 @@ Source code documentation for community apps is available [here](source-code/app
 
 ## User guide
 
-User guides for community apps are available at https://help.hubleto.com.
+User guides for community apps are available at https://help.hubleto.eu.

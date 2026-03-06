@@ -33,4 +33,4 @@ https://github.com/hubleto/erp/blob/main/apps/community/Deals
 
 ## User guide
 
-https://help.hubleto.com/en/apps/community/deals
+https://help.hubleto.eu/en/apps/community/deals
