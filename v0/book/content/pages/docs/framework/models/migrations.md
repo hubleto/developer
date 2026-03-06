@@ -100,6 +100,8 @@ class ExampleModel_20260305_0001 extends Migration
 
 Notice the use of `$this->db->execute()`. This method allows the migration to run raw SQL statements directly against your configured database.
 
+> **Important:** A migration is considered an **atomic unit** of change, but it should *not* manage database transactions itself. You should never call `$this->db->startTransaction()` or `$this->db->commit()` inside a migration class. The philosophy of the framework is that the migration runner script handles the transaction lifecycle. If a migration process crashes, the runner automatically attempts to roll back the operation to prevent the database from entering an inconsistent state.
+
 ## How Versioning Works
 
 Hubleto requires an intelligent way to figure out *which* migrations have already been run on your database, and *which* are entirely new and pending. 
@@ -121,9 +123,9 @@ By reading these filenames, the framework cross-references the files on disk wit
 
 ## Creating a Migration
 
-While it is entirely possible to create these files by hand, it is tedious and prone to syntax errors. The recommended approach is to let the Hubleto CLI Agent do the heavy lifting.
+While it is entirely possible to create these files entirely by hand, writing out raw SQL is tedious. The recommended approach is to let the Hubleto CLI Agent generate the basic boilerplate to speed up your workflow.
 
-The CLI Agent is smart enough to read the `describeColumns()` and `$relations` definitions inside your Model class and automatically draft the precise SQL commands required to make the database match your PHP code.
+The CLI Agent reads the `describeColumns()` and `$relations` definitions inside your Model class and drafts the initial `CREATE TABLE` and constraint statements. However, **the CLI tool is only a starting point**. It does not understand the deeper business logic or meaning behind your data, so it is strictly the developer's responsibility to review, optimize, and finalize the generated SQL.
 
 ### Step-by-step Generation
 
@@ -145,8 +147,8 @@ php hubleto create migration "Hubleto\App\Custom\Accounting" Invoice
 **What happens under the hood?**
 1. The CLI Agent boots up the framework and locates your `Invoice` model.
 2. It analyzes the properties, looking at what columns you defined (e.g., `Varchar`, `Integer`, `Date`) and any relations (e.g., `HAS_MANY`, `BELONGS_TO`).
-3. It generates optimized `CREATE TABLE`, `CREATE INDEX`, and `ALTER TABLE` SQL commands.
-4. It creates a brand new file (like `Invoice_20261015_0001.php`) in your app's `Models/Migrations` directory, pre-filled with the drafted SQL.
+3. It generates the basic `CREATE TABLE`, `CREATE INDEX`, and `ALTER TABLE` SQL commands to act as a foundation.
+4. It creates a brand new file (like `Invoice_20261015_0001.php`) in your app's `Models/Migrations` directory, pre-filled with this drafted SQL.
 
 > **Developer Tip:** The CLI Agent is a powerful assistant, but it is not infallible. Always open the newly generated migration file and review the SQL commands. Ensure the data types, default values, and constraints match your exact intentions before applying them to your database.
 
@@ -179,7 +181,7 @@ This two-round process is vital. If Table A has a foreign key pointing to Table 
 
 ## Modifying Existing Tables
 
-As your app grows, you will inevitably need to change an *existing* table—perhaps adding a new column or renaming an old one.
+As your app grows, you will inevitably need to change an *existing* table - perhaps adding a new column or renaming an old one.
 
 **Do not edit old migrations!** 
 Once a migration has been committed to version control and run on your database, it should be considered read-only. Editing an old migration will not update the database, because Hubleto already marked that file as "executed" and will skip it.
