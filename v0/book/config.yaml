@@ -60,27 +60,42 @@ tableOfContents:
               - page: docs/framework/models/record-manager
               - page: docs/framework/models/records-api
               - page: docs/framework/models/description-api
+                status: "wip"
               - page: docs/framework/models/enums-and-lookups
+                status: "wip"
               - page: docs/framework/models/relations
+                status: "wip"
               - page: docs/framework/models/callbacks
+                status: "wip"
               - page: docs/framework/models/migrations
           - page: docs/framework/views
             children:
               - page: docs/framework/views/react-ui
           - page: docs/framework/controllers
+            status: "wip"
             children:
               - page: docs/framework/controllers/html-output
+                status: "wip"
               - page: docs/framework/controllers/json-output
+                status: "wip"
           - page: docs/framework/ui
+            status: "wip"
             children:
               - page: docs/framework/ui/creating-custom-components
+                status: "wip"
               - page: docs/framework/ui/tables
+                status: "wip"
               - page: docs/framework/ui/forms
+                status: "wip"
               - page: docs/framework/ui/inputs
+                status: "wip"
           - page: docs/framework/testing
+            status: "wip"
             children:
               - page: docs/framework/testing/writing-tests
+                status: "wip"
               - page: docs/framework/testing/running-tests
+                status: "wip"
       - page: docs/erp
         children:
           - page: docs/erp/core
@@ -129,8 +144,11 @@ tableOfContents:
               - page: advanced-development/core-classes/eloquent
               - page: advanced-development/core-classes/controller
               - page: advanced-development/core-classes/router
+                status: "wip"
               - page: advanced-development/core-classes/permissions
+                status: "wip"
           - page: advanced-development/design-patterns
+            status: "wip"
             children:
             - page: advanced-development/crons
             - page: advanced-development/hooks
@@ -138,6 +156,7 @@ tableOfContents:
                 - page: advanced-development/hooks/introduction
                 - page: advanced-development/hooks/events
             - page: advanced-development/pipeline
+              status: "wip"
             - page: advanced-development/miscellaneous/dashboard
           - page: advanced-development/miscellaneous
             children:
