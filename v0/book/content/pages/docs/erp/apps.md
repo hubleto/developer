@@ -12,7 +12,7 @@ There are several [types](apps/types) of apps: community, custom or external.
 
 Easiest way to create an app is to run `php hubleto create app MyFirstApp` in your Hubleto project folder.
 
-More about creating Hubleto apps is [here](apps/how-to-create-app).
+More about creating Hubleto apps is [here](apps/development/create-app).
 
 ## App contents
 

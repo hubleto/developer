@@ -1,4 +1,4 @@
-# Lesson 3: Hubleto Core
+# Core
 
 ## Hubleto Framework
 
@@ -39,6 +39,13 @@ Implementation of user management and authentication.
 The principles of authenticating the user are simple and can be easily understood from reading the source code.
 
 ## Permission management
+
+<div class="badge">This chapter is under construction</div>
+
 ## Database record management and API
-## Table Description API
-## Form Description API
+
+<div class="badge">This chapter is under construction</div>
+
+## Description API
+
+<div class="badge">This chapter is under construction</div>

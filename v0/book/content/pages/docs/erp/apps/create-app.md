@@ -23,7 +23,7 @@ php hubleto create app MyCustomApp
 
 This will create a set of files and folders in `/path/to/your/hubleto/src/apps/MyCustomApp` folder.
 
-Once created, you must [install](how-to-install-app) the app.
+Once created, you must [install](install-app) the app.
 
 ## External apps
 

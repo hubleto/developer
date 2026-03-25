@@ -47,71 +47,139 @@ Before starting, check out these additional resources:
 
 ## Lessons
 
-Take following lessons to learn step-by-step topics covered by the Level 1 certification.
+The certification programme is divided into several lessons. Each lesson covers specific topic like, e.g. basic introduction to Hubleto or best practices in development. 
 
-| Lesson                   | &nbsp;                                           |
-| ------------------------ | ------------------------------------------------ |
-| About Hubleto            | [Start lesson](level-1/about-hubleto)            |
-| Starting the development | [Start lesson](level-1/starting-the-development) |
-| Hubleto Core             | [Start lesson](level-1/hubleto-core)             |
-| Hubleto Apps             | [Start lesson](level-1/hubleto-apps)             |
-| Recapitulation           | [Start lesson](level-1/recapitulation)           |
-
-## Webinars
-
-We occassionally organize free webinars explaining Level 1 certification topics in a more detail and with practical examples. Webinars are divided into 9 sessions as describedn below. Follow our social media (website, LinkedIn, Reddit, ...) to get the actual webinars schedule.
-
-**Webinar #1: Introduction to Hubleto**
-  - What is Hubleto.
+## Lesson #1: Introduction to Hubleto
+  - About Hubleto.
   - Install production ready Hubleto using Composer.
-  - Overview of community apps.
+  - Overview of Hubleto apps and basic development tools.
 
-<iframe width="373" height="210" src="https://www.youtube.com/embed/9agAiqGtqmI?> si=7R88l7M2eTpfIhcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<a class="btn" href="lesson-1"><span class="text">Open lesson #1</span></a>
 
-Presentations from the webinar: [Introduction to Hubleto.pdf](../downloads/webinar-introduction-to-hubleto/Introduction%20to%20Hubleto.pdf), [How to setup dev env.pdf](../downloads/webinar-introduction-to-hubleto/How%20to%20setup%20dev%20env.pdf), [Overview of Hubleto apps.pdf](../downloads/webinar-introduction-to-hubleto/Overview%20of%20Hubleto%20apps.pdf).
+## Lesson #2: Overview of Hubleto features
+  - CRM, Marketing, Sales, Productivity, Finance, Maintenance, Help
+  - Users, settings, platform config and themes
+  - UI basics - sidebar, tables, forms, localization, searching
+  - App Manager
 
-**Webinar #2: Custom App Development - backend basics**
+<a class="btn" href="lesson-2"><span class="text">Open lesson #2</span></a>
+
+## Lesson #3: Custom App Development - backend basics
   - Create custom CarRental app.
   - Overview of Model and RecordManager concepts.
   - Create models (Car, RentalHistory) and their RecordManagers.
   - Overview of 1:N relations.
 
-**Webinar #3 Custom App Development - frontend basics**
+<a class="btn" href="lesson-3"><span class="text">Open lesson #3</span></a>
+
+## Lesson #4: Custom App Development - frontend basics
   - Overview of previous developments in custom CarRental app.
   - Overview of DescriptionAPI with practical example (describeTable).
   - Create controllers and views (Cars, RentalHistories).
   - Use built-in React UI components (<app-table>) in views.
 
-**Webinar #4: Custom App Development - fully functional CarRental app**
+<a class="btn" href="lesson-4"><span class="text">Open lesson #4</span></a>
+
+## Lesson #5: Custom App Development - CarRental app
   - Overview of previous developments in custom CarRental app.
   - Recapitulation of backend programming.
   - Recapitulation of frontend programming.
   - Feedback from developers.
 
-**Webinar #5: ReactUi basics**
+<a class="btn" href="lesson-5"><span class="text">Open lesson #5</span></a>
+
+## Lesson #6: Custom App Development - IpInfoTest app
+  - Development of IpInfoTest app
+
+<a class="btn" href="lesson-6"><span class="text">Open lesson #6</span></a>
+
+## Lesson #7: Hubleto ReactUi basics
   - Overview of ReactUi library.
   - Using ReactUi in Twig.
   - Most commonlty used properties of <app-table>.
   - Customizing table and form look&feel using DescriptionAPI.
 
-**Webinar #6: Models and their RecordManagers**
+<a class="btn" href="lesson-7"><span class="text">Open lesson #7</span></a>
+
+## Lesson #8: Models, RecordManagers and Migrations, part 1
   - Overview of Model and RecordManager concepts.
   - Definition of relations.
   - Built-in record-manipulation API (record/save, record/delete, ...).
   - Practical examples for belongsTo and hasMany relations.
   - Customizing prepareReadQuery().
 
-**Webinar #7: Description API**
+<a class="btn" href="lesson-8"><span class="text">Open lesson #8</span></a>
+
+## Lesson #9: Models, RecordManagers and Migrations, part 2
+  - Overview of Model and RecordManager concepts.
+  - Definition of relations.
+  - Built-in record-manipulation API (record/save, record/delete, ...).
+  - Practical examples for belongsTo and hasMany relations.
+  - Customizing prepareReadQuery().
+
+<a class="btn" href="lesson-9"><span class="text">Open lesson #9</span></a>
+
+## Lesson #10: Description API
   - Overview of Description API, it's purpose and basic principles.
   - Configuration options for tables (describeTable).
   - Configuration options for forms (describeForm).
   - Configuration options for inputs (describeInput).
 
-**Webinar #8: Callbacks in models**
-  - Overview of available callbacks.
-  - Practical example with CarRental app.
+<a class="btn" href="lesson-10"><span class="text">Open lesson #10</span></a>
 
-**Webinar #9: Finalilzation of Level 1 certification**
+## Lesson #11: Model callbacks
+  - Overview of available callbacks.
+  - Practical examples.
+
+<a class="btn" href="lesson-11"><span class="text">Open lesson #11</span></a>
+
+## Lesson #12: Controllers
+  - Introduction to Hubleto controllers.
+  - Practical examples.
+
+<a class="btn" href="lesson-12"><span class="text">Open lesson #12</span></a>
+
+## Lesson #13: Views
+  - Introduction to Hubleto views.
+  - Practical examples.
+
+<a class="btn" href="lesson-13"><span class="text">Open lesson #13</span></a>
+
+## Lesson #14: Intergration with other apps, part 1
+  - Calendar
+  - Settings
+  - Workflow
+  - AI Assistant
+  
+<a class="btn" href="lesson-14"><span class="text">Open lesson #14</span></a>
+
+## Lesson #15: Intergration with other apps, part 2
+  - Dashboards
+  - Mail
+  - Api
+  - Tools
+  
+<a class="btn" href="lesson-15"><span class="text">Open lesson #15</span></a>
+
+## Lesson #16: System-level apps
+  - Desktop
+  - Notifications
+  - Developer tools
+  - Audit Logs
+
+<a class="btn" href="lesson-16"><span class="text">Open lesson #16</span></a>
+
+## Lesson #17: Miscellaneous
+  - Testing
+  - Best practices for UI (friendly URLs, level 2 sidebar, app menu, breadcrumbs, ...)
+  - Import / Export CSV
+  - Localization
+
+<a class="btn" href="lesson-17"><span class="text">Open lesson #17</span></a>
+
+## Lesson #18: Finalilzation of Level 1 certification
   - What we have learned?
   - Feedback from developers.
   - How to get the Level 1 certificate.
+
+<a class="btn" href="lesson-18"><span class="text">Open lesson #18</span></a>

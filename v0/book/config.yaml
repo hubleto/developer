@@ -83,13 +83,17 @@ tableOfContents:
               - page: docs/framework/testing/running-tests
       - page: docs/erp
         children:
+          - page: docs/erp/core
           - page: docs/erp/apps
             children:
-              - page: docs/erp/apps/how-to-create-app
+              - page: docs/erp/apps/create-app
               - page: docs/erp/apps/folder-structure
-              - page: docs/erp/apps/types
               - page: docs/erp/apps/manifest
               - page: docs/erp/apps/loader
+              - page: docs/erp/apps/routing
+              - page: docs/erp/apps/models-views-controllers
+              - page: docs/erp/apps/user-interface
+              - page: docs/erp/apps/miscellaneous
           - page: docs/erp/conventions
           - page: docs/erp/localization
       - page: advanced-development
@@ -186,11 +190,8 @@ tableOfContents:
     children:
       - page: certification/level-1
         children:
-          - page: certification/level-1/about-hubleto
-          - page: certification/level-1/starting-the-development
-          - page: certification/level-1/hubleto-core
-          - page: certification/level-1/hubleto-apps
-          - page: certification/level-1/recapitulation
+          - page: certification/level-1/lesson-1
+          - page: certification/level-1/lesson-2
       - page: certification/level-2
       - page: certification/level-3
       

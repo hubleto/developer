@@ -10,7 +10,7 @@
       {% endfor %}
     </div>
     {% if onThisPage|length > 0 %}
-      <div class="mt-2 flex gap-x-2">
+      <div class="mt-2 flex gap-2 flex-wrap">
         {% for h2, h3list in onThisPage %}
           <a href="#{{ h2 }}" class="border border-white py-1 px-2 bg-white/10 rounded hover:bg-white/20 hover:no-underline">{{ h2 }}</a>
         {% endfor %}
