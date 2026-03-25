@@ -27,6 +27,6 @@ In this lesson, the student will learn the basics about Hubleto ecosystem. The s
 
 Do you have any question or comment? Leave us a message in the community portal.
 
-<a class="btn" href="https://community.hubleto.eu/d/34-qa-developer-certification-level-1-lesson-1"><span class="text">Go to community.hubleto.eu</span></a>
+<a class="btn" href="https://community.hubleto.eu/d/35-qa-developer-certification-level-1"><span class="text">Go to community.hubleto.eu</span></a>
 
 If you are new here, learn more about [developer certification programme](../../certification).
