@@ -54,7 +54,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Install production ready Hubleto using Composer.
   - Overview of Hubleto apps and basic development tools.
 
-<a class="btn" href="lesson-1"><span class="text">Open lesson #1</span></a>
+<a class="btn" href="level-1/lesson-1"><span class="text">Open lesson #1</span></a>
 
 ## Lesson #2: Overview of Hubleto features
   - CRM, Marketing, Sales, Productivity, Finance, Maintenance, Help
@@ -62,7 +62,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - UI basics - sidebar, tables, forms, localization, searching
   - App Manager
 
-<a class="btn" href="lesson-2"><span class="text">Open lesson #2</span></a>
+<a class="btn" href="level-1/lesson-2"><span class="text">Open lesson #2</span></a>
 
 ## Lesson #3: Custom App Development - backend basics
   - Create custom CarRental app.
@@ -70,7 +70,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Create models (Car, RentalHistory) and their RecordManagers.
   - Overview of 1:N relations.
 
-<a class="btn" href="lesson-3"><span class="text">Open lesson #3</span></a>
+<a class="btn" href="level-1/lesson-3"><span class="text">Open lesson #3</span></a>
 
 ## Lesson #4: Custom App Development - frontend basics
   - Overview of previous developments in custom CarRental app.
@@ -78,7 +78,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Create controllers and views (Cars, RentalHistories).
   - Use built-in React UI components (<app-table>) in views.
 
-<a class="btn" href="lesson-4"><span class="text">Open lesson #4</span></a>
+<a class="btn" href="level-1/lesson-4"><span class="text">Open lesson #4</span></a>
 
 ## Lesson #5: Custom App Development - CarRental app
   - Overview of previous developments in custom CarRental app.
@@ -86,12 +86,12 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Recapitulation of frontend programming.
   - Feedback from developers.
 
-<a class="btn" href="lesson-5"><span class="text">Open lesson #5</span></a>
+<a class="btn" href="level-1/lesson-5"><span class="text">Open lesson #5</span></a>
 
 ## Lesson #6: Custom App Development - IpInfoTest app
   - Development of IpInfoTest app
 
-<a class="btn" href="lesson-6"><span class="text">Open lesson #6</span></a>
+<a class="btn" href="level-1/lesson-6"><span class="text">Open lesson #6</span></a>
 
 ## Lesson #7: Hubleto ReactUi basics
   - Overview of ReactUi library.
@@ -99,7 +99,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Most commonlty used properties of <app-table>.
   - Customizing table and form look&feel using DescriptionAPI.
 
-<a class="btn" href="lesson-7"><span class="text">Open lesson #7</span></a>
+<a class="btn" href="level-1/lesson-7"><span class="text">Open lesson #7</span></a>
 
 ## Lesson #8: Models, RecordManagers and Migrations, part 1
   - Overview of Model and RecordManager concepts.
@@ -108,7 +108,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Practical examples for belongsTo and hasMany relations.
   - Customizing prepareReadQuery().
 
-<a class="btn" href="lesson-8"><span class="text">Open lesson #8</span></a>
+<a class="btn" href="level-1/lesson-8"><span class="text">Open lesson #8</span></a>
 
 ## Lesson #9: Models, RecordManagers and Migrations, part 2
   - Overview of Model and RecordManager concepts.
@@ -117,7 +117,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Practical examples for belongsTo and hasMany relations.
   - Customizing prepareReadQuery().
 
-<a class="btn" href="lesson-9"><span class="text">Open lesson #9</span></a>
+<a class="btn" href="level-1/lesson-9"><span class="text">Open lesson #9</span></a>
 
 ## Lesson #10: Description API
   - Overview of Description API, it's purpose and basic principles.
@@ -125,25 +125,25 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Configuration options for forms (describeForm).
   - Configuration options for inputs (describeInput).
 
-<a class="btn" href="lesson-10"><span class="text">Open lesson #10</span></a>
+<a class="btn" href="level-1/lesson-10"><span class="text">Open lesson #10</span></a>
 
 ## Lesson #11: Model callbacks
   - Overview of available callbacks.
   - Practical examples.
 
-<a class="btn" href="lesson-11"><span class="text">Open lesson #11</span></a>
+<a class="btn" href="level-1/lesson-11"><span class="text">Open lesson #11</span></a>
 
 ## Lesson #12: Controllers
   - Introduction to Hubleto controllers.
   - Practical examples.
 
-<a class="btn" href="lesson-12"><span class="text">Open lesson #12</span></a>
+<a class="btn" href="level-1/lesson-12"><span class="text">Open lesson #12</span></a>
 
 ## Lesson #13: Views
   - Introduction to Hubleto views.
   - Practical examples.
 
-<a class="btn" href="lesson-13"><span class="text">Open lesson #13</span></a>
+<a class="btn" href="level-1/lesson-13"><span class="text">Open lesson #13</span></a>
 
 ## Lesson #14: Intergration with other apps, part 1
   - Calendar
@@ -151,7 +151,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Workflow
   - AI Assistant
   
-<a class="btn" href="lesson-14"><span class="text">Open lesson #14</span></a>
+<a class="btn" href="level-1/lesson-14"><span class="text">Open lesson #14</span></a>
 
 ## Lesson #15: Intergration with other apps, part 2
   - Dashboards
@@ -159,7 +159,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Api
   - Tools
   
-<a class="btn" href="lesson-15"><span class="text">Open lesson #15</span></a>
+<a class="btn" href="level-1/lesson-15"><span class="text">Open lesson #15</span></a>
 
 ## Lesson #16: System-level apps
   - Desktop
@@ -167,7 +167,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Developer tools
   - Audit Logs
 
-<a class="btn" href="lesson-16"><span class="text">Open lesson #16</span></a>
+<a class="btn" href="level-1/lesson-16"><span class="text">Open lesson #16</span></a>
 
 ## Lesson #17: Miscellaneous
   - Testing
@@ -175,11 +175,11 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Import / Export CSV
   - Localization
 
-<a class="btn" href="lesson-17"><span class="text">Open lesson #17</span></a>
+<a class="btn" href="level-1/lesson-17"><span class="text">Open lesson #17</span></a>
 
 ## Lesson #18: Finalilzation of Level 1 certification
   - What we have learned?
   - Feedback from developers.
   - How to get the Level 1 certificate.
 
-<a class="btn" href="lesson-18"><span class="text">Open lesson #18</span></a>
+<a class="btn" href="level-1/lesson-18"><span class="text">Open lesson #18</span></a>
