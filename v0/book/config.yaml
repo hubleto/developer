@@ -106,9 +106,13 @@ tableOfContents:
               - page: docs/erp/apps/manifest
               - page: docs/erp/apps/loader
               - page: docs/erp/apps/routing
+                status: "wip"
               - page: docs/erp/apps/models-views-controllers
+                status: "wip"
               - page: docs/erp/apps/user-interface
+                status: "wip"
               - page: docs/erp/apps/miscellaneous
+                status: "wip"
           - page: docs/erp/conventions
           - page: docs/erp/localization
       - page: advanced-development
@@ -192,15 +196,24 @@ tableOfContents:
           - page: basics/about-apps
           - page: basics/app-folder-structure
           - page: tutorial/add-route-controller-and-view
+            status: "wip"
           - page: tutorial/create-simple-addressbook
+            status: "wip"
             children:
             - page: tutorial/add-model-for-contacts
+              status: "wip"
             - page: tutorial/add-route-controller-and-view-for-managing-contacts
+              status: "wip"
             - page: tutorial/add-1-n-relation
+              status: "wip"
           - page: tutorial/customize-tables-and-forms
+            status: "wip"
           - page: tutorial/custom-ui-components
+            status: "wip"
           - page: tutorial/writing-tests
+            status: "wip"
           - page: tutorial/more-reading
+            status: "wip"
       - page: tutorials/set-up-environment-for-development
         icon: fas fa-gears
       - page: tutorials/code-samples
@@ -211,6 +224,7 @@ tableOfContents:
         children:
           - page: certification/level-1/lesson-1
           - page: certification/level-1/lesson-2
+            status: "wip"
       - page: certification/level-2
       - page: certification/level-3
       
