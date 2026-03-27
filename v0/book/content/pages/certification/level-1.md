@@ -174,6 +174,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Best practices for UI (friendly URLs, level 2 sidebar, app menu, breadcrumbs, ...)
   - Import / Export CSV
   - Localization
+  - Sidebar badge
 
 <a class="btn" href="level-1/lesson-17"><span class="text">Open lesson #17</span></a>
 
