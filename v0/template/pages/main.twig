@@ -10,8 +10,46 @@
 
 
   <!-- Content -->
-  <div class="content">
-    {{ content|raw }}
+  <div class="wrapper">
+    <div class="content">
+      {{ content|raw }}
+      {% if data.searchResults is defined %}
+        {% if data.query %}
+          <div class="mb-6">
+            <p class="text-gray-500 text-sm">Search results for: <strong class="text-gray-800">{{ data.query }}</strong></p>
+            <p class="text-gray-400 text-xs mt-1">{{ data.searchResults|length }} result(s) found</p>
+          </div>
+
+          {% if data.searchResults|length > 0 %}
+            <ul class="space-y-4">
+              {% for result in data.searchResults %}
+                <li class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all">
+                  <a href="{{ result.url }}" class="text-blue-600 hover:underline font-semibold text-base">{{ result.titleDisplay|raw }}</a>
+                  {% if data.debugSearch %}
+                    <span class="text-xs text-gray-400 ml-2 font-mono">
+                      score: {{ result.score }} | count: {{ result.count }} | priority: {{ result.priority }} | boost: {{ result.boost }}
+                    </span>
+                  {% endif %}
+                  <span class="text-xs text-gray-400 ml-2">({{ result.count }} matches)</span>
+                  {% if result.snippets|length > 0 %}
+                    <div class="mt-2 space-y-1">
+                      {% for snippet in result.snippets %}
+                        <p class="text-sm text-gray-600 border-l-2 border-gray-200 pl-3">{{ snippet|raw }}</p>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="text-center py-12">
+              <p class="text-gray-400 text-lg">No results found for <strong>{{ data.query }}</strong></p>
+              <p class="text-gray-300 text-sm mt-2">Try different keywords</p>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    </div>
   </div>
   {% if pageConfig.tocData.prevPageData or pageConfig.tocData.nextPageData %}
     <div class="content flex justify-between">
@@ -36,5 +74,91 @@
   <script src="{{ guideRootUrl }}/node_modules/preline/dist/preline.js"></script>
 
   <script>hljs.highlightAll();</script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.header');
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      // Wrap heading text in a span for precise highlight
+      const headings = document.querySelectorAll('.content h1, .content h2, .content h3, .content h4');
+      headings.forEach(h => {
+        if (!h.id) {
+          h.id = h.textContent.trim();
+        }
+
+        // Wrap text in span if not already wrapped
+        if (!h.querySelector('.heading-text')) {
+          const span = document.createElement('span');
+          span.className = 'heading-text';
+          span.style.position = 'relative';
+          span.style.display = 'inline-block'; // so width matches text
+          while (h.firstChild) {
+            span.appendChild(h.firstChild);
+          }
+          h.appendChild(span);
+        }
+      });
+
+      const scrollToHeading = (target) => {
+        if (!target) return;
+
+        // Remove previous highlights
+        document.querySelectorAll('.highlight-pill').forEach(pill => pill.remove());
+
+        const span = target.querySelector('.heading-text');
+        if (!span) return;
+
+        // Scroll with sticky header offset
+        const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 8;
+        window.scrollTo({ top, behavior: 'smooth' });
+
+        // Create pill slightly bigger than the text
+        const overlay = document.createElement('span');
+        overlay.className = 'highlight-pill';
+        overlay.style.position = 'absolute';
+        overlay.style.left = '-0.2em';  // extend a bit beyond text
+        overlay.style.right = '-0.2em';
+        overlay.style.bottom = '0.1em'; // just under the text
+        overlay.style.height = '0.8em';  // slightly taller
+        overlay.style.backgroundColor = '#FEF3C7'; // Tailwind bg-yellow-50
+        overlay.style.borderRadius = '0.4em'; // rounded edges
+        overlay.style.zIndex = '-1';
+        overlay.style.transition = 'opacity 0.5s';
+
+        span.appendChild(overlay);
+
+        // Fade out after 2 seconds
+        setTimeout(() => {
+          overlay.style.opacity = '0';
+          setTimeout(() => {
+            if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+          }, 500);
+        }, 2000);
+      };
+
+      // Anchor click handler
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          const hash = decodeURIComponent(anchor.getAttribute('href').substring(1));
+          const target = document.getElementById(hash);
+          if (!target) return;
+          e.preventDefault();
+          scrollToHeading(target);
+          history.pushState(null, '', `#${encodeURIComponent(hash)}`);
+        });
+      });
+
+      // Scroll to hash on page load
+      if (window.location.hash) {
+        const hash = decodeURIComponent(window.location.hash.substring(1));
+        const target = document.getElementById(hash);
+        if (target) {
+          setTimeout(() => scrollToHeading(target), 50);
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>

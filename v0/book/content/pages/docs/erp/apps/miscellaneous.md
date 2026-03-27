@@ -1,3 +1,3 @@
-# Hubleto\Erp\Core\Permissions
+# Miscellaneous
 
 {% include 'components/work-in-progress.twig' %}

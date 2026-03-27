@@ -1,19 +1,20 @@
 {% macro renderSidebar(items, bookConfig, env, breadcrumbs, itemIdPrefix, level) %}
   {% set itemCounter = 0 %}
   {% for item in items %}
+    {% set isWip = item.status is defined and item.status == 'wip' %}
     <li id="{{ itemIdPrefix }}_{{ itemCounter }}" class="level-{{ level }}">
       {% if item.children is iterable %}
-        <a href="{{ env.guideRootUrl }}/{{ item.page ?? '' }}"
+        <a href="{% if not isWip %}{{ env.guideRootUrl }}/{{ item.page ?? '' }}{% else %}{{ env.guideRootUrl }}/{{ item.page }}{% endif %}"
           class="
             btn
             {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %}
             {% if item.page in breadcrumbs %} expanded {% else %} collapsed {% endif %}
             has-children
             w-full
-            {% if level == 1 %} level-1 {% endif %}
-            {% if level == 2 %} level-2 {% endif %}
-            {% if level == 3 %} level-3 {% endif %}
+            level-{{ level }}
+            {% if isWip %} is-disabled {% endif %}
           "
+          {% if isWip %} tabindex="-1" aria-disabled="true" title="Work in progress" {% endif %}
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text grow {% if level == 0 %} font-bold {% endif %}">
@@ -30,16 +31,16 @@
         </div>
       {% else %}
         <a
-          href="{{ env.guideRootUrl }}/{{ item.page }}"
+          href="{% if not isWip %}{{ env.guideRootUrl }}/{{ item.page }}{% else %}{{ env.guideRootUrl }}/{{ item.page }}{% endif %}"
           class="
             btn
             {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %}
             {% if item.page in breadcrumbs %} expanded {% else %} collapsed {% endif %}
             w-full
-            {% if level == 1 %} level-1 {% endif %}
-            {% if level == 2 %} level-2 {% endif %}
-            {% if level == 3 %} level-3 {% endif %}
+            level-{{ level }}
+            {% if isWip %} is-disabled {% endif %}
           "
+          {% if isWip %} tabindex="-1" aria-disabled="true" title="Work in progress" {% endif %}
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text {% if level == 0 %} font-bold {% endif %}">
@@ -64,6 +65,25 @@
     </div>
     <div class="m-auto px-6 pt-0 pb-4 text-center">
       <div class="my-2">Developer's guide</div>
+    </div>
+    <div class="px-3 pb-2">
+      <form action="{{ env.guideRootUrl }}/__search__" method="get">
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
+            <svg class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </div>
+          <input
+            type="text"
+            name="q"
+            class="py-2 ps-10 pe-4 block w-full bg-white border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400"
+            placeholder="Search..."
+            value="{{ data.query ?? '' }}"
+          >
+        </div>
+      </form>
     </div>
     <div class="sidebar-content mt-4">
       <nav class="hs-accordion-group px-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>

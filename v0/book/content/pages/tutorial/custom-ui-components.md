@@ -1,3 +1,3 @@
-# Hubleto\Erp\Core\Permissions
+# Custom UI Components
 
 {% include 'components/work-in-progress.twig' %}

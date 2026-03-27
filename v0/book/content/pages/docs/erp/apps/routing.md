@@ -1,3 +1,3 @@
-# Hubleto\Erp\Core\Permissions
+# Routing
 
 {% include 'components/work-in-progress.twig' %}

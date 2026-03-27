@@ -1,3 +1,3 @@
-# Hubleto\Erp\Core\Permissions
+# User Interface
 
 {% include 'components/work-in-progress.twig' %}

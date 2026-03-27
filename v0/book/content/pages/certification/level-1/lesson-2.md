@@ -1,3 +1,3 @@
-# Hubleto\Erp\Core\Permissions
+# Lesson 2
 
 {% include 'components/work-in-progress.twig' %}
