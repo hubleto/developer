@@ -1,7 +1,10 @@
-{% macro renderSidebar(items, bookConfig, env, breadcrumbs, itemIdPrefix, level) %}
+{% macro renderSidebar(items, bookConfig, env, breadcrumbs, itemIdPrefix, level, pageExistsMap) %}
   {% set itemCounter = 0 %}
   {% for item in items %}
-    {% set isWip = item.status is defined and item.status == 'wip' %}
+    {% set isWip = (item.status is defined and item.status == 'wip') or (pageExistsMap[item.page] is defined and not pageExistsMap[item.page]) %}
+    {% set pageSlug = item.page|split('/')|last %}
+    {% set autoName = pageSlug|replace({'-': ' '})|title %}
+    {% set pageTitle = bookConfig.pages[item.page].title ?: autoName %}
     <li id="{{ itemIdPrefix }}_{{ itemCounter }}" class="level-{{ level }}">
       {% if item.children is iterable %}
         <a href="{% if not isWip %}{{ env.guideRootUrl }}/{{ item.page ?? '' }}{% else %}{{ env.guideRootUrl }}/{{ item.page }}{% endif %}"
@@ -18,7 +21,7 @@
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text grow {% if level == 0 %} font-bold {% endif %}">
-            {% if bookConfig.pages[item.page].title %} {{ bookConfig.pages[item.page].title }} {% else %} <span class="text-slate-400">{{ item.page }}</span> {% endif %}
+            {{ pageTitle }}
           </span>
         </a>
         <div
@@ -26,7 +29,7 @@
           class=""
         >
           <ul class="level-{{ level }}">
-            {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1) }}
+            {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1, pageExistsMap) }}
           </ul>
         </div>
       {% else %}
@@ -44,7 +47,7 @@
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text {% if level == 0 %} font-bold {% endif %}">
-            {% if bookConfig.pages[item.page].title %} {{ bookConfig.pages[item.page].title }} {% else %} <span class="text-slate-400">{{ item.page }}</span> {% endif %}
+            {{ pageTitle }}
           </span>
         </a>
       {% endif %}
@@ -88,7 +91,7 @@
     <div class="sidebar-content mt-4">
       <nav class="hs-accordion-group px-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
         <ul class="flex flex-col space-y-0.5 p-0">
-          {{ _self.renderSidebar(bookConfig.tableOfContents, bookConfig, env, breadcrumbs, '', 0) }}
+          {{ _self.renderSidebar(bookConfig.tableOfContents, bookConfig, env, breadcrumbs, '', 0, pageExistsMap) }}
         </ul>
       </nav>
     </div>
