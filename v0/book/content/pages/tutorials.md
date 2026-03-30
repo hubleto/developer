@@ -2,7 +2,7 @@
 
 <div class="grid gap-4 mt-8 md:grid-cols-2">
   <div class="card border-green-300">
-    <div class="card-header bg-green-50">AI-supported development</div>
+    <div class="card-header bg-green-950 text-green-200">AI-supported development</div>
     <div class="card-body flex flex-col gap-2 h-24">
       Hubleto is nicely recognized by AI agents. Try using them to speed up your development.
     </div>
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="card border-yellow-300">
-    <div class="card-header bg-yellow-50">Hello World app</div>
+    <div class="card-header bg-yellow-950 text-yellow-200">Hello World app</div>
     <div class="card-body flex flex-col gap-2 h-24">
       This tutorial explains basics of development of Hubleto apps.
     </div>
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="card border-blue-300">
-    <div class="card-header bg-blue-50">Code samples</div>
+    <div class="card-header bg-blue-950 text-blue-200">Code samples</div>
     <div class="card-body flex flex-col gap-2 h-24">
       Browse gallery of interesing samples of codes.
     </div>
