@@ -225,6 +225,7 @@ tableOfContents:
           - page: certification/level-1/lesson-1
           - page: certification/level-1/lesson-2
             status: "wip"
+          - page: certification/level-1/lesson-3
       - page: certification/level-2
       - page: certification/level-3
       
