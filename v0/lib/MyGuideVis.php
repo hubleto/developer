@@ -2,6 +2,7 @@
 
 class MyGuideVis extends \WaiBlue\GuideVis\Loader {
   private bool $asAdmin = false;
+  public string $searchPage = 'search';
 
   public function setAsAdmin(bool $asAdmin): MyGuideVis
   {
@@ -12,6 +13,14 @@ class MyGuideVis extends \WaiBlue\GuideVis\Loader {
   public function getAsAdmin(): bool
   {
     return $this->asAdmin;
+  }
+
+  public function init()
+  {
+    parent::init();
+    if ($this->page === $this->searchPage && isset($_GET['q'])) {
+      $this->pageContentMd = '';
+    }
   }
 
   public function pageExists(string $page): bool
@@ -28,7 +37,7 @@ class MyGuideVis extends \WaiBlue\GuideVis\Loader {
   {
     $pageContentFile = $this->env['bookRootFolder'] . '/content/pages/' . $page . '.md';
     if (!is_file($pageContentFile)) {
-      if ($page === '__search__') return '';
+      if ($page === $this->searchPage) return '';
       $slug = basename($page);
       $title = ucwords(str_replace('-', ' ', $slug));
       return "# {$title}\n\n{% include 'components/work-in-progress.twig' %}\n";

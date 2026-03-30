@@ -10,6 +10,7 @@ if (str_starts_with($page, 'v0/')) $page = substr($page, 3); // remove v0/ from 
 
 try {
   $renderer = new MyGuideVis($page, $env, $templateConfig);
+  $renderer->searchPage = 'search';
   $renderer->setAsAdmin(true);
 
   $renderer->init();
