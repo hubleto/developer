@@ -9,6 +9,7 @@ $page = $_GET['page'] ?? '';
 
 try {
   $renderer = new MyGuideVis($page, $env, $templateConfig);
+  $renderer->searchPage = 'search';
   $renderer->init();
   echo $renderer->render();
 } catch (\Exception $e) {

@@ -1,7 +1,10 @@
-{% macro renderSidebar(items, bookConfig, env, breadcrumbs, itemIdPrefix, level) %}
+{% macro renderSidebar(items, bookConfig, env, breadcrumbs, itemIdPrefix, level, pageExistsMap) %}
   {% set itemCounter = 0 %}
   {% for item in items %}
-    {% set isWip = item.status is defined and item.status == 'wip' %}
+    {% set isWip = (item.status is defined and item.status == 'wip') or (pageExistsMap[item.page] is defined and not pageExistsMap[item.page]) %}
+    {% set pageSlug = item.page|split('/')|last %}
+    {% set autoName = pageSlug|replace({'-': ' '})|title %}
+    {% set pageTitle = bookConfig.pages[item.page].title ?: autoName %}
     <li id="{{ itemIdPrefix }}_{{ itemCounter }}" class="level-{{ level }}">
       {% if item.children is iterable %}
         <a href="{% if not isWip %}{{ env.guideRootUrl }}/{{ item.page ?? '' }}{% else %}{{ env.guideRootUrl }}/{{ item.page }}{% endif %}"
@@ -18,7 +21,7 @@
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text grow {% if level == 0 %} font-bold {% endif %}">
-            {% if bookConfig.pages[item.page].title %} {{ bookConfig.pages[item.page].title }} {% else %} <span class="text-slate-400">{{ item.page }}</span> {% endif %}
+            {{ pageTitle }}
           </span>
         </a>
         <div
@@ -26,7 +29,7 @@
           class=""
         >
           <ul class="level-{{ level }}">
-            {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1) }}
+            {{ _self.renderSidebar(item.children, bookConfig, env, breadcrumbs, itemIdPrefix ~ "_" ~ itemCounter, level + 1, pageExistsMap) }}
           </ul>
         </div>
       {% else %}
@@ -44,7 +47,7 @@
         >
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text {% if level == 0 %} font-bold {% endif %}">
-            {% if bookConfig.pages[item.page].title %} {{ bookConfig.pages[item.page].title }} {% else %} <span class="text-slate-400">{{ item.page }}</span> {% endif %}
+            {{ pageTitle }}
           </span>
         </a>
       {% endif %}
@@ -67,7 +70,7 @@
       <div class="my-2">Developer's guide</div>
     </div>
     <div class="px-3 pb-2">
-      <form action="{{ env.guideRootUrl }}/__search__" method="get">
+      <form action="{{ env.guideRootUrl }}/{{ searchPage }}" method="get">
         <div class="relative">
           <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
             <svg class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -78,7 +81,7 @@
           <input
             type="text"
             name="q"
-            class="py-2 ps-10 pe-4 block w-full bg-white border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400"
+            class="py-2 ps-10 pe-4 block w-full bg-gray-800 border-gray-700 text-slate-300 placeholder:text-gray-500 rounded-lg text-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500"
             placeholder="Search..."
             value="{{ data.query ?? '' }}"
           >
@@ -88,7 +91,7 @@
     <div class="sidebar-content mt-4">
       <nav class="hs-accordion-group px-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
         <ul class="flex flex-col space-y-0.5 p-0">
-          {{ _self.renderSidebar(bookConfig.tableOfContents, bookConfig, env, breadcrumbs, '', 0) }}
+          {{ _self.renderSidebar(bookConfig.tableOfContents, bookConfig, env, breadcrumbs, '', 0, pageExistsMap) }}
         </ul>
       </nav>
     </div>

@@ -27,7 +27,7 @@ Hubleto developer guide
 
 <div class="grid gap-4 mt-8 md:grid-cols-2">
   <div class="card border-yellow-300">
-    <div class="card-header bg-yellow-50">Introduction</div>
+    <div class="card-header bg-yellow-800 text-yellow-200">Introduction</div>
     <div class="card-body flex flex-col gap-2">
       <a href="about" class="btn btn-white block"><span class="text">About</span></a>
       <a href="installation" class="btn btn-white block"><span class="text">Install</span></a>
@@ -36,7 +36,7 @@ Hubleto developer guide
     </div>
   </div>
   <div class="card border-green-300">
-    <div class="card-header bg-green-50">Development</div>
+    <div class="card-header bg-green-900 text-green-200">Development</div>
     <div class="card-body flex flex-col gap-2">
       <a href="install" class="btn btn-white block">
         <span class="text flex-col items-start"><b>Download & install</b><small>It's free</small></span>
@@ -56,7 +56,7 @@ Hubleto developer guide
     </div>
   </div>
   <div class="card border-blue-300">
-    <div class="card-header bg-blue-50">Application repositories</div>
+    <div class="card-header bg-blue-900 text-blue-200">Application repositories</div>
     <div class="card-body flex flex-col gap-2">
       <a href="apps/community" class="btn btn-white block">
         <span class="text flex-col items-start"><b>Free community apps</b><small>Free for your commercial use</small></span>
@@ -70,7 +70,7 @@ Hubleto developer guide
     </div>
   </div>
   <div class="card border-stone-300">
-    <div class="card-header bg-stone-50">Join us</div>
+    <div class="card-header bg-stone-700 text-stone-200">Join us</div>
     <div class="card-body flex flex-col gap-2">
       <a href="contribute" class="btn btn-white block">
         <span class="text flex-col items-start">Contribute</span>
