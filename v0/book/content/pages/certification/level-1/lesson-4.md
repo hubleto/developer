@@ -98,8 +98,6 @@ Hubleto utilizes **Twig** as its templating engine. Your Twig views form the ske
 If you open `Views/Cars.twig`, you will see how seamlessly the React data grid is injected into the page:
 
 ```html
-<h1 class="app-main-title">{{ translate('CarRental') }} > {{ translate('Cars') }}</h1>
-
 <hblreact-car-rental-table-cars
   string:tag="table-cars"
   int:record-id="{{ viewParams.recordId }}"
