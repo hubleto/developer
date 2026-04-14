@@ -9,13 +9,13 @@ Hubleto developer guide
   <a href="install" style="text-decoration:none"><pre><code>/var/www/html/hubleto > composer create-project hubleto/erp-project .
 /var/www/html/hubleto > php hubleto init</code></pre></a>
   <div class="text-gray-400 text-xs text-right">Example usage of <a href="cli-agent">CLI agent</a></div>
-  <a class="btn btn-transparent" href="getting-started#Docker">
+  <a class="btn btn-transparent" href="installation/docker">
     <span class="text">Install with Docker</span>
   </a>
-  <a class="btn btn-transparent" href="getting-started#Composer">
+  <a class="btn btn-transparent" href="installation/composer">
     <span class="text">Install using Composer</span>
   </a>
-  <a class="btn btn-transparent" href="getting-started#Download%20.zip%20package">
+  <a class="btn btn-transparent" href="installation#Download%20.zip%20package">
     <span class="text">Download .zip package</span>
   </a>
 </div>

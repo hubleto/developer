@@ -10,12 +10,16 @@ To install Hubleto, you will need:
   * MySQL or MariaDB
   * any webserver (e.g. Apache or nginx)
 
-## Production-ready version
+## Getting started
 
-Production-ready version is suitable when you want to use Hubleto 'as-is'. Run following commands in any folder accessile by your webserver:
+Run following commands in any folder accessile by your webserver:
 
-  1. `composer create-project hubleto/erp-project .`
-  2. `php hubleto init`
+```bash
+composer create-project hubleto/erp-project .
+php hubleto init
+```
+
+This will install production-ready version ready to be used immediately. 
 
 > **PRO TIP**: Read about [initialization configuration file](init-config) to streamline the installation process without any user prompt.
 
