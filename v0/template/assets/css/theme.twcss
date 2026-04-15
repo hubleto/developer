@@ -45,15 +45,15 @@
   pre + h6, table + h6 { @apply italic text-sm text-gray-500; }
 
   table { @apply border border-gray-500 !mt-4; border-collapse: collapse; }
-  table tr { @apply odd:bg-gray-800; }
+  table tr { @apply odd:bg-gray-900/40; }
   table td { @apply p-1.5 text-sm text-slate-300; border: 1px solid #4b5563; }
-  table thead th { @apply font-bold text-left p-2 bg-gray-900 text-sm text-slate-200; border: 1px solid #4b5563; }
+  table thead th { @apply font-bold text-left p-2 bg-gray-950 text-sm text-slate-300; border: 1px solid #4b5563; }
   table + p { @apply text-slate-500 mb-4 text-xs pt-0 pb-4; }
 
   blockquote { @apply m-8 p-4 bg-primary/5 border border-primary shadow max-w-xl relative; }
   blockquote * { @apply p-0 tracking-wider; }
 
-  .wrapper { @apply md:pl-72 lg:pr-60; }
+  .wrapper { @apply px-6; }
   .content { @apply p-8 max-w-5xl mx-auto space-y-1; }
   .content img { @apply mx-auto mt-4 border border-gray-700 max-w-xl shadow-sm rounded-sm bg-gray-800 text-xs; }
   .content img + h6 { @apply italic text-sm text-gray-500 mx-auto text-center; }
@@ -64,29 +64,36 @@
   .header .menu-button { @apply block md:hidden; }
   .header a { @apply text-white; }
 
-  .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] bg-gray-900 border-e border-gray-700 md:block lg:translate-x-0 lg:end-auto lg:bottom-0; }
+  .sidebar { @apply w-72 h-full hidden fixed inset-y-0 start-0 z-[60] md:block; background: #0b0f17; box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
+  .sidebar > div { padding-top: var(--top-bar-height); }
+  .sidebar-logo-wrap { padding-top: 0.5rem; }
+  @media (min-width: 48rem) {
+    .sidebar { background: radial-gradient(ellipse at 100% 50%, #0e131b 10%, transparent 70%); box-shadow: none; }
+    .sidebar > div { padding-top: 0; }
+    .sidebar-logo-wrap { padding-top: 1rem; }
+  }
   .sidebar .sidebar-content { @apply h-full overflow-y-auto; }
   .sidebar .logo { @apply w-1/2 m-auto; }
 
   .sidebar a.expanded:not(.btn-primary) > .text { @apply font-bold; }
-  .sidebar a.has-children.collapsed { @apply after:content-['⋮'] after:pr-2; }
-  .sidebar a.has-children.expanded { @apply after:content-['⋮'] after:pr-2; }
   .sidebar .btn { @apply overflow-hidden; }
   .sidebar .btn .text { white-space: normal !important; word-break: break-word !important;line-height: 1.3;padding-top: 0.2rem;padding-bottom: 0.2rem;}
 
-  .sidebar .btn.btn-transparent { @apply !text-gray-300 !bg-transparent !border-gray-700 hover:!bg-gray-700 hover:!text-gray-100 hover:!border-gray-600; }
-  .sidebar .btn.btn-primary { @apply text-white; }
+  .sidebar .btn.btn-transparent { @apply !text-gray-300 !bg-transparent !border-transparent hover:!bg-gray-800/60 hover:!text-gray-100 hover:!border-transparent; transition: background-color 0.15s, color 0.15s; }
+  .sidebar .btn.btn-primary { @apply !bg-transparent text-white; border-left: 2px solid var(--color-primary); border-radius: 0; transition: background-color 0.15s, color 0.15s; }
   .sidebar .btn .icon { @apply !border-gray-700; }
   .sidebar .btn .text { @apply !border-gray-700; }
 
-  .sidebar .btn.level-1.btn-primary { @apply border-none before:text-white; }
+  .sidebar .btn.level-1.btn-primary { @apply border-none before:text-white; border-left: 2px solid var(--color-primary); }
   .sidebar .btn.level-1:not(.btn-primary) { @apply hover:bg-gray-800 hover:text-gray-100; }
   .sidebar .btn.level-1 .text { font-size: 1rem; }
 
   .sidebar .btn.level-2 { @apply border-none; }
+  .sidebar .btn.level-2.btn-primary { border-left: 2px solid var(--color-primary); }
   .sidebar .btn.level-2 .text {font-size: 0.9rem; }
 
   .sidebar .btn.level-3 { @apply border-none border-r-0; }
+  .sidebar .btn.level-3.btn-primary { border-left: 2px solid var(--color-primary); }
   .sidebar .btn.level-3 .text {font-size: 0.8rem; }
 
   :root { --sidebar-indent-step: 0.4rem; }
@@ -102,17 +109,26 @@
   .sidebar li.level-4 > a { font-size: 0.75rem; color: #9ca3af; }
   .sidebar li.level-5 > a { font-size: 0.7rem; color: #6b7280; }
 
-  .sidebar li.level-1 { border-left: 1px solid #374151; }
-  .sidebar li.level-2 { border-left: 1px solid #374151; }
-  .sidebar li.level-3 { border-left: 1px solid #4b5563; }
-  .sidebar li.level-4 { border-left: 1px solid #4b5563; }
-  .sidebar li.level-5 { border-left: 1px solid #374151; }
+  .sidebar li.level-1 { border-left: 1px solid rgba(255,255,255,0.04); }
+  .sidebar li.level-2 { border-left: 1px solid rgba(255,255,255,0.06); }
+  .sidebar li.level-3 { border-left: 1px solid rgba(255,255,255,0.06); }
+  .sidebar li.level-4 { border-left: 1px solid rgba(255,255,255,0.04); }
+  .sidebar li.level-5 { border-left: 1px solid rgba(255,255,255,0.03); }
 
-  .sidebar a.has-children.collapsed::after { @apply content-['▸'] text-gray-500 ml-1; }
-  .sidebar a.has-children.expanded::after { @apply content-['▾'] text-gray-500 ml-1; }
+  .sidebar .toggle-arrow {
+    @apply text-gray-500 px-3 py-2 cursor-pointer rounded font-bold;
+    font-size: 0.75rem;
+    margin-left: auto;
+    transition: transform 0.2s ease, background-color 0.15s, color 0.15s;
+  }
+  .sidebar .toggle-arrow:hover { @apply text-gray-100 bg-gray-700; }
+  .sidebar .toggle-arrow.is-open { transform: rotate(90deg); }
 
-  .sidebar .collapsed + * { @apply hidden; }
-  .sidebar .expanded + * { @apply block; }
+  .sidebar li.search-dimmed { opacity: 0.25; transition: opacity 0.15s; }
+  .sidebar li.search-match { opacity: 1; }
+  .sidebar li.search-match > a .text { color: var(--color-primary) !important; font-weight: bold; }
+  .sidebar .collapsed + * { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+  .sidebar .expanded + * { max-height: 200rem; overflow: hidden; transition: max-height 0.5s ease-in; }
   .sidebar .is-disabled {@apply text-gray-600 cursor-not-allowed opacity-70;}
   .sidebar .is-disabled:hover {@apply bg-transparent text-gray-600 no-underline;}
   .sidebar .is-disabled .text::before {content: "WIP";@apply text-[9px] font-semibold bg-amber-100 text-amber-600 mr-2 px-1.5 py-0.5 rounded-full border border-amber-300;white-space: nowrap !important;}
@@ -135,14 +151,98 @@
 
   .btn.btn-white { @apply !text-gray-200 !bg-gray-700 !border-gray-600 hover:!bg-gray-600 hover:!text-gray-100; }
 
-  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all bg-gray-900 z-20 p-2 hidden lg:block; }
-  aside.on-this-page .btn { @apply text-xs; }
-  aside.on-this-page > div:nth-child(1) { @apply text-sm p-1 flex items-center font-semibold; }
-  aside.on-this-page > div:nth-child(2) { @apply p-2; }
-  aside.on-this-page > div:nth-child(1) { @apply text-slate-200; }
-  aside.on-this-page > div:nth-child(2) .heading-level-1 { @apply pt-2 pb-2 text-sm font-normal text-slate-200; }
-  aside.on-this-page > div:nth-child(2) .heading-level-1 a { @apply !text-slate-200; }
-  aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs ml-2 p-0 !text-gray-300; }
-  aside.on-this-page .btn.btn-transparent { @apply !text-gray-300 !bg-transparent !border-gray-700 hover:!bg-gray-700 hover:!text-gray-100 hover:!border-gray-600; }
+  aside.on-this-page { @apply fixed top-0 right-0 h-full w-60 break-all z-20 p-2 hidden lg:block; background: radial-gradient(ellipse at 0% 50%, #0e131b 10%, transparent 70%); }
+  aside.on-this-page > div:nth-child(1) { @apply text-xs uppercase tracking-wider p-3 pt-6 text-gray-500 font-medium; letter-spacing: 0.12em; }
+  aside.on-this-page > div:nth-child(2) { @apply px-3 py-1; }
+  aside.on-this-page > div:nth-child(2) a {
+    @apply block text-sm text-gray-400 py-1.5 px-2 rounded no-underline;
+    transition: color 0.15s, background-color 0.15s;
+    border-left: 2px solid transparent;
+  }
+  aside.on-this-page > div:nth-child(2) a:hover {
+    @apply text-gray-100 bg-gray-800/40;
+    border-left-color: var(--color-primary);
+  }
+  aside.on-this-page > div:nth-child(2) .heading-level-1 a { @apply text-sm text-gray-300; }
+  aside.on-this-page > div:nth-child(2) .heading-level-2 a { @apply text-xs text-gray-500 ml-2; }
+
+  /* Top bar */
+  :root { --top-bar-height: 2.25rem; }
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 70;
+    height: var(--top-bar-height);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding-inline: 1.5rem;
+    padding-right: 3rem;
+    background: rgba(9, 11, 17, 0.3);
+    backdrop-filter: blur(6px);
+  }
+  .top-bar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .top-bar-link:hover { color: #d1d5db; text-decoration: none; }
+  .top-bar-hubleto { color: var(--color-primary); }
+  .top-bar-hubleto:hover { color: var(--color-secondary); }
+  .top-bar-link i { font-size: 1.25rem; }
+  .top-bar-desktop { @apply hidden md:flex; }
+  .top-bar-burger {
+    @apply md:hidden text-gray-300 hover:text-white px-3 py-1 cursor-pointer;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    margin-right: auto;
+  }
+
+  /* Desktop layout: flex row with centered max-width so sidebars hug the content column */
+  @media (min-width: 48rem) {
+    body {
+      display: flex;
+      align-items: flex-start;
+      max-width: 97rem;
+      margin-inline: auto;
+      min-height: 100vh;
+      padding-top: var(--top-bar-height);
+    }
+    .sidebar {
+      position: sticky;
+      top: var(--top-bar-height);
+      height: calc(100vh - var(--top-bar-height));
+      flex-shrink: 0;
+      inset-inline-start: 0;
+    }
+    .wrapper {
+      flex: 1 1 0%;
+      min-width: 0;
+    }
+  }
+  @media (min-width: 64rem) {
+    aside.on-this-page {
+      position: sticky;
+      top: var(--top-bar-height);
+      right: auto;
+      height: calc(100vh - var(--top-bar-height));
+      flex-shrink: 0;
+    }
+  }
+
+  /* Work in progress banner */
+  .wip-banner { @apply flex gap-5 items-start mt-8 p-6 rounded-xl border border-amber-800/40 bg-amber-950/25; }
+  .wip-banner .wip-banner-icon { @apply text-4xl text-amber-500 shrink-0 pt-1; }
+  .wip-banner .wip-banner-title { @apply text-base font-semibold text-amber-300 mb-1; }
+  .wip-banner p { @apply text-amber-200/70 text-sm pt-0 leading-relaxed; }
+  .wip-banner a { @apply text-amber-400 text-sm hover:text-amber-300 no-underline hover:underline; }
 
 }

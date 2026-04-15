@@ -5,7 +5,36 @@
   {% include('elements/html-head.twig') %}
 </head>
 <body>
-  {% include('elements/header.twig') %}
+  <div class="top-bar">
+    <button type="button" class="top-bar-burger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a href="https://www.hubleto.eu" target="_blank" class="top-bar-link top-bar-hubleto">www.hubleto.eu</a>
+    <a href="https://www.reddit.com/r/hubleto/" target="_blank" class="top-bar-link">
+      <i class="fab fa-reddit"></i>
+      <span>Reddit</span>
+    </a>
+    <a href="https://help.hubleto.eu" target="_blank" class="top-bar-link top-bar-desktop">
+      <i class="fas fa-circle-question"></i>
+      <span>User Guide</span>
+    </a>
+    <a href="https://stackoverflow.com/questions/tagged/hubleto" target="_blank" class="top-bar-link top-bar-desktop">
+      <i class="fab fa-stack-overflow"></i>
+      <span>Stack Overflow</span>
+    </a>
+    <a href="https://www.linkedin.com/company/hubleto" target="_blank" class="top-bar-link top-bar-desktop">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://community.hubleto.eu" target="_blank" class="top-bar-link top-bar-desktop">
+      <i class="fas fa-users"></i>
+      <span>Community</span>
+    </a>
+    <a href="https://github.com/hubleto/erp/issues" target="_blank" class="top-bar-link top-bar-desktop">
+      <i class="fab fa-github"></i>
+      <span>Report an issue</span>
+    </a>
+  </div>
   {% include('elements/sidebar.twig') %}
 
 
@@ -50,23 +79,24 @@
         {% endif %}
       {% endif %}
     </div>
+
+    {% if pageConfig.tocData.prevPageData or pageConfig.tocData.nextPageData %}
+      <div class="content flex justify-between">
+        <div class="flex-1 text-left">
+          {% if pageConfig.tocData.prevPageData %}
+            <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.prevPageData.page }}">&laquo; Previous page</a><br/>
+            <small>{{ pageConfig.tocData.prevPageData.title }}</small>
+          {% endif %}
+        </div>
+        <div class="flex-1 text-right">
+          {% if pageConfig.tocData.nextPageData %}
+            <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.nextPageData.page }}">Next page &raquo;</a><br/>
+            <small>{{ pageConfig.tocData.nextPageData.title }}</small>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
   </div>
-  {% if pageConfig.tocData.prevPageData or pageConfig.tocData.nextPageData %}
-    <div class="content flex justify-between">
-      <div class="flex-1 text-left">
-        {% if pageConfig.tocData.prevPageData %}
-          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.prevPageData.page }}">&laquo; Previous page</a><br/>
-          <small>{{ pageConfig.tocData.prevPageData.title }}</small>
-        {% endif %}
-      </div>
-      <div class="flex-1 text-right">
-        {% if pageConfig.tocData.nextPageData %}
-          <a href="{{ env.guideRootUrl }}/{{ pageConfig.tocData.nextPageData.page }}">Next page &raquo;</a><br/>
-          <small>{{ pageConfig.tocData.nextPageData.title }}</small>
-        {% endif %}
-      </div>
-    </div>
-  {% endif %}
 
   {% include('elements/on-this-page.twig') %}
   {% include('elements/footer.twig') %}
