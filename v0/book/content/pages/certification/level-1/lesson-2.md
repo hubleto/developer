@@ -73,7 +73,7 @@ The App Manager allows administrators to install, upgrade, or uninstall these mo
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [Features](../../features) | Overview of Hubleto's main features and capabilities. |
 | [Apps](../../apps) | Details about the Hubleto App ecosystem (Community, Enterprise, and Custom). |
-| [App Manager](../../advanced-development/core-architecture) | Understanding how Hubleto's core architecture manages apps. |
+| [App Manager](../../docs/erp/advanced-development/core-architecture) | Understanding how Hubleto's core architecture manages apps. |
 | [User Guide: Features Overview](https://help.hubleto.eu/v0/en/features-overview) | Detailed user documentation on Global Search, Data Grids, and Record Forms. |
 
 ## Videos

@@ -7,7 +7,7 @@ redirects:
     newPage: getting-started
     code: 301
   docs/hooks:
-    newPage: advanced-development/hooks
+    newpage: docs/erp/advanced-development/hooks
     code: 301
   some-old-page:
     newPage: some-new-page
@@ -115,56 +115,56 @@ tableOfContents:
                 status: "wip"
           - page: docs/erp/conventions
           - page: docs/erp/localization
-      - page: advanced-development
-        icon: fas fa-medal
-        children:
-          - page: advanced-development/core-architecture
+          - page: docs/erp/advanced-development
+            icon: fas fa-medal
             children:
-              - page: advanced-development/core-architecture/user-management-and-authentication
-          - page: advanced-development/dynamic-routes
-          - page: advanced-development/data-management
-            children:
-              - page: advanced-development/data-management/adding-custom-columns
-              - page: advanced-development/data-management/create-own-data-grid-table-component
-          - page: advanced-development/customizing-ui
-            children:
-              - page: advanced-development/customizing-ui/customizing-sidebar
-              - page: advanced-development/customizing-ui/view
-              - page: advanced-development/customizing-ui/component
-              - page: advanced-development/customizing-ui/forms
-              - page: advanced-development/customizing-ui/special-inputs
-              - page: advanced-development/customizing-ui/skin
-              - page: advanced-development/customizing-ui/material-ui
-              - page: advanced-development/customizing-ui/custom-invoice-templates
-          - page: advanced-development/description-api
-            children:
-              - page: advanced-development/description-api/table
-              - page: advanced-development/description-api/form
-          - page: advanced-development/core-classes
-            icon: fas fa-code
-            children:
-              - page: advanced-development/core-classes/loader
-              - page: advanced-development/core-classes/model
-              - page: advanced-development/core-classes/eloquent
-              - page: advanced-development/core-classes/controller
-              - page: advanced-development/core-classes/router
+              - page: docs/erp/advanced-development/core-architecture
+                children:
+                  - page: docs/erp/advanced-development/core-architecture/user-management-and-authentication
+              - page: docs/erp/advanced-development/dynamic-routes
+              - page: docs/erp/advanced-development/data-management
+                children:
+                  - page: docs/erp/advanced-development/data-management/adding-custom-columns
+                  - page: docs/erp/advanced-development/data-management/create-own-data-grid-table-component
+              - page: docs/erp/advanced-development/customizing-ui
+                children:
+                  - page: docs/erp/advanced-development/customizing-ui/customizing-sidebar
+                  - page: docs/erp/advanced-development/customizing-ui/view
+                  - page: docs/erp/advanced-development/customizing-ui/component
+                  - page: docs/erp/advanced-development/customizing-ui/forms
+                  - page: docs/erp/advanced-development/customizing-ui/special-inputs
+                  - page: docs/erp/advanced-development/customizing-ui/skin
+                  - page: docs/erp/advanced-development/customizing-ui/material-ui
+                  - page: docs/erp/advanced-development/customizing-ui/custom-invoice-templates
+              - page: docs/erp/advanced-development/description-api
+                children:
+                  - page: docs/erp/advanced-development/description-api/table
+                  - page: docs/erp/advanced-development/description-api/form
+              - page: docs/erp/advanced-development/core-classes
+                icon: fas fa-code
+                children:
+                  - page: docs/erp/advanced-development/core-classes/loader
+                  - page: docs/erp/advanced-development/core-classes/model
+                  - page: docs/erp/advanced-development/core-classes/eloquent
+                  - page: docs/erp/advanced-development/core-classes/controller
+                  - page: docs/erp/advanced-development/core-classes/router
+                    status: "wip"
+                  - page: docs/erp/advanced-development/core-classes/permissions
+                    status: "wip"
+              - page: docs/erp/advanced-development/design-patterns
                 status: "wip"
-              - page: advanced-development/core-classes/permissions
-                status: "wip"
-          - page: advanced-development/design-patterns
-            status: "wip"
-            children:
-            - page: advanced-development/crons
-            - page: advanced-development/hooks
-              children:
-                - page: advanced-development/hooks/introduction
-                - page: advanced-development/hooks/events
-            - page: advanced-development/pipeline
-              status: "wip"
-            - page: advanced-development/miscellaneous/dashboard
-          - page: advanced-development/miscellaneous
-            children:
-              - page: advanced-development/miscellaneous/hubleto-chatgpt
+                children:
+                - page: docs/erp/advanced-development/crons
+                - page: docs/erp/advanced-development/hooks
+                  children:
+                    - page: docs/erp/advanced-development/hooks/introduction
+                    - page: docs/erp/advanced-development/hooks/events
+                - page: docs/erp/advanced-development/pipeline
+                  status: "wip"
+                - page: docs/erp/advanced-development/miscellaneous/dashboard
+              - page: docs/erp/advanced-development/miscellaneous
+                children:
+                  - page: docs/erp/advanced-development/miscellaneous/hubleto-chatgpt
   - page: source-code
     icon: fa-solid fa-code
     children:
@@ -216,6 +216,7 @@ tableOfContents:
             status: "wip"
       - page: tutorials/set-up-environment-for-development
         icon: fas fa-gears
+      - page: tutorials/complex-model-with-crud-components
       - page: tutorials/code-samples
   - page: certification
     icon: fas fa-id-badge

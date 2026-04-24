@@ -119,9 +119,9 @@ If you open `Views/Cars.twig`, you will see how seamlessly the React data grid i
 
 | Resource | Description |
 | --- | --- |
-| [Description API](../../advanced-development/description-api) | Learn how to describe Tables and Forms using the DescriptionAPI. |
-| [Controllers](../../advanced-development/core-classes/controller) | Understand how to handle routing logic and render views. |
-| [Views](../../advanced-development/customizing-ui/view) | Learn about the Twig templating engine used in Hubleto. |
+| [Description API](../../docs/erp/advanced-development/description-api) | Learn how to describe Tables and Forms using the DescriptionAPI. |
+| [Controllers](../../docs/erp/advanced-development/core-classes/controller) | Understand how to handle routing logic and render views. |
+| [Views](../../docs/erp/advanced-development/customizing-ui/view) | Learn about the Twig templating engine used in Hubleto. |
 | [React UI Components](../../docs/framework/views/react-ui) | How to use Hubleto's built-in React components in your views. |
 | [Sample `CarRental` app](https://github.com/mrgopes/hubleto-car-rental) | Source code of the completed CarRental app. |
 

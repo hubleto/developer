@@ -126,7 +126,7 @@ $this->router()->get([
 
 ## Create a Form component for the Activity model
 
-Follow the standard Form creation in [Form component](./../../advanced-development/customizing-ui/forms.md) documentation.
+Follow the standard Form creation in [Form component](./../../docs/erp/advanced-development/customizing-ui/forms.md) documentation.
 
 ## Add Calendar component to a Form Component
 

@@ -32,7 +32,7 @@ Hubleto developer guide
       <a href="about" class="btn btn-white block"><span class="text">About</span></a>
       <a href="installation" class="btn btn-white block"><span class="text">Install</span></a>
       <a href="benefits" class="btn btn-white block"><span class="text">Benefits</span></a>
-      <a href="advanced-development/core-architecture" class="btn btn-white block"><span class="text">Core architecture</span></a>
+      <a href="docs/erp/advanced-development/core-architecture" class="btn btn-white block"><span class="text">Core architecture</span></a>
     </div>
   </div>
   <div class="card border-green-300">
