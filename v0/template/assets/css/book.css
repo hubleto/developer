@@ -64,7 +64,6 @@
   --color-slate-300: oklch(0.869 0.022 252.894);
   --color-slate-400: oklch(0.704 0.04 256.788);
   --color-slate-500: oklch(0.554 0.046 257.417);
-  --color-slate-800: oklch(0.279 0.041 260.031);
   --color-slate-900: oklch(0.208 0.042 265.755);
   --color-gray-50: oklch(0.985 0.002 247.839);
   --color-gray-100: oklch(0.967 0.003 264.542);
@@ -77,9 +76,6 @@
   --color-gray-800: oklch(0.278 0.033 256.848);
   --color-gray-900: oklch(0.21 0.034 264.665);
   --color-gray-950: oklch(0.13 0.028 261.692);
-  --color-neutral-400: oklch(0.708 0 0);
-  --color-neutral-700: oklch(0.371 0 0);
-  --color-neutral-800: oklch(0.269 0 0);
   --color-stone-50: oklch(0.985 0.001 106.423);
   --color-stone-200: oklch(0.923 0.003 48.717);
   --color-stone-300: oklch(0.869 0.005 56.366);
@@ -1711,8 +1707,6 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
     color: var(--color-slate-100);
-    position: relative;
-    top: 1.5em;
   }
   pre + h6, table + h6 {
     font-size: var(--text-sm);
@@ -2150,9 +2144,9 @@
     background-color: var(--color-gray-800) !important;
   }
   .card-header {
-    border-color: var(--color-gray-700) !important;
+    border-color: var(--color-gray-700);
     background-color: var(--color-gray-900);
-    color: var(--color-gray-200) !important;
+    color: var(--color-gray-200);
   }
   .card-body {
     background-color: var(--color-gray-800) !important;

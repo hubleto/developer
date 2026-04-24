@@ -23,6 +23,6 @@ To learn about the framework, go to [this chapter](docs/framework).
 
 ## Hubleto ERP
 
-Hubleto ERP is a product built on Hubleto Framework, containing ERP-like functionality.
+Hubleto ERP is a product built on Hubleto Framework and adding ERP-like functionality.
 
-To learn about how to develop ERP-like apps in Hubleto, go to [this chapter](docs/erp).
+To learn about how to customize Hubleto, go to [this chapter](docs/erp).

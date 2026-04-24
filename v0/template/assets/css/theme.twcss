@@ -41,7 +41,7 @@
   .youtube-video { @apply shadow-lg; }
   .youtube-video iframe { @apply w-full min-h-60; }
 
-  h6:has(+pre) { @apply bg-gray-900 text-xs text-slate-100 p-1; position: relative; top: 1.5em; }
+  h6:has(+pre) { @apply bg-gray-900 text-xs text-slate-100 p-1; }
   pre + h6, table + h6 { @apply italic text-sm text-gray-500; }
 
   table { @apply border border-gray-500 !mt-4; border-collapse: collapse; }
@@ -129,7 +129,7 @@
   .alert-warning { @apply !bg-yellow-950 !text-yellow-200; }
 
   .card { @apply !bg-gray-800 !border-gray-700; }
-  .card-header { @apply bg-gray-900 !text-gray-200 !border-gray-700; }
+  .card-header { @apply bg-gray-900 text-gray-200 border-gray-700; }
   .card-body { @apply !bg-gray-800 !text-slate-300; }
   .card-footer { @apply !border-gray-700; }
 
