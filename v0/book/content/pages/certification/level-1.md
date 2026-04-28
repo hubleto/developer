@@ -6,6 +6,11 @@ The first level of certification ensures that the certified developer knows basi
 development process, its architecture, built-in functionality and most commonly used software
 design patterns like, e.g. routing, controllers or views.
 
+<a class="btn btn-primary btn-large" href="level-1/webinars-dates-topics-and-links">
+  <span class="icon"><i class="fas fa-calendar"></i></span>
+  <span class="text">Full list of all webinars with dates and topics</span>
+</a>
+
 > You will learn how to:
 > 
 >   * prepare the development environment

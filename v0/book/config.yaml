@@ -223,6 +223,7 @@ tableOfContents:
     children:
       - page: certification/level-1
         children:
+          - page: certification/level-1/webinars-dates-topics-and-links
           - page: certification/level-1/lesson-1
           - page: certification/level-1/lesson-2
           - page: certification/level-1/lesson-3
