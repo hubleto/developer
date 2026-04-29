@@ -2,7 +2,7 @@
 
 Become a certified Hubleto developer.
 
-The first level of certification ensures that the certified developer knows basics about Hubleto
+The first level of certification ensures that the certified developer knows the basics of Hubleto
 development process, its architecture, built-in functionality and most commonly used software
 design patterns like, e.g. routing, controllers or views.
 
@@ -21,11 +21,11 @@ design patterns like, e.g. routing, controllers or views.
 
 ## Introduction
 
-This document contains a training material for Hubleto Certified Developer training. It is a source of questions and answers for the certification programme.
+This document contains training material for Hubleto Certified Developer training. It is a source of questions and answers for the certification programme.
 
-To get a Level 1 certification, you shall pass the certification programme. Here you will find training materials and resources pass this programme.
+To get a Level 1 certification, you shall pass the certification programme. Here you will find training materials and resources to pass this programme.
 
-## Prerequisities
+## Prerequisites
 
 You shall have the following knowledge:
 
@@ -52,7 +52,7 @@ Before starting, check out these additional resources:
 
 ## Lessons
 
-The certification programme is divided into several lessons. Each lesson covers specific topic like, e.g. basic introduction to Hubleto or best practices in development. 
+The certification programme is divided into several lessons. Each lesson covers a specific topic like, e.g. basic introduction to Hubleto or best practices in development. 
 
 ## Lesson #1: Introduction to Hubleto
   - About Hubleto.
@@ -81,7 +81,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   - Overview of previous developments in custom CarRental app.
   - Overview of DescriptionAPI with practical example (describeTable).
   - Create controllers and views (Cars, RentalHistories).
-  - Use built-in React UI components (<app-table>) in views.
+  - Use built-in React UI components (`<app-table>`) in views.
 
 <a class="btn" href="level-1/lesson-4"><span class="text">Open lesson #4</span></a>
 
@@ -101,8 +101,8 @@ The certification programme is divided into several lessons. Each lesson covers 
 ## Lesson #7: Hubleto ReactUi basics
   - Overview of ReactUi library.
   - Using ReactUi in Twig.
-  - Most commonlty used properties of <app-table>.
-  - Customizing table and form look&feel using DescriptionAPI.
+  - Most commonly used properties of `<app-table>`.
+  - Customizing table and form look & feel using DescriptionAPI.
 
 <a class="btn" href="level-1/lesson-7"><span class="text">Open lesson #7</span></a>
 
@@ -125,7 +125,7 @@ The certification programme is divided into several lessons. Each lesson covers 
 <a class="btn" href="level-1/lesson-9"><span class="text">Open lesson #9</span></a>
 
 ## Lesson #10: Description API
-  - Overview of Description API, it's purpose and basic principles.
+  - Overview of Description API, its purpose and basic principles.
   - Configuration options for tables (describeTable).
   - Configuration options for forms (describeForm).
   - Configuration options for inputs (describeInput).
@@ -150,7 +150,7 @@ The certification programme is divided into several lessons. Each lesson covers 
 
 <a class="btn" href="level-1/lesson-13"><span class="text">Open lesson #13</span></a>
 
-## Lesson #14: Intergration with other apps, part 1
+## Lesson #14: Integration with other apps, part 1
   - Calendar
   - Settings
   - Workflow
@@ -158,7 +158,7 @@ The certification programme is divided into several lessons. Each lesson covers 
   
 <a class="btn" href="level-1/lesson-14"><span class="text">Open lesson #14</span></a>
 
-## Lesson #15: Intergration with other apps, part 2
+## Lesson #15: Integration with other apps, part 2
   - Dashboards
   - Mail
   - Api
@@ -183,7 +183,7 @@ The certification programme is divided into several lessons. Each lesson covers 
 
 <a class="btn" href="level-1/lesson-17"><span class="text">Open lesson #17</span></a>
 
-## Lesson #18: Finalilzation of Level 1 certification
+## Lesson #18: Finalization of Level 1 certification
   - What we have learned?
   - Feedback from developers.
   - How to get the Level 1 certificate.
