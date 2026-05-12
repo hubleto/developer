@@ -6,79 +6,117 @@
 
 ## Properties
 
-### isExtendableByCustomColumns
 
-`public bool $isExtendableByCustomColumns`
-
-
-### table
-
-`public string $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ isExtendableByCustomColumns
+```php
+public bool $isExtendableByCustomColumns
+```
 
 
-### recordManagerClass
-
-`public string $recordManagerClass`
 
 
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
-
-
-### lookupUrlDetail
-
-`public ?string $lookupUrlDetail`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### relations
 
-`public array $relations`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 ```php
 public describeColumns(): array
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### describeForm
+### ƒ describeForm
 
 ```php
 public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
 
-### onBeforeCreate
+### ƒ getRelationsIncludedInLoadTableData
+
+```php
+public getRelationsIncludedInLoadTableData(): array|null
+```
+
+
+### ƒ getMaxReadLevelForLoadTableData
+
+```php
+public getMaxReadLevelForLoadTableData(): int
+```
+
+
+### ƒ onBeforeCreate
 
 ```php
 public onBeforeCreate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onAfterUpdate
+### ƒ onAfterUpdate
 
 ```php
 public onAfterUpdate(array $originalRecord, array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|

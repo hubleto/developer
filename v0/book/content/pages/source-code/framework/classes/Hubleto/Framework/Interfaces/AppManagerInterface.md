@@ -124,6 +124,19 @@ public getApp(string $appNamespace): null|\Hubleto\Framework\Interfaces\AppInter
 | `$appNamespace` | **string** |             |
 
 
+### ƒ getCommunityApp
+
+```php
+public getCommunityApp(string $appShortName): null|\Hubleto\Framework\Interfaces\AppInterface
+```
+
+#### Parameters
+
+| Parameter       | Type       | Description |
+|-----------------|------------|-------------|
+| `$appShortName` | **string** |             |
+
+
 ### ƒ isAppInstalled
 
 ```php

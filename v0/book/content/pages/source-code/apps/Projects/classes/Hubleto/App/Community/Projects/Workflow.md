@@ -6,13 +6,13 @@
 
 ## Methods
 
-### loadItems
+### ƒ loadItems
 
 ```php
 public loadItems(int $idWorkflow, array $filters): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|

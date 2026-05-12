@@ -1,14 +1,14 @@
 
 # \Hubleto\App\Community\Customers\Loader
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/App">App</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Erp/App">App</a></td></tr></table>
 
 
 ## Methods
 
-### init
+### ƒ init
 
-Inits the app: adds routes, settings, calendars, hooks, menu items, .
+Inits the app: adds routes, settings, calendars, event listeners, menu items, .
 
 ```php
 public init(): void
@@ -17,20 +17,22 @@ public init(): void
 ..
 
 
-### installTables
+### ƒ installApp
+
+[Description for upgradeSchema]
 
 ```php
-public installTables(int $round): void
+public installApp(int $round): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
 
-### search
+### ƒ search
 
 Implements fulltext search functionality for customers
 
@@ -38,7 +40,7 @@ Implements fulltext search functionality for customers
 public search(array $expressions): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description                                                     |
 |----------------|-----------|-----------------------------------------------------------------|

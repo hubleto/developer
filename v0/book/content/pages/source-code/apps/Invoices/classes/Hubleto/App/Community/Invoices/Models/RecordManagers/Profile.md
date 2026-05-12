@@ -6,23 +6,34 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### COMPANY
+### ƒ COMPANY
 
 ```php
 public COMPANY(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Invoices\Models\RecordManagers\User,\Hubleto\App\Community\Invoices\Models\RecordManagers\User>
 ```
 
 
-### TEMPLATE
+### ƒ TEMPLATE
 
 ```php
 public TEMPLATE(): \Hubleto\App\Community\Invoices\Models\RecordManagers\hasOne<\Hubleto\App\Community\Invoices\Models\RecordManagers\Currency,\Hubleto\App\Community\Invoices\Models\RecordManagers\Lead>
+```
+
+
+### ƒ SENDER_ACCOUNT
+
+```php
+public SENDER_ACCOUNT(): \Hubleto\App\Community\Invoices\Models\RecordManagers\hasOne<\Hubleto\App\Community\Invoices\Models\RecordManagers\Currency,\Hubleto\App\Community\Invoices\Models\RecordManagers\Lead>
 ```
 

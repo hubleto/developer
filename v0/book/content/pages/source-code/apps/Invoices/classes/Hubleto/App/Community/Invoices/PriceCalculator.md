@@ -1,12 +1,12 @@
 
 # \Hubleto\App\Community\Invoices\PriceCalculator
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/Core">Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Erp/Core">Core</a></td></tr></table>
 
 
 ## Methods
 
-### calculateFullPrice
+### ƒ calculateFullPrice
 
 [Description for calculateFullPrice]
 
@@ -14,7 +14,7 @@
 public calculateFullPrice(float $unitPrice, float $amount): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -22,7 +22,7 @@ public calculateFullPrice(float $unitPrice, float $amount): float
 | `$amount`    | **float** |             |
 
 
-### calculateVat
+### ƒ calculateVat
 
 [Description for calculateVat]
 
@@ -30,7 +30,7 @@ public calculateFullPrice(float $unitPrice, float $amount): float
 public calculateVat(float $fullPrice, float $vat): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -38,7 +38,7 @@ public calculateVat(float $fullPrice, float $vat): float
 | `$vat`       | **float** |             |
 
 
-### calculateDiscountedPrice
+### ƒ calculateDiscountedPrice
 
 [Description for calculateDiscountedPrice]
 
@@ -46,7 +46,7 @@ public calculateVat(float $fullPrice, float $vat): float
 public calculateDiscountedPrice(float $fullPrice, float $discount): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -54,7 +54,7 @@ public calculateDiscountedPrice(float $fullPrice, float $discount): float
 | `$discount`  | **float** |             |
 
 
-### calculatePriceExcludingVat
+### ƒ calculatePriceExcludingVat
 
 [Description for calculatePriceExcludingVat]
 
@@ -62,7 +62,7 @@ public calculateDiscountedPrice(float $fullPrice, float $discount): float
 public calculatePriceExcludingVat(float $unitPrice, float $amount, float $discount): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -71,7 +71,7 @@ public calculatePriceExcludingVat(float $unitPrice, float $amount, float $discou
 | `$discount`  | **float** |             |
 
 
-### calculatePriceIncludingVat
+### ƒ calculatePriceIncludingVat
 
 [Description for calculatePriceIncludingVat]
 
@@ -79,7 +79,7 @@ public calculatePriceExcludingVat(float $unitPrice, float $amount, float $discou
 public calculatePriceIncludingVat(float $unitPrice, float $amount, float $vat, float $discount): float
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|

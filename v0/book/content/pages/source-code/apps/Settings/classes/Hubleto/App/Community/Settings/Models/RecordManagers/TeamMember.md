@@ -6,37 +6,42 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### TEAM
+### ƒ TEAM
 
 ```php
 public TEAM(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\Team,\Hubleto\App\Community\Settings\Models\RecordManagers\User>
 ```
 
 
-### MEMBER
+### ƒ MEMBER
 
 ```php
 public MEMBER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Settings\Models\RecordManagers\User,\Hubleto\App\Community\Settings\Models\RecordManagers\User>
 ```
 
 
-### prepareReadQuery
+### ƒ prepareReadQuery
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed**       |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

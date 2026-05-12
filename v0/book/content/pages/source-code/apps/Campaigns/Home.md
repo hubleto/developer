@@ -23,21 +23,26 @@
 |------------------------------------------------------------------------------------------------|-------------|
 | [`Campaigns`](./classes/Hubleto/App/Community/Campaigns/Controllers/Campaigns)                 |             |
 | [`ClickTracker`](./classes/Hubleto/App/Community/Campaigns/Controllers/ClickTracker)           |             |
+| [`MailPreview`](./classes/Hubleto/App/Community/Campaigns/Controllers/MailPreview)             |             |
 | [`Recipients`](./classes/Hubleto/App/Community/Campaigns/Controllers/Recipients)               |             |
 | [`RecipientStatuses`](./classes/Hubleto/App/Community/Campaigns/Controllers/RecipientStatuses) |             |
+| [`Unsubscribe`](./classes/Hubleto/App/Community/Campaigns/Controllers/Unsubscribe)             |             |
 
 ### \Hubleto\App\Community\Campaigns\Controllers\Api
 
 #### Classes
 
-| Class                                                                                                                | Description |
-|----------------------------------------------------------------------------------------------------------------------|-------------|
-| [`GetCampaignWarnings`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetCampaignWarnings)               |             |
-| [`GetMailPreviewInfo`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetMailPreviewInfo)                 |             |
-| [`Launch`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/Launch)                                         |             |
-| [`LogActivity`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/LogActivity)                               |             |
-| [`SaveRecipientsFromContacts`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SaveRecipientsFromContacts) |             |
-| [`SendTestEmail`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SendTestEmail)                           |             |
+| Class                                                                                                                  | Description |
+|------------------------------------------------------------------------------------------------------------------------|-------------|
+| [`GetCampaignLaunchInfo`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetCampaignLaunchInfo)             |             |
+| [`GetCampaignTestInfo`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetCampaignTestInfo)                 |             |
+| [`GetMailPreviewInfo`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/GetMailPreviewInfo)                   |             |
+| [`ImportEmails`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/ImportEmails)                               |             |
+| [`Launch`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/Launch)                                           |             |
+| [`LogActivity`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/LogActivity)                                 |             |
+| [`RemoveRecipientFromCampaign`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/RemoveRecipientFromCampaign) |             |
+| [`SaveRecipientsFromContacts`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SaveRecipientsFromContacts)   |             |
+| [`SendTestEmail`](./classes/Hubleto/App/Community/Campaigns/Controllers/Api/SendTestEmail)                             |             |
 
 ### \Hubleto\App\Community\Campaigns\Extendibles
 
@@ -60,6 +65,29 @@
 | [`Click`](./classes/Hubleto/App/Community/Campaigns/Models/Click)                       |             |
 | [`Recipient`](./classes/Hubleto/App/Community/Campaigns/Models/Recipient)               |             |
 | [`RecipientStatus`](./classes/Hubleto/App/Community/Campaigns/Models/RecipientStatus)   |             |
+
+### \Hubleto\App\Community\Campaigns\Models\Migrations
+
+#### Classes
+
+| Class                                                                                                        | Description |
+|--------------------------------------------------------------------------------------------------------------|-------------|
+| [`Campaign_0001`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Campaign_0001)                 |             |
+| [`Campaign_0002`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Campaign_0002)                 |             |
+| [`Campaign_0003`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Campaign_0003)                 |             |
+| [`Campaign_0004`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Campaign_0004)                 |             |
+| [`CampaignActivity_0001`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/CampaignActivity_0001) |             |
+| [`CampaignTask_0001`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/CampaignTask_0001)         |             |
+| [`Click_0001`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Click_0001)                       |             |
+| [`Click_0002`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Click_0002)                       |             |
+| [`Recipient_0001`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Recipient_0001)               |             |
+| [`Recipient_0002`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Recipient_0002)               |             |
+| [`Recipient_0003`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Recipient_0003)               |             |
+| [`Recipient_0004`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Recipient_0004)               |             |
+| [`Recipient_0005`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/Recipient_0005)               |             |
+| [`RecipientStatus_0001`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/RecipientStatus_0001)   |             |
+| [`RecipientStatus_0002`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/RecipientStatus_0002)   |             |
+| [`RecipientStatus_0003`](./classes/Hubleto/App/Community/Campaigns/Models/Migrations/RecipientStatus_0003)   |             |
 
 ### \Hubleto\App\Community\Campaigns\Models\RecordManagers
 

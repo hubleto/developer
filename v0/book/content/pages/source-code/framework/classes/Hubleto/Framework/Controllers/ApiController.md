@@ -126,6 +126,15 @@ public getService(string $service): mixed
 | `$service` | **string** |             |
 
 
+### ƒ loader
+
+Shortcut for the loader service.
+
+```php
+public loader(): \Hubleto\Framework\Loader
+```
+
+
 ### ƒ env
 
 Shortcut for the env service.
@@ -140,7 +149,7 @@ public env(): \Hubleto\Framework\Env
 Shortcut for the authentication service.
 
 ```php
-public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
+public authProvider(): \Hubleto\Framework\Interfaces\AuthProviderInterface
 ```
 
 
@@ -171,12 +180,12 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### ƒ hookManager
+### ƒ eventManager
 
-Shortcut for the hook manager service.
+Shortcut for the event manager service.
 
 ```php
-public hookManager(): \Hubleto\Framework\HookManager
+public eventManager(): \Hubleto\Framework\EventManagerInterface
 ```
 
 
@@ -204,15 +213,6 @@ Shortcut for the cron manager service.
 
 ```php
 public cronManager(): \Hubleto\Framework\CronManager
-```
-
-
-### ƒ emailProvider
-
-Shortcut for the email provider service.
-
-```php
-public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 

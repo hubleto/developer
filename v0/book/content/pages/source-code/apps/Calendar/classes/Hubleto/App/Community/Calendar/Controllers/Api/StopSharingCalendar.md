@@ -6,14 +6,18 @@
 
 ## Properties
 
-### returnType
 
-`public int $returnType`
+<div class="mt-2">&nbsp;</div>
+### ☍ returnType
+```php
+public int $returnType
+```
+
 
 
 ## Methods
 
-### renderJson
+### ƒ renderJson
 
 ```php
 public renderJson(): array

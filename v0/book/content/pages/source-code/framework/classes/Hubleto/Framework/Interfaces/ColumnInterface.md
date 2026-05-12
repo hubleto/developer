@@ -591,10 +591,10 @@ public describeInput(): \Hubleto\Framework\Description\Input
 ```
 
 
-### ƒ loadFromArray
+### ƒ fromArray
 
 ```php
-public loadFromArray(array $columnConfig): \Hubleto\Framework\Interfaces\ColumnInterface
+public fromArray(array $columnConfig): \Hubleto\Framework\Interfaces\ColumnInterface
 ```
 
 #### Parameters

@@ -6,7 +6,11 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 

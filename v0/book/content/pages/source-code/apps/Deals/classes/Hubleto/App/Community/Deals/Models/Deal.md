@@ -13,40 +13,60 @@
 | `RESULT_LOST`            | public     |      | 2                                                                                                                  |
 | `BUSINESS_TYPE_NEW`      | public     |      | 1                                                                                                                  |
 | `BUSINESS_TYPE_EXISTING` | public     |      | 2                                                                                                                  |
-| `ENUM_SOURCE_CHANNELS`   | public     |      | [1 => "Advertisement", 2 => "Partner", 3 => "Web", 4 => "Cold call", 5 => "E-mail", 6 => "Refferal", 7 => "Other"] |
+| `ENUM_SOURCE_CHANNELS`   | public     |      | [1 => "Advertisement", 2 => "Partner", 3 => "Web", 4 => "Cold call", 5 => "E-mail", 6 => "Referral", 7 => "Other"] |
 | `ENUM_DEAL_RESULTS`      | public     |      | [self::RESULT_UNKNOWN => "Unknown", self::RESULT_WON => "Won", self::RESULT_LOST => "Lost"]                        |
 | `ENUM_BUSINESS_TYPES`    | public     |      | [self::BUSINESS_TYPE_NEW => "New", self::BUSINESS_TYPE_EXISTING => "Existing"]                                     |
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
 
 
-### lookupUrlDetail
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
 
-`public ?string $lookupUrlDetail`
 
 
-### relations
 
-`public array $relations`
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -55,7 +75,7 @@ public describeColumns(): array
 ```
 
 
-### describeInput
+### ƒ describeInput
 
 [Description for describeInput]
 
@@ -63,14 +83,14 @@ public describeColumns(): array
 public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$columnName` | **string** |             |
 
 
-### describeTable
+### ƒ describeTable
 
 [Description for describeTable]
 
@@ -79,7 +99,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### describeForm
+### ƒ describeForm
 
 [Description for describeForm]
 
@@ -88,7 +108,31 @@ public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
 
-### onAfterCreate
+### ƒ getLookupDetails
+
+[Description for getLookupDetails]
+
+```php
+public getLookupDetails(array $dataRaw): string
+```
+
+#### Parameters
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$dataRaw` | **array** |             |
+
+
+### ƒ getMaxReadLevelForLoadFormData
+
+[Description for getMaxReadLevelForLoadFormData]
+
+```php
+public getMaxReadLevelForLoadFormData(): int
+```
+
+
+### ƒ onAfterCreate
 
 [Description for onAfterCreate]
 
@@ -96,14 +140,14 @@ public describeForm(): \Hubleto\Framework\Description\Form
 public onAfterCreate(array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$savedRecord` | **array** |             |
 
 
-### onAfterUpdate
+### ƒ onAfterUpdate
 
 [Description for onAfterUpdate]
 
@@ -111,7 +155,7 @@ public onAfterCreate(array $savedRecord): array
 public onAfterUpdate(array $originalRecord, array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -119,7 +163,7 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 | `$savedRecord`    | **array** |             |
 
 
-### onBeforeUpdate
+### ƒ onBeforeUpdate
 
 [Description for onBeforeUpdate]
 
@@ -127,43 +171,39 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 public onBeforeUpdate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### generateQuotationPdf
+### ƒ getPreviewVars
 
-Generates quotation PDF document from given deal and returns ID of generated document
-
-```php
-public generateQuotationPdf(int $idDeal): int
-```
-
-**Parameters:**
-
-| Parameter | Type    | Description                                 |
-|-----------|---------|---------------------------------------------|
-| `$idDeal` | **int** | Deal for which the PDF should be generated. |
-
-**Return Value:**
-
-ID of generated document.
-
-
-### generateInvoice
-
-Generates invoice for given deal.
+[Description for getPreviewVars]
 
 ```php
-public generateInvoice(int $idDeal): void
+public getPreviewVars(int $idDeal): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$idDeal` | **int** |             |
+
+
+### ƒ getDocumentDefaultTemplate
+
+[Description for getDocumentDefaultTemplate]
+
+```php
+public getDocumentDefaultTemplate(array $vars = []): string
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$vars`   | **array** |             |
 

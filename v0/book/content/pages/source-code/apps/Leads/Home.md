@@ -70,6 +70,25 @@
 | [`LostReason`](./classes/Hubleto/App/Community/Leads/Models/LostReason)     |             |
 | [`Tag`](./classes/Hubleto/App/Community/Leads/Models/Tag)                   |             |
 
+### \Hubleto\App\Community\Leads\Models\Migrations
+
+#### Classes
+
+| Class                                                                                            | Description |
+|--------------------------------------------------------------------------------------------------|-------------|
+| [`Lead_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/Lead_0001)                 |             |
+| [`Lead_0002`](./classes/Hubleto/App/Community/Leads/Models/Migrations/Lead_0002)                 |             |
+| [`Lead_0003`](./classes/Hubleto/App/Community/Leads/Models/Migrations/Lead_0003)                 |             |
+| [`LeadActivity_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LeadActivity_0001) |             |
+| [`LeadCampaign_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LeadCampaign_0001) |             |
+| [`LeadDocument_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LeadDocument_0001) |             |
+| [`LeadHistory_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LeadHistory_0001)   |             |
+| [`LeadTag_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LeadTag_0001)           |             |
+| [`LeadTask_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LeadTask_0001)         |             |
+| [`Level_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/Level_0001)               |             |
+| [`LostReason_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/LostReason_0001)     |             |
+| [`Tag_0001`](./classes/Hubleto/App/Community/Leads/Models/Migrations/Tag_0001)                   |             |
+
 ### \Hubleto\App\Community\Leads\Models\RecordManagers
 
 #### Classes

@@ -36,7 +36,10 @@
 | [`CreateFromLead`](./classes/Hubleto/App/Community/Deals/Controllers/Api/CreateFromLead)             |             |
 | [`DailyDigest`](./classes/Hubleto/App/Community/Deals/Controllers/Api/DailyDigest)                   |             |
 | [`GenerateInvoice`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GenerateInvoice)           |             |
+| [`GeneratePdf`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GeneratePdf)                   |             |
 | [`GenerateQuotationPdf`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GenerateQuotationPdf) |             |
+| [`GetPreviewHtml`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GetPreviewHtml)             |             |
+| [`GetPreviewVars`](./classes/Hubleto/App/Community/Deals/Controllers/Api/GetPreviewVars)             |             |
 | [`LogActivity`](./classes/Hubleto/App/Community/Deals/Controllers/Api/LogActivity)                   |             |
 | [`SetParentLead`](./classes/Hubleto/App/Community/Deals/Controllers/Api/SetParentLead)               |             |
 
@@ -71,11 +74,32 @@
 | [`DealDocument`](./classes/Hubleto/App/Community/Deals/Models/DealDocument) |             |
 | [`DealHistory`](./classes/Hubleto/App/Community/Deals/Models/DealHistory)   |             |
 | [`DealLead`](./classes/Hubleto/App/Community/Deals/Models/DealLead)         |             |
-| [`DealProduct`](./classes/Hubleto/App/Community/Deals/Models/DealProduct)   |             |
 | [`DealTag`](./classes/Hubleto/App/Community/Deals/Models/DealTag)           |             |
 | [`DealTask`](./classes/Hubleto/App/Community/Deals/Models/DealTask)         |             |
+| [`Item`](./classes/Hubleto/App/Community/Deals/Models/Item)                 |             |
 | [`LostReason`](./classes/Hubleto/App/Community/Deals/Models/LostReason)     |             |
 | [`Tag`](./classes/Hubleto/App/Community/Deals/Models/Tag)                   |             |
+
+### \Hubleto\App\Community\Deals\Models\Migrations
+
+#### Classes
+
+| Class                                                                                            | Description |
+|--------------------------------------------------------------------------------------------------|-------------|
+| [`Deal_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Deal_0001)                 |             |
+| [`Deal_0002`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Deal_0002)                 |             |
+| [`Deal_0003`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Deal_0003)                 |             |
+| [`Deal_0004`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Deal_0004)                 |             |
+| [`DealActivity_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/DealActivity_0001) |             |
+| [`DealDocument_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/DealDocument_0001) |             |
+| [`DealHistory_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/DealHistory_0001)   |             |
+| [`DealLead_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/DealLead_0001)         |             |
+| [`DealTag_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/DealTag_0001)           |             |
+| [`DealTask_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/DealTask_0001)         |             |
+| [`Item_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Item_0001)                 |             |
+| [`Item_0002`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Item_0002)                 |             |
+| [`LostReason_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/LostReason_0001)     |             |
+| [`Tag_0001`](./classes/Hubleto/App/Community/Deals/Models/Migrations/Tag_0001)                   |             |
 
 ### \Hubleto\App\Community\Deals\Models\RecordManagers
 
@@ -88,9 +112,9 @@
 | [`DealDocument`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/DealDocument) |             |
 | [`DealHistory`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/DealHistory)   |             |
 | [`DealLead`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/DealLead)         |             |
-| [`DealProduct`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/DealProduct)   |             |
 | [`DealTag`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/DealTag)           |             |
 | [`DealTask`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/DealTask)         |             |
+| [`Item`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/Item)                 |             |
 | [`LostReason`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/LostReason)     |             |
 | [`Tag`](./classes/Hubleto/App/Community/Deals/Models/RecordManagers/Tag)                   |             |
 
@@ -101,3 +125,11 @@
 | Class                                                                            | Description |
 |----------------------------------------------------------------------------------|-------------|
 | [`MonthlyRevenue`](./classes/Hubleto/App/Community/Deals/Reports/MonthlyRevenue) |             |
+
+### \Hubleto\App\Community\Deals\Tests
+
+#### Classes
+
+| Class                                                                                    | Description |
+|------------------------------------------------------------------------------------------|-------------|
+| [`RenderAllRoutesTest`](./classes/Hubleto/App/Community/Deals/Tests/RenderAllRoutesTest) |             |

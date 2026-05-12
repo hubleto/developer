@@ -6,34 +6,54 @@
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
 
 
-### lookupUrlDetail
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
 
-`public ?string $lookupUrlDetail`
 
 
-### relations
 
-`public array $relations`
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -42,7 +62,7 @@ public describeColumns(): array
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 [Description for describeTable]
 
@@ -51,7 +71,31 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### onAfterCreate
+### ƒ getMaxReadLevelForLoadFormData
+
+[Description for getMaxReadLevelForLoadFormData]
+
+```php
+public getMaxReadLevelForLoadFormData(): int
+```
+
+
+### ƒ getLookupDetails
+
+[Description for getLookupDetails]
+
+```php
+public getLookupDetails(array $dataRaw): string
+```
+
+#### Parameters
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$dataRaw` | **array** |             |
+
+
+### ƒ onAfterCreate
 
 [Description for onAfterCreate]
 
@@ -59,7 +103,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 public onAfterCreate(array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|

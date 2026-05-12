@@ -6,14 +6,18 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### DEAL
+### ƒ DEAL
 
 ```php
 public DEAL(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Deals\Models\RecordManagers\Deal,\Hubleto\App\Community\Deals\Models\RecordManagers\DealHistory>

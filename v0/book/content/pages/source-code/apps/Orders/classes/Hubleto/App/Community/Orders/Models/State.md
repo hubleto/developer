@@ -6,24 +6,36 @@
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### lookupSqlValue
 
-`public ?string $lookupSqlValue`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 ```php
 public describeColumns(): array

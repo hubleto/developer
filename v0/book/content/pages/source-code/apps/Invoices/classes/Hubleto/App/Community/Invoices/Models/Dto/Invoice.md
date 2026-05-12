@@ -6,75 +6,123 @@
 
 ## Properties
 
-### idProfile
 
-`public int $idProfile`
-
-
-### idIssuedBy
-
-`public int $idIssuedBy`
+<div class="mt-2">&nbsp;</div>
+### ☍ idProfile
+```php
+public int $idProfile
+```
 
 
-### idCustomer
-
-`public int $idCustomer`
 
 
-### number
-
-`public null|string $number`
-
-
-### vs
-
-`public null|string $vs`
+<div class="mt-2">&nbsp;</div>
+### ☍ idIssuedBy
+```php
+public int $idIssuedBy
+```
 
 
-### cs
-
-`public null|string $cs`
 
 
-### ss
-
-`public null|string $ss`
-
-
-### dateIssue
-
-`public null|\DateTimeImmutable $dateIssue`
+<div class="mt-2">&nbsp;</div>
+### ☍ idCustomer
+```php
+public int $idCustomer
+```
 
 
-### dateDelivery
-
-`public null|\DateTimeImmutable $dateDelivery`
 
 
-### dateDue
-
-`public null|\DateTimeImmutable $dateDue`
-
-
-### datePayment
-
-`public null|\DateTimeImmutable $datePayment`
+<div class="mt-2">&nbsp;</div>
+### ☍ number
+```php
+public null|string $number
+```
 
 
-### notes
 
-`public null|string $notes`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ vs
+```php
+public null|string $vs
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ cs
+```php
+public null|string $cs
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ ss
+```php
+public null|string $ss
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ dateIssue
+```php
+public null|\DateTimeImmutable $dateIssue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ dateDelivery
+```php
+public null|\DateTimeImmutable $dateDelivery
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ dateDue
+```php
+public null|\DateTimeImmutable $dateDue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ datePayment
+```php
+public null|\DateTimeImmutable $datePayment
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ notes
+```php
+public null|string $notes
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 private __construct(int $idProfile, int $idIssuedBy, int $idCustomer, null|string $number, null|string $vs, null|string $cs, null|string $ss, null|\DateTimeImmutable $dateIssue, null|\DateTimeImmutable $dateDelivery, null|\DateTimeImmutable $dateDue, null|\DateTimeImmutable $datePayment, null|string $notes): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type                         | Description |
 |-----------------|------------------------------|-------------|

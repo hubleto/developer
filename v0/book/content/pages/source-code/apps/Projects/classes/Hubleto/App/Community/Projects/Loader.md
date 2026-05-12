@@ -1,14 +1,14 @@
 
 # \Hubleto\App\Community\Projects\Loader
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/App">App</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Erp/App">App</a></td></tr></table>
 
 
 ## Methods
 
-### init
+### ƒ init
 
-Inits the app: adds routes, settings, calendars, hooks, menu items, .
+Inits the app: adds routes, settings, calendars, event listeners, menu items, .
 
 ```php
 public init(): void
@@ -17,27 +17,36 @@ public init(): void
 ..
 
 
-### installTables
+### ƒ installApp
 
 ```php
-public installTables(int $round): void
+public installApp(int $round): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
 
-### generateDemoData
+### ƒ generateDemoData
 
 ```php
 public generateDemoData(): void
 ```
 
 
-### search
+### ƒ renderSecondSidebar
+
+[Description for renderSecondSidebar]
+
+```php
+public renderSecondSidebar(): string
+```
+
+
+### ƒ search
 
 Implements fulltext search functionality for tasks
 
@@ -45,7 +54,7 @@ Implements fulltext search functionality for tasks
 public search(array $expressions): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description                                                     |
 |----------------|-----------|-----------------------------------------------------------------|

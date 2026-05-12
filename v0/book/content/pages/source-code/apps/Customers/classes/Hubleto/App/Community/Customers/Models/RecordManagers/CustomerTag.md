@@ -6,21 +6,25 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### TAG
+### ƒ TAG
 
 ```php
 public TAG(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Tag,\Hubleto\App\Community\Customers\Models\RecordManagers\CustomerTag>
 ```
 
 
-### CUSTOMER
+### ƒ CUSTOMER
 
 ```php
 public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Customer,\Hubleto\App\Community\Customers\Models\RecordManagers\CustomerTag>

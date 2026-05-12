@@ -27,6 +27,7 @@
 | [`Currencies`](./classes/Hubleto/App/Community/Settings/Controllers/Currencies)                             |             |
 | [`Dashboard`](./classes/Hubleto/App/Community/Settings/Controllers/Dashboard)                               |             |
 | [`General`](./classes/Hubleto/App/Community/Settings/Controllers/General)                                   |             |
+| [`LogViewer`](./classes/Hubleto/App/Community/Settings/Controllers/LogViewer)                               |             |
 | [`MyAccount`](./classes/Hubleto/App/Community/Settings/Controllers/MyAccount)                               |             |
 | [`Permissions`](./classes/Hubleto/App/Community/Settings/Controllers/Permissions)                           |             |
 | [`RolePermissions`](./classes/Hubleto/App/Community/Settings/Controllers/RolePermissions)                   |             |
@@ -46,6 +47,14 @@
 | [`GetPermissions`](./classes/Hubleto/App/Community/Settings/Controllers/Api/GetPermissions)   |             |
 | [`SavePermissions`](./classes/Hubleto/App/Community/Settings/Controllers/Api/SavePermissions) |             |
 
+### \Hubleto\App\Community\Settings\Extendibles
+
+#### Classes
+
+| Class                                                                 | Description |
+|-----------------------------------------------------------------------|-------------|
+| [`Tools`](./classes/Hubleto/App/Community/Settings/Extendibles/Tools) |             |
+
 ### \Hubleto\App\Community\Settings\Models
 
 #### Classes
@@ -61,6 +70,23 @@
 | [`Setting`](./classes/Hubleto/App/Community/Settings/Models/Setting)               |             |
 | [`Team`](./classes/Hubleto/App/Community/Settings/Models/Team)                     |             |
 | [`TeamMember`](./classes/Hubleto/App/Community/Settings/Models/TeamMember)         |             |
+
+### \Hubleto\App\Community\Settings\Models\Migrations
+
+#### Classes
+
+| Class                                                                                                   | Description |
+|---------------------------------------------------------------------------------------------------------|-------------|
+| [`ActivityType_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/ActivityType_0001)     |             |
+| [`Company_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Company_0001)               |             |
+| [`Company_0002`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Company_0002)               |             |
+| [`Country_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Country_0001)               |             |
+| [`Currency_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Currency_0001)             |             |
+| [`Permission_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Permission_0001)         |             |
+| [`RolePermission_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/RolePermission_0001) |             |
+| [`Setting_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Setting_0001)               |             |
+| [`Team_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/Team_0001)                     |             |
+| [`TeamMember_0001`](./classes/Hubleto/App/Community/Settings/Models/Migrations/TeamMember_0001)         |             |
 
 ### \Hubleto\App\Community\Settings\Models\RecordManagers
 

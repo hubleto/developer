@@ -6,57 +6,69 @@
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### relations
 
-`public array $relations`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 ```php
 public describeColumns(): array
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### findPermissionByString
+### ƒ findPermissionByString
 
 ```php
 public findPermissionByString(string $permission): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
 
-### grantPermissionByString
+### ƒ grantPermissionByString
 
 ```php
 public grantPermissionByString(int $idRole, string $permission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -64,13 +76,13 @@ public grantPermissionByString(int $idRole, string $permission): void
 | `$permission` | **string** |             |
 
 
-### denyPermissionByString
+### ƒ denyPermissionByString
 
 ```php
 public denyPermissionByString(int $idRole, string $permission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -78,13 +90,13 @@ public denyPermissionByString(int $idRole, string $permission): void
 | `$permission` | **string** |             |
 
 
-### grantPermissionById
+### ƒ grantPermissionById
 
 ```php
 public grantPermissionById(int $idRole, int $idPermission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter       | Type    | Description |
 |-----------------|---------|-------------|
@@ -92,13 +104,13 @@ public grantPermissionById(int $idRole, int $idPermission): void
 | `$idPermission` | **int** |             |
 
 
-### grantPermissionsLike
+### ƒ grantPermissionsLike
 
 ```php
 public grantPermissionsLike(int $idRole, string $permission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -106,13 +118,13 @@ public grantPermissionsLike(int $idRole, string $permission): void
 | `$permission` | **string** |             |
 
 
-### grantPermissionsForModel
+### ƒ grantPermissionsForModel
 
 ```php
 public grantPermissionsForModel(int $idRole, string $modelPermission, array $permissions): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type       | Description |
 |--------------------|------------|-------------|

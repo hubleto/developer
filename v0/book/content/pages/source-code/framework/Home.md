@@ -21,16 +21,18 @@
 | [`Db`](./classes/Hubleto/Framework/Db)                                       | Database abstraction layer.                                           |
 | [`DependencyInjection`](./classes/Hubleto/Framework/DependencyInjection)     | Default implementation of dependency injection.                       |
 | [`EloquentRecordManager`](./classes/Hubleto/Framework/EloquentRecordManager) | Record manager based on Laravel's Eloquent.                           |
-| [`EmailProvider`](./classes/Hubleto/Framework/EmailProvider)                 | Default implementation of email provider.                             |
 | [`Env`](./classes/Hubleto/Framework/Env)                                     | Storage for environment-specific configuration.                       |
+| [`EventListener`](./classes/Hubleto/Framework/EventListener)                 | Shortcut to access all services used in the Hubleto project.          |
+| [`EventManager`](./classes/Hubleto/Framework/EventManager)                   | Default manager for event listeners in the Hubleto project.           |
 | [`Extendible`](./classes/Hubleto/Framework/Extendible)                       | Manager for app's extendibles.                                        |
 | [`Helper`](./classes/Hubleto/Framework/Helper)                               | Various helper functions.                                             |
-| [`HookManager`](./classes/Hubleto/Framework/HookManager)                     | Default manager for hooks in the Hubleto project.                     |
 | [`Loader`](./classes/Hubleto/Framework/Loader)                               | Default implementation of bootstrap loader.                           |
 | [`Locale`](./classes/Hubleto/Framework/Locale)                               | Methods to support locale in Hubleto project.                         |
 | [`Logger`](./classes/Hubleto/Framework/Logger)                               | Default implementation of logger in Hubleto project.                  |
+| [`Migration`](./classes/Hubleto/Framework/Migration)                         | Default implementation of a migration for Hubleto project.            |
 | [`Model`](./classes/Hubleto/Framework/Model)                                 | Default implementation of model for Hubleto project.                  |
-| [`PermissionsManager`](./classes/Hubleto/Framework/PermissionsManager)       | Default manager for permissions and user access for Hubleto project.  |
+| [`PermissionsManager`](./classes/Hubleto/Framework/PermissionsManager)       | Default manager for permissions before executing any controller.      |
+| [`PHPUnitTestCase`](./classes/Hubleto/Framework/PHPUnitTestCase)             |                                                                       |
 | [`RecordManager`](./classes/Hubleto/Framework/RecordManager)                 | Default record manager for Hubleto projects. Uses Laravel's Eloquent. |
 | [`Renderer`](./classes/Hubleto/Framework/Renderer)                           | Default view renderer for Hubleto project.                            |
 | [`Router`](./classes/Hubleto/Framework/Router)                               | Default router for Hubleto project.                                   |
@@ -76,6 +78,7 @@
 | [`Delete`](./classes/Hubleto/Framework/Controllers/Api/Record/Delete)               | Default implementation of Hubleto controller. |
 | [`Get`](./classes/Hubleto/Framework/Controllers/Api/Record/Get)                     | Default implementation of Hubleto controller. |
 | [`LoadTableData`](./classes/Hubleto/Framework/Controllers/Api/Record/LoadTableData) | Default implementation of Hubleto controller. |
+| [`LoadTreeData`](./classes/Hubleto/Framework/Controllers/Api/Record/LoadTreeData)   | Default implementation of Hubleto controller. |
 | [`Lookup`](./classes/Hubleto/Framework/Controllers/Api/Record/Lookup)               | Default implementation of Hubleto controller. |
 | [`Save`](./classes/Hubleto/Framework/Controllers/Api/Record/Save)                   | Default implementation of Hubleto controller. |
 | [`SaveJunction`](./classes/Hubleto/Framework/Controllers/Api/Record/SaveJunction)   | Default implementation of Hubleto controller. |
@@ -87,6 +90,14 @@
 | Class                                                                    | Description                                   |
 |--------------------------------------------------------------------------|-----------------------------------------------|
 | [`Describe`](./classes/Hubleto/Framework/Controllers/Api/Table/Describe) | Default implementation of Hubleto controller. |
+
+### \Hubleto\Framework\Controllers\Api\Tree
+
+#### Classes
+
+| Class                                                                   | Description                                   |
+|-------------------------------------------------------------------------|-----------------------------------------------|
+| [`Describe`](./classes/Hubleto/Framework/Controllers/Api/Tree/Describe) | Default implementation of Hubleto controller. |
 
 ### \Hubleto\Framework\Controllers\Components\Inputs\FileUpload
 
@@ -107,6 +118,14 @@
 | [`Data`](./classes/Hubleto/Framework/Controllers/Components/Inputs/Tags/Data)     | Default implementation of Hubleto controller. |
 | [`Delete`](./classes/Hubleto/Framework/Controllers/Components/Inputs/Tags/Delete) | Default implementation of Hubleto controller. |
 
+### \Hubleto\Framework\Db
+
+#### Classes
+
+| Class                                                                                   | Description                                                  |
+|-----------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| [`ModelSQLCommandsGenerator`](./classes/Hubleto/Framework/Db/ModelSQLCommandsGenerator) | Shortcut to access all services used in the Hubleto project. |
+
 ### \Hubleto\Framework\Db\Column
 
 #### Classes
@@ -115,9 +134,11 @@
 |------------------------------------------------------------------|-------------|
 | [`Boolean`](./classes/Hubleto/Framework/Db/Column/Boolean)       |             |
 | [`Color`](./classes/Hubleto/Framework/Db/Column/Color)           |             |
+| [`Currency`](./classes/Hubleto/Framework/Db/Column/Currency)     |             |
 | [`Date`](./classes/Hubleto/Framework/Db/Column/Date)             |             |
 | [`DateTime`](./classes/Hubleto/Framework/Db/Column/DateTime)     |             |
 | [`Decimal`](./classes/Hubleto/Framework/Db/Column/Decimal)       |             |
+| [`Email`](./classes/Hubleto/Framework/Db/Column/Email)           |             |
 | [`File`](./classes/Hubleto/Framework/Db/Column/File)             |             |
 | [`Image`](./classes/Hubleto/Framework/Db/Column/Image)           |             |
 | [`Integer`](./classes/Hubleto/Framework/Db/Column/Integer)       |             |
@@ -140,6 +161,7 @@
 | [`Form`](./classes/Hubleto/Framework/Description/Form)   |             |
 | [`Input`](./classes/Hubleto/Framework/Description/Input) |             |
 | [`Table`](./classes/Hubleto/Framework/Description/Table) |             |
+| [`Tree`](./classes/Hubleto/Framework/Description/Tree)   |             |
 
 ### \Hubleto\Framework\Exceptions
 
@@ -179,11 +201,12 @@ action occurs. Thrown by model's recordValidate() method. |
 | [`CoreInterface`](./classes/Hubleto/Framework/Interfaces/CoreInterface)                             |                                                                   |
 | [`CronManagerInterface`](./classes/Hubleto/Framework/Interfaces/CronManagerInterface)               |                                                                   |
 | [`DbInterface`](./classes/Hubleto/Framework/Interfaces/DbInterface)                                 |                                                                   |
-| [`EmailProviderInterface`](./classes/Hubleto/Framework/Interfaces/EmailProviderInterface)           |                                                                   |
 | [`EnvInterface`](./classes/Hubleto/Framework/Interfaces/EnvInterface)                               |                                                                   |
-| [`HookManagerInterface`](./classes/Hubleto/Framework/Interfaces/HookManagerInterface)               |                                                                   |
+| [`EventListenerInterface`](./classes/Hubleto/Framework/Interfaces/EventListenerInterface)           |                                                                   |
+| [`EventManagerInterface`](./classes/Hubleto/Framework/Interfaces/EventManagerInterface)             |                                                                   |
 | [`LocaleInterface`](./classes/Hubleto/Framework/Interfaces/LocaleInterface)                         |                                                                   |
 | [`LoggerInterface`](./classes/Hubleto/Framework/Interfaces/LoggerInterface)                         |                                                                   |
+| [`MigrationInterface`](./classes/Hubleto/Framework/Interfaces/MigrationInterface)                   |                                                                   |
 | [`ModelInterface`](./classes/Hubleto/Framework/Interfaces/ModelInterface)                           |                                                                   |
 | [`PermissionsManagerInterface`](./classes/Hubleto/Framework/Interfaces/PermissionsManagerInterface) |                                                                   |
 | [`RecordManagerInterface`](./classes/Hubleto/Framework/Interfaces/RecordManagerInterface)           | Record-management
@@ -193,6 +216,7 @@ CRUD-like layer for manipulating records (data) |
 | [`SessionManagerInterface`](./classes/Hubleto/Framework/Interfaces/SessionManagerInterface)         |                                                                   |
 | [`TerminalInterface`](./classes/Hubleto/Framework/Interfaces/TerminalInterface)                     |                                                                   |
 | [`TranslatorInterface`](./classes/Hubleto/Framework/Interfaces/TranslatorInterface)                 |                                                                   |
+| [`UserModelInterface`](./classes/Hubleto/Framework/Interfaces/UserModelInterface)                   |                                                                   |
 
 ### \Hubleto\Framework\Models
 
@@ -206,6 +230,18 @@ CRUD-like layer for manipulating records (data) |
 | [`User`](./classes/Hubleto/Framework/Models/User)                     | Default implementation of model for Hubleto project.                       |
 | [`UserHasRole`](./classes/Hubleto/Framework/Models/UserHasRole)       | Default implementation of model for Hubleto project.                       |
 | [`UserRole`](./classes/Hubleto/Framework/Models/UserRole)             | Model for storing list of user roles. Stored in 'roles' SQL table.         |
+
+### \Hubleto\Framework\Models\Migrations
+
+#### Classes
+
+| Class                                                                                | Description                                                |
+|--------------------------------------------------------------------------------------|------------------------------------------------------------|
+| [`Config_0001`](./classes/Hubleto/Framework/Models/Migrations/Config_0001)           | Default implementation of a migration for Hubleto project. |
+| [`Token_0001`](./classes/Hubleto/Framework/Models/Migrations/Token_0001)             | Default implementation of a migration for Hubleto project. |
+| [`User_0001`](./classes/Hubleto/Framework/Models/Migrations/User_0001)               | Default implementation of a migration for Hubleto project. |
+| [`UserHasRole_0001`](./classes/Hubleto/Framework/Models/Migrations/UserHasRole_0001) | Default implementation of a migration for Hubleto project. |
+| [`UserRole_0001`](./classes/Hubleto/Framework/Models/Migrations/UserRole_0001)       | Default implementation of a migration for Hubleto project. |
 
 ### \Hubleto\Framework\Models\RecordManagers
 

@@ -6,7 +6,7 @@
 
 ## Methods
 
-### prepareView
+### ƒ prepareView
 
 ```php
 public prepareView(): void

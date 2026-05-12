@@ -69,38 +69,30 @@ public configAsArray(string $configName): array
 | `$configName` | **string** |             |
 
 
-### ƒ getSqlCreateTableCommands
+### ƒ getPendingMigrations
 
 ```php
-public getSqlCreateTableCommands(): array
+public getPendingMigrations(\Hubleto\Framework\Enums\InstalledMigrationEnum $configKey): array
+```
+
+#### Parameters
+
+| Parameter    | Type                                                | Description |
+|--------------|-----------------------------------------------------|-------------|
+| `$configKey` | **\Hubleto\Framework\Enums\InstalledMigrationEnum** |             |
+
+
+### ƒ upgradeSchema
+
+```php
+public upgradeSchema(): mixed
 ```
 
 
-### ƒ createSqlTable
+### ƒ upgradeForeignKeys
 
 ```php
-public createSqlTable(): mixed
-```
-
-
-### ƒ install
-
-```php
-public install(): mixed
-```
-
-
-### ƒ dropTableIfExists
-
-```php
-public dropTableIfExists(): \Hubleto\Framework\Interfaces\ModelInterface
-```
-
-
-### ƒ createSqlForeignKeys
-
-```php
-public createSqlForeignKeys(): mixed
+public upgradeForeignKeys(): mixed
 ```
 
 
@@ -171,10 +163,30 @@ public indexNames(): array
 ```
 
 
-### ƒ upgrades
+### ƒ migrations
 
 ```php
-public upgrades(): array
+public migrations(): array
+```
+
+
+### ƒ getPermissions
+
+```php
+public getPermissions(array $record): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
+### ƒ getSqlEngine
+
+```php
+public getSqlEngine(): string
 ```
 
 
@@ -212,22 +224,32 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### ƒ loadTableData
+### ƒ getMaxReadLevelForLoadTableData
 
 ```php
-public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
+public getMaxReadLevelForLoadTableData(): int
 ```
 
-#### Parameters
 
-| Parameter         | Type       | Description |
-|-------------------|------------|-------------|
-| `$fulltextSearch` | **string** |             |
-| `$columnSearch`   | **array**  |             |
-| `$orderBy`        | **array**  |             |
-| `$itemsPerPage`   | **int**    |             |
-| `$page`           | **int**    |             |
-| `$dataView`       | **string** |             |
+### ƒ getRelationsIncludedInLoadTableData
+
+```php
+public getRelationsIncludedInLoadTableData(): array|null
+```
+
+
+### ƒ getMaxReadLevelForLoadFormData
+
+```php
+public getMaxReadLevelForLoadFormData(): int
+```
+
+
+### ƒ getRelationsIncludedInLoadFormData
+
+```php
+public getRelationsIncludedInLoadFormData(): array|null
+```
 
 
 ### ƒ diffRecords
@@ -244,19 +266,6 @@ public diffRecords(array $record1, array $record2): array
 | `$record2` | **array** |             |
 
 
-### ƒ getById
-
-```php
-public getById(int $id): mixed
-```
-
-#### Parameters
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
-
-
 ### ƒ getLookupSqlValue
 
 ```php
@@ -270,17 +279,17 @@ public getLookupSqlValue(string $tableAlias = ''): string
 | `$tableAlias` | **string** |             |
 
 
-### ƒ getItemDetailUrl
+### ƒ getRecordDetailUrl
 
 ```php
-public getItemDetailUrl(int $id): string
+public getRecordDetailUrl(array $record): string
 ```
 
 #### Parameters
 
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
 
 
 ### ƒ encryptPassword

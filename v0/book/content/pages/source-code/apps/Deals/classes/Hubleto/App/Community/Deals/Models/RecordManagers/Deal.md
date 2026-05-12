@@ -6,137 +6,156 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### CUSTOMER
+### ƒ CUSTOMER
 
 ```php
 public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Customer,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### WORKFLOW
+### ƒ WORKFLOW
 
 ```php
 public WORKFLOW(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\Workflow,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### WORKFLOW_STEP
+### ƒ WORKFLOW_STEP
 
 ```php
 public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\WorkflowStep,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### LEAD
+### ƒ LEAD
 
 ```php
 public LEAD(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Leads\Models\RecordManagers\Lead,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### OWNER
+### ƒ OWNER
 
 ```php
 public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### MANAGER
+### ƒ MANAGER
 
 ```php
 public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
-### CONTACT
+### ƒ CONTACT
 
 ```php
 public CONTACT(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### CURRENCY
+### ƒ CURRENCY
 
 ```php
 public CURRENCY(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### HISTORY
+### ƒ HISTORY
 
 ```php
 public HISTORY(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\DealHistory,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### TAGS
+### ƒ TAGS
 
 ```php
 public TAGS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\DealTag,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### PRODUCTS
+### ƒ ITEMS
 
 ```php
-public PRODUCTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\DealProduct,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
+public ITEMS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\Item,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### TASKS
+### ƒ TASKS
 
 ```php
 public TASKS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\DealTask,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### ACTIVITIES
+### ƒ ACTIVITIES
 
 ```php
 public ACTIVITIES(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\DealActivity,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### DOCUMENTS
+### ƒ DOCUMENTS
 
 ```php
 public DOCUMENTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\DealDocument,\Hubleto\App\Community\Deals\Models\RecordManagers\Deal>
 ```
 
 
-### LEADS
+### ƒ LEADS
 
 ```php
 public LEADS(): \Hubleto\App\Community\Deals\Models\RecordManagers\hasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\LeadDocument,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
-### TEMPLATE_QUOTATION
+### ƒ TEMPLATE_QUOTATION
 
 ```php
 public TEMPLATE_QUOTATION(): \Hubleto\App\Community\Deals\Models\RecordManagers\hasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
-### prepareReadQuery
+### ƒ TEMPLATE
+
+```php
+public TEMPLATE(): \Hubleto\App\Community\Deals\Models\RecordManagers\hasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+```
+
+
+### ƒ DOCUMENT
+
+```php
+public DOCUMENT(): \Hubleto\App\Community\Deals\Models\RecordManagers\hasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
+```
+
+
+### ƒ prepareReadQuery
 
 [Description for prepareReadQuery]
 
 ```php
-public prepareReadQuery(mixed|null $query = null, int $level): mixed
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter | Type            | Description |
-|-----------|-----------------|-------------|
-| `$query`  | **mixed\|null** |             |
-| `$level`  | **int**         |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

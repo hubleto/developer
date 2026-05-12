@@ -6,74 +6,114 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### CUSTOMER
+### ƒ CUSTOMER
 
 ```php
 public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Customer,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
 ```
 
 
-### PROFILE
+### ƒ SUPPLIER
+
+```php
+public SUPPLIER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Customer,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+```
+
+
+### ƒ PAYMENT_METHOD
+
+```php
+public PAYMENT_METHOD(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Customer,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+```
+
+
+### ƒ PROFILE
 
 ```php
 public PROFILE(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Invoices\Models\RecordManagers\Profile,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
 ```
 
 
-### ISSUED_BY
+### ƒ ISSUED_BY
 
 ```php
 public ISSUED_BY(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
 ```
 
 
-### CURRENCY
+### ƒ CURRENCY
 
 ```php
 public CURRENCY(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
 ```
 
 
-### WORKFLOW
+### ƒ WORKFLOW
 
 ```php
 public WORKFLOW(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\Workflow,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
 ```
 
 
-### WORKFLOW_STEP
+### ƒ WORKFLOW_STEP
 
 ```php
 public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\WorkflowStep,\Hubleto\App\Community\Invoices\Models\RecordManagers\Deal>
 ```
 
 
-### ITEMS
+### ƒ TEMPLATE
 
 ```php
-public ITEMS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Invoices\Models\RecordManagers\InvoiceItem,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+public TEMPLATE(): \Hubleto\App\Community\Invoices\Models\RecordManagers\hasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Invoices\Models\RecordManagers\Lead>
 ```
 
 
-### prepareReadQuery
+### ƒ DOCUMENT
+
+```php
+public DOCUMENT(): \Hubleto\App\Community\Invoices\Models\RecordManagers\hasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Currency,\Hubleto\App\Community\Invoices\Models\RecordManagers\Lead>
+```
+
+
+### ƒ ITEMS
+
+```php
+public ITEMS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Invoices\Models\RecordManagers\Item,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+```
+
+
+### ƒ PAYMENTS
+
+```php
+public PAYMENTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Invoices\Models\RecordManagers\Item,\Hubleto\App\Community\Invoices\Models\RecordManagers\Invoice>
+```
+
+
+### ƒ prepareReadQuery
 
 [Description for prepareReadQuery]
 
 ```php
-public prepareReadQuery(mixed|null $query = null, int $level): mixed
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter | Type            | Description |
-|-----------|-----------------|-------------|
-| `$query`  | **mixed\|null** |             |
-| `$level`  | **int**         |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

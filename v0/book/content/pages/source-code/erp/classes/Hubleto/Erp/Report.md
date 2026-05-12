@@ -1,7 +1,9 @@
 
+Shortcut to access all services used in the Hubleto project.
+
 # \Hubleto\Erp\Report
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../Framework/Core">Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Erp\Core</a></td></tr></table>
 
 
 ## Constants
@@ -115,5 +117,16 @@ public loadDataDefault(\Hubleto\Framework\Interfaces\ModelInterface $model): arr
 
 ```php
 public generateRandomColor(): string
+```
+
+
+## Inherited methods
+
+### ƒ emailProvider
+
+Shortcut for the email provider service.
+
+```php
+public emailProvider(): \Hubleto\Erp\EmailProvider
 ```
 

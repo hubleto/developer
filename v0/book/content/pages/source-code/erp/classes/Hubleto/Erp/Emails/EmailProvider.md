@@ -1,10 +1,30 @@
 
+Shortcut to access all services used in the Hubleto project.
+
 # \Hubleto\Erp\Emails\EmailProvider
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../Framework/Core">Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../Core">\Hubleto\Erp\Core</a></td></tr></table>
 
 
 ## Properties
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ translationContext
+```php
+public string $translationContext
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ translationContextInner
+```php
+public string $translationContextInner
+```
+
+
 
 
 <div class="mt-2">&nbsp;</div>
@@ -177,4 +197,15 @@ public sendWelcomeEmail(string $login, string $name, string $language, string $t
 | `$name`     | **string** |             |
 | `$language` | **string** |             |
 | `$token`    | **string** |             |
+
+
+## Inherited methods
+
+### ƒ emailProvider
+
+Shortcut for the email provider service.
+
+```php
+public emailProvider(): \Hubleto\Erp\EmailProvider
+```
 

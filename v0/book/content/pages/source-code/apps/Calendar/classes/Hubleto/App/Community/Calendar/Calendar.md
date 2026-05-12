@@ -4,22 +4,22 @@
 <tr><td>Parent class</td><td><a href="../../../Erp/Calendar">Calendar</a></td></tr></table>
 
 
-## Properties
-
-### calendarConfig
-
-`public array $calendarConfig`
-
-
 ## Methods
 
-### prepareLoadActivityQuery
+### ƒ getCalendarConfig
+
+```php
+public getCalendarConfig(): array
+```
+
+
+### ƒ prepareLoadActivityQuery
 
 ```php
 public prepareLoadActivityQuery(\Hubleto\App\Community\Calendar\Models\Activity $mActivity, int $id): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                                | Description |
 |--------------|-----------------------------------------------------|-------------|
@@ -27,13 +27,13 @@ public prepareLoadActivityQuery(\Hubleto\App\Community\Calendar\Models\Activity 
 | `$id`        | **int**                                             |             |
 
 
-### prepareLoadActivitiesQuery
+### ƒ prepareLoadActivitiesQuery
 
 ```php
 public prepareLoadActivitiesQuery(\Hubleto\App\Community\Calendar\Models\Activity $mActivity, string $dateStart, string $dateEnd, array $filter = []): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type                                                | Description |
 |--------------|-----------------------------------------------------|-------------|
@@ -43,13 +43,13 @@ public prepareLoadActivitiesQuery(\Hubleto\App\Community\Calendar\Models\Activit
 | `$filter`    | **array**                                           |             |
 
 
-### convertActivitiesToEvents
+### ƒ convertActivitiesToEvents
 
 ```php
 public convertActivitiesToEvents(string $source, array $activities, \Closure $detailsCallback): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter          | Type         | Description |
 |--------------------|--------------|-------------|
@@ -58,26 +58,26 @@ public convertActivitiesToEvents(string $source, array $activities, \Closure $de
 | `$detailsCallback` | **\Closure** |             |
 
 
-### loadEvent
+### ƒ loadEvent
 
 ```php
 public loadEvent(int $id): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$id`     | **int** |             |
 
 
-### loadEvents
+### ƒ loadEvents
 
 ```php
 public loadEvents(string $dateStart, string $dateEnd, array $filter = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|

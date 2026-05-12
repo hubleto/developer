@@ -6,44 +6,68 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### WORKER
+### ƒ WORKER
 
 ```php
 public WORKER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### TASK
+### ƒ TASK
 
 ```php
 public TASK(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### TYPE
+### ƒ TYPE
 
 ```php
 public TYPE(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### prepareReadQuery
+### ƒ prepareSelectsForReadQuery
+
+[Description for prepareSelectsForReadQuery]
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareSelectsForReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): array
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
+
+
+### ƒ prepareReadQuery
+
+[Description for prepareReadQuery]
+
+```php
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

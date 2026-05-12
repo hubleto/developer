@@ -6,55 +6,60 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### CUSTOMER
+### ƒ CUSTOMER
 
 ```php
 public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Customers\Models\RecordManagers\Customer,\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact>
 ```
 
 
-### VALUES
+### ƒ VALUES
 
 ```php
 public VALUES(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact>
 ```
 
 
-### TAGS
+### ƒ TAGS
 
 ```php
 public TAGS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Contacts\Models\RecordManagers\ContactTag,\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact>
 ```
 
 
-### prepareReadQuery
+### ƒ prepareReadQuery
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed**       |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 
 
-### addOrderByToQuery
+### ƒ addOrderByToQuery
 
 ```php
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -62,13 +67,13 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 | `$orderBy` | **array** |             |
 
 
-### addFulltextSearchToQuery
+### ƒ addFulltextSearchToQuery
 
 ```php
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|
@@ -76,26 +81,26 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 | `$fulltextSearch` | **string** |             |
 
 
-### prepareLookupQuery
+### ƒ prepareLookupQuery
 
 ```php
 public prepareLookupQuery(string $search): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$search` | **string** |             |
 
 
-### prepareLookupData
+### ƒ prepareLookupData
 
 ```php
 public prepareLookupData(array $dataRaw): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|

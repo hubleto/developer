@@ -6,26 +6,34 @@
 
 ## Properties
 
-### table
 
-`public string $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### recordManagerClass
 
-`public string $recordManagerClass`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 ```php
 public describeColumns(): array
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table

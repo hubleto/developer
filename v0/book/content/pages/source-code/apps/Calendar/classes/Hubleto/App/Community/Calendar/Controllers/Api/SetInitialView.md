@@ -6,7 +6,7 @@
 
 ## Methods
 
-### response
+### ƒ response
 
 ```php
 public response(): array

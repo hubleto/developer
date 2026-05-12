@@ -6,21 +6,25 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### LEAD
+### ƒ LEAD
 
 ```php
 public LEAD(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Leads\Models\RecordManagers\Lead,\Hubleto\App\Community\Leads\Models\RecordManagers\LeadTag>
 ```
 
 
-### TAG
+### ƒ TAG
 
 ```php
 public TAG(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Leads\Models\RecordManagers\Tag,\Hubleto\App\Community\Leads\Models\RecordManagers\LeadTag>

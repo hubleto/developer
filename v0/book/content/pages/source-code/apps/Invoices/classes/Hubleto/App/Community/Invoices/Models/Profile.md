@@ -6,39 +6,63 @@
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
 
 
-### lookupUrlDetail
-
-`public ?string $lookupUrlDetail`
-
-
-### lookupUrlAdd
-
-`public ?string $lookupUrlAdd`
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
 
 
-### relations
 
-`public array $relations`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlAdd
+```php
+public ?string $lookupUrlAdd
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -47,7 +71,7 @@ public describeColumns(): array
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 [Description for describeTable]
 
@@ -56,7 +80,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### describeForm
+### ƒ describeForm
 
 [Description for describeForm]
 

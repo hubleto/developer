@@ -6,39 +6,51 @@
 
 ## Properties
 
-### dateStart
 
-`public string $dateStart`
+<div class="mt-2">&nbsp;</div>
+### ☍ dateStart
+```php
+public string $dateStart
+```
 
 
-### dateEnd
 
-`public string $dateEnd`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ dateEnd
+```php
+public string $dateEnd
+```
+
 
 
 ## Methods
 
-### __construct
+### ƒ __construct
 
 ```php
 public __construct(): mixed
 ```
 
 
-### renderJson
+### ƒ renderJson
+
+[Description for renderJson]
 
 ```php
 public renderJson(): array
 ```
 
 
-### loadEventsFromMultipleCalendars
+### ƒ loadEventsFromMultipleCalendars
+
+[Description for loadEventsFromMultipleCalendars]
 
 ```php
 public loadEventsFromMultipleCalendars(string $dateStart, string $dateEnd, array $filter = [], array|null $sources = null): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type            | Description |
 |--------------|-----------------|-------------|

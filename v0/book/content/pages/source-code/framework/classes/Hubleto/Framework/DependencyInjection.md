@@ -3,7 +3,7 @@ Default implementation of dependency injection.
 
 # \Hubleto\Framework\DependencyInjection
 <table class='table-default dense'>
-</table>
+<tr><td>Implements</td><td>  `ContainerInterface`</td></tr></table>
 
 
 ## Properties
@@ -33,6 +33,32 @@ private static array $services
 
 
 ## Methods
+
+### ƒ get
+
+```php
+public get(mixed $id): mixed
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$id`     | **mixed** |             |
+
+
+### ƒ has
+
+```php
+public has(mixed $id): bool
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$id`     | **mixed** |             |
+
 
 ### ƒ setServiceProvider
 

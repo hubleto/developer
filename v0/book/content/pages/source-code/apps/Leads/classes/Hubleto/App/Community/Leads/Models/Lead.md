@@ -16,34 +16,54 @@
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
 
 
-### lookupUrlDetail
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
 
-`public ?string $lookupUrlDetail`
 
 
-### relations
 
-`public array $relations`
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -52,7 +72,7 @@ public describeColumns(): array
 ```
 
 
-### describeInput
+### ƒ describeInput
 
 [Description for describeInput]
 
@@ -60,14 +80,14 @@ public describeColumns(): array
 public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$columnName` | **string** |             |
 
 
-### describeTable
+### ƒ describeTable
 
 [Description for describeTable]
 
@@ -76,7 +96,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### describeForm
+### ƒ describeForm
 
 [Description for describeForm]
 
@@ -85,7 +105,22 @@ public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
 
-### checkOwnership
+### ƒ getLookupDetails
+
+[Description for getLookupDetails]
+
+```php
+public getLookupDetails(array $dataRaw): string
+```
+
+#### Parameters
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$dataRaw` | **array** |             |
+
+
+### ƒ checkOwnership
 
 [Description for checkOwnership]
 
@@ -93,14 +128,41 @@ public describeForm(): \Hubleto\Framework\Description\Form
 public checkOwnership(array $record): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onBeforeCreate
+### ƒ getRelationsIncludedInLoadTableData
+
+[Description for getRelationsIncludedInLoadTableData]
+
+```php
+public getRelationsIncludedInLoadTableData(): array|null
+```
+
+
+### ƒ getMaxReadLevelForLoadTableData
+
+[Description for getMaxReadLevelForLoadTableData]
+
+```php
+public getMaxReadLevelForLoadTableData(): int
+```
+
+
+### ƒ getMaxReadLevelForLoadFormData
+
+[Description for getMaxReadLevelForLoadFormData]
+
+```php
+public getMaxReadLevelForLoadFormData(): int
+```
+
+
+### ƒ onBeforeCreate
 
 [Description for onBeforeCreate]
 
@@ -108,14 +170,14 @@ public checkOwnership(array $record): void
 public onBeforeCreate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onBeforeUpdate
+### ƒ onBeforeUpdate
 
 [Description for onBeforeUpdate]
 
@@ -123,14 +185,14 @@ public onBeforeCreate(array $record): array
 public onBeforeUpdate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onAfterCreate
+### ƒ onAfterCreate
 
 [Description for onAfterCreate]
 
@@ -138,14 +200,14 @@ public onBeforeUpdate(array $record): array
 public onAfterCreate(array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$savedRecord` | **array** |             |
 
 
-### onAfterUpdate
+### ƒ onAfterUpdate
 
 [Description for onAfterUpdate]
 
@@ -153,7 +215,7 @@ public onAfterCreate(array $savedRecord): array
 public onAfterUpdate(array $originalRecord, array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|

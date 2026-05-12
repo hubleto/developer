@@ -6,7 +6,7 @@
 
 ## Methods
 
-### renderJson
+### ƒ renderJson
 
 ```php
 public renderJson(): array

@@ -8,123 +8,143 @@ Class managing Hubleto permissions.
 
 ## Properties
 
-### grantAllPermissions
 
-`protected bool $grantAllPermissions`
-
-
-### permissionsData
-
-`protected array $permissionsData`
+<div class="mt-2">&nbsp;</div>
+### ☍ grantAllPermissions
+```php
+protected bool $grantAllPermissions
+```
 
 
-### administratorRoles
-
-`public array $administratorRoles`
 
 
-### administratorTypes
+<div class="mt-2">&nbsp;</div>
+### ☍ permissionsData
+```php
+protected array $permissionsData
+```
 
-`public array $administratorTypes`
 
 
-### permission
 
-`protected string $permission`
+<div class="mt-2">&nbsp;</div>
+### ☍ administratorRoles
+```php
+public array $administratorRoles
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ administratorTypes
+```php
+public array $administratorTypes
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ permission
+```php
+protected string $permission
+```
+
 
 
 ## Methods
 
-### init
+### ƒ init
 
 ```php
 public init(): void
 ```
 
 
-### createUserRoleModel
+### ƒ createUserRoleModel
 
 ```php
 public createUserRoleModel(): \Hubleto\Framework\Model
 ```
 
 
-### createRolePermissionModel
+### ƒ createRolePermissionModel
 
 ```php
 public createRolePermissionModel(): \Hubleto\Framework\Model
 ```
 
 
-### loadAdministratorRoles
+### ƒ loadAdministratorRoles
 
 ```php
 public loadAdministratorRoles(): array
 ```
 
 
-### loadAdministratorTypes
+### ƒ loadAdministratorTypes
 
 ```php
 public loadAdministratorTypes(): array
 ```
 
 
-### loadPermissions
+### ƒ loadPermissions
 
 ```php
 public loadPermissions(): array<int,array<int,string>>
 ```
 
 
-### getPermission
+### ƒ getPermission
 
 ```php
 public getPermission(): string
 ```
 
 
-### setPermission
+### ƒ setPermission
 
 ```php
 public setPermission(string $permission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
 
-### DANGEROUS__grantAllPermissions
+### ƒ DANGEROUS__grantAllPermissions
 
 ```php
 public DANGEROUS__grantAllPermissions(): void
 ```
 
 
-### revokeGrantAllPermissions
+### ƒ revokeGrantAllPermissions
 
 ```php
 public revokeGrantAllPermissions(): void
 ```
 
 
-### expandPermissionGroups
+### ƒ expandPermissionGroups
 
 ```php
 public expandPermissionGroups(): void
 ```
 
 
-### set
+### ƒ set
 
 ```php
 public set(string $permission, int $idUserRole, bool $isEnabled): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -133,26 +153,26 @@ public set(string $permission, int $idUserRole, bool $isEnabled): mixed
 | `$isEnabled`  | **bool**   |             |
 
 
-### hasRole
+### ƒ hasRole
 
 ```php
 public hasRole(int|string $role): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type            | Description |
 |-----------|-----------------|-------------|
 | `$role`   | **int\|string** |             |
 
 
-### grantedForRole
+### ƒ grantedForRole
 
 ```php
 public grantedForRole(string $permission, int|string $userRole): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type            | Description |
 |---------------|-----------------|-------------|
@@ -160,13 +180,13 @@ public grantedForRole(string $permission, int|string $userRole): bool
 | `$userRole`   | **int\|string** |             |
 
 
-### granted
+### ƒ granted
 
 ```php
 public granted(string $permission, array $userRoles = [], int $userType): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
@@ -175,33 +195,33 @@ public granted(string $permission, array $userRoles = [], int $userType): bool
 | `$userType`   | **int**    |             |
 
 
-### checkPermission
+### ƒ checkPermission
 
 ```php
 public checkPermission(): void
 ```
 
 
-### check
+### ƒ check
 
 ```php
 public check(string $permission): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$permission` | **string** |             |
 
 
-### isAppPermittedForActiveUser
+### ƒ isAppPermittedForActiveUser
 
 ```php
 public isAppPermittedForActiveUser(\Hubleto\Framework\Interfaces\AppInterface $app): bool
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type                                           | Description |
 |-----------|------------------------------------------------|-------------|

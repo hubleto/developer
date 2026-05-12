@@ -6,100 +6,112 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### MAIN_DEVELOPER
+### ƒ MAIN_DEVELOPER
 
 ```php
 public MAIN_DEVELOPER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### ACCOUNT_MANAGER
+### ƒ PROJECT_MANAGER
+
+```php
+public PROJECT_MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+```
+
+
+### ƒ ACCOUNT_MANAGER
 
 ```php
 public ACCOUNT_MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### PHASE
-
-```php
-public PHASE(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-```
-
-
-### CUSTOMER
+### ƒ CUSTOMER
 
 ```php
 public CUSTOMER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### CONTACT
+### ƒ CONTACT
 
 ```php
 public CONTACT(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### OWNER
+### ƒ OWNER
 
 ```php
 public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### MANAGER
+### ƒ MANAGER
 
 ```php
 public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### WORKFLOW
+### ƒ WORKFLOW
 
 ```php
 public WORKFLOW(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\Workflow,\Hubleto\App\Community\Projects\Models\RecordManagers\Deal>
 ```
 
 
-### WORKFLOW_STEP
+### ƒ WORKFLOW_STEP
 
 ```php
 public WORKFLOW_STEP(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Workflow\Models\RecordManagers\WorkflowStep,\Hubleto\App\Community\Projects\Models\RecordManagers\Deal>
 ```
 
 
-### ORDERS
+### ƒ ORDERS
 
 ```php
 public ORDERS(): \Hubleto\App\Community\Projects\Models\RecordManagers\hasMany<\Hubleto\App\Community\Projects\Models\RecordManagers\LeadDocument,\Hubleto\App\Community\Projects\Models\RecordManagers\Lead>
 ```
 
 
-### TASKS
+### ƒ TASKS
 
 ```php
 public TASKS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Projects\Models\RecordManagers\ProjectTask,\Hubleto\App\Community\Projects\Models\RecordManagers\Deal>
 ```
 
 
-### prepareReadQuery
+### ƒ MILESTONES
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public MILESTONES(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Projects\Models\RecordManagers\ProjectTask,\Hubleto\App\Community\Projects\Models\RecordManagers\Deal>
 ```
 
-**Parameters:**
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+### ƒ prepareReadQuery
+
+```php
+public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed**       |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

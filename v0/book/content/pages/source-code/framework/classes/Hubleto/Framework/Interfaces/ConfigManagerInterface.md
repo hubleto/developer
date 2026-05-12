@@ -18,6 +18,19 @@ public forApp(string $appClass): mixed
 | `$appClass` | **string** |             |
 
 
+### ƒ forModel
+
+```php
+public forModel(string $modelClass): mixed
+```
+
+#### Parameters
+
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$modelClass` | **string** |             |
+
+
 ### ƒ setPrefix
 
 ```php
@@ -269,7 +282,7 @@ public env(): \Hubleto\Framework\Interfaces\EnvInterface
 ### ƒ authProvider
 
 ```php
-public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
+public authProvider(): \Hubleto\Framework\Interfaces\AuthProviderInterface
 ```
 
 
@@ -294,10 +307,10 @@ public router(): \Hubleto\Framework\Interfaces\RouterInterface
 ```
 
 
-### ƒ hookManager
+### ƒ eventManager
 
 ```php
-public hookManager(): \Hubleto\Framework\Interfaces\HookManagerInterface
+public eventManager(): \Hubleto\Framework\Interfaces\EventManagerInterface
 ```
 
 
@@ -319,13 +332,6 @@ public permissionsManager(): \Hubleto\Framework\Interfaces\PermissionsManagerInt
 
 ```php
 public cronManager(): \Hubleto\Framework\Interfaces\CronManagerInterface
-```
-
-
-### ƒ emailProvider
-
-```php
-public emailProvider(): \Hubleto\Framework\Interfaces\EmailProviderInterface
 ```
 
 

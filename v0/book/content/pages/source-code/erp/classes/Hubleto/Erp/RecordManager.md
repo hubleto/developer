@@ -6,21 +6,6 @@
 
 ## Methods
 
-### ƒ getPermissions
-
-[Description for getPermissions]
-
-```php
-public getPermissions(array $record): array
-```
-
-#### Parameters
-
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$record` | **array** |             |
-
-
 ### ƒ prepareReadQuery
 
 [Description for prepareReadQuery]

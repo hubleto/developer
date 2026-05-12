@@ -41,6 +41,14 @@
 |---------------------------------------------------------------------------|-------------|
 | [`AppMenu`](./classes/Hubleto/App/Community/Contacts/Extendibles/AppMenu) |             |
 
+### \Hubleto\App\Community\Contacts\McpTools
+
+#### Classes
+
+| Class                                                                            | Description |
+|----------------------------------------------------------------------------------|-------------|
+| [`ContactsTool`](./classes/Hubleto/App/Community/Contacts/McpTools/ContactsTool) |             |
+
 ### \Hubleto\App\Community\Contacts\Models
 
 #### Classes
@@ -52,6 +60,18 @@
 | [`ContactTag`](./classes/Hubleto/App/Community/Contacts/Models/ContactTag) |             |
 | [`Tag`](./classes/Hubleto/App/Community/Contacts/Models/Tag)               |             |
 | [`Value`](./classes/Hubleto/App/Community/Contacts/Models/Value)           |             |
+
+### \Hubleto\App\Community\Contacts\Models\Migrations
+
+#### Classes
+
+| Class                                                                                           | Description |
+|-------------------------------------------------------------------------------------------------|-------------|
+| [`Category_0001`](./classes/Hubleto/App/Community/Contacts/Models/Migrations/Category_0001)     |             |
+| [`Contact_0001`](./classes/Hubleto/App/Community/Contacts/Models/Migrations/Contact_0001)       |             |
+| [`ContactTag_0001`](./classes/Hubleto/App/Community/Contacts/Models/Migrations/ContactTag_0001) |             |
+| [`Tag_0001`](./classes/Hubleto/App/Community/Contacts/Models/Migrations/Tag_0001)               |             |
+| [`Value_0001`](./classes/Hubleto/App/Community/Contacts/Models/Migrations/Value_0001)           |             |
 
 ### \Hubleto\App\Community\Contacts\Models\RecordManagers
 

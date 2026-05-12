@@ -6,6 +6,13 @@ CRUD-like layer for manipulating records (data)
 
 ## Methods
 
+### ƒ loader
+
+```php
+public loader(): \Hubleto\Framework\Interfaces\CoreInterface
+```
+
+
 ### ƒ prepareReadQuery
 
 prepareReadQuery
@@ -25,19 +32,6 @@ public prepareReadQuery(mixed $query = null, int $level, array|null $includeRela
 #### Return Value
 
 Object for reading records.
-
-
-### ƒ recordGet
-
-```php
-public recordGet(callable|null $queryModifierCallback = null): array
-```
-
-#### Parameters
-
-| Parameter                | Type               | Description |
-|--------------------------|--------------------|-------------|
-| `$queryModifierCallback` | **callable\|null** |             |
 
 
 ### ƒ addFulltextSearchToQuery
@@ -108,6 +102,19 @@ public recordRead(mixed $query): array
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$query`  | **mixed** |             |
+
+
+### ƒ recordReadByUid
+
+```php
+public recordReadByUid(mixed $uid): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$uid`    | **mixed** |             |
 
 
 ### ƒ recordEncryptIds
@@ -189,6 +196,37 @@ public recordSave(array $record, int $idMasterRecord): array
 |-------------------|-----------|-------------|
 | `$record`         | **array** |             |
 | `$idMasterRecord` | **int**   |             |
+
+
+### ƒ loadFormData
+
+```php
+public loadFormData(mixed $uid): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$uid`    | **mixed** |             |
+
+
+### ƒ loadTableData
+
+```php
+public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
+```
+
+#### Parameters
+
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `$fulltextSearch` | **string** |             |
+| `$columnSearch`   | **array**  |             |
+| `$orderBy`        | **array**  |             |
+| `$itemsPerPage`   | **int**    |             |
+| `$page`           | **int**    |             |
+| `$dataView`       | **string** |             |
 
 
 ### ƒ recordValidate

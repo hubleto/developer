@@ -6,23 +6,27 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### PROJECT
+### ƒ PROJECT
 
 ```php
-public PROJECT(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Projects\Models\RecordManagers\Product,\Hubleto\App\Community\Projects\Models\RecordManagers\OrderProduct>
+public PROJECT(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Projects\Models\RecordManagers\Product,\Hubleto\App\Community\Projects\Models\RecordManagers\Item>
 ```
 
 
-### ORDER
+### ƒ ORDER
 
 ```php
-public ORDER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Orders\Models\RecordManagers\Order,\Hubleto\App\Community\Projects\Models\RecordManagers\OrderProduct>
+public ORDER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Orders\Models\RecordManagers\Order,\Hubleto\App\Community\Projects\Models\RecordManagers\Item>
 ```
 

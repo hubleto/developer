@@ -6,13 +6,13 @@
 
 ## Methods
 
-### match
+### ƒ match
 
 ```php
 public match(array $models, \Illuminate\Database\Eloquent\Collection $results, mixed $relation): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type                                         | Description |
 |-------------|----------------------------------------------|-------------|

@@ -1,7 +1,9 @@
 
+Shortcut to access all services used in the Hubleto project.
+
 # \Hubleto\Erp\Calendar
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../Framework/Core">Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Erp\Core</a></td></tr></table>
 
 
 ## Properties
@@ -36,6 +38,13 @@ protected string $color
 
 
 ## Methods
+
+### ƒ __construct
+
+```php
+public __construct(): mixed
+```
+
 
 ### ƒ setApp
 
@@ -74,6 +83,13 @@ public setColor(string $color): void
 
 ```php
 public getColor(): string
+```
+
+
+### ƒ getCalendarConfig
+
+```php
+public getCalendarConfig(): array
 ```
 
 
@@ -122,4 +138,15 @@ public convertActivitiesToEvents(string $source, array $activities, \Closure $de
 | `$source`          | **string**   |             |
 | `$activities`      | **array**    |             |
 | `$detailsCallback` | **\Closure** |             |
+
+
+## Inherited methods
+
+### ƒ emailProvider
+
+Shortcut for the email provider service.
+
+```php
+public emailProvider(): \Hubleto\Erp\EmailProvider
+```
 

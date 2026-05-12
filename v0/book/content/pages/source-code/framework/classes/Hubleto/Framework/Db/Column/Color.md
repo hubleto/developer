@@ -24,6 +24,24 @@ protected string $sqlDataType
 
 
 
+
+<div class="mt-2">&nbsp;</div>
+### ☍ searchAlgorithm
+```php
+protected string $searchAlgorithm
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ textAlign
+```php
+protected string $textAlign
+```
+
+
+
 ## Inherited methods
 
 ### ƒ __construct
@@ -145,6 +163,33 @@ public setType(string $type): \Hubleto\Framework\Column
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$type`   | **string** |             |
+
+
+### ƒ getTextAlign
+
+```php
+public getTextAlign(): string
+```
+
+
+### ƒ setTextAlign
+
+```php
+public setTextAlign(string $textAlign): \Hubleto\Framework\Column
+```
+
+#### Parameters
+
+| Parameter    | Type       | Description |
+|--------------|------------|-------------|
+| `$textAlign` | **string** |             |
+
+
+### ƒ getSearchAlgorithm
+
+```php
+public getSearchAlgorithm(): string
+```
 
 
 ### ƒ getSqlDataType
@@ -353,6 +398,26 @@ public setCssClass(string $cssClass): \Hubleto\Framework\Column
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$cssClass` | **string** |             |
+
+
+### ƒ getTableCssClass
+
+```php
+public getTableCssClass(): string
+```
+
+
+### ƒ setTableCssClass
+
+```php
+public setTableCssClass(string $tableCssClass): \Hubleto\Framework\Column
+```
+
+#### Parameters
+
+| Parameter        | Type       | Description |
+|------------------|------------|-------------|
+| `$tableCssClass` | **string** |             |
 
 
 ### ƒ getFormat
@@ -716,10 +781,10 @@ public describeInput(): \Hubleto\Framework\Description\Input
 ```
 
 
-### ƒ loadFromArray
+### ƒ fromArray
 
 ```php
-public loadFromArray(array $columnConfig): \Hubleto\Framework\Column
+public fromArray(array $columnConfig): \Hubleto\Framework\Column
 ```
 
 #### Parameters

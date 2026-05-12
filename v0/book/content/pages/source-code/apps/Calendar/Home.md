@@ -11,6 +11,7 @@
 | Class                                                           | Description |
 |-----------------------------------------------------------------|-------------|
 | [`Calendar`](./classes/Hubleto/App/Community/Calendar/Calendar) |             |
+| [`Counter`](./classes/Hubleto/App/Community/Calendar/Counter)   |             |
 | [`Events`](./classes/Hubleto/App/Community/Calendar/Events)     |             |
 | [`Loader`](./classes/Hubleto/App/Community/Calendar/Loader)     |             |
 | [`Manager`](./classes/Hubleto/App/Community/Calendar/Manager)   |             |
@@ -62,6 +63,15 @@
 |------------------------------------------------------------------------------------|-------------|
 | [`Activity`](./classes/Hubleto/App/Community/Calendar/Models/Activity)             |             |
 | [`SharedCalendar`](./classes/Hubleto/App/Community/Calendar/Models/SharedCalendar) |             |
+
+### \Hubleto\App\Community\Calendar\Models\Migrations
+
+#### Classes
+
+| Class                                                                                                   | Description |
+|---------------------------------------------------------------------------------------------------------|-------------|
+| [`Activity_0001`](./classes/Hubleto/App/Community/Calendar/Models/Migrations/Activity_0001)             |             |
+| [`SharedCalendar_0001`](./classes/Hubleto/App/Community/Calendar/Models/Migrations/SharedCalendar_0001) |             |
 
 ### \Hubleto\App\Community\Calendar\Models\RecordManagers
 

@@ -6,14 +6,18 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### ORDER
+### ƒ ORDER
 
 ```php
 public ORDER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Orders\Models\RecordManagers\Order,\Hubleto\App\Community\Orders\Models\RecordManagers\OrderActivity>

@@ -6,57 +6,56 @@
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### recordManagerClass
-
-`public string $recordManagerClass`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### relations
 
-`public array $relations`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 ```php
 public describeColumns(): array
 ```
 
 
-### describeInput
-
-```php
-public describeInput(string $columnName): \Hubleto\Framework\Description\Input
-```
-
-**Parameters:**
-
-| Parameter     | Type       | Description |
-|---------------|------------|-------------|
-| `$columnName` | **string** |             |
-
-
-### describeTable
+### ƒ describeTable
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### onBeforeDelete
+### ƒ onBeforeDelete
 
 ```php
 public onBeforeDelete(int $id): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|

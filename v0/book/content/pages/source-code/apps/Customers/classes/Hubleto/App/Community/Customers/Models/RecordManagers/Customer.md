@@ -6,97 +6,102 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### CONTACTS
+### ƒ CONTACTS
 
 ```php
 public CONTACTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### COUNTRY
+### ƒ COUNTRY
 
 ```php
 public COUNTRY(): \Illuminate\Database\Eloquent\Relations\HasOne<\Hubleto\App\Community\Settings\Models\RecordManagers\Country,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### ACTIVITIES
+### ƒ ACTIVITIES
 
 ```php
 public ACTIVITIES(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Customers\Models\RecordManagers\CustomerActivity,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### DOCUMENTS
+### ƒ DOCUMENTS
 
 ```php
 public DOCUMENTS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Customers\Models\RecordManagers\CustomerDocument,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### TAGS
+### ƒ TAGS
 
 ```php
 public TAGS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Customers\Models\RecordManagers\CustomerTag,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### LEADS
+### ƒ LEADS
 
 ```php
 public LEADS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Leads\Models\RecordManagers\Lead,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### DEALS
+### ƒ DEALS
 
 ```php
 public DEALS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Deals\Models\RecordManagers\Deal,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### OWNER
+### ƒ OWNER
 
 ```php
 public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### MANAGER
+### ƒ MANAGER
 
 ```php
 public MANAGER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Customers\Models\RecordManagers\Customer>
 ```
 
 
-### prepareReadQuery
+### ƒ prepareReadQuery
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed**       |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 
 
-### addOrderByToQuery
+### ƒ addOrderByToQuery
 
 ```php
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -104,13 +109,13 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 | `$orderBy` | **array** |             |
 
 
-### addFulltextSearchToQuery
+### ƒ addFulltextSearchToQuery
 
 ```php
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type       | Description |
 |-------------------|------------|-------------|

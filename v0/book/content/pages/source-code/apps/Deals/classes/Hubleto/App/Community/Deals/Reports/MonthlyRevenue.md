@@ -6,26 +6,34 @@
 
 ## Properties
 
-### urlSlug
 
-`protected string $urlSlug`
+<div class="mt-2">&nbsp;</div>
+### ☍ urlSlug
+```php
+protected string $urlSlug
+```
 
 
-### name
 
-`public string $name`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ name
+```php
+public string $name
+```
+
 
 
 ## Methods
 
-### getReportConfig
+### ƒ getReportConfig
 
 ```php
 public getReportConfig(): array
 ```
 
 
-### loadData
+### ƒ loadData
 
 ```php
 public loadData(): array

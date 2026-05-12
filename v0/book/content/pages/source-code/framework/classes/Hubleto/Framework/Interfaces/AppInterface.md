@@ -1,6 +1,16 @@
 
 # \Hubleto\Framework\Interfaces\AppInterface
 
+## Constants
+
+
+| Constant                      | Visibility | Type | Value                   |
+|-------------------------------|------------|------|-------------------------|
+| `DEFAULT_INSTALLATION_CONFIG` | public     |      | ['sidebarOrder' => 500] |
+| `APP_TYPE_COMMUNITY`          | public     |      | 'community'             |
+| `APP_TYPE_ENTERPRISE`         | public     |      | 'enterprise'            |
+| `APP_TYPE_EXTERNAL`           | public     |      | 'external'              |
+
 ## Methods
 
 ### ƒ validateManifest
@@ -24,19 +34,6 @@ public onBeforeRender(): void
 ```
 
 
-### ƒ hook
-
-```php
-public hook(string $hook): void
-```
-
-#### Parameters
-
-| Parameter | Type       | Description |
-|-----------|------------|-------------|
-| `$hook`   | **string** |             |
-
-
 ### ƒ getRootUrlSlug
 
 ```php
@@ -44,10 +41,10 @@ public getRootUrlSlug(): string
 ```
 
 
-### ƒ installTables
+### ƒ installApp
 
 ```php
-public installTables(int $round): void
+public installApp(int $round): void
 ```
 
 #### Parameters
@@ -365,4 +362,18 @@ public canHandleSearchSwith(string $switch): bool
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$switch` | **string** |             |
+
+
+### ƒ migrateTables
+
+```php
+public migrateTables(): void
+```
+
+
+### ƒ migrateForeignKeys
+
+```php
+public migrateForeignKeys(): void
+```
 

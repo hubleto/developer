@@ -106,6 +106,40 @@ public error(mixed $message, array $context = [], mixed $loggerName = 'core'): v
 | `$loggerName` | **mixed** |             |
 
 
+### ƒ clearLogCache
+
+```php
+public clearLogCache(): void
+```
+
+
+### ƒ getLogCache
+
+```php
+public getLogCache(): array
+```
+
+
+### ƒ setDebugLevel
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+```php
+public getDebugLevel(): int
+```
+
+
 ## Inherited methods
 
 ### ƒ getServiceStatic
@@ -165,7 +199,7 @@ public env(): \Hubleto\Framework\Interfaces\EnvInterface
 ### ƒ authProvider
 
 ```php
-public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
+public authProvider(): \Hubleto\Framework\Interfaces\AuthProviderInterface
 ```
 
 
@@ -190,10 +224,10 @@ public router(): \Hubleto\Framework\Interfaces\RouterInterface
 ```
 
 
-### ƒ hookManager
+### ƒ eventManager
 
 ```php
-public hookManager(): \Hubleto\Framework\Interfaces\HookManagerInterface
+public eventManager(): \Hubleto\Framework\Interfaces\EventManagerInterface
 ```
 
 
@@ -215,13 +249,6 @@ public permissionsManager(): \Hubleto\Framework\Interfaces\PermissionsManagerInt
 
 ```php
 public cronManager(): \Hubleto\Framework\Interfaces\CronManagerInterface
-```
-
-
-### ƒ emailProvider
-
-```php
-public emailProvider(): \Hubleto\Framework\Interfaces\EmailProviderInterface
 ```
 
 

@@ -115,45 +115,6 @@ public indexes(array $indexes = []): array
 | `$indexes` | **array** |             |
 
 
-### ƒ getClientIpAddress
-
-[Description for getClientIpAddress]
-
-```php
-public getClientIpAddress(): string
-```
-
-
-### ƒ updateAccessInformation
-
-[Description for updateAccessInformation]
-
-```php
-public updateAccessInformation(int $idUser): void
-```
-
-#### Parameters
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$idUser` | **int** |             |
-
-
-### ƒ updateLoginAndAccessInformation
-
-[Description for updateLoginAndAccessInformation]
-
-```php
-public updateLoginAndAccessInformation(int $idUser): void
-```
-
-#### Parameters
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$idUser` | **int** |             |
-
-
 ### ƒ isUserActive
 
 [Description for isUserActive]
@@ -169,6 +130,21 @@ public isUserActive(mixed $user): bool
 | `$user`   | **mixed** |             |
 
 
+### ƒ findUsersByLogin
+
+[Description for findUsersByLogin]
+
+```php
+public findUsersByLogin(string $login): array
+```
+
+#### Parameters
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$login`  | **string** |             |
+
+
 ### ƒ authCookieGetLogin
 
 [Description for authCookieGetLogin]
@@ -178,114 +154,19 @@ public authCookieGetLogin(): string
 ```
 
 
-### ƒ authCookieSerialize
-
-[Description for authCookieSerialize]
-
-```php
-public authCookieSerialize(mixed $login, mixed $password): string
-```
-
-#### Parameters
-
-| Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `$login`    | **mixed** |             |
-| `$password` | **mixed** |             |
-
-
-### ƒ generateToken
-
-[Description for generateToken]
-
-```php
-public generateToken(mixed $idUser, mixed $tokenSalt, mixed $tokenType): string
-```
-
-#### Parameters
-
-| Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `$idUser`    | **mixed** |             |
-| `$tokenSalt` | **mixed** |             |
-| `$tokenType` | **mixed** |             |
-
-
-### ƒ generatePasswordResetToken
-
-[Description for generatePasswordResetToken]
-
-```php
-public generatePasswordResetToken(mixed $idUser, mixed $tokenSalt): string
-```
-
-#### Parameters
-
-| Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `$idUser`    | **mixed** |             |
-| `$tokenSalt` | **mixed** |             |
-
-
-### ƒ validateToken
-
-[Description for validateToken]
-
-```php
-public validateToken(mixed $token, bool $deleteAfterValidation = true): array
-```
-
-#### Parameters
-
-| Parameter                | Type      | Description |
-|--------------------------|-----------|-------------|
-| `$token`                 | **mixed** |             |
-| `$deleteAfterValidation` | **bool**  |             |
-
-
-### ƒ getQueryForUser
-
-[Description for getQueryForUser]
-
-```php
-public getQueryForUser(int $idUser): mixed
-```
-
-#### Parameters
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$idUser` | **int** |             |
-
-
 ### ƒ loadUser
 
 [Description for loadUser]
 
 ```php
-public loadUser(int $idUser): array
+public loadUser(mixed $uidUser): array
 ```
 
 #### Parameters
 
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$idUser` | **int** |             |
-
-
-### ƒ getByEmail
-
-[Description for getByEmail]
-
-```php
-public getByEmail(string $email): array
-```
-
-#### Parameters
-
-| Parameter | Type       | Description |
-|-----------|------------|-------------|
-| `$email`  | **string** |             |
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `$uidUser` | **mixed** |             |
 
 
 ### ƒ encryptPassword
@@ -308,14 +189,30 @@ public encryptPassword(string $password): string
 [Description for updatePassword]
 
 ```php
-public updatePassword(int $idUser, string $password): mixed
+public updatePassword(mixed $uidUser, string $password): array
 ```
 
 #### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
-| `$idUser`   | **int**    |             |
+| `$uidUser`  | **mixed**  |             |
+| `$password` | **string** |             |
+
+
+### ƒ verifyPassword
+
+[Description for verifyPassword]
+
+```php
+public verifyPassword(array $user, string $password): bool
+```
+
+#### Parameters
+
+| Parameter   | Type       | Description |
+|-------------|------------|-------------|
+| `$user`     | **array**  |             |
 | `$password` | **string** |             |
 
 
@@ -383,6 +280,15 @@ public getService(string $service): mixed
 | `$service` | **string** |             |
 
 
+### ƒ loader
+
+Shortcut for the loader service.
+
+```php
+public loader(): \Hubleto\Framework\Loader
+```
+
+
 ### ƒ env
 
 Shortcut for the env service.
@@ -397,7 +303,7 @@ public env(): \Hubleto\Framework\Env
 Shortcut for the authentication service.
 
 ```php
-public authProvider(): \Hubleto\Framework\Interfaces\AuthInterface
+public authProvider(): \Hubleto\Framework\Interfaces\AuthProviderInterface
 ```
 
 
@@ -428,12 +334,12 @@ public router(): \Hubleto\Framework\Router
 ```
 
 
-### ƒ hookManager
+### ƒ eventManager
 
-Shortcut for the hook manager service.
+Shortcut for the event manager service.
 
 ```php
-public hookManager(): \Hubleto\Framework\HookManager
+public eventManager(): \Hubleto\Framework\EventManagerInterface
 ```
 
 
@@ -461,15 +367,6 @@ Shortcut for the cron manager service.
 
 ```php
 public cronManager(): \Hubleto\Framework\CronManager
-```
-
-
-### ƒ emailProvider
-
-Shortcut for the email provider service.
-
-```php
-public emailProvider(): \Hubleto\Framework\EmailProvider
 ```
 
 
@@ -650,48 +547,12 @@ public configAsArray(string $configName): void
 | `$configName` | **string** |             |
 
 
-### ƒ getSqlCreateTableCommands
+### ƒ getSqlEngine
 
-[Description for getSqlCreateTableCommands]
-
-```php
-public getSqlCreateTableCommands(): array
-```
-
-
-### ƒ createSqlTable
-
-[Description for createSqlTable]
+Returns the value of the sqlEngine property, which is used to specify the SQL engine for the model's table.
 
 ```php
-public createSqlTable(): mixed
-```
-
-
-### ƒ install
-
-Installs the first version of the model into SQL database. Automatically creates indexes.
-
-```php
-public install(): void
-```
-
-
-### ƒ dropTableIfExists
-
-[Description for dropTableIfExists]
-
-```php
-public dropTableIfExists(): \Hubleto\Framework\Model
-```
-
-
-### ƒ createSqlForeignKeys
-
-Create foreign keys for the SQL table. Called when all models are installed.
-
-```php
-public createSqlForeignKeys(): void
+public getSqlEngine(): array
 ```
 
 
@@ -708,40 +569,64 @@ public getFullTableSqlName(): string
 Full name of the model's SQL table
 
 
-### ƒ upgrades
+### ƒ migrations
 
-Returns list of available upgrades. This method must be overriden by each model.
+Returns list of available migrations looked up from a folder. This method must be overridden by each model and
+must include at least the default migration of a model.
 
 ```php
-public upgrades(): array
+public migrations(): array
 ```
 
 #### Return Value
 
-List of available upgrades. Keys of the array are simple numbers starting from 1.
+List of available migrations
+
+#### Throws
+
+- [`Exception`](../../../Exception)
 
 
-### ƒ getAvailableUpgrades
+### ƒ getPendingMigrations
 
-[Description for hasAvailableUpgrades]
+Retrieves migrations that are yet to be executed.
 
 ```php
-public getAvailableUpgrades(): array
+public getPendingMigrations(\Hubleto\Framework\Enums\InstalledMigrationEnum $configKey): array
 ```
 
+#### Parameters
 
-### ƒ installUpgrades
+| Parameter    | Type                                                | Description |
+|--------------|-----------------------------------------------------|-------------|
+| `$configKey` | **\Hubleto\Framework\Enums\InstalledMigrationEnum** |             |
 
-Installs all upgrades of the model. Internaly stores current version and
-compares it to list of available upgrades.
+
+### ƒ upgradeSchema
+
+Installs tables of all pending migrations. Internally stores the latest installed migration.
 
 ```php
-public installUpgrades(): void
+public upgradeSchema(): void
 ```
 
 #### Throws
 
-When an error occured during the upgrade.
+When an error occurred during the upgrade.
+- [`DBException`](../Exceptions/DBException)
+
+
+### ƒ upgradeForeignKeys
+
+Installs indexes and foreign keys of all pending migrations. Internally stores the latest installed migration.
+
+```php
+public upgradeForeignKeys(): void
+```
+
+#### Throws
+
+When an error occurred during the upgrade.
 - [`DBException`](../Exceptions/DBException)
 
 
@@ -817,6 +702,21 @@ public indexNames(): array
 ```
 
 
+### ƒ getPermissions
+
+Gets permissions for the given record.
+
+```php
+public getPermissions(array $record): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description                      |
+|-----------|-----------|----------------------------------|
+| `$record` | **array** | Record to check permissions for. |
+
+
 ### ƒ describeColumns
 
 [Description for describeColumns]
@@ -861,6 +761,17 @@ public describeTable(): \Hubleto\Framework\Description\Table
 The descriptions contains configuration for table UI, columns and permissions.
 
 
+### ƒ describeTree
+
+Returns a tree description of the model.
+
+```php
+public describeTree(): \Hubleto\Framework\Description\Tree
+```
+
+The descriptions contains configuration for tree UI.
+
+
 ### ƒ convertRecordsToTree
 
 Used to convert flat list of records into tree structure.
@@ -880,26 +791,6 @@ Suitable for models having parent-child relationship.
 | `$level`    | **int**   |             |
 
 
-### ƒ loadTableData
-
-Loads records to be displayed in table.
-
-```php
-public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
-```
-
-#### Parameters
-
-| Parameter         | Type       | Description |
-|-------------------|------------|-------------|
-| `$fulltextSearch` | **string** |             |
-| `$columnSearch`   | **array**  |             |
-| `$orderBy`        | **array**  |             |
-| `$itemsPerPage`   | **int**    |             |
-| `$page`           | **int**    |             |
-| `$dataView`       | **string** |             |
-
-
 ### ƒ diffRecords
 
 [Description for diffRecords]
@@ -914,21 +805,6 @@ public diffRecords(array $record1, array $record2): array
 |------------|-----------|-------------|
 | `$record1` | **array** |             |
 | `$record2` | **array** |             |
-
-
-### ƒ getById
-
-[Description for getById]
-
-```php
-public getById(int $id): mixed
-```
-
-#### Parameters
-
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
 
 
 ### ƒ getLookupSqlValue
@@ -976,19 +852,19 @@ public getLookupDetails(array $dataRaw): string
 | `$dataRaw` | **array** |             |
 
 
-### ƒ getItemDetailUrl
+### ƒ getRecordDetailUrl
 
-[Description for getItemDetailUrl]
+[Description for getRecordDetailUrl]
 
 ```php
-public getItemDetailUrl(int $id): string
+public getRecordDetailUrl(array $record): string
 ```
 
 #### Parameters
 
-| Parameter | Type    | Description |
-|-----------|---------|-------------|
-| `$id`     | **int** |             |
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
 
 
 ### ƒ getMaxReadLevelForLoadTableData
@@ -1015,6 +891,30 @@ By default, empty array is returned, which means no relations are included.
 Override this method in your model if you need to specify particular relations.
 
 
+### ƒ getMaxReadLevelForLoadFormData
+
+Returns maxReadLevel value used in loadFormData() method.
+
+```php
+public getMaxReadLevelForLoadFormData(): int
+```
+
+By default is set to 0 to save bandwidth when loading data.
+Override this method in your model if you need to load more details.
+
+
+### ƒ getRelationsIncludedInLoadFormData
+
+Returns list of relations to be included when loading form data.
+
+```php
+public getRelationsIncludedInLoadFormData(): array
+```
+
+By default, empty array is returned, which means no relations are included.
+Override this method in your model if you need to specify particular relations.
+
+
 ### ƒ encryptPassword
 
 Used to encrypt passowrd to store it securely.
@@ -1028,6 +928,44 @@ public encryptPassword(string $original): string
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
 | `$original` | **string** |             |
+
+
+### ƒ onBeforeValidate
+
+onBeforeValidate
+
+```php
+public onBeforeValidate(array<string,mixed> $record): array<string,mixed>
+```
+
+#### Parameters
+
+| Parameter | Type                    | Description |
+|-----------|-------------------------|-------------|
+| `$record` | **array<string,mixed>** |             |
+
+#### Throws
+
+- [`RecordSaveException`](../Exceptions/RecordSaveException)
+
+
+### ƒ onAfterValidate
+
+onBeforeValidate
+
+```php
+public onAfterValidate(array<string,mixed> $record): array<string,mixed>
+```
+
+#### Parameters
+
+| Parameter | Type                    | Description |
+|-----------|-------------------------|-------------|
+| `$record` | **array<string,mixed>** |             |
+
+#### Throws
+
+- [`RecordSaveException`](../Exceptions/RecordSaveException)
 
 
 ### ƒ onBeforeCreate

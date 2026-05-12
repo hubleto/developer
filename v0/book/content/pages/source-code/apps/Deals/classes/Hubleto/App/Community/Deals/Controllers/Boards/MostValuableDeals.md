@@ -6,14 +6,18 @@
 
 ## Properties
 
-### hideDefaultDesktop
 
-`public bool $hideDefaultDesktop`
+<div class="mt-2">&nbsp;</div>
+### ☍ hideDefaultDesktop
+```php
+public bool $hideDefaultDesktop
+```
+
 
 
 ## Methods
 
-### prepareView
+### ƒ prepareView
 
 ```php
 public prepareView(): void

@@ -1,14 +1,14 @@
 
 # \Hubleto\App\Community\Calendar\Loader
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/App">App</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Erp/App">App</a></td></tr></table>
 
 
 ## Methods
 
-### init
+### ƒ init
 
-Inits the app: adds routes, settings, calendars, hooks, menu items, .
+Inits the app: adds routes, settings, calendars, event listeners, menu items, .
 
 ```php
 public init(): void
@@ -17,33 +17,44 @@ public init(): void
 ..
 
 
-### installTables
+### ƒ installApp
+
+[Description for installApp]
 
 ```php
-public installTables(int $round): void
+public installApp(int $round): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
 
-### getInitialView
+### ƒ getSidebarBadgeNumber
+
+[Description for getSidebarBadgeNumber]
+
+```php
+public getSidebarBadgeNumber(): int
+```
+
+
+### ƒ getInitialView
 
 ```php
 public getInitialView(): string
 ```
 
 
-### setInitialView
+### ƒ setInitialView
 
 ```php
 public setInitialView(string $initialView): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|

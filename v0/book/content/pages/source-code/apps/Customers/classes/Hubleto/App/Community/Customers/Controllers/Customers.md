@@ -6,14 +6,7 @@
 
 ## Methods
 
-### getBreadcrumbs
-
-```php
-public getBreadcrumbs(): array
-```
-
-
-### prepareView
+### ƒ prepareView
 
 ```php
 public prepareView(): void

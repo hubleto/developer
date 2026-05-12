@@ -30,32 +30,27 @@ public $table
 
 ## Inherited methods
 
-### ƒ __construct
+### ƒ loader
+
+Shortcut for the loader service.
 
 ```php
-public __construct(array $attributes = []): mixed
+public loader(): \Hubleto\Framework\Loader
+```
+
+
+### ƒ translate
+
+```php
+public translate(string $string, array $vars = []): string
 ```
 
 #### Parameters
 
-| Parameter     | Type      | Description |
-|---------------|-----------|-------------|
-| `$attributes` | **array** |             |
-
-
-### ƒ getPermissions
-
-Gets permissions for the given record.
-
-```php
-public getPermissions(array $record): array
-```
-
-#### Parameters
-
-| Parameter | Type      | Description                      |
-|-----------|-----------|----------------------------------|
-| `$record` | **array** | Record to check permissions for. |
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$string` | **string** |             |
+| `$vars`   | **array**  |             |
 
 
 ### ƒ prepareSelectsForReadQuery
@@ -126,19 +121,72 @@ public prepareReadQuery(mixed|null $query = null, int $level, array|null $includ
 | `$includeRelations` | **array\|null** | If not null, only these relations will be included in the read query. |
 
 
-### ƒ recordGet
+### ƒ recordReadByUid
 
-[Description for recordGet]
+Calls recordRead() method filtered by provided record UID.
 
 ```php
-public recordGet(callable|null $queryModifierCallback = null): array
+public recordReadByUid(mixed $uid): array
+```
+
+In most cases, record UID equals to record ID.
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$uid`    | **mixed** |             |
+
+
+### ƒ loadTableData
+
+Calls recordReadMany() to loads records to be displayed in table.
+
+```php
+public loadTableData(string $fulltextSearch = '', array $columnSearch = [], array $orderBy = [], int $itemsPerPage = 15, int $page, string $dataView = ''): array
 ```
 
 #### Parameters
 
-| Parameter                | Type               | Description |
-|--------------------------|--------------------|-------------|
-| `$queryModifierCallback` | **callable\|null** |             |
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `$fulltextSearch` | **string** |             |
+| `$columnSearch`   | **array**  |             |
+| `$orderBy`        | **array**  |             |
+| `$itemsPerPage`   | **int**    |             |
+| `$page`           | **int**    |             |
+| `$dataView`       | **string** |             |
+
+
+### ƒ loadTreeData
+
+Calls recordReadMany() to loads records to be displayed in tree.
+
+```php
+public loadTreeData(string $fulltextSearch = '', array $orderBy = []): array
+```
+
+#### Parameters
+
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `$fulltextSearch` | **string** |             |
+| `$orderBy`        | **array**  |             |
+
+
+### ƒ loadFormData
+
+Calls recordRead() to load data for the form
+
+```php
+public loadFormData(mixed $uid): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$uid`    | **mixed** |             |
 
 
 ### ƒ prepareLookupQuery
@@ -221,7 +269,7 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 
 ### ƒ recordReadMany
 
-[Description for recordReadMany]
+Loads many records from the database and applies pagination and permissions.
 
 ```php
 public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
@@ -238,7 +286,7 @@ public recordReadMany(mixed $query, int $itemsPerPage, int $page): array
 
 ### ƒ recordRead
 
-[Description for recordRead]
+Performs reading from the database and applise permissions.
 
 ```php
 public recordRead(mixed $query): array

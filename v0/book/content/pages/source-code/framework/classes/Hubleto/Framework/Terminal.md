@@ -17,6 +17,13 @@ public mixed $output
 
 ## Methods
 
+### ƒ __construct
+
+```php
+public __construct(): mixed
+```
+
+
 ### ƒ setOutput
 
 ```php

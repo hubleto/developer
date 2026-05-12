@@ -6,14 +6,18 @@
 
 ## Properties
 
-### MVCNamespaces
 
-`private array $MVCNamespaces`
+<div class="mt-2">&nbsp;</div>
+### ☍ MVCNamespaces
+```php
+private array $MVCNamespaces
+```
+
 
 
 ## Methods
 
-### renderJson
+### ƒ renderJson
 
 ```php
 public renderJson(): array

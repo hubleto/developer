@@ -6,13 +6,13 @@
 
 ## Methods
 
-### formatReminder
+### ƒ formatReminder
 
 ```php
 public formatReminder(string $category, string $color, array $reminder): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter   | Type       | Description |
 |-------------|------------|-------------|
@@ -21,7 +21,7 @@ public formatReminder(string $category, string $color, array $reminder): array
 | `$reminder` | **array**  |             |
 
 
-### response
+### ƒ response
 
 ```php
 public response(): array

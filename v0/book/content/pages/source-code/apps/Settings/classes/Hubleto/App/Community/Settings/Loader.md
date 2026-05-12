@@ -1,21 +1,25 @@
 
 # \Hubleto\App\Community\Settings\Loader
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/App">App</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Erp/App">App</a></td></tr></table>
 
 
 ## Properties
 
-### canBeDisabled
 
-`public bool $canBeDisabled`
+<div class="mt-2">&nbsp;</div>
+### ☍ canBeDisabled
+```php
+public bool $canBeDisabled
+```
+
 
 
 ## Methods
 
-### init
+### ƒ init
 
-Inits the app: adds routes, settings, calendars, hooks, menu items, .
+Inits the app: adds routes, settings, calendars, event listeners, menu items, .
 
 ```php
 public init(): void
@@ -24,20 +28,20 @@ public init(): void
 ..
 
 
-### installTables
+### ƒ installApp
 
 ```php
-public installTables(int $round): void
+public installApp(int $round): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type    | Description |
 |-----------|---------|-------------|
 | `$round`  | **int** |             |
 
 
-### assignPermissionsToRoles
+### ƒ assignPermissionsToRoles
 
 [Description for assignPermissionsToRoles]
 

@@ -34,9 +34,10 @@
 
 #### Classes
 
-| Class                                                                                    | Description |
-|------------------------------------------------------------------------------------------|-------------|
-| [`DailyChart`](./classes/Hubleto/App/Community/Worksheets/Controllers/Boards/DailyChart) |             |
+| Class                                                                                            | Description |
+|--------------------------------------------------------------------------------------------------|-------------|
+| [`DailyChart`](./classes/Hubleto/App/Community/Worksheets/Controllers/Boards/DailyChart)         |             |
+| [`MonthlySummary`](./classes/Hubleto/App/Community/Worksheets/Controllers/Boards/MonthlySummary) |             |
 
 ### \Hubleto\App\Community\Worksheets\Models
 
@@ -46,6 +47,15 @@
 |----------------------------------------------------------------------------------|-------------|
 | [`Activity`](./classes/Hubleto/App/Community/Worksheets/Models/Activity)         |             |
 | [`ActivityType`](./classes/Hubleto/App/Community/Worksheets/Models/ActivityType) |             |
+
+### \Hubleto\App\Community\Worksheets\Models\Migrations
+
+#### Classes
+
+| Class                                                                                                 | Description |
+|-------------------------------------------------------------------------------------------------------|-------------|
+| [`Activity_0001`](./classes/Hubleto/App/Community/Worksheets/Models/Migrations/Activity_0001)         |             |
+| [`ActivityType_0001`](./classes/Hubleto/App/Community/Worksheets/Models/Migrations/ActivityType_0001) |             |
 
 ### \Hubleto\App\Community\Worksheets\Models\RecordManagers
 

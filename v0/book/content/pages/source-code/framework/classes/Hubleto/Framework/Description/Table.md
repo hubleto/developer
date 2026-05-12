@@ -143,7 +143,7 @@ public hideColumns(array $columnNames): void
 [Description for addFilter]
 
 ```php
-public addFilter(string $filterName, array $filterConfig): mixed
+public addFilter(string $filterName, array $filterConfig): void
 ```
 
 #### Parameters
@@ -152,4 +152,22 @@ public addFilter(string $filterName, array $filterConfig): mixed
 |-----------------|------------|-------------|
 | `$filterName`   | **string** |             |
 | `$filterConfig` | **array**  |             |
+
+
+### ƒ setPermissions
+
+[Description for setPermissions]
+
+```php
+public setPermissions(bool|null $canCreate, bool|null $canRead, bool|null $canUpdate, bool|null $canDelete): void
+```
+
+#### Parameters
+
+| Parameter    | Type           | Description |
+|--------------|----------------|-------------|
+| `$canCreate` | **bool\|null** |             |
+| `$canRead`   | **bool\|null** |             |
+| `$canUpdate` | **bool\|null** |             |
+| `$canDelete` | **bool\|null** |             |
 

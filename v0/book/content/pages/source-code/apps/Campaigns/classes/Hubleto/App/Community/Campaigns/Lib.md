@@ -1,12 +1,12 @@
 
 # \Hubleto\App\Community\Campaigns\Lib
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/Core">Core</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Erp/Core">Core</a></td></tr></table>
 
 
 ## Methods
 
-### getMailPreview
+### ƒ getMailPreview
 
 [Description for getMailPreview]
 
@@ -15,7 +15,7 @@ public static getMailPreview(array $campaign, array $recipient): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -23,7 +23,58 @@ public static getMailPreview(array $campaign, array $recipient): string
 | `$recipient` | **array** |             |
 
 
-### replaceVariables
+### ƒ getBotDetectorHiddenLink
+
+[Description for getBotDetectorHiddenLink]
+
+```php
+public static getBotDetectorHiddenLink(array $campaign, array $recipient): string
+```
+
+* This method is **static**.
+#### Parameters
+
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `$campaign`  | **array** |             |
+| `$recipient` | **array** |             |
+
+
+### ƒ getUnsubscribeHref
+
+[Description for getUnsubscribeHref]
+
+```php
+public static getUnsubscribeHref(array $campaign, array $recipient): string
+```
+
+* This method is **static**.
+#### Parameters
+
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `$campaign`  | **array** |             |
+| `$recipient` | **array** |             |
+
+
+### ƒ getViewInBrowserHref
+
+[Description for getUnsubscribeUrl]
+
+```php
+public static getViewInBrowserHref(array $campaign, array $recipient): string
+```
+
+* This method is **static**.
+#### Parameters
+
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `$campaign`  | **array** |             |
+| `$recipient` | **array** |             |
+
+
+### ƒ replaceVariables
 
 [Description for replaceVariables]
 
@@ -32,7 +83,7 @@ public static replaceVariables(string $body, array $vars): string
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -40,7 +91,7 @@ public static replaceVariables(string $body, array $vars): string
 | `$vars`   | **array**  |             |
 
 
-### addUtmVariablesToEmailLinks
+### ƒ addUtmVariablesToEmailLinks
 
 [Description for addUtmVariablesToEmailLinks]
 
@@ -49,7 +100,7 @@ public static addUtmVariablesToEmailLinks(string $body, string $utmSource, strin
 ```
 
 * This method is **static**.
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type       | Description |
 |----------------|------------|-------------|
@@ -60,16 +111,24 @@ public static addUtmVariablesToEmailLinks(string $body, string $utmSource, strin
 | `$utmContent`  | **string** |             |
 
 
-### routeLinksThroughCampaignTracker
-
-[Description for routeLinksThroughCampaignTracker]
+### ƒ getClickTrackerUrl
 
 ```php
-public static routeLinksThroughCampaignTracker(array $campaign, array $recipient, string $body): string
+public static getClickTrackerUrl(): string
 ```
 
 * This method is **static**.
-**Parameters:**
+
+### ƒ routeLinksThroughClickTracker
+
+[Description for routeLinksThroughClickTracker]
+
+```php
+public static routeLinksThroughClickTracker(array $campaign, array $recipient, string $body): string
+```
+
+* This method is **static**.
+#### Parameters
 
 | Parameter    | Type       | Description |
 |--------------|------------|-------------|

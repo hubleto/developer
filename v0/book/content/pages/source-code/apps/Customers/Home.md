@@ -53,6 +53,19 @@
 | [`CustomerTag`](./classes/Hubleto/App/Community/Customers/Models/CustomerTag)           |             |
 | [`Tag`](./classes/Hubleto/App/Community/Customers/Models/Tag)                           |             |
 
+### \Hubleto\App\Community\Customers\Models\Migrations
+
+#### Classes
+
+| Class                                                                                                        | Description |
+|--------------------------------------------------------------------------------------------------------------|-------------|
+| [`Customer_0001`](./classes/Hubleto/App/Community/Customers/Models/Migrations/Customer_0001)                 |             |
+| [`Customer_0002`](./classes/Hubleto/App/Community/Customers/Models/Migrations/Customer_0002)                 |             |
+| [`CustomerActivity_0001`](./classes/Hubleto/App/Community/Customers/Models/Migrations/CustomerActivity_0001) |             |
+| [`CustomerDocument_0001`](./classes/Hubleto/App/Community/Customers/Models/Migrations/CustomerDocument_0001) |             |
+| [`CustomerTag_0001`](./classes/Hubleto/App/Community/Customers/Models/Migrations/CustomerTag_0001)           |             |
+| [`Tag_0001`](./classes/Hubleto/App/Community/Customers/Models/Migrations/Tag_0001)                           |             |
+
 ### \Hubleto\App\Community\Customers\Models\RecordManagers
 
 #### Classes

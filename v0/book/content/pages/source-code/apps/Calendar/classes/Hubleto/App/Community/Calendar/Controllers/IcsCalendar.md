@@ -6,26 +6,34 @@
 
 ## Properties
 
-### hideDefaultDesktop
 
-`public bool $hideDefaultDesktop`
+<div class="mt-2">&nbsp;</div>
+### ☍ hideDefaultDesktop
+```php
+public bool $hideDefaultDesktop
+```
 
 
-### requiresAuthenticatedUser
 
-`public bool $requiresAuthenticatedUser`
+
+<div class="mt-2">&nbsp;</div>
+### ☍ requiresAuthenticatedUser
+```php
+public bool $requiresAuthenticatedUser
+```
+
 
 
 ## Methods
 
-### getBreadcrumbs
+### ƒ getBreadcrumbs
 
 ```php
 public getBreadcrumbs(): array
 ```
 
 
-### render
+### ƒ render
 
 ```php
 public render(): string

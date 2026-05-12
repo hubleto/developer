@@ -6,20 +6,24 @@
 
 ## Properties
 
-### table
 
-`public $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public $table
+```
+
 
 
 ## Methods
 
-### belongsToEmail
+### ƒ belongsToEmail
 
 ```php
 public belongsToEmail(mixed $related, mixed $foreignKey = null, mixed $ownerKey = null, mixed $relation = null): mixed
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
@@ -29,44 +33,71 @@ public belongsToEmail(mixed $related, mixed $foreignKey = null, mixed $ownerKey 
 | `$relation`   | **mixed** |             |
 
 
-### CAMPAIGN
+### ƒ CAMPAIGN
 
 ```php
 public CAMPAIGN(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Campaigns\Models\RecordManagers\Tag,\Hubleto\App\Community\Campaigns\Models\RecordManagers\LeadTag>
 ```
 
 
-### CONTACT
+### ƒ CONTACT
 
 ```php
 public CONTACT(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Campaigns\Models\RecordManagers\LeadTag>
 ```
 
 
-### MAIL
+### ƒ MAIL
 
 ```php
 public MAIL(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Campaigns\Models\RecordManagers\LeadTag>
 ```
 
 
-### STATUS
+### ƒ STATUS
 
 ```php
 public STATUS(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Campaigns\Models\RecordManagers\Tag,\Hubleto\App\Community\Campaigns\Models\RecordManagers\LeadTag>
 ```
 
 
-### prepareReadQuery
+### ƒ CLICKS
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level): mixed
+public CLICKS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Contacts\Models\RecordManagers\Contact,\Hubleto\App\Community\Campaigns\Models\RecordManagers\Customer>
 ```
 
-**Parameters:**
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `$query`  | **mixed** |             |
-| `$level`  | **int**   |             |
+### ƒ prepareSelectsForReadQuery
+
+[Description for prepareSelectsForReadQuery]
+
+```php
+public prepareSelectsForReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): array
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
+
+
+### ƒ prepareReadQuery
+
+[Description for prepareReadQuery]
+
+```php
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
 

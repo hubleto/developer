@@ -6,40 +6,76 @@
 
 ## Constants
 
-| Constant           | Visibility | Type | Value                                                                                     |
-|--------------------|------------|------|-------------------------------------------------------------------------------------------|
-| `TYPE_PROFORMA`    | public     |      | 1                                                                                         |
-| `TYPE_ADVANCE`     | public     |      | 2                                                                                         |
-| `TYPE_STANDARD`    | public     |      | 3                                                                                         |
-| `TYPE_CREDIT_NOTE` | public     |      | 4                                                                                         |
-| `TYPE_DEBIT_NOTE`  | public     |      | 5                                                                                         |
-| `TYPES`            | public     |      | [1 => 'Proforma', 2 => 'Advance', 3 => 'Standard', 4 => 'Credit Note', 5 => 'Debit Note'] |
+| Constant           | Visibility | Type | Value                                                                                                                                                                                   |
+|--------------------|------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `TYPE_PROFORMA`    | public     |      | 1                                                                                                                                                                                       |
+| `TYPE_ADVANCE`     | public     |      | 2                                                                                                                                                                                       |
+| `TYPE_STANDARD`    | public     |      | 3                                                                                                                                                                                       |
+| `TYPE_CREDIT_NOTE` | public     |      | 4                                                                                                                                                                                       |
+| `TYPE_DEBIT_NOTE`  | public     |      | 5                                                                                                                                                                                       |
+| `TYPES`            | public     |      | [self::TYPE_PROFORMA => 'Proforma', self::TYPE_ADVANCE => 'Advance', self::TYPE_STANDARD => 'Standard', self::TYPE_CREDIT_NOTE => 'Credit Note', self::TYPE_DEBIT_NOTE => 'Debit Note'] |
+| `INBOUND_INVOICE`  | public     |      | 1                                                                                                                                                                                       |
+| `OUTBOUND_INVOICE` | public     |      | 2                                                                                                                                                                                       |
 
 ## Properties
 
-### table
 
-`public string $table`
-
-
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### recordManagerClass
-
-`public string $recordManagerClass`
 
 
-### relations
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
 
-`public array $relations`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlAdd
+```php
+public ?string $lookupUrlAdd
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 [Description for describeColumns]
 
@@ -48,7 +84,7 @@ public describeColumns(): array
 ```
 
 
-### describeTable
+### ƒ describeTable
 
 [Description for describeTable]
 
@@ -57,7 +93,7 @@ public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### describeForm
+### ƒ describeForm
 
 [Description for describeForm]
 
@@ -66,7 +102,21 @@ public describeForm(): \Hubleto\Framework\Description\Form
 ```
 
 
-### recalculateTotalsForInvoice
+### ƒ getRelationsIncludedInLoadTableData
+
+```php
+public getRelationsIncludedInLoadTableData(): array|null
+```
+
+
+### ƒ getMaxReadLevelForLoadTableData
+
+```php
+public getMaxReadLevelForLoadTableData(): int
+```
+
+
+### ƒ recalculateTotalsForInvoice
 
 [Description for recalculateTotalsForInvoice]
 
@@ -74,14 +124,14 @@ public describeForm(): \Hubleto\Framework\Description\Form
 public recalculateTotalsForInvoice(int $idInvoice): void
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter    | Type    | Description |
 |--------------|---------|-------------|
 | `$idInvoice` | **int** |             |
 
 
-### onBeforeCreate
+### ƒ onBeforeCreate
 
 [Description for onBeforeCreate]
 
@@ -89,14 +139,14 @@ public recalculateTotalsForInvoice(int $idInvoice): void
 public onBeforeCreate(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### onAfterCreate
+### ƒ onAfterCreate
 
 [Description for onAfterCreate]
 
@@ -104,14 +154,14 @@ public onBeforeCreate(array $record): array
 public onAfterCreate(array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter      | Type      | Description |
 |----------------|-----------|-------------|
 | `$savedRecord` | **array** |             |
 
 
-### onAfterUpdate
+### ƒ onAfterUpdate
 
 [Description for onAfterUpdate]
 
@@ -119,7 +169,7 @@ public onAfterCreate(array $savedRecord): array
 public onAfterUpdate(array $originalRecord, array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -127,7 +177,7 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 | `$savedRecord`    | **array** |             |
 
 
-### onAfterLoadRecord
+### ƒ onAfterLoadRecord
 
 [Description for onAfterLoadRecord]
 
@@ -135,14 +185,14 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 public onAfterLoadRecord(array $record): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `$record` | **array** |             |
 
 
-### generateInvoice
+### ƒ generateInvoice
 
 Generates invoice and return ID of generated invoice
 
@@ -150,32 +200,29 @@ Generates invoice and return ID of generated invoice
 public generateInvoice(\Hubleto\App\Community\Invoices\Models\InvoiceInterface $invoice): int
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type                                                        | Description |
 |------------|-------------------------------------------------------------|-------------|
 | `$invoice` | **\Hubleto\App\Community\Invoices\Models\InvoiceInterface** |             |
 
-**Return Value:**
+#### Return Value
 
 ID of generated invoice
 
 
-### generatePdf
+### ƒ getDocumentPreviewVars
 
-Generates PDF document from given invoice and returns ID of generated document
+[Description for getDocumentPreviewVars]
 
 ```php
-public generatePdf(int $idInvoice): int
+public getDocumentPreviewVars(int $idInvoice, mixed $relations = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
-| Parameter    | Type    | Description                                    |
-|--------------|---------|------------------------------------------------|
-| `$idInvoice` | **int** | Invoice for which the PDF should be generated. |
-
-**Return Value:**
-
-ID of generated document.
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `$idInvoice` | **int**   |             |
+| `$relations` | **mixed** |             |
 

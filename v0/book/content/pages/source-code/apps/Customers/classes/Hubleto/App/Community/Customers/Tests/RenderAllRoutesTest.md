@@ -6,16 +6,16 @@
 
 ## Methods
 
-### testModelCruds
+### ƒ testCrudRouteForModel
 
 ```php
-public testModelCruds(): void
+public testCrudRouteForModel(): void
 ```
 
 
-### testRoutesContainAppMainTitle
+### ƒ testApiRoutes
 
 ```php
-public testRoutesContainAppMainTitle(): void
+public testApiRoutes(): void
 ```
 

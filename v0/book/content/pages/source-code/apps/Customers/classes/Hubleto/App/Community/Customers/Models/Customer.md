@@ -6,90 +6,132 @@
 
 ## Properties
 
-### isExtendableByCustomColumns
 
-`public bool $isExtendableByCustomColumns`
-
-
-### table
-
-`public string $table`
+<div class="mt-2">&nbsp;</div>
+### ☍ isExtendableByCustomColumns
+```php
+public bool $isExtendableByCustomColumns
+```
 
 
-### recordManagerClass
-
-`public string $recordManagerClass`
 
 
-### lookupSqlValue
-
-`public ?string $lookupSqlValue`
-
-
-### lookupUrlDetail
-
-`public ?string $lookupUrlDetail`
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
 
 
-### lookupUrlAdd
-
-`public ?string $lookupUrlAdd`
 
 
-### relations
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
 
-`public array $relations`
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlAdd
+```php
+public ?string $lookupUrlAdd
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
 
 
 ## Methods
 
-### describeColumns
+### ƒ describeColumns
 
 ```php
 public describeColumns(): array
 ```
 
 
-### indexes
+### ƒ indexes
 
 ```php
 public indexes(array $indexes = []): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
 | `$indexes` | **array** |             |
 
 
-### describeInput
+### ƒ describeInput
 
 ```php
 public describeInput(string $columnName): \Hubleto\Framework\Description\Input
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter     | Type       | Description |
 |---------------|------------|-------------|
 | `$columnName` | **string** |             |
 
 
-### describeTable
+### ƒ describeTable
 
 ```php
 public describeTable(): \Hubleto\Framework\Description\Table
 ```
 
 
-### onAfterUpdate
+### ƒ getRelationsIncludedInLoadTableData
+
+```php
+public getRelationsIncludedInLoadTableData(): array|null
+```
+
+
+### ƒ getMaxReadLevelForLoadTableData
+
+```php
+public getMaxReadLevelForLoadTableData(): int
+```
+
+
+### ƒ onAfterUpdate
 
 ```php
 public onAfterUpdate(array $originalRecord, array $savedRecord): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
@@ -97,15 +139,31 @@ public onAfterUpdate(array $originalRecord, array $savedRecord): array
 | `$savedRecord`    | **array** |             |
 
 
-### getNewRecordDataFromString
+### ƒ getNewRecordDataFromString
 
 ```php
 public getNewRecordDataFromString(string $text): array
 ```
 
-**Parameters:**
+#### Parameters
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
 | `$text`   | **string** |             |
+
+
+### ƒ getAiAssistantContext
+
+[Description for getAiAssistantContext]
+
+```php
+public getAiAssistantContext(int $sensitivityLevel, int $recordId): array
+```
+
+#### Parameters
+
+| Parameter           | Type    | Description |
+|---------------------|---------|-------------|
+| `$sensitivityLevel` | **int** |             |
+| `$recordId`         | **int** |             |
 
