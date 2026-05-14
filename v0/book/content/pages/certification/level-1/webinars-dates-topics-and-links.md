@@ -5,7 +5,7 @@
 | Date                    | Time (UTC+0)    | Topic                                                                |
 | ----------------------- | --------------- | -------------------------------------------------------------------- |
 | Wednesday, May 13, 2026 | 1:30 PM (UTC+0) | [Lesson #1: Introduction to Hubleto](lesson-1)                       |
-| Wednesday, May 27, 2026 | 1:30 PM (UTC+0) | [Lesson #2: Overview of Hubleto features](lesson-2)                  |
+| Wednesday, May 27, 2026 | 1:30 PM (UTC+0) | [Lesson #2: Overview of Hubleto features](lesson-2)                  | [LinkedIn Event](https://www.linkedin.com/events/7460623591261470720?viewAsMember=true) |
 | Wednesday, Jun 10, 2026 | 1:30 PM (UTC+0) | [Lesson #3: Custom App Development - backend basics](lesson-3)       |
 | Wednesday, Jun 24, 2026 | 1:30 PM (UTC+0) | [Lesson #4: Custom App Development - frontend basics](lesson-4)      |
 | Wednesday, Jul 8, 2026  | 1:30 PM (UTC+0) | [Lesson #5: Custom App Development - CarRental app](lesson-5)        |
