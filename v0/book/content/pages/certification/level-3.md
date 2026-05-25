@@ -16,4 +16,4 @@ The graduated student will learn how to:
   * define models, views and controllers
   * install custom app with default data
 
-Content of this certification programme is currently under development.
+Content of this certification course is currently under development.

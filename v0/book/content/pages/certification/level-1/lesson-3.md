@@ -34,4 +34,4 @@ Do you have any question or comment? Leave us a message in the community portal.
 
 <a class="btn" href="https://community.hubleto.eu/d/35-qa-developer-certification-level-1"><span class="text">Go to community.hubleto.eu</span></a>
 
-If you are new here, learn more about [developer certification programme](../../certification).
+If you are new here, learn more about [developer certification course](../../certification).

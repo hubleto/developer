@@ -16,4 +16,4 @@ The graduate student will learn how to:
   * integrate with other apps like *Calendars* or *Tasks*
   * various tips&tricks to boost effectivity
 
-Content of this certification programme is currently under development.
+Content of this certification course is currently under development.

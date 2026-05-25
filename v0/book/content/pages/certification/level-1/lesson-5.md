@@ -8,7 +8,7 @@ The goal of this task is to verify the certification candidate's knowledge.
 
 ## Preparation
 
-Before starting the task, we recommend read through the [Level-1 certification programme](../level-1).
+Before starting the task, we recommend read through the [Level-1 certification course](../level-1).
 
 ## Task
 

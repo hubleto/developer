@@ -21,9 +21,9 @@ design patterns like, e.g. routing, controllers or views.
 
 ## Introduction
 
-This document contains training material for Hubleto Certified Developer training. It is a source of questions and answers for the certification programme.
+This document contains training material for Hubleto Certified Developer training. It is a source of questions and answers for the certification course.
 
-To get a Level 1 certification, you shall pass the certification programme. Here you will find training materials and resources to pass this programme.
+To get a Level 1 certification, you shall pass the certification course. Here you will find training materials and resources to pass this course.
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ Before starting, check out these additional resources:
 
 ## Lessons
 
-The certification programme is divided into several lessons. Each lesson covers a specific topic like, e.g. basic introduction to Hubleto or best practices in development. 
+The certification course is composed of several lessons. Each lesson covers a specific topic like, e.g. basic introduction to Hubleto or best practices in development. 
 
 ## Lesson #1: Introduction to Hubleto
   - About Hubleto.
