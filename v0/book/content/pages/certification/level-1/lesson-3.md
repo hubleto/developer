@@ -1,4 +1,4 @@
-# Lesson 3: Custom App Development - backend basics
+# Lesson 3: Business Apps Development - backend
 
 <i class="fas fa-medal mr-2"></i> Developer Certification Level 1
 

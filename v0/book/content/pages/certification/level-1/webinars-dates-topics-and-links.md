@@ -6,10 +6,10 @@
 | ----------------------- | --------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | Wednesday, May 13, 2026 | 1:30 PM (UTC+0) | [Lesson #1: Introduction to Hubleto](lesson-1)                       | [YouTube recording](https://www.youtube.com/watch?v=_hJSIheo0sA)                      |
 | Wednesday, May 27, 2026 | 1:30 PM (UTC+0) | [Lesson #2: Overview of Hubleto features](lesson-2)                  | [LinkedIn Event](https://www.linkedin.com/events/7460623591261470720?viewAsMember=true) |
-| Wednesday, Jun 10, 2026 | 1:30 PM (UTC+0) | [Lesson #3: Custom App Development - backend basics](lesson-3)       |                                                                                       |
-| Wednesday, Jun 24, 2026 | 1:30 PM (UTC+0) | [Lesson #4: Custom App Development - frontend basics](lesson-4)      |                                                                                       |
-| Wednesday, Jul 8, 2026  | 1:30 PM (UTC+0) | [Lesson #5: Custom App Development - CarRental app](lesson-5)        |                                                                                       |
-| Wednesday, Jul 22, 2026 | 1:30 PM (UTC+0) | [Lesson #6: Custom App Development - IpInfoTest app](lesson-6)       |                                                                                       |
+| Wednesday, Jun 10, 2026 | 1:30 PM (UTC+0) | [Lesson #3: Business Apps Development - backend](lesson-3)       |                                                                                       |
+| Wednesday, Jun 24, 2026 | 1:30 PM (UTC+0) | [Lesson #4: Business Apps Development - frontend](lesson-4)      |                                                                                       |
+| Wednesday, Jul 8, 2026  | 1:30 PM (UTC+0) | [Lesson #5: Business Apps Development - CarRental app](lesson-5)        |                                                                                       |
+| Wednesday, Jul 22, 2026 | 1:30 PM (UTC+0) | [Lesson #6: Business Apps Development - IpInfoTest app](lesson-6)       |                                                                                       |
 | Wednesday, Aug 5, 2026  | 1:30 PM (UTC+0) | [Lesson #7: Hubleto ReactUi basics](lesson-7)                        |                                                                                       |
 | Wednesday, Aug 19, 2026 | 1:30 PM (UTC+0) | [Lesson #8: Models, RecordManagers and Migrations, part 1](lesson-8) |                                                                                       |
 | Wednesday, Sep 2, 2026  | 1:30 PM (UTC+0) | [Lesson #9: Models, RecordManagers and Migrations, part 2](lesson-9) |                                                                                       |

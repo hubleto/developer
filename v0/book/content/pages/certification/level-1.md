@@ -69,7 +69,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
 
 <a class="btn" href="level-1/lesson-2"><span class="text">Open lesson #2</span></a>
 
-## Lesson #3: Custom App Development - backend basics
+## Lesson #3: Business Apps Development - backend
   - Create custom CarRental app.
   - Overview of Model and RecordManager concepts.
   - Create models (Car, RentalHistory) and their RecordManagers.
@@ -77,7 +77,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
 
 <a class="btn" href="level-1/lesson-3"><span class="text">Open lesson #3</span></a>
 
-## Lesson #4: Custom App Development - frontend basics
+## Lesson #4: Business Apps Development - frontend
   - Overview of previous developments in custom CarRental app.
   - Overview of DescriptionAPI with practical example (describeTable).
   - Create controllers and views (Cars, RentalHistories).
@@ -85,7 +85,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
 
 <a class="btn" href="level-1/lesson-4"><span class="text">Open lesson #4</span></a>
 
-## Lesson #5: Custom App Development - CarRental app
+## Lesson #5: Business Apps Development - CarRental app
   - Overview of previous developments in custom CarRental app.
   - Recapitulation of backend programming.
   - Recapitulation of frontend programming.
