@@ -5,8 +5,8 @@
 | Date                    | Time (UTC+0)    | Topic                                                                | Links                                                                                 |
 | ----------------------- | --------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | Wednesday, May 13, 2026 | 1:30 PM (UTC+0) | [Lesson #1: Introduction to Hubleto](lesson-1)                       | [YouTube recording](https://www.youtube.com/watch?v=_hJSIheo0sA)                      |
-| Wednesday, May 27, 2026 | 1:30 PM (UTC+0) | [Lesson #2: Overview of Hubleto features](lesson-2)                  | [LinkedIn Event](https://www.linkedin.com/events/7460623591261470720?viewAsMember=true) |
-| Wednesday, Jun 10, 2026 | 1:30 PM (UTC+0) | [Lesson #3: Business Apps Development - backend](lesson-3)       |                                                                                       |
+| Wednesday, May 27, 2026 | 1:30 PM (UTC+0) | [Lesson #2: Overview of Hubleto features](lesson-2)                  | [Youtube recording](https://www.youtube.com/watch?v=Qv7vmQXFYrE) |
+| Wednesday, Jun 10, 2026 | 1:30 PM (UTC+0) | [Lesson #3: Business Apps Development - backend](lesson-3)           | [LinkedIn Event](https://www.linkedin.com/events/7465666734339997697/?viewAsMember=true) |
 | Wednesday, Jun 24, 2026 | 1:30 PM (UTC+0) | [Lesson #4: Business Apps Development - frontend](lesson-4)      |                                                                                       |
 | Wednesday, Jul 8, 2026  | 1:30 PM (UTC+0) | [Lesson #5: Business Apps Development - CarRental app](lesson-5)        |                                                                                       |
 | Wednesday, Jul 22, 2026 | 1:30 PM (UTC+0) | [Lesson #6: Business Apps Development - IpInfoTest app](lesson-6)       |                                                                                       |
