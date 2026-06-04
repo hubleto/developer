@@ -218,6 +218,7 @@ tableOfContents:
         icon: fas fa-gears
       - page: tutorials/complex-model-with-crud-components
       - page: tutorials/code-samples
+      - page: tutorials/hubleto-dev-hosting
   - page: certification
     icon: fas fa-id-badge
     children:
