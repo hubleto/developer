@@ -9,6 +9,8 @@ you can build a new feature and instantly share a test link with customers. No l
 Through the Web UI, you can manage your assigned Hubleto accounts. At the moment, you can only create and delete the SSH
 access to them.
 
+> 🚀 **Are you interested in Hubleto Dev Hosting?** Sign up for the [Hubleto Dev Academy](https://www.hubleto.eu/en/certified-developer) to get access!
+
 <img src="../book/content/assets/images/dev_ssh.jpg" />
 
 ## How to Set Up a Hubleto Dev Hosting Development Environment
