@@ -11,5 +11,13 @@ access to them.
 
 <img src="../book/content/assets/images/dev_ssh.jpg" />
 
+## How to Set Up a Hubleto Dev Hosting Development Environment
+
+1. Log in to the Hubleto Dev Hosting.
+2. Select a Hubleto account and create SSH access for it.
+3. Open VS Code and establish a new Remote SSH connection.
+4. Use the SSH details provided by Hubleto Dev Hosting to log in.
+5. Once connected, you can start developing your app in the remote environment. You can use the terminal to run commands and manage your files as if you were working on your local machine.
+
 > 🚧 Hubleto Dev Hosting is currently a Live Beta environment. This page will be extended as more features are added.
 
