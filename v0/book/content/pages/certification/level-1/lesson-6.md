@@ -257,9 +257,9 @@ In `Models/FavoriteIp.php`, keep only the fields you really need:
 public string $table = 'ip_info_test_favorite_ips';
 public string $recordManagerClass = RecordManagers\FavoriteIp::class;
 
-public ?string $lookupSqlValue = '{%TABLE%}.ip';
+public ?string $lookupSqlValue = '{{ "{%" }}TABLE{{ "%}" }}.ip';
 public ?string $lookupUrlAdd = 'ip-info-test/favorite-ips/add';
-public ?string $lookupUrlDetail = 'ip-info-test/favorite-ips/{%ID%}';
+public ?string $lookupUrlDetail = 'ip-info-test/favorite-ips/{{ "{%" }}ID{{ "%}" }}';
 ```
 
 The columns are straightforward:
@@ -329,27 +329,27 @@ The lookup form itself is plain Twig:
 ```html
 <form method="get">
   <div class="mb-2">
-    <label class="form-label" for="ip">{{ translate('IP address') }}</label>
-    <input class="form-control" id="ip" type="text" name="ip" value="{{ viewParams.ip|default('') }}" placeholder="8.8.8.8" required />
+    <label class="form-label" for="ip">{{ "{{" }} translate('IP address') {{ "}}" }}</label>
+    <input class="form-control" id="ip" type="text" name="ip" value="{{ "{{" }} viewParams.ip|default('') {{ "}}" }}" placeholder="8.8.8.8" required />
   </div>
 
-  <button class="btn btn-primary" type="submit">{{ translate('Lookup') }}</button>
+  <button class="btn btn-primary" type="submit">{{ "{{" }} translate('Lookup') {{ "}}" }}</button>
 </form>
 ```
 
 The results block is also plain HTML:
 
 ```html
-{% if viewParams.result is not empty %}
+{{ "{%" }} if viewParams.result is not empty {{ "%}" }}
   <div class="card p-3 mb-3">
     <table class="table table-sm mb-3">
       <tbody>
-        <tr><th>{{ translate('IP address') }}</th><td>{{ viewParams.result.ip }}</td></tr>
-        <tr><th>{{ translate('Country') }}</th><td>{{ viewParams.result.country }}</td></tr>
-        <tr><th>{{ translate('Region') }}</th><td>{{ viewParams.result.region }}</td></tr>
-        <tr><th>{{ translate('City') }}</th><td>{{ viewParams.result.city }}</td></tr>
-        <tr><th>{{ translate('Timezone') }}</th><td>{{ viewParams.result.timezone }}</td></tr>
-        <tr><th>{{ translate('Organization') }}</th><td>{{ viewParams.result.org }}</td></tr>
+        <tr><th>{{ "{{" }} translate('IP address') {{ "}}" }}</th><td>{{ "{{" }} viewParams.result.ip {{ "}}" }}</td></tr>
+        <tr><th>{{ "{{" }} translate('Country') {{ "}}" }}</th><td>{{ "{{" }} viewParams.result.country {{ "}}" }}</td></tr>
+        <tr><th>{{ "{{" }} translate('Region') {{ "}}" }}</th><td>{{ "{{" }} viewParams.result.region {{ "}}" }}</td></tr>
+        <tr><th>{{ "{{" }} translate('City') {{ "}}" }}</th><td>{{ "{{" }} viewParams.result.city {{ "}}" }}</td></tr>
+        <tr><th>{{ "{{" }} translate('Timezone') {{ "}}" }}</th><td>{{ "{{" }} viewParams.result.timezone {{ "}}" }}</td></tr>
+        <tr><th>{{ "{{" }} translate('Organization') {{ "}}" }}</th><td>{{ "{{" }} viewParams.result.org {{ "}}" }}</td></tr>
       </tbody>
     </table>
 ```
@@ -359,8 +359,8 @@ And saving the result uses a small POST form:
 ```html
 <form method="post">
   <input type="hidden" name="action" value="save" />
-  <input type="hidden" name="ip" value="{{ viewParams.result.ip }}" />
-  <button class="btn btn-success" type="submit">{{ translate('Save to favorites') }}</button>
+  <input type="hidden" name="ip" value="{{ "{{" }} viewParams.result.ip {{ "}}" }}" />
+  <button class="btn btn-success" type="submit">{{ "{{" }} translate('Save to favorites') {{ "}}" }}</button>
 </form>
 ```
 
@@ -375,12 +375,12 @@ In `Views/FavoriteIps.twig`, the essential code is:
 ```html
 <hblreact-ip-info-test-table-favorite-ips
   string:tag="table-favorite-ips"
-  int:record-id="{{ viewParams.recordId }}"
-  string:view="{{ viewParams.view }}"
-  string:fulltext-search='{{ viewParams.q }}'
-  json:column-search='{{ viewParams.search|json_encode }}'
-  json:filters='{{ viewParams.filters|json_encode }}'
-  string:form-active-tab-uid='{{ viewParams.tab }}'
+  int:record-id="{{ "{{" }} viewParams.recordId {{ "}}" }}"
+  string:view="{{ "{{" }} viewParams.view {{ "}}" }}"
+  string:fulltext-search='{{ "{{" }} viewParams.q {{ "}}" }}'
+  json:column-search='{{ "{{" }} viewParams.search|json_encode {{ "}}" }}'
+  json:filters='{{ "{{" }} viewParams.filters|json_encode {{ "}}" }}'
+  string:form-active-tab-uid='{{ "{{" }} viewParams.tab {{ "}}" }}'
 ></hblreact-ip-info-test-table-favorite-ips>
 ```
 
