@@ -8,6 +8,7 @@
     <li id="{{ itemIdPrefix }}_{{ itemCounter }}" class="level-{{ level }}">
       {% if item.children is iterable %}
         <a href="{% if not isWip %}{{ env.guideRootUrl }}/{{ item.page ?? '' }}{% else %}{{ env.guideRootUrl }}/{{ item.page }}{% endif %}"
+          data-page="{{ item.page }}"
           class="
             btn
             {% if breadcrumbs|last == item.page %} btn-primary {% else %} btn-transparent {% endif %}
@@ -22,6 +23,9 @@
           {% if level == 0 %} <span class="icon"><i class="{{ item.icon }}"></i></span> {% endif %}
           <span class="text grow {% if level == 0 %} font-bold {% endif %}">
             {{ pageTitle }}
+          </span>
+          <span class="toggle-arrow {% if item.page in breadcrumbs %}is-open{% endif %}" onclick="event.preventDefault(); event.stopPropagation(); toggleTree(this.parentElement);">
+            <i class="fas fa-chevron-right"></i>
           </span>
         </a>
         <div
@@ -62,15 +66,15 @@
 <!-- Sidebar -->
 <div class="sidebar" role="dialog" tabindex="-1" aria-label="Sidebar">
 
-  <div class="relative flex flex-col h-full max-h-full pb-10">
-    <div class="m-auto mt-2 mb-2">
+  <div class="relative flex flex-col h-full max-h-full">
+    <div class="mx-auto mb-2 sidebar-logo-wrap">
       <a href="{{ guideRootUrl }}"><img class="logo" src="{{ templateRootUrl }}/assets/images/logo-hubleto-text-vertical.png"/></a>
     </div>
     <div class="m-auto px-6 pt-0 pb-4 text-center">
       <div class="my-2">Developer's guide</div>
     </div>
     <div class="px-3 pb-2">
-      <form action="{{ env.guideRootUrl }}/{{ searchPage }}" method="get">
+      <form action="{{ env.guideRootUrl }}/{{ searchPage }}" method="get" onsubmit="if(!this.q.value.trim())return false;">
         <div class="relative">
           <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
             <svg class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -81,10 +85,15 @@
           <input
             type="text"
             name="q"
-            class="py-2 ps-10 pe-4 block w-full bg-gray-800 border-gray-700 text-slate-300 placeholder:text-gray-500 rounded-lg text-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500"
-            placeholder="Search..."
+            class="py-2 ps-10 pe-9 block w-full bg-gray-800 border-gray-700 text-slate-300 placeholder:text-gray-500 rounded-lg text-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+            placeholder="Press Enter for full search"
             value="{{ data.query ?? '' }}"
           >
+          <button type="button" class="search-clear absolute inset-y-0 end-0 flex items-center pe-3 z-20" onclick="clearSearch()" style="display:none;">
+            <svg class="shrink-0 size-3.5 text-gray-400 hover:text-gray-200 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+            </svg>
+          </button>
         </div>
       </form>
     </div>
@@ -117,6 +126,148 @@
         break;
     }
   }
+
+  function getSidebarState() {
+    try { return JSON.parse(localStorage.getItem('sidebarState') || '{}'); } catch(e) { return {}; }
+  }
+
+  function saveSidebarState() {
+    var state = {};
+    document.querySelectorAll('.sidebar .has-children[data-page]').forEach(function(el) {
+      state[el.getAttribute('data-page')] = el.classList.contains('expanded');
+    });
+    localStorage.setItem('sidebarState', JSON.stringify(state));
+  }
+
+  function toggleTree(el) {
+    var arrow = el.querySelector('.toggle-arrow');
+    if (el.classList.contains('expanded')) {
+      el.classList.remove('expanded');
+      el.classList.add('collapsed');
+      if (arrow) arrow.classList.remove('is-open');
+    } else {
+      el.classList.remove('collapsed');
+      el.classList.add('expanded');
+      if (arrow) arrow.classList.add('is-open');
+    }
+    saveSidebarState();
+  }
+
+  // Restore saved open states on page load
+  (function() {
+    var saved = getSidebarState();
+    document.querySelectorAll('.sidebar .has-children[data-page]').forEach(function(el) {
+      var page = el.getAttribute('data-page');
+      if (saved[page] === true && el.classList.contains('collapsed')) {
+        el.classList.remove('collapsed');
+        el.classList.add('expanded');
+        var arrow = el.querySelector('.toggle-arrow');
+        if (arrow) arrow.classList.add('is-open');
+      }
+    });
+  })();
+
+  function clearSearch() {
+    var input = document.querySelector('.sidebar input[name="q"]');
+    if (input) {
+      input.value = '';
+      input.dispatchEvent(new Event('input'));
+      input.focus();
+    }
+  }
+
+  // Live search — dim non-matches, highlight matching text
+  (function() {
+    var input = document.querySelector('.sidebar input[name="q"]');
+    if (!input) return;
+
+    var clearBtn = document.querySelector('.search-clear');
+    var allItems = document.querySelectorAll('.sidebar-content nav li');
+
+    // Capture initial server-rendered expanded state + original text per item
+    var initialExpanded = {};
+    document.querySelectorAll('.sidebar .has-children[data-page]').forEach(function(el) {
+      initialExpanded[el.getAttribute('data-page')] = el.classList.contains('expanded');
+    });
+    allItems.forEach(function(li) {
+      var textEl = li.querySelector(':scope > a .text');
+      if (textEl) li._origText = textEl.textContent.trim();
+    });
+
+    function resetFilter() {
+      allItems.forEach(function(li) {
+        li.classList.remove('search-dimmed', 'search-match');
+      });
+      // Restore expand/collapse: server-rendered breadcrumb state OR saved localStorage
+      var saved = getSidebarState();
+      document.querySelectorAll('.sidebar .has-children[data-page]').forEach(function(el) {
+        var page = el.getAttribute('data-page');
+        var shouldExpand = saved[page] !== undefined ? saved[page] : initialExpanded[page];
+        var arrow = el.querySelector('.toggle-arrow');
+        if (shouldExpand) {
+          el.classList.remove('collapsed');
+          el.classList.add('expanded');
+          if (arrow) arrow.classList.add('is-open');
+        } else {
+          el.classList.remove('expanded');
+          el.classList.add('collapsed');
+          if (arrow) arrow.classList.remove('is-open');
+        }
+      });
+    }
+
+
+    function expandParentChain(li) {
+      var node = li.parentElement;
+      while (node) {
+        if (node.tagName === 'LI') {
+          node.classList.remove('search-dimmed');
+          var link = node.querySelector(':scope > a.has-children');
+          if (link) {
+            link.classList.remove('collapsed');
+            link.classList.add('expanded');
+            var arrow = link.querySelector('.toggle-arrow');
+            if (arrow) arrow.classList.add('is-open');
+          }
+        }
+        node = node.parentElement;
+        if (node && node.classList && node.classList.contains('sidebar-content')) break;
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      if (clearBtn) clearBtn.style.display = q.length > 0 ? 'flex' : 'none';
+
+      if (q.length < 2) {
+        resetFilter();
+        return;
+      }
+
+      // Dim everything, collapse all
+      allItems.forEach(function(li) {
+        li.classList.add('search-dimmed');
+        li.classList.remove('search-match');
+      });
+      document.querySelectorAll('.sidebar .has-children[data-page]').forEach(function(el) {
+        el.classList.remove('expanded');
+        el.classList.add('collapsed');
+        var arrow = el.querySelector('.toggle-arrow');
+        if (arrow) arrow.classList.remove('is-open');
+      });
+
+      // Highlight matches, undim them + parent chain
+      allItems.forEach(function(li) {
+        var textEl = li.querySelector(':scope > a .text');
+        if (!textEl || !li._origText) return;
+        if (li._origText.toLowerCase().indexOf(q) !== -1) {
+          li.classList.remove('search-dimmed');
+          li.classList.add('search-match');
+          expandParentChain(li);
+        }
+      });
+    });
+  })();
 
 </script>
 <!-- End Sidebar -->

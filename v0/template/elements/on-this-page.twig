@@ -1,10 +1,10 @@
-{% if onThisPage|length > 0 %}
-  <aside class="on-this-page">
+<aside class="on-this-page">
+  {% if onThisPage|length > 0 %}
     <div><div>On this page</div></div>
     <div>
       {% for h2, h3list in onThisPage %}
-        <a href="#{{ h2 }}" class="btn btn-transparent w-full mb-2"><span class="text">{{ h2 }}</span></a>
+        <a href="#{{ h2 }}"><span class="text">{{ h2 }}</span></a>
       {% endfor %}
     </div>
-  </aside>
-{% endif %}
+  {% endif %}
+</aside>

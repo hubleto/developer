@@ -67,7 +67,7 @@ In following chapters, we will learn how default features of Hubleto are impleme
 
 <div class="mt-8 grid gap-8 md:grid-cols-2">
   <div class="card border-yellow-300">
-    <div class="card-header bg-yellow-50">Hubleto Core</div>
+    <div class="card-header bg-yellow-800 text-yellow-200">Hubleto Core</div>
     <div class="card-body flex flex-col gap-2">
       <a href="#" class="btn btn-white block"><span class="text">User interface</span></a>
       <a href="core-architecture/user-management-and-authentication" class="btn btn-white block"><span class="text">User management and authentication</span></a>
@@ -77,7 +77,7 @@ In following chapters, we will learn how default features of Hubleto are impleme
     </div>
   </div>
   <div class="card border-green-300">
-    <div class="card-header bg-green-50">Hubleto App</div>
+    <div class="card-header bg-green-900 text-green-200">Hubleto App</div>
     <div class="card-body flex flex-col gap-2">
       <a href="#" class="btn btn-white block"><span class="text">Loader</span></a>
       <a href="#" class="btn btn-white block"><span class="text">Models, views & controllers</span></a>
