@@ -2,6 +2,8 @@
 
 <i class="fas fa-medal mr-2"></i> Developer Certification Level 1
 
+<iframe width="373" height="210" src="https://www.youtube.com/embed/9agAiqGtqmI?> si=7R88l7M2eTpfIhcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Introduction
 
 In this lesson, the student will learn the basics about Hubleto ecosystem. The student will also be able to install Hubleto to his local development environment.
@@ -19,9 +21,9 @@ In this lesson, the student will learn the basics about Hubleto ecosystem. The s
 | [`php hubleto` CLI agent](../../cli-agent)                                                                                    | Introduction to CLI agent.                                                                              |
 | [Sample `CarRental` app](https://github.com/mrgopes/hubleto-car-rental)                                                       | Source code of a sample CarRental app.                                                                  |
 
-## Videos
+## Archived livestream
 
-<iframe width="373" height="210" src="https://www.youtube.com/embed/9agAiqGtqmI?> si=7R88l7M2eTpfIhcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_hJSIheo0sA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Do you have any question?
 

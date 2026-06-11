@@ -2,6 +2,8 @@
 
 <i class="fas fa-medal mr-2"></i> Developer Certification Level 1
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TAAEUhiyyAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Introduction
 
 In this lesson, you will get a comprehensive overview of Hubleto's built-in features and applications. Understanding the existing ecosystem is crucial before building custom apps. You'll learn about the core app categories, how to manage users and settings, the basics of the Hubleto User Interface, and how the App Manager controls the platform.
@@ -76,9 +78,9 @@ The App Manager allows administrators to install, upgrade, or uninstall these mo
 | [App Manager](../../docs/erp/advanced-development/core-architecture) | Understanding how Hubleto's core architecture manages apps. |
 | [User Guide: Features Overview](https://help.hubleto.eu/v0/en/features-overview) | Detailed user documentation on Global Search, Data Grids, and Record Forms. |
 
-## Videos
+## Archived livestream
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TAAEUhiyyAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qv7vmQXFYrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Do you have any question?
 
