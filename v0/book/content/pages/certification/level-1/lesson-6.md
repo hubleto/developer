@@ -2,6 +2,8 @@
 
 <i class="fas fa-medal mr-2"></i> Developer Certification Level 1
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2CVe1o2NKik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Introduction
 
 In this lesson, you will build a small custom Hubleto app called `IpInfoTest`. The goal is to combine everything learned in Lessons 3, 4, and 5 into one simple, realistic exercise:
@@ -527,10 +529,6 @@ After all edits, the important files of the final app are:
 | [Controllers](../../docs/erp/advanced-development/core-classes/controller) | Controller basics. |
 | [Views](../../docs/erp/advanced-development/customizing-ui/view) | Twig views in Hubleto. |
 | [React UI Components](../../docs/framework/views/react-ui) | Hubleto React UI library usage. |
-
-## Videos
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2CVe1o2NKik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Do you have any questions?
 

@@ -2,6 +2,8 @@
 
 <i class="fas fa-medal mr-2"></i> Developer Certification Level 1
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zmN_jaTd25M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Introduction
 
 In this lesson, you will learn the backend basics for building a custom Hubleto app from scratch. You will explore how Hubleto separates database logic into Models and RecordManagers, how to create your own tables, and how to define relations.
@@ -24,9 +26,9 @@ In this lesson, you will learn the backend basics for building a custom Hubleto 
 | [`php hubleto` CLI agent](../../cli-agent)                                                                                    | Introduction to the CLI agent and its commands for generating boilerplate code.                         |
 | [Sample `CarRental` app](https://github.com/mrgopes/hubleto-car-rental)                                                       | Source code of a sample CarRental app.                                                                  |
 
-## Videos
+## Archived livestream
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zmN_jaTd25M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vZYjOEDjupc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Do you have any question?
 

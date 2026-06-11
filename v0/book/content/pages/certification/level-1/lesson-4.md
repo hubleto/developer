@@ -2,6 +2,8 @@
 
 <i class="fas fa-medal mr-2"></i> Developer Certification Level 1
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6RQDVTA-yKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Introduction
 
 In this lesson, we explore how Hubleto handles the frontend layer of custom applications. Following the backend data structures created in Lesson 3, you will learn how to present this data using the **DescriptionAPI**, route requests via **Controllers**, and render fully interactive interfaces using **Twig Views** combined with Hubleto's built-in **React UI components**.
@@ -124,10 +126,6 @@ If you open `Views/Cars.twig`, you will see how seamlessly the React data grid i
 | [Views](../../docs/erp/advanced-development/customizing-ui/view) | Learn about the Twig templating engine used in Hubleto. |
 | [React UI Components](../../docs/framework/views/react-ui) | How to use Hubleto's built-in React components in your views. |
 | [Sample `CarRental` app](https://github.com/mrgopes/hubleto-car-rental) | Source code of the completed CarRental app. |
-
-## Videos
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6RQDVTA-yKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Do you have any questions?
 

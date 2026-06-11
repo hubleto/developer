@@ -59,7 +59,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
   - Install production ready Hubleto using Composer.
   - Overview of Hubleto apps and basic development tools.
 
-<a class="btn" href="level-1/lesson-1"><span class="text">Open lesson #1</span></a>
+<a class="btn" href="level-1/lesson-1"><span class="text">Open lesson #1</span></a> <span class="inline-flex items-center gap-2 align-middle ml-2 rounded-full border border-blue-200/25 bg-blue-400/5 px-2 py-1 text-xs font-medium leading-none text-blue-200/90"><i class="fas fa-video text-[0.7rem]"></i><span>Video available</span></span>
 
 ## Lesson #2: Overview of Hubleto features
   - CRM, Marketing, Sales, Productivity, Finance, Maintenance, Help
@@ -67,7 +67,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
   - UI basics - sidebar, tables, forms, localization, searching
   - App Manager
 
-<a class="btn" href="level-1/lesson-2"><span class="text">Open lesson #2</span></a>
+<a class="btn" href="level-1/lesson-2"><span class="text">Open lesson #2</span></a> <span class="inline-flex items-center gap-2 align-middle ml-2 rounded-full border border-blue-200/25 bg-blue-400/5 px-2 py-1 text-xs font-medium leading-none text-blue-200/90"><i class="fas fa-video text-[0.7rem]"></i><span>Video available</span></span>
 
 ## Lesson #3: Business Apps Development - backend
   - Create custom CarRental app.
@@ -75,7 +75,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
   - Create models (Car, RentalHistory) and their RecordManagers.
   - Overview of 1:N relations.
 
-<a class="btn" href="level-1/lesson-3"><span class="text">Open lesson #3</span></a>
+<a class="btn" href="level-1/lesson-3"><span class="text">Open lesson #3</span></a> <span class="inline-flex items-center gap-2 align-middle ml-2 rounded-full border border-blue-200/25 bg-blue-400/5 px-2 py-1 text-xs font-medium leading-none text-blue-200/90"><i class="fas fa-video text-[0.7rem]"></i><span>Video available</span></span>
 
 ## Lesson #4: Business Apps Development - frontend
   - Overview of previous developments in custom CarRental app.
@@ -83,7 +83,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
   - Create controllers and views (Cars, RentalHistories).
   - Use built-in React UI components (`<app-table>`) in views.
 
-<a class="btn" href="level-1/lesson-4"><span class="text">Open lesson #4</span></a>
+<a class="btn" href="level-1/lesson-4"><span class="text">Open lesson #4</span></a> <span class="inline-flex items-center gap-2 align-middle ml-2 rounded-full border border-blue-200/25 bg-blue-400/5 px-2 py-1 text-xs font-medium leading-none text-blue-200/90"><i class="fas fa-video text-[0.7rem]"></i><span>Video available</span></span>
 
 ## Lesson #5: Business Apps Development - CarRental app
   - Overview of previous developments in custom CarRental app.
@@ -96,7 +96,7 @@ The certification course is composed of several lessons. Each lesson covers a sp
 ## Lesson #6: Custom App Development - IpInfoTest app
   - Development of IpInfoTest app
 
-<a class="btn" href="level-1/lesson-6"><span class="text">Open lesson #6</span></a>
+<a class="btn" href="level-1/lesson-6"><span class="text">Open lesson #6</span></a> <span class="inline-flex items-center gap-2 align-middle ml-2 rounded-full border border-blue-200/25 bg-blue-400/5 px-2 py-1 text-xs font-medium leading-none text-blue-200/90"><i class="fas fa-video text-[0.7rem]"></i><span>Video available</span></span>
 
 ## Lesson #7: Hubleto ReactUi basics
   - Overview of ReactUi library.
