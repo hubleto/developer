@@ -1,0 +1,33 @@
+@config "../../../tailwind.config.js";
+@layer theme, base, components, utilities, theme, components, app;
+
+@theme {
+  --font-sans: 'Gabarito', 'sans-serif';
+  --font-serif: 'Merriweather', 'serif';
+
+  --color-primary: #4780bf;
+  --color-secondary: #41c50d;
+  
+  --spacing-8xl: 96rem;
+  --spacing-9x: 128rem;
+
+  --radius-4xl: 2rem;
+}
+
+@import "tailwindcss";
+
+@import "./theme.twcss";
+@import "./components.twcss";
+
+@layer app {
+  @font-face {
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/Gabarito/static/Gabarito-Regular.ttf) format('truetype');
+  }
+
+  :root {
+    --font-family: 'Gabarito' !important;
+  }
+}

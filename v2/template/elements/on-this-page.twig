@@ -1,0 +1,10 @@
+<aside class="on-this-page">
+  {% if onThisPage|length > 0 %}
+    <div><div>On this page</div></div>
+    <div>
+      {% for h2, h3list in onThisPage %}
+        <a href="#{{ h2 }}"><span class="text">{{ h2 }}</span></a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</aside>
