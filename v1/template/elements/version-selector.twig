@@ -1,0 +1,5 @@
+<nav aria-label="Documentation version" style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:8px 0">
+  {% for version, label in {'v1': 'v1 (stable)', 'v2': 'v2 (development)'} %}
+    <a class="btn btn-extra-small {% if env.guideVersion == version %}btn-primary{% else %}btn-light{% endif %}" href="{{ env.guideRootUrl }}/../{{ version }}/{{ page }}"{% if env.guideVersion == version %} aria-current="true"{% endif %}><span class="text">{{ label }}</span></a>
+  {% endfor %}
+</nav>

@@ -1,0 +1,361 @@
+
+Storage for environment-specific configuration.
+
+# \Hubleto\Framework\Env
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="./Core">\Hubleto\Framework\Core</a></td></tr><tr><td>Implements</td><td>  <a href="./Interfaces/EnvInterface">\Hubleto\Framework\Interfaces\EnvInterface</a></td></tr></table>
+
+
+## Properties
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ projectFolder
+```php
+public string $projectFolder
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ projectUrl
+```php
+public string $projectUrl
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ secureFolder
+```php
+public string $secureFolder
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ uploadFolder
+```php
+public string $uploadFolder
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ srcFolder
+```php
+public string $srcFolder
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ releaseFolder
+```php
+public string $releaseFolder
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ uploadUrl
+```php
+public string $uploadUrl
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ assetsUrl
+```php
+public string $assetsUrl
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ assetsCompiledUrl
+```php
+public string $assetsCompiledUrl
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ requestedUri
+```php
+public string $requestedUri
+```
+
+
+
+## Methods
+
+### ƒ __construct
+
+```php
+public __construct(): mixed
+```
+
+
+## Inherited methods
+
+### ƒ __construct
+
+```php
+public __construct(): mixed
+```
+
+
+### ƒ setDebugLevel
+
+[Description for setDebugLevel]
+
+```php
+public setDebugLevel(int $level): void
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$level`  | **int** |             |
+
+
+### ƒ getDebugLevel
+
+[Description for getDebugLevel]
+
+```php
+public getDebugLevel(): int
+```
+
+
+### ƒ getServiceStatic
+
+Shortcut for the dependency injection.
+
+```php
+public static getServiceStatic(string $service): mixed
+```
+
+* This method is **static**.
+#### Parameters
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$service` | **string** |             |
+
+
+### ƒ getService
+
+[Description for getService]
+
+```php
+public getService(string $service): mixed
+```
+
+#### Parameters
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$service` | **string** |             |
+
+
+### ƒ loader
+
+Shortcut for the loader service.
+
+```php
+public loader(): \Hubleto\Framework\Loader
+```
+
+
+### ƒ env
+
+Shortcut for the env service.
+
+```php
+public env(): \Hubleto\Framework\Env
+```
+
+
+### ƒ authProvider
+
+Shortcut for the authentication service.
+
+```php
+public authProvider(): \Hubleto\Framework\Interfaces\AuthProviderInterface
+```
+
+
+### ƒ db
+
+Shortcut for the database service.
+
+```php
+public db(): \Hubleto\Framework\Db
+```
+
+
+### ƒ appManager
+
+Shortcut for the app manager service.
+
+```php
+public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
+```
+
+
+### ƒ router
+
+Shortcut for the router service.
+
+```php
+public router(): \Hubleto\Framework\Router
+```
+
+
+### ƒ eventManager
+
+Shortcut for the event manager service.
+
+```php
+public eventManager(): \Hubleto\Framework\EventManagerInterface
+```
+
+
+### ƒ sessionManager
+
+Shortcut for the session manager service.
+
+```php
+public sessionManager(): \Hubleto\Framework\SessionManager
+```
+
+
+### ƒ permissionsManager
+
+Shortcut for the permissions manager service.
+
+```php
+public permissionsManager(): \Hubleto\Framework\PermissionsManager
+```
+
+
+### ƒ cronManager
+
+Shortcut for the cron manager service.
+
+```php
+public cronManager(): \Hubleto\Framework\CronManager
+```
+
+
+### ƒ config
+
+Shortcut for the config service.
+
+```php
+public config(): \Hubleto\Framework\Interfaces\ConfigManagerInterface
+```
+
+
+### ƒ terminal
+
+Shortcut for the terminal service.
+
+```php
+public terminal(): \Hubleto\Framework\Interfaces\TerminalInterface
+```
+
+
+### ƒ logger
+
+Shortcut for the logger service.
+
+```php
+public logger(): \Hubleto\Framework\Interfaces\LoggerInterface
+```
+
+
+### ƒ locale
+
+Shortcut for the locale service.
+
+```php
+public locale(): \Hubleto\Framework\Interfaces\LocaleInterface
+```
+
+
+### ƒ renderer
+
+Shortcut for the renderer service.
+
+```php
+public renderer(): \Hubleto\Framework\Interfaces\RendererInterface
+```
+
+
+### ƒ translator
+
+Shortcut for the translator service.
+
+```php
+public translator(): \Hubleto\Framework\Interfaces\TranslatorInterface
+```
+
+
+### ƒ getModel
+
+[Description for getModel]
+
+```php
+public getModel(string $model): \Hubleto\Framework\Interfaces\ModelInterface
+```
+
+#### Parameters
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$model`  | **string** |             |
+
+
+### ƒ getController
+
+[Description for getController]
+
+```php
+public getController(string $controller): \Hubleto\Framework\Controller
+```
+
+#### Parameters
+
+| Parameter     | Type       | Description |
+|---------------|------------|-------------|
+| `$controller` | **string** |             |
+
+
+### ƒ translate
+
+```php
+public translate(string $string, array<string,string> $vars = [], string $contextInner = ''): string
+```
+
+#### Parameters
+
+| Parameter       | Type                     | Description |
+|-----------------|--------------------------|-------------|
+| `$string`       | **string**               |             |
+| `$vars`         | **array<string,string>** |             |
+| `$contextInner` | **string**               |             |
+

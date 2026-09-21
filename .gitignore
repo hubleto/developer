@@ -1,6 +1,6 @@
-v0/vendor
-v0/composer.lock
-v0/node_modules
-v0/package-lock.json
-v0/cfg/env.php
+v*/vendor
+v*/node_modules
+v*/package-lock.json
+v*/cfg/env.php
+v*/router.php
 .vscode
