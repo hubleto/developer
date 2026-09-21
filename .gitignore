@@ -1,4 +1,5 @@
 v*/vendor
+v*/composer.lock
 v*/node_modules
 v*/package-lock.json
 v*/cfg/env.php
