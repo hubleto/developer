@@ -233,4 +233,6 @@ tableOfContents:
           - page: certification/level-1/lesson-11
       - page: certification/level-2
       - page: certification/level-3
-      
+  - page: prompts
+    icon: fas fa-terminal
+
