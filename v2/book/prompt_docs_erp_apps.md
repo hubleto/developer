@@ -28,9 +28,9 @@ Create human-readable documentation for developers explaining:
     * Model's `describeColumns()` method. Purpose and examples.
     * Model's `describeTable()` method. Purpose and examples.
     * Model's `describeForm()` method. Purpose and examples.
-    * Model's `describeInputs()` method. Purpose and examples.
+    * Model's `describeInput()` method. Purpose and examples.
     * Initializing tables using `loadDescriptionAndData()` in `Table.tsx`
-    * Initializing forms using `loadDescriptionAndData()` in `Form.tsx`
+    * Initializing forms using `loadDescriptionAndRecord()` in `Form.tsx`
     * Adding sidebar filters using `$description->addFilter()` in `describeTable()`
   * Customizing tables and forms
     * List of renderer methods in `TableProps`
@@ -49,7 +49,7 @@ Create human-readable documentation for developers explaining:
     * Integration with Calendar app using custom `Calendar.php` class and `$calendarManager->addCalendar()`.
     * Integration with Workflow app using custom `Workflow.php` class and `$workflowManager->addWorkflowGroup()`.
     * Integration with Settings app using `$settingsApp->addSetting()`.
-    * Integration with Dashboards app using `$dashboardsApp->addBoard()`.
+    * Integration with Dashboards app using `$dashboardManager->addBoard()`.
     * Creating event listeners in `EventListeners` folder.
     * Registering event listeners using `$eventManager->addEventListener()`.
     * Rendering second sidebar using `Loader::renderSecondSidebar()`.

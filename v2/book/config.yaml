@@ -101,18 +101,13 @@ tableOfContents:
           - page: docs/erp/core
           - page: docs/erp/apps
             children:
-              - page: docs/erp/apps/create-app
-              - page: docs/erp/apps/folder-structure
-              - page: docs/erp/apps/manifest
-              - page: docs/erp/apps/loader
+              - page: docs/erp/apps/introduction
+              - page: docs/erp/apps/design-principles
               - page: docs/erp/apps/routing
-                status: "wip"
-              - page: docs/erp/apps/models-views-controllers
-                status: "wip"
-              - page: docs/erp/apps/user-interface
-                status: "wip"
-              - page: docs/erp/apps/miscellaneous
-                status: "wip"
+              - page: docs/erp/apps/translations
+              - page: docs/erp/apps/integrations
+              - page: docs/erp/apps/installation
+              - page: docs/erp/apps/command-line-tool
           - page: docs/erp/conventions
           - page: docs/erp/localization
           - page: docs/erp/advanced-development
