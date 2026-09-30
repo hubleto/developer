@@ -10,13 +10,20 @@ Create human-readable documentation for developers explaining:
   * Design principles
     * Design principles for models, including record managers and migrations.
     * Design principles for functional React components in `FC` folders, especially tables and forms.
-    * Design principles for Twig views.
-    * Design principles for special controllers: API controller and Cron controller.
+    * Design principles for special controllers: `ApiController` and `CronController`.
     * Design principles for event listeners.
-    * Using `hblreact` HTML tag.
+    * Using `hblreact` HTML tag in Twig views. Examples for rendering tables.
   * Routing
     * Creating CRUD routes using `$router->crud()`.
     * Creating other routes using `$router->get()`, for example for API controllers.
+  * Models vs. RecordManagers
+    * Model/RecordManager pairing.
+    * Relations in both model and record manager.
+    * Description API in model.
+    * `BelongsTo` and `HasMany` relations in record manager.
+    * `prepareReadQuery()` in record manager.
+    * `addUrlFiltersToQuery()` in record manager.
+    * `prepareLookupData()` in record manager.
   * Description API
     * Model's `describeColumns()` method. Purpose and examples.
     * Model's `describeTable()` method. Purpose and examples.
