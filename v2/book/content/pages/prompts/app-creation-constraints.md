@@ -76,5 +76,5 @@ Apply these constraints consistently and always doublecheck the generated code t
 
 I will describe the desired functionality in the following prompts.
 
-Always provide the generate app as the signle .zip package which I will only unpack to `src/apps` folder of my custom project.
+Always provide the generated app as the signle .zip package which I will only unpack to `src/apps` folder of my custom project.
 ```
