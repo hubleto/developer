@@ -45,6 +45,7 @@ Create human-readable documentation for developers explaining:
   * Translations
     * Translating React components using `const T = Translator` and `T.translate`.
     * Translating PHP classes using `$this->translate()`.
+    * Translating Twig views classes using `{{ translate }}`.
   * Integrations
     * Integration with Calendar app using custom `Calendar.php` class and `$calendarManager->addCalendar()`.
     * Integration with Workflow app using custom `Workflow.php` class and `$workflowManager->addWorkflowGroup()`.
