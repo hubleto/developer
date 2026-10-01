@@ -1949,8 +1949,10 @@
     }
   }
   .sidebar .sidebar-content {
-    height: 100%;
-    overflow-y: auto;
+    @media (width <= 48rem) {
+      height: 100%;
+      overflow-y: auto;
+    }
   }
   .sidebar .logo {
     margin: auto;
