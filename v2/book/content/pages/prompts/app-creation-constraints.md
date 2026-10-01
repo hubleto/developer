@@ -5,7 +5,7 @@ Below you will find a prompt to be used as constraints before creating an app. B
 ```
 I want to generate a custom Hubleto app. This prompt is a set of constraints and rules to be obeyed when generating a code.
 
-* Deeply read https://developer.hubleto.eu/docs/erp/apps and understand all topics explained there.
+* Deeply read https://developer.hubleto.eu/v2/docs/erp/apps and understand all topics explained there.
 * Deeply read https://github.com/hubleto/erp/tree/main/apps and understand the codebase of community apps, their architecture, namespaces, models, record managers, controllers, tables, forms, routing (both crud and non-crud), integration between apps, app loaders, and all other software-related principles.
 * Read all source code of all apps to deeply understand the principles and find common principles.
 * Strictly follow design patterns in existing codebase.
