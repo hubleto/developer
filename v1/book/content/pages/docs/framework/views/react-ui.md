@@ -15,7 +15,7 @@ To make the 2nd point - development of UI for management of data - the most effe
 The library is freely available and can be installed with the node package manager by calling `npm install @hubleto/react-ui`. However, it is packed in the *javascript assets* when you create your Hubleto ERP project with composer:
 
 ```bash
-composer create-project hubleto/erp-project .
+composer create-project hubleto/custom .
 ```
 
 ## Components

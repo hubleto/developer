@@ -8,7 +8,7 @@ We are going to create the HubletoApp called `ChatGpt`. To do this, we first nee
 
 ```
 cd /var/www/html/hubleto-chatgpt
-composer create-project hubleto/erp-project .
+composer create-project hubleto/custom .
 php hubleto init
 ```
 

@@ -60,7 +60,7 @@ I want to generate a custom Hubleto app. This prompt is a set of constraints and
   * Always create separate `Table` and `Form` components for each model. Do NOT combine multiple models together.
   * Always create `Loader.tsx` file similar to examples from community apps.
   * In form components, use multiple tabs when appropriate. See examples in community apps.
-  * In form components, format input with `cssClassName` property when appropriate. See examples in community apps.
+  * In form components, format input with `customInputProps` and `cssClass` property when appropriate. See examples in community apps.
   * Always translate string rendered on screen with `T.translate`.
 * Integration with other apps:
   * If the app is integrated with `Workflows` app, always use `$workflowManager->addWorkflowGroup()` in `Loader->init()`.
