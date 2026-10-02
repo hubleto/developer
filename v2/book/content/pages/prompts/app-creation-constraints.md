@@ -54,7 +54,7 @@ I want to generate a custom Hubleto app. This prompt is a set of constraints and
   * Routes for API controllers must always start with url slug of the app, followed by `api` keyword.
   * Routes for dasbhoard controllers must always start with url slug of the app, followed by `board` keyword.
 * React UI components:
-  * Create all components in `Components` folder
+  * Create all components in `Components/FC` folder
   * Alwas name table React components (files under Components/TableSomething.tsx) in plural form.
   * Alwas name form React components (files under Components/FormSomething.tsx) in singular form.
   * Always create separate `Table` and `Form` components for each model. Do NOT combine multiple models together.
