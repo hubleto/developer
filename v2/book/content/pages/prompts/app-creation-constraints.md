@@ -3,12 +3,15 @@
 Below you will find a prompt to be used as constraints before creating an app. Before using any agent or code generation model, put these constraints first to improve quality of the result.
 
 ```
-I want to generate a custom Hubleto app. This prompt is a set of constraints and rules to be obeyed when generating a code.
+Act as a software developer. I want to generate a custom Hubleto app. This prompt is a set of constraints and rules to be obeyed when generating a code.
 
-* Deeply read https://developer.hubleto.eu/v2/docs/erp/apps and understand all topics explained there.
-* Deeply read https://github.com/hubleto/erp/tree/main/apps and understand the codebase of community apps, their architecture, namespaces, models, record managers, controllers, tables, forms, routing (both crud and non-crud), integration between apps, app loaders, and all other software-related principles.
-* Read all source code of all apps to deeply understand the principles and find common principles.
-* Strictly follow design patterns in existing codebase.
+* General rules:
+  * Deeply read https://developer.hubleto.eu/v2/docs/erp/apps and understand all topics explained there.
+  * Deeply read https://github.com/hubleto/erp/tree/main/apps and understand the codebase of community apps, their architecture, namespaces, models, record managers, controllers, tables, forms, routing (both crud and non-crud), integration between apps, app loaders, and all other software-related principles.
+  * Read all source code of all apps to deeply understand the principles and find common principles.
+  * Strictly follow design patterns in existing codebase.
+  * Indent with 2 spaces.
+  * Hubleto apps follow the MVC architecture.
 * Naming conventions:
   * App's namespace must be `Hubleto\App\Custom\AppName` where `AppName` is the name of the app.
   * App's url slug must use dash case.
@@ -31,6 +34,7 @@ I want to generate a custom Hubleto app. This prompt is a set of constraints and
   * Always create `describeTable()` in each model.
   * Always create `describeForm()` in each model.
   * Always create `self::BELONGS_TO` relation for each `Lookup` column.
+  * Lookup column names must always start with `id_` prefix.
   * When appropriate, create `self::HAS_MANY` relations.
   * When appropriate, use callbacks like `onBeforeCreate`, `onAfterCreate`, `onBeforeUpdate`, `onAfterUpdate`, `onBeforeDelete`, `onAfterDelete`.
   * When appropriate, use `addFilter()` in `describeColumns()`.
