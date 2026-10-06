@@ -36,7 +36,7 @@ Follow these steps to setup the development environment for external apps:
 
 ```bash
 cd /var/www/html/my-hubleto
-composer create-project hubleto/custom .
+composer create-project hubleto/install .
 php hubleto init
 ```
 

@@ -6,7 +6,7 @@ Before you begin, ensure you have:
 1. A web server and database compatible with Hubleto (see [here](../getting-started#Prerequisities))
 2. `git`, `composer`, and `npm` installed
 
-> We'll use the following repositories: `hubleto/erp`, `hubleto/custom`, `hubleto/framework`, `hubleto/assets`, and `hubleto/react-ui`. Depending on your workflow, you may prefer to use your own forks. For this tutorial, we'll assume `/var/www/` is your web server root.
+> We'll use the following repositories: `hubleto/erp`, `hubleto/install`, `hubleto/framework`, `hubleto/assets`, and `hubleto/react-ui`. Depending on your workflow, you may prefer to use your own forks. For this tutorial, we'll assume `/var/www/` is your web server root.
 
 ## Recommended Directory Structure
 
@@ -25,7 +25,7 @@ Here, `/var/www/` is your web server root, and `hubleto` is a directory you crea
 
 1. **assets** (`hubleto/assets`): Contains built JavaScript and CSS assets for Hubleto.
 2. **erp** (`hubleto/erp`): Hosts apps and uses `hubleto/framework` for ERP functionality.
-3. **erp-project** (`hubleto/custom`): A production-ready wrapper for `hubleto/erp`.
+3. **erp-project** (`hubleto/install`): A production-ready wrapper for `hubleto/erp`.
 4. **external-apps**: For any custom or third-party apps you develop or integrate. Setup instructions are provided later.
 5. **framework** (`hubleto/framework`): The core of Hubleto.
 6. **react-ui** (`hubleto/react-ui`): Houses React components used by the framework.
@@ -34,7 +34,7 @@ Here, `/var/www/` is your web server root, and `hubleto` is a directory you crea
 
 ### erp-project
 
-After cloning `hubleto/custom` into `erp-project`, run:
+After cloning `hubleto/install` into `erp-project`, run:
 ```
 ./bin/use-local-repositories.sh /var/www/hubleto
 ```

@@ -15,7 +15,7 @@ To install Hubleto, you will need:
 Run following commands in any folder accessile by your webserver:
 
 ```bash
-composer create-project hubleto/custom .
+composer create-project hubleto/install .
 php hubleto init
 ```
 
@@ -29,7 +29,7 @@ This will install production-ready version ready to be used immediately.
 
 If you need to customize Hubleto, you will most probably develop your [custom Apps](../apps). You need to do few more steps to prepare Javascript and Tailwind compilation environment.
 
-Follow [steps described in README.md of hubleto/custom](https://github.com/hubleto/custom) to prepare the environment.
+Follow [steps described in README.md of hubleto/install](https://github.com/hubleto/install) to prepare the environment.
 
 ## Development environment
 

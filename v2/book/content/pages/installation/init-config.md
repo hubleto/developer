@@ -11,7 +11,7 @@ These variables can be provided in two ways:
 
 ## Configuration file
 
-An installation configuration file is in `.yaml` format. You can find some examples at `https://github.com/hubleto/custom`.
+An installation configuration file is in `.yaml` format. You can find some examples at `https://github.com/hubleto/install`.
 
 Minimial set of variables with their explanation is shown below.
 
