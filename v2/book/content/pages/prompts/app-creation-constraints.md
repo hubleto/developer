@@ -52,6 +52,8 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * Always create `addUrlFiltersToQuery()`, even if it would only call it's parent.
   * Always create `prepareLookupData()`, even if it would only call it's parent.
   * Generate all methods similar to examples from community apps.
+* Services:
+  * Always create service classes in separate `Services` folder.
 * Routing:
   * Always create routing for each model using `$router->crud()`.
   * Always create routing for API controllers using `$router->get()`.
@@ -71,6 +73,11 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * If the app is integrated with `Calendar` app, always use `$calendarManager->addCalendar()` in `Loader->init()`.
   * If the app is integrated with `Dashboards` app, always use `$dashboardManager->addBoard()` in `Loader->init()`.
   * If the app is integrated with `Settings` app, always use `$settingsApp->addSetting()` in `Loader->init()`.
+* Reuse of existing API:
+  * Always, whenever possible, reuse API from existing apps.
+  * For generating documents, use `Hubleto\App\Community\Documents\Generator` class.
+  * For creating internal notifications, use `Hubleto\App\Community\Notifications\Sender` class.
+  * For sending e-mail, use `Hubleto\App\Community\Mail\Loader->send()` method.
 * Miscellaneous:
   * App must be localizable - translate all strings rendered on the screen.
   * Always generate demo data in `Loader->generateDemoData()`
