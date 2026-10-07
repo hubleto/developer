@@ -15,7 +15,7 @@ Create plan to generate a code for Hubleto app.
 
 Output the plan in a markdown format.
 
-Read carefully constraints in https://developer.hubleto.eu/v2/prompts/app-creation-constraints.
+Read carefully constraints in https://developer.hubleto.eu/v2/ai-assisted-coding/app-creation-constraints.
 
 Study carefully https://github.com/hubleto/erp/tree/main/apps codebase.
 

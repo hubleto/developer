@@ -35,6 +35,8 @@ tableOfContents:
     children:
       - page: installation
       - page: nginx
+  - page: ai-assisted-coding
+    icon: fas fa-robot
   - page: cli-agent
     icon: fas fa-terminal
     children:
@@ -220,6 +222,4 @@ tableOfContents:
           - page: certification/level-1/lesson-11
       - page: certification/level-2
       - page: certification/level-3
-  - page: ai-assisted-coding
-    icon: fas fa-robot
 

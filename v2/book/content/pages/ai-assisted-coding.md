@@ -8,11 +8,11 @@ If you are new to AI assisted coding, we recommend you to watch this nice video 
 
 ## Prompts to provide constraints to AI agents
 
-  * [App creation plan](prompts/app-creation-plan)
-  * [App creation constraints](prompts/app-creation-constraints)
+  * [App creation plan](ai-assisted-coding/app-creation-plan)
+  * [App creation constraints](ai-assisted-coding/app-creation-constraints)
 
 ## Sample prompts to create some piece of code
 
-* [Simple insurance CRM](prompts/insurance-crm)
-* [Apps for human resources management](prompts/hr-community-apps)
-* [App for linkedin messages and followups](prompts/app-for-linkedin-messages-and-followup)
+* [Simple insurance CRM](ai-assisted-coding/insurance-crm)
+* [Apps for human resources management](ai-assisted-coding/hr-community-apps)
+* [App for linkedin messages and followups](ai-assisted-coding/app-for-linkedin-messages-and-followup)
