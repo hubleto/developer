@@ -13,14 +13,21 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * Indent with 2 spaces.
   * Hubleto apps follow the MVC architecture.
 * Naming conventions:
-  * App's namespace must be `Hubleto\App\Custom\AppName` where `AppName` is the name of the app.
-  * App's url slug must use dash case.
-  * Never use app name in model names, record manager names, React UI component names.
-  * Always name models in singular form.
-  * Always name record manager the same as its model.
-  * Always create separate controllers and views for each model. Do NOT combine multiple models into one controller and one view.
-  * Always name React UI table components using `TableModel.tsx` pattern, where `Model` is the plural form of the name of the appropriate model.
-  * Always name React UI form components using `FormModel.tsx` pattern, where `Model` is the singular form of the name of the appropriate model.
+  * General:
+    * App's namespace must be `Hubleto\App\Custom\AppName` where `AppName` is the name of the app.
+    * App's url slug must use kebab-case.
+  * Models:
+    * Always name models in singular form.
+    * Only the main/header model can be called the same as app. Otherwise, never use app name in model names, record manager names, React UI component names.
+  * Record managers:
+    * Always name record manager the same as its model.
+    * Cross-junction models naming patter must be with `Has`, e.g. `ProductHasCategory`.
+  * Controllers:
+    * Always create separate controllers and views for each model. Do NOT combine multiple models into one controller and one view.
+  * React-ui TSX components:
+    * Always name React UI table components using `TableModel.tsx` pattern, where `Model` is the plural form of the name of the appropriate model.
+    * Always name React UI form components using `FormModel.tsx` pattern, where `Model` is the singular form of the name of the appropriate model.
+    * Tag must use kebab-case.
 * App's Loader class:
   * Always create `init()` in app's Loader class
   * Always create `installApp()` in app's Loader class
@@ -39,6 +46,8 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * When appropriate, use callbacks like `onBeforeCreate`, `onAfterCreate`, `onBeforeUpdate`, `onAfterUpdate`, `onBeforeDelete`, `onAfterDelete`.
   * When appropriate, use `addFilter()` in `describeColumns()`.
   * Generate all methods similar to examples from community apps.
+  * Never create DTOs.
+  * `onBefore*` and `onAfter*` must always use `parent::` either at the beginning (e.g., `$record = parent::onBeforeCreate($record); ... return $record;`) or at the end (e.g., `return parent::onBeforeCreate($record);`).
 * Controllers:
   * Generate all CRUD controllers directly in `Controllers` folder.
   * Generate all API controllers in `Controllers/Api` folder.
@@ -68,6 +77,12 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * In form components, use multiple tabs when appropriate. See examples in community apps.
   * In form components, format input with `customInputProps` and `cssClass` property when appropriate. See examples in community apps.
   * Always translate string rendered on screen with `T.translate`.
+  * Use `FormCustomizer` to inject app's components (e.g. `Tab`, `ExtraHeaderButton`, `ExtraFooterButton`, ...) into forms of other apps.
+* Event listeners:
+  * A listener registered for `onModelAfterUpdate` runs for every model in the system. Each listener must return in its first line unless `$model` is an instance of a class it cares about.
+* Crons:
+  * Generate all crons in `Crons` folder.
+  * An app registers them in `init()` with `$this->cronManager()->addCron(Crons\X::class)`
 * Integration with other apps:
   * If the app is integrated with `Workflows` app, always use `$workflowManager->addWorkflowGroup()` in `Loader->init()`.
   * If the app is integrated with `Calendar` app, always use `$calendarManager->addCalendar()` in `Loader->init()`.
@@ -78,10 +93,14 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * For generating documents, use `Hubleto\App\Community\Documents\Generator` class.
   * For creating internal notifications, use `Hubleto\App\Community\Notifications\Sender` class.
   * For sending e-mail, use `Hubleto\App\Community\Mail\Loader->send()` method.
+* Patching community apps:
+  * If the generated app will require patches in community apps, describe them in `community-app-patches.md` file.
 * Miscellaneous:
   * App must be localizable - translate all strings rendered on the screen.
   * Always generate demo data in `Loader->generateDemoData()`
   * Generate app must be installable by `php hubleto app install` CLI command.
+  * Always create route, controller and view for `settings` and the `Settings` button in `renderSecondSidebar()`
+  * Always use /** @var Class */ comments when creating objects with `getService()`, `getModel()` or `getController()`. This is to help IDEs to navigate through generated codebase.
 
 Apply these constraints consistently and always doublecheck the generated code to follow the common principles and design patterns in the communit apps codebase.
 
