@@ -4,6 +4,7 @@ In this section you can find different prompts we used for AI-supported generati
 
 ## Prompts to provide constraints to AI agents
 
+[App creation plan](prompts/app-creation-plan)
 [App creation constraints](prompts/app-creation-constraints)
 
 ## Sample prompts to create some piece of code

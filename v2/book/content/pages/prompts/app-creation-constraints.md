@@ -88,6 +88,7 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * If the app is integrated with `Calendar` app, always use `$calendarManager->addCalendar()` in `Loader->init()`.
   * If the app is integrated with `Dashboards` app, always use `$dashboardManager->addBoard()` in `Loader->init()`.
   * If the app is integrated with `Settings` app, always use `$settingsApp->addSetting()` in `Loader->init()`.
+  * `Extendibles` provide a way to collect data/collections/settings from other apps. If you will create extendibles, provide examples how to use them in other apps.
 * Reuse of existing API:
   * Always, whenever possible, reuse API from existing apps.
   * For generating documents, use `Hubleto\App\Community\Documents\Generator` class.
