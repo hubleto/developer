@@ -8,6 +8,8 @@
 
 ### ƒ loadRemindersSummary
 
+[Description for loadRemindersSummary]
+
 ```php
 public loadRemindersSummary(int $idUser): array
 ```

@@ -89,6 +89,13 @@ public generateDemoData(): void
 ```
 
 
+### ƒ renderAlerts
+
+```php
+public renderAlerts(): string
+```
+
+
 ### ƒ renderSecondSidebar
 
 ```php

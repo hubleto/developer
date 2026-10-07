@@ -97,6 +97,15 @@ public getMaxReadLevelForLoadTableData(): int
 ```
 
 
+### ƒ getPriceCalculatorService
+
+[Description for getPriceCalculatorService]
+
+```php
+public getPriceCalculatorService(): \Hubleto\Erp\Interfaces\PriceCalculatorInterface
+```
+
+
 ### ƒ recalculatePrices
 
 [Description for recalculatePrices]

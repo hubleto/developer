@@ -53,7 +53,24 @@ public prepareReadQuery(mixed $query = null, int $level, array|null $includeRela
 | `$includeRelations` | **array\|null** |             |
 
 
+### ƒ addUrlFiltersToQuery
+
+[Description for addUrlFiltersToQuery]
+
+```php
+public addUrlFiltersToQuery(mixed|null $query): mixed
+```
+
+#### Parameters
+
+| Parameter | Type            | Description |
+|-----------|-----------------|-------------|
+| `$query`  | **mixed\|null** |             |
+
+
 ### ƒ addOrderByToQuery
+
+[Description for addOrderByToQuery]
 
 ```php
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
@@ -69,6 +86,8 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 
 ### ƒ addFulltextSearchToQuery
 
+[Description for addFulltextSearchToQuery]
+
 ```php
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 ```
@@ -83,6 +102,8 @@ public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed
 
 ### ƒ prepareLookupQuery
 
+[Description for prepareLookupQuery]
+
 ```php
 public prepareLookupQuery(string $search): mixed
 ```
@@ -95,6 +116,8 @@ public prepareLookupQuery(string $search): mixed
 
 
 ### ƒ prepareLookupData
+
+[Description for prepareLookupData]
 
 ```php
 public prepareLookupData(array $dataRaw): array

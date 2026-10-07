@@ -3,7 +3,7 @@ Methods to support locale in Hubleto project.
 
 # \Hubleto\Erp\Locale
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../Framework/Locale">Locale</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../Framework/Services/Locale">Locale</a></td></tr></table>
 
 
 ## Methods

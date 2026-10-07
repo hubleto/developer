@@ -3,7 +3,7 @@ Storage for environment-specific configuration.
 
 # \Hubleto\Erp\Env
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../Framework/Env">Env</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../Framework/Services/Env">Env</a></td></tr></table>
 
 
 ## Methods

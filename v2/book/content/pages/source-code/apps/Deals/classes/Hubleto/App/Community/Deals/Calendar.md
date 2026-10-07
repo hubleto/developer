@@ -8,12 +8,16 @@
 
 ### ƒ getCalendarConfig
 
+[Description for getCalendarConfig]
+
 ```php
 public getCalendarConfig(): array
 ```
 
 
 ### ƒ loadEvent
+
+[Description for loadEvent]
 
 ```php
 public loadEvent(int $id): array
@@ -27,6 +31,8 @@ public loadEvent(int $id): array
 
 
 ### ƒ loadEvents
+
+[Description for loadEvents]
 
 ```php
 public loadEvents(string $dateStart, string $dateEnd, array $filter = []): array

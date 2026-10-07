@@ -98,9 +98,9 @@ protected string $format
 
 
 <div class="mt-2">&nbsp;</div>
-### ☍ description
+### ☍ hint
 ```php
-protected string $description
+protected string $hint
 ```
 
 
@@ -191,6 +191,24 @@ protected string $cssClass
 ### ☍ endpoint
 ```php
 protected string $endpoint
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ yesText
+```php
+protected null|string $yesText
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ noText
+```php
+protected null|string $noText
 ```
 
 
@@ -462,24 +480,24 @@ public setFormat(bool $format = true): \Hubleto\Framework\Description\Input
 | `$format` | **bool** |             |
 
 
-### ƒ getDescription
+### ƒ getHint
 
 ```php
-public getDescription(): string
+public getHint(): string
 ```
 
 
-### ƒ setDescription
+### ƒ setHint
 
 ```php
-public setDescription(string $description): \Hubleto\Framework\Description\Input
+public setHint(string $hint): \Hubleto\Framework\Description\Input
 ```
 
 #### Parameters
 
-| Parameter      | Type       | Description |
-|----------------|------------|-------------|
-| `$description` | **string** |             |
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$hint`   | **string** |             |
 
 
 ### ƒ getLookupModel
@@ -680,6 +698,46 @@ public setCreatable(bool $creatable = true): \Hubleto\Framework\Description\Inpu
 | Parameter    | Type     | Description |
 |--------------|----------|-------------|
 | `$creatable` | **bool** |             |
+
+
+### ƒ getYesText
+
+```php
+public getYesText(): null|string
+```
+
+
+### ƒ setYesText
+
+```php
+public setYesText(string $yesText): \Hubleto\Framework\Description\Input
+```
+
+#### Parameters
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$yesText` | **string** |             |
+
+
+### ƒ getNoText
+
+```php
+public getNoText(): null|string
+```
+
+
+### ƒ setNoText
+
+```php
+public setNoText(string $noText): \Hubleto\Framework\Description\Input
+```
+
+#### Parameters
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$noText` | **string** |             |
 
 
 ### ƒ jsonSerialize

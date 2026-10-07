@@ -143,19 +143,17 @@ public DOCUMENT(): \Hubleto\App\Community\Deals\Models\RecordManagers\hasOne<\Hu
 ```
 
 
-### ƒ prepareReadQuery
+### ƒ addUrlFiltersToQuery
 
-[Description for prepareReadQuery]
+[Description for addUrlFiltersToQuery]
 
 ```php
-public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
+public addUrlFiltersToQuery(mixed|null $query): mixed
 ```
 
 #### Parameters
 
-| Parameter           | Type            | Description |
-|---------------------|-----------------|-------------|
-| `$query`            | **mixed\|null** |             |
-| `$level`            | **int**         |             |
-| `$includeRelations` | **array\|null** |             |
+| Parameter | Type            | Description |
+|-----------|-----------------|-------------|
+| `$query`  | **mixed\|null** |             |
 

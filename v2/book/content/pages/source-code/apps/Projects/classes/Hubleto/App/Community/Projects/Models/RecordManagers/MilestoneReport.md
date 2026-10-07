@@ -33,15 +33,17 @@ public REPORTED_BY(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto
 
 ### ƒ prepareReadQuery
 
+[Description for prepareReadQuery]
+
 ```php
-public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
 #### Parameters
 
 | Parameter           | Type            | Description |
 |---------------------|-----------------|-------------|
-| `$query`            | **mixed**       |             |
+| `$query`            | **mixed\|null** |             |
 | `$level`            | **int**         |             |
 | `$includeRelations` | **array\|null** |             |
 

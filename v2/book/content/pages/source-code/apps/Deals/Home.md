@@ -11,6 +11,7 @@
 | Class                                                        | Description |
 |--------------------------------------------------------------|-------------|
 | [`Calendar`](./classes/Hubleto/App/Community/Deals/Calendar) |             |
+| [`Counter`](./classes/Hubleto/App/Community/Deals/Counter)   |             |
 | [`Loader`](./classes/Hubleto/App/Community/Deals/Loader)     |             |
 | [`Workflow`](./classes/Hubleto/App/Community/Deals/Workflow) |             |
 
@@ -23,6 +24,7 @@
 | [`Deals`](./classes/Hubleto/App/Community/Deals/Controllers/Deals)               |             |
 | [`DealsArchive`](./classes/Hubleto/App/Community/Deals/Controllers/DealsArchive) |             |
 | [`LostReasons`](./classes/Hubleto/App/Community/Deals/Controllers/LostReasons)   |             |
+| [`Plan`](./classes/Hubleto/App/Community/Deals/Controllers/Plan)                 |             |
 | [`ReportGoal`](./classes/Hubleto/App/Community/Deals/Controllers/ReportGoal)     |             |
 | [`Settings`](./classes/Hubleto/App/Community/Deals/Controllers/Settings)         |             |
 | [`Tags`](./classes/Hubleto/App/Community/Deals/Controllers/Tags)                 |             |
@@ -59,6 +61,7 @@
 
 | Class                                                                                              | Description |
 |----------------------------------------------------------------------------------------------------|-------------|
+| [`AppMenu`](./classes/Hubleto/App/Community/Deals/Extendibles/AppMenu)                             |             |
 | [`ContextHelp`](./classes/Hubleto/App/Community/Deals/Extendibles/ContextHelp)                     |             |
 | [`MailTemplateVariables`](./classes/Hubleto/App/Community/Deals/Extendibles/MailTemplateVariables) |             |
 | [`ProductTypes`](./classes/Hubleto/App/Community/Deals/Extendibles/ProductTypes)                   |             |

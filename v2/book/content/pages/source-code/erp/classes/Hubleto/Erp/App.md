@@ -12,3 +12,26 @@
 public getMcpTools(): array
 ```
 
+
+### ƒ secondSidebarTitle
+
+```php
+public secondSidebarTitle(): string
+```
+
+
+### ƒ secondSidebarButton
+
+```php
+public secondSidebarButton(string $url, string $icon, string $title, int $badge): string
+```
+
+#### Parameters
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$url`    | **string** |             |
+| `$icon`   | **string** |             |
+| `$title`  | **string** |             |
+| `$badge`  | **int**    |             |
+

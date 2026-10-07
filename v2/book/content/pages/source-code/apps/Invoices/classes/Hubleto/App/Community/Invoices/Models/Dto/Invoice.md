@@ -119,7 +119,7 @@ public null|string $notes
 ### ƒ __construct
 
 ```php
-private __construct(int $idProfile, int $idIssuedBy, int $idCustomer, null|string $number, null|string $vs, null|string $cs, null|string $ss, null|\DateTimeImmutable $dateIssue, null|\DateTimeImmutable $dateDelivery, null|\DateTimeImmutable $dateDue, null|\DateTimeImmutable $datePayment, null|string $notes): mixed
+public __construct(int $idProfile, int $idIssuedBy, int $idCustomer, null|string $number, null|string $vs, null|string $cs, null|string $ss, null|\DateTimeImmutable $dateIssue, null|\DateTimeImmutable $dateDelivery, null|\DateTimeImmutable $dateDue, null|\DateTimeImmutable $datePayment, null|string $notes): mixed
 ```
 
 #### Parameters

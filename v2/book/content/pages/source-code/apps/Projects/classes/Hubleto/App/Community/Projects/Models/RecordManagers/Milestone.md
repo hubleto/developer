@@ -38,17 +38,26 @@ public RESPONSIBLE(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 ```
 
 
-### ƒ prepareReadQuery
+### ƒ TASKS
 
 ```php
-public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
+public TASKS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Community\Projects\Models\RecordManagers\DealTask,\Hubleto\App\Community\Projects\Models\RecordManagers\Deal>
+```
+
+
+### ƒ prepareReadQuery
+
+[Description for prepareReadQuery]
+
+```php
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
 #### Parameters
 
 | Parameter           | Type            | Description |
 |---------------------|-----------------|-------------|
-| `$query`            | **mixed**       |             |
+| `$query`            | **mixed\|null** |             |
 | `$level`            | **int**         |             |
 | `$includeRelations` | **array\|null** |             |
 

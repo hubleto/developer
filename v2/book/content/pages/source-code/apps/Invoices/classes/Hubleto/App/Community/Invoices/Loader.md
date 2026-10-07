@@ -48,6 +48,15 @@ public getSidebarBadgeNumber(): int
 ```
 
 
+### ƒ renderAlerts
+
+[Description for renderAlerts]
+
+```php
+public renderAlerts(): string
+```
+
+
 ### ƒ renderSecondSidebar
 
 [Description for renderSecondSidebar]

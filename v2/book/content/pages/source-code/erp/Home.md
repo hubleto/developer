@@ -79,3 +79,4 @@
 |-----------------------------------------------------------------------------------------------|-------------|
 | [`EmailProviderInterface`](./classes/Hubleto/Erp/Interfaces/EmailProviderInterface)           |             |
 | [`PermissionsManagerInterface`](./classes/Hubleto/Erp/Interfaces/PermissionsManagerInterface) |             |
+| [`PriceCalculatorInterface`](./classes/Hubleto/Erp/Interfaces/PriceCalculatorInterface)       |             |

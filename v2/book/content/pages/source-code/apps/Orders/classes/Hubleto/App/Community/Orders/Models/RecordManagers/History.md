@@ -23,3 +23,20 @@ public $table
 public ORDER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Orders\Models\RecordManagers\Order,\Hubleto\App\Community\Orders\Models\RecordManagers\History>
 ```
 
+
+### ƒ prepareReadQuery
+
+[Description for prepareReadQuery]
+
+```php
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
+```
+
+#### Parameters
+
+| Parameter           | Type            | Description |
+|---------------------|-----------------|-------------|
+| `$query`            | **mixed\|null** |             |
+| `$level`            | **int**         |             |
+| `$includeRelations` | **array\|null** |             |
+

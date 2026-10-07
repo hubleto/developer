@@ -19,14 +19,14 @@
 
 #### Classes
 
-| Class                                                                                                                 | Description |
-|-----------------------------------------------------------------------------------------------------------------------|-------------|
-| [`Items`](./classes/Hubleto/App/Community/Orders/Controllers/Items)                                                   |             |
-| [`MissingItemsInPeriodicalOrders`](./classes/Hubleto/App/Community/Orders/Controllers/MissingItemsInPeriodicalOrders) |             |
-| [`Orders`](./classes/Hubleto/App/Community/Orders/Controllers/Orders)                                                 |             |
-| [`Quotes`](./classes/Hubleto/App/Community/Orders/Controllers/Quotes)                                                 |             |
-| [`States`](./classes/Hubleto/App/Community/Orders/Controllers/States)                                                 |             |
-| [`Payments`](./classes/Hubleto/App/Community/Orders/Controllers/Payments)                                             |             |
+| Class                                                                                               | Description |
+|-----------------------------------------------------------------------------------------------------|-------------|
+| [`Items`](./classes/Hubleto/App/Community/Orders/Controllers/Items)                                 |             |
+| [`Orders`](./classes/Hubleto/App/Community/Orders/Controllers/Orders)                               |             |
+| [`OrdersAwaitingInvoice`](./classes/Hubleto/App/Community/Orders/Controllers/OrdersAwaitingInvoice) |             |
+| [`Quotes`](./classes/Hubleto/App/Community/Orders/Controllers/Quotes)                               |             |
+| [`States`](./classes/Hubleto/App/Community/Orders/Controllers/States)                               |             |
+| [`Payments`](./classes/Hubleto/App/Community/Orders/Controllers/Payments)                           |             |
 
 ### \Hubleto\App\Community\Orders\Controllers\Api
 
@@ -88,9 +88,14 @@
 | [`Item_0001`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Item_0001)                   |             |
 | [`Item_0002`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Item_0002)                   |             |
 | [`Item_0003`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Item_0003)                   |             |
+| [`Item_0004`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Item_0004)                   |             |
+| [`Item_0005`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Item_0005)                   |             |
+| [`Item_0006`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Item_0006)                   |             |
 | [`Order_0001`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Order_0001)                 |             |
 | [`Order_0002`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Order_0002)                 |             |
 | [`Order_0003`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Order_0003)                 |             |
+| [`Order_0004`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Order_0004)                 |             |
+| [`Order_0005`](./classes/Hubleto/App/Community/Orders/Models/Migrations/Order_0005)                 |             |
 | [`OrderActivity_0001`](./classes/Hubleto/App/Community/Orders/Models/Migrations/OrderActivity_0001) |             |
 | [`OrderDeal_0001`](./classes/Hubleto/App/Community/Orders/Models/Migrations/OrderDeal_0001)         |             |
 | [`OrderDocument_0001`](./classes/Hubleto/App/Community/Orders/Models/Migrations/OrderDocument_0001) |             |

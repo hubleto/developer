@@ -1,0 +1,137 @@
+
+# \Hubleto\App\Community\Documents\Models\Version
+<table class='table-default dense'>
+<tr><td>Parent class</td><td><a href="../../../../Erp/Model">Model</a></td></tr></table>
+
+
+## Properties
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ table
+```php
+public string $table
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ recordManagerClass
+```php
+public string $recordManagerClass
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupSqlValue
+```php
+public ?string $lookupSqlValue
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlAdd
+```php
+public ?string $lookupUrlAdd
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ lookupUrlDetail
+```php
+public ?string $lookupUrlDetail
+```
+
+
+
+
+<div class="mt-2">&nbsp;</div>
+### ☍ relations
+```php
+public array $relations
+```
+
+
+
+## Methods
+
+### ƒ describeColumns
+
+```php
+public describeColumns(): array
+```
+
+
+### ƒ describeTable
+
+```php
+public describeTable(): \Hubleto\Framework\Description\Table
+```
+
+
+### ƒ onBeforeCreate
+
+```php
+public onBeforeCreate(array $record): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
+### ƒ onAfterCreate
+
+```php
+public onAfterCreate(array $savedRecord): array
+```
+
+#### Parameters
+
+| Parameter      | Type      | Description |
+|----------------|-----------|-------------|
+| `$savedRecord` | **array** |             |
+
+
+### ƒ onAfterUpdate
+
+```php
+public onAfterUpdate(array $originalRecord, array $savedRecord): array
+```
+
+#### Parameters
+
+| Parameter         | Type      | Description |
+|-------------------|-----------|-------------|
+| `$originalRecord` | **array** |             |
+| `$savedRecord`    | **array** |             |
+
+
+### ƒ onBeforeDelete
+
+```php
+public onBeforeDelete(int $id): int
+```
+
+#### Parameters
+
+| Parameter | Type    | Description |
+|-----------|---------|-------------|
+| `$id`     | **int** |             |
+
+
+### ƒ getRelationsIncludedInLoadFormData
+
+```php
+public getRelationsIncludedInLoadFormData(): array|null
+```
+

@@ -3,7 +3,7 @@ Class managing Hubleto permissions.
 
 # \Hubleto\App\Community\Settings\PermissionsManager
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../../../Framework/PermissionsManager">PermissionsManager</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../../../Framework/Services/PermissionsManager">PermissionsManager</a></td></tr></table>
 
 
 ## Properties

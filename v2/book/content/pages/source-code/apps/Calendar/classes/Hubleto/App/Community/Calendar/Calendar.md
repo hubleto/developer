@@ -29,6 +29,8 @@ public prepareLoadActivityQuery(\Hubleto\App\Community\Calendar\Models\Activity 
 
 ### ƒ prepareLoadActivitiesQuery
 
+[Description for prepareLoadActivitiesQuery]
+
 ```php
 public prepareLoadActivitiesQuery(\Hubleto\App\Community\Calendar\Models\Activity $mActivity, string $dateStart, string $dateEnd, array $filter = []): mixed
 ```

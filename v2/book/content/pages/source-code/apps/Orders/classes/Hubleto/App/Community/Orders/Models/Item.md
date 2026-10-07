@@ -99,6 +99,30 @@ public getMaxReadLevelForLoadTableData(): int
 ```
 
 
+### ƒ getPriceCalculatorService
+
+[Description for getPriceCalculatorService]
+
+```php
+public getPriceCalculatorService(): \Hubleto\Erp\Interfaces\PriceCalculatorInterface
+```
+
+
+### ƒ recalculatePricesInRecord
+
+[Description for recalculatePricesInRecord]
+
+```php
+public recalculatePricesInRecord(array $record): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
 ### ƒ onBeforeCreate
 
 [Description for onBeforeCreate]

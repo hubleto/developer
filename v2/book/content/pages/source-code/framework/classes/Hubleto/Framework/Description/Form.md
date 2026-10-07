@@ -96,3 +96,19 @@ public hide(array $what): void
 |-----------|-----------|-------------|
 | `$what`   | **array** |             |
 
+
+### ƒ setDefaultValue
+
+[Description for setDefaultValue]
+
+```php
+public setDefaultValue(string $column, mixed $value): void
+```
+
+#### Parameters
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$column` | **string** |             |
+| `$value`  | **mixed**  |             |
+

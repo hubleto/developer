@@ -290,24 +290,24 @@ public setFormat(bool $format = true): \Hubleto\Framework\Interfaces\ColumnInter
 | `$format` | **bool** |             |
 
 
-### ƒ getDescription
+### ƒ getHint
 
 ```php
-public getDescription(): string
+public getHint(): string
 ```
 
 
-### ƒ setDescription
+### ƒ setHint
 
 ```php
-public setDescription(string $description): \Hubleto\Framework\Interfaces\ColumnInterface
+public setHint(string $hint): \Hubleto\Framework\Interfaces\ColumnInterface
 ```
 
 #### Parameters
 
-| Parameter      | Type       | Description |
-|----------------|------------|-------------|
-| `$description` | **string** |             |
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$hint`   | **string** |             |
 
 
 ### ƒ getExamples

@@ -30,6 +30,22 @@ public installApp(int $round): void
 | `$round`  | **int** |             |
 
 
+### ƒ getSidebarBadgeNumber
+
+[Description for getSidebarBadgeNumber]
+
+```php
+public getSidebarBadgeNumber(): int
+```
+
+
+### ƒ renderAlerts
+
+```php
+public renderAlerts(): string
+```
+
+
 ### ƒ renderSecondSidebar
 
 [Description for renderSecondSidebar]

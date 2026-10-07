@@ -187,15 +187,17 @@ public recordDelete(int|string $id): int
 ### ƒ recordSave
 
 ```php
-public recordSave(array $record, int $idMasterRecord): array
+public recordSave(array $record, int $idMasterRecord, array $saveRelations = [], string $relation = ''): array
 ```
 
 #### Parameters
 
-| Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
-| `$record`         | **array** |             |
-| `$idMasterRecord` | **int**   |             |
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `$record`         | **array**  |             |
+| `$idMasterRecord` | **int**    |             |
+| `$saveRelations`  | **array**  |             |
+| `$relation`       | **string** |             |
 
 
 ### ƒ loadFormData

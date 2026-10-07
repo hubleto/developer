@@ -37,15 +37,15 @@ public normalize(mixed $value): mixed
 ### ƒ __construct
 
 ```php
-public __construct(\Hubleto\Framework\Model $model, string $title): mixed
+public __construct(\Hubleto\Framework\Model|null $model, string $title): mixed
 ```
 
 #### Parameters
 
-| Parameter | Type                         | Description |
-|-----------|------------------------------|-------------|
-| `$model`  | **\Hubleto\Framework\Model** |             |
-| `$title`  | **string**                   |             |
+| Parameter | Type                               | Description |
+|-----------|------------------------------------|-------------|
+| `$model`  | **\Hubleto\Framework\Model\|null** |             |
+| `$title`  | **string**                         |             |
 
 
 ### ƒ addIndex
@@ -180,6 +180,19 @@ public setTextAlign(string $textAlign): \Hubleto\Framework\Column
 ```php
 public getSearchAlgorithm(): string
 ```
+
+
+### ƒ setSearchAlgorithm
+
+```php
+public setSearchAlgorithm(string $searchAlgorithm): \Hubleto\Framework\Column
+```
+
+#### Parameters
+
+| Parameter          | Type       | Description |
+|--------------------|------------|-------------|
+| `$searchAlgorithm` | **string** |             |
 
 
 ### ƒ getSqlDataType
@@ -430,24 +443,24 @@ public setFormat(bool $format = true): \Hubleto\Framework\Column
 | `$format` | **bool** |             |
 
 
-### ƒ getDescription
+### ƒ getHint
 
 ```php
-public getDescription(): string
+public getHint(): string
 ```
 
 
-### ƒ setDescription
+### ƒ setHint
 
 ```php
-public setDescription(string $description): \Hubleto\Framework\Column
+public setHint(string $hint): \Hubleto\Framework\Column
 ```
 
 #### Parameters
 
-| Parameter      | Type       | Description |
-|----------------|------------|-------------|
-| `$description` | **string** |             |
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$hint`   | **string** |             |
 
 
 ### ƒ getExamples
@@ -588,6 +601,46 @@ public setDefaultValue(mixed $defaultValue): \Hubleto\Framework\Column
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
 | `$defaultValue` | **mixed** |             |
+
+
+### ƒ getYesText
+
+```php
+public getYesText(): null|string
+```
+
+
+### ƒ setYesText
+
+```php
+public setYesText(string $yesText): \Hubleto\Framework\Column
+```
+
+#### Parameters
+
+| Parameter  | Type       | Description |
+|------------|------------|-------------|
+| `$yesText` | **string** |             |
+
+
+### ƒ getNoText
+
+```php
+public getNoText(): null|string
+```
+
+
+### ƒ setNoText
+
+```php
+public setNoText(string $noText): \Hubleto\Framework\Column
+```
+
+#### Parameters
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `$noText` | **string** |             |
 
 
 ### ƒ getTableCellRenderer

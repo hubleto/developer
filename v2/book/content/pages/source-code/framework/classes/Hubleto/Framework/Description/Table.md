@@ -171,3 +171,19 @@ public setPermissions(bool|null $canCreate, bool|null $canRead, bool|null $canUp
 | `$canUpdate` | **bool\|null** |             |
 | `$canDelete` | **bool\|null** |             |
 
+
+### ƒ setOrderBy
+
+[Description for setOrderBy]
+
+```php
+public setOrderBy(string|array $field, string|array $direction): void
+```
+
+#### Parameters
+
+| Parameter    | Type              | Description |
+|--------------|-------------------|-------------|
+| `$field`     | **string\|array** |             |
+| `$direction` | **string\|array** |             |
+

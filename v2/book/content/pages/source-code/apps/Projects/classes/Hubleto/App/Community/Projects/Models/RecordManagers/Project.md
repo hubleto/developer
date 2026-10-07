@@ -115,3 +115,18 @@ public prepareReadQuery(mixed $query = null, int $level, array|null $includeRela
 | `$level`            | **int**         |             |
 | `$includeRelations` | **array\|null** |             |
 
+
+### ƒ addUrlFiltersToQuery
+
+[Description for addUrlFiltersToQuery]
+
+```php
+public addUrlFiltersToQuery(mixed|null $query): mixed
+```
+
+#### Parameters
+
+| Parameter | Type            | Description |
+|-----------|-----------------|-------------|
+| `$query`  | **mixed\|null** |             |
+

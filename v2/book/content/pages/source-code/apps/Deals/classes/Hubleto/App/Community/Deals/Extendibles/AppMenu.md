@@ -6,7 +6,7 @@
 
 ## Methods
 
-### getItems
+### ƒ getItems
 
 ```php
 public getItems(): array

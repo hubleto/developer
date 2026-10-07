@@ -6,20 +6,56 @@
 
 ## Methods
 
-### ƒ dueItemsNotPreparedForInvoice
+### ƒ queryForDueAndChargeableItemsNotPreparedForInvoice
 
-[Description for dueItemsNotPreparedForInvoice]
+[Description for queryForDueAndChargeableItemsNotPreparedForInvoice]
 
 ```php
-public dueItemsNotPreparedForInvoice(): int
+public queryForDueAndChargeableItemsNotPreparedForInvoice(): mixed
 ```
 
 
-### ƒ periodicalOrdersMissingItems
+### ƒ dueAndChargeableItemsNotPreparedForInvoice
 
-[Description for periodicalOrdersMissingItems]
+[Description for dueAndChargeableItemsNotPreparedForInvoice]
 
 ```php
-public periodicalOrdersMissingItems(): array
+public dueAndChargeableItemsNotPreparedForInvoice(): int
+```
+
+
+### ƒ queryForOpenOrdersWithoutFuturePlan
+
+[Description for queryForOpenOrdersWithoutFuturePlan]
+
+```php
+public queryForOpenOrdersWithoutFuturePlan(): mixed
+```
+
+
+### ƒ openOrdersWithoutFuturePlan
+
+[Description for openOrdersWithoutFuturePlan]
+
+```php
+public openOrdersWithoutFuturePlan(): int
+```
+
+
+### ƒ queryForOrdersAwaitingInvoice
+
+[Description for queryForOrdersAwaitingInvoice]
+
+```php
+public queryForOrdersAwaitingInvoice(): mixed
+```
+
+
+### ƒ ordersAwaitingInvoice
+
+[Description for ordersAwaitingInvoice]
+
+```php
+public ordersAwaitingInvoice(): int
 ```
 

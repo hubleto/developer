@@ -8,7 +8,7 @@
 ### ƒ forApp
 
 ```php
-public forApp(string $appClass): mixed
+public forApp(string $appClass): \Hubleto\Framework\Services\ConfigManager
 ```
 
 #### Parameters
@@ -73,15 +73,16 @@ public empty(string $path): bool
 ### ƒ get
 
 ```php
-public get(string $path = '', mixed $default = null): mixed
+public get(string $path = '', mixed $default = null, bool $useFullConfig = false): mixed
 ```
 
 #### Parameters
 
-| Parameter  | Type       | Description |
-|------------|------------|-------------|
-| `$path`    | **string** |             |
-| `$default` | **mixed**  |             |
+| Parameter        | Type       | Description |
+|------------------|------------|-------------|
+| `$path`          | **string** |             |
+| `$default`       | **mixed**  |             |
+| `$useFullConfig` | **bool**   |             |
 
 
 ### ƒ getAsString
@@ -144,6 +145,20 @@ public getAsBool(string $path, bool $defaultValue = false): bool
 
 ```php
 public getAsArray(string $path, array $defaultValue = []): array
+```
+
+#### Parameters
+
+| Parameter       | Type       | Description |
+|-----------------|------------|-------------|
+| `$path`         | **string** |             |
+| `$defaultValue` | **array**  |             |
+
+
+### ƒ getAsJson
+
+```php
+public getAsJson(string $path, array $defaultValue = []): array
 ```
 
 #### Parameters

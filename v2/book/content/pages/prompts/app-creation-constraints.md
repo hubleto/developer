@@ -93,8 +93,10 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * For generating documents, use `Hubleto\App\Community\Documents\Generator` class.
   * For creating internal notifications, use `Hubleto\App\Community\Notifications\Sender` class.
   * For sending e-mail, use `Hubleto\App\Community\Mail\Loader->send()` method.
-* Patching community apps:
-  * If the generated app will require patches in community apps, describe them in `community-app-patches.md` file.
+* Community version patches and improvements:
+  * If the generated app will require patches in community apps, describe them in `community-apps-patches.md` file.
+  * Put all suggestions to improve or patch Hubleto core in `community-core-patches.md`
+  * Put all suggestions to improve or patch Hubleto framework in `hubleto-framework-patches.md`
 * Miscellaneous:
   * App must be localizable - translate all strings rendered on the screen.
   * Always generate demo data in `Loader->generateDemoData()`

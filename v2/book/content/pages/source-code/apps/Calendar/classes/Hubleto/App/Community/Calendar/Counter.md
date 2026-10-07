@@ -11,6 +11,12 @@
 [Description for missedIncompleteActivities]
 
 ```php
-public missedIncompleteActivities(): int
+public missedIncompleteActivities(array|null $sources): int
 ```
+
+#### Parameters
+
+| Parameter  | Type            | Description |
+|------------|-----------------|-------------|
+| `$sources` | **array\|null** |             |
 

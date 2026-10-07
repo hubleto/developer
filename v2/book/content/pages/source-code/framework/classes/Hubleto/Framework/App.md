@@ -220,6 +220,15 @@ public getSidebarBadgeNumber(): int
 ```
 
 
+### ƒ getWelcomeScreenMessages
+
+[Description for getWelcomeScreenMessages]
+
+```php
+public getWelcomeScreenMessages(): array
+```
+
+
 ### ƒ installApp
 
 [Description for upgradeSchema]
@@ -277,6 +286,15 @@ public assignPermissionsToRoles(): void
 
 ```php
 public generateDemoData(): void
+```
+
+
+### ƒ renderAlerts
+
+[Description for renderAlerts]
+
+```php
+public renderAlerts(): string
 ```
 
 
@@ -689,7 +707,7 @@ public loader(): \Hubleto\Framework\Loader
 Shortcut for the env service.
 
 ```php
-public env(): \Hubleto\Framework\Env
+public env(): \Hubleto\Framework\Interfaces\EnvInterface
 ```
 
 
@@ -707,7 +725,7 @@ public authProvider(): \Hubleto\Framework\Interfaces\AuthProviderInterface
 Shortcut for the database service.
 
 ```php
-public db(): \Hubleto\Framework\Db
+public db(): \Hubleto\Framework\Interfaces\DbInterface
 ```
 
 
@@ -725,7 +743,7 @@ public appManager(): \Hubleto\Framework\Interfaces\AppManagerInterface
 Shortcut for the router service.
 
 ```php
-public router(): \Hubleto\Framework\Router
+public router(): \Hubleto\Framework\Interfaces\Router
 ```
 
 
@@ -734,7 +752,7 @@ public router(): \Hubleto\Framework\Router
 Shortcut for the event manager service.
 
 ```php
-public eventManager(): \Hubleto\Framework\EventManagerInterface
+public eventManager(): \Hubleto\Framework\Interfaces\EventManagerInterface
 ```
 
 
@@ -743,7 +761,7 @@ public eventManager(): \Hubleto\Framework\EventManagerInterface
 Shortcut for the session manager service.
 
 ```php
-public sessionManager(): \Hubleto\Framework\SessionManager
+public sessionManager(): \Hubleto\Framework\Interfaces\SessionManagerInterface
 ```
 
 
@@ -752,7 +770,7 @@ public sessionManager(): \Hubleto\Framework\SessionManager
 Shortcut for the permissions manager service.
 
 ```php
-public permissionsManager(): \Hubleto\Framework\PermissionsManager
+public permissionsManager(): \Hubleto\Framework\Interfaces\PermissionsManagerInterface
 ```
 
 
@@ -761,7 +779,7 @@ public permissionsManager(): \Hubleto\Framework\PermissionsManager
 Shortcut for the cron manager service.
 
 ```php
-public cronManager(): \Hubleto\Framework\CronManager
+public cronManager(): \Hubleto\Framework\Interfaces\CronManagerInterface
 ```
 
 

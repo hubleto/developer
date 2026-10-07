@@ -1,7 +1,7 @@
 
 # \Hubleto\Erp\Renderer
 <table class='table-default dense'>
-<tr><td>Parent class</td><td><a href="../Framework/Renderer">Renderer</a></td></tr></table>
+<tr><td>Parent class</td><td><a href="../Framework/Services/Renderer">Renderer</a></td></tr></table>
 
 
 ## Methods

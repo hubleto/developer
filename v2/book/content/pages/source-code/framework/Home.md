@@ -11,43 +11,28 @@
 | Class                                                                        | Description                                                           |
 |------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [`App`](./classes/Hubleto/Framework/App)                                     | Encapsulation for Hubleto app.                                        |
-| [`AppManager`](./classes/Hubleto/Framework/AppManager)                       | Default manager of Hubleto apps used in the Hubleto project.          |
-| [`AuthProvider`](./classes/Hubleto/Framework/AuthProvider)                   | Default implementation of authentication provider.                    |
 | [`Column`](./classes/Hubleto/Framework/Column)                               |                                                                       |
-| [`ConfigManager`](./classes/Hubleto/Framework/ConfigManager)                 | Configuration management for the Hubleto project.                     |
 | [`Controller`](./classes/Hubleto/Framework/Controller)                       | Default implementation of Hubleto controller.                         |
 | [`Core`](./classes/Hubleto/Framework/Core)                                   | Shortcut to access all services used in the Hubleto project.          |
-| [`CronManager`](./classes/Hubleto/Framework/CronManager)                     | Default manager for scheduled jobs (cron) in Hubleto project.         |
-| [`Db`](./classes/Hubleto/Framework/Db)                                       | Database abstraction layer.                                           |
 | [`DependencyInjection`](./classes/Hubleto/Framework/DependencyInjection)     | Default implementation of dependency injection.                       |
 | [`EloquentRecordManager`](./classes/Hubleto/Framework/EloquentRecordManager) | Record manager based on Laravel's Eloquent.                           |
-| [`Env`](./classes/Hubleto/Framework/Env)                                     | Storage for environment-specific configuration.                       |
 | [`EventListener`](./classes/Hubleto/Framework/EventListener)                 | Shortcut to access all services used in the Hubleto project.          |
-| [`EventManager`](./classes/Hubleto/Framework/EventManager)                   | Default manager for event listeners in the Hubleto project.           |
 | [`Extendible`](./classes/Hubleto/Framework/Extendible)                       | Manager for app's extendibles.                                        |
 | [`Helper`](./classes/Hubleto/Framework/Helper)                               | Various helper functions.                                             |
 | [`Loader`](./classes/Hubleto/Framework/Loader)                               | Default implementation of bootstrap loader.                           |
-| [`Locale`](./classes/Hubleto/Framework/Locale)                               | Methods to support locale in Hubleto project.                         |
-| [`Logger`](./classes/Hubleto/Framework/Logger)                               | Default implementation of logger in Hubleto project.                  |
 | [`Migration`](./classes/Hubleto/Framework/Migration)                         | Default implementation of a migration for Hubleto project.            |
 | [`Model`](./classes/Hubleto/Framework/Model)                                 | Default implementation of model for Hubleto project.                  |
-| [`PermissionsManager`](./classes/Hubleto/Framework/PermissionsManager)       | Default manager for permissions before executing any controller.      |
 | [`PHPUnitTestCase`](./classes/Hubleto/Framework/PHPUnitTestCase)             |                                                                       |
 | [`RecordManager`](./classes/Hubleto/Framework/RecordManager)                 | Default record manager for Hubleto projects. Uses Laravel's Eloquent. |
-| [`Renderer`](./classes/Hubleto/Framework/Renderer)                           | Default view renderer for Hubleto project.                            |
-| [`Router`](./classes/Hubleto/Framework/Router)                               | Default router for Hubleto project.                                   |
-| [`SessionManager`](./classes/Hubleto/Framework/SessionManager)               | Default session manager for Hubleto project.                          |
-| [`Terminal`](./classes/Hubleto/Framework/Terminal)                           |                                                                       |
 | [`Test`](./classes/Hubleto/Framework/Test)                                   |                                                                       |
-| [`Translator`](./classes/Hubleto/Framework/Translator)                       | Default translator for Hubleto project.                               |
 
 ### \Hubleto\Framework\Auth
 
 #### Classes
 
-| Class                                                                               | Description                                        |
-|-------------------------------------------------------------------------------------|----------------------------------------------------|
-| [`KeycloakOAuth2Provider`](./classes/Hubleto/Framework/Auth/KeycloakOAuth2Provider) | Default implementation of authentication provider. |
+| Class                                                                               | Description |
+|-------------------------------------------------------------------------------------|-------------|
+| [`KeycloakOAuth2Provider`](./classes/Hubleto/Framework/Auth/KeycloakOAuth2Provider) |             |
 
 ### \Hubleto\Framework\Controllers
 
@@ -56,6 +41,7 @@
 | Class                                                                                  | Description                                   |
 |----------------------------------------------------------------------------------------|-----------------------------------------------|
 | [`ApiController`](./classes/Hubleto/Framework/Controllers/ApiController)               | Default implementation of Hubleto controller. |
+| [`CrudController`](./classes/Hubleto/Framework/Controllers/CrudController)             | Default implementation of Hubleto controller. |
 | [`Desktop`](./classes/Hubleto/Framework/Controllers/Desktop)                           | Default implementation of Hubleto controller. |
 | [`NotEnoughPermissions`](./classes/Hubleto/Framework/Controllers/NotEnoughPermissions) | Default implementation of Hubleto controller. |
 | [`NotFound`](./classes/Hubleto/Framework/Controllers/NotFound)                         | Default implementation of Hubleto controller. |
@@ -65,9 +51,10 @@
 
 #### Classes
 
-| Class                                                                   | Description                                   |
-|-------------------------------------------------------------------------|-----------------------------------------------|
-| [`Describe`](./classes/Hubleto/Framework/Controllers/Api/Form/Describe) | Default implementation of Hubleto controller. |
+| Class                                                                                 | Description                                   |
+|---------------------------------------------------------------------------------------|-----------------------------------------------|
+| [`Describe`](./classes/Hubleto/Framework/Controllers/Api/Form/Describe)               | Default implementation of Hubleto controller. |
+| [`DescribeAndLoad`](./classes/Hubleto/Framework/Controllers/Api/Form/DescribeAndLoad) | Default implementation of Hubleto controller. |
 
 ### \Hubleto\Framework\Controllers\Api\Record
 
@@ -87,9 +74,10 @@
 
 #### Classes
 
-| Class                                                                    | Description                                   |
-|--------------------------------------------------------------------------|-----------------------------------------------|
-| [`Describe`](./classes/Hubleto/Framework/Controllers/Api/Table/Describe) | Default implementation of Hubleto controller. |
+| Class                                                                                  | Description                                   |
+|----------------------------------------------------------------------------------------|-----------------------------------------------|
+| [`Describe`](./classes/Hubleto/Framework/Controllers/Api/Table/Describe)               | Default implementation of Hubleto controller. |
+| [`DescribeAndLoad`](./classes/Hubleto/Framework/Controllers/Api/Table/DescribeAndLoad) | Default implementation of Hubleto controller. |
 
 ### \Hubleto\Framework\Controllers\Api\Tree
 
@@ -208,6 +196,7 @@ action occurs. Thrown by model's recordValidate() method. |
 | [`LoggerInterface`](./classes/Hubleto/Framework/Interfaces/LoggerInterface)                         |                                                                   |
 | [`MigrationInterface`](./classes/Hubleto/Framework/Interfaces/MigrationInterface)                   |                                                                   |
 | [`ModelInterface`](./classes/Hubleto/Framework/Interfaces/ModelInterface)                           |                                                                   |
+| [`NotifierInterface`](./classes/Hubleto/Framework/Interfaces/NotifierInterface)                     |                                                                   |
 | [`PermissionsManagerInterface`](./classes/Hubleto/Framework/Interfaces/PermissionsManagerInterface) |                                                                   |
 | [`RecordManagerInterface`](./classes/Hubleto/Framework/Interfaces/RecordManagerInterface)           | Record-management
 CRUD-like layer for manipulating records (data) |
@@ -254,3 +243,26 @@ CRUD-like layer for manipulating records (data) |
 | [`User`](./classes/Hubleto/Framework/Models/RecordManagers/User)               | Record manager based on Laravel's Eloquent. |
 | [`UserHasRole`](./classes/Hubleto/Framework/Models/RecordManagers/UserHasRole) | Record manager based on Laravel's Eloquent. |
 | [`UserRole`](./classes/Hubleto/Framework/Models/RecordManagers/UserRole)       | Record manager based on Laravel's Eloquent. |
+
+### \Hubleto\Framework\Services
+
+#### Classes
+
+| Class                                                                           | Description                                                      |
+|---------------------------------------------------------------------------------|------------------------------------------------------------------|
+| [`AppManager`](./classes/Hubleto/Framework/Services/AppManager)                 | Default manager of Hubleto apps used in the Hubleto project.     |
+| [`AuthProvider`](./classes/Hubleto/Framework/Services/AuthProvider)             | Default implementation of authentication provider.               |
+| [`ConfigManager`](./classes/Hubleto/Framework/Services/ConfigManager)           | Configuration management for the Hubleto project.                |
+| [`CronManager`](./classes/Hubleto/Framework/Services/CronManager)               | Default manager for scheduled jobs (cron) in Hubleto project.    |
+| [`Db`](./classes/Hubleto/Framework/Services/Db)                                 | Database abstraction layer.                                      |
+| [`Env`](./classes/Hubleto/Framework/Services/Env)                               | Storage for environment-specific configuration.                  |
+| [`EventManager`](./classes/Hubleto/Framework/Services/EventManager)             | Default manager for event listeners in the Hubleto project.      |
+| [`Locale`](./classes/Hubleto/Framework/Services/Locale)                         | Methods to support locale in Hubleto project.                    |
+| [`Logger`](./classes/Hubleto/Framework/Services/Logger)                         | Default implementation of logger in Hubleto project.             |
+| [`Notifier`](./classes/Hubleto/Framework/Services/Notifier)                     |                                                                  |
+| [`PermissionsManager`](./classes/Hubleto/Framework/Services/PermissionsManager) | Default manager for permissions before executing any controller. |
+| [`Renderer`](./classes/Hubleto/Framework/Services/Renderer)                     | Default view renderer for Hubleto project.                       |
+| [`Router`](./classes/Hubleto/Framework/Services/Router)                         | Default router for Hubleto project.                              |
+| [`SessionManager`](./classes/Hubleto/Framework/Services/SessionManager)         | Default session manager for Hubleto project.                     |
+| [`Terminal`](./classes/Hubleto/Framework/Services/Terminal)                     |                                                                  |
+| [`Translator`](./classes/Hubleto/Framework/Services/Translator)                 | Default translator for Hubleto project.                          |

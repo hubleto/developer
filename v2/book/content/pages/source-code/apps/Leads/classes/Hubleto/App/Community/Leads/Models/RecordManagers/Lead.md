@@ -17,13 +17,6 @@ public $table
 
 ## Methods
 
-### ƒ CAMPAIGN
-
-```php
-public CAMPAIGN(): \Hubleto\App\Community\Leads\Models\RecordManagers\belongsTo<\Hubleto\App\Community\Campaigns\Models\RecordManagers\Campaign,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
-```
-
-
 ### ƒ DEAL
 
 ```php
@@ -49,13 +42,6 @@ public OWNER(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\C
 
 ```php
 public TEAM(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
-```
-
-
-### ƒ LEVEL
-
-```php
-public LEVEL(): \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hubleto\App\Community\Auth\Models\RecordManagers\User,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
 ```
 
 
@@ -122,13 +108,6 @@ public DOCUMENTS(): \Hubleto\App\Community\Leads\Models\RecordManagers\hasMany<\
 ```
 
 
-### ƒ CAMPAIGNS
-
-```php
-public CAMPAIGNS(): \Hubleto\App\Community\Leads\Models\RecordManagers\hasMany<\Hubleto\App\Community\Leads\Models\RecordManagers\LeadDocument,\Hubleto\App\Community\Leads\Models\RecordManagers\Lead>
-```
-
-
 ### ƒ TASKS
 
 ```php
@@ -138,20 +117,39 @@ public TASKS(): \Illuminate\Database\Eloquent\Relations\HasMany<\Hubleto\App\Com
 
 ### ƒ prepareReadQuery
 
+[Description for prepareReadQuery]
+
 ```php
-public prepareReadQuery(mixed $query = null, int $level, array|null $includeRelations = null): mixed
+public prepareReadQuery(mixed|null $query = null, int $level, array|null $includeRelations = null): mixed
 ```
 
 #### Parameters
 
 | Parameter           | Type            | Description |
 |---------------------|-----------------|-------------|
-| `$query`            | **mixed**       |             |
+| `$query`            | **mixed\|null** |             |
 | `$level`            | **int**         |             |
 | `$includeRelations` | **array\|null** |             |
 
 
+### ƒ addUrlFiltersToQuery
+
+[Description for addUrlFiltersToQuery]
+
+```php
+public addUrlFiltersToQuery(mixed $query): mixed
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$query`  | **mixed** |             |
+
+
 ### ƒ addOrderByToQuery
+
+[Description for addOrderByToQuery]
 
 ```php
 public addOrderByToQuery(mixed $query, array $orderBy): mixed
@@ -166,6 +164,8 @@ public addOrderByToQuery(mixed $query, array $orderBy): mixed
 
 
 ### ƒ addFulltextSearchToQuery
+
+[Description for addFulltextSearchToQuery]
 
 ```php
 public addFulltextSearchToQuery(mixed $query, string $fulltextSearch): mixed

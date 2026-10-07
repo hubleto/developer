@@ -255,6 +255,21 @@ public prepareLookupData(array $dataRaw): array
 | `$dataRaw` | **array** | List of raw records loaded from the database. |
 
 
+### ƒ addUrlFiltersToQuery
+
+[Description for addUrlFiltersToQuery]
+
+```php
+public addUrlFiltersToQuery(mixed $query): mixed
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$query`  | **mixed** |             |
+
+
 ### ƒ addFulltextSearchToQuery
 
 [Description for addFulltextSearchToQuery]

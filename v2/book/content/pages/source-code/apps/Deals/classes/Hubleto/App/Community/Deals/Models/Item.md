@@ -51,6 +51,39 @@ public describeColumns(): array
 ```
 
 
+### ƒ describeTable
+
+[Description for describeTable]
+
+```php
+public describeTable(): \Hubleto\Framework\Description\Table
+```
+
+
+### ƒ getPriceCalculatorService
+
+[Description for getPriceCalculatorService]
+
+```php
+public getPriceCalculatorService(): \Hubleto\Erp\Interfaces\PriceCalculatorInterface
+```
+
+
+### ƒ recalculatePricesInRecord
+
+[Description for recalculatePricesInRecord]
+
+```php
+public recalculatePricesInRecord(array $record): array
+```
+
+#### Parameters
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `$record` | **array** |             |
+
+
 ### ƒ onBeforeCreate
 
 ```php

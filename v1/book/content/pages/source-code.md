@@ -2,8 +2,8 @@
 
 Automatically generated documentation from PHPDocs.
 
-| Topic                      | Documentation                  |
-| -------------------------- | ------------------------------ |
-| **Framework**              | [Read the docs](source-code/framework/Home) |
-| **ERP**                    | [Read the docs](source-code/erp/Home) |
-| **Community Apps for ERP** | [Read the docs](source-code/apps) |
+| Topic              | Documentation                               |
+| ------------------ | ------------------------------------------- |
+| **Framework**      | [Read the docs](source-code/framework/Home) |
+| **Core**           | [Read the docs](source-code/erp/Home)       |
+| **Community apps** | [Read the docs](source-code/apps)           |

@@ -19,6 +19,7 @@
 
 | Class                                                                                                       | Description |
 |-------------------------------------------------------------------------------------------------------------|-------------|
+| [`AboutMe`](./classes/Hubleto/App/Community/Settings/Controllers/AboutMe)                                   |             |
 | [`ActivityTypes`](./classes/Hubleto/App/Community/Settings/Controllers/ActivityTypes)                       |             |
 | [`Apps`](./classes/Hubleto/App/Community/Settings/Controllers/Apps)                                         |             |
 | [`Companies`](./classes/Hubleto/App/Community/Settings/Controllers/Companies)                               |             |
@@ -28,7 +29,6 @@
 | [`Dashboard`](./classes/Hubleto/App/Community/Settings/Controllers/Dashboard)                               |             |
 | [`General`](./classes/Hubleto/App/Community/Settings/Controllers/General)                                   |             |
 | [`LogViewer`](./classes/Hubleto/App/Community/Settings/Controllers/LogViewer)                               |             |
-| [`MyAccount`](./classes/Hubleto/App/Community/Settings/Controllers/MyAccount)                               |             |
 | [`Permissions`](./classes/Hubleto/App/Community/Settings/Controllers/Permissions)                           |             |
 | [`RolePermissions`](./classes/Hubleto/App/Community/Settings/Controllers/RolePermissions)                   |             |
 | [`Sidebar`](./classes/Hubleto/App/Community/Settings/Controllers/Sidebar)                                   |             |

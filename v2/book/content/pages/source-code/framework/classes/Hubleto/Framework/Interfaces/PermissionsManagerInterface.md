@@ -24,6 +24,13 @@ public DANGEROUS__grantAllPermissions(): void
 ```
 
 
+### ƒ checkPermission
+
+```php
+public checkPermission(): void
+```
+
+
 ### ƒ revokeGrantAllPermissions
 
 ```php

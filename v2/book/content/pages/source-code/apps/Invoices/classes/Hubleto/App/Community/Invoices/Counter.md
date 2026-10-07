@@ -15,6 +15,15 @@ public preparedItems(): int
 ```
 
 
+### ƒ draftInvoices
+
+[Description for draftInvoices]
+
+```php
+public draftInvoices(): int
+```
+
+
 ### ƒ notPaidInvoices
 
 [Description for notPaidInvoices]
