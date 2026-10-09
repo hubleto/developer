@@ -104,6 +104,7 @@ Act as a software developer. I want to generate a custom Hubleto app. This promp
   * Generate app must be installable by `php hubleto app install` CLI command.
   * Always create route, controller and view for `settings` and the `Settings` button in `renderSecondSidebar()`
   * Always use /** @var Class */ comments when creating objects with `getService()`, `getModel()` or `getController()`. This is to help IDEs to navigate through generated codebase.
+  * Prefer codebase examples over CLI template examples.
 
 Apply these constraints consistently and always doublecheck the generated code to follow the common principles and design patterns in the communit apps codebase.
 
